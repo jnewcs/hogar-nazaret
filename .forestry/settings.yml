@@ -13,9 +13,11 @@ sections:
   match: "*"
   templates:
   - post
-- type: jekyll-pages
+- type: directory
+  path: en
   label: Pages
-  create: all
+  create: documents
+  match: "*.md"
   templates:
   - landing-page
   - default
