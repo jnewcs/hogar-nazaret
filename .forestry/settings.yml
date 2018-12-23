@@ -10,7 +10,7 @@ sections:
   path: en/posts
   label: English Posts
   create: documents
-  match: "**/*"
+  match: "*"
   templates:
   - post
 - type: jekyll-pages
