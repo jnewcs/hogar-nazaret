@@ -20,12 +20,19 @@
                 {% if child.children %}
                 <ul class="second-level">
                   {% for child in child.children %}
-                  <li>
-                    <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
-                  </li>
+                    {% unless child.url contains page.lang %}
+                      {% continue %}
+                    {% endunless %}
+                    <li>
+                      <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
+                    </li>
                   {% endfor %}
                 </ul>
                 {% endif %}
+                {% unless child.url contains page.lang %}
+                  {% continue %}
+                {% endunless %}
+
                 <a href="{{ child.url | absolute_url }}"{% if child.target %} target="_blank" {% endif %}>
                   {{ child.title }}
                   {% if child.childen %}
@@ -36,12 +43,16 @@
               {% endfor %}
             </ul>
             {% endif %}
+            {% unless link.url contains page.lang %}
+              {% continue %}
+            {% endunless %}
+
             <a href="{{ link.url | absolute_url }}"{% if link.target %} target="_blank" {% endif %}>
-                  {{ link.title }}
-                  {% if link.childen %}
-                    <i class='icon-chevron-down'></i>
-                  {% endif %}
-                </a>
+              {{ link.title }}
+              {% if link.childen %}
+                <i class='icon-chevron-down'></i>
+              {% endif %}
+            </a>
           </li>
           {% endfor %}
         </ul>
