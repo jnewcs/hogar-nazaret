@@ -33,7 +33,7 @@ sections:
 - type: directory
   path: es
   label: Paginas
-  create: documents
+  create: all
   match: "*.md"
   templates:
   - landing-page
