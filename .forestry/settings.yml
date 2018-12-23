@@ -21,6 +21,8 @@ sections:
   templates:
   - landing-page
   - default
+- type: heading
+  label: Spanish Content
 - type: directory
   path: _people
   label: People
@@ -28,8 +30,6 @@ sections:
   match: "*"
   templates:
   - person
-- type: heading
-  label: Spanish Content
 - type: document
   path: _data/information.yml
   label: Contact Information
