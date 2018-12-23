@@ -23,7 +23,7 @@ textline: |
   Ora et Labora
 hero_button:
   text: Learn more
-  href: "/about"
+  href: "/en/about"
 show_news: true
 menu:
   navigation:

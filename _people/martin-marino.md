@@ -9,6 +9,7 @@ thumbnail: "/uploads/2017/11/14/joseph-gonzalez-399972.jpg"
 email: martin@belkirkcollege.com
 linkedin: ''
 layout: 'person'
+lang: 'en'
 ---
 
 Martin Marino joined Belkirk in 2016 as an advisor and member of the Board.

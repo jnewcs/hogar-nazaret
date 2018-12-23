@@ -8,6 +8,7 @@ sub_heading: Administration
 email: ''
 linkedin: ''
 layout: 'person'
+lang: 'en'
 ---
 
 Charlize Babatunde joined Belkirk in 2015 as Head of Administration.
