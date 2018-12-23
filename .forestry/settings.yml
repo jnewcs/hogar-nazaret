@@ -30,6 +30,8 @@ sections:
   match: "*"
   templates:
   - person
+- type: heading
+  label: General
 - type: document
   path: _data/information.yml
   label: Contact Information
