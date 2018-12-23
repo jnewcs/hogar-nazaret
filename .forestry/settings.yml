@@ -32,7 +32,7 @@ sections:
   label: Spanish Content
 - type: directory
   path: es
-  label: Paginas
+  label: Pages
   create: all
   match: "*.md"
   templates:
