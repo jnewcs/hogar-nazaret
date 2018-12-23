@@ -21,8 +21,6 @@ sections:
   templates:
   - landing-page
   - default
-- type: heading
-  label: Spanish Content
 - type: directory
   path: _people
   label: People
@@ -30,6 +28,16 @@ sections:
   match: "*"
   templates:
   - person
+- type: heading
+  label: Spanish Content
+- type: directory
+  path: es
+  label: Paginas
+  create: documents
+  match: "*.md"
+  templates:
+  - landing-page
+  - default
 - type: heading
   label: General
 - type: document
