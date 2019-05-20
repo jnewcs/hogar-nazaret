@@ -13,6 +13,11 @@ defaults:
       type: posts
     values:
       layout: post
+  - scope:
+      path: ""
+      type: noticias
+    values:
+      layout: noticia
 collections:
   people:
     output: true
@@ -20,6 +25,9 @@ collections:
   posts:
     output: true
     permalink: "/en/posts/:name"
+  noticias:
+    output: true
+    permalink: "/es/noticias/:name"
 # tag_page_layout: tag_page
 # tag_page_dir: tag
 jekyll-archives:
