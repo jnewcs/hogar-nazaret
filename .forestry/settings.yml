@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: English Content
 - type: directory
-  path: en/_posts
+  path: _posts
   label: Posts
   create: documents
   match: "*"
@@ -32,7 +32,7 @@ sections:
   label: Spanish Content
 - type: directory
   path: es
-  label: Pages
+  label: Main Pages
   create: documents
   match: "*.md"
   templates:
