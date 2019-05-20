@@ -10,12 +10,12 @@ sections:
   path: _posts
   label: Posts
   create: documents
-  match: "*"
+  match: "*.md"
   templates:
   - post
 - type: directory
   path: en
-  label: Pages
+  label: Main Pages
   create: documents
   match: "*.md"
   templates:
