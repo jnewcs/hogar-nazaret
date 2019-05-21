@@ -19,6 +19,7 @@ defaults:
     values:
       layout: noticia
 collections:
+  carousel_highlights:
   people:
     output: true
     permalink: "/en/about/:path"
@@ -28,7 +29,6 @@ collections:
   noticias:
     output: true
     permalink: "/es/noticias/:name"
-  carousel_highlights
 # tag_page_layout: tag_page
 # tag_page_dir: tag
 jekyll-archives:
