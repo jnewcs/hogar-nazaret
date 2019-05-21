@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: English Content
 - type: directory
-  path: _carousel_highlights/_en
+  path: _carousel_highlights/en
   label: Home Page Carousel
   create: documents
   match: "*.md"
