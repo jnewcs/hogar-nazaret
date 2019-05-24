@@ -22,10 +22,49 @@ layout: default
 </section>
 {% endif %}
 
-{% include services.html %}
+<div class="container">
+	<h1 class="is-size-3 has-text-centered mt-1">
+		{{ page.call_to_action.header }}
+	</h1>
+	<p class="has-text-centered mb-1">
+		{{ page.call_to_action.text }}
+	</p>
 
-{% include news.html %}
+	<div class="tile is-ancestor">
+		<div class="tile is-vertical is-8">
+			<div class="tile">
+				<div class="tile is-parent is-vertical">
+					<article class="tile is-child notification is-primary">
+						<p class="title">{{ page.highlights.complementary.one.title }}</p>
+						<p class="subtitle">Top tile</p>
+					</article>
+					<article class="tile is-child notification is-warning">
+						<p class="title">{{ page.highlights.complementary.two.title }}</p>
+						<p class="subtitle">Bottom tile</p>
+					</article>
+				</div>
 
-{% include partners.html %}
+				<div class="tile is-parent">
+					<article class="tile is-child notification is-info">
+						<p class="title">{{ page.highlights.main.title }}</p>
+						<p class="subtitle">With an image</p>
+						<figure class="image is-4by3">
+							<img src="https://bulma.io/images/placeholders/640x480.png">
+						</figure>
+					</article>
+				</div>
+			</div>
+		</div>
 
-{% include staff.html %}
+		<div class="tile is-parent is-vertical">
+			<article class="tile is-child notification is-primary">
+				<p class="title">{{ page.highlights.complementary.three.title }}</p>
+				<p class="subtitle">Top tile</p>
+			</article>
+			<article class="tile is-child notification is-warning">
+				<p class="title">{{ page.highlights.complementary.four.title }}</p>
+				<p class="subtitle">Bottom tile</p>
+			</article>
+		</div>
+	</div>
+</div>

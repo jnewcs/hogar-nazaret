@@ -7,13 +7,12 @@
   <meta name="description" content="{% if .page.description %}{{ .page.description }}{% else %}{{ .site.description }}{% endif %}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | absolute_url }}"/>
-  <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/pure-min.css">
-  <!--[if lte IE 8]>
-  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
-  <![endif]-->
-  <!--[if gt IE 8]><!-->
-  <link rel="stylesheet" href="https://yui-s.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
-  <!--<![endif]-->
-  <link rel="stylesheet" href="{{ "/css/main.min.css" | absolute_url }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="{{ '/css/main.css' | absolute_url }}">
+
+  {% if page.show_carousel %}
+    <link rel="stylesheet" href="{{ '/vendor/css/glide.core.min.css' | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/vendor/css/glide.theme.css' | absolute_url }}">
+  {% endif %}
 </head>
 <body>

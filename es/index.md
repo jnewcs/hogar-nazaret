@@ -1,26 +1,24 @@
 ---
-title: Hogar
-banner_image: "/img/banner.png"
+title: Inicio
 layout: landing-page
-heading: Belkirk College
-partners:
-- "/uploads/2017/11/13/stem.png"
-- "/uploads/2017/11/13/UPenn_logo.png"
-- "/uploads/2017/11/13/nysed.png"
-services:
-- description: Performing collaborative research and providing services to support
-    the Health Sector.
-  heading: Health
-  icon: "/uploads/2017/11/13/health.png"
-sub_heading: Engineering and Health Sciences
-textline: | 
-  Belkirk College of Engineering
-  
-  Ora et Labora
-hero_button:
-  text: Aprender Mas
-  href: "/es/about"
-show_news: false
+show_carousel: true
+call_to_action:
+  header: ¡El Hogar te Necesita!
+  text: La operación del Hogar es posible en gran medida gracias a subvenciones de instituciones benéficas como Fondos Unidos y a donativos económicos de entidades gubernamentales, organizaciones cívicas y empresas privadas. No obstante, el apoyo más importante es el apoyo de la COMUNIDAD, personas como tú que se comprometen a ayudarnos a continuar nuestra labor y hacer la diferencia en la vida de nuestros niños.
+highlights:
+  main:
+    title: Apadrina a un Niño o Niña
+  complementary:
+    one:
+      title: Dona tu Tiempo
+    two:
+      title: Dona Artículos
+    three:
+      title: Crea un Fundo
+    four:
+      title: Visítanos con tu Grupo
+    five:
+      title: Auspicia un Evento
 menu:
   navigation:
     identifier: _index

@@ -3,59 +3,66 @@
 {% endcomment %}
 
 {% assign url = page.url | remove:'index.html' %}
+{% assign info = site.data.information %}
 
-<header class="site-header">
-  <div class="container">
-      <h1 class="logo">
-        <a href="{{ "{{ page.lang }}" | absolute_url }}">{{ site.name }}</a>
-      </h1>
-      <nav class="main-nav">
-        <ul class="navigation">
-          {% for link in site.menus.navigation %}
-          <li class="{% if link.children %}nested {% endif %}{% if url == link.url %}current{% endif %}">
-            {% if link.children %}
-            <ul class="first-level">
+<nav class="navbar is-fixed-top is-light" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/{{ page.lang }}">
+      {{ info.name }}
+    </a>
+
+    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+      data-target="navbarContent">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarContent" class="navbar-menu">
+    <div class="navbar-end">
+      {% for link in site.menus.navigation %}
+        {% unless link.url contains page.lang %}
+          {% continue %}
+        {% endunless %}
+
+        {% if link.children %}
+          <div class="navbar-item {% if link.children %}has-dropdown {% endif %}{% if url == link.url %}is-active{% endif %}">
+            <div class="navbar-dropdown">
               {% for child in link.children %}
-              <li>
-                {% if child.children %}
-                <ul class="second-level">
-                  {% for child in child.children %}
-                    {% unless child.url contains page.lang %}
-                      {% continue %}
-                    {% endunless %}
-                    <li>
-                      <a href="{{ child.url | absolute_url }}">{{ child.title }}</a>
-                    </li>
-                  {% endfor %}
-                </ul>
-                {% endif %}
+              <div class="navbar-item">
                 {% unless child.url contains page.lang %}
-                  {% continue %}
+                {% continue %}
                 {% endunless %}
-
-                <a href="{{ child.url | absolute_url }}"{% if child.target %} target="_blank" {% endif %}>
+            
+                <a class="navbar-link" href="{{ child.url | absolute_url }}" {% if child.target %} target="_blank" {% endif %}>
                   {{ child.title }}
                   {% if child.childen %}
-                    <i class='icon-right-dir-2'></i>
+                  <i class='icon-right-dir-2'></i>
                   {% endif %}
                 </a>
-              </li>
+              </div>
               {% endfor %}
-            </ul>
-            {% endif %}
-            {% unless link.url contains page.lang %}
-              {% continue %}
-            {% endunless %}
+            </div>
+          </div>
+        {% else %}
+          <a class="navbar-item {% if url == link.url %}is-active{% endif %}" href="{{ link.url | absolute_url }}"
+            {% if link.target %} target="_blank" {% endif %}>
+            {{ link.title }}
+          </a>
+        {% endif %}
+      {% endfor %}
 
-            <a href="{{ link.url | absolute_url }}"{% if link.target %} target="_blank" {% endif %}>
-              {{ link.title }}
-              {% if link.childen %}
-                <i class='icon-chevron-down'></i>
-              {% endif %}
-            </a>
-          </li>
-          {% endfor %}
-        </ul>
-    </nav>
+      <div class="navbar-item">
+        <div class="buttons">
+          <a class="button is-primary">
+            <strong>Sign up</strong>
+          </a>
+          <a class="button is-light">
+            Log in
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
-</header>
+</nav>

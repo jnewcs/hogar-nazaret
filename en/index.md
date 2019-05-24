@@ -1,30 +1,24 @@
 ---
 title: Home
-banner_image: "/img/banner.png"
 layout: landing-page
-heading: Belkirk College
-partners:
-- "/uploads/2017/11/13/stem.png"
-- "/uploads/2017/11/13/UPenn_logo.png"
-- "/uploads/2017/11/13/nysed.png"
-services:
-- description: Performing collaborative research and providing services to support
-    the Health Sector.
-  heading: Health
-  icon: "/uploads/2017/11/13/health.png"
-- description: Performing collaborative research and providing services to support
-    the biotechnology sector.
-  heading: BioTech
-  icon: "/uploads/2017/11/13/biotech.png"
-sub_heading: Engineering and Health Sciences
-textline: | 
-  Belkirk College of Engineering
-  
-  Ora et Labora
-hero_button:
-  text: Learn more
-  href: "/en/about"
-show_news: true
+show_carousel: true
+call_to_action:
+  header: The Hogar Invites you to get involved!
+  text: The operation of our shelter home for children (the Hogar) is greatly possible thanks to grants and donations from institutions such as United Way, government agencies, civic organizations, merchants and private companies. However, most important is the support of the COMMUNITY, individuals and families that are committed to help El Hogar continue its work and make a difference in the lives of its children.
+highlights:
+  main:
+    title: Sponsor a Child
+  complementary:
+    one:
+      title: Donate your Time
+    two:
+      title: Donate Articles
+    three:
+      title: Create a Fund
+    four:
+      title: Visit with your Group
+    five:
+      title: Sponsor an Event
 menu:
   navigation:
     identifier: _index

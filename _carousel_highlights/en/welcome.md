@@ -1,8 +1,9 @@
 ---
 title: WELCOME TO THE HOGAR ALBERGUE PARA NIÑOS JESÚS DE NAZARET!
-date: 2019-05-20T09:09:13.000+00:00
 link_text: 'The Hogar'
-banner_image: "uploads/2018/02/25/car.jpg"
+link_destination: '/en/about'
+banner_image: '/uploads/2018/02/25/car.jpg'
+banner_image_style: 'contain'
 layout: carousel_highlight
 lang: en
 ---

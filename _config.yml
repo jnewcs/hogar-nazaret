@@ -34,6 +34,8 @@ collections:
 jekyll-archives:
   enabled: all
   layout: "archive"
+sass:
+  style: compressed
 gems:
   - jekyll-menus
   - jekyll-feed

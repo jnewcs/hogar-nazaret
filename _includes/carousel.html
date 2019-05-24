@@ -3,16 +3,51 @@ Shows a Carousel
 {% endcomment %}
 
 {% assign related = site.carousel_highlights | where:"lang", page.lang %}
-{% for highlight in related %}
-<div class="container pure-g">
-  <div class="pure-u-1">
-    <div class="content content-narrow">
-      <div class="list-layout">
-        {{ highlight.content }}
-        {{ highlight.link_text }}
-      </div>
+
+<div class="fluid-container">
+  <div class="glide" id="carousel-container">
+    <div class="glide__track" data-glide-el="track">
+      <ul class="glide__slides">
+        {% for highlight in related %}
+        <li class="glide__slide">
+          <div class="columns">
+            <div class="column is-half carousel-background-image"
+              style="background: url('{{ highlight.banner_image }}') center center; background-size: {{ highlight.banner_image_style }}; background-repeat: no-repeat">
+            </div>
+
+            <div class="column is-half has-background-white-bis">
+              <section class="hero">
+                <div class="hero-body">
+                  <h1 class="is-size-3 is-uppercase">
+                    {{ highlight.title }}
+                  </h1>
+                  <p>
+                    {{ highlight.content }}
+                  </p>
+
+                  {% if highlight.link_text %}
+                  <br />
+                  <a class="button is-primary is-medium" href="{{ highlight.link_destination }}">
+                    {{ highlight.link_text }}
+                  </a>
+                  {% endif %}
+                </div>
+              </section>
+            </div>
+          </div>
+        </li>
+        {% endfor %}
+      </ul>
     </div>
+
+    {% if related.size > 1 %}
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        {% for highlight in related %}
+        <button class="glide__bullet" data-glide-dir="={{ forloop.index | minus: 1 }}"></button>
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </div>
-</div>
-{% endfor %}
+
+<script src="{{ "/vendor/js/glide.min.js" | absolute_url }}" type="text/javascript"></script>
