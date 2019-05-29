@@ -32,22 +32,9 @@ collections:
 jekyll-archives:
   enabled: all
   layout: "archive"
-
-assets:
-  digest: false
-  source_maps: true
-  compression: true
-  gzip: true
-  defaults:
-    js: { integrity: true }
-    css: { integrity: true }
-    img: { integrity: true }
-  caching:
-    path: ".jekyll-cache/assets"
-    type: file # Possible values: memory, file
-    enabled: true
-  sources:
-    - _sass
+sass:
+  style: compressed
+  sass_dir: _sass
 
 plugins:
   - jekyll-menus
