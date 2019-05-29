@@ -12,7 +12,7 @@ Shows a Carousel
         <li class="glide__slide">
           <div class="columns">
             <div class="column is-half carousel-background-image"
-              style="background: url('{{ highlight.banner_image }}') center center; background-size: {{ highlight.banner_image_style }}; background-repeat: no-repeat">
+              style="background: url('{{ highlight.banner_image | absolute_url }}') center center; background-size: {{ highlight.banner_image_style }}; background-repeat: no-repeat">
             </div>
 
             <div class="column is-half has-background-white-bis">

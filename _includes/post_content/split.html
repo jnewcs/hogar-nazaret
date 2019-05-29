@@ -10,7 +10,7 @@
   {% if page.banner_image %}
     <div class="column is-one-third">
       <figure class="image">
-        <img class="" src="{{ page.banner_image }}" alt="{{ page.banner_image_alt }}">
+        <img class="" src="{{ page.banner_image | absolute_url }}" alt="{{ page.banner_image_alt }}">
       </figure>
     </div>
   {% endif %}
