@@ -1,0 +1,23 @@
+{% comment %}
+  Side by Side Layout for Post Header
+{% endcomment %}
+
+<div class="columns is-mobile" id="central-title-layout-container">
+  <div class="column has-background-white-bis is-flex-container is-vertically-centered is-horizontally-centered"
+    id="post-side-by-side-layout-title">
+    <section class="hero">
+      <div class="hero-body">
+        <h1 class="is-size-2 is-uppercase">
+          {{ page.title }}
+        </h1>
+        <p>
+          {{ page.subtitle }}
+        </p>
+
+        {% if page.date %}
+        <div class="post-date">{{ page.date | date_to_string }}</div>
+        {% endif %}
+      </div>
+    </section>
+  </div>
+</div>

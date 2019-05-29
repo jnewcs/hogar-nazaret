@@ -1,0 +1,29 @@
+{% comment %}
+  Side by Side Layout for Post Header
+{% endcomment %}
+
+<div class="columns is-mobile" id="post-side-by-side-layout-container">
+  <div class="column has-background-white-bis is-flex-container is-vertically-centered is-horizontally-centered"
+    id="post-side-by-side-layout-title">
+    <section class="hero">
+      <div class="hero-body">
+        <h1 class="is-size-2 is-uppercase">
+          {{ page.title }}
+        </h1>
+        <p>
+          {{ page.subtitle }}
+        </p>
+
+        {% if page.date %}
+        <div class="post-date">{{ page.date | date_to_string }}</div>
+        {% endif %}
+      </div>
+    </section>
+  </div>
+
+  {% if page.banner_image %}
+    <div class="column" id="post-side-by-side-layout-image" alt="{{ page.banner_image_alt }}"
+      style="background: url('{{ page.banner_image }}') center center; background-size: {{ page.banner_image_style }}; background-repeat: no-repeat">
+    </div>
+  {% endif %}
+</div>

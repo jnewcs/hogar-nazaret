@@ -2,32 +2,34 @@
 	Creates a breadcrumb from the page's URL
 {% endcomment %}
 
-<nav class="breadcrumb has-arrow-separator" aria-label="breadcrumbs">
-	{% assign parts = page.url | split: "/" %}
-	<ul>
-		<li>
-			{% assign default_url = '/' | append: page.lang %}
-			<a href="{{ site.baseurl | default: default_url }}">
-				Home
-			</a>&nbsp;<i class="fa fa-chevron-right"></i>
-		</li>
-		{% for part in parts offset: 1 %}
+<div class="container pb-1 pt-1">
+	<nav class="breadcrumb is-medium" aria-label="breadcrumbs">
+		{% assign parts = page.url | split: "/" %}
+		<ul>
+			<li>
+				{% assign default_url = '/' | append: page.lang %}
+				<a href="{{ site.baseurl | default: default_url }}">
+					Home
+				</a>&nbsp;<i class="fa fa-chevron-right"></i>
+			</li>
+			{% for part in parts offset: 1 %}
 			{% if part == page.lang %}
-				{% continue %}
+			{% continue %}
 			{% elsif forloop.last %}
-				<li class="is-active">
-					<a href="#">
-						{{ page.title }}
-					</a>
-				</li>
+			<li class="is-active">
+				<a href="#">
+					{{ page.title | truncatewords: 3 }}
+				</a>
+			</li>
 			{% else %}
-				{% assign text =  part | replace:'-', ' ' | capitalize %}
-				{% assign limit = forloop.index | plus: 1 %}
-				{% capture href %}{% for part in parts limit: limit %}{{ part | append: '/' }}{% endfor %}{% endcapture %}
-				<li>
-					<a href="{{ href | absolute_url }}">{{ text }}</a>&nbsp;<i class="fa fa-chevron-right"></i>
-				</li>
+			{% assign text =  part | replace:'-', ' ' | capitalize %}
+			{% assign limit = forloop.index | plus: 1 %}
+			{% capture href %}{% for part in parts limit: limit %}{{ part | append: '/' }}{% endfor %}{% endcapture %}
+			<li>
+				<a href="{{ href | absolute_url }}">{{ text }}</a>&nbsp;<i class="fa fa-chevron-right"></i>
+			</li>
 			{% endif %}
-		{% endfor %}
-	</ul>
-</nav>
+			{% endfor %}
+		</ul>
+	</nav>
+</div>

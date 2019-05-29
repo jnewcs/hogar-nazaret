@@ -4,44 +4,51 @@
 {% endcomment %}
 
 {% if page.show_news %}
-
 <section class="has-background-white-bis pt-2 pb-1">
     <div class="container">
         <h1 class="is-size-3 has-text-centered mb-1">
             {{ page.news.title }}
         </h1>
 
-        <div class="columns">
+        <div class="columns is-vcentered">
             {% if page.lang == 'en' %}
-                {% assign related = site.posts | limit:3 %}
+                {% assign related = site.posts | limit:5 %}
             {% else %}
-                {% assign related = site.noticias | limit:3 %}
+                {% assign related = site.noticias | limit:5 %}
             {% endif %}
 
-            {% for post in related %}
-                <div class="column is-one-third">
-                    <div class="card">
-                        <div class="card-image">
-                            <figure class="image">
-                                <img src="{{ post.banner_image }}" alt="Placeholder image">
-                            </figure>
-                        </div>
+            <div class="glide" id="news-carousel-container">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                    {% for post in related %}
+                        <li class="glide__slide">
+                            <div class="column">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <figure class="image">
+                                            <img src="{{ post.banner_image }}" alt="{{ post.banner_image_alt }}" loading="lazy">
+                                        </figure>
+                                    </div>
 
-                        <div class="card-content">
-                            <div class="content">
-                                <h3>
-                                    <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
-                                </h3>
-                                <p>
-                                    {{ post.content | truncate: 100 }}
-                                </p>
-                                <br>
-                                <date>{{ post.date | date_to_string }}</date>
+                                    <div class="card-content">
+                                        <div class="content">
+                                            <h3>
+                                                <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+                                            </h3>
+                                            <p>
+                                                {{ post.content | truncate: 100 }}
+                                            </p>
+                                            <br>
+                                            <date>{{ post.date | date_to_string }}</date>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+                    {% endfor %}
+                    </ul>
                 </div>
-            {% endfor %}
+            </div>
         </div>
     </div>
 </section>

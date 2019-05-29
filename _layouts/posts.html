@@ -6,20 +6,44 @@ layout: default
 	the _posts/ collection
 {% endcomment %}
 
-{% include breadcrumbs.html class="content-narrow" %}
-
 {% assign related = site.posts | where:"lang", page.lang %}
-{% for post in related %}
-<div class="container pure-g">
-  <div class="pure-u-1">
-      <div class="content content-narrow">
-        <div class="list-layout">
-          <h2><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
-          <div>{{ post.content | truncatewords: 30 }}</div>
-          <date>{{ post.date | date_to_string }}</date>
+<div class="container content-container">
+  <section class="is-medium">
+    <h1 class="is-size-3 has-text-centered">
+      Recent News
+    </h1>
+
+    <hr />
+
+    <div class="columns is-multiline is-nested mt-2">
+      {% for post in related %}
+        <div class="column is-full mb-2 mt-1">
+          <div class="columns is-desktop">
+            <div class="column is-one-quarter">
+              <figure class="image">
+                <img src="{{ post.banner_image }}" alt="{{ page.banner_image_alt }}">
+              </figure>
+            </div>
+
+            <div class="column">
+              <div class="content">
+                <strong class="post-title">
+                  <a class="is-size-4" href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+                </strong>
+                <div>
+                  <date>{{ post.date | date_to_string }}</date>
+                </div>
+                <p>
+                  {{ post.content | truncatewords: 50 }}
+                </p>
+                <a href="{{ post.url | absolute_url }}" class="button is-primary is-outlined is-medium">
+                  Read More
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
+      {% endfor %}
     </div>
-  </div>
+  </section>
 </div>
-{% endfor %}

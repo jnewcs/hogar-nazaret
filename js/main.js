@@ -29,4 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
       autoplay: 5000
     }).mount();
   }
+
+  /* Code for News Carousel */
+  var newsCarouselContainer = document.getElementById('news-carousel-container');
+  if (newsCarouselContainer) {
+    var breakpoints = {
+      '600': { perView: 1 },
+      '1000': { perView: 2 }
+    };
+    new Glide('#news-carousel-container', {
+      type: 'carousel',
+      startAt: 0,
+      autoplay: 5000,
+      perView: 3,
+      breakpoints: breakpoints
+    }).mount();
+  }
 });

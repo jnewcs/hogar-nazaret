@@ -29,14 +29,27 @@ collections:
   noticias:
     output: true
     permalink: "/es/noticias/:name"
-# tag_page_layout: tag_page
-# tag_page_dir: tag
 jekyll-archives:
   enabled: all
   layout: "archive"
-sass:
-  style: compressed
-gems:
+
+assets:
+  digest: false
+  source_maps: true
+  compression: true
+  gzip: true
+  defaults:
+    js: { integrity: true }
+    css: { integrity: true }
+    img: { integrity: true }
+  caching:
+    path: ".jekyll-cache/assets"
+    type: file # Possible values: memory, file
+    enabled: true
+  sources:
+    - _sass
+
+plugins:
   - jekyll-menus
   - jekyll-feed
   - jekyll-archives

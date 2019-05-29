@@ -9,8 +9,7 @@
   <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | absolute_url }}"/>
 
   <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-  <link rel="stylesheet" href="{{ '/css/main.css' | absolute_url }}">
+  {% asset main.css %}
 
   {% if page.show_carousel %}
     <link rel="stylesheet" href="{{ '/vendor/css/glide.core.min.css' | absolute_url }}">

@@ -1,5 +1,8 @@
+/* Custom Colors */
+$primary: #1C027A;
+
 /* Generic Helpers */
-h1, h2, h3, date {
+h1, h2, h3, date, .post-title {
   font-family: 'Patrick Hand', cursive;
 }
 #navbar-spacer {
@@ -20,3 +23,28 @@ h1, h2, h3, date {
 .pt-2 { padding-top: 2em; }
 .pb-1 { padding-bottom: 1em; }
 .pb-2 { padding-bottom: 2em; }
+
+.is-flex-container { display: flex; }
+.is-vertically-centered { align-items: center; }
+.is-horizontally-centered { justify-content: center; }
+.content-container { padding: 2em; }
+
+/* Post Layouts - Side by Side */
+#post-content {
+  p {
+    @extend .pt-1;
+  }
+}
+#post-side-by-side-layout-image { min-height: 350px; }
+
+@media screen and (max-width: 768px) {
+  #post-side-by-side-layout-container {
+    flex-direction: column;
+  }
+  #post-side-by-side-layout-title {
+    order: 2;
+  }
+  #post-side-by-side-layout-image {
+    order: 1;
+  }
+}
