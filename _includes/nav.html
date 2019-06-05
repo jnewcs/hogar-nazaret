@@ -1,8 +1,8 @@
 {% comment %}
-	Displays the site's navigation using the jekyll-menus plugin
+	Displays the site's navigation
 {% endcomment %}
 
-{% assign url = page.url | remove:'index.html' %}
+{% assign current_url = page.url | remove:'index.html' %}
 {% assign info = site.data.information %}
 
 <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
@@ -21,33 +21,27 @@
 
   <div id="navbarContent" class="navbar-menu">
     <div class="navbar-end">
-      {% for link in site.menus.navigation %}
-        {% unless link.url contains page.lang %}
+      {% for link in site.data.menus %}
+        {% unless link.lang == page.lang %}
           {% continue %}
         {% endunless %}
 
-        {% if link.children %}
-          <div class="navbar-item {% if link.children %}has-dropdown {% endif %}{% if url == link.url %}is-active{% endif %}">
+        {% if link.has_dropdown %}
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link {% if link.contained_links contains current_url %}dropdown-has-active{% endif %}" href="#">
+              {{ link.title }}
+            </a>
+
             <div class="navbar-dropdown">
               {% for child in link.children %}
-              <div class="navbar-item">
-                {% unless child.url contains page.lang %}
-                {% continue %}
-                {% endunless %}
-            
-                <a class="navbar-link" href="{{ child.url | absolute_url }}" {% if child.target %} target="_blank" {% endif %}>
+                <a class="navbar-item {% if current_url == child.url %}is-active{% endif %}" href="{{ child.url | absolute_url }}" {% if child.target %} target="_blank" {% endif %}>
                   {{ child.title }}
-                  {% if child.childen %}
-                  <i class='icon-right-dir-2'></i>
-                  {% endif %}
                 </a>
-              </div>
               {% endfor %}
             </div>
           </div>
         {% else %}
-          <a class="navbar-item {% if url == link.url %}is-active{% endif %}" href="{{ link.url | absolute_url }}"
-            {% if link.target %} target="_blank" {% endif %}>
+          <a class="navbar-item {% if current_url == link.url %}is-active{% endif %}" href="{{ link.url | absolute_url }}" {% if link.target %} target="_blank" {% endif %}>
             {{ link.title }}
           </a>
         {% endif %}

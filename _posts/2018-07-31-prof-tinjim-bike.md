@@ -2,8 +2,8 @@
 title: Prof. Tinjum Rides 2000Km for the Hogar
 date: 2018-07-31T12:00:00.000+00:00
 tags: []
-banner_image: "/uploads/2018/bike_the_sun/tinjum_bike_the_sun.webp"
-banner_image_alt: "Prof. Tinjum Charity Ride"
+banner_image: /uploads/2018/bike_the_sun/tinjum_bike_the_sun.webp
+banner_image_alt: Prof. Tinjum Charity Ride
 banner_image_style: contain
 header_layout: side_by_side
 layout: post

@@ -22,9 +22,5 @@ highlights:
       title: Auspicia un Evento
 news:
   title: Noticias y Próximos Eventos
-menu:
-  navigation:
-    identifier: _index
-    weight: 1
-lang: 'es'
+lang: es
 ---

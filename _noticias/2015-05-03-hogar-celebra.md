@@ -4,7 +4,7 @@ date: 2015-05-03T09:09:13.000+00:00
 related_posts: []
 sub_heading: Nullam quis risus eget urna mollis ornare vel eu leo.
 tags: []
-banner_image: "/uploads/2018/02/17/building.jpg"
+banner_image: /uploads/2018/02/17/building.jpg
 layout: noticia
 lang: es
 lang_ref: hogar-celebra-20-anos

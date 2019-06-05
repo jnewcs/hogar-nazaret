@@ -36,6 +36,5 @@ sass:
   sass_dir: _sass
 
 plugins:
-  - jekyll-menus
   - jekyll-feed
   - jekyll-archives

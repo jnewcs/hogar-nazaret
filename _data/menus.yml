@@ -1,0 +1,23 @@
+---
+- title: Home
+  url: /en/
+  lang: en
+
+- title: About Us
+  has_dropdown: true
+  lang: en
+  contained_links:
+    - /en/about/
+  children:
+    - title: The Hogar
+      url: /en/about/
+
+- title: News
+  url: /en/posts/
+  lang: en
+
+
+
+- title: Inicio
+  url: /es/
+  lang: es

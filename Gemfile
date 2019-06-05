@@ -4,7 +4,6 @@ gem "jekyll"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.6"
-  gem "jekyll-menus"
   gem "jekyll-tagging"
   gem "jekyll-archives"
   gem "github-pages"

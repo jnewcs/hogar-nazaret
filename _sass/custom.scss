@@ -1,8 +1,10 @@
 /* Custom Colors */
 $primary: #1C027A;
+$navbar-item-active-color: #FA6302 !important;
+$navbar-item-active-background-color: inherit !important;
 
 /* Generic Helpers */
-h1, h2, h3, date, .post-title {
+h1, h2, h3, date, .post-title, .navbar-item {
   font-family: 'Patrick Hand', cursive;
 }
 #navbar-spacer {
@@ -28,6 +30,20 @@ h1, h2, h3, date, .post-title {
 .is-vertically-centered { align-items: center; }
 .is-horizontally-centered { justify-content: center; }
 .content-container { padding: 2em; }
+
+/* Navbar layout */
+.navbar-item {
+  font-weight: 400;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+.dropdown-has-active {
+  color: $navbar-item-active-color;
+
+  &:after {
+    border-color: $navbar-item-active-color;
+  }
+}
 
 /* Post Layouts - Side by Side */
 #post-content {

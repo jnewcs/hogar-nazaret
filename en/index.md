@@ -22,9 +22,5 @@ highlights:
       title: Sponsor an Event
 news:
   title: News & Upcoming Events
-menu:
-  navigation:
-    identifier: _index
-    weight: 1
-lang: 'en'
+lang: en
 ---
