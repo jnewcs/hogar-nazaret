@@ -1,6 +1,8 @@
 ---
 - title: Home
   url: /en/
+  contained_links:
+    - /en/
   lang: en
 
 - title: About Us
@@ -26,12 +28,16 @@
 
 - title: News
   url: /en/posts/
+  contained_links:
+    - /en/posts/
   lang: en
 
-
+# Spanish Menus
 
 - title: Inicio
   url: /es/
+  contained_links:
+    - /es/
   lang: es
 
 - title: ¿QUIÉNES SOMOS?
@@ -57,4 +63,7 @@
 
 - title: Noticias
   url: /es/noticias/
+  contained_links:
+    - /es/noticias/
+    - /es/noticias/2015-05-03-hogar-celebra
   lang: es

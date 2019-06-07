@@ -7,8 +7,10 @@
 
 <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-    <a class="navbar-item" href="{{ page.lang | absolute_url }}">
-      {{ info.name }}
+    <a href="{{ page.lang | absolute_url }}">
+      <figure class="image is-96x96" id="site-logo">
+        <img src="/uploads/logo.png">
+      </figure>
     </a>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
@@ -41,7 +43,7 @@
             </div>
           </div>
         {% else %}
-          <a class="navbar-item {% if current_url == link.url %}is-active{% endif %}" href="{{ link.url | absolute_url }}" {% if link.target %} target="_blank" {% endif %}>
+          <a class="navbar-item {% if link.contained_links contains current_url %}is-active{% endif %}" href="{{ link.url | absolute_url }}" {% if link.target %} target="_blank" {% endif %}>
             {{ link.title }}
           </a>
         {% endif %}
