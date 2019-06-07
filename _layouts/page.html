@@ -5,12 +5,23 @@ layout: default
     A general page layout. Used by default for all content on the site.
 {% endcomment %}
 
-{% include breadcrumbs.html class="content-narrow" %}
+{% if page.header_image %}
+    {% if page.header_layout == 'blur' %}
+        {% include page_headers/blur.html %}
+    {% endif %}
+{% endif %}
 
-<div class="container pure-g">
-    <div class="pure-u-1">
-        <div class="content content-narrow">
+<!-- <div class="page-hero-image" alt="{{ page.banner_image_alt }}"
+    style="background: url('{{ page.banner_image | absolute_url }}') center center; background-size: {{ page.banner_image_style }}; background-repeat: no-repeat">
+    <div class="page-hero-image-overlay {{ page.banner_image_overlay.design }}"
+        style="opacity: {{ page.banner_image_overlay.opacity }}"></div>
+    <span class="is-size-1 p-1 has-background-white-ter" id="page-hero-title">{{ page.title }}</span>
+</div> -->
+
+<div class="container content-container">
+    <section class="is-medium">
+        <div class="pb-2 content" id="post-content">
             {{ content }}
         </div>
-    </div>
+    </section>
 </div>

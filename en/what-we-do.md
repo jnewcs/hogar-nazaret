@@ -1,0 +1,21 @@
+---
+title: Services Reach
+header_layout: blur
+header_image: /uploads/page_header_images/abstract_hands.jpg
+header_image_style: cover
+header_text_color: dark
+layout: page
+lang: en
+lang_ref: what-we-do-overview
+---
+The Hogar's mission is to provide a safe and welcoming place for children who have been removed from their biological family or foster home due to neglect, physical violence or sexual abuse. We work hard to restore the children's physical, mental and emotional wellbeing by providing professional attention and personalized care.
+
+We serve children from all over Puerto Rico referred to us by the Department of Family Services. In the past two decades, the Hogar has housed more than 650 minors from over 43 Puerto Rico municipalities. 
+
+Currently, the Hogar has a maximum capacity of 14 children and employs a staff of 22 people, whose main focus is to take care of the children.
+
+The "spinal cord" of the Hogar are the Nanas, caregivers dedicated to the children 24 hours a day, 7 days a week. Our nannies become the children's substitute moms during their stay at the Hogar, taking care of them with tenderness and attending to their personal hygiene, nutrition and recreation.
+
+Our service staff also includes healthcare, education, recreation, nutrition and transportation specialists who work hard in conjunction with the nannies to make sure that all the children's needs are attended to with promptness and excellence.
+
+Our executive director and administrative team work tirelessly to make sure that the Hogar runs like a family in harmony, and to assure the operational and fiscal stability of the institution.

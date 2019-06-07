@@ -7,6 +7,7 @@ banner_image_alt: Hogar Collaborators Gather
 banner_image_style: contain
 header_layout: central_title
 content_layout: split
+split_image: /uploads/2018/hogar_collaborators/group_image.webp
 layout: post
 lang: en
 lang_ref: hogar-collaborators

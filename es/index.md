@@ -23,4 +23,5 @@ highlights:
 news:
   title: Noticias y Próximos Eventos
 lang: es
+lang_ref: home-page
 ---

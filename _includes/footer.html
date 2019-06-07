@@ -1,5 +1,27 @@
-<footer class="footer mt-1">
+<footer class="footer pb-3">
     <div class="content has-text-centered">
+        {% assign multilingual_pages = site.pages | where:"lang_ref", page.lang_ref | sort: 'lang' %}
+        {% if multilingual_pages.size > 1 %}
+            <div class="page-switcher">
+                <em>
+                    {{ site.data.languages[page.lang].switcher }}:
+                </em>
+                {% for multilingual_page in multilingual_pages %}
+                    {% if page.lang != multilingual_page.lang %}
+                        <span class="mr-1">
+                            <a href="{{ multilingual_page.url | absolute_url }}" class="{{ multilingual_page.lang }} title=" View in
+                                {{ multilingual_page.lang }}">
+                                {{ site.data.languages[multilingual_page.lang].icon }}
+                                {{ site.data.languages[multilingual_page.lang].label }}
+                            </a>
+                        </span>
+                    {% endif %}
+                {% endfor %}
+
+                <hr />
+            </div>
+        {% endif %}
+
         <p>
             HOGAR ALBERGUE JESÚS DE NAZARET, INC © {{ site.data.information.year }}
         </p>

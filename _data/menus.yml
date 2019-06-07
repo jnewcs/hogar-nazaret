@@ -12,6 +12,18 @@
     - title: The Hogar
       url: /en/about/
 
+- title: What We Do
+  has_dropdown: true
+  lang: en
+  contained_links:
+    - /en/what-we-do/
+    - /en/what-we-do/services/
+  children:
+    - title: Services Reach
+      url: /en/what-we-do/
+    - title: Children Services
+      url: /en/what-we-do/services/
+
 - title: News
   url: /en/posts/
   lang: en
@@ -20,4 +32,29 @@
 
 - title: Inicio
   url: /es/
+  lang: es
+
+- title: ¿QUIÉNES SOMOS?
+  has_dropdown: true
+  lang: es
+  contained_links:
+    - /es/quienes-somos/
+  children:
+    - title: El Hogar
+      url: /es/quienes-somos/
+
+- title: ¿QUÉ HACEMOS?
+  has_dropdown: true
+  lang: es
+  contained_links:
+    - /es/que-hacemos/
+    - /es/que-hacemos/servicios/
+  children:
+    - title: Alcance
+      url: /es/que-hacemos/
+    - title: Servicios
+      url: /es/que-hacemos/servicios/
+
+- title: Noticias
+  url: /es/noticias/
   lang: es

@@ -1,11 +1,14 @@
 ---
 title: ¡Nuestro Hogar Celebra Sus 20 Años!
 date: 2015-05-03T09:09:13.000+00:00
-related_posts: []
-sub_heading: Nullam quis risus eget urna mollis ornare vel eu leo.
 tags: []
-banner_image: /uploads/2018/02/17/building.jpg
-layout: noticia
+banner_image: /uploads/2015/hogar_celebration.jpg
+banner_image_alt: Prof. Tinjum Charity Ride
+banner_image_style: contain
+header_layout: central_title
+content_layout: split
+split_image: /uploads/2015/hogar_celebration.jpg
+layout: post
 lang: es
 lang_ref: hogar-celebra-20-anos
 ---
