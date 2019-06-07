@@ -6,11 +6,11 @@
                 <em>
                     {{ site.data.languages[page.lang].switcher }}:
                 </em>
+
                 {% for multilingual_page in multilingual_pages %}
                     {% if page.lang != multilingual_page.lang %}
                         <span class="mr-1">
-                            <a href="{{ multilingual_page.url | absolute_url }}" class="{{ multilingual_page.lang }} title=" View in
-                                {{ multilingual_page.lang }}">
+                            <a href="{{ multilingual_page.url | absolute_url }}" class="{{ multilingual_page.lang }}">
                                 {{ site.data.languages[multilingual_page.lang].icon }}
                                 {{ site.data.languages[multilingual_page.lang].label }}
                             </a>
@@ -20,6 +20,30 @@
 
                 <hr />
             </div>
+        {% endif %}
+
+        <!-- We also want to cover a mulitlingual post -->
+        {% if page.lang == 'en' %}
+            {% assign multilingual_post = site.noticias | where:"lang_ref", page.lang_ref %}
+        {% else %}
+            {% assign multilingual_post = site.posts | where:"lang_ref", page.lang_ref %}
+        {% endif %}
+
+        {% if multilingual_post.size > 0 %}
+            <div class="page-switcher">
+                <em>
+                    {{ site.data.languages[page.lang].switcher }}:
+                </em>
+            </div>
+
+            <span class="mr-1">
+                <a href="{{ multilingual_post.first.url | absolute_url }}" class="{{ multilingual_post.first.lang }}">
+                    {{ site.data.languages[multilingual_post.first.lang].icon }}
+                    {{ site.data.languages[multilingual_post.first.lang].label }}
+                </a>
+            </span>
+
+            <hr />
         {% endif %}
 
         <p>

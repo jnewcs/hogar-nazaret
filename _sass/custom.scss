@@ -105,3 +105,8 @@ h1, h2, h3, date, .post-title, .navbar-item {
   letter-spacing: 16px;
   font-weight: 900;
 }
+
+/* News Carousel */
+#news-carousel-container img {
+  max-height: 300px;
+}

@@ -7,9 +7,9 @@ layout: default
 {% endcomment %}
 
 {% if page.lang == 'en' %}
-  {% assign related = site.posts %}
+  {% assign related = site.posts | sort:"date" | reverse %}
 {% else %}
-  {% assign related = site.noticias %}
+  {% assign related = site.noticias | sort:"date" | reverse %}
 {% endif %}
 
 <div class="container content-container">

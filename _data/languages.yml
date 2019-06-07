@@ -3,8 +3,10 @@ en:
   label: English
   icon: 🇺🇸
   read_more: Read More
+  posts: Recent News
 es:
   switcher: Lee esta página en
   label: Español
   icon: 🇵🇷
   read_more: Leer Más
+  posts: Noticias

@@ -23,6 +23,16 @@ layout: default
   </section>
 
   <hr />
-  {% include breadcrumbs.html class="container content-container" %}
 
+  <div class="has-text-centered">
+    {% if page.lang == 'en' %}
+      {% assign link = '/en/posts' %}
+    {% else %}
+      {% assign link = '/es/noticias' %}
+    {% endif %}
+
+    <a class="button is-primary is-outlined is-medium" href="{{ link }}">
+      {{ site.data.languages[page.lang].posts }}
+    </a>
+  </div>
 </div>
