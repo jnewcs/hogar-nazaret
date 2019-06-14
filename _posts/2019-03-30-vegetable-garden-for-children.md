@@ -2,7 +2,7 @@
 title: A Vegetable Garden for our Children
 date: 2019-03-30T12:00:00.000+00:00
 tags: []
-banner_image: /uploads/2019/garden_project/group_photo.JPG
+banner_image: /uploads/2019/garden_project/group_photo.jpg
 banner_image_alt: Vegetable Garden for El Hogar
 banner_image_style: contain
 header_layout: central_title
