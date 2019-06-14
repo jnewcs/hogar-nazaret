@@ -70,17 +70,6 @@ h1, h2, h3, date, .post-title, .navbar-item {
 }
 #post-side-by-side-layout-image { min-height: 350px; }
 
-@media screen and (max-width: 768px) {
-  #post-side-by-side-layout-container {
-    flex-direction: column;
-  }
-  #post-side-by-side-layout-title {
-    order: 2;
-  }
-  #post-side-by-side-layout-image {
-    order: 1;
-  }
-}
 /* Page Hero Image */
 .page-hero-image-container {
   position: relative;
@@ -109,4 +98,63 @@ h1, h2, h3, date, .post-title, .navbar-item {
 /* News Carousel */
 #news-carousel-container img {
   max-height: 300px;
+}
+
+/* Masonry Grid */
+.masonry-grid {
+  transition: all .5s ease-in-out;
+  column-gap: 10px;
+  column-fill: initial;
+
+  .brick {
+    margin-bottom: 10px;
+    display: inline-block; /* Fix the misalignment of items */
+    vertical-align: top; /* Keep the item on the very top */
+    min-width: 100px;
+    min-height: 100px;
+
+    &:hover img {
+      opacity: .75;
+    }
+
+    img {
+      transition: all .5s ease-in-out;
+      backface-visibility: hidden; /* Remove Image flickering on hover */
+    }
+  }
+}
+
+/* Image Modal */
+#masonry-image-count {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+}
+
+/* Mobile devices and below */
+@media screen and (max-width: 768px) {
+  #post-side-by-side-layout-container {
+    flex-direction: column;
+  }
+  #post-side-by-side-layout-title {
+    order: 2;
+  }
+  #post-side-by-side-layout-image {
+    order: 1;
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .masonry-grid {
+    column-count: 2;
+  }
+}
+
+/* Desktops and above */
+@media only screen and (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
 }

@@ -30,6 +30,16 @@
   url: /en/posts/
   contained_links:
     - /en/posts/
+    - /en/posts/2018-07-31-prof-tinjim-bike
+    - /en/posts/2018-08-18-gran-combo-concert
+    - /en/posts/2018-09-11-legistlative-grant
+    - /en/posts/2018-11-08-hogar-collaborators
+    - /en/posts/2018-12-05-new-board
+    - /en/posts/2018-12-28-three-kings-visit
+    - /en/posts/2019-01-15-solar-energy-hogar
+    - /en/posts/2019-02-21-johnson-johnson-donates-appliances
+    - /en/posts/2019-03-19-hogar-fundraiser-donation
+    - /en/posts/2019-03-30-vegetable-garden-for-children
     - /en/posts/2019-05-24-hogar-receives-grant
   lang: en
 
@@ -67,5 +77,10 @@
   contained_links:
     - /es/noticias/
     - /es/noticias/2015-05-03-hogar-celebra
+    - /es/noticias/2018-12-28-los-tres-reyes-magos-visitan
+    - /es/noticias/2019-01-15-energia-solar-para-el-hogar
+    - /es/noticias/2019-02-21-johnson-johnson-dona-enseres
+    - /es/noticias/2019-03-19-colecta-entre-amigos
+    - /es/noticias/2019-03-30-huerto-casero-y-jardin
     - /es/noticias/2019-05-24-hogar-recibe-donativo
   lang: es

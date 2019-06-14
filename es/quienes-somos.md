@@ -7,6 +7,8 @@ header_text_color: white
 layout: page
 lang: es
 lang_ref: about-overview
+redirect_from:
+  - /es/quienes-somos/el-hogar
 ---
 El Hogar Albergue para Niños Jesús de Nazaret, Inc. (Hogar) es una institución sin fines de lucro que se dedica a albergar, cuidar, proteger y atender las necesidades esenciales de niños y niñas que han sido víctimas de maltrato o negligencia. 
 

@@ -45,4 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
       breakpoints: breakpoints
     }).mount();
   }
+
+  /* Code for Lazy Loading */
+  const lazyImages = document.querySelectorAll('.lazy-load');
+  if (lazyImages && lazyImages.length) {
+    const observer = lozad(lazyImages);
+    observer.observe();
+  }
 });

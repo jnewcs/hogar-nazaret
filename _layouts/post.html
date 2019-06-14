@@ -1,5 +1,6 @@
 ---
 layout: default
+lazy_load: true
 ---
 {% comment %}
 	This layout is used by the documents in the _posts/ collection
@@ -22,13 +23,36 @@ layout: default
     </div>
   </section>
 
+  {% if page.has_photo_grid %}
+    <div class="mt-2 masonry-grid">
+      {% for photo in page.photo_grid %}
+        <div class="brick">
+          <img class="lazy-load masonry-image clickable" data-src="{{ photo | absolute_url }}" />
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="modal" id="masonry-image-modal">
+      <div class="modal-background"></div>
+      <div aria-label="count" class="has-text-white" id="masonry-image-count"></div>
+      <div class="modal-content">
+        <p class="image">
+          <img id="masonry-image-modal-highlight">
+        </p>
+      </div>
+      <button class="modal-close is-large" aria-label="close" id="masonry-image-close"></button>
+    </div>
+
+    <script src="{{ "/js/image_modal.js" | absolute_url }}" type="text/javascript"></script>
+  {% endif %}
+
   <hr />
 
   <div class="has-text-centered">
     {% if page.lang == 'en' %}
-      {% assign link = '/en/posts' %}
+      {% assign link = '/en/posts' | absolute_url %}
     {% else %}
-      {% assign link = '/es/noticias' %}
+      {% assign link = '/es/noticias' | absolute_url %}
     {% endif %}
 
     <a class="button is-primary is-outlined is-medium" href="{{ link }}">

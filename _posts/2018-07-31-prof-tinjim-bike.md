@@ -9,6 +9,8 @@ header_layout: side_by_side
 layout: post
 lang: en
 lang_ref: prof-tinjim-bike
+redirect_from:
+  - /en/news/recent/prof-tinjum-rides-2000km-hogar
 ---
 Last July, University of Wisconsin professor, James Tinjum rode over 2,000 km by bicycle through the U.S. Midwest to promote solar energy and raise money to fund a new energy system for the Hogar. The fundraising ride was part of a year-long initiative spearheaded by Prof. Tinjum's to design and install a distributed solar system, in partnership with Engineers Without Borders and the Puerto Rico Relief Fund of South Central Wisconsin. The design is being developed by graduate students from the University of Wisconsin, and funds will be donated to locally source all the installation materials and contractors in the island.
 

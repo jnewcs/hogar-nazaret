@@ -9,6 +9,8 @@ header_layout: side_by_side
 layout: post
 lang: en
 lang_ref: gran-combo-concert
+redirect_from:
+  - /en/news/recent/el-gran-combo-concert-hogar1
 ---
 On August 18, 2018, the Hogar held a fundraising concert featuring the famous salsa group, El Gran Combo. It was a magical night among friends and family sharing the great music that gives pride to Puerto Rico.
 

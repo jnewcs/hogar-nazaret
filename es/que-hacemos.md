@@ -7,6 +7,8 @@ header_text_color: dark
 layout: page
 lang: es
 lang_ref: what-we-do-overview
+redirect_from:
+  - /es/que-hacemos/alcance
 ---
 El Hogar Albergue Jesús de Nazaret Inc. (Hogar) es un hogar para niños y niñas que han sido víctimas de maltrato. Nuestro enfoque es proveer un lugar seguro y acogedor para menores que han sido removidos de sus hogares biológicos o de crianza por violencia física, abuso sexual o negligencia. Procuramos el bienestar físico, mental y emocional de los menores por medio de atención profesional y cuido personalizado.
 

@@ -9,6 +9,8 @@ header_layout: side_by_side
 layout: post
 lang: en
 lang_ref: gran-combo-concert
+redirect_from:
+  - /en/news/recent/hogar-receives-legislative-grant-doj
 ---
 Last September 11 2018, the Department of Justice of Puerto Rico presented a grant to the Hogar, funded by  the V.O.C.A. legislative donations program. Our director, Antoinette Beltrán, received the donation from Mrs. Wanda Vázquez Garced, Secretary of Justice, in the presence of the Honorable Governor of Puerto Rico. The ceremony took place in the city of San Juan.
 

@@ -1,5 +1,6 @@
 ---
 layout: default
+lazy_load: true
 ---
 {% comment %}
 	This layout is used to by posts.md to display all of documents in
@@ -26,7 +27,7 @@ layout: default
           <div class="columns is-desktop">
             <div class="column is-one-quarter">
               <figure class="image">
-                <img src="{{ post.banner_image | absolute_url }}" alt="{{ page.banner_image_alt }}">
+                <img class="lazy-load" data-src="{{ post.banner_image | absolute_url }}" alt="{{ page.banner_image_alt }}">
               </figure>
             </div>
 
@@ -39,7 +40,12 @@ layout: default
                   <date>{{ post.date | date_to_string }}</date>
                 </div>
                 <p>
-                  {{ post.content | truncatewords: 50 }}
+                  {% assign word_count = post.content | split: ' ' | size %}
+                  {% if word_count <= 50 %}
+                    {{ post.content }}
+                  {% else %}
+                    {{ post.content | truncatewords: 50 }}
+                  {% endif %}
                 </p>
                 <a href="{{ post.url | absolute_url }}" class="button is-primary is-outlined is-medium">
                   {{ site.data.languages[page.lang].read_more }}
