@@ -38,3 +38,4 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-archives
+  - jekyll-redirect-from
