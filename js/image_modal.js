@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setImage() {
+      var modalBlurBackground = document.getElementById('masonry-image-modal-blur-background');
+      modalBlurBackground.style.backgroundImage = `url(${this.activeImage.src})`;
+
       var modalHighlight = document.getElementById('masonry-image-modal-highlight');
       modalHighlight.src = this.activeImage.src;
     }

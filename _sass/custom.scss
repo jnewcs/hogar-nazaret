@@ -125,11 +125,27 @@ h1, h2, h3, date, .post-title, .navbar-item {
 }
 
 /* Image Modal */
+#masonry-image-count,
+#masonry-image-close,
+.modal-content {
+  z-index: 1;
+}
 #masonry-image-count {
   position: absolute;
   top: 20px;
   left: 20px;
   font-size: 24px;
+}
+#masonry-image-modal-blur-background {
+  background-size: cover;
+  filter: blur(40px) brightness(50%);
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  bottom: -50px;
+  left: -50px;
+  z-index: 0;
+  transition: background-image 0.75s ease-in;
 }
 
 /* Mobile devices and below */
