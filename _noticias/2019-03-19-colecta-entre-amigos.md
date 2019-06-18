@@ -13,6 +13,7 @@ lang: es
 lang_ref: friends-for-hogar
 redirect_from:
   - /es/noticias/noticias/colecta-entre-amigos-por-el-hogar
+  - /es/noticias/noticias/colecta-entre-amigos-por-el-hogar/
 ---
 El señor Lowell Blackman se dió a la tarea de realizar una colecta entre sus amistades con el propósito de levantar fondos para el Hogar. Luego fue personalmente al Hogar a entregar el donativo el pasado 19 de marzo de 2019.
 

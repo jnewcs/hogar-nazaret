@@ -9,6 +9,7 @@ lang: en
 lang_ref: services-overview
 redirect_from:
   - /en/que-hacemos/servicios
+  - /en/que-hacemos/servicios/
 ---
 In addition to experiencing a family environment filled with motherly love, the boys and girls who live in the Hogar receive the following services:
 

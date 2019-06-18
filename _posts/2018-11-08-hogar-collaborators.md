@@ -13,6 +13,7 @@ lang: en
 lang_ref: hogar-collaborators
 redirect_from:
   - /en/news/recent/hogar-collaborators-gather-annual-general-assembly
+  - /en/news/recent/hogar-collaborators-gather-annual-general-assembly/
 ---
 On November 8, 2018, the Hogar celebrated its Annual General Assembly in which the new board of directors took office in the company of the new executive director, Mrs. Antoinette Beltrán. The new board of directors will be chaired by Prof. Carlos Velázquez.
 

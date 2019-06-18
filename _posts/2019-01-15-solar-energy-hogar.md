@@ -13,6 +13,7 @@ lang: en
 lang_ref: solar-energy-hogar
 redirect_from:
   - /en/news/recent/solar-energy-hogar
+  - /en/news/recent/solar-energy-hogar/
 ---
 On January 15 2019, we kickoffed a project for the installation of a solar energy system at the Hogar. The solar system will allow the Hogar to continue its operations autonomously and without interruption even when the public electrical grid is down, keeping the children safe.  This project is possible thanks to Dr. James Tinjum and a group of graduate engineering students from the University of Wisconsin in Madison, and sponsored by the Engineers Without Borders and the Puerto Rico Relief Fund of Southeast Wisconsin.
 

@@ -18,6 +18,7 @@ lang: en
 lang_ref: hogar-garden-project
 redirect_from:
   - /en/news/recent/vegetable-garden
+  - /en/news/recent/vegetable-garden/
 ---
 In March 2019, missionaries from the Family Church of Wisconsin took on the task of planting an orchard and garden for our children. The orchard will provide organic produce such as peppers, pigeon peas and tomatoes for the Hogar’s consumption.
 

@@ -13,6 +13,7 @@ lang: es
 lang_ref: hogar-celebra-20-anos
 redirect_from:
   - /es/noticias/noticias/casa-abierta
+  - /es/noticias/noticias/casa-abierta/
 ---
 May 03rd 10:00 am - 3:00 pm
 Hogar Albergue para Niños Jesús de Nazaret, Inc. - Carr. 349, Cerro Las Mesas, Mayagüez, Puerto Rico

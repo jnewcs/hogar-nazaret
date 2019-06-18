@@ -13,6 +13,7 @@ lang: es
 lang_ref: hogar-receives-medical-grant
 redirect_from:
   - /es/noticias/noticias/el-hogar-recibe-gran-donativo-para-servicios-medicos
+  - /es/noticias/noticias/el-hogar-recibe-gran-donativo-para-servicios-medicos/
 ---
 El pasado 24 de mayo nuestro Hogar fue elegido institución aliada del “Programa de Mejor Cuidado Comunitario” de Abarca Healthcare entre 50 solicitantes. Somos una de 4 instituciones que recibirán financiamiento y apoyo voluntario constante durante los próximos tres años para ofrecer mejor cuidado médico a nuestros niños.
 

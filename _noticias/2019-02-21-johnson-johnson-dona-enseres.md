@@ -13,6 +13,7 @@ lang: es
 lang_ref: johnson-johnson-donates-appliances
 redirect_from:
   - /es/noticias/noticias/johnson-johnson-dona-enseres-al-hogar
+  - /es/noticias/noticias/johnson-johnson-dona-enseres-al-hogar/
 ---
 El pasado 21 de febrero 2019 representantes de la empresa Johnson & Johnson donaron una lavadora y una secadora al Hogar. Luis Ortíz y Jonathan Valentín, empleados de la oficina de Añasco de la empresa hicieron entrega de los enseres.
 

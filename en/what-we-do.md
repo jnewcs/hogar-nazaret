@@ -9,6 +9,7 @@ lang: en
 lang_ref: what-we-do-overview
 redirect_from:
   - /en/que-hacemos/alcance
+  - /en/que-hacemos/alcance/
 ---
 The Hogar's mission is to provide a safe and welcoming place for children who have been removed from their biological family or foster home due to neglect, physical violence or sexual abuse. We work hard to restore the children's physical, mental and emotional wellbeing by providing professional attention and personalized care.
 

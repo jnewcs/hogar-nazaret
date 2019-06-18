@@ -7,4 +7,5 @@ lang: es
 lang_ref: recent-news
 redirect_from:
   - /es/noticias/noticias
+  - /es/noticias/noticias/
 ---

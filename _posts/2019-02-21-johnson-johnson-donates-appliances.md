@@ -13,6 +13,7 @@ lang: en
 lang_ref: johnson-johnson-donates-appliances
 redirect_from:
   - /en/news/recent/johnson-johnson-donates-appliances-hogar
+  - /en/news/recent/johnson-johnson-donates-appliances-hogar/
 ---
 On February 21, 2019 representatives of Johnson & Johnson donated a washer and dryer to the Hogar. Luis Ortíz and Jonathan Valentín, employees from the Añasco office, came to present the useful donation.
 

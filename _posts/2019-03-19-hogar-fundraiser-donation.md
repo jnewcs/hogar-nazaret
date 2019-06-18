@@ -13,6 +13,7 @@ lang: en
 lang_ref: friends-for-hogar
 redirect_from:
   - /en/news/recent/friends-hogar
+  - /en/news/recent/friends-hogar/
 ---
 Mr. Lowell Blackman took the initiative to raise funds for the Hogar among his friends. He then went personally to the Hogar to deliver the donation on March 19, 2019.
 

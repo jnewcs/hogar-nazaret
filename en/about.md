@@ -9,6 +9,7 @@ lang: en
 lang_ref: about-overview
 redirect_from:
   - /en/quienes-somos/el-hogar
+  - /en/quienes-somos/el-hogar/
 ---
 The Hogar Albergue para Niños Jesús de Nazaret, Inc. (Hogar) is a transitory home for boys and girls that have been victims of abuse.
 

@@ -18,6 +18,7 @@ lang: es
 lang_ref: hogar-garden-project
 redirect_from:
   - /es/noticias/noticias/huerto-casero-y-jardin-para-nuestros-ninos
+  - /es/noticias/noticias/huerto-casero-y-jardin-para-nuestros-ninos/
 ---
 El pasado marzo 2019, misioneros de la Iglesia La Familia de Wisconsin se dieron a la tarea de adaptar el área aledaña al Salón Educativo del Hogar a un huerto y jardín.
 

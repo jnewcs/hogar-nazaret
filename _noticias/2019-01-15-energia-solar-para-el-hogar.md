@@ -13,6 +13,7 @@ lang: es
 lang_ref: solar-energy-hogar
 redirect_from:
   - /es/noticias/noticias/energia-solar-para-el-hogar
+  - /es/noticias/noticias/energia-solar-para-el-hogar/
 ---
 El pasado 15 de enero 2019 se llevó a cabo la ceremonia de inicio del proyecto de instalación de un sistema solar para el Hogar. Este sistema permitirá al Hogar continuar operando autónomamente y sin interrupción cuando se vaya la corriente eléctrica. Este proyecto es posible gracias al Dr. James Tinjum y estudiantes de ingeniería de la Universidad de Wisconsin en Madison, y auspiciado la organización 'Ingenieros sin Fronteras' en conjunto con el Puerto Rico Relief Fund (capítulo del Sudeste de Wisconsin).
 

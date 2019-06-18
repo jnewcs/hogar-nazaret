@@ -18,6 +18,7 @@ lang: es
 lang_ref: hogar-three-kings-visit
 redirect_from:
   - /es/noticias/noticias/los-tres-reyes-magos-visitan-nuestros-ninos
+  - /es/noticias/noticias/los-tres-reyes-magos-visitan-nuestros-ninos/
 ---
 Durante las celebraciones navideñas, los Tres Reyes Magos fueron a agasajar a los niños de nuestro Hogar. Melchor, Gaspar y Baltazar trajeron lindo regalos y consejos a cada uno de nuestros niños. Fue maravilloso ver las caritas sonrientes de los niños disfrutando a los sabios reyes.
 
