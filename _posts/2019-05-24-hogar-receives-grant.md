@@ -12,6 +12,7 @@ layout: post
 lang: en
 lang_ref: hogar-receives-medical-grant
 redirect_from:
+  - /en/news/recent/hogar-receives-medical-services-grant
   - /en/news/recent/hogar-receives-medical-services-grant/
 ---
 On May 24, our Home was chosen as an institution allied to the "Best Community Care Program" of Abarca Healthcare among 50 applicants. We are one of 4 institutions that will receive funding and constant volunteer support over the next three years to offer better medical care to our children.
