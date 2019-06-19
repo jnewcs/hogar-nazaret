@@ -1,5 +1,6 @@
 ---
 layout: default
+lazy_load: true
 ---
 {% comment %}
     A general page layout. Used by default for all content on the site.
@@ -9,19 +10,18 @@ layout: default
     {% if page.header_layout == 'blur' %}
         {% include page_headers/blur.html %}
     {% endif %}
+{% else %}
+    {% include page_headers/simple.html %}
 {% endif %}
-
-<!-- <div class="page-hero-image" alt="{{ page.banner_image_alt }}"
-    style="background: url('{{ page.banner_image | absolute_url }}') center center; background-size: {{ page.banner_image_style }}; background-repeat: no-repeat">
-    <div class="page-hero-image-overlay {{ page.banner_image_overlay.design }}"
-        style="opacity: {{ page.banner_image_overlay.opacity }}"></div>
-    <span class="is-size-1 p-1 has-background-white-ter" id="page-hero-title">{{ page.title }}</span>
-</div> -->
 
 <div class="container content-container">
     <section class="is-medium">
-        <div class="pb-2 content" id="post-content">
+        <div class="pb-2 content page-content">
             {{ content }}
+
+            {% if page.has_padrino_program %}
+                {% include padrino_program.html %}
+            {% endif %}
         </div>
     </section>
 </div>

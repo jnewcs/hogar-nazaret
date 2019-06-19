@@ -7,9 +7,6 @@ header_text_color: white
 layout: page
 lang: es
 lang_ref: services-overview
-redirect_from:
-  - /es/que-hacemos/servicios
-  - /es/que-hacemos/servicios/
 ---
 Los niños y niñas que viven en el Hogar reciben los siguientes servicios:
 

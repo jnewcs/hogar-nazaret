@@ -26,6 +26,18 @@
     - title: Children Services
       url: /en/what-we-do/services/
 
+- title: Get Involved!
+  has_dropdown: true
+  lang: en
+  contained_links:
+    - /en/get-involved/
+    - /en/get-involved/donate-articles/
+  children:
+    - title: The Padrinos Program
+      url: /en/get-involved/
+    - title: Donate Articles
+      url: /en/get-involved/donate-articles/
+
 - title: News
   url: /en/posts/
   contained_links:
@@ -71,6 +83,18 @@
       url: /es/que-hacemos/
     - title: Servicios
       url: /es/que-hacemos/servicios/
+
+- title: ¡CONTRIBUYE!
+  has_dropdown: true
+  lang: es
+  contained_links:
+    - /es/contribuye/
+    - /es/contribuye/donar-articulos/
+  children:
+    - title: Programa de Padrinos
+      url: /es/contribuye/
+    - title: Dona Artículos
+      url: /es/contribuye/donar-articulos/
 
 - title: Noticias
   url: /es/noticias/

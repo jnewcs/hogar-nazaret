@@ -14,7 +14,7 @@ lazy_load: true
 
 <div class="container content-container">
   <section class="is-medium">
-    <div class="pb-2 content" id="post-content">
+    <div class="pb-2 content page-content">
       {% if page.content_layout == 'split' %}
         {% include post_content/split.html %}
       {% else %}
@@ -55,6 +55,52 @@ lazy_load: true
     {% else %}
       {% assign link = '/es/noticias' | absolute_url %}
     {% endif %}
+
+    {% if page.previous and page.next %}
+      {% assign container_spacing = 'is-spaced-between' %}
+      {% assign subcontainer_spacing = 'is-full-width' %}
+    {% else %}
+      {% assign container_spacing = 'is-horizontally-centered' %}
+      {% assign subcontainer_spacing = 'is-half-width' %}
+    {% endif %}
+
+    <div class="prev-next-navigation-container is-flex-container {{ container_spacing }} pb-2">
+      {% if page.previous %}
+        <div class="{{ subcontainer_spacing }}">
+          <div class="tag is-size-5 mb-1 mt-1">
+            {{ site.data.languages[page.lang].previous_post }}
+          </div>
+
+          <div class="navigation-post-container">
+            <div class="page-hero-image lazy-load navigation-post-hero-image cover-no-repeat" data-background-image="{{ page.previous.banner_image | absolute_url }}"></div>
+
+            <div class="is-flex-container is-vertically-centered is-horizontally-centered navigation-post-title">
+              <a class="has-text-white clickable is-size-6" href="{{ page.previous.url | absolute_url }}" title="{{ page.previous.title }}">
+                {{ page.previous.title | truncatewords: 6 }}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.next %}
+        <div class="is-full-width">
+          <div class="tag is-size-5 mb-1 mt-1">
+            {{ site.data.languages[page.lang].next_post }}
+          </div>
+
+          <div class="navigation-post-container">
+            <div class="page-hero-image lazy-load navigation-post-hero-image cover-no-repeat" data-background-image="{{ page.next.banner_image | absolute_url }}"></div>
+
+            <div class="is-flex-container is-vertically-centered is-horizontally-centered navigation-post-title">
+              <a class="has-text-white clickable is-size-6" href="{{ page.next.url | absolute_url }}" title="{{ page.next.title }}">
+                {{ page.next.title | truncatewords: 6 }}
+              </a>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
 
     <a class="button is-primary is-outlined is-medium" href="{{ link }}">
       {{ site.data.languages[page.lang].posts }}

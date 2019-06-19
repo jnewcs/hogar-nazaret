@@ -1,0 +1,27 @@
+<div class="columns is-multiline is-horizontally-centered">
+  {% for data in site.data.padrinos_program %}
+    <div class="column is-one-third">
+      <div class="donar-box position-relative">
+        <div class="lazy-load donar-photo cover-no-repeat" alt="" data-background-image="{{ data.image | absolute_url }}"></div>
+        <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+          <div class="donar-box-caption-content">
+            <div class="is-size-3">
+              {{ data.title }}
+            </div>
+            <div class="is-size-5">
+              {{ data.cost[page.lang] }}
+            </div>
+
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+              <input type="hidden" name="cmd" value="_s-xclick">
+              <input type="hidden" name="hosted_button_id" value="4N55VXLPEUXK8">
+              <input type="hidden" name="os0" value="{{ data.form_cost }}">
+              <input type="hidden" name="currency_code" value="USD">
+              <input class="button is-secondary mt-1" type="submit" value="{{ site.data.languages[page.lang].donate }}">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

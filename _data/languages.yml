@@ -4,9 +4,15 @@ en:
   icon: 🇺🇸
   read_more: Read More
   posts: Recent News
+  previous_post: Previous Post
+  next_post: Next Post
+  donate: Donate
 es:
   switcher: Lee esta página en
   label: Español
   icon: 🇵🇷
   read_more: Leer Más
   posts: Noticias
+  previous_post: Publicación Anterior
+  next_post: Publicación Siguiente
+  donate: Donar
