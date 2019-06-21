@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
       this.setImage();
       this.setCount();
       document.getElementById('masonry-image-modal').classList.add('is-active');
+      document.documentElement.classList.add('is-clipped');
     }
 
     setImage() {
@@ -45,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     closeImage() {
+      document.documentElement.classList.remove('is-clipped');
       document.getElementById('masonry-image-modal').classList.remove('is-active');
       this.activeImage = null;
       this.activeIndex = null;

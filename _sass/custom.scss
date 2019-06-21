@@ -201,6 +201,17 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
   transition: background-color .35s;
 }
 
+/* Tabs */
+#tab-contents {
+  .tab-content {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
 /* Mobile devices and below */
 @media screen and (max-width: 768px) {
   #post-side-by-side-layout-container {

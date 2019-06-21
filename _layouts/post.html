@@ -35,11 +35,13 @@ lazy_load: true
     <div class="modal" id="masonry-image-modal">
       <div class="modal-background"></div>
       <div aria-label="count" class="has-text-white" id="masonry-image-count"></div>
+
       <div class="modal-content">
         <p class="image">
           <img id="masonry-image-modal-highlight">
         </p>
       </div>
+
       <button class="modal-close is-large" aria-label="close" id="masonry-image-close"></button>
       <div id="masonry-image-modal-blur-background"></div>
     </div>
@@ -56,20 +58,12 @@ lazy_load: true
       {% assign link = '/es/noticias' | absolute_url %}
     {% endif %}
 
-    {% if page.previous and page.next %}
-      {% assign container_spacing = 'is-spaced-between' %}
-      {% assign subcontainer_spacing = 'is-full-width' %}
-    {% else %}
-      {% assign container_spacing = 'is-horizontally-centered' %}
-      {% assign subcontainer_spacing = 'is-half-width' %}
-    {% endif %}
-
-    <div class="prev-next-navigation-container is-flex-container {{ container_spacing }} pb-2">
+    <div class="prev-next-navigation-container is-flex-container columns is-horizontally-centered pb-2">
       {% if page.previous %}
-        <div class="{{ subcontainer_spacing }}">
-          <div class="tag is-size-5 mb-1 mt-1">
+        <div class="column is-half">
+          <a class="tag is-size-5 mb-1 mt-1" href="{{ page.previous.url | absolute_url }}">
             {{ site.data.languages[page.lang].previous_post }}
-          </div>
+          </a>
 
           <div class="navigation-post-container">
             <div class="page-hero-image lazy-load navigation-post-hero-image cover-no-repeat" data-background-image="{{ page.previous.banner_image | absolute_url }}"></div>
@@ -84,10 +78,10 @@ lazy_load: true
       {% endif %}
 
       {% if page.next %}
-        <div class="is-full-width">
-          <div class="tag is-size-5 mb-1 mt-1">
+        <div class="column is-half">
+          <a class="tag is-size-5 mb-1 mt-1" href="{{ page.next.url | absolute_url }}">
             {{ site.data.languages[page.lang].next_post }}
-          </div>
+          </a>
 
           <div class="navigation-post-container">
             <div class="page-hero-image lazy-load navigation-post-hero-image cover-no-repeat" data-background-image="{{ page.next.banner_image | absolute_url }}"></div>

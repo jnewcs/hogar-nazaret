@@ -1,0 +1,49 @@
+<div class="modal" id="donation-modal">
+  <div class="modal-background modal-closer" aria-label="close" data-target="donation-modal"></div>
+
+  <div class="modal-content">
+    <div class="container content-container has-background-white is-cursive">
+      <div class="is-size-3 has-text-centered mb-1">
+        {{ site.data.languages[page.lang].donate.modal.title }}
+      </div>
+
+      <div class="tabs is-toggle is-fullwidth">
+        <ul>
+          <li class="tab is-active" data-target="donate-now-content">
+            <a>
+              <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
+              <span>{{ site.data.languages[page.lang].donate.modal.type.now }}</span>
+            </a>
+          </li>
+
+          <li class="tab" data-target="sponsor-content">
+            <a>
+              <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
+              <span>{{ site.data.languages[page.lang].donate.modal.type.sponsor }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="tab-contents">
+        <div class="tab-content is-active" id="donate-now-content">
+          Donate Now
+        </div>
+
+        <div class="tab-content" id="sponsor-content">
+          Donate Later
+        </div>
+      </div>
+
+      <div class="link-to-padrinos has-text-centered">
+        {% assign link = site.pages | where: "lang", page.lang | where: "lang-ref", "donate-articles" | first %}
+
+        <a href="{{ link }}">
+          {{ site.data.languages[page.lang].donate.modal.padrinos_callout }}
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <button class="modal-close modal-closer is-large" aria-label="close" data-target="donation-modal"></button>
+</div>

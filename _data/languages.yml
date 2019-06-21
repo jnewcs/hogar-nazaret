@@ -4,15 +4,36 @@ en:
   icon: 🇺🇸
   read_more: Read More
   posts: Recent News
+  previous: Previous
+  next: Next
   previous_post: Previous Post
   next_post: Next Post
-  donate: Donate
+  needs: Needs
+  donate:
+    call_to_action:  Donate
+    modal:
+      title: Choose the type of Donation
+      type:
+        now: Donate Now
+        sponsor: Sponsor
+      padrinos_callout: Learn more about the Padrinos program
+
 es:
   switcher: Lee esta página en
   label: Español
   icon: 🇵🇷
   read_more: Leer Más
   posts: Noticias
+  previous: Anterior
+  next: Siguiente
   previous_post: Publicación Anterior
   next_post: Publicación Siguiente
-  donate: Donar
+  needs: Necesidades
+  donate:
+    call_to_action:  Donar
+    modal:
+      title: Escoja tipo de Donativo
+      type:
+        now: Dona Ahora
+        sponsor: Apadrina
+      padrinos_callout: Más información sobre el programa de Padrinos
