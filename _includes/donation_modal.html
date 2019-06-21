@@ -36,7 +36,7 @@
       </div>
 
       <div class="link-to-padrinos has-text-centered">
-        {% assign padrinos_page = site.pages | where: "lang", page.lang | where: "lang_ref", "donate-articles" | first %}
+        {% assign padrinos_page = site.pages | where: "lang", page.lang | where: "lang_ref", "padrinos-program" | first %}
 
         <a href="{{ padrinos_page.url | absolute_url }}">
           {{ site.data.languages[page.lang].donate.modal.padrinos_callout }}
