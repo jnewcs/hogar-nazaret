@@ -22,6 +22,7 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
 .mr-1 { margin-right: 1em; }
 .ml-tiny { margin-left: 5px; }
 
+.p-1 { padding: 1em; }
 .pt-0 { padding-top: 0px; }
 .pt-1 { padding-top: 1em; }
 .pt-2 { padding-top: 2em; }
@@ -261,6 +262,14 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
 
 /* Mobile devices and below */
 @media screen and (max-width: 768px) {
+  #donation-prompts {
+    display: flex;
+    flex-direction: column;
+
+    #donation-prompt-other {
+      order: 1;
+    }
+  }
   .carousel-text {
     padding: 1em 2.5rem 3rem 2.5rem;
   }

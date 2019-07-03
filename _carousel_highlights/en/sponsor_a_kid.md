@@ -1,7 +1,7 @@
 ---
 title: SPONSOR A CHILD FROM THE HOGAR
 link_text: I want to be a Padrino or Madrina
-link_destination: /en/posts
+link_destination: /en/get-involved/
 banner_image: /uploads/carousel_highlights/two_girls.jpg
 banner_image_style: cover
 lang: en

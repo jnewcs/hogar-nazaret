@@ -21,9 +21,9 @@ layout: default
 		<div class="tile is-ancestor">
 			<div class="tile is-1"></div>
 			<div class="tile is-vertical is-10">
-				<div class="tile">
-					<div class="tile is-parent is-vertical">
-						<article class="tile is-child notification">
+				<div class="tile" id="donation-prompts">
+					<div class="tile is-parent is-vertical" id="donation-prompt-other">
+						<article class="tile is-child has-background-light p-1">
 							<p class="title mb-1 is-cursive">{{ page.highlights.complementary.one.title }}</p>
 
 							<div class="mb-1">
@@ -38,8 +38,8 @@ layout: default
 							</a>
 						</article>
 
-						<article class="tile is-child notification">
-							<p class="title mb-1 is-cursive has-text-secondary">{{ page.highlights.complementary.two.title }}</p>
+						<article class="tile is-child has-background-light p-1">
+							<p class="title mb-1 is-cursive">{{ page.highlights.complementary.two.title }}</p>
 
 							<div class="mb-1">
 								<small>
@@ -51,8 +51,8 @@ layout: default
 						</article>
 					</div>
 
-					<div class="tile is-parent">
-						<article class="tile is-child notification is-secondary">
+					<div class="tile is-parent" id="donation-prompt-padrinos">
+						<article class="tile is-child has-background-light p-1 is-secondary">
 							<p class="title mb-1 is-cursive">{{ page.highlights.main.title }}</p>
 							<div class="mb-1">
 								<small>
