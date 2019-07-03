@@ -1,0 +1,33 @@
+{% comment %}
+  Split Layout for Page Content
+{% endcomment %}
+
+<div class="columns">
+  {% if page.split_image and page.split_direction == 'left' %}
+    <div class="column is-one-third">
+      <figure class="image">
+        <img src="{{ page.split_image | absolute_url }}" alt="{{ page.split_image_alt }}">
+    
+        <small>
+          {{ page.split_image_subtitle }}
+        </small>
+      </figure>
+    </div>
+  {% endif %}
+
+  <div class="column">
+    {{ content }}
+  </div>
+
+  {% if page.split_image and page.split_direction == 'right' %}
+    <div class="column is-one-third">
+      <figure class="image">
+        <img src="{{ page.split_image | absolute_url }}" alt="{{ page.split_image_alt }}">
+    
+        <small>
+          {{ page.split_image_subtitle }}
+        </small>
+      </figure>
+    </div>
+  {% endif %}
+</div>

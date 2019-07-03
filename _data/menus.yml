@@ -10,9 +10,12 @@
   lang: en
   contained_links:
     - /en/about/
+    - /en/about/founders-message/
   children:
     - title: The Hogar
       url: /en/about/
+    - title: Message from Our Founders
+      url: /en/about/founders-message/
 
 - title: What We Do
   has_dropdown: true
@@ -71,9 +74,12 @@
   lang: es
   contained_links:
     - /es/quienes-somos/
+    - /es/quienes-somos/mensaje-del-fundador/
   children:
     - title: El Hogar
       url: /es/quienes-somos/
+    - title: Mensaje de los Fundadores
+      url: /es/quienes-somos/mensaje-del-fundador/
 
 - title: ¿QUÉ HACEMOS?
   has_dropdown: true
