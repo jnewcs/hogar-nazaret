@@ -11,28 +11,25 @@ Shows a Carousel
         {% for highlight in related %}
         <li class="glide__slide">
           <div class="columns">
-            <div class="column is-half carousel-background-image"
-              style="background: url('{{ highlight.banner_image | absolute_url }}') center center; background-size: {{ highlight.banner_image_style }}; background-repeat: no-repeat">
+            <div class="column is-half column is-half carousel-background-image" style="background: url('{{ highlight.banner_image | absolute_url }}') center center; background-size: {{ highlight.banner_image_style }}; background-repeat: no-repeat">
             </div>
 
-            <div class="column is-half has-background-white-ter">
-              <section class="hero">
-                <div class="hero-body">
-                  <h1 class="is-size-3 is-uppercase">
-                    {{ highlight.title }}
-                  </h1>
-                  <p>
-                    {{ highlight.content }}
-                  </p>
+            <div class="column is-half has-background-white-ter is-flex-container is-fully-centered pt-0">
+              <div class="container content-container carousel-text">
+                <h1 class="is-size-3 is-uppercase">
+                  {{ highlight.title }}
+                </h1>
+                <p>
+                  {{ highlight.content }}
+                </p>
 
-                  {% if highlight.link_text %}
+                {% if highlight.link_text %}
                   <br />
                   <a class="button is-secondary has-text-white is-medium" href="{{ highlight.link_destination }}">
                     {{ highlight.link_text }}
                   </a>
-                  {% endif %}
+                {% endif %}
                 </div>
-              </section>
             </div>
           </div>
         </li>
@@ -41,7 +38,7 @@ Shows a Carousel
     </div>
 
     {% if related.size > 1 %}
-      <div class="glide__bullets" data-glide-el="controls[nav]">
+      <div class="glide__bullets is-hidden-mobile" data-glide-el="controls[nav]">
         {% for highlight in related %}
         <button class="glide__bullet" data-glide-dir="={{ forloop.index | minus: 1 }}"></button>
         {% endfor %}

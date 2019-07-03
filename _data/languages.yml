@@ -3,6 +3,8 @@ en:
   label: English
   icon: 🇺🇸
   read_more: Read More
+  learn_more: Learn More
+  see_how: See How
   posts: Recent News
   previous: Previous
   next: Next
@@ -23,6 +25,8 @@ es:
   label: Español
   icon: 🇵🇷
   read_more: Leer Más
+  learn_more: Aprender Más
+  see_how: Ver Cómo
   posts: Noticias
   previous: Anterior
   next: Siguiente

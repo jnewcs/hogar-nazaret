@@ -1,0 +1,9 @@
+{% if page.lang == 'en' %}
+  {% assign needs_link = 'uploads/2019/needs/en.pdf' %}
+{% else %}
+  {% assign needs_link = 'uploads/2019/needs/es.pdf' %}
+{% endif %}
+
+<a class="button" target="_blank" href="{{ needs_link | absolute_url }}">
+  {{ site.data.languages[page.lang].needs }}
+</a>

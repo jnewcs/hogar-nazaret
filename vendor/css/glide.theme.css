@@ -36,6 +36,9 @@
   background-color: white;
 }
 @media screen and (max-width: 768px) {
+  .carousel-background-image {
+    min-height: 250px;
+  }
   .glide--swipeable {
     cursor: grab;
     cursor: -moz-grab;

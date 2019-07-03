@@ -4,17 +4,29 @@
 
 {% assign current_url = page.url | remove:'index.html' %}
 {% assign info = site.data.information %}
+{% if page.lang == 'en' %}
+  {% assign needs_link = 'uploads/2019/needs/en.pdf' %}
+{% else %}
+  {% assign needs_link = 'uploads/2019/needs/es.pdf' %}
+{% endif %}
 
 <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
+  <div class="navbar-brand is-vertically-centered is-flex-end">
     <a href="{{ page.lang | absolute_url }}">
       <figure class="image is-96x96" id="site-logo">
         <img src="{{ '/uploads/logo.png' | absolute_url }}">
       </figure>
     </a>
 
-    <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
-      data-target="navbarContent">
+    <div class="mobile-nav-call-to-actions is-hidden-desktop is-flex-container is-vertically-centered">
+      {% include needs_link.html %}
+
+      <a class="button modal-opener is-secondary ml-tiny" data-target="donation-modal" href="#">
+        {{ site.data.languages[page.lang].donate.call_to_action }}
+      </a>
+    </div>
+
+    <a role="button" class="navbar-burger burger" id="da-burger" aria-label="menu" aria-expanded="false" data-target="navbarContent">
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
       <span aria-hidden="true"></span>
@@ -49,17 +61,9 @@
         {% endif %}
       {% endfor %}
 
-      <div class="navbar-item">
+      <div class="navbar-item is-hidden-mobile">
         <div class="buttons">
-          {% if page.lang == 'en' %}
-            {% assign needs_link = 'uploads/2019/needs/en.pdf' %}
-          {% else %}
-            {% assign needs_link = 'uploads/2019/needs/es.pdf' %}
-          {% endif %}
-
-          <a class="button" target="_blank" href="{{ needs_link | absolute_url }}">
-            {{ site.data.languages[page.lang].needs }}
-          </a>
+          {% include needs_link.html %}
 
           <a class="button modal-opener is-secondary" data-target="donation-modal" href="#">
             <strong>{{ site.data.languages[page.lang].donate.call_to_action }}</strong>

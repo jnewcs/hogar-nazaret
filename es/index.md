@@ -9,11 +9,15 @@ call_to_action:
 highlights:
   main:
     title: Apadrina a un Niño o Niña
+    subtitle: Mediante donativos fijos mensuales, <b>TÚ</b> puedes ayudarnos a sufragar los costos de  los servicios que damos a  los niños durante su estadía en el Hogar.
+    image: /uploads/padrinos_program/padrinos.png
   complementary:
     one:
       title: Dona tu Tiempo
+      subtitle: Ofrecemos muchas maneras de involucrarte directamente con el Hogar  y ver los frutos de tu trabajo y dedicación.
     two:
       title: Dona Artículos
+      subtitle: Para información sobre donaciones de artículos, o para coordinar la entrega de los artículos, llámanos al PHONE.
     three:
       title: Crea un Fundo
     four:

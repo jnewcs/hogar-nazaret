@@ -9,9 +9,9 @@ layout: default
 
 {% include carousel.html %}
 
-<section class="pt-2 pb-2">
+<section class="pb-2">
 	<div class="container content-container">
-		<h1 class="is-size-3 mb-1 has-text-centered">
+		<h1 class="title is-size-3 has-text-centered">
 			{{ page.call_to_action.header }}
 		</h1>
 		<p class="has-text-centered mb-2">
@@ -19,40 +19,62 @@ layout: default
 		</p>
 
 		<div class="tile is-ancestor">
-			<div class="tile is-vertical is-8">
+			<div class="tile is-1"></div>
+			<div class="tile is-vertical is-10">
 				<div class="tile">
 					<div class="tile is-parent is-vertical">
-						<article class="tile is-child notification is-primary">
-							<p class="title">{{ page.highlights.complementary.one.title }}</p>
-							<p class="subtitle">Top tile</p>
+						<article class="tile is-child notification">
+							<p class="title mb-1 is-cursive">{{ page.highlights.complementary.one.title }}</p>
+
+							<div class="mb-1">
+								<small>
+									{{ page.highlights.complementary.one.subtitle }}
+								</small>
+							</div>
+
+							{% assign donate_time_page = site.pages | where: "lang", page.lang | where: "lang_ref", "donate-time" | first %}
+							<a class="button" href="{{ donate_time_page.url | absolute_url }}">
+								{{ site.data.languages[page.lang].see_how }}
+							</a>
 						</article>
-						<article class="tile is-child notification is-warning">
-							<p class="title">{{ page.highlights.complementary.two.title }}</p>
-							<p class="subtitle">Bottom tile</p>
+
+						<article class="tile is-child notification">
+							<p class="title mb-1 is-cursive has-text-secondary">{{ page.highlights.complementary.two.title }}</p>
+
+							<div class="mb-1">
+								<small>
+									{{ page.highlights.complementary.two.subtitle | replace: 'PHONE', site.data.information.phone }}
+								</small>
+							</div>
+
+							{% include needs_link.html %}
 						</article>
 					</div>
 
 					<div class="tile is-parent">
 						<article class="tile is-child notification is-secondary">
-							<p class="title">{{ page.highlights.main.title }}</p>
-							<p class="subtitle">With an image</p>
-							<figure class="image is-4by3">
-								<img src="https://bulma.io/images/placeholders/640x480.png">
-							</figure>
+							<p class="title mb-1 is-cursive">{{ page.highlights.main.title }}</p>
+							<div class="mb-1">
+								<small>
+									{{ page.highlights.main.subtitle }}
+								</small>
+							</div>
+
+							{% assign padrinos_page = site.pages | where: "lang", page.lang | where: "lang_ref", "padrinos-program" | first %}
+
+							<div class="donar-box position-relative">
+								<div class="donar-photo cover-no-repeat" alt="" style="background-image: url('{{ page.highlights.main.image | absolute_url }}')"></div>
+								<div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+									<div class="donar-box-caption-content">
+										<a href="{{ padrinos_page.url | absolute_url }}" class="button is-large is-secondary">
+											{{ site.data.languages[page.lang].learn_more }}
+										</a>
+									</div>
+								</div>
+							</div>
 						</article>
 					</div>
 				</div>
-			</div>
-
-			<div class="tile is-parent is-vertical">
-				<article class="tile is-child notification is-primary">
-					<p class="title">{{ page.highlights.complementary.three.title }}</p>
-					<p class="subtitle">Top tile</p>
-				</article>
-				<article class="tile is-child notification is-warning">
-					<p class="title">{{ page.highlights.complementary.four.title }}</p>
-					<p class="subtitle">Bottom tile</p>
-				</article>
 			</div>
 		</div>
 	</div>

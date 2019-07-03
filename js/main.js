@@ -15,6 +15,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  /* Navbar dropdown clicking on mobile */
+  const $navbarItemsWithDropdown = Array.prototype.slice.call(document.querySelectorAll('.navbar-item.has-dropdown'), 0);
+  if ($navbarItemsWithDropdown.length > 0) {
+    $navbarItemsWithDropdown.forEach(el => {
+      el.addEventListener('click', () => {
+        el.classList.toggle('is-open');
+      });
+    });
+  }
+
   /* Code for Carousel */
   var carouselContainer = document.getElementById('carousel-container');
   if (carouselContainer) {

@@ -32,11 +32,14 @@
   contained_links:
     - /en/get-involved/
     - /en/get-involved/donate-articles/
+    - /en/get-involved/donate-time/
   children:
     - title: The Padrinos Program
       url: /en/get-involved/
     - title: Donate Articles
       url: /en/get-involved/donate-articles/
+    - title: Donate Your Time
+      url: /en/get-involved/donate-time/
 
 - title: News
   url: /en/posts/
@@ -90,11 +93,14 @@
   contained_links:
     - /es/contribuye/
     - /es/contribuye/donar-articulos/
+    - /es/contribuye/dona-tu-tiempo/
   children:
     - title: Programa de Padrinos
       url: /es/contribuye/
     - title: Dona Artículos
       url: /es/contribuye/donar-articulos/
+    - title: Dona tu Tiempo
+      url: /es/contribuye/dona-tu-tiempo/
 
 - title: Noticias
   url: /es/noticias/

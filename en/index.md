@@ -9,11 +9,15 @@ call_to_action:
 highlights:
   main:
     title: Sponsor a Child
+    subtitle: Through fixed monthly donations, <b>YOU</b> could help us defray the costs of the services we provide to our children while they reside at the Hogar.
+    image: /uploads/padrinos_program/padrinos.png
   complementary:
     one:
       title: Donate your Time
+      subtitle: We offer many ways for you to get involved with the Hogar and see first-hand the results of your efforts and dedication.
     two:
       title: Donate Articles
+      subtitle: To learn more about how to donate articles, or to schedule the delivery of your donations, contact us by phone at PHONE.
     three:
       title: Create a Fund
     four:
