@@ -61,6 +61,15 @@
     - /en/posts/2019-05-24-hogar-receives-grant
   lang: en
 
+- title: Contact Us
+  has_dropdown: true
+  lang: en
+  contained_links:
+    - /en/contact-us/
+  children:
+    - title: Contact
+      url: /en/contact-us/
+
 # Spanish Menus
 
 - title: Inicio
@@ -120,3 +129,12 @@
     - /es/noticias/2019-03-30-huerto-casero-y-jardin
     - /es/noticias/2019-05-24-hogar-recibe-donativo
   lang: es
+
+- title: CONTÁCTANOS
+  has_dropdown: true
+  lang: es
+  contained_links:
+    - /es/contactanos/
+  children:
+    - title: Contactos
+      url: /es/contactanos/

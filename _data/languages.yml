@@ -19,6 +19,10 @@ en:
         now: Donate Now
         sponsor: Sponsor
       padrinos_callout: Learn more about the Padrinos program
+  email: Email
+  office: Office
+  fax: Fax
+  executive_director: Executive Director
 
 es:
   switcher: Lee esta página en
@@ -41,3 +45,7 @@ es:
         now: Dona Ahora
         sponsor: Apadrina
       padrinos_callout: Más información sobre el programa de Padrinos
+  email: Email
+  office: Oficina
+  fax: Fax
+  executive_director: Directora Ejecutiva
