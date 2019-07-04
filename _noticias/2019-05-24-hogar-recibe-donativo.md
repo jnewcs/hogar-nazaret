@@ -18,3 +18,7 @@ redirect_from:
 El pasado 24 de mayo nuestro Hogar fue elegido institución aliada del “Programa de Mejor Cuidado Comunitario” de Abarca Healthcare entre 50 solicitantes. Somos una de 4 instituciones que recibirán financiamiento y apoyo voluntario constante durante los próximos tres años para ofrecer mejor cuidado médico a nuestros niños.
 
 El donativo nos permitirá habilitar una nueva área de enfermería y adquirir equipo médico para el uso de la enfermera del Hogar y de los pediatras que atienden a los niños en nuestras instalaciones. Un millón de gracias al Sr. Jason Borschow, director ejecutivo de Abarca, y a su equipo de empelados por su confianza y donativo. ¡Que Dios les bendiga
+
+<a class="button is-secondary" href="https://newsismybusiness.com/abarca-employees-pick-4-nonprofit-partners-for-better-care-community-program/?fbclid=IwAR2mdLheLqv_QmseCTxYyYnsBJkMUTizKjfV5XTO4ykHyDudyF4iT2iVRNE" target="_blank">
+  {{ site.data.languages[page.lang].read_more }}
+</a>

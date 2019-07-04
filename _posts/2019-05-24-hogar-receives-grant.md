@@ -18,3 +18,7 @@ redirect_from:
 On May 24, our Home was chosen as an institution allied to the "Best Community Care Program" of Abarca Healthcare among 50 applicants. We are one of 4 institutions that will receive funding and constant volunteer support over the next three years to offer better medical care to our children.
 
 The donation will allow us to enable a new area of nursing and acquire medical equipment for the use of the nurse of the Home and of the pediatricians who take care of the children in our facilities. A million thanks to Mr. Jason Borschow, executive director of Abarca, and his team of employees for their trust and donation. God bless you!
+
+<a class="button is-secondary" href="https://newsismybusiness.com/abarca-employees-pick-4-nonprofit-partners-for-better-care-community-program/?fbclid=IwAR2mdLheLqv_QmseCTxYyYnsBJkMUTizKjfV5XTO4ykHyDudyF4iT2iVRNE" target="_blank">
+  {{ site.data.languages[page.lang].read_more }}
+</a>
