@@ -252,6 +252,7 @@ DEPENDENCIES
   jekyll-archives
   jekyll-feed (~> 0.6)
   jekyll-redirect-from
+  jekyll-sitemap
   jekyll-tagging
   tzinfo-data
 

@@ -1,7 +1,7 @@
 ---
 title: BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET
-date: 2019-05-20T09:09:13.000+00:00
 link_text: El Hogar
+link_destination: /es/quienes-somos/
 banner_image: /uploads/carousel_highlights/kids_circle.jpg
 banner_image_style: cover
 lang: es

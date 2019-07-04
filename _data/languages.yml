@@ -13,8 +13,11 @@ en:
   needs: Needs
   donate:
     call_to_action:  Donate
+    locale: en_US
+    item_name: Donation - The Hogar Albergue Jesus de Nazaret
     modal:
       title: Choose the type of Donation
+      enter_amount: Enter the amount
       type:
         now: Donate Now
         sponsor: Sponsor
@@ -39,8 +42,11 @@ es:
   needs: Necesidades
   donate:
     call_to_action:  Donar
+    locale: es_XC
+    item_name: Donacion - Hogar Albergue para Ninos Jesus de Nazaret
     modal:
       title: Escoja tipo de Donativo
+      enter_amount: Entre su Cantidad
       type:
         now: Dona Ahora
         sponsor: Apadrina

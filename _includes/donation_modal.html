@@ -11,14 +11,12 @@
         <ul>
           <li class="tab is-active" data-target="donate-now-content">
             <a>
-              <span class="icon is-small"><i class="fas fa-image" aria-hidden="true"></i></span>
               <span>{{ site.data.languages[page.lang].donate.modal.type.now }}</span>
             </a>
           </li>
 
           <li class="tab" data-target="sponsor-content">
             <a>
-              <span class="icon is-small"><i class="fas fa-music" aria-hidden="true"></i></span>
               <span>{{ site.data.languages[page.lang].donate.modal.type.sponsor }}</span>
             </a>
           </li>
@@ -26,16 +24,71 @@
       </div>
 
       <div id="tab-contents">
-        <div class="tab-content is-active" id="donate-now-content">
-          Donate Now
+        <div class="tab-content has-text-centered is-active" id="donate-now-content">
+          <p class="is-size-5 mb-1">
+            {{ site.data.languages[page.lang].donate.modal.enter_amount }}
+          </p>
+          <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="23UGP3TU8AQLN">
+            <input type="hidden" name="lc" value="{{ site.data.languages[page.lang].donate.locale }}">
+            <input type="hidden" name="item_name" value="{{ site.data.languages[page.lang].donate.item_name }}">
+            <input type="hidden" name="item_number" value="Webfree">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="cn" value="Donation Message">
+            <input type="hidden" name="no_shipping" value="2">
+            <input type="hidden" name="rm" value="1">
+            <input type="hidden" name="cancel_return" value="http://hogarjesusdenazaret.org/index.php?cID=211">
+            <input type="hidden" name="cancel_return" value="http://hogarjesusdenazaret.org/index.php?cID=211">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="bn" value="PP-DonationsBF:IMAGE:NonHosted">
+
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <div class="field">
+                  <div class="control has-icons-left">
+                    <input class="input is-medium" name="amount" type="number" value="15" type="number" min="0" step="1">
+                    <span class="icon is-left">
+                      $
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <input class="button is-medium is-secondary" type="submit" value="{{ site.data.languages[page.lang].donate.call_to_action }}">
+            </div>
+          </form>
         </div>
 
-        <div class="tab-content" id="sponsor-content">
-          Donate Later
+        <div class="tab-content has-text-centered" id="sponsor-content">
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="4N55VXLPEUXK8">
+            <input type="hidden" name="on0" value="">
+            <input type="hidden" name="lc" value="{{ site.data.languages[page.lang].donate.locale }}">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="item_name" value="{{ site.data.languages[page.lang].donate.item_name }}">
+
+            <div class="field">
+              <div class="select is-rounded is-medium">
+                <select name="os0">
+                  {% for data in site.data.padrinos_program %}
+                    <option value="{{ data.cost.es }}">{{ data.dropdown_title[page.lang] }}</option>
+                  {% endfor %}
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <input class="button is-medium is-secondary" type="submit" value="{{ site.data.languages[page.lang].donate.call_to_action }}">
+            </div>
+          </form>
         </div>
       </div>
 
-      <div class="link-to-padrinos has-text-centered">
+      <div class="link-to-padrinos has-text-centered mt-2">
         {% assign padrinos_page = site.pages | where: "lang", page.lang | where: "lang_ref", "padrinos-program" | first %}
 
         <a href="{{ padrinos_page.url | absolute_url }}">
