@@ -16,7 +16,7 @@ El Hogar te da la bienvenida y te exhorta a que te unas a nuestra misión de tra
   </b>
 </div>
 <div>
-  {{ site.data.languages[page.lang].office }}: {{ site.data.information.phone }}
+  {{ site.data.languages[page.lang].office }}: <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a>
 </div>
 <div>
   {{ site.data.languages[page.lang].fax }}: {{ site.data.information.fax }}

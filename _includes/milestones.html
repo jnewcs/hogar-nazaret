@@ -1,0 +1,32 @@
+{% comment %}
+  Displays the timeline of the Hogar's history
+{% endcomment %}
+
+<section id="cd-timeline" class="cd-container">
+  {% for data in page.milestone_data %}
+    <div class="cd-timeline-block">
+      <div class="cd-timeline-img has-background-grey-lighter"></div>
+
+      <div class="cd-timeline-content has-background-white-ter">
+        <div class="is-size-3 is-cursive has-text-centered is-hidden-desktop">
+          {{ data.year }}
+        </div>
+        <div class="cd-image mb-1">
+          <img src="{{ data.image | absolute_url }}" >
+        </div>
+
+        <h4 class="is-size-4 is-cursive has-text-primary mb-0 has-text-centered">{{ data.title }}</h4>
+
+        {% for content_block in data.content_blocks %}
+          {% if content_block.type == 'text' %}
+            <p>{{ content_block.content }}</p>
+          {% else content_block.type == 'image' %}
+            <img class="mb-1 mt-1" src="{{ content_block.content | absolute_url }}">
+          {% endif %}
+        {% endfor %}
+
+        <span class="cd-date is-size-4 is-hidden-mobile">{{ data.year }}</span>
+      </div>
+    </div>
+  {% endfor %}
+</section>

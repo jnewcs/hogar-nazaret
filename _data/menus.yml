@@ -11,11 +11,14 @@
   contained_links:
     - /en/about/
     - /en/about/founders-message/
+    - /en/about/milestones/
   children:
     - title: The Hogar
       url: /en/about/
     - title: Message from Our Founders
       url: /en/about/founders-message/
+    - title: Milestones
+      url: /en/about/milestones/
 
 - title: What We Do
   has_dropdown: true
@@ -84,11 +87,14 @@
   contained_links:
     - /es/quienes-somos/
     - /es/quienes-somos/mensaje-del-fundador/
+    - /es/quienes-somos/historia/
   children:
     - title: El Hogar
       url: /es/quienes-somos/
     - title: Mensaje de los Fundadores
       url: /es/quienes-somos/mensaje-del-fundador/
+    - title: Cronologia Histórica
+      url: /es/quienes-somos/historia/
 
 - title: ¿QUÉ HACEMOS?
   has_dropdown: true

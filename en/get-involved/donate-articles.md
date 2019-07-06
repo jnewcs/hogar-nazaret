@@ -11,6 +11,9 @@ redirect_from:
   - /en/contribuye/donar-articulos
   - /en/contribuye/donar-articulos/
 ---
-To learn more about how to donate articles, or to schedule the delivery of your donations, contact us by phone at {{ site.data.information.phone }}.
+<div>
+{% include needs_link.html link_text="List of Needed Donations" link_class="button is-primary is-outlined is-medium" %}
+</div>
+To learn more about how to donate articles, or to schedule the delivery of your donations, contact us by phone at <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a>.
 
 Thank you for your generosity!

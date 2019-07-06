@@ -15,5 +15,9 @@
     <link rel="stylesheet" href="{{ '/vendor/css/glide.core.min.css' | absolute_url }}">
     <link rel="stylesheet" href="{{ '/vendor/css/glide.theme.css' | absolute_url }}">
   {% endif %}
+
+  {% if page.show_milestones %}
+    <link rel="stylesheet" href="{{ '/css/milestones.css' | absolute_url }}">
+  {% endif %}
 </head>
 <body>

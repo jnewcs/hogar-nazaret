@@ -10,6 +10,8 @@ lang_ref: about-overview
 redirect_from:
   - /en/quienes-somos/el-hogar
   - /en/quienes-somos/el-hogar/
+  - /en/quienes-somos/mision-y-vision
+  - /en/quienes-somos/mision-y-vision/
 ---
 The Hogar Albergue para Niños Jesús de Nazaret, Inc. (Hogar) is a transitory home for boys and girls that have been victims of abuse.
 
@@ -24,3 +26,17 @@ We have an Executive Director who manages the staff and the day-to-day operation
 We invite you to join the Hogar’s family by becoming a Padrino (Godfather) o Madrina (Godmother) and provide your time and/or monthly financial donations to help fund the children’s services.  For information on how to get involved, please contact us at +1 787 831 6161 or complete the form on the ‘Contact Us’ section of this website. 
 
 We look forward to hearing from you!
+
+<hr />
+
+<div class="columns">
+  <div class="column">
+    <h3 class="is-size-3 mb-0">Mision</h3>
+    <p>Our mission is to offer shelter, nutrition, transportation, health services, education, recreation, and social and psychological support to boys and girls, from newborn to eleven years of age, who have been victims of abuse or neglect, and removed from their homes by the Department of Family Services.</p>
+  </div>
+
+  <div class="column">
+    <h3 class="is-size-3 mb-0">Vision</h3>
+    <p>To provide a safe home, full of love and care, so that all minors, their caregivers, and the support staff feel like a true family.</p>
+  </div>
+</div>

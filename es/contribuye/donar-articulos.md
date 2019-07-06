@@ -8,6 +8,10 @@ layout: page
 lang: es
 lang_ref: donate-articles
 ---
-Para información sobre donaciones de artículos, o para coordinar la entrega de los artículos, llámanos al {{ site.data.information.phone }}.
+<div>
+{% include needs_link.html link_text="Listado de Articulos que Necesita El Hogar" link_class="button is-primary is-outlined is-medium" %}
+</div>
+
+Para información sobre donaciones de artículos, o para coordinar la entrega de los artículos, llámanos al <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a>.
 
 ¡Muchísimas gracias!

@@ -4,6 +4,16 @@
   {% assign needs_link = 'uploads/2019/needs/es.pdf' %}
 {% endif %}
 
-<a class="button" target="_blank" href="{{ needs_link | absolute_url }}">
-  {{ site.data.languages[page.lang].needs }}
+{% if include.link_class %}
+  {% assign link_class = include.link_class %}
+{% else %}
+  {% assign link_class = 'button' %}
+{% endif %}
+
+<a class="{{ link_class }}" target="_blank" href="{{ needs_link | absolute_url }}">
+  {% if include.link_text %}
+    {{ include.link_text }}
+  {% else %}
+    {{ site.data.languages[page.lang].needs }}
+  {% endif %}
 </a>
