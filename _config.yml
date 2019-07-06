@@ -1,6 +1,4 @@
-title: Belkirk College of Engineering
-short_title: Belkirk
-description: Belkirk Demo Site for Forestry.io
+title: Hogar de Niños Jésus de Nazaret
 permalink: "/:path/"
 defaults:
   - scope:

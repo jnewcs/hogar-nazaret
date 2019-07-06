@@ -1,23 +1,39 @@
 <!doctype html>
-<html class="no-js" lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <meta name="description" content="{% if .page.description %}{{ .page.description }}{% else %}{{ .site.description }}{% endif %}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | absolute_url }}"/>
+<html class="no-js" lang="{{ page.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/css/main.css' | absolute_url }}">
+    {% comment %}
+      Recommended by Google to help search: https://support.google.com/webmasters/answer/182192?hl=en
+    {% endcomment %}
+    {% assign translated_pages = site.pages | where: "lang_ref", page.lang_ref %}
+    {% for translated_page in translated_pages %}
+      <link rel="alternate" hreflang="{{ translated_page.lang }}" href="{{ translated_page.url | absolute_url }}" />
+    {% endfor %}
 
-  {% if page.show_carousel %}
-    <link rel="stylesheet" href="{{ '/vendor/css/glide.core.min.css' | absolute_url }}">
-    <link rel="stylesheet" href="{{ '/vendor/css/glide.theme.css' | absolute_url }}">
-  {% endif %}
+    {% if page.layout == 'post' %}
+      {% assign english_post = site.noticias | where:"lang_ref", page.lang_ref | first %}
+      {% assign spanish_post = site.posts | where:"lang_ref", page.lang_ref | first %}
 
-  {% if page.show_milestones %}
-    <link rel="stylesheet" href="{{ '/css/milestones.css' | absolute_url }}">
-  {% endif %}
-</head>
+      <link rel="alternate" hreflang="{{ english_post.lang }}" href="{{ english_post.url | absolute_url }}" />
+      <link rel="alternate" hreflang="{{ spanish_post.lang }}" href="{{ spanish_post.url | absolute_url }}" />
+    {% endif %}
+
+    <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | absolute_url }}"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/css/main.css' | absolute_url }}">
+
+    {% if page.show_carousel %}
+      <link rel="stylesheet" href="{{ '/vendor/css/glide.core.min.css' | absolute_url }}">
+      <link rel="stylesheet" href="{{ '/vendor/css/glide.theme.css' | absolute_url }}">
+    {% endif %}
+
+    {% if page.show_milestones %}
+      <link rel="stylesheet" href="{{ '/css/milestones.css' | absolute_url }}">
+    {% endif %}
+  </head>
 <body>
