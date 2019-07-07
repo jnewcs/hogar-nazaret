@@ -18,7 +18,9 @@
       </figure>
     </a>
 
-    <div class="mobile-nav-call-to-actions is-hidden-desktop is-flex-container is-vertically-centered">
+    <div class="mobile-nav-call-to-actions-{{ page.lang }} is-hidden-desktop is-flex-container is-vertically-centered">
+      {% include facebook_link.html %}
+
       {% include needs_link.html %}
 
       <a class="button modal-opener is-secondary ml-tiny" data-target="donation-modal" href="#">
@@ -62,8 +64,10 @@
       {% endfor %}
 
       <div class="navbar-item is-hidden-mobile">
-        <div class="buttons">
-          {% include needs_link.html %}
+        <div class="is-flex-container is-vertically-centered">
+          {% include facebook_link.html %}
+
+          {% include needs_link.html link_class="button mr-tiny" %}
 
           <a class="button modal-opener is-secondary" data-target="donation-modal" href="#">
             <strong>{{ site.data.languages[page.lang].donate.call_to_action }}</strong>

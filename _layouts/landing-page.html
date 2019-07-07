@@ -81,3 +81,66 @@ layout: default
 </section>
 
 {% include news.html %}
+
+<section>
+	<div class="container content-container">
+		<div class="tile is-ancestor">
+			<div class="tile is-1"></div>
+			<div class="tile is-vertical is-10">
+				<div class="tile" id="donation-prompts">
+					<div class="tile is-parent" id="donation-prompt-padrinos">
+						<article class="tile is-child has-background-light p-1 is-secondary">
+							<p class="is-size-3 is-cursive">{{ page.secondary_highlights.main.title }}</p>
+							<div class="mb-1">
+								<small>
+									{{ page.secondary_highlights.main.subtitle }}
+								</small>
+							</div>
+
+							<div class="youtube-player-container has-text-centered mt-2">
+								<iframe src="//www.youtube.com/embed/biW0VL6aMfE?wmode=transparent" frameborder="0" allowfullscreen="1"></iframe>
+							</div>
+
+							{% assign prevention_page = site.pages | where: "lang", page.lang | where: "lang_ref", "prevention-and-education" | first %}
+							<a class="button mt-2 is-secondary" href="{{ prevention_page.url | absolute_url }}">
+								{{ site.data.languages[page.lang].read_more }}
+							</a>
+						</article>
+					</div>
+
+					<div class="tile is-parent is-vertical" id="donation-prompt-other">
+						<article class="tile is-child has-background-light p-1">
+							<p class="is-size-3 is-cursive">{{ page.secondary_highlights.complementary.one.title }}</p>
+
+							<div class="mb-1">
+								<small>
+									{{ page.secondary_highlights.complementary.one.subtitle }}
+								</small>
+							</div>
+
+							{% assign donate_time_page = site.pages | where: "lang", page.lang | where: "lang_ref", "donate-time" | first %}
+							<a class="button" href="{{ donate_time_page.url | absolute_url }}">
+								{{ site.data.languages[page.lang].see_how }}
+							</a>
+						</article>
+
+						<article class="tile is-child has-background-light p-1">
+							<p class="is-size-3 is-cursive">{{ page.secondary_highlights.complementary.two.title }}</p>
+
+							<div class="mb-1">
+								<small>
+									{{ page.secondary_highlights.complementary.two.subtitle }}
+								</small>
+							</div>
+
+							{% assign milestones_page = site.pages | where: "lang", page.lang | where: "lang_ref", "milestones" | first %}
+							<a class="button" href="{{ milestones_page.url | absolute_url }}">
+								{{ site.data.languages[page.lang].learn_more }}
+							</a>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

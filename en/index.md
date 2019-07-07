@@ -18,12 +18,19 @@ highlights:
     two:
       title: Donate Articles
       subtitle: To learn more about how to donate articles, or to schedule the delivery of your donations, contact us by phone at PHONE.
-    three:
-      title: Create a Fund
-    four:
-      title: Visit with your Group
-    five:
-      title: Sponsor an Event
+
+secondary_highlights:
+  main:
+    title: Prevention of Child Abuse
+    subtitle: Beyond its main mission of restoring the emotional, mental and physical health of children who have been victims of abuse, the Hogar promotes initiatives to educate the community of Puerto Rico about child abuse, and to help eradicate this problem over time.
+  complementary:
+    one:
+      title: Contributors
+      subtitle: For over two decades, the Hogar has been mainly sustained by the financial support of government agencies, private grants and donations, religious and civic organizations, corporations, businesses, and residents of the City of Mayagüez and surrounding towns.
+    two:
+      title: History
+      subtitle: The Hogar Albergue para Niños Jesús de Nazaret has been providing love, services, and a better future to boys and girls who have been victims of abuse or neglect for over twenty years.
+
 news:
   title: News & Upcoming Events
 lang: en
