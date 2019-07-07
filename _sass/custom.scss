@@ -178,13 +178,10 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
   filter: blur(3.5px);
 }
 #page-hero-title {
-  position: absolute;
   z-index: 2;
-  top: 50%;
-  margin-top: -36px;
   width: 100%;
-  letter-spacing: 16px;
-  font-weight: 900;
+  letter-spacing: 8px;
+  font-weight: 600;
 }
 
 /* News Carousel */
