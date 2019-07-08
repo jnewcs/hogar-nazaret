@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<section class="hero is-light is-large">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="box has-text-centered">
+            <h4 class="is-size-4 mb-1">{{ site.data.languages.en.label }}</h4>
+
+            <a class="button is-medium is-secondary" href="{{ '/en' | absolute_url }}">
+              {{ site.data.languages.en.goto_site }}
+            </a>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="box has-text-centered">
+            <h4 class="is-size-4 mb-1">{{ site.data.languages.es.label }}</h4>
+          
+            <a class="button is-medium is-secondary" href="{{ '/es' | absolute_url }}">
+              {{ site.data.languages.es.goto_site }}
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

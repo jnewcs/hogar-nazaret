@@ -1,4 +1,5 @@
 en:
+  goto_site: Go to Site
   switcher: Read this page in
   label: English
   icon: 🇺🇸
@@ -28,6 +29,7 @@ en:
   executive_director: Executive Director
 
 es:
+  goto_site: Ir al Sitio
   switcher: Lee esta página en
   label: Español
   icon: 🇵🇷

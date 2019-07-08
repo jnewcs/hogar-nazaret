@@ -18,15 +18,17 @@
       </figure>
     </a>
 
-    <div class="mobile-nav-call-to-actions-{{ page.lang }} is-hidden-desktop is-flex-container is-vertically-centered">
-      {% include facebook_link.html %}
+    {% unless page.hide_nav_buttons == true %}
+      <div class="mobile-nav-call-to-actions-{{ page.lang }} is-hidden-desktop is-flex-container is-vertically-centered">
+        {% include facebook_link.html %}
 
-      {% include needs_link.html %}
+        {% include needs_link.html %}
 
-      <a class="button modal-opener is-secondary ml-tiny" data-target="donation-modal" href="#">
-        {{ site.data.languages[page.lang].donate.call_to_action }}
-      </a>
-    </div>
+        <a class="button modal-opener is-secondary ml-tiny" data-target="donation-modal" href="#">
+          {{ site.data.languages[page.lang].donate.call_to_action }}
+        </a>
+      </div>
+    {% endunless %}
 
     <a role="button" class="navbar-burger burger" id="da-burger" aria-label="menu" aria-expanded="false" data-target="navbarContent">
       <span aria-hidden="true"></span>
@@ -67,11 +69,13 @@
         <div class="is-flex-container is-vertically-centered">
           {% include facebook_link.html %}
 
-          {% include needs_link.html link_class="button mr-tiny" %}
+          {% unless page.hide_nav_buttons == true %}
+            {% include needs_link.html link_class="button mr-tiny" %}
 
-          <a class="button modal-opener is-secondary" data-target="donation-modal" href="#">
-            <strong>{{ site.data.languages[page.lang].donate.call_to_action }}</strong>
-          </a>
+            <a class="button modal-opener is-secondary" data-target="donation-modal" href="#">
+              <strong>{{ site.data.languages[page.lang].donate.call_to_action }}</strong>
+            </a>
+          {% endunless %}
         </div>
       </div>
     </div>
