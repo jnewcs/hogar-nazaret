@@ -7,4 +7,4 @@ banner_image_style: cover
 lang: en
 order: 1
 ---
-Our mission is to offer a safe home and loving care to children that have been victims of abuse or neglect. We provide for all of their needs, as a loving family does: medical and mental health care, educational and social guidance, recreation, and lots of love.carouca
+Our mission is to offer a safe home and loving care to children that have been victims of abuse or neglect. We provide for all of their needs, as a loving family does: medical and mental health care, educational and social guidance, recreation, and lots of love.
