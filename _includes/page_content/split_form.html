@@ -1,0 +1,216 @@
+{% comment %}
+  Split Layout for Page Content
+{% endcomment %}
+
+<div class="columns">
+  <div class="column">
+    {{ content }}
+
+    {% if page.content_photo %}
+      <hr />
+
+      <figure class="image">
+        <img src="{{ page.content_photo | absolute_url }}" alt="{{ page.content_photo_alt }}">
+      </figure>
+    {% endif %}
+  </div>
+
+  <div class="column">
+    <form action="https://formspree.io/comunicaciones@hogarjesusdenazaret.org" method="POST">
+      <input
+        hidden
+        name="{{ site.data.languages[page.lang].page }}"
+        value="{{ page.title }}"
+      >
+      <input
+        hidden
+        name="{{ site.data.languages[page.lang].language }}"
+        value="{{ site.data.languages[page.lang].label }}"
+      >
+
+      {% if page.form.fields.name.presence %}
+        <div class="field">
+          <label class="label">
+            {{ site.data.languages[page.lang].form.labels.name }}
+            {% if page.form.fields.name.required %}
+                *
+            {% endif %}
+          </label>
+          <div class="control">
+            <input
+              name="{{ site.data.languages[page.lang].form.labels.name }}"
+              class="input"
+              type="text"
+              {% if page.form.fields.name.required %}required{% endif %}
+            >
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="field is-horizontal">
+        <div class="field-body">
+          {% if page.form.fields.email.presence %}
+            <div class="field">
+              <label class="label">
+                {{ site.data.languages[page.lang].form.labels.email }}
+                {% if page.form.fields.email.required %}
+                *
+                {% endif %}
+              </label>
+              <div class="control">
+                <input
+                  name="{{ site.data.languages[page.lang].form.labels.email }}"
+                  class="input"
+                  type="email"
+                  {% if page.form.fields.email.required %}required{% endif %}
+                >
+              </div>
+            </div>
+          {% endif %}
+          
+          {% if page.form.fields.phone.presence %}
+            <div class="field">
+              <label class="label">
+                {{ site.data.languages[page.lang].form.labels.phone }}
+                {% if page.form.fields.phone.required %}
+                *
+                {% endif %}
+              </label>
+              <div class="control">
+                <input
+                  name="{{ site.data.languages[page.lang].form.labels.phone }}"
+                  class="input"
+                  type="tel"
+                  {% if page.form.fields.phone.required %}required{% endif %}
+                >
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+
+      {% if page.form.fields.sponsorship_type.presence %}
+        <div class="field">
+          <label class="label">
+            {{ site.data.languages[page.lang].form.labels.sponsorship_type }}
+            {% if page.form.fields.sponsorship_type.required %}
+            *
+            {% endif %}
+          </label>
+
+          <div class="control">
+            {% for type in site.data.languages[page.lang].form.sponsorship_types %}
+              <div>
+                <label class="checkbox">
+                  <input name="{{ type }}" type="checkbox">
+                  {{ type }}
+                </label>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.form.fields.visit_dates.presence %}
+        <div class="field">
+          <label class="label">
+            {{ site.data.languages[page.lang].form.labels.visit_dates.first_preference }}
+            {% if page.form.fields.visit_dates.required %}
+              *
+            {% endif %}
+          </label>
+          <div class="control">
+            <input
+              name="{{ site.data.languages[page.lang].form.labels.visit_dates.first_preference }}"
+              class="input"
+              type="date"
+              {% if page.form.fields.visit_dates.required %}required{% endif %}
+            >
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">
+            {{ site.data.languages[page.lang].form.labels.visit_dates.second_preference }}
+            {% if page.form.fields.visit_dates.required %}
+              *
+            {% endif %}
+          </label>
+          <div class="control">
+            <input
+              name="{{ site.data.languages[page.lang].form.labels.visit_dates.second_preference }}"
+              class="input"
+              type="date"
+              {% if page.form.fields.visit_dates.required %}required{% endif %}
+            >
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.form.fields.company.presence %}
+        <div class="field">
+          <label class="label">
+            {{ site.data.languages[page.lang].form.labels.company }}
+            {% if page.form.fields.company.required %}
+            *
+            {% endif %}
+          </label>
+          <div class="control">
+            <input
+              name="{{ site.data.languages[page.lang].form.labels.company }}"
+              class="input"
+              type="text"
+              {% if page.form.fields.company.required %}required{% endif %}
+            >
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.form.fields.questions_and_comments.presence %}
+        <div class="field">
+          <label class="label">
+            {{ site.data.languages[page.lang].form.labels.questions_and_comments }}
+            {% if page.form.fields.questions_and_comments.required %}
+              *
+            {% endif %}
+          </label>
+          <div class="control">
+            <div class="control">
+              <textarea
+                name="{{ site.data.languages[page.lang].form.labels.questions_and_comments }}"
+                class="textarea"
+                {% if page.form.fields.questions_and_comments.required %}required{% endif %}
+              >
+              </textarea>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.form.fields.description.presence %}
+        <div class="field">
+          <label class="label">
+            {{ site.data.languages[page.lang].form.labels.description }}
+            {% if page.form.fields.description.required %}
+              *
+            {% endif %}
+          </label>
+          <div class="control">
+            <div class="control">
+              <textarea
+                name="{{ site.data.languages[page.lang].form.labels.description }}"
+                class="textarea"
+                {% if page.form.fields.description.required %}required{% endif %}
+              >
+              </textarea>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="control">
+        <input class="button is-secondary" type="submit" value="{{ site.data.languages[page.lang].form.submit }}">
+      </div>
+    </form>
+  </div>
+</div>

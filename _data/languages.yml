@@ -1,4 +1,6 @@
 en:
+  page: Page
+  language: Language
   goto_site: Go to Site
   switcher: Read this page in
   label: English
@@ -27,8 +29,27 @@ en:
   office: Office
   fax: Fax
   executive_director: Executive Director
+  form:
+    labels:
+      name: First and Last Name
+      email: Email
+      phone: Phone
+      questions_and_comments: Questions / Comments
+      visit_dates:
+        first_preference: "First Option: Desired Visit Date"
+        second_preference: "Second Option: Desired Visit Date"
+      sponsorship_type: Type of Sponsorship
+      description: Description
+      company: Company
+    sponsorship_types:
+      - Event
+      - Operational costs
+      - Capital projects
+    submit: Submit
 
 es:
+  page: Página
+  language: Idioma
   goto_site: Ir al Sitio
   switcher: Lee esta página en
   label: Español
@@ -57,3 +78,20 @@ es:
   office: Oficina
   fax: Fax
   executive_director: Directora Ejecutiva
+  form:
+    labels:
+      name: Nombre y Apellido
+      email: Email
+      phone: Teléfono
+      questions_and_comments: Preguntas / Comentarios
+      visit_dates:
+        first_preference: "Primera Opción: Fecha Deseada para la Visita"
+        second_preference: "Segunda Opción: Fecha Deseada para la Visita"
+      sponsorship_type: Tipo de Auspicio
+      description: Descripción
+      company: Compañía
+    sponsorship_types:
+      - Evento
+      - Costos Operativos
+      - Proyectos de Capital
+    submit: Submit

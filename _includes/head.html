@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>{{ page.title }} - {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.layout == 'language_changer' %}
+      <script src="{{ "/js/language_changer.js" | absolute_url }}" type="text/javascript"></script>
+    {% endif %}
 
     {% comment %}
       Recommended by Google to help search: https://support.google.com/webmasters/answer/182192?hl=en

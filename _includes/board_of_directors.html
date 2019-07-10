@@ -1,0 +1,36 @@
+{% comment %}
+  Displays the board of directors
+{% endcomment %}
+<div class="columns pt-1 is-multiline is-vcentered is-centered">
+  {% for person in site.data.board_of_directors %}
+    <div class="column is-one-third">
+      <div class="card">
+        <div class="card-image">
+          <figure class="image pt-2">
+            <img style="height: 250px; width: auto;" class="lazy-load" data-src="{{ person.image | absolute_url }}" alt="{{ person.name }}">
+          </figure>
+        </div>
+
+        <div class="card-content has-text-centered">
+          <div class="title is-size-5">
+            {{ person.name }}
+          </div>
+
+          <hr />
+
+          <div>
+            {{ person.position[page.lang] }}
+          </div>
+
+          {% if person.background %}
+            <div>
+              <span class="tag is-light">
+                {{ person.background[page.lang] }}
+              </span>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+</div>

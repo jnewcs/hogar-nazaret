@@ -19,12 +19,18 @@ lazy_load: true
         <div class="pb-2 content page-content">
             {% if page.content_layout == 'split' %}
                 {% include page_content/split.html %}
+            {% elsif page.content_layout == 'split_form' %}
+                {% include page_content/split_form.html %}
             {% else %}
                 {{ content }}
             {% endif %}
 
             {% if page.has_padrino_program %}
                 {% include padrino_program.html %}
+            {% endif %}
+
+            {% if page.has_board_of_directors %}
+                {% include board_of_directors.html %}
             {% endif %}
         </div>
     </section>
