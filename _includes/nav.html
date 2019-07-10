@@ -3,12 +3,6 @@
 {% endcomment %}
 
 {% assign current_url = page.url | remove:'index.html' %}
-{% assign info = site.data.information %}
-{% if page.lang == 'en' %}
-  {% assign needs_link = 'uploads/2019/needs/en.pdf' %}
-{% else %}
-  {% assign needs_link = 'uploads/2019/needs/es.pdf' %}
-{% endif %}
 
 <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
   <div class="navbar-brand is-vertically-centered is-flex-end">
