@@ -4,6 +4,7 @@ en:
   goto_site: Go to Site
   switcher: Read this page in
   label: English
+  label_abbr: EN
   icon: 🇺🇸
   read_more: Read More
   learn_more: Learn More
@@ -53,6 +54,7 @@ es:
   goto_site: Ir al Sitio
   switcher: Lee esta página en
   label: Español
+  label_abbr: ES
   icon: 🇵🇷
   read_more: Leer Más
   learn_more: Aprender Más

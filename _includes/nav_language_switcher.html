@@ -1,0 +1,47 @@
+{% comment %}
+  Displays the language switcher in the nav
+{% endcomment %}
+{% assign multilingual_pages = site.pages | where:"lang_ref", page.lang_ref | sort: 'lang' %}
+{% if multilingual_pages.size > 1 %}
+  <div class="navbar-start">
+    <div class="navbar-item">
+      <div class="tabs is-toggle is-small is-toggle-rounded" id="language-switcher">
+        <ul>
+          {% for multilingual_page in multilingual_pages %}
+            <li class="{% if page.lang == multilingual_page.lang %}is-active{% endif %}">
+              <a href="{{ multilingual_page.url | absolute_url }}">
+                <span>{{ site.data.languages[multilingual_page.lang].label_abbr }}</span>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<!-- We also want to cover a mulitlingual post -->
+{% assign english_post = site.posts | where:"lang_ref", page.lang_ref | first %}
+{% assign spanish_post = site.noticias | where:"lang_ref", page.lang_ref | first %}
+
+{% if english_post and spanish_post %}
+  <div class="navbar-start">
+    <div class="navbar-item">
+      <div class="tabs is-toggle is-small is-toggle-rounded" id="language-switcher">
+        <ul>
+          <li class="{% if page.lang == 'en' %}is-active{% endif %}">
+            <a href="{{ english_post.url | absolute_url }}">
+              <span>{{ site.data.languages.en.label_abbr }}</span>
+            </a>
+          </li>
+
+          <li class="{% if page.lang == 'es' %}is-active{% endif %}">
+            <a href="{{ spanish_post.url | absolute_url }}">
+              <span>{{ site.data.languages.es.label_abbr }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endif %}

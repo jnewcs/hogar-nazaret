@@ -38,6 +38,8 @@
   </div>
 
   <div id="navbarContent" class="navbar-menu">
+    {% include nav_language_switcher.html %}
+
     <div class="navbar-end">
       {% for link in site.data.menus %}
         {% unless link.lang == page.lang %}

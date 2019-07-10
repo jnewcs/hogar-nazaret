@@ -85,9 +85,62 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
       border-color: $navbar-item-active-color;
     }
   }
+  #language-switcher {
+    margin-left: 120px;
+
+    a {
+      color: $white-bis;
+    }
+    li:not(.is-active) a:hover {
+      background: $secondary;
+      border-color: $white-bis;
+    }
+    li.is-active a {
+      background: $white-bis;
+      border-color: $white-bis;
+      color: $black-bis;
+    }
+  }
 }
 
-@media screen and (max-width: $navbar-breakpoint) {
+/* Tablets */
+@media only screen and (min-width: $navbar-breakpoint) and (max-width: 1250px) {
+  html.es {
+    #navbarContent .navbar-item,
+    #navbarContent .button,
+    #language-switcher {
+      font-size: 0.85em;
+    }
+  }
+
+  html.en {
+    #navbarContent .navbar-item,
+    #navbarContent .button,
+    #language-switcher {
+      font-size: 0.95em;
+    }
+  }
+}
+
+@media screen and (max-width: $navbar-breakpoint - 1) {
+  #navbarContent #language-switcher {
+    margin-left: 0px;
+
+    a {
+      color: $black-bis;
+      border-color: $white-ter;
+    }
+    li:not(.is-active) a:hover {
+      background: $secondary;
+      border-color: $white-ter;
+      color: $white-bis;
+    }
+    li.is-active a {
+      background: $secondary;
+      border-color: $white-ter;
+      color: $white-bis;
+    }
+  }
   #site-logo {
     left: 5px;
     width: 60px;
