@@ -17,15 +17,18 @@ defaults:
       layout: noticia
 collections:
   carousel_highlights:
-  people:
-    output: true
-    permalink: "/en/about/:path"
   posts:
     output: true
     permalink: "/en/posts/:name"
   noticias:
     output: true
     permalink: "/es/noticias/:name"
+  upcoming_events:
+    output: true
+    permalink: "/en/upcoming_events/:name"
+  proximos_eventos:
+    output: true
+    permalink: "/es/proximos_eventos/:name"
 jekyll-archives:
   enabled: all
   layout: "archive"
@@ -37,6 +40,12 @@ feed:
   collections:
     noticias:
       path: "/noticias.xml"
+    upcoming_events:
+      path: "/upcoming_events.xml"
+    proximos_eventos:
+      path: "/proximos_eventos.xml"
+
+keep_files: [uploads]
 
 plugins:
   - jekyll-feed

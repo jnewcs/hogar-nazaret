@@ -118,7 +118,7 @@ layout: default
 								</small>
 							</div>
 
-							{% assign donate_time_page = site.pages | where: "lang", page.lang | where: "lang_ref", "donate-time" | first %}
+							{% assign donate_time_page = site.pages | where: "lang", page.lang | where: "lang_ref", "collaborators" | first %}
 							<a class="button" href="{{ donate_time_page.url | absolute_url }}">
 								{{ site.data.languages[page.lang].see_how }}
 							</a>

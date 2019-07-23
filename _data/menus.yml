@@ -13,6 +13,7 @@
     - /en/about/founders-message/
     - /en/about/milestones/
     - /en/about/board-of-directors/
+    - /en/about/collaborators/
   children:
     - title: The Hogar
       url: /en/about/
@@ -22,6 +23,8 @@
       url: /en/about/milestones/
     - title: Board of Directors
       url: /en/about/board-of-directors/
+    - title: Collaborators
+      url: /en/about/collaborators/
 
 - title: What We Do
   has_dropdown: true
@@ -104,6 +107,7 @@
     - /es/quienes-somos/mensaje-del-fundador/
     - /es/quienes-somos/historia/
     - /es/quienes-somos/junta-de-directores/
+    - /es/quienes-somos/colaboradores/
   children:
     - title: El Hogar
       url: /es/quienes-somos/
@@ -113,6 +117,8 @@
       url: /es/quienes-somos/historia/
     - title: Junta de Directores
       url: /es/quienes-somos/junta-de-directores/
+    - title: Colaboradores
+      url: /es/quienes-somos/colaboradores/
 
 - title: ¿QUÉ HACEMOS?
   has_dropdown: true
@@ -155,6 +161,11 @@
   contained_links:
     - /es/noticias/
     - /es/noticias/2015-05-03-hogar-celebra
+    - /es/noticias/2015-12-28-woratv-celebra-navidad
+    - /es/noticias/2017-08-01-contamos-con-tus-donativos
+    - /es/noticias/2018-01-02-assmca-agasaja-nuestros-ninos
+    - /es/noticias/2018-01-04-sorpresa-de-ano-nuevo-del-pr-relief-fund-ny
+    - /es/noticias/2018-01-04-profesores-de-la-pontificia-catolica
     - /es/noticias/2018-12-28-los-tres-reyes-magos-visitan
     - /es/noticias/2019-01-15-energia-solar-para-el-hogar
     - /es/noticias/2019-02-21-johnson-johnson-dona-enseres

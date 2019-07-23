@@ -40,11 +40,17 @@ lazy_load: true
                   <date>{{ post.date | date_to_string }}</date>
                 </div>
                 <p>
-                  {% assign word_count = post.content | split: ' ' | size %}
-                  {% if word_count <= 50 %}
-                    {{ post.content }}
+                  {% if post.blurb_description %}
+                    {% assign content = post.blurb_description %}
                   {% else %}
-                    {{ post.content | truncatewords: 50 }}
+                    {% assign content = post.content %}
+                  {% endif %}
+
+                  {% assign word_count = content | split: ' ' | size %}
+                  {% if word_count <= 30 %}
+                    {{ content }}
+                  {% else %}
+                    {{ content | truncatewords: 30 }}
                   {% endif %}
                 </p>
                 <a href="{{ post.url | absolute_url }}" class="button is-primary is-outlined is-medium">
