@@ -32,11 +32,14 @@
   contained_links:
     - /en/what-we-do/
     - /en/what-we-do/services/
+    - /en/what-we-do/child-abuse-education-and-prevention/
   children:
     - title: Services Reach
       url: /en/what-we-do/
     - title: Children Services
       url: /en/what-we-do/services/
+    - title: Child Abuse Education and Prevention
+      url: /en/what-we-do/child-abuse-education-and-prevention/
 
 - title: Get Involved!
   has_dropdown: true
@@ -126,11 +129,14 @@
   contained_links:
     - /es/que-hacemos/
     - /es/que-hacemos/servicios/
+    - /es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/
   children:
     - title: Alcance
       url: /es/que-hacemos/
     - title: Servicios
       url: /es/que-hacemos/servicios/
+    - title: Educación y Prevención del Maltrato de Menores
+      url: /es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/
 
 - title: ¡CONTRIBUYE!
   has_dropdown: true
