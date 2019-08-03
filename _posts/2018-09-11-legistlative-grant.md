@@ -8,7 +8,7 @@ banner_image_style: contain
 header_layout: side_by_side
 layout: post
 lang: en
-lang_ref: gran-combo-concert
+lang_ref: legistlative-grant
 redirect_from:
   - /en/news/recent/hogar-receives-legislative-grant-doj
   - /en/news/recent/hogar-receives-legislative-grant-doj/

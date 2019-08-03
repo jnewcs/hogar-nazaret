@@ -1,9 +1,9 @@
 ---
-title: Hogar Collaborators Gather at the Annual General Assembly
+title: Compartir de Colaboradores del Hogar en Asamblea Anual
 date: 2018-11-08T12:00:00.000+00:00
 tags: []
 banner_image: /uploads/2018/hogar_collaborators/group_image.webp
-banner_image_alt: Hogar Collaborators Gather
+banner_image_alt: El Hogar celebró su Asamblea Anual
 banner_image_style: contain
 header_layout: side_by_side
 has_photo_grid: true
@@ -22,12 +22,12 @@ photo_grid:
   - /uploads/2018/hogar_collaborators/celebration_12.jpg
   - /uploads/2018/hogar_collaborators/celebration_13.jpg
 layout: post
-lang: en
+lang: es
 lang_ref: hogar-collaborators
 redirect_from:
-  - /en/news/recent/hogar-collaborators-gather-annual-general-assembly
-  - /en/news/recent/hogar-collaborators-gather-annual-general-assembly/
+  - /es/noticias/noticias/compartir-de-colaboradores-del-hogar-en-asamblea-anual
+  - /es/noticias/noticias/compartir-de-colaboradores-del-hogar-en-asamblea-anual/
 ---
-On November 8, 2018, the Hogar celebrated its Annual General Assembly in which the new board of directors took office in the company of the new executive director, Mrs. Antoinette Beltrán. The new board of directors will be chaired by Prof. Carlos Velázquez.
+El 8 de noviembre 2018, el Hogar celebró su Asamblea Anual en la cual tomó posesión la nueva junta directiva del Hogar en compañía de la nueva directora ejecutiva, la Sra. Antoinette Beltrán.  La nueva junta directiva será presidida por el Prof. Carlos Velázquez. 
 
-It was a beautiful evening full of gratitude and camaraderie among sponsors, volunteers and employees of the Hogar. On behalf of our children, a million thanks to Dr. Sandra Arroyo Ferrer (past president of the board) and Mrs. Lydia E. Méndez (past director) for their efforts and dedication toward the fulfillment of the Hogar's  mission. May God bless both of you!
+Fue una linda noche llena de agradecimiento y camaradería entre auspiciadores, voluntarios y empleados del Hogar. A nombre de los niños del Hogar, un millón de gracias a la Dra. Sandra Arroyo Ferrer  (pasada presidenta de la junta) y la Sra. Lydia E. Méndez (pasada directora) por su gran labor para que el Hogar cumpliera su misión bajo su dirección. ¡Muchas bendiciones para ambas!

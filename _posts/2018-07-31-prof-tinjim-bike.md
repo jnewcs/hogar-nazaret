@@ -6,6 +6,14 @@ banner_image: /uploads/2018/bike_the_sun/tinjum_bike_the_sun.webp
 banner_image_alt: Prof. Tinjum Charity Ride
 banner_image_style: contain
 header_layout: side_by_side
+has_photo_grid: true
+photo_grid:
+  - /uploads/2018/bike_the_sun/bike_progress_1.jpg
+  - /uploads/2018/bike_the_sun/bike_progress_2.jpg
+  - /uploads/2018/bike_the_sun/bike_progress_3.jpeg
+  - /uploads/2018/bike_the_sun/bike_progress_cow.jpg
+  - /uploads/2018/bike_the_sun/bike_progress_solar_panels_photo_op.jpg
+  - /uploads/2018/bike_the_sun/bike_progress_solar_panels.jpg
 layout: post
 lang: en
 lang_ref: prof-tinjim-bike
