@@ -2,6 +2,16 @@
 label: Contact Information
 hide_body: true
 fields:
+- name: name
+  type: text
+  config:
+    required: false
+  label: Name
+- name: official_name
+  type: text
+  config:
+    required: false
+  label: Official Name
 - name: email
   label: Email
   type: text
@@ -12,10 +22,10 @@ fields:
   type: text
   hidden: false
   default: ''
-- name: name
+- name: year
   type: text
   config:
     required: false
-  label: Name
+  label: Year
 pages:
 - _data/information.yml
