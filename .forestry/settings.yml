@@ -26,13 +26,6 @@ sections:
   templates:
   - landing-page
   - default
-- type: directory
-  path: _people
-  label: People
-  create: all
-  match: "*"
-  templates:
-  - person
 - type: heading
   label: Spanish Content
 - type: directory
