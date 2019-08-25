@@ -7,34 +7,30 @@ fields:
   type: text
   hidden: false
   default: ''
-- type: text
-  label: Sub Heading
-  name: sub_heading
-  default: ''
 - name: date
   label: Publish Date
   type: datetime
   hidden: false
-  default: ''
+  default: now
 - name: tags
   label: Tags
   type: tag_list
   hidden: false
   default: ''
-- type: file
-  name: banner_image
-  label: Banner Image
-  description: Ideal dimensions 2500px by 1200px
-- type: list
-  name: related_posts
-  label: Related Posts
+- name: lang
+  type: text
   config:
-    use_select: true
-    source:
-      type: pages
-      section: posts
+    required: false
+  label: Language
+  default: en
 - name: layout
   label: Layout
   type: text
   hidden: true
   default: post
+- name: language_reference
+  type: text
+  config:
+    required: true
+  label: Language Reference
+  description: 'Used to link Spanish and English articles together '
