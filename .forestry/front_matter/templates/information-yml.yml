@@ -32,5 +32,10 @@ fields:
   config:
     required: false
   label: Executive Director
+- name: po_box
+  type: text
+  config:
+    required: false
+  label: PO Box
 pages:
 - _data/information.yml
