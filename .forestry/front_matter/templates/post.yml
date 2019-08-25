@@ -28,7 +28,7 @@ fields:
   type: text
   hidden: true
   default: post
-- name: language_reference
+- name: lang_ref
   type: text
   config:
     required: true
