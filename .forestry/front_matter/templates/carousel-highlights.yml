@@ -25,6 +25,7 @@ fields:
   config:
     required: false
   hidden: true
+  default: en
 - type: number
   name: order
   label: order
