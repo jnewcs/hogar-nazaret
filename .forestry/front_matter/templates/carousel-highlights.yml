@@ -19,6 +19,9 @@ fields:
 - type: text
   name: banner_image_style
   label: banner_image_style
+- type: number
+  name: order
+  label: order
 - type: text
   name: lang
   label: lang
@@ -26,6 +29,3 @@ fields:
     required: false
   hidden: true
   default: en
-- type: number
-  name: order
-  label: order
