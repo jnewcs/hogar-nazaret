@@ -11,6 +11,8 @@ sections:
   label: Home Page Carousel
   create: documents
   match: "*.md"
+  templates:
+  - carousel-highlights
 - type: directory
   path: _posts
   label: Posts
