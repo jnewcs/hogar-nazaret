@@ -1,0 +1,25 @@
+---
+label: Carousel Highlights
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: link_text
+  label: link_text
+- type: text
+  name: link_destination
+  label: link_destination
+- type: file
+  name: banner_image
+  label: banner_image
+- type: text
+  name: banner_image_style
+  label: banner_image_style
+- type: text
+  name: lang
+  label: lang
+- type: number
+  name: order
+  label: order
