@@ -5,6 +5,8 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: text
   name: link_text
   label: link_text
@@ -20,6 +22,9 @@ fields:
 - type: text
   name: lang
   label: lang
+  config:
+    required: false
+  hidden: true
 - type: number
   name: order
   label: order
