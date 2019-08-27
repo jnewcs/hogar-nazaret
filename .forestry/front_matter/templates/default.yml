@@ -7,6 +7,11 @@ fields:
   label: Title
   config:
     required: true
+- name: lang_ref
+  type: text
+  config:
+    required: false
+  label: lang_ref
 - type: text
   name: layout
   label: layout
