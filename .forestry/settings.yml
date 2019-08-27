@@ -23,6 +23,7 @@ sections:
   label: Main Pages
   create: documents
   match: "*.md"
+  exclude: index.md
   templates:
   - landing-page
   - default
