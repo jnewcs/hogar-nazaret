@@ -69,9 +69,6 @@ fields:
     a new URL
   config:
     use_select: false
-- type: list
-  name: tags
-  label: tags
 - type: text
   name: lang
   label: lang
