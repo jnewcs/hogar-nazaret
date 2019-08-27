@@ -28,7 +28,6 @@ sections:
   match: "*.md"
   exclude: index.md
   templates:
-  - landing-page
   - default
 - type: heading
   label: Spanish Content
@@ -48,7 +47,6 @@ sections:
   create: documents
   match: "*.md"
   templates:
-  - landing-page
   - default
 - type: heading
   label: General
