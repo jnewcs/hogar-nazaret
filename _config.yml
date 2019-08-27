@@ -44,6 +44,8 @@ feed:
 
 keep_files: [uploads]
 
+repository: jnewcs/hogar-nazaret
+
 plugins:
   - jekyll-feed
   - jekyll-redirect-from
