@@ -17,3 +17,10 @@ fields:
   label: layout
   hidden: true
   default: page
+- name: lang
+  type: text
+  config:
+    required: false
+  label: lang
+  hidden: true
+  default: en
