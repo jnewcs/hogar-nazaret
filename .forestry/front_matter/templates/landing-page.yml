@@ -5,15 +5,22 @@ fields:
 - type: text
   name: title
   label: title
-- type: text
-  name: layout
-  label: layout
 - type: boolean
   name: show_carousel
   label: show_carousel
 - type: boolean
   name: show_news
   label: show_news
+- type: field_group
+  name: news
+  label: news
+  fields:
+  - type: text
+    name: title
+    label: title
+  showOnly:
+    field: show_news
+    value: true
 - type: field_group
   name: call_to_action
   label: call_to_action
@@ -103,16 +110,16 @@ fields:
       - type: textarea
         name: subtitle
         label: subtitle
-- type: field_group
-  name: news
-  label: news
-  fields:
-  - type: text
-    name: title
-    label: title
 - type: text
   name: lang
   label: lang
 - type: text
   name: lang_ref
   label: lang_ref
+  default: home-page
+  hidden: true
+- type: text
+  name: layout
+  label: layout
+  default: landing-page
+  hidden: true
