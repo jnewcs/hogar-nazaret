@@ -13,6 +13,7 @@ fields:
 - type: text
   name: link_destination
   label: link_destination
+  description: Relative url
 - type: file
   name: banner_image
   label: banner_image
