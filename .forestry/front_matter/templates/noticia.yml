@@ -16,8 +16,19 @@ fields:
 - type: text
   name: banner_image_alt
   label: banner_image_alt
-- type: text
-  name: banner_image_style
+- name: banner_image_style
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - cover
+    - contain
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: banner_image_style
 - name: header_layout
   type: select
