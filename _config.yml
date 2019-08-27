@@ -29,9 +29,6 @@ collections:
   proximos_eventos:
     output: true
     permalink: "/es/proximos_eventos/:name"
-jekyll-archives:
-  enabled: all
-  layout: "archive"
 sass:
   style: compressed
   sass_dir: _sass
@@ -49,6 +46,5 @@ keep_files: [uploads]
 
 plugins:
   - jekyll-feed
-  - jekyll-archives
   - jekyll-redirect-from
   - jekyll-sitemap
