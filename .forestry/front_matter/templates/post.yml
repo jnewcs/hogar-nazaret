@@ -5,20 +5,34 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: datetime
   name: date
   label: date
-- type: list
-  name: tags
-  label: tags
-- type: text
-  name: banner_image
+  config:
+    required: true
+- name: banner_image
+  type: file
+  config:
+    maxSize: 250
   label: banner_image
 - type: text
   name: banner_image_alt
   label: banner_image_alt
-- type: text
-  name: banner_image_style
+- name: banner_image_style
+  type: select
+  default: ''
+  config:
+    required: false
+    options:
+    - cover
+    - contain
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: banner_image_style
 - type: text
   name: header_layout
@@ -29,15 +43,24 @@ fields:
 - type: image_gallery
   name: photo_grid
   label: photo_grid
-- type: text
-  name: layout
-  label: layout
-- type: text
-  name: lang
-  label: lang
-- type: text
-  name: lang_ref
-  label: lang_ref
+  showOnly:
+    field: has_photo_grid
+    value: true
 - type: list
   name: redirect_from
   label: redirect_from
+- type: text
+  name: lang_ref
+  label: lang_ref
+- type: text
+  name: layout
+  label: layout
+  default: post
+  hidden: true
+- type: text
+  name: lang
+  label: lang
+  hidden: true
+  default: en
+  config:
+    required: true
