@@ -50,6 +50,9 @@ fields:
 - type: image_gallery
   name: photo_grid
   label: photo_grid
+  showOnly:
+    field: has_photo_grid
+    value: true
 - type: text
   name: lang_ref
   label: lang_ref
