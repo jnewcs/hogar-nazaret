@@ -34,6 +34,7 @@ fields:
 - type: list
   name: redirect_from
   label: redirect_from
+  description: Used during conversion from previous website version
 - type: list
   name: tags
   label: tags

@@ -33,6 +33,8 @@ sections:
   label: Noticias
   create: documents
   match: "*.md"
+  templates:
+  - noticia
 - type: directory
   path: es
   label: Páginas Principales
