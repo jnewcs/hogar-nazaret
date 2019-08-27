@@ -4,10 +4,10 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: Title
+  label: title
 - type: datetime
   name: date
-  label: Publish Date
+  label: publish date
 - name: banner_image
   type: file
   config:
