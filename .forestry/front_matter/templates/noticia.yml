@@ -65,7 +65,10 @@ fields:
 - type: list
   name: redirect_from
   label: redirect_from
-  description: Used during conversion from previous website version
+  description: Used during conversion from previous website version to redirect to
+    a new URL
+  config:
+    use_select: false
 - type: list
   name: tags
   label: tags
