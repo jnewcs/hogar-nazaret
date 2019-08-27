@@ -8,8 +8,10 @@ fields:
 - type: datetime
   name: date
   label: date
-- type: text
-  name: banner_image
+- name: banner_image
+  type: file
+  config:
+    maxSize: 250
   label: banner_image
 - type: text
   name: banner_image_alt
@@ -17,8 +19,19 @@ fields:
 - type: text
   name: banner_image_style
   label: banner_image_style
-- type: text
-  name: header_layout
+- name: header_layout
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - central_title
+    - side_by_side
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: header_layout
 - type: boolean
   name: has_photo_grid
