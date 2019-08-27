@@ -9,4 +9,4 @@ order: 2
 published: false
 
 ---
-**April** is the month of child abuse prevention. We call on all citizens of the Island to ensure the safety, protection and quality of life of all children in Puerto Rico. To love and protect our children, and report child abuse is everyone's responsibility. We invite you to support our mission!!
+**April** is the month of child abuse prevention. We call on all citizens of the Island to ensure the safety, protection and quality of life of all children in Puerto Rico. To love and protect our children, and report child abuse is everyone's responsibility. We invite you to support our mission!
