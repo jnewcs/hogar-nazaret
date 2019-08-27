@@ -30,14 +30,20 @@ fields:
   name: photo_grid
   label: photo_grid
 - type: text
-  name: layout
-  label: layout
-- type: text
-  name: lang
-  label: lang
-- type: text
   name: lang_ref
   label: lang_ref
+  config:
+    required: true
 - type: list
   name: redirect_from
   label: redirect_from
+- type: text
+  name: lang
+  label: lang
+  hidden: true
+  default: es
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: post
