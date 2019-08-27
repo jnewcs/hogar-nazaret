@@ -1,0 +1,118 @@
+---
+label: Landing Page
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: layout
+  label: layout
+- type: boolean
+  name: show_carousel
+  label: show_carousel
+- type: boolean
+  name: show_news
+  label: show_news
+- type: field_group
+  name: call_to_action
+  label: call_to_action
+  fields:
+  - type: text
+    name: header
+    label: header
+  - type: textarea
+    name: text
+    label: text
+- type: field_group
+  name: highlights
+  label: highlights
+  fields:
+  - type: field_group
+    name: main
+    label: main
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: textarea
+      name: subtitle
+      label: subtitle
+    - type: file
+      name: image
+      label: image
+  - type: field_group
+    name: complementary
+    label: complementary
+    fields:
+    - type: field_group
+      name: one
+      label: one
+      fields:
+      - type: text
+        name: title
+        label: title
+      - type: textarea
+        name: subtitle
+        label: subtitle
+    - type: field_group
+      name: two
+      label: two
+      fields:
+      - type: text
+        name: title
+        label: title
+      - type: textarea
+        name: subtitle
+        label: subtitle
+- type: field_group
+  name: secondary_highlights
+  label: secondary_highlights
+  fields:
+  - type: field_group
+    name: main
+    label: main
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: textarea
+      name: subtitle
+      label: subtitle
+  - type: field_group
+    name: complementary
+    label: complementary
+    fields:
+    - type: field_group
+      name: one
+      label: one
+      fields:
+      - type: text
+        name: title
+        label: title
+      - type: textarea
+        name: subtitle
+        label: subtitle
+    - type: field_group
+      name: two
+      label: two
+      fields:
+      - type: text
+        name: title
+        label: title
+      - type: textarea
+        name: subtitle
+        label: subtitle
+- type: field_group
+  name: news
+  label: news
+  fields:
+  - type: text
+    name: title
+    label: title
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: lang_ref
+  label: lang_ref
