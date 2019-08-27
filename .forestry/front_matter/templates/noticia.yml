@@ -8,9 +8,6 @@ fields:
 - type: datetime
   name: date
   label: date
-- type: list
-  name: tags
-  label: tags
 - type: text
   name: banner_image
   label: banner_image
@@ -37,6 +34,9 @@ fields:
 - type: list
   name: redirect_from
   label: redirect_from
+- type: list
+  name: tags
+  label: tags
 - type: text
   name: lang
   label: lang
