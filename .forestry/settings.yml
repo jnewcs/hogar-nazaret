@@ -16,7 +16,6 @@ sections:
 - type: document
   path: en/index.md
   label: Home Page
-  match: "**/*"
 - type: directory
   path: _posts
   label: Posts
