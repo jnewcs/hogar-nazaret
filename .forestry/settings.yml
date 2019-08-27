@@ -32,6 +32,10 @@ sections:
   - default
 - type: heading
   label: Spanish Content
+- type: document
+  path: es/index.md
+  label: Inicio
+  match: "**/*"
 - type: directory
   path: _noticias
   label: Noticias
