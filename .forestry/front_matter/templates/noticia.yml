@@ -5,9 +5,13 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: datetime
   name: date
   label: publish date
+  config:
+    required: true
 - name: banner_image
   type: file
   config:
