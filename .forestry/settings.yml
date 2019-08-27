@@ -18,8 +18,6 @@ sections:
   label: Posts
   create: documents
   match: "*.md"
-  templates:
-  - post
 - type: directory
   path: en
   label: Main Pages
