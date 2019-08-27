@@ -110,8 +110,19 @@ fields:
       - type: textarea
         name: subtitle
         label: subtitle
-- type: text
-  name: lang
+- name: lang
+  type: select
+  default: en
+  config:
+    required: true
+    options:
+    - en
+    - es
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: lang
 - type: text
   name: lang_ref
