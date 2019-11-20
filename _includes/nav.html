@@ -55,7 +55,18 @@
             </div>
           </div>
         {% else %}
-          <a class="navbar-item {% if link.contained_links contains current_url %}is-active{% endif %}" href="{{ link.url | absolute_url }}" {% if link.target %} target="_blank" {% endif %}>
+          {% assign item_active_class = "" %}
+          {% if link.automated_active_link_check == true %}
+            {% if current_url contains link.url %}
+              {% assign item_active_class = "is-active" %}
+            {% endif %}
+          {% else %}
+            {% if link.contained_links contains current_url %}
+              {% assign item_active_class = "is-active" %}
+            {% endif %}
+          {% endif %}
+
+          <a class="navbar-item {{ item_active_class }}" href="{{ link.url | absolute_url }}" {% if link.target %} target="_blank" {% endif %}>
             {{ link.title }}
           </a>
         {% endif %}
