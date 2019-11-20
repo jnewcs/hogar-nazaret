@@ -5,3 +5,6 @@ Having our site built on Jekyll, allows us to generate a static website which ca
 
 ### Development Setup
 Working on it...
+
+### Development Notes
+1. To standardize file configuration (tabs vs. spaces, newlines at the end of files), we use [EditorConfig](https://editorconfig.org/). For a lot of text editors, you can install the EditorConfig extension and it will automatically configure any file you add or change.
