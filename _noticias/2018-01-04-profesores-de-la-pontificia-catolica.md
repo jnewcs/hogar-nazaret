@@ -15,6 +15,6 @@ redirect_from:
   - /es/noticias/noticias/profesores-de-la-pontificia-catolica-auspician-almuerzo
   - /es/noticias/noticias/profesores-de-la-pontificia-catolica-auspician-almuerzo/
 ---
-El pasado 4 de enero 2018, la Profesora Jacqueline Rosas junto a otros profesores del Colegio de Ciencias de la Pontificia Universidad Católica de Mayagüez compartieron con los niños y le obsequiaron el almuerzo. 
+El pasado 4 de enero 2018, la Profesora Jacqueline Rosas junto a otros profesores del Colegio de Ciencias de la Pontificia Universidad Católica de Mayagüez compartieron con los niños y le obsequiaron el almuerzo.
 
 ¡Gracias, nuestros niños disfrutaron su visita y almuerzo!

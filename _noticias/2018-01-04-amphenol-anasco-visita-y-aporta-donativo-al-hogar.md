@@ -15,6 +15,6 @@ redirect_from:
   - /es/noticias/noticias/amphenol-anasco-visita-y-aporta-donativo-al-hogar
   - /es/noticias/noticias/amphenol-anasco-visita-y-aporta-donativo-al-hogar/
 ---
-El pasado 4 de enero, la Sra. Ivelisse Acevedo de la firma Amphenol, ubicada en Añasco, visitó nuestro Hogar e hizo entrega de alimentos, vales de comida y un donativo en efectivo a Jessica Vivaldi de la Junta del Hogar. 
+El pasado 4 de enero, la Sra. Ivelisse Acevedo de la firma Amphenol, ubicada en Añasco, visitó nuestro Hogar e hizo entrega de alimentos, vales de comida y un donativo en efectivo a Jessica Vivaldi de la Junta del Hogar.
 
 ¡Muchas gracias a la Sra. Acevedo y a todo el equipo de Amphenol por su generosidad!

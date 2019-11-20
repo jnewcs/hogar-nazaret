@@ -15,6 +15,6 @@ redirect_from:
   - /es/noticias/noticias/hospital-perea-dona-articulos-al-hogar
   - /es/noticias/noticias/hospital-perea-dona-articulos-al-hogar/
 ---
-Los empleados del Hospital Perea de Mayagüez visitaron el Hogar el pasado 12 de enero y nos agasajaron con regalos, alimentos, artículos escolares y artículos de primera necesidad.   
+Los empleados del Hospital Perea de Mayagüez visitaron el Hogar el pasado 12 de enero y nos agasajaron con regalos, alimentos, artículos escolares y artículos de primera necesidad.
 
 ¡A nombre de los niños del Hogar, damos las gracias a todo el equipo de Perea!

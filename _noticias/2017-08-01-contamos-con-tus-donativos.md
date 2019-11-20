@@ -18,7 +18,7 @@ redirect_from:
 ---
 <h4 class="is-size-4 has-text-secondary">¿QUÉ PUEDES DONAR?</h4>
 
-1. Dinero para gastos (favor ir al botón de 'DONAR') 
+1. Dinero para gastos (favor ir al botón de 'DONAR')
 2. Artículos de bebé
 3. Comida y jugos enlatados: vegetales, sopas, habichuelas, etc.
 4. Agua (galones y/o botellas pequeñas)

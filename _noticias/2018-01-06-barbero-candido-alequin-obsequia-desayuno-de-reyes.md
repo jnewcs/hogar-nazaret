@@ -15,6 +15,6 @@ redirect_from:
   - /es/noticias/noticias/barbero-candido-alequin-obsequia-desayuno-de-reyes
   - /es/noticias/noticias/barbero-candido-alequin-obsequia-desayuno-de-reyes/
 ---
-Siguiendo su tradición de varios años, el Sr. Cándido Alequín le obsequio a los niños del Hogar el desayuno del Día de Reyes. 
+Siguiendo su tradición de varios años, el Sr. Cándido Alequín le obsequio a los niños del Hogar el desayuno del Día de Reyes.
 
 ¡Gracias, Sr. Alequín, que Dios lo bendiga!

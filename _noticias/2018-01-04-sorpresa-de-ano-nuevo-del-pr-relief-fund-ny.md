@@ -15,6 +15,6 @@ redirect_from:
   - /es/noticias/noticias/sorpresa-de-ano-nuevo-del-pr-relief-fund-ny
   - /es/noticias/noticias/sorpresa-de-ano-nuevo-del-pr-relief-fund-ny/
 ---
-El Hogar recibió una linda sorpresa de la <b>Sra. Natalie Coriano</b>, Administradora del  'Puerto Rico Relief Initiative' del Departamento de Servicios Sociales del Condado Westchester (New York). El 4 de enero 2018, UPS hizo entrega de 150 regalos, alegrando a nuestros niños y a todo el personal del Hogar.  
+El Hogar recibió una linda sorpresa de la <b>Sra. Natalie Coriano</b>, Administradora del  'Puerto Rico Relief Initiative' del Departamento de Servicios Sociales del Condado Westchester (New York). El 4 de enero 2018, UPS hizo entrega de 150 regalos, alegrando a nuestros niños y a todo el personal del Hogar.
 
 ¡Muchísimas gracias a la Sra. Coriano y a todo tu equipo!
