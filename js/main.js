@@ -49,7 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
       startAt: 0,
       autoplay: 5000,
       perView: 3,
-      breakpoints: breakpoints
+      breakpoints: breakpoints,
+      swipeThreshold: 140
     }).mount();
   }
 
