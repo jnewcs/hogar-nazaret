@@ -32,7 +32,8 @@ document.addEventListener('DOMContentLoaded', () => {
       startAt: 0,
       perView: 1,
       peek: -2,
-      autoplay: 5000
+      autoplay: 5000,
+      swipeThreshold: 140
     }).mount();
   }
 
