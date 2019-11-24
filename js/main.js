@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
       perView: 1,
       peek: -2,
       autoplay: 5000,
-      swipeThreshold: 140
+      swipeThreshold: 50
     }).mount();
   }
 
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       autoplay: 5000,
       perView: 3,
       breakpoints: breakpoints,
-      swipeThreshold: 140
+      swipeThreshold: 50
     }).mount();
   }
 
