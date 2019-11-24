@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var label = formContainer.dataset.label;
   var initialAmount = parseInt(oneTimeAmountField.value) * 100;
 
-  var stripe = Stripe(stripeKey);
+  var stripe = Stripe(stripeKey, { locale: lang });
   var elements = stripe.elements();
   var paymentRequest = stripe.paymentRequest({
     country: 'US',
