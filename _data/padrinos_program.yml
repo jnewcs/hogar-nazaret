@@ -5,8 +5,8 @@
     es: $100 al mes
   form_cost: $100 al mes
   dropdown_title:
-    en: "Padrino / Madrina: $100 per month"
-    es: "Padrino / Madrina: $100 al mes"
+    en: "Padrino / Madrina: $100"
+    es: "Padrino / Madrina: $100"
 
 - title: Abuelo / Abuela
   image: /uploads/padrinos_program/abuelos.png
@@ -15,8 +15,8 @@
     es: $75 al mes
   form_cost: $75 al mes
   dropdown_title:
-    en: "Abuelo / Abuela: $75 per month"
-    es: "Abuelo / Abuela: $75 al mes"
+    en: "Abuelo / Abuela: $75"
+    es: "Abuelo / Abuela: $75"
 
 - title: Tío / Tía
   image: /uploads/padrinos_program/tios.png
@@ -25,8 +25,8 @@
     es: $50 al mes
   form_cost: $50 al mes
   dropdown_title:
-    en: "Tío / Tía: $50 per month"
-    es: "Tío / Tía: $50 al mes"
+    en: "Tío / Tía: $50"
+    es: "Tío / Tía: $50"
 
 - title: Amigo / Amiga
   image: /uploads/padrinos_program/amigos.png
@@ -35,8 +35,8 @@
     es: $25 al mes
   form_cost: $25 al mes
   dropdown_title:
-    en: "Amigo / Amiga: $25 per month"
-    es: "Amigo / Amiga: $25 al mes"
+    en: "Amigo / Amiga: $25"
+    es: "Amigo / Amiga: $25"
 
 - title: Primo / Prima
   image: /uploads/padrinos_program/primos.jpg
@@ -45,5 +45,5 @@
     es: $15 al mes
   form_cost: $15 al mes
   dropdown_title:
-    en: "Primo / Prima: $15 per month"
-    es: "Primo / Prima: $15 al mes"
+    en: "Primo / Prima: $15"
+    es: "Primo / Prima: $15"

@@ -336,6 +336,18 @@ a.button.is-secondary {
   white-space: inherit;
 }
 
+/* Donation modal */
+.custom-modal-close {
+  top: 8px;
+  right: 8px;
+  position: absolute;
+  z-index: 1000;
+
+  &:before, &:after {
+    background-color: black;
+  }
+}
+
 /* Mobile devices and below */
 @media screen and (max-width: 768px) {
   #donation-prompts {

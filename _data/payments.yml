@@ -1,0 +1,6 @@
+---
+stripe_publish_key:
+  development: 'pk_test_8sNKmb0I7z59Otvd5tmrtHzd00qBHCaeu0'
+  staging: 'pk_test_8sNKmb0I7z59Otvd5tmrtHzd00qBHCaeu0'
+  test: 'pk_test_8sNKmb0I7z59Otvd5tmrtHzd00qBHCaeu0'
+  production: 'pk_live_YE6au56wdhzwxwGO9bGPio7L00E0keInTX'

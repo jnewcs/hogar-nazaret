@@ -18,16 +18,24 @@ en:
   not_found_explanation: The page you are looking for might have been removed had its name changed or is temporarily unavailable
   needs: Needs
   donate:
-    call_to_action:  Donate
+    call_to_action: Donate
+    call_to_action_paypal: Donate with
     locale: en_US
-    item_name: Donation - The Hogar Albergue Jesus de Nazaret
+    item_name: Donation - The Hogar Albergue Jesús de Nazaret
+    one_time_amount_label: One Time Donation - The Hogar Albergue Jesús de Nazaret
     modal:
       title: Choose the type of Donation
-      enter_amount: Enter the amount
+      enter_one_time_amount: Enter the amount
+      enter_recurring_amount: Monthly amount
       type:
         now: Donate Now
         sponsor: Sponsor
       padrinos_callout: Learn more about the Padrinos program
+      processing_payment: Processing your payment
+      return: Return
+      retry: Retry
+      success_msg: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret! You should receive an email receipt soon for your donation.
+      error_msg: Sorry, we ran into an error processing your donation. Please click 'Retry' to return to the donation screen and try again.
   email: Email
   office: Office
   fax: Fax
@@ -71,15 +79,23 @@ es:
   needs: Necesidades
   donate:
     call_to_action:  Donar
+    call_to_action_paypal: Donar con
     locale: es_XC
-    item_name: Donacion - Hogar Albergue para Ninos Jesus de Nazaret
+    item_name: Donación - Hogar Albergue para Niños Jesús de Nazaret
+    one_time_amount_label: Donación Única - Hogar Albergue para Niños Jesús de Nazaret
     modal:
       title: Escoja tipo de Donativo
-      enter_amount: Entre su Cantidad
+      enter_one_time_amount: Entre su Cantidad
+      enter_recurring_amount: Donar al mes
       type:
         now: Dona Ahora
         sponsor: Apadrina
       padrinos_callout: Más información sobre el programa de Padrinos
+      processing_payment: Procesamiento de su pago
+      return: Regresa
+      retry: Reintenta
+      success_msg: ¡Muchas gracias por apoyar a Hogar Albergue para Niños Jesús de Nazaret! Usted debe recibir un recibo por correo electrónico pronto para su donación.
+      error_msg: Lo sentimos, nos encontramos con un error al procesar su donación. Haga clic en 'Reintenta' para volver a la pantalla de donación e inténtelo de nuevo.
   email: Email
   office: Oficina
   fax: Fax

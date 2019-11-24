@@ -2,10 +2,12 @@
   <div class="modal-background modal-closer" aria-label="close" data-target="donation-modal"></div>
 
   <div class="modal-content">
-    <div class="container content-container has-background-white is-cursive">
-      <div class="is-size-3 has-text-centered mb-1">
+    <button class="custom-modal-close delete modal-closer is-large" id="donation-modal-close-btn" aria-label="close" data-target="donation-modal"></button>
+
+    <div class="container content-container has-background-white is-cursive" id="donation-content-container">
+      <h3 class="is-size-3 has-text-centered mb-1">
         {{ site.data.languages[page.lang].donate.modal.title }}
-      </div>
+      </h3>
 
       <div class="tabs is-toggle is-fullwidth">
         <ul>
@@ -26,8 +28,9 @@
       <div id="tab-contents">
         <div class="tab-content has-text-centered is-active" id="donate-now-content">
           <p class="is-size-5 mb-1">
-            {{ site.data.languages[page.lang].donate.modal.enter_amount }}
+            {{ site.data.languages[page.lang].donate.modal.enter_one_time_amount }}
           </p>
+
           <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
             <input type="hidden" name="cmd" value="_donations">
             <input type="hidden" name="business" value="23UGP3TU8AQLN">
@@ -47,7 +50,7 @@
               <div class="column is-half">
                 <div class="field">
                   <div class="control has-icons-left">
-                    <input class="input is-medium" name="amount" type="number" value="15" type="number" min="0" step="1">
+                    <input class="input is-medium" id="one-time-donation-amount" name="amount" type="number" value="15" type="number" min="0" step="1">
                     <span class="icon is-left">
                       $
                     </span>
@@ -56,13 +59,36 @@
               </div>
             </div>
 
+            <section
+              id="payment-form-inner-container"
+              data-lang="{{ page.lang }}"
+              data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
+              data-label="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+            >
+              <div class="columns is-mobile is-centered">
+                <div class="column is-half">
+                  <div id="payment-request-button"></div>
+                </div>
+              </div>
+
+              <hr id="payment-divider" />
+            </section>
+
             <div class="field">
-              <input class="button is-medium is-secondary" type="submit" value="{{ site.data.languages[page.lang].donate.call_to_action }}">
+              <button class="button is-medium is-secondary" type="submit">
+                {{ site.data.languages[page.lang].donate.call_to_action_paypal }}
+
+                <img class="ml-tiny" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" />
+              </button>
             </div>
           </form>
         </div>
 
         <div class="tab-content has-text-centered" id="sponsor-content">
+          <p class="is-size-5 mb-1">
+            {{ site.data.languages[page.lang].donate.modal.enter_recurring_amount }}
+          </p>
+
           <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
             <input type="hidden" name="cmd" value="_s-xclick">
             <input type="hidden" name="hosted_button_id" value="4N55VXLPEUXK8">
@@ -72,17 +98,23 @@
             <input type="hidden" name="item_name" value="{{ site.data.languages[page.lang].donate.item_name }}">
 
             <div class="field">
-              <div class="select is-rounded is-medium">
+              <div class="select is-medium">
                 <select name="os0">
                   {% for data in site.data.padrinos_program %}
-                    <option value="{{ data.cost.es }}">{{ data.dropdown_title[page.lang] }}</option>
+                    <option value="{{ data.cost[page.lang] }}">{{ data.dropdown_title[page.lang] }}</option>
                   {% endfor %}
                 </select>
               </div>
             </div>
 
-            <div class="field">
-              <input class="button is-medium is-secondary" type="submit" value="{{ site.data.languages[page.lang].donate.call_to_action }}">
+            <hr />
+
+            <div class="field mt-2">
+                <button class="button is-medium is-secondary" type="submit">
+                  {{ site.data.languages[page.lang].donate.call_to_action_paypal }}
+
+                  <img class="ml-tiny" src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/PP_logo_h_100x26.png" alt="PayPal" />
+                </button>
             </div>
           </form>
         </div>
@@ -96,7 +128,39 @@
         </a>
       </div>
     </div>
-  </div>
 
-  <button class="modal-close modal-closer is-large" aria-label="close" data-target="donation-modal"></button>
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="loading-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <progress class="progress is-large is-info" max="100"></progress>
+        <h3 class="is-size-3 has-text-centered">
+          {{ site.data.languages[page.lang].donate.modal.processing_payment }}
+        </h3>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="success-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="success-icon">
+          <div class="success-icon__tip"></div>
+          <div class="success-icon__long"></div>
+        </div>
+
+        <p class="is-size-5 mt-2">
+          {{ site.data.languages[page.lang].donate.modal.success_msg }}
+        </p>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="error-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <p class="is-size-5 mb-1">
+          {{ site.data.languages[page.lang].donate.modal.error_msg }}
+        </p>
+
+        <button class="button is-medium is-secondary" id="retry-button">
+          {{ site.data.languages[page.lang].donate.modal.retry }}
+        </button>
+      </div>
+    </div>
+  </div>
 </div>

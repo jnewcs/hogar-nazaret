@@ -1,12 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-
   /* Navbar Burger Clicker */
-  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+  var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
     $navbarBurgers.forEach(el => {
       el.addEventListener('click', () => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+        var target = el.dataset.target;
+        var $target = document.getElementById(target);
 
         // Toggle the 'is-active' class on both the 'navbar-burger' and the 'navbar-menu'
         el.classList.toggle('is-active');
@@ -16,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Navbar dropdown clicking on mobile */
-  const $navbarItemsWithDropdown = Array.prototype.slice.call(document.querySelectorAll('.navbar-item.has-dropdown'), 0);
+  var $navbarItemsWithDropdown = Array.prototype.slice.call(document.querySelectorAll('.navbar-item.has-dropdown'), 0);
   if ($navbarItemsWithDropdown.length > 0) {
     $navbarItemsWithDropdown.forEach(el => {
       el.addEventListener('click', () => {
@@ -54,19 +53,27 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Code for Lazy Loading */
-  const lazyImages = document.querySelectorAll('.lazy-load');
+  var lazyImages = document.querySelectorAll('.lazy-load');
   if (lazyImages && lazyImages.length) {
-    const observer = lozad(lazyImages);
+    var observer = lozad(lazyImages);
     observer.observe();
   }
 
   /* Code for modal opening */
-  const $modalOpeners = Array.prototype.slice.call(document.querySelectorAll('.modal-opener'), 0);
+  var modalContainer = document.getElementById('donation-content-container');
+  var loadingContainer = document.getElementById('loading-container');
+  var successContainer = document.getElementById('success-container');
+  var errorContainer = document.getElementById('error-container');
+  var $modalOpeners = Array.prototype.slice.call(document.querySelectorAll('.modal-opener'), 0);
   if ($modalOpeners.length > 0) {
     $modalOpeners.forEach(el => {
       el.addEventListener('click', () => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+        var target = el.dataset.target;
+        var $target = document.getElementById(target);
+        modalContainer.classList.remove('is-hidden');
+        loadingContainer.classList.add('is-hidden');
+        successContainer.classList.add('is-hidden');
+        errorContainer.classList.add('is-hidden');
 
         document.documentElement.classList.add('is-clipped');
         $target.classList.add('is-active');
@@ -75,12 +82,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Code for modal closing */
-  const $modalClosers = Array.prototype.slice.call(document.querySelectorAll('.modal-closer'), 0);
+  var $modalClosers = Array.prototype.slice.call(document.querySelectorAll('.modal-closer'), 0);
   if ($modalClosers.length > 0) {
     $modalClosers.forEach(el => {
       el.addEventListener('click', () => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+        var target = el.dataset.target;
+        var $target = document.getElementById(target);
 
         document.documentElement.classList.remove('is-clipped');
         $target.classList.remove('is-active');
@@ -89,13 +96,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   /* Code for tab switching */
-  const $tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'), 0);
-  const $tabContents = Array.prototype.slice.call(document.querySelectorAll('.tab-content'), 0);
+  var $tabs = Array.prototype.slice.call(document.querySelectorAll('.tab'), 0);
+  var $tabContents = Array.prototype.slice.call(document.querySelectorAll('.tab-content'), 0);
   if ($tabs.length > 0) {
     $tabs.forEach(el => {
       el.addEventListener('click', () => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
+        var target = el.dataset.target;
+        var $target = document.getElementById(target);
 
         // Remove active from tabs and tab content
         $tabs.forEach(innerTab => {
