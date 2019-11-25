@@ -1,0 +1,34 @@
+---
+label: Board of Director
+hide_body: true
+fields:
+- type: field_group_list
+  name: Board of directors
+  label: Board of directors
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: file
+    name: image
+    label: image
+  - type: field_group
+    name: position
+    label: position
+    fields:
+    - type: text
+      name: en
+      label: en
+    - type: text
+      name: es
+      label: es
+  - type: field_group
+    name: background
+    label: background
+    fields:
+    - type: text
+      name: en
+      label: en
+    - type: text
+      name: es
+      label: es
