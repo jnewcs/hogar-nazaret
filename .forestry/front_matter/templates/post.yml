@@ -52,6 +52,8 @@ fields:
 - type: text
   name: lang_ref
   label: lang_ref
+  config:
+    required: true
 - type: text
   name: layout
   label: layout
