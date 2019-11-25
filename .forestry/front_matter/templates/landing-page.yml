@@ -124,6 +124,7 @@ fields:
       file: 
       path: 
   label: lang
+  hidden: true
 - type: text
   name: lang_ref
   label: lang_ref
