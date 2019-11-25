@@ -59,11 +59,6 @@ fields:
   showOnly:
     field: has_photo_grid
     value: true
-- type: text
-  name: lang_ref
-  label: lang_ref
-  config:
-    required: true
 - type: list
   name: redirect_from
   label: redirect_from
@@ -71,6 +66,13 @@ fields:
     a new URL
   config:
     use_select: false
+- type: text
+  name: lang_ref
+  label: lang_ref
+  config:
+    required: true
+  description: 'Unique identifier used to link a Spanish news article to the equivalent
+    English article '
 - type: text
   name: lang
   label: lang
