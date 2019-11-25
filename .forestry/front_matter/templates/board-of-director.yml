@@ -1,5 +1,5 @@
 ---
-label: Board of Director
+label: Board of Directors
 hide_body: true
 fields:
 - type: field_group_list
@@ -18,17 +18,17 @@ fields:
     fields:
     - type: text
       name: en
-      label: en
+      label: English Translation
     - type: text
       name: es
-      label: es
+      label: Spanish Translation
   - type: field_group
     name: background
     label: background
     fields:
     - type: text
       name: en
-      label: en
+      label: English Translation
     - type: text
       name: es
-      label: es
+      label: Spanish Translation
