@@ -82,20 +82,20 @@ es:
     call_to_action_paypal: Donar con
     locale: es_XC
     item_name: Donación - Hogar Albergue para Niños Jesús de Nazaret
-    one_time_amount_label: Donación Única - Hogar Albergue para Niños Jesús de Nazaret
+    one_time_amount_label: Donación única - Hogar Albergue para Niños Jesús de Nazaret
     modal:
-      title: Escoja tipo de Donativo
-      enter_one_time_amount: Entre su Cantidad
-      enter_recurring_amount: Donar al mes
+      title: Escoja el tipo de su donación
+      enter_one_time_amount: Escriba el monto de su donación
+      enter_recurring_amount: Donación mensual
       type:
-        now: Dona Ahora
-        sponsor: Apadrina
-      padrinos_callout: Más información sobre el programa de Padrinos
-      processing_payment: Procesamiento de su pago
+        now: Donar ahora
+        sponsor: Apadrinar
+      padrinos_callout: Información sobre el Programa de Padrinos
+      processing_payment: Procesamiento de su donación
       return: Regresa
-      retry: Reintenta
-      success_msg: ¡Muchas gracias por apoyar a Hogar Albergue para Niños Jesús de Nazaret! Usted debe recibir un recibo por correo electrónico pronto para su donación.
-      error_msg: Lo sentimos, nos encontramos con un error al procesar su donación. Haga clic en 'Reintenta' para volver a la pantalla de donación e inténtelo de nuevo.
+      retry: Intente de nuevo
+      success_msg: ¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret! Usted recibirá pronto la confirmación de su donación en un correo electrónico.
+      error_msg: Lo sentimos, nos encontramos con un error al procesar su donación. Por favor, haga clic en “Intente de nuevo” para volver a la pantalla de donación e inténtelo otra vez.
   email: Email
   office: Oficina
   fax: Fax
