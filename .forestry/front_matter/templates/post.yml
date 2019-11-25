@@ -26,6 +26,8 @@ fields:
   config:
     maxSize: 250
   label: banner_image
+  description: Image used as a preview on the home page and the News page. It also
+    serves as header image in the side_by_side header layout.
 - type: text
   name: banner_image_alt
   label: banner_image_alt
