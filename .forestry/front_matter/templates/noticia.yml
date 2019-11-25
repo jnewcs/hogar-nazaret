@@ -13,7 +13,8 @@ fields:
   label: Published Date
   config:
     required: true
-  description: Determines the order which the post is shown
+  description: Determines the order which the post is shown. It appears alongside
+    the title across the website
 - type: text
   name: lang_ref
   label: lang_ref
