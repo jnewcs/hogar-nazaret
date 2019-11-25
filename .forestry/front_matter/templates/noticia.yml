@@ -47,9 +47,9 @@ fields:
   label: banner_image_style
 - name: header_layout
   type: select
-  default: []
+  default: central_title
   config:
-    required: false
+    required: true
     options:
     - central_title
     - side_by_side
