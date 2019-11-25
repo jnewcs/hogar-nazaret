@@ -7,7 +7,7 @@ fields:
   label: Title
   config:
     required: true
-  description: Displayed as the title of the article across the website
+  description: Displayed as the title of the post across the website
 - type: datetime
   name: date
   label: Published Date
