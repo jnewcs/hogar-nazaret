@@ -4,7 +4,7 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
   config:
     required: true
   description: Displayed as the title of the article across the website
@@ -14,6 +14,13 @@ fields:
   config:
     required: true
   description: Determines the order which the post is shown
+- type: text
+  name: lang_ref
+  label: lang_ref
+  config:
+    required: true
+  description: Unique identifier used to link an English news article to the equivalent
+    Spanish article
 - name: banner_image
   type: file
   config:
@@ -48,13 +55,6 @@ fields:
   showOnly:
     field: has_photo_grid
     value: true
-- type: text
-  name: lang_ref
-  label: lang_ref
-  config:
-    required: true
-  description: Unique identifier used to link an English news article to the equivalent
-    Spanish article
 - type: list
   name: redirect_from
   label: redirect_from
