@@ -6,6 +6,8 @@ fields:
   name: title
   label: title
   description: Shows up in the browser tab to identify the page
+  config:
+    required: true
 - type: boolean
   name: show_carousel
   label: show_carousel
