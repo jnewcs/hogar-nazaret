@@ -63,7 +63,8 @@ fields:
   name: has_photo_grid
   label: has_photo_grid
   description: When a post has a lot of images, we can add them in a photo grid which
-    gets displayed underneath the post.
+    gets displayed underneath the post. Toggling this option will allow you to add
+    photos.
 - type: image_gallery
   name: photo_grid
   label: photo_grid
