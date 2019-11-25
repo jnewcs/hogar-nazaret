@@ -1,83 +1,86 @@
+---
 - name: Dra. Sandra Arroyo Ferrer
-  image: /uploads/board_of_directors/sandra_ferrer.jpg
+  image: "/uploads/board_of_directors/sandra_ferrer.jpg"
   position:
     en: President
     es: Presidenta Junta Directores
   background:
     en: Bioimágenes Médicas, CSP
     es: Bioimágenes Médicas, CSP
-
 - name: Carlos Velázquez Figueroa
-  image: /uploads/board_of_directors/carlos_figueroa.jpg
+  image: "/uploads/board_of_directors/carlos_figueroa.jpg"
   position:
     en: Vice President
     es: Vice Presidente Junta Directores
   background:
     en: Recinto Universitario de Mayagüez
     es: Recinto Universitario de Mayagüez
-
 - name: Lcdo. Jesús Morales Cordero
-  image: /uploads/board_of_directors/jesus_cordero.png
+  image: "/uploads/board_of_directors/jesus_cordero.png"
   position:
     en: Secretary
     es: Secretario Junta Directores
   background:
     en: Bufete de Abogados Morales Cordero, CSP
     es: Bufete de Abogados Morales Cordero, CSP
-
 - name: María T. Rivera Méndez
-  image: /uploads/board_of_directors/maria_mendez.jpg
+  image: "/uploads/board_of_directors/maria_mendez.jpg"
   position:
     en: Treasurer
     es: Tesorera Junta Directores
-
+  background:
+    en: ''
+    es: ''
 - name: Nicolás Rivera Vázquez
-  image: /uploads/board_of_directors/nicolas_vazquez.jpg
+  image: "/uploads/board_of_directors/nicolas_vazquez.jpg"
   position:
     en: Assistant Treasurer
     es: Sub-Tesorero Junta Directores
-
+  background:
+    en: ''
+    es: ''
 - name: Carmen R. Brown
-  image: /uploads/board_of_directors/carmen_brown.jpg
+  image: "/uploads/board_of_directors/carmen_brown.jpg"
   position:
     en: Board Member
     es: Miembro Junta Directores
-
+  background:
+    en: ''
+    es: ''
 - name: Ivette Hernández Denizard
-  image: /uploads/board_of_directors/ivette_denizard.jpg
+  image: "/uploads/board_of_directors/ivette_denizard.jpg"
   position:
     en: Board Member
     es: Miembro Junta Directores
   background:
     en: Fenwal International, Inc.
     es: Fenwal International, Inc.
-
 - name: Gloria Cofresí
-  image: /uploads/board_of_directors/gloria_cofresi.jpg
+  image: "/uploads/board_of_directors/gloria_cofresi.jpg"
   position:
     en: Board Member
     es: Miembro Junta Directores
-
+  background:
+    en: ''
+    es: ''
 - name: Sharon Arroyo Ferrer
-  image: /uploads/board_of_directors/sharon_ferrer.jpg
+  image: "/uploads/board_of_directors/sharon_ferrer.jpg"
   position:
     en: Board Member
     es: Miembro Junta Directores
   background:
     en: Bioimágenes Médicas, CSP
     es: Bioimágenes Médicas, CSP
-
 - name: Lilliam Román Rivera
-  image: /uploads/board_of_directors/lilliam_rivera.jpg
+  image: "/uploads/board_of_directors/lilliam_rivera.jpg"
   position:
     en: Board Member
     es: Miembro Junta Directores
   background:
     en: Sears, Roebuck & Company
     es: Sears, Roebuck & Company
-
 - name: Jessica Vivaldi Arroyo
-  image: /uploads/board_of_directors/jessica_arroyo.jpg
+  image: "/uploads/board_of_directors/jessica_arroyo.jpg"
   position:
     en: Board Member
     es: Miembro Junta Directores

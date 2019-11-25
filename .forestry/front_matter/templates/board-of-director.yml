@@ -32,3 +32,5 @@ fields:
     - type: text
       name: es
       label: Spanish Translation
+pages:
+- _data/board_of_directors.yml
