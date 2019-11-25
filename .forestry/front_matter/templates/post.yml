@@ -56,6 +56,8 @@ fields:
   label: lang_ref
   config:
     required: true
+  description: Unique identifier used to link an English news article to its equivalent
+    Spanish article
 - type: text
   name: layout
   label: layout
