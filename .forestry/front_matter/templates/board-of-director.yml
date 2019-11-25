@@ -33,5 +33,7 @@ fields:
     - type: text
       name: es
       label: Spanish Translation
+    description: The company that the board member works at (i.e. Bioimágenes Médicas,
+      CSP)
 pages:
 - _data/board_of_directors.yml
