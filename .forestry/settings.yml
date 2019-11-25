@@ -55,6 +55,10 @@ sections:
 - type: document
   path: _data/information.yml
   label: Site Info
+- type: document
+  path: _data/board_of_directors.yml
+  label: Board of Directors
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
