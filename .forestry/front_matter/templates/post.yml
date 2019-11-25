@@ -59,9 +59,9 @@ fields:
       file: 
       path: 
   label: header_layout
-  description: 'Determines the header on the article page. There are currently two
-    options: side_by_side and central_title. The side_by_side layout includes the
-    article title on the left with the banner image to the right. The central_title
+  description: 'Determines the header layout on the article page. There are currently
+    two options: side_by_side and central_title. The side_by_side layout includes
+    the article title on the left with the banner image to the right. The central_title
     layout just has the article title with the published date below it.'
 - type: boolean
   name: has_photo_grid
