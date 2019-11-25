@@ -140,9 +140,9 @@
 
     <div class="container content-container has-background-white has-text-centered is-hidden" id="success-container">
       <div style="margin-top: 30px; margin-bottom: 30px;">
-        <div class="success-icon">
-          <div class="success-icon__tip"></div>
-          <div class="success-icon__long"></div>
+        <div class="custom-icon">
+          <div class="custom-icon__tip"></div>
+          <div class="custom-icon__long"></div>
         </div>
 
         <p class="is-size-5 mt-2">
@@ -153,7 +153,12 @@
 
     <div class="container content-container has-background-white has-text-centered is-hidden" id="error-container">
       <div style="margin-top: 30px; margin-bottom: 30px;">
-        <p class="is-size-5 mb-1">
+        <div class="custom-icon red">
+          <div class="custom-icon__tip red"></div>
+          <div class="custom-icon__long red"></div>
+        </div>
+
+        <p class="is-size-5 mb-1 mt-2">
           {{ site.data.languages[page.lang].donate.modal.error_msg }}
         </p>
 

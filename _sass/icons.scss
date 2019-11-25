@@ -1,8 +1,9 @@
-$green:     #4cc93f;
+// Reference: https://codepen.io/pepsto/pen/XaZRGZ
+$green: #4cc93f;
+$red: red;
 $icon-base-size: 16px;
 
-// Structure
-.success-icon {
+.custom-icon {
   display: inline-block;
   width: 8em;
   height: 8em;
@@ -13,12 +14,15 @@ $icon-base-size: 16px;
   position: relative;
   overflow: hidden;
   transform-origin: center;
-  animation: showSuccess 180ms ease-in-out;
   transform: scale(1);
+  animation: showAnimation 180ms ease-in-out;
+
+  &.red {
+    border: 4px solid lighten($red, 20%);
+  }
 }
 
-// Elements
-.success-icon {
+.custom-icon {
   &__tip, &__long {
     display: block;
     position: absolute;
@@ -28,29 +32,41 @@ $icon-base-size: 16px;
   }
 
   &__tip {
-    width: 2.4em;
-    top: 4.3em;
-    left: 1.4em;
     transform: rotate(45deg);
     animation: tipInPlace 300ms ease-in-out;
     animation-fill-mode: forwards;
     animation-delay: 180ms;
     visibility: hidden;
+
+    &.red {
+      background-color: lighten($red, 20%);
+      animation: none;
+      width: 4.5em;
+      top: 3.60em;
+      left: 1.5em;
+      visibility: visible;
+    }
   }
 
   &__long {
-    width: 4em;
     transform: rotate(-45deg);
-    top: 3.70em;
-    left: 2.75em;
     animation: longInPlace 140ms ease-in-out;
     animation-fill-mode: forwards;
     visibility: hidden;
     animation-delay: 300ms + 140ms;
+
+    &.red {
+      background-color: lighten($red, 20%);
+      animation: none;
+      width: 4.5em;
+      top: 3.60em;
+      left: 1.5em;
+      visibility: visible;
+    }
   }
 }
 
-@keyframes showSuccess {
+@keyframes showAnimation {
   from {
     transform: scale(0);
   }
@@ -63,7 +79,7 @@ $icon-base-size: 16px;
   from {
     width: 0em;
     top: 0em;
-    left: -1.6em;
+    left: 0em;
   }
   to {
     width: 2.4em;
@@ -76,8 +92,8 @@ $icon-base-size: 16px;
 @keyframes longInPlace {
   from {
     width: 0em;
-    top: 5.1em;
-    left: 3.2em;
+    top: 0em;
+    left: 0em;
   }
   to {
     width: 4em;
