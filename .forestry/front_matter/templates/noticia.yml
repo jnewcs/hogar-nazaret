@@ -4,7 +4,7 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
   config:
     required: true
   description: Displayed as the title of the article across the website
