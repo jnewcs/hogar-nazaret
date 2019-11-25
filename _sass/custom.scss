@@ -348,6 +348,16 @@ a.button.is-secondary {
   }
 }
 
+/* Preview notification */
+.staging-notification {
+  position: fixed;
+  top: 52px;
+  z-index: 3;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+}
+
 /* Mobile devices and below */
 @media screen and (max-width: 768px) {
   .custom-modal-close {
