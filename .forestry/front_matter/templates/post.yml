@@ -19,8 +19,8 @@ fields:
   label: lang_ref
   config:
     required: true
-  description: Unique identifier used to link an English news article to the equivalent
-    Spanish article
+  description: Unique identifier used to link an English news post to the equivalent
+    Spanish post
 - name: banner_image
   type: file
   config:
