@@ -14,6 +14,13 @@ fields:
   config:
     required: true
   description: Determines the order which the post is shown
+- type: text
+  name: lang_ref
+  label: lang_ref
+  config:
+    required: true
+  description: 'Unique identifier used to link a Spanish news article to the equivalent
+    English article '
 - name: banner_image
   type: file
   config:
@@ -66,13 +73,6 @@ fields:
     a new URL
   config:
     use_select: false
-- type: text
-  name: lang_ref
-  label: lang_ref
-  config:
-    required: true
-  description: 'Unique identifier used to link a Spanish news article to the equivalent
-    English article '
 - type: text
   name: lang
   label: lang
