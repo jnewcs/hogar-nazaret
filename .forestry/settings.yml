@@ -23,14 +23,6 @@ sections:
   match: "*.md"
   templates:
   - post
-- type: directory
-  path: en
-  label: Main Pages
-  create: documents
-  match: "*.md"
-  exclude: index.md
-  templates:
-  - default
 - type: heading
   label: Spanish Content
 - type: document
@@ -43,13 +35,6 @@ sections:
   match: "*.md"
   templates:
   - noticia
-- type: directory
-  path: es
-  label: Páginas Principales
-  create: documents
-  match: "*.md"
-  templates:
-  - default
 - type: heading
   label: General
 - type: document
