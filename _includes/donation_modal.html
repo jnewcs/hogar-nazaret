@@ -98,7 +98,7 @@
             <input type="hidden" name="item_name" value="{{ site.data.languages[page.lang].donate.item_name }}">
 
             <div class="field">
-              <div class="select is-medium">
+              <div class="select is-medium" id="donate-select">
                 <select name="os0">
                   {% for data in site.data.padrinos_program %}
                     <option value="{{ data.cost[page.lang] }}">{{ data.dropdown_title[page.lang] }}</option>

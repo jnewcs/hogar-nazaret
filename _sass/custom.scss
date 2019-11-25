@@ -350,6 +350,13 @@ a.button.is-secondary {
 
 /* Mobile devices and below */
 @media screen and (max-width: 768px) {
+  .custom-modal-close {
+    right: 15px;
+  }
+
+  #donate-select {
+    font-size: 1rem;
+  }
   #donation-prompts {
     display: flex;
     flex-direction: column;
