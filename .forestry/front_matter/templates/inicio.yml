@@ -5,6 +5,7 @@ fields:
 - type: text
   name: title
   label: title
+  description: Shows up in the browser tab to identify the page
 - type: boolean
   name: show_carousel
   label: show_carousel
