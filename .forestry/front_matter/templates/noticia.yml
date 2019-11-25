@@ -62,6 +62,8 @@ fields:
 - type: boolean
   name: has_photo_grid
   label: has_photo_grid
+  description: When a post has a lot of images, we can add them in a photo grid which
+    gets displayed underneath the post.
 - type: image_gallery
   name: photo_grid
   label: photo_grid
