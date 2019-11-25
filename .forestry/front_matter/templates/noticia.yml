@@ -31,6 +31,8 @@ fields:
 - type: text
   name: banner_image_alt
   label: banner_image_alt
+  description: Used to describe the banner image. Adding a description benefits visually
+    impaired users who use screen readers when browsing.
 - name: banner_image_style
   type: select
   default: []
