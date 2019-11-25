@@ -8,9 +8,9 @@ lazy_load: true
 {% endcomment %}
 
 {% if page.lang == 'en' %}
-  {% assign related = site.posts | sort:"date" | reverse %}
+  {% assign related = site.posts | uniq | sort:"date" | reverse %}
 {% else %}
-  {% assign related = site.noticias | sort:"date" | reverse %}
+  {% assign related = site.noticias | uniq | sort:"date" | reverse %}
 {% endif %}
 
 <div class="container content-container">
@@ -35,6 +35,9 @@ lazy_load: true
               <div class="content">
                 <strong class="post-title">
                   <a class="is-size-4" href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+                  {% if post.path contains "_drafts" %}
+                    <div class="tag is-warning">DRAFT POST</div>
+                  {% endif %}
                 </strong>
                 <div>
                   <date>{{ post.date | date_to_string }}</date>
