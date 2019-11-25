@@ -13,7 +13,8 @@ fields:
 - type: text
   name: link_destination
   label: link_destination
-  description: Relative url
+  description: Relative url to destination. To route to www.hogarjesusdenazaret.org/en/news/recent,
+    we would put /en/news/recent
 - type: file
   name: banner_image
   label: banner_image
