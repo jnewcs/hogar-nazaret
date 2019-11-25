@@ -5,9 +5,6 @@ fields:
 - type: text
   name: title
   label: title
-- type: text
-  name: layout
-  label: layout
 - type: boolean
   name: show_carousel
   label: show_carousel
@@ -119,3 +116,8 @@ fields:
   name: lang_ref
   label: lang_ref
   hidden: true
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+  default: landing-page
