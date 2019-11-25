@@ -27,7 +27,7 @@ fields:
     maxSize: 250
   label: banner_image
   description: Image used as a preview on the Home Page and the News page. It also
-    serves as header image in the side_by_side header layout.
+    serves as the header image in the side_by_side header layout.
 - type: text
   name: banner_image_alt
   label: banner_image_alt
