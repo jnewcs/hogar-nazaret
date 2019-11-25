@@ -22,6 +22,7 @@ fields:
     - type: text
       name: es
       label: Spanish Translation
+    description: The position the board member occupies on the board (i.e. President)
   - type: field_group
     name: background
     label: background
