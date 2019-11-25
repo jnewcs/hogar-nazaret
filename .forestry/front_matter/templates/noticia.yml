@@ -10,9 +10,10 @@ fields:
   description: Displayed as the title of the article across the website
 - type: datetime
   name: date
-  label: publish date
+  label: Published Date
   config:
     required: true
+  description: Determines the order which the post is shown
 - name: banner_image
   type: file
   config:
