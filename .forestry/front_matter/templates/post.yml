@@ -48,9 +48,6 @@ fields:
   showOnly:
     field: has_photo_grid
     value: true
-- type: list
-  name: redirect_from
-  label: redirect_from
 - type: text
   name: lang_ref
   label: lang_ref
@@ -58,6 +55,9 @@ fields:
     required: true
   description: Unique identifier used to link an English news article to the equivalent
     Spanish article
+- type: list
+  name: redirect_from
+  label: redirect_from
 - type: text
   name: layout
   label: layout
