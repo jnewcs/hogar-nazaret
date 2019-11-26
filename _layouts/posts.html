@@ -35,13 +35,13 @@ lazy_load: true
               <div class="content">
                 <strong class="post-title">
                   <a class="is-size-4" href="{{ post.url | absolute_url }}">{{ post.title }}</a>
-                  {% if post.path contains "_drafts" %}
-                    <div class="tag is-warning">DRAFT POST</div>
-                  {% endif %}
                 </strong>
                 <div>
                   <date>{{ post.date | date_to_string }}</date>
                 </div>
+                {% if post.path contains "_drafts" %}
+                  <div class="tag is-warning">DRAFT POST</div>
+                {% endif %}
                 <p>
                   {% if post.blurb_description %}
                     {% assign content = post.blurb_description %}
