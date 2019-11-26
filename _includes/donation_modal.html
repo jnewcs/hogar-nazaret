@@ -59,7 +59,8 @@
               </div>
             </div>
 
-            <section
+            {% if site.data.information.payment_request_on == true }}
+              <section
               id="payment-form-inner-container"
               data-lang="{{ page.lang }}"
               data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
@@ -74,6 +75,7 @@
 
               <hr id="payment-divider" />
             </section>
+            {% endif %}
 
             <div class="field">
               <button class="button is-medium is-secondary" type="submit">
