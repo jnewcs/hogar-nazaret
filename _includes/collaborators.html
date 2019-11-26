@@ -19,10 +19,10 @@
       {% endif %}
 
       <div class="{% if category.use_tags %}tags{% endif %}">
-        {% for sponsor in category.data %}
+        {% for sponsor in site.data[category.data_base][category.data_category] %}
           <div>
             <span class="tag is-light collaborator-tag" style="margin-bottom: 8px; margin-right: 8px;">
-              {{ sponsor }}
+              {{ sponsor.name }}
             </span>
           </div>
         {% endfor %}
