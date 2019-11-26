@@ -47,3 +47,5 @@ fields:
     label: name
     config:
       required: true
+pages:
+- _data/collaborators.yml

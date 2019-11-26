@@ -1,155 +1,151 @@
 ---
 anchor_sponsors:
-  - name: Municipio de Mayagüez
-  - name: Departamento de la Familia
-  - name: Departamento de Justicia
-  - name: Fondos Unidos
-  - name: Óptica de Diego
-  - name: Laboratorio Baco
-  - name: Laboratorio Basora
-  - name: Farmacia Post
-  - name: Farmacia Plaza
-
+- name: Municipio de Mayagüez
+- name: Departamento de la Familia
+- name: Departamento de Justicia
+- name: Fondos Unidos
+- name: Óptica de Diego
+- name: Laboratorio Baco
+- name: Laboratorio Basora
+- name: Farmacia Post
+- name: Farmacia Plaza
 event_sponsors:
-  - name: Altrusa International Foundation
-  - name: Asociación Damas Cívicas de Mayagüez
-  - name: Hospital Bella Vista
-  - name: Corporación Metro Pavía – Hospital Perea
-  - name: Pontificia Universidad Católica de Puerto Rico
-  - name: Canal 6 de Puerto Rico
-  - name: UPS
-  - name: "Fundación Walmart - Tiendas Walmart, Mayagüez"
-  - name: Liga de Golf Las Tee Tanas
-  - name: FRESENIUS KABI Maricao, San Germán
-  - name: Cooperativas de Farmacias Puertorriqueñas Coopharma
-  - name: Unión Mujeres de las Américas
-  - name: "Puerto Rico Dogs Therapy - Dr. Iván Santiago Luhring / José M. Vivoni"
-  - name: Laboratorio Irizarry Guash
-  - name: "Club de Leones - Sr. Carlos Almodóvar, Mayagüez"
-  - name: Colegio de Ciencias Agrícolas, Recinto Universitario de Mayagüez
-  - name: Ramey NHS, Aguadilla
-  - name: Club Exchange, Cabo Rojo
-  - name: Colegio San Agustín, Cabo Rojo
-  - name: Lorenzo White and Olga Tacoronte
-
+- name: Altrusa International Foundation
+- name: Asociación Damas Cívicas de Mayagüez
+- name: Hospital Bella Vista
+- name: Corporación Metro Pavía – Hospital Perea
+- name: Pontificia Universidad Católica de Puerto Rico
+- name: Canal 6 de Puerto Rico
+- name: UPS
+- name: Fundación Walmart - Tiendas Walmart, Mayagüez
+- name: Liga de Golf Las Tee Tanas
+- name: FRESENIUS KABI Maricao, San Germán
+- name: Cooperativas de Farmacias Puertorriqueñas Coopharma
+- name: Unión Mujeres de las Américas
+- name: Puerto Rico Dogs Therapy - Dr. Iván Santiago Luhring / José M. Vivoni
+- name: Laboratorio Irizarry Guash
+- name: Club de Leones - Sr. Carlos Almodóvar, Mayagüez
+- name: Colegio de Ciencias Agrícolas, Recinto Universitario de Mayagüez
+- name: Ramey NHS, Aguadilla
+- name: Club Exchange, Cabo Rojo
+- name: Colegio San Agustín, Cabo Rojo
+- name: Lorenzo White and Olga Tacoronte
 supporting_sponsors:
-  - name: Bioimágenes Médicas, CSP
-  - name: Labor Department of Puerto Rico
-  - name: Jani Clean, Inc.
-  - name: Housing and Urban Development Agency (HUD)
-  - name: Education Department of Puerto Rico
-  - name: Fenwal International Inc.
-  - name: Lcdo. Efraín de Jesús
-  - name: "Sr. Carlos Delgado - Extra Bases, Inc."
-  - name: Edwards Lifesciences Fund
-  - name: Walmart
-  - name: Ricoh Puerto Rico
-  - name: International Friendship Club, Inc.
-  - name: Maral Engineering Corp.
-  - name: Óptica de Diego
-
+- name: Bioimágenes Médicas, CSP
+- name: Labor Department of Puerto Rico
+- name: Jani Clean, Inc.
+- name: Housing and Urban Development Agency (HUD)
+- name: Education Department of Puerto Rico
+- name: Fenwal International Inc.
+- name: Lcdo. Efraín de Jesús
+- name: Sr. Carlos Delgado - Extra Bases, Inc.
+- name: Edwards Lifesciences Fund
+- name: Walmart
+- name: Ricoh Puerto Rico
+- name: International Friendship Club, Inc.
+- name: Maral Engineering Corp.
+- name: Óptica de Diego
 anchor_padrinos:
-  - name: Lilliam Martínez
-  - name: Arsenio Pérez
-  - name: Coralí Pino
-  - name: Ivette Prosper and Sonia Prosper
-  - name: Pedro Rivera and Virginia Rivera
-  - name: Nicolás Rivera Vázquez
-
+- name: Lilliam Martínez
+- name: Arsenio Pérez
+- name: Coralí Pino
+- name: Ivette Prosper and Sonia Prosper
+- name: Pedro Rivera and Virginia Rivera
+- name: Nicolás Rivera Vázquez
 current_padrinos:
-  - name: Aida Ramos Pérez
-  - name: Ana C. Morales
-  - name: Andrés M. Pérez Sorrentini
-  - name: Ángel Rodríguez/Providencia Pérez
-  - name: Angelita Figueroa
-  - name: Annie Vega Semidey
-  - name: Arsenio Pérez
-  - name: Barbarita B. Aymat
-  - name: Betty Bonilla Alicea
-  - name: Blas A. Ortiz
-  - name: Camilly Azize
-  - name: Carlos Ojeda
-  - name: Carlos Quintana Santiago
-  - name: Carmen Rodríguez Vázquez
-  - name: Carmen S. Quiñones Cancel
-  - name: Daisy C. Martínez
-  - name: David M. Newcomb
-  - name: Dr. Arturo López (Centro Fisiátrico del Oeste)
-  - name: Eileen Santiago Rivera
-  - name: Elba Medina
-  - name: Elena Ruiz Torres
-  - name: Elizabeth Trullenque
-  - name: Elsie Duran/María del C. Guzmán
-  - name: Frances Torres Sánchez
-  - name: Francisco Haddock
-  - name: Gastro Services, Inc.
-  - name: Gisela Torres Medina
-  - name: Héctor Torres Cabrera
-  - name: Heriberto Velázquez Ruperto
-  - name: Hilda S. Acosta
-  - name: Iris Román Morales
-  - name: Irma Rosa Díaz Santiago
-  - name: Ismael Hau
-  - name: Ivette Hernández Dénizard
-  - name: Ivette Leduc
-  - name: Ivette Prosper
-  - name: Jaime R. Morales Cordero
-  - name: Jaime Sepúlveda
-  - name: James Fox Acevedo
-  - name: Javier Sepúlveda Rivera
-  - name: Jeanette Galloza
-  - name: Jessica Vivaldi Arroyo
-  - name: John Anderson
-  - name: John A. Newcomb
-  - name: Jorge A. Morales
-  - name: José A. Carreras
-  - name: José G. Gándara Perea
-  - name: Josefa L Costa Vera
-  - name: Karen Brown
-  - name: Kelly Bus Line, Inc.
-  - name: Kristal Ramos Gutiérrez
-  - name: Lilliam Cruz Lugo
-  - name: Lilliam Ferrer
-  - name: Lionel R. Orama
-  - name: Lorenzo Rosa
-  - name: Lorraine Avilés
-  - name: Lucía Cuevas Cordero
-  - name: Luis Feliciano
-  - name: Maria Celeste Pérez
-  - name: María Cristy
-  - name: María D. Martínez
-  - name: María de los A Resto Hernández
-  - name: María I. Rivera
-  - name: María Perdomo
-  - name: María T. Rivera
-  - name: Maritza Morales
-  - name: Marta Mora Estrella/Jaime Barea
-  - name: Milagros D. Durán
-  - name: Mildred E. Sierra / Héctor M. Sierra
-  - name: Club Náutico Mayagüez
-  - name: Nayda Moreno
-  - name: Nicolás Rivera Vázquez
-  - name: Norma Hernández
-  - name: Olga Guerra
-  - name: Oliver M. Guerrero Dujarric
-  - name: Paul Randel Folling
-  - name: Pedro Cuevas Cuevas
-  - name: Priscilla Torres
-  - name: Dr. Raymond Quiñones
-  - name: Rebexa Group
-  - name: Richard Brown Pereira
-  - name: Richard Newcomb II
-  - name: Roberta L. Brown
-  - name: Roque A. Guzmán
-  - name: Rosa González Rivera
-  - name: Dra. Sandra Arroyo Ferrer
-  - name: Sendero Luminoso
-  - name: Sharon Arroyo Ferrer
-  - name: Siro Gutiérrez Jovet
-  - name: Sonia Colón Valentín
-  - name: Sonia Ferrer
-  - name: Sonia I. Rivera Simas
-  - name: Vanessa Carrau Cruz
-  - name: Wanda I. Benítez López
-  - name: Wilma Vélez Cuevas
-  - name: Yadira Reyes Merced
+- name: Aida Ramos Pérez
+- name: Ana C. Morales
+- name: Andrés M. Pérez Sorrentini
+- name: Ángel Rodríguez/Providencia Pérez
+- name: Angelita Figueroa
+- name: Annie Vega Semidey
+- name: Arsenio Pérez
+- name: Barbarita B. Aymat
+- name: Betty Bonilla Alicea
+- name: Blas A. Ortiz
+- name: Camilly Azize
+- name: Carlos Ojeda
+- name: Carlos Quintana Santiago
+- name: Carmen Rodríguez Vázquez
+- name: Carmen S. Quiñones Cancel
+- name: Daisy C. Martínez
+- name: David M. Newcomb
+- name: Dr. Arturo López (Centro Fisiátrico del Oeste)
+- name: Eileen Santiago Rivera
+- name: Elba Medina
+- name: Elena Ruiz Torres
+- name: Elizabeth Trullenque
+- name: Elsie Duran/María del C. Guzmán
+- name: Frances Torres Sánchez
+- name: Francisco Haddock
+- name: Gastro Services, Inc.
+- name: Gisela Torres Medina
+- name: Héctor Torres Cabrera
+- name: Heriberto Velázquez Ruperto
+- name: Hilda S. Acosta
+- name: Iris Román Morales
+- name: Irma Rosa Díaz Santiago
+- name: Ismael Hau
+- name: Ivette Hernández Dénizard
+- name: Ivette Leduc
+- name: Ivette Prosper
+- name: Jaime R. Morales Cordero
+- name: Jaime Sepúlveda
+- name: James Fox Acevedo
+- name: Javier Sepúlveda Rivera
+- name: Jeanette Galloza
+- name: Jessica Vivaldi Arroyo
+- name: John Anderson
+- name: John A. Newcomb
+- name: Jorge A. Morales
+- name: José A. Carreras
+- name: José G. Gándara Perea
+- name: Josefa L Costa Vera
+- name: Karen Brown
+- name: Kelly Bus Line, Inc.
+- name: Kristal Ramos Gutiérrez
+- name: Lilliam Cruz Lugo
+- name: Lilliam Ferrer
+- name: Lionel R. Orama
+- name: Lorenzo Rosa
+- name: Lorraine Avilés
+- name: Lucía Cuevas Cordero
+- name: Luis Feliciano
+- name: Maria Celeste Pérez
+- name: María Cristy
+- name: María D. Martínez
+- name: María de los A Resto Hernández
+- name: María I. Rivera
+- name: María Perdomo
+- name: María T. Rivera
+- name: Maritza Morales
+- name: Marta Mora Estrella/Jaime Barea
+- name: Milagros D. Durán
+- name: Mildred E. Sierra / Héctor M. Sierra
+- name: Club Náutico Mayagüez
+- name: Nayda Moreno
+- name: Nicolás Rivera Vázquez
+- name: Norma Hernández
+- name: Olga Guerra
+- name: Oliver M. Guerrero Dujarric
+- name: Paul Randel Folling
+- name: Pedro Cuevas Cuevas
+- name: Priscilla Torres
+- name: Dr. Raymond Quiñones
+- name: Rebexa Group
+- name: Richard Brown Pereira
+- name: Richard Newcomb II
+- name: Roberta L. Brown
+- name: Roque A. Guzmán
+- name: Rosa González Rivera
+- name: Dra. Sandra Arroyo Ferrer
+- name: Sendero Luminoso
+- name: Sharon Arroyo Ferrer
+- name: Siro Gutiérrez Jovet
+- name: Sonia Colón Valentín
+- name: Sonia Ferrer
+- name: Sonia I. Rivera Simas
+- name: Vanessa Carrau Cruz
+- name: Wanda I. Benítez López
+- name: Wilma Vélez Cuevas
+- name: Yadira Reyes Merced

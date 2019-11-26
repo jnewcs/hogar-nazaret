@@ -42,7 +42,6 @@ sections:
 - type: document
   path: _data/colaboradores.yml
   label: Colaboradores
-  match: "**/*"
 - type: heading
   label: General
 - type: document
