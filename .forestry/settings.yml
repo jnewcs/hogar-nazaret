@@ -20,6 +20,10 @@ sections:
   match: "*.md"
   templates:
   - post
+- type: document
+  path: _data/collaborators.yml
+  label: 'Collaborators '
+  match: "**/*"
 - type: heading
   label: Spanish Content
 - type: directory
