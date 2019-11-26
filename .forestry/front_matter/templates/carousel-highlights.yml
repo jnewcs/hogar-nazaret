@@ -7,6 +7,8 @@ fields:
   label: title
   config:
     required: true
+  description: Title of the carousel highlight. On desktop, it appears to the right
+    of the banner image
 - type: text
   name: link_text
   label: link_text
@@ -36,7 +38,7 @@ fields:
   name: lang
   label: lang
   config:
-    required: false
+    required: true
   hidden: true
   default: en
 pages:
