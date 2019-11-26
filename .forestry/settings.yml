@@ -17,7 +17,7 @@ sections:
   path: en/index.md
   label: Home Page
 - type: directory
-  path: _posts,_drafts
+  path: _posts
   label: Posts
   create: documents
   match: "*.md"
