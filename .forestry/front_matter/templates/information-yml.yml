@@ -37,5 +37,10 @@ fields:
   config:
     required: false
   label: PO Box
+- name: payment_request_on
+  type: boolean
+  label: payment_request_on
+  description: Toggles the Payment Request button through Stripe. When it is on, we
+    can accept Apple Pay on supported devices
 pages:
 - _data/information.yml

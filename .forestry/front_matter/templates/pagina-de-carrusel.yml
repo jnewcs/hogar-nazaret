@@ -1,33 +1,29 @@
 ---
-label: Carousel Highlight
+label: Página de Carrusel
 hide_body: false
 fields:
 - type: text
   name: title
   label: title
-  config:
-    required: true
   description: Title of the carousel highlight. On desktop, it appears to the right
     of the banner image
+  config:
+    required: true
 - type: text
   name: link_text
   label: link_text
   description: Text shown on the call to action button.
-  config:
-    required: true
 - name: link_opens_donate
   type: boolean
-  label: link_opens_donate
-  default: false
   description: When this is on, clicking on the link will open the donate modal
+  label: link_opens_donate
 - type: text
   name: link_destination
   label: link_destination
-  description: Relative url to destination. For example, to route to www.hogarjesusdenazaret.org/en/news/recent,
-    we would put /en/news/recent
+  description: Relative url to destination. For example, to route to www.hogarjesusdenazaret.org/es/noticias,
+    we would put /es/noticias
   showOnly:
     field: link_opens_donate
-    value: false
 - type: file
   name: banner_image
   label: banner_image
@@ -44,9 +40,7 @@ fields:
 - type: text
   name: lang
   label: lang
+  hidden: true
+  default: es
   config:
     required: true
-  hidden: true
-  default: en
-pages:
-- _carousel_highlights/en/giving-tuesday-pr-help-us-to-achieve-our-goal.md
