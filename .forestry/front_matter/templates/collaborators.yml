@@ -48,4 +48,5 @@ fields:
     config:
       required: true
 pages:
+- _data/colaboradores.yml
 - _data/collaborators.yml
