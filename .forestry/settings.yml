@@ -13,9 +13,6 @@ sections:
   match: "*.md"
   templates:
   - carousel-highlights
-- type: document
-  path: en/index.md
-  label: Home Page
 - type: directory
   path: _posts
   label: Posts
@@ -32,9 +29,6 @@ sections:
   match: "*.md"
   templates:
   - pagina-de-carrusel
-- type: document
-  path: es/index.md
-  label: Inicio
 - type: directory
   path: _noticias
   label: Noticias
