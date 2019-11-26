@@ -1,4 +1,5 @@
 title: Hogar de Niños Jésus de Nazaret
+url: "https://www.hogarjesusdenazaret.org"
 permalink: "/:path/"
 defaults:
   - scope:
