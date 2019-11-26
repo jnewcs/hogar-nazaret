@@ -5,46 +5,58 @@
 {% assign related = site.carousel_highlights | where:"lang", page.lang | sort: "order" %}
 
 <div class="fluid-container">
-  <div class="glide" id="carousel-container">
-    <div class="glide__track" data-glide-el="track">
-      <ul class="glide__slides"> 
-        {% for highlight in related %}
-        <li class="glide__slide">
-          <div class="columns">
-            <div class="column is-half column is-half carousel-background-image" style="background: url('{{ highlight.banner_image | absolute_url }}') center center; background-size: {{ highlight.banner_image_style }}; background-repeat: no-repeat">
+  <div id="carousel-container">
+    {% for highlight in related %}
+      <div>
+        <div class="columns is-gapless carousel-slide">
+          <div class="column is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
+            <!-- <div style="z-index: 1;">
+              <img
+                class="carousel-image"
+                src="{{ highlight.banner_image | absolute_url }}"
+              />
             </div>
 
-            <div class="column is-half has-background-white-ter is-flex-container is-fully-centered pt-0">
-              <div class="container content-container carousel-text">
-                <h1 class="is-size-3 is-uppercase">
-                  {{ highlight.title }}
-                </h1>
-                <p>
-                  {{ highlight.content }}
-                </p>
+            <div class="blur-background" style="background: url('{{ highlight.banner_image | absolute_url }}') center center;">
+            </div> -->
+            <img
+              class="carousel-image"
+              src="{{ highlight.banner_image | absolute_url }}"
+            />
+          </div>
+<!--
+          <div class="column is-three-fifths is-hidden-touch carousel-image-desktop" alt="{{ page.banner_image_alt }}"
+            style="background: url('{{ highlight.banner_image | absolute_url }}') center center; background-size: cover; background-repeat: no-repeat">
+            <img class="slider_spacer">
+          </div> -->
 
-                {% if highlight.link_text %}
-                  <br />
+          <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
+            <div class="container content-container carousel-text">
+              <h1 class="is-size-3 is-uppercase">
+                {{ highlight.title }}
+              </h1>
+              <p>
+                {{ highlight.content }}
+              </p>
+
+              {% if highlight.link_text %}
+                <br />
+                {% if highlight.link_opens_donate %}
+                  <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
+                    {{ highlight.link_text }}
+                  </a>
+                {% else %}
                   <a class="button is-secondary has-text-white is-medium" href="{{ highlight.link_destination | absolute_url }}">
                     {{ highlight.link_text }}
                   </a>
                 {% endif %}
-                </div>
-            </div>
+              {% endif %}
+              </div>
           </div>
-        </li>
-        {% endfor %}
-      </ul>
-    </div>
-
-    {% if related.size > 1 %}
-      <div class="glide__bullets is-hidden-mobile" data-glide-el="controls[nav]">
-        {% for highlight in related %}
-        <button class="glide__bullet" data-glide-dir="={{ forloop.index | minus: 1 }}"></button>
-        {% endfor %}
+        </div>
       </div>
-    {% endif %}
+    {% endfor %}
   </div>
 </div>
 
-<script src="{{ "/vendor/js/glide.min.js" | absolute_url }}" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>

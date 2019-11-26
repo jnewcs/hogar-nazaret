@@ -246,6 +246,14 @@ a.button.is-secondary {
 #news-carousel-container img {
   max-height: 300px;
 }
+.carousel-image {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.carousel-slide {
+  height: 55vh;
+}
 
 /* Masonry Grid */
 .masonry-grid {
@@ -283,7 +291,7 @@ a.button.is-secondary {
   left: 20px;
   font-size: 24px;
 }
-#masonry-image-modal-blur-background {
+#masonry-image-modal-blur-background, .blur-background {
   background-size: cover;
   filter: blur(40px) brightness(50%);
   position: absolute;
@@ -360,6 +368,10 @@ a.button.is-secondary {
 
 /* Mobile devices and below */
 @media screen and (max-width: 768px) {
+  .carousel-slide {
+    height: auto;
+    // max-height: 400px;
+  }
   .custom-modal-close {
     right: 15px;
   }

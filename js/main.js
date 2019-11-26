@@ -27,31 +27,49 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Code for Carousel */
   var carouselContainer = document.getElementById('carousel-container');
   if (carouselContainer) {
-    new Glide('#carousel-container', {
-      type: 'carousel',
-      startAt: 0,
-      perView: 1,
-      peek: -2,
-      autoplay: 5000,
-      swipeThreshold: 50
-    }).mount();
+    var slider = tns({
+      container: '#carousel-container',
+      items: 1,
+      slideBy: 'page',
+      autoplay: true,
+      arrowKeys: true,
+      swipeAngle: false,
+      speed: 400,
+      edgePadding: 0,
+      mouseDrag: true,
+      autoHeight: true,
+      nav: false,
+      controls: false,
+      autoplayButtonOutput: false
+    });
   }
 
   /* Code for News Carousel */
   var newsCarouselContainer = document.getElementById('news-carousel-container');
   if (newsCarouselContainer) {
-    var breakpoints = {
-      '600': { perView: 1 },
-      '1000': { perView: 2 }
-    };
-    new Glide('#news-carousel-container', {
-      type: 'carousel',
-      startAt: 0,
-      autoplay: 5000,
-      perView: 3,
-      breakpoints: breakpoints,
-      swipeThreshold: 50
-    }).mount();
+    tns({
+      container: '#news-carousel-container',
+      items: 1,
+      responsive: {
+        600: {
+          items: 2,
+        },
+        1000: {
+          items: 3,
+        }
+      },
+      edgePadding: 0,
+      slideBy: 1,
+      autoplay: false,
+      arrowKeys: false,
+      swipeAngle: false,
+      speed: 400,
+      mouseDrag: true,
+      autoHeight: true,
+      nav: false,
+      controls: false,
+      autoplayButtonOutput: false
+    });
   }
 
   /* Code for Lazy Loading */
