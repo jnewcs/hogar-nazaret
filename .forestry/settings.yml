@@ -29,6 +29,8 @@ sections:
   create: none
   match: "*.md"
   new_doc_ext: md
+  templates:
+  - post
 - type: heading
   label: Spanish Content
 - type: document
