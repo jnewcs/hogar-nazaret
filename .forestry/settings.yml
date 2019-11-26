@@ -23,11 +23,6 @@ sections:
   match: "*.md"
   templates:
   - post
-- type: directory
-  path: _drafts
-  label: Draft Posts
-  create: none
-  match: "**/*"
 - type: heading
   label: Spanish Content
 - type: document
