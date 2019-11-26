@@ -1,5 +1,5 @@
 ---
-banner_image_style: contain
+banner_image_style: cover
 lang: en
 title: 'GIVING TUESDAY PR: HELP US TO ACHIEVE OUR GOAL!'
 link_text: I want to DONATE!
