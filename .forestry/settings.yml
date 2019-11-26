@@ -30,6 +30,8 @@ sections:
   label: Páginas de Carrusel
   create: documents
   match: "*.md"
+  templates:
+  - pagina-de-carrusel
 - type: document
   path: es/index.md
   label: Inicio
