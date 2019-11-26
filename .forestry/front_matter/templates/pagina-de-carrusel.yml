@@ -5,6 +5,10 @@ fields:
 - type: text
   name: title
   label: title
+  description: Title of the carousel highlight. On desktop, it appears to the right
+    of the banner image
+  config:
+    required: true
 - type: text
   name: link_text
   label: link_text
@@ -14,9 +18,16 @@ fields:
 - type: file
   name: banner_image
   label: banner_image
-- type: text
-  name: lang
-  label: lang
 - type: number
   name: order
   label: order
+  description: Determines the order which the carousel highlights are shown. Starts
+    at 0. If two carousel highlights have the same order, the newest one will be shown
+    first
+- type: text
+  name: lang
+  label: lang
+  hidden: true
+  default: es
+  config:
+    required: true
