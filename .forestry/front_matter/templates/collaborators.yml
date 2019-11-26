@@ -9,6 +9,8 @@ fields:
   - type: text
     name: name
     label: name
+    config:
+      required: true
 - type: field_group_list
   name: event_sponsors
   label: event_sponsors
@@ -16,6 +18,8 @@ fields:
   - type: text
     name: name
     label: name
+    config:
+      required: true
 - type: field_group_list
   name: supporting_sponsors
   label: supporting_sponsors
@@ -23,6 +27,8 @@ fields:
   - type: text
     name: name
     label: name
+    config:
+      required: true
 - type: field_group_list
   name: anchor_padrinos
   label: anchor_padrinos
@@ -30,6 +36,8 @@ fields:
   - type: text
     name: name
     label: name
+    config:
+      required: true
 - type: field_group_list
   name: current_padrinos
   label: current_padrinos
@@ -37,3 +45,5 @@ fields:
   - type: text
     name: name
     label: name
+    config:
+      required: true
