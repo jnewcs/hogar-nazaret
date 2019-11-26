@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Code for News Carousel */
   var newsCarouselContainer = document.getElementById('news-carousel-container');
   if (newsCarouselContainer) {
-    tns({
+    var newsSlider = tns({
       container: '#news-carousel-container',
       items: 1,
       responsive: {
@@ -60,12 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       edgePadding: 0,
       slideBy: 1,
-      autoplay: false,
+      autoplay: true,
       arrowKeys: false,
       preventScrollOnTouch: 'auto',
       speed: 400,
       mouseDrag: true,
-      autoHeight: true,
       nav: false,
       controls: false,
       autoplayButtonOutput: false

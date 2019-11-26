@@ -11,9 +11,9 @@
 
         <div class="is-vcentered">
             {% if page.lang == 'en' %}
-                {% assign related = site.posts | limit:10 | sort:"date" | reverse %}
+                {% assign related = site.posts | sort | reverse | slice: 0, 9 %}
             {% else %}
-                {% assign related = site.noticias | limit:10 | sort:"date" | reverse %}
+                {% assign related = site.noticias | sort | reverse | slice: 0, 9 %}
             {% endif %}
 
             <div class="columns" id="news-carousel-container">
@@ -31,6 +31,9 @@
                         <h3>
                           <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
                         </h3>
+                        {% if post.path contains "_drafts" %}
+                          <div class="tag is-warning">DRAFT POST</div>
+                        {% endif %}
                         <p>
                           {{ post.content | truncate: 100 }}
                         </p>
