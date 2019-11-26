@@ -12,6 +12,7 @@ fields:
 - type: text
   name: link_text
   label: link_text
+  description: Text shown on the call to action button.
 - type: text
   name: link_destination
   label: link_destination
