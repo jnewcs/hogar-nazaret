@@ -1,7 +1,7 @@
 ---
 banner_image_style: contain
 lang: en
-title: 'GIVING TUESDAY PR: HELP US TO ACHIEVE OUR GOAL! '
+title: 'GIVING TUESDAY PR: HELP US TO ACHIEVE OUR GOAL!'
 link_text: I want to DONATE!
 link_destination: "/en/get-involved"
 banner_image: "/uploads/2019/11/26/Giving_Tuesday.png"
