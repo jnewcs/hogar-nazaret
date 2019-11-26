@@ -27,6 +27,10 @@ fields:
 - type: file
   name: banner_image
   label: banner_image
+  description: Image shown on the carousel. On desktop, it is displayed to the left
+    of the content. On mobile, it is displayed on top. In general, images with wider
+    dimensions are better than really tall images as they will scale better across
+    all devices.
 - type: number
   name: order
   label: order
