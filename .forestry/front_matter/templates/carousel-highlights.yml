@@ -43,3 +43,5 @@ fields:
     required: false
   hidden: true
   default: en
+pages:
+- _carousel_highlights/en/giving-tuesday-pr-help-us-to-achieve-our-goal.md
