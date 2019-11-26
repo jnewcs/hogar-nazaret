@@ -13,11 +13,17 @@ fields:
   name: link_text
   label: link_text
   description: Text shown on the call to action button.
+- name: link_opens_donate
+  type: boolean
+  description: When this is on, clicking on the link will open the donate modal
+  label: link_opens_donate
 - type: text
   name: link_destination
   label: link_destination
   description: Relative url to destination. For example, to route to www.hogarjesusdenazaret.org/es/noticias,
     we would put /es/noticias
+  showOnly:
+    field: link_opens_donate
 - type: file
   name: banner_image
   label: banner_image
