@@ -17,5 +17,8 @@
     {% if page.path contains "_drafts" %}
       <div class="tag is-warning">DRAFT POST</div>
     {% endif %}
+    {% if page.published == false %}
+      <div class="tag is-info">UNPUBLISHED CHANGES</div>
+    {% endif %}
   </div>
 </div>
