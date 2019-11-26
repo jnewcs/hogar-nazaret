@@ -41,6 +41,20 @@ document.addEventListener('DOMContentLoaded', () => {
       email: ev.payerEmail,
       lang: lang
     };
+    const failureHandler = function() {
+      // Report to the browser that the payment failed, prompting it to
+      // re-show the payment interface, or show an error message and close
+      // the payment interface.
+      modalContainer.classList.add('is-hidden');
+      loadingContainer.classList.add('is-hidden');
+      successContainer.classList.add('is-hidden');
+
+      errorContainer.classList.remove('is-hidden');
+      closeBtn.classList.remove('is-hidden');
+
+      ev.complete('fail');
+    };
+
     fetch('https://boiling-earth-96925.herokuapp.com/payments', {
       method: 'POST',
       body: JSON.stringify(requestBody),
@@ -59,18 +73,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         ev.complete('success');
       } else {
-        // Report to the browser that the payment failed, prompting it to
-        // re-show the payment interface, or show an error message and close
-        // the payment interface.
-        modalContainer.classList.add('is-hidden');
-        loadingContainer.classList.add('is-hidden');
-        successContainer.classList.add('is-hidden');
-
-        errorContainer.classList.remove('is-hidden');
-        closeBtn.classList.remove('is-hidden');
-
-        ev.complete('fail');
+        failureHandler();
       }
+    })
+    .catch(function() {
+      failureHandler();
     });
   });
 
