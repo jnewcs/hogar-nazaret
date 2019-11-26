@@ -10,25 +10,11 @@
       <div>
         <div class="columns is-gapless carousel-slide">
           <div class="column is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
-            <!-- <div style="z-index: 1;">
-              <img
-                class="carousel-image"
-                src="{{ highlight.banner_image | absolute_url }}"
-              />
-            </div>
-
-            <div class="blur-background" style="background: url('{{ highlight.banner_image | absolute_url }}') center center;">
-            </div> -->
             <img
               class="carousel-image"
               src="{{ highlight.banner_image | absolute_url }}"
             />
           </div>
-<!--
-          <div class="column is-three-fifths is-hidden-touch carousel-image-desktop" alt="{{ page.banner_image_alt }}"
-            style="background: url('{{ highlight.banner_image | absolute_url }}') center center; background-size: cover; background-repeat: no-repeat">
-            <img class="slider_spacer">
-          </div> -->
 
           <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
             <div class="container content-container carousel-text">
@@ -58,5 +44,3 @@
     {% endfor %}
   </div>
 </div>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
