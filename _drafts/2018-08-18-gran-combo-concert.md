@@ -17,5 +17,3 @@ redirect_from:
 On August 18, 2018, the Hogar held a fundraising concert featuring the famous salsa group, El Gran Combo. It was a magical night among friends and family sharing the great music that gives pride to Puerto Rico.
 
 On behalf of our children, we thank each of the persons who participated, sponsored or volunteered to make the concert a success. Thank you for helping us continue to be an oasis in the desert of child abuse!
-
-Amazing draft!
