@@ -25,7 +25,7 @@ sections:
   - post
 - type: directory
   path: _drafts
-  label: Post Drafts
+  label: Drafts
   create: none
   match: "*.md"
   new_doc_ext: md
