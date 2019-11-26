@@ -4,12 +4,6 @@ auto_deploy: true
 admin_path: ''
 webhook_url: 
 sections:
-- type: jekyll-posts
-  label: Jekyll Posts
-  create: documents
-  new_doc_ext: md
-  templates:
-  - post
 - type: heading
   label: English Content
 - type: directory
@@ -29,6 +23,12 @@ sections:
   match: "*.md"
   templates:
   - post
+- type: directory
+  path: _drafts
+  label: Post Drafts
+  create: none
+  match: "*.md"
+  new_doc_ext: ".md"
 - type: heading
   label: Spanish Content
 - type: document
