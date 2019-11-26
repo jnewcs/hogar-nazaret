@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var stripeKey = formContainer.dataset.key;
   var lang = formContainer.dataset.lang;
   var label = formContainer.dataset.label;
+  var env = formContainer.dataset.env;
   var initialAmount = parseInt(oneTimeAmountField.value) * 100;
 
   var stripe = Stripe(stripeKey, { locale: lang });
@@ -39,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
       amount: finalAmount,
       stripe_token: ev.token.id,
       email: ev.payerEmail,
-      lang: lang
+      lang: lang,
+      env: env
     };
     const failureHandler = function() {
       // Report to the browser that the payment failed, prompting it to
