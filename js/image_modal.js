@@ -30,9 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setImage() {
-      var modalBlurBackground = document.getElementById('masonry-image-modal-blur-background');
-      modalBlurBackground.style.backgroundImage = `url(${this.activeImage.src})`;
-
       var modalHighlight = document.getElementById('masonry-image-modal-highlight');
       modalHighlight.src = this.activeImage.src;
     }
@@ -76,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       var imageData = [];
       for (var image of images) {
-        imageData.push({ src: image.dataset.src });
+        imageData.push({ src: image.src });
         image.onclick = function (clickedImage) {
           this.showImage(clickedImage.src);
         }.bind(this, image);
@@ -98,6 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  document.getElementById('prev-button').addEventListener('click', function() {
+    gallery.switchImage('left-arrow');
+  });
+  document.getElementById('next-button').addEventListener('click', function() {
+    gallery.switchImage('right-arrow');
+  });
   document.getElementById('masonry-image-close').addEventListener('click', function() {
     gallery.closeImage();
   })

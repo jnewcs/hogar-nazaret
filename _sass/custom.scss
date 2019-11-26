@@ -302,6 +302,25 @@ a.button.is-secondary {
   z-index: 0;
   transition: background-image 0.75s ease-in;
 }
+#image-modal-controls {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  margin-top: -22.5px;
+}
+#prev-button, #next-button {
+  color: black;
+  background-color: gainsboro;
+  opacity: 0.25;
+  font-size: 28px;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  &:hover {
+    opacity: 1;
+  }
+}
 
 /* Padrinos Program */
 .donar-photo {
