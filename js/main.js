@@ -31,18 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
       container: '#carousel-container',
       items: 1,
       slideBy: 'page',
-      autoplay: true,
-      arrowKeys: true,
       preventScrollOnTouch: 'auto',
       speed: 400,
       edgePadding: 0,
       mouseDrag: true,
       autoHeight: true,
       nav: false,
-      controls: false,
-      autoplayButtonOutput: false,
-      autoplayHoverPause: true,
-      autoplayTimeout: 10000
+      loop: false,
+      controls: true,
+      controlsContainer: document.getElementById('controls-container'),
+      autoplay: true,
+      autoplayTimeout: 10000,
+      autoplayText: ['', '']
     });
   }
 

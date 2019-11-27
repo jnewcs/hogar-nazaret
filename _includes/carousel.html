@@ -4,7 +4,11 @@
 
 {% assign related = site.carousel_highlights | where:"lang", page.lang | sort: "order" %}
 
-<div class="fluid-container">
+<div class="fluid-container position-relative">
+  <div class="is-flex-container is-spaced-between has-text-centered is-hidden-touch" id="controls-container">
+    <div class="clickable" id="prev-button">&#8249;</div>
+    <div class="clickable" id="next-button">&#8250;</div>
+  </div>
   <div id="carousel-container">
     {% for highlight in related %}
       <div>
