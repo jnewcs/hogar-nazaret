@@ -40,7 +40,8 @@ document.addEventListener('DOMContentLoaded', () => {
       autoHeight: true,
       nav: false,
       controls: false,
-      autoplayButtonOutput: false
+      autoplayButtonOutput: false,
+      autoplayHoverPause: true
     });
   }
 
