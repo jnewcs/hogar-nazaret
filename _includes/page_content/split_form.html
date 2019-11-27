@@ -67,7 +67,7 @@
               </div>
             </div>
           {% endif %}
-          
+
           {% if page.form.fields.phone.presence %}
             <div class="field">
               <label class="label">
@@ -180,8 +180,7 @@
                 name="{{ site.data.languages[page.lang].form.labels.questions_and_comments }}"
                 class="textarea"
                 {% if page.form.fields.questions_and_comments.required %}required{% endif %}
-              >
-              </textarea>
+              ></textarea>
             </div>
           </div>
         </div>
@@ -201,8 +200,7 @@
                 name="{{ site.data.languages[page.lang].form.labels.description }}"
                 class="textarea"
                 {% if page.form.fields.description.required %}required{% endif %}
-              >
-              </textarea>
+              ></textarea>
             </div>
           </div>
         </div>
