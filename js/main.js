@@ -41,7 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
       nav: false,
       controls: false,
       autoplayButtonOutput: false,
-      autoplayHoverPause: true
+      autoplayHoverPause: true,
+      autoplayTimeout: 10000
     });
   }
 
@@ -68,7 +69,8 @@ document.addEventListener('DOMContentLoaded', () => {
       mouseDrag: true,
       nav: false,
       controls: false,
-      autoplayButtonOutput: false
+      autoplayButtonOutput: false,
+      autoplayTimeout: 10000
     });
   }
 
