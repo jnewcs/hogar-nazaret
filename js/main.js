@@ -70,7 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
       nav: false,
       controls: false,
       autoplayButtonOutput: false,
-      autoplayTimeout: 10000
+      autoplayTimeout: 10000,
+      autoHeight: true
     });
   }
 
