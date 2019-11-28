@@ -53,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
       container: '#news-carousel-container',
       items: 1,
       responsive: {
-        600: {
+        900: {
           items: 2,
         },
-        1000: {
+        1200: {
           items: 3,
         }
       },
