@@ -2,7 +2,7 @@
 title: ¡El Hogar da la Bienvenida a su Nueva Junta de Directores!
 date: 2018-12-05T12:00:00.000+00:00
 tags: []
-banner_image: /uploads/2018/new_board/new_board_with_banner.webp
+banner_image: /uploads/2018/new_board/new_board_with_banner.jpg
 banner_image_alt: Nueva Junta de Directores
 banner_image_style: contain
 header_layout: side_by_side

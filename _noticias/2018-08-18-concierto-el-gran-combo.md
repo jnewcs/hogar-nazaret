@@ -2,7 +2,7 @@
 title: Concierto El Gran Combo por los Niños del Hogar
 date: 2018-08-18T12:00:00.000+00:00
 tags: []
-banner_image: /uploads/2018/gran_combo/performance.webp
+banner_image: /uploads/2018/gran_combo/performance.jpg
 banner_image_alt: El Gran Combo
 banner_image_style: cover
 header_layout: side_by_side

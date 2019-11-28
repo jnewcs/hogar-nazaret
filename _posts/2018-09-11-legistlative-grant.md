@@ -2,7 +2,7 @@
 title: Hogar Receives Legislative Grant from the DOJ
 date: 2018-09-11T12:00:00.000+00:00
 tags: []
-banner_image: /uploads/2018/legistlative_grant/entire_team.webp
+banner_image: /uploads/2018/legistlative_grant/entire_team.jpg
 banner_image_alt: Hogar Team Receiving Legistlative Grant
 banner_image_style: contain
 header_layout: side_by_side

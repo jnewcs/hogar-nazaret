@@ -2,7 +2,7 @@
 title: Hogar Collaborators Gather at the Annual General Assembly
 date: 2018-11-08T12:00:00.000+00:00
 tags: []
-banner_image: /uploads/2018/hogar_collaborators/group_image.webp
+banner_image: /uploads/2018/hogar_collaborators/group_image.jpg
 banner_image_alt: Hogar Collaborators Gather
 banner_image_style: contain
 header_layout: side_by_side
