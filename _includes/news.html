@@ -20,10 +20,8 @@
               {% for post in related %}
                 <div class="column">
                   <div class="card">
-                    <div class="card-image has-background-white-ter">
-                      <figure class="is-flex-container is-horizontally-centered">
-                        <img src="{{ post.banner_image | absolute_url }}" alt="{{ post.banner_image_alt }}" loading="lazy">
-                      </figure>
+                    <div class="card-image has-background-white-ter has-text-centered">
+                      <img src="{{ post.banner_image | absolute_url }}" alt="{{ post.banner_image_alt }}" loading="lazy">
                     </div>
 
                     <div class="card-content">

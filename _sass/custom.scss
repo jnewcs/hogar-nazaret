@@ -426,7 +426,6 @@ a.button.is-secondary {
 @media screen and (max-width: 768px) {
   .carousel-slide {
     height: auto;
-    // max-height: 400px;
   }
   .custom-modal-close {
     right: 15px;
@@ -450,6 +449,7 @@ a.button.is-secondary {
   }
   #post-side-by-side-layout-title {
     order: 2;
+    flex: 1 0 auto;
   }
   #post-side-by-side-layout-image {
     order: 1;
