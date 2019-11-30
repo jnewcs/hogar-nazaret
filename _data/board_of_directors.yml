@@ -1,12 +1,4 @@
 ---
-- name: Dra. Sandra Arroyo Ferrer
-  image: "/uploads/board_of_directors/sandra_ferrer.jpg"
-  position:
-    en: President
-    es: Presidenta Junta Directores
-  background:
-    en: Bioimágenes Médicas, CSP
-    es: Bioimágenes Médicas, CSP
 - name: Carlos Velázquez Figueroa
   image: "/uploads/board_of_directors/carlos_figueroa.jpg"
   position:
@@ -23,6 +15,14 @@
   background:
     en: Bufete de Abogados Morales Cordero, CSP
     es: Bufete de Abogados Morales Cordero, CSP
+- name: Dra. Sandra Arroyo Ferrer
+  image: "/uploads/board_of_directors/sandra_ferrer.jpg"
+  position:
+    en: Past President
+    es: Pasada Presidenta Junta Directores
+  background:
+    en: Bioimágenes Médicas, CSP
+    es: Bioimágenes Médicas, CSP
 - name: María T. Rivera Méndez
   image: "/uploads/board_of_directors/maria_mendez.jpg"
   position:
