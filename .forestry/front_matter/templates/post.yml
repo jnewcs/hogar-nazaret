@@ -95,5 +95,3 @@ fields:
   default: en
   config:
     required: true
-pages:
-- _posts/2019-11-29-test.md
