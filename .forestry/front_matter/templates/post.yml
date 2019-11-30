@@ -96,4 +96,4 @@ fields:
   config:
     required: true
 pages:
-- _posts/test.md
+- _posts/2019-11-29-test.md
