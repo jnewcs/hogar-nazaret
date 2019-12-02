@@ -13,6 +13,8 @@ lazy_load: true
   {% assign related = site.noticias | uniq | sort:"date" | reverse %}
 {% endif %}
 
+{% assign current_date = 'now' | date: '%s' | plus: 0 %}
+
 <div class="container content-container">
   <section class="is-medium">
     <h1 class="is-size-3 has-text-centered">
@@ -23,6 +25,8 @@ lazy_load: true
 
     <div class="columns is-multiline is-nested mt-2">
       {% for post in related %}
+        {% assign post_date_to_compare = post.date | date: '%s' | plus: 0 %}
+
         <div class="column is-full mb-2 mt-1">
           <div class="columns is-desktop">
             <div class="column is-one-quarter">
@@ -41,6 +45,9 @@ lazy_load: true
                 </div>
                 {% if post.path contains "_drafts" %}
                   <div class="tag is-warning">DRAFT POST</div>
+                {% endif %}
+                {% if post_date_to_compare >= current_date %}
+                  <div class="tag is-info">FUTURE</div>
                 {% endif %}
                 <p>
                   {% if post.blurb_description %}

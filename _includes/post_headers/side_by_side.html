@@ -2,6 +2,9 @@
   Side by Side Layout for Post Header
 {% endcomment %}
 
+{% assign current_date = 'now' | date: '%s' | plus: 0 %}
+{% assign post_date_to_compare = page.date | date: '%s' | plus: 0 %}
+
 <div class="columns is-mobile" id="post-side-by-side-layout-container">
   <div
     class="column has-background-white-ter is-flex-container is-vertically-centered is-horizontally-centered"
@@ -24,6 +27,9 @@
         {% endif %}
         {% if page.published == false %}
           <div class="tag is-info">UNPUBLISHED CHANGES</div>
+        {% endif %}
+        {% if post_date_to_compare >= current_date %}
+          <div class="tag is-info">FUTURE</div>
         {% endif %}
       </div>
     </section>
