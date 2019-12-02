@@ -3,6 +3,7 @@ title: Aboguemos Contra el Maltrato de Menores
 link_text: Prevención del maltrato de menores
 link_destination: /es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/
 banner_image: /uploads/carousel_highlights/child_prevention_month.jpg
+hide_from_carousel: false
 lang: es
 order: 3
 ---

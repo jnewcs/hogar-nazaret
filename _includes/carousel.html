@@ -11,40 +11,44 @@
   </div>
   <div id="carousel-container">
     {% for highlight in related %}
-      <div>
-        <div class="columns is-gapless carousel-slide">
-          <div class="column is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
-            <img
-              class="carousel-image"
-              src="{{ highlight.banner_image | absolute_url }}"
-            />
-          </div>
+      {% if highlight.hide_from_carousel %}
+        {% continue %}
+      {% else %}
+        <div>
+          <div class="columns is-gapless carousel-slide">
+            <div class="column is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
+              <img
+                class="carousel-image"
+                src="{{ highlight.banner_image | absolute_url }}"
+              />
+            </div>
 
-          <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
-            <div class="container content-container carousel-text">
-              <h1 class="is-size-3 is-uppercase">
-                {{ highlight.title }}
-              </h1>
-              <p>
-                {{ highlight.content }}
-              </p>
+            <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
+              <div class="container content-container carousel-text">
+                <h1 class="is-size-3 is-uppercase">
+                  {{ highlight.title }}
+                </h1>
+                <p>
+                  {{ highlight.content }}
+                </p>
 
-              {% if highlight.link_text %}
-                <br />
-                {% if highlight.link_opens_donate %}
-                  <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
-                    {{ highlight.link_text }}
-                  </a>
-                {% else %}
-                  <a class="button is-secondary has-text-white is-medium" href="{{ highlight.link_destination | absolute_url }}">
-                    {{ highlight.link_text }}
-                  </a>
+                {% if highlight.link_text %}
+                  <br />
+                  {% if highlight.link_opens_donate %}
+                    <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
+                      {{ highlight.link_text }}
+                    </a>
+                  {% else %}
+                    <a class="button is-secondary has-text-white is-medium" href="{{ highlight.link_destination | absolute_url }}">
+                      {{ highlight.link_text }}
+                    </a>
+                  {% endif %}
                 {% endif %}
-              {% endif %}
-              </div>
+                </div>
+            </div>
           </div>
         </div>
-      </div>
+      {% endif %}
     {% endfor %}
   </div>
 </div>

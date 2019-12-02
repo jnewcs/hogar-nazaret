@@ -3,6 +3,7 @@ title: WELCOME TO THE HOGAR ALBERGUE PARA NIÑOS JESÚS DE NAZARET!
 link_text: The Hogar
 link_destination: /en/about
 banner_image: /uploads/carousel_highlights/kids_circle.jpg
+hide_from_carousel: false
 lang: en
 order: 2
 ---

@@ -3,6 +3,7 @@ title: "Violence Against Children: Types of Child Abuse"
 link_text: Read More
 link_destination: /en/what-we-do/child-abuse-education-and-prevention/types-of-child-abuse/
 banner_image: /uploads/carousel_highlights/child.jpg
+hide_from_carousel: false
 lang: en
 order: 6
 ---

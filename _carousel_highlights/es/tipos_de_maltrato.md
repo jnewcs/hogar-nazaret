@@ -3,6 +3,7 @@ title: "La Violencia Contra los Niños: Tipos de Maltrato en Menores"
 link_text: Quiero Saber Más
 link_destination: /es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/
 banner_image: /uploads/carousel_highlights/child.jpg
+hide_from_carousel: false
 lang: es
 order: 6
 ---

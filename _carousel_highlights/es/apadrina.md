@@ -3,6 +3,7 @@ title: APADRINA A UN NIÑO O NIÑA DEL HOGAR
 link_text: Quiero ser Padrino o Madrina
 link_destination: /es/contribuye/
 banner_image: /uploads/carousel_highlights/two_girls.jpg
+hide_from_carousel: false
 lang: es
 order: 5
 ---

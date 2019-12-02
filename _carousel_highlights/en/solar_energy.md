@@ -3,6 +3,7 @@ title: Solar Energy for the Hogar
 link_text: Read More
 link_destination: /en/posts/2019-01-15-solar-energy-hogar
 banner_image: /uploads/2019/solar-energy/group_with_wisconsin_flag.jpg
+hide_from_carousel: false
 lang: en
 order: 4
 ---
