@@ -15,7 +15,7 @@ sections:
   - carousel-highlights
 - type: directory
   path: _posts
-  label: Posts
+  label: News
   create: documents
   match: "*.md"
   templates:
