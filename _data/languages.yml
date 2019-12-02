@@ -57,6 +57,7 @@ en:
       - Operational costs
       - Capital projects
     submit: Submit
+  admin_link: Admin Login
 
 es:
   page: Página
@@ -117,3 +118,4 @@ es:
       - Costos Operativos
       - Proyectos de Capital
     submit: Submit
+  admin_link: Admin Login

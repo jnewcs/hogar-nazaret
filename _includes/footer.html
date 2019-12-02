@@ -1,53 +1,58 @@
 <footer class="footer pb-3">
-    <div class="content has-text-centered">
-        {% assign multilingual_pages = site.pages | where:"lang_ref", page.lang_ref | sort: 'lang' %}
-        {% if multilingual_pages.size > 1 %}
-            <div class="page-switcher">
-                <em>
-                    {{ site.data.languages[page.lang].switcher }}:
-                </em>
+  <div class="content has-text-centered">
+    {% assign multilingual_pages = site.pages | where:"lang_ref", page.lang_ref | sort: 'lang' %}
+    {% if multilingual_pages.size > 1 %}
+      <div class="page-switcher">
+        <em>
+          {{ site.data.languages[page.lang].switcher }}:
+        </em>
 
-                {% for multilingual_page in multilingual_pages %}
-                    {% if page.lang != multilingual_page.lang %}
-                        <span class="mr-1">
-                            <a href="{{ multilingual_page.url | absolute_url }}" class="{{ multilingual_page.lang }}">
-                                {{ site.data.languages[multilingual_page.lang].label }}
-                            </a>
-                        </span>
-                    {% endif %}
-                {% endfor %}
-
-                <hr />
-            </div>
-        {% endif %}
-
-        <!-- We also want to cover a mulitlingual post -->
-        {% if page.lang == 'en' %}
-            {% assign multilingual_post = site.noticias | where:"lang_ref", page.lang_ref %}
-        {% else %}
-            {% assign multilingual_post = site.posts | where:"lang_ref", page.lang_ref %}
-        {% endif %}
-
-        {% if multilingual_post.size > 0 %}
-            <div class="page-switcher">
-                <em>
-                    {{ site.data.languages[page.lang].switcher }}:
-                </em>
-            </div>
-
+        {% for multilingual_page in multilingual_pages %}
+          {% if page.lang != multilingual_page.lang %}
             <span class="mr-1">
-                <a href="{{ multilingual_post.first.url | absolute_url }}" class="{{ multilingual_post.first.lang }}">
-                    {{ site.data.languages[multilingual_post.first.lang].label }}
-                </a>
+              <a href="{{ multilingual_page.url | absolute_url }}" class="{{ multilingual_page.lang }}">
+                {{ site.data.languages[multilingual_page.lang].label }}
+              </a>
             </span>
+          {% endif %}
+        {% endfor %}
 
-            <hr />
-        {% endif %}
+        <hr />
+      </div>
+    {% endif %}
 
-        <p>
-            HOGAR ALBERGUE JESÚS DE NAZARET, INC © {{ site.data.information.year }}
-        </p>
+    <!-- We also want to cover a mulitlingual post -->
+    {% if page.lang == 'en' %}
+      {% assign multilingual_post = site.noticias | where:"lang_ref", page.lang_ref %}
+    {% else %}
+      {% assign multilingual_post = site.posts | where:"lang_ref", page.lang_ref %}
+    {% endif %}
+
+    {% if multilingual_post.size > 0 %}
+      <div class="page-switcher">
+        <em>
+          {{ site.data.languages[page.lang].switcher }}:
+        </em>
+      </div>
+
+      <span class="mr-1">
+        <a href="{{ multilingual_post.first.url | absolute_url }}" class="{{ multilingual_post.first.lang }}">
+          {{ site.data.languages[multilingual_post.first.lang].label }}
+        </a>
+      </span>
+
+      <hr />
+    {% endif %}
+
+    <p>
+      HOGAR ALBERGUE JESÚS DE NAZARET, INC © {{ site.data.information.year }}
+    </p>
+    <div>
+      <a href="https://app.forestry.io/sites/heqefiwcnetumg" target="_blank">
+        {{ site.data.languages[page.lang].admin_link }}
+      </a>
     </div>
+  </div>
 </footer>
 
 {% if layout.lazy_load %}
