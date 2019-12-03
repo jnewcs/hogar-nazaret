@@ -8,7 +8,8 @@ The following instructions are meant for people who want to build the site local
 
 Before you can build the site locally, you need a few things setup:
 
-1. Git setup on your computer - [Link to Installation Guide](https://help.github.com/en/github/getting-started-with-github/set-up-git)
+1. Git setup on your computer
+    - [Link to Installation Guide](https://help.github.com/en/github/getting-started-with-github/set-up-git)
 
 2. A GitHub account
     - You can create an account by going to [www.github.com](https://www.github.com) and signing up
