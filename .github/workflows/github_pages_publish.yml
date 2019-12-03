@@ -11,6 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Install Core
+        run: npm i @actions/core
+      - name: Install Exec
+        run: npm i @actions/exec
       - name: Simple commit
         uses: zwaldowski/git-commit-action@v1
         with:
