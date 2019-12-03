@@ -11,8 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout master branch
-        run: git checkout master
+      - uses: actions/checkout@v2-beta
+        with:
+          ref: master
+
       - name: Pull latest
         run: git pull origin master
       - name: Create empty commit
