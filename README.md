@@ -27,7 +27,7 @@ Before you can build the site locally, you need a few things setup:
     - The basic command to install Jekyll should look something like this: `gem install --user-install jekyll`
 
 6. Install Bundler
-    - Since Jekyll is written in Ruby, it utilizes [gems](https://jekyllrb.com/docs/ruby-101/#gems) to add functionality to the sites. A lot of Jekyll repos, including this one, have a `Gemfile` - a list of gems required for the site. The Bundler will install gems from a `Gemfile`
+    - Since Jekyll is written in Ruby, it utilizes [gems](https://jekyllrb.com/docs/ruby-101/#gems) to add functionality to the sites. A lot of Jekyll repos, including this one, have a `Gemfile` - a list of gems required for the site. The purpose of the Bundler is to install gems from a `Gemfile`
     - Once Ruby is installed, you should be able to run `gem install bundler` to install the Bundler.
 
 
