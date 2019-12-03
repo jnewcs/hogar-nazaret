@@ -11,12 +11,11 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Install Core
-        run: npm i @actions/core
-      - name: Install Exec
-        run: npm i @actions/exec
-      - name: Simple commit
-        uses: zwaldowski/git-commit-action@v1
-        with:
-          # Commit message
-          commit_message: "Automated message to trigger Gihtub Pages publish"
+      - name: Checkout master branch
+        run: git checkout master
+      - name: Pull latest
+        run: git pull origin master
+      - name: Create empty commit
+        run: git commit --allow-empty -m "Trigger notification"
+      - name: Push empty commit
+        run: git push origin master
