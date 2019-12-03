@@ -51,7 +51,7 @@ bundle install
 ```
 
 ### Build & view the site locally
-We are now ready to preview content locally. Jekyll is a static site generator so every time we change a file, it generates a new build of the site and stores it within the `_site` folder locally. This mimics the building process that GitHub Pages does for us to publish the site to production at https://hogarjesusdenazaret.org. This is the basic command you can run to build the site:
+You are now ready to preview content locally. Jekyll is a static site generator so every time we change a file, it generates a new build of the site and stores it within the `_site` folder locally. This mimics the building process that GitHub Pages does for us to publish the site to production at https://hogarjesusdenazaret.org. This is the basic command you can run to build the site locally:
 
 ```
 cd ~/personal_repos/hogar-nazaret  # You don't need this if you are already in the hogar-nazaret repo
@@ -78,10 +78,10 @@ Configuration file: /Users/jxnewcomb/personal_repos/hogar-nazaret/_config.yml
   Server running... press ctrl-c to stop.
 ```
 
-If it works properly, we now can preview the site at http://127.0.0.1:4000 and interact with it like we do the production site. If the `serve` command is still running, anytime we make a change, it will be reflected locally at http://127.0.0.1:4000 once the build finishes.
+If it works properly, you now can preview the site at http://127.0.0.1:4000. If the `serve` command is still running and you make a change, you can see that change reflected locally at http://127.0.0.1:4000 once the build finishes.
 
 ### Preview content locally to mimic "Staging" environment
-We currently use [Forestry.io](https://forestry.io/) as our content management system (CMS). Within our CMS, we can preview content before commiting the changes to the `master` branch which will change https://hogarjesusdenazaret.org. Sometimes, we want to view preview content locally. To do that, we can run this command:
+We currently use [Forestry.io](https://forestry.io/) as our content management system (CMS). Within our CMS, we can preview content before commiting the changes to the `master` branch which will change https://hogarjesusdenazaret.org. We call this our "Staging" environment. If you want to view the "Staging" environment locally, you can run this command:
 
 ```
 cd ~/personal_repos/hogar-nazaret  # You don't need this if you are already in the hogar-nazaret repo
@@ -90,4 +90,6 @@ bundle exec jekyll serve --drafts --future --unpublished --port 8080 --host 0.0.
 ```
 
 # Development Notes
-1. To standardize file configuration (tabs vs. spaces, newlines at the end of files), we use [EditorConfig](https://editorconfig.org/). For a lot of text editors, you can install the EditorConfig extension and it will automatically configure any file you add or change, doing things like adding an empty line to the end of the file and trimming whitespace from the end of a line.
+1. To standardize file configuration (tabs vs. spaces, newlines at the end of files), we use [EditorConfig](https://editorconfig.org/)
+    - For a lot of text editors, you can install the EditorConfig extension and it will automatically configure any file you add or change
+    - It will do things like adding an empty line to the end of the file or trimming whitespace from the end of a line.
