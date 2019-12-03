@@ -12,7 +12,7 @@
           {{ data.year }}
         </div>
         <div class="cd-image mb-1">
-          <img src="{{ data.image | absolute_url }}" >
+          <img src="{{ data.image | relative_url }}" >
         </div>
 
         <h4 class="is-size-4 is-cursive has-text-primary mb-0 has-text-centered">{{ data.title }}</h4>
@@ -21,7 +21,7 @@
           {% if content_block.type == 'text' %}
             <p>{{ content_block.content }}</p>
           {% else content_block.type == 'image' %}
-            <img class="mb-1 mt-1" src="{{ content_block.content | absolute_url }}">
+            <img class="mb-1 mt-1" src="{{ content_block.content | relative_url }}">
           {% endif %}
         {% endfor %}
 

@@ -10,7 +10,7 @@
   {% assign link_class = 'button' %}
 {% endif %}
 
-<a class="{{ link_class }}" target="_blank" href="{{ needs_link | absolute_url }}">
+<a class="{{ link_class }}" target="_blank" href="{{ needs_link | relative_url }}">
   {% if include.link_text %}
     {{ include.link_text }}
   {% else %}

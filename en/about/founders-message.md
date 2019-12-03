@@ -30,13 +30,13 @@ We are counting with your help to continue the excellent work in the lives of ou
 <div class="columns">
   <div class="column">
     <figure class="image is-3x1">
-      <img src="{{ '/uploads/founders/Don Jesus Signature.jpg' | absolute_url }}">
+      <img src="{{ '/uploads/founders/Don Jesus Signature.jpg' | relative_url }}">
     </figure>
   </div>
 
   <div class="column">
     <figure class="image is-3x1">
-      <img src="{{ '/uploads/founders/Carmen Morales Signature.jpg' | absolute_url }}">
+      <img src="{{ '/uploads/founders/Carmen Morales Signature.jpg' | relative_url }}">
     </figure>
   </div>
 </div>

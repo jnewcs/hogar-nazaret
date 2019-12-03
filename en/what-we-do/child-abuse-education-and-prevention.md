@@ -10,7 +10,7 @@ redirect_from:
 ---
 Beyond its main mission of restoring the emotional, mental and physical health of children who have been victims of abuse, the Hogar promotes initiatives to educate the community of Puerto Rico about child abuse, and to help eradicate this problem over time.
 
-Our executive director and members of the Board regularly participate in programs that educate professionals who work with children and the general public about the problem of child abuse, its magnitude, as well as how to detect and prevent it. 
+Our executive director and members of the Board regularly participate in programs that educate professionals who work with children and the general public about the problem of child abuse, its magnitude, as well as how to detect and prevent it.
 
 The Hogar has participated in the following programs for the prevention of child abuse:
 
@@ -30,7 +30,7 @@ For more information about how to become a volunteer presenter, please contact o
 </h3>
 
 {% assign plan_link = '/uploads/education-and-prevention/Puerto Rico National Plan - 2014 to 2024.pdf' %}
-<a href="{{ plan_link | absolute_url }}" class="button is-secondary is-medium" target="_blank">
+<a href="{{ plan_link | relative_url }}" class="button is-secondary is-medium" target="_blank">
   {{ site.data.languages[page.lang].read_more }}
 </a>
 
@@ -43,7 +43,7 @@ For more information about how to become a volunteer presenter, please contact o
     </h4>
 
     {% assign abuse_types_page = site.pages | where: "lang", page.lang | where: "lang_ref", "types-of-abuse" | first %}
-    <a href="{{ abuse_types_page.url | absolute_url }}" class="button">
+    <a href="{{ abuse_types_page.url | relative_url }}" class="button">
       {{ site.data.languages[page.lang].learn_more }}
     </a>
   </div>

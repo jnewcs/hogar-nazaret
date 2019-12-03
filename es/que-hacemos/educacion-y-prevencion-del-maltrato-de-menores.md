@@ -25,7 +25,7 @@ Te exhortamos a que te unas al Hogar en nuestra misión de erradicar el maltrato
 </h3>
 
 {% assign plan_link = '/uploads/education-and-prevention/Puerto Rico National Plan - 2014 to 2024.pdf' %}
-<a href="{{ plan_link | absolute_url }}" class="button is-secondary is-medium" target="_blank">
+<a href="{{ plan_link | relative_url }}" class="button is-secondary is-medium" target="_blank">
   {{ site.data.languages[page.lang].read_more }}
 </a>
 

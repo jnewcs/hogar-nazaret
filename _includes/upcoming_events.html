@@ -14,14 +14,14 @@
         <div class="columns is-desktop">
           <div class="column is-one-quarter">
             <figure class="image">
-              <img class="lazy-load" data-src="{{ upcoming_event.banner_image | absolute_url }}" alt="{{ page.banner_image_alt }}">
+              <img class="lazy-load" data-src="{{ upcoming_event.banner_image | relative_url }}" alt="{{ page.banner_image_alt }}">
             </figure>
           </div>
 
           <div class="column">
             <div class="content">
               <strong class="post-title">
-                <a class="is-size-4" href="{{ upcoming_event.url | absolute_url }}">{{ upcoming_event.title }}</a>
+                <a class="is-size-4" href="{{ upcoming_event.url | relative_url }}">{{ upcoming_event.title }}</a>
               </strong>
               <div>
                 <date>{{ upcoming_event.date | date_to_string }}</date>
@@ -34,7 +34,7 @@
                 {{ upcoming_event.content | truncatewords: 50 }}
                 {% endif %}
               </p>
-              <a href="{{ upcoming_event.url | absolute_url }}" class="button is-primary is-outlined is-medium">
+              <a href="{{ upcoming_event.url | relative_url }}" class="button is-primary is-outlined is-medium">
                 {{ site.data.languages[page.lang].read_more }}
               </a>
             </div>

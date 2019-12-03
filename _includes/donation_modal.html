@@ -126,7 +126,7 @@
       <div class="link-to-padrinos has-text-centered mt-2">
         {% assign padrinos_page = site.pages | where: "lang", page.lang | where: "lang_ref", "padrinos-program" | first %}
 
-        <a href="{{ padrinos_page.url | absolute_url }}">
+        <a href="{{ padrinos_page.url | relative_url }}">
           {{ site.data.languages[page.lang].donate.modal.padrinos_callout }}
         </a>
       </div>

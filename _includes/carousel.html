@@ -19,7 +19,7 @@
             <div class="column is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
               <img
                 class="carousel-image"
-                src="{{ highlight.banner_image | absolute_url }}"
+                src="{{ highlight.banner_image | relative_url }}"
               />
             </div>
 
@@ -39,7 +39,7 @@
                       {{ highlight.link_text }}
                     </a>
                   {% else %}
-                    <a class="button is-secondary has-text-white is-medium" href="{{ highlight.link_destination | absolute_url }}">
+                    <a class="button is-secondary has-text-white is-medium" href="{{ highlight.link_destination | relative_url }}">
                       {{ highlight.link_text }}
                     </a>
                   {% endif %}

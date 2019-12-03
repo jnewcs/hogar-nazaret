@@ -33,7 +33,7 @@ layout: default
 							</div>
 
 							{% assign donate_time_page = site.pages | where: "lang", page.lang | where: "lang_ref", "donate-time" | first %}
-							<a class="button" href="{{ donate_time_page.url | absolute_url }}">
+							<a class="button" href="{{ donate_time_page.url | relative_url }}">
 								{{ site.data.languages[page.lang].see_how }}
 							</a>
 						</article>
@@ -63,10 +63,10 @@ layout: default
 							{% assign padrinos_page = site.pages | where: "lang", page.lang | where: "lang_ref", "padrinos-program" | first %}
 
 							<div class="donar-box position-relative">
-								<div class="donar-photo cover-no-repeat" alt="" style="background-image: url('{{ page.highlights.main.image | absolute_url }}')"></div>
+								<div class="donar-photo cover-no-repeat" alt="" style="background-image: url('{{ page.highlights.main.image | relative_url }}')"></div>
 								<div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
 									<div class="donar-box-caption-content">
-										<a href="{{ padrinos_page.url | absolute_url }}" class="button is-large is-secondary">
+										<a href="{{ padrinos_page.url | relative_url }}" class="button is-large is-secondary">
 											{{ site.data.languages[page.lang].learn_more }}
 										</a>
 									</div>
@@ -102,7 +102,7 @@ layout: default
 							</div>
 
 							{% assign prevention_page = site.pages | where: "lang", page.lang | where: "lang_ref", "education-and-prevention" | first %}
-							<a class="button mt-2 is-secondary" href="{{ prevention_page.url | absolute_url }}">
+							<a class="button mt-2 is-secondary" href="{{ prevention_page.url | relative_url }}">
 								{{ site.data.languages[page.lang].read_more }}
 							</a>
 						</article>
@@ -119,7 +119,7 @@ layout: default
 							</div>
 
 							{% assign donate_time_page = site.pages | where: "lang", page.lang | where: "lang_ref", "collaborators" | first %}
-							<a class="button" href="{{ donate_time_page.url | absolute_url }}">
+							<a class="button" href="{{ donate_time_page.url | relative_url }}">
 								{{ site.data.languages[page.lang].see_how }}
 							</a>
 						</article>
@@ -134,7 +134,7 @@ layout: default
 							</div>
 
 							{% assign milestones_page = site.pages | where: "lang", page.lang | where: "lang_ref", "milestones" | first %}
-							<a class="button" href="{{ milestones_page.url | absolute_url }}">
+							<a class="button" href="{{ milestones_page.url | relative_url }}">
 								{{ site.data.languages[page.lang].learn_more }}
 							</a>
 						</article>

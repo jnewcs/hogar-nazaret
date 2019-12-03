@@ -22,6 +22,6 @@ Díaz Garced mentions that sexual abuse is one of the most worrisome modalities 
 
 To read Díaz Garced's essay "Violence against children: Everyone’s problem" in full, please follow the link below:
 {% assign essay_link = '/uploads/education-and-prevention/Maltrato de menores: Un problema de todos.pdf' %}
-<a href="{{ essay_link | absolute_url }}" class="button is-secondary is-medium" target="_blank">
+<a href="{{ essay_link | relative_url }}" class="button is-secondary is-medium" target="_blank">
   {{ site.data.languages[page.lang].read_more }}
 </a>

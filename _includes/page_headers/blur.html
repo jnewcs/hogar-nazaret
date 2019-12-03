@@ -4,7 +4,7 @@
 
 <div class="page-hero-image-container is-flex-container is-fully-centered">
   <div class="page-hero-image" alt="{{ page.header_image_alt }}"
-    style="background: url('{{ page.header_image | absolute_url }}') center center; background-size: {{ page.header_image_style }}; background-repeat: no-repeat">
+    style="background: url('{{ page.header_image | relative_url }}') center center; background-size: {{ page.header_image_style }}; background-repeat: no-repeat">
   </div>
 
   <div class="p-1 has-text-{{ page.header_text_color }} has-text-centered" id="page-hero-title">

@@ -6,9 +6,9 @@
 
 <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
   <div class="navbar-brand is-vertically-centered is-flex-end">
-    <a href="{{ page.lang | absolute_url }}">
+    <a href="{{ page.lang | relative_url }}">
       <figure class="image is-96x96" id="site-logo">
-        <img src="{{ '/uploads/logo.png' | absolute_url }}">
+        <img src="{{ '/uploads/logo.png' | relative_url }}">
       </figure>
     </a>
 
@@ -48,7 +48,7 @@
 
             <div class="navbar-dropdown">
               {% for child in link.children %}
-                <a class="navbar-item {% if current_url == child.url %}is-active{% endif %}" href="{{ child.url | absolute_url }}" {% if child.target %} target="_blank" {% endif %}>
+                <a class="navbar-item {% if current_url == child.url %}is-active{% endif %}" href="{{ child.url | relative_url }}" {% if child.target %} target="_blank" {% endif %}>
                   {{ child.title }}
                 </a>
               {% endfor %}
@@ -66,7 +66,7 @@
             {% endif %}
           {% endif %}
 
-          <a class="navbar-item {{ item_active_class }}" href="{{ link.url | absolute_url }}" {% if link.target %} target="_blank" {% endif %}>
+          <a class="navbar-item {{ item_active_class }}" href="{{ link.url | relative_url }}" {% if link.target %} target="_blank" {% endif %}>
             {{ link.title }}
           </a>
         {% endif %}

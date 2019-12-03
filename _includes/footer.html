@@ -10,7 +10,7 @@
         {% for multilingual_page in multilingual_pages %}
           {% if page.lang != multilingual_page.lang %}
             <span class="mr-1">
-              <a href="{{ multilingual_page.url | absolute_url }}" class="{{ multilingual_page.lang }}">
+              <a href="{{ multilingual_page.url | relative_url }}" class="{{ multilingual_page.lang }}">
                 {{ site.data.languages[multilingual_page.lang].label }}
               </a>
             </span>
@@ -36,7 +36,7 @@
       </div>
 
       <span class="mr-1">
-        <a href="{{ multilingual_post.first.url | absolute_url }}" class="{{ multilingual_post.first.lang }}">
+        <a href="{{ multilingual_post.first.url | relative_url }}" class="{{ multilingual_post.first.lang }}">
           {{ site.data.languages[multilingual_post.first.lang].label }}
         </a>
       </span>
@@ -58,8 +58,8 @@
 {% if layout.lazy_load %}
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 {% endif %}
-<script src="{{ "/js/main.js" | absolute_url }}" type="text/javascript"></script>
+<script src="{{ "/js/main.js" | relative_url }}" type="text/javascript"></script>
 <script src="https://js.stripe.com/v3/"></script>
-<script src="{{ "/js/payment.js" | absolute_url }}" type="text/javascript"></script>
+<script src="{{ "/js/payment.js" | relative_url }}" type="text/javascript"></script>
 </body>
 </html>

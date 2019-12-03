@@ -9,7 +9,7 @@
         <ul>
           {% for multilingual_page in multilingual_pages %}
             <li class="{% if page.lang == multilingual_page.lang %}is-active{% endif %}">
-              <a href="{{ multilingual_page.url | absolute_url }}">
+              <a href="{{ multilingual_page.url | relative_url }}">
                 <span>{{ site.data.languages[multilingual_page.lang].label_abbr }}</span>
               </a>
             </li>
@@ -30,13 +30,13 @@
       <div class="tabs is-toggle is-small is-toggle-rounded" id="language-switcher">
         <ul>
           <li class="{% if page.lang == 'en' %}is-active{% endif %}">
-            <a href="{{ english_post.url | absolute_url }}">
+            <a href="{{ english_post.url | relative_url }}">
               <span>{{ site.data.languages.en.label_abbr }}</span>
             </a>
           </li>
 
           <li class="{% if page.lang == 'es' %}is-active{% endif %}">
-            <a href="{{ spanish_post.url | absolute_url }}">
+            <a href="{{ spanish_post.url | relative_url }}">
               <span>{{ site.data.languages.es.label_abbr }}</span>
             </a>
           </li>

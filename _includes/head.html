@@ -6,31 +6,31 @@
     <title>{{ page.title }} :: {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page.auto_switch_language == true %}
-      <script src="{{ "/js/language_changer.js" | absolute_url }}" type="text/javascript"></script>
+      <script src="{{ "/js/language_changer.js" | relative_url }}" type="text/javascript"></script>
     {% endif %}
 
-    <link rel="shortcut icon" href="{{ '/uploads/favicon.ico' | absolute_url }}">
+    <link rel="shortcut icon" href="{{ '/uploads/favicon.ico' | relative_url }}">
 
     {% comment %}
       Recommended by Google to help search: https://support.google.com/webmasters/answer/182192?hl=en
     {% endcomment %}
     {% assign translated_pages = site.pages | where: "lang_ref", page.lang_ref %}
     {% for translated_page in translated_pages %}
-      <link rel="alternate" hreflang="{{ translated_page.lang }}" href="{{ translated_page.url | absolute_url }}" />
+      <link rel="alternate" hreflang="{{ translated_page.lang }}" href="{{ translated_page.url | relative_url }}" />
     {% endfor %}
 
     {% if page.layout == 'post' %}
       {% assign english_post = site.noticias | where:"lang_ref", page.lang_ref | first %}
       {% assign spanish_post = site.posts | where:"lang_ref", page.lang_ref | first %}
 
-      <link rel="alternate" hreflang="{{ english_post.lang }}" href="{{ english_post.url | absolute_url }}" />
-      <link rel="alternate" hreflang="{{ spanish_post.lang }}" href="{{ spanish_post.url | absolute_url }}" />
+      <link rel="alternate" hreflang="{{ english_post.lang }}" href="{{ english_post.url | relative_url }}" />
+      <link rel="alternate" hreflang="{{ spanish_post.lang }}" href="{{ spanish_post.url | relative_url }}" />
     {% endif %}
 
-    <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | absolute_url }}"/>
+    <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | relative_url }}"/>
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/css/main.css' | absolute_url }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
 
     {% if page.show_carousel %}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
@@ -38,7 +38,7 @@
     {% endif %}
 
     {% if page.show_milestones %}
-      <link rel="stylesheet" href="{{ '/css/milestones.css' | absolute_url }}">
+      <link rel="stylesheet" href="{{ '/css/milestones.css' | relative_url }}">
     {% endif %}
   </head>
 <body>

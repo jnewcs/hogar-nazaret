@@ -31,14 +31,14 @@ lazy_load: true
           <div class="columns is-desktop">
             <div class="column is-one-quarter">
               <figure class="image">
-                <img class="lazy-load" data-src="{{ post.banner_image | absolute_url }}" alt="{{ page.banner_image_alt }}">
+                <img class="lazy-load" data-src="{{ post.banner_image | relative_url }}" alt="{{ page.banner_image_alt }}">
               </figure>
             </div>
 
             <div class="column">
               <div class="content">
                 <strong class="post-title">
-                  <a class="is-size-4" href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+                  <a class="is-size-4" href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </strong>
                 <div>
                   <date>{{ post.date | date_to_string }}</date>
@@ -63,7 +63,7 @@ lazy_load: true
                     {{ content | truncatewords: 30 }}
                   {% endif %}
                 </p>
-                <a href="{{ post.url | absolute_url }}" class="button is-primary is-outlined is-medium">
+                <a href="{{ post.url | relative_url }}" class="button is-primary is-outlined is-medium">
                   {{ site.data.languages[page.lang].read_more }}
                 </a>
               </div>

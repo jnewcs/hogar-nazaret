@@ -21,13 +21,13 @@
                 <div class="column">
                   <div class="card">
                     <div class="card-image has-background-white-ter has-text-centered">
-                      <img src="{{ post.banner_image | absolute_url }}" alt="{{ post.banner_image_alt }}" loading="lazy">
+                      <img src="{{ post.banner_image | relative_url }}" alt="{{ post.banner_image_alt }}" loading="lazy">
                     </div>
 
                     <div class="card-content">
                       <div class="content">
                         <h3>
-                          <a href="{{ post.url | absolute_url }}">{{ post.title }}</a>
+                          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                         </h3>
                         {% if post.path contains "_drafts" %}
                           <div class="tag is-warning">DRAFT POST</div>
