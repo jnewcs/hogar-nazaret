@@ -51,7 +51,7 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
   background-repeat: no-repeat;
 }
 
-a.button.is-secondary {
+a.button.is-secondary, button.is-secondary {
   @extend .has-text-white;
   background-color: $secondary;
   border-color: transparent;
