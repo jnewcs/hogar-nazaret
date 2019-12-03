@@ -6,7 +6,7 @@ Having our site built on Jekyll, allows us to generate a static website which ca
 # Development Setup
 The following instructions are meant for people who want to build the site locally (on your own machine) for development purposes. If you don't want to build the site locally, you can always modify any file in the `master` branch and it will build through GitHub Pages. This is, however, riskier since you cannot verify the changes before they become live.
 
-Before we can build the site locally, you need a few things setup:
+Before you can build the site locally, you need a few things setup:
 
 1. Git setup on your computer - [Link to Installation Guide](https://help.github.com/en/github/getting-started-with-github/set-up-git)
 
