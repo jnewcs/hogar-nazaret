@@ -17,6 +17,10 @@ jobs:
 
       - name: Pull latest
         run: git pull origin master
+      - name: Add Git Email
+        run: git config --global user.email "jnewcomb125@gmail.com"
+      - name: Add Git Username
+        run: git config --global user.name "John Newcomb (Github Action)"
       - name: Create empty commit
         run: git commit --allow-empty -m "Trigger notification"
       - name: Push empty commit
