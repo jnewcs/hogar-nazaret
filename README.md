@@ -80,7 +80,7 @@ Configuration file: /Users/jxnewcomb/personal_repos/hogar-nazaret/_config.yml
 
 If it works properly, we now can preview the site at http://127.0.0.1:4000 and interact with it like we do the production site. If the `serve` command is still running, anytime we make a change, it will be reflected locally at http://127.0.0.1:4000 once the build finishes.
 
-### Preview content locally in Staging
+### Preview content locally to mimic "Staging" environment
 We currently use [Forestry.io](https://forestry.io/) as our content management system (CMS). Within our CMS, we can preview content before commiting the changes to the `master` branch which will change https://hogarjesusdenazaret.org. Sometimes, we want to view preview content locally. To do that, we can run this command:
 
 ```
