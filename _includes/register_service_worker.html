@@ -1,0 +1,69 @@
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    let newWorker;
+
+    function showUpdateAlert() {
+      // Right now we always want to refresh the page if there is an update ready
+      let updateAlert = document.getElementById('update-alert');
+      // updateAlert.classList.remove('hidden-element');
+      // newWorker.postMessage({ action: 'skipWaiting' });
+    }
+
+    navigator.serviceWorker.register('/sw.js', { scope: '/' }).then(reg => {
+      console.info('ServiceWorker registration successful with scope: ', reg.scope);
+      if (reg.waiting && reg.waiting.state === 'installed') {
+        newWorker = reg.waiting;
+        showUpdateAlert();
+      }
+
+      reg.addEventListener('updatefound', () => {
+        // Reference: https://deanhume.com/displaying-a-new-version-available-progressive-web-app/
+        // A wild service worker has appeared in reg.installing!
+        newWorker = reg.installing;
+        newWorker.addEventListener('statechange', () => {
+          // Has network.state changed?
+          switch (newWorker.state) {
+            case 'installed':
+              if (navigator.serviceWorker.controller) {
+                // new update available
+                showUpdateAlert();
+              }
+              // No update available
+              break;
+          }
+        });
+      });
+    });
+
+    let refreshing;
+    navigator.serviceWorker.addEventListener('controllerchange', function () {
+      if (refreshing) return;
+      window.location.reload();
+      refreshing = true;
+    });
+  }
+
+  // Listen for future changes in connection
+  function checkConnectivity() {
+    updateStatus();
+    window.addEventListener('online', updateStatus);
+    window.addEventListener('offline', updateStatus);
+    return;
+  }
+
+  function updateStatus() {
+    if (typeof navigator.onLine !== 'undefined') {
+      var isOffline = !navigator.onLine;
+      var offlineNotifier = document.getElementById('offline-notification-container');
+      if (!offlineNotifier) return;
+
+      if (isOffline) {
+        offlineNotifier.classList.remove('is-hidden');
+      } else {
+        offlineNotifier.classList.add('is-hidden');
+      }
+    }
+  }
+
+  checkConnectivity();
+</script>

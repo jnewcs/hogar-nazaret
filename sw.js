@@ -1,0 +1,155 @@
+---
+layout: null
+---
+'use strict';
+var ASSETS_CACHE_NAME = 'v1-assets';
+var ASSETS_CACHE_DATA = [
+  '/css/main.css',
+  '/uploads/social_media/facebook.png'
+];
+// Dynamically cache JS & CSS assets from site
+{% for file in site.static_files %}
+  {% if file.extname == '.js' or file.extname == '.css' %}
+    ASSETS_CACHE_DATA.push("{{ file.path }}")
+  {% endif %}
+{% endfor %}
+
+var PAGES_CACHE_NAME = 'v1-pages';
+
+// Order of caches matters. It helps determine the cache strategy
+var myCachesNames = [ ASSETS_CACHE_NAME, PAGES_CACHE_NAME ];
+var myCaches = [
+  {
+    name: ASSETS_CACHE_NAME,
+    data: ASSETS_CACHE_DATA
+  },
+  {
+    name: PAGES_CACHE_NAME,
+    data: [
+      '/',
+      '/en/',
+      '/en/about/',
+      '/es/',
+      '/es/quienes-somos/'
+    ]
+  }
+];
+
+function onInstall(event) {
+  console.info('[Hogar Serviceworker]', 'Installing!', event);
+
+  event.waitUntil(Promise.all(
+    myCaches.map(function (myCache) {
+      return caches.open(myCache.name).then(function prefill(cache) {
+        return cache.addAll(myCache.data);
+      })
+    })
+  ));
+}
+
+function onActivate(event) {
+  console.info('[Hogar Serviceworker]', 'Activating!', event);
+
+  event.waitUntil(
+    caches.keys().then(function(cacheNames) {
+      return Promise.all(
+        cacheNames.filter(function(cacheName) {
+          // Return true if you want to remove this cache,
+          // but remember that caches are shared across
+          // the whole origin
+          return myCachesNames.indexOf(cacheName) === -1;
+        }).map(function(cacheName) {
+          return caches.delete(cacheName);
+        })
+      );
+    })
+  );
+  // Actively saying that browsers should use
+  // the new Service Worker! Causes a refresh
+  return self.clients.claim();
+}
+
+function onMessageReceived(event) {
+  console.info('[Hogar Serviceworker]', 'Message received!', event);
+  if (event.data.action === 'skipWaiting') {
+    self.skipWaiting();
+  }
+}
+
+function onFetch(event) {
+  if (event.request.method !== 'GET') { return; }
+
+  // NOTE: using respondWith here will immediately return when
+  // a result it found
+  event.respondWith(Promise.all(
+    myCaches.map(function (myCache) {
+      return caches.open(myCache.name).then(function(cacheToCheck) {
+        return cacheToCheck.match(event.request);
+      });
+    })
+  ).then(function (promiseData) {
+    var cacheResult;
+    for (var i = 0; i < promiseData.length; i++) {
+      cacheResult = promiseData[i];
+      if (!!cacheResult) {
+        // The assets in ASSETS_CACHE_NAME (first index) should
+        // try the cache first then fallback to the network
+        if (i === 0) {
+          return cacheResult;
+        }
+
+        break;
+      }
+    }
+
+    return networkThenCache(event, cacheResult);
+  }));
+}
+
+function networkThenCache(event, cacheResult) {
+  // Fallback is network then cache
+  return fetch(event.request).then(function(response) {
+      // Check if we received a valid response
+      if (!response || response.status !== 200 || response.type !== 'basic') {
+        return response;
+      }
+
+      // IMPORTANT: Clone the response. A response is a stream
+      // and because we want the browser to consume the response
+      // as well as the cache consuming the response, we need
+      // to clone it so we have two streams.
+      var responseToCache = response.clone();
+      updateAfterFetch(event.request, responseToCache);
+
+      return response;
+    }
+  ).catch(function() {
+    return cacheResult;
+  });
+}
+
+function updateAfterFetch(request, responseToCache) {
+  var routesToCache = ['en/posts/', 'es/noticias/'];
+  var shouldCatch = false;
+  for (var i = 0; i < routesToCache.length; i++) {
+    if (request.url.indexOf(routesToCache[i]) !== -1) {
+      shouldCatch = true;
+      break;
+    }
+  }
+
+  if (request.destination === 'document' && shouldCatch === true) {
+    updateCache(PAGES_CACHE_NAME, request, responseToCache);
+  }
+}
+
+function updateCache(cacheName, request, responseToCache) {
+  return caches.open(cacheName).then(function (cache) {
+    return cache.put(request, responseToCache);
+  });
+}
+
+self.addEventListener('install', onInstall);
+self.addEventListener('message', onMessageReceived);
+self.addEventListener('activate', onActivate);
+self.addEventListener('fetch', onFetch);

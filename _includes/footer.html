@@ -55,6 +55,12 @@
   </div>
 </footer>
 
+<div class="is-hidden has-background-primary-light has-text-centered is-full-width pt-1 pb-1" id="offline-notification-container">
+  {{ site.data.languages[page.lang].offline_message }}
+</div>
+
+{% include register_service_worker.html %}
+
 {% if layout.lazy_load %}
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 {% endif %}

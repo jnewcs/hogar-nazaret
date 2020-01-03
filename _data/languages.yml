@@ -58,6 +58,7 @@ en:
       - Capital projects
     submit: Submit
   admin_link: Admin Login
+  offline_message: You are currently offline
 
 es:
   page: Página
@@ -119,3 +120,4 @@ es:
       - Proyectos de Capital
     submit: Submit
   admin_link: Admin Login
+  offline_message: Actualmente está desconectado
