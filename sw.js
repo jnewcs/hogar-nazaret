@@ -5,7 +5,8 @@ layout: null
 var ASSETS_CACHE_NAME = 'v1-assets';
 var ASSETS_CACHE_DATA = [
   '/css/main.css',
-  '/uploads/social_media/facebook.png'
+  '/uploads/social_media/facebook.png',
+  '/uploads/favicon.ico'
 ];
 // Dynamically cache JS & CSS assets from site
 {% for file in site.static_files %}
