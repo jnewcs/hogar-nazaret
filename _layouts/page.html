@@ -3,35 +3,37 @@ layout: default
 lazy_load: true
 ---
 {% comment %}
-    A general page layout. Used by default for all content on the site.
+  A general page layout. Used by default for all content on the site.
 {% endcomment %}
 
 {% if page.header_image %}
-    {% if page.header_layout == 'blur' %}
-        {% include page_headers/blur.html %}
-    {% endif %}
+  {% if page.header_layout == 'blur' %}
+    {% include page_headers/blur.html %}
+  {% else if page.header_layout == 'image_with_central_title' %}
+    {% include page_headers/image_with_central_title.html %}
+  {% endif %}
 {% else %}
     {% include page_headers/simple.html %}
 {% endif %}
 
-<div class="container content-container">
-    <section class="is-medium">
-        <div class="pb-2 content page-content">
-            {% if page.content_layout == 'split' %}
-                {% include page_content/split.html %}
-            {% elsif page.content_layout == 'split_form' %}
-                {% include page_content/split_form.html %}
-            {% else %}
-                {{ content }}
-            {% endif %}
+<div class="container content-container {% if page.header_layout == 'image_with_central_title' %}pt-0{% endif %}">
+  <section class="is-medium">
+    <div class="pb-2 content page-content">
+      {% if page.content_layout == 'split' %}
+        {% include page_content/split.html %}
+      {% elsif page.content_layout == 'split_form' %}
+        {% include page_content/split_form.html %}
+      {% else %}
+        {{ content }}
+      {% endif %}
 
-            {% if page.has_padrino_program %}
-                {% include padrino_program.html %}
-            {% endif %}
+      {% if page.has_padrino_program %}
+        {% include padrino_program.html %}
+      {% endif %}
 
-            {% if page.has_board_of_directors %}
-                {% include board_of_directors.html %}
-            {% endif %}
-        </div>
-    </section>
+      {% if page.has_board_of_directors %}
+        {% include board_of_directors.html %}
+      {% endif %}
+    </div>
+  </section>
 </div>

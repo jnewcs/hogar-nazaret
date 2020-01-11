@@ -1,15 +1,17 @@
 {% comment %}
-  Blur Layout for Page Header
+  Image With Central Title Layout for Page Header
 {% endcomment %}
 
 <div class="page-hero-image-container is-flex-container is-fully-centered">
-  <div class="page-hero-image with_blur" alt="{{ page.header_image_alt }}"
+  <div class="page-hero-image" alt="{{ page.header_image_alt }}"
     style="background: url('{{ page.header_image | relative_url }}') center center; background-size: {{ page.header_image_style }}; background-repeat: no-repeat">
   </div>
+</div>
 
-  <div class="p-1 has-text-{{ page.header_text_color }} has-text-centered" id="page-hero-title">
-    <h1 class="is-size-1 ">
-      {{ page.title }}
-    </h1>
-  </div>
+<div class="container p-1 has-text-centered">
+  <h1 class="is-size-1 ">
+    {{ page.title }}
+  </h1>
+
+  <hr />
 </div>
