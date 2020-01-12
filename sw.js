@@ -2,12 +2,16 @@
 layout: null
 ---
 'use strict';
-var ASSETS_CACHE_NAME = 'v1-assets';
+
+var version = "{{ site.time | date: '%Y%m%d%H%M%S' }}::";
+var ASSETS_CACHE_NAME = version + '::Assets';
 var ASSETS_CACHE_DATA = [
   '/css/main.css',
   '/uploads/social_media/facebook.png',
-  '/uploads/favicon.ico'
+  '/uploads/favicon.ico',
+  '/uploads/logo.png'
 ];
+
 // Dynamically cache JS & CSS assets from site
 {% for file in site.static_files %}
   {% if file.extname == '.js' or file.extname == '.css' %}
@@ -15,17 +19,17 @@ var ASSETS_CACHE_DATA = [
   {% endif %}
 {% endfor %}
 
-var PAGES_CACHE_NAME = 'v1-pages';
+var OFFLINE_CACHE_NAME = 'V1::Offline';
 
-// Order of caches matters. It helps determine the cache strategy
-var myCachesNames = [ ASSETS_CACHE_NAME, PAGES_CACHE_NAME ];
+// NOTE: Order of caches matters
+var myCachesNames = [ ASSETS_CACHE_NAME, OFFLINE_CACHE_NAME ];
 var myCaches = [
   {
     name: ASSETS_CACHE_NAME,
     data: ASSETS_CACHE_DATA
   },
   {
-    name: PAGES_CACHE_NAME,
+    name: OFFLINE_CACHE_NAME,
     data: [
       '/',
       '/en/',
@@ -140,7 +144,7 @@ function updateAfterFetch(request, responseToCache) {
   }
 
   if (request.destination === 'document' && shouldCatch === true) {
-    updateCache(PAGES_CACHE_NAME, request, responseToCache);
+    updateCache(OFFLINE_CACHE_NAME, request, responseToCache);
   }
 }
 

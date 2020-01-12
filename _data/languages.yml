@@ -61,6 +61,7 @@ en:
   offline_message: You are currently offline
   upcoming_events:
     no_upcoming_events: No upcoming events. Check back soon for events!
+    event_details: Event Details
 
 es:
   page: Página

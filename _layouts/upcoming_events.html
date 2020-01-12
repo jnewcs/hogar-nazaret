@@ -36,9 +36,10 @@ lazy_load: true
           <div class="column is-full mb-2 mt-1">
             <div class="columns is-desktop">
               <div class="column is-one-quarter">
-                <figure class="image">
-                  <img class="lazy-load" data-src="{{ upcoming_event.banner_image | relative_url }}" alt="{{ page.banner_image_alt }}">
-                </figure>
+                <h4 class="is-size-4">{{ upcoming_event.day_of_week }}</h4>
+                <h1 class="is-size-1">
+                  <date>{{ upcoming_event.date | date_to_string: "ordinal", "US" }}</date>
+                </h1>
               </div>
 
               <div class="column">
@@ -46,9 +47,6 @@ lazy_load: true
                   <strong class="post-title">
                     <a class="is-size-4" href="{{ upcoming_event.url | relative_url }}">{{ upcoming_event.title }}</a>
                   </strong>
-                  <div>
-                    <date>{{ upcoming_event.date | date_to_string }}</date>
-                  </div>
                   <p>
                     {% assign word_count = upcoming_event.content | split: ' ' | size %}
                     {% if word_count <= 50 %}
@@ -57,8 +55,9 @@ lazy_load: true
                       {{ upcoming_event.content | truncatewords: 50 }}
                     {% endif %}
                   </p>
-                  <a href="{{ upcoming_event.url | relative_url }}" class="button is-primary is-outlined is-medium">
-                    {{ site.data.languages[page.lang].read_more }}
+
+                  <a href="{{ upcoming_event.url | relative_url }}" class="button is-outlined is-medium">
+                    + {{ site.data.languages[page.lang].upcoming_events.event_details }}
                   </a>
                 </div>
               </div>
