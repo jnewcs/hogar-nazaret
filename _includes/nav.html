@@ -42,31 +42,46 @@
 
         {% if link.has_dropdown %}
           <div class="navbar-item has-dropdown is-hoverable">
-            <a class="navbar-link {% if link.contained_links contains current_url %}dropdown-has-active{% endif %}" href="#">
+
+            {% assign dropdown_active_class = "" %}
+            {% if link.automated_active_link_check == true %}
+              {% for link_to_check in link.links_to_check %}
+                {% if current_url contains link_to_check  %}
+                  {% assign dropdown_active_class = "dropdown-has-active" %}
+                  {% break %}
+                {% endif %}
+              {% endfor %}
+            {% else %}
+              {% if link.contained_links contains current_url %}
+                {% assign dropdown_active_class = "dropdown-has-active" %}
+              {% endif %}
+            {% endif %}
+
+            <a class="navbar-link {{ dropdown_active_class }}" href="#">
               {{ link.title }}
             </a>
 
             <div class="navbar-dropdown">
               {% for child in link.children %}
-                <a class="navbar-item {% if current_url == child.url %}is-active{% endif %}" href="{{ child.url | relative_url }}" {% if child.target %} target="_blank" {% endif %}>
+                {% assign item_active_class = "" %}
+                {% if child.automated_active_link_check == true %}
+                  {% if current_url contains child.url  %}
+                    {% assign item_active_class = "is-active" %}
+                  {% endif %}
+                {% else %}
+                  {% if current_url == child.url %}
+                    {% assign item_active_class = "is-active" %}
+                  {% endif %}
+                {% endif %}
+
+                <a class="navbar-item {{ item_active_class }}" href="{{ child.url | relative_url }}" {% if child.target %} target="_blank" {% endif %}>
                   {{ child.title }}
                 </a>
               {% endfor %}
             </div>
           </div>
         {% else %}
-          {% assign item_active_class = "" %}
-          {% if link.automated_active_link_check == true %}
-            {% if current_url contains link.url %}
-              {% assign item_active_class = "is-active" %}
-            {% endif %}
-          {% else %}
-            {% if link.contained_links contains current_url %}
-              {% assign item_active_class = "is-active" %}
-            {% endif %}
-          {% endif %}
-
-          <a class="navbar-item {{ item_active_class }}" href="{{ link.url | relative_url }}" {% if link.target %} target="_blank" {% endif %}>
+          <a class="navbar-item {% if link.contained_links contains current_url %}is-active{% endif %}" href="{{ link.url | relative_url }}" {% if link.target %} target="_blank" {% endif %}>
             {{ link.title }}
           </a>
         {% endif %}

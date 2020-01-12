@@ -59,6 +59,8 @@ en:
     submit: Submit
   admin_link: Admin Login
   offline_message: You are currently offline
+  upcoming_events:
+    no_upcoming_events: No upcoming events. Check back soon for events!
 
 es:
   page: Página

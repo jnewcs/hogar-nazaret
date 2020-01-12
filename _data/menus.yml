@@ -66,9 +66,19 @@
       url: /en/get-involved/create-a-fund/
 
 - title: News
-  url: /en/posts/
+  has_dropdown: true
+  links_to_check:
+    - /en/posts/
+    - /en/upcoming_events/
   automated_active_link_check: true
   lang: en
+  children:
+    - title: Recent
+      url: /en/posts/
+      automated_active_link_check: true
+    - title: Upcoming
+      url: /en/upcoming_events/
+      automated_active_link_check: true
 
 - title: Contact Us
   has_dropdown: true

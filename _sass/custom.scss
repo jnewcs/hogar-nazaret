@@ -287,10 +287,14 @@ a.button.is-secondary, button.is-secondary {
 }
 
 /* 404 */
-#not-found-title {
+.linear-primary-gradient {
   font-size: 7rem;
   font-weight: 200;
-  background: linear-gradient(130deg, $primary-light, $primary);
+  background-color: $primary-light; /* fallback color if gradients are not supported */
+  background-image: -webkit-linear-gradient(130deg, $primary-light, $primary); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  background-image:    -moz-linear-gradient(130deg, $primary-light, $primary); /* For Firefox (3.6 to 15) */
+  background-image:      -o-linear-gradient(130deg, $primary-light, $primary); /* For old Opera (11.1 to 12.0) */
+  background-image:         linear-gradient(130deg, $primary-light, $primary); /* Standard syntax; must be last */
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;

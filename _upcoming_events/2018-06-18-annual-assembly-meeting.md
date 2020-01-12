@@ -6,7 +6,7 @@ banner_image: /uploads/2018/gran_combo/performance.jpg
 banner_image_alt: Hogar's Annual Assembly Meeting
 banner_image_style: cover
 header_layout: central_title
-layout: upcoming-event
+layout: upcoming_event
 lang: en
 lang_ref: annual-assembly
 redirect_from:
