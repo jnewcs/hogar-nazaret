@@ -70,7 +70,7 @@ lazy_load: true
         </h4>
       {% endif %}
 
-      {% if events_shown == false %}
+      {% if events_shown == false and events.size > 0 %}
         <h4 class="is-size-4 has-text-centered linear-primary-gradient is-full-width mt-2 mb-2">
           {{ site.data.languages[page.lang].upcoming_events.no_upcoming_events }}
         </h4>

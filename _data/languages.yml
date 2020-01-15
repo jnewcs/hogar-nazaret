@@ -124,3 +124,6 @@ es:
     submit: Submit
   admin_link: Admin Login
   offline_message: Actualmente está desconectado
+  upcoming_events:
+    no_upcoming_events: No hay próximos eventos. ¡Vuelve pronto para ver eventos!
+    event_details: Detalles del evento

@@ -161,9 +161,19 @@
       url: /es/contribuye/crea-un-fondo/
 
 - title: Noticias
-  url: /es/noticias/
+  has_dropdown: true
+  links_to_check:
+    - /es/noticias/
+    - /es/proximos_eventos/
   automated_active_link_check: true
   lang: es
+  children:
+    - title: Reciente
+      url: /es/noticias/
+      automated_active_link_check: true
+    - title: Próximos
+      url: /es/proximos_eventos/
+      automated_active_link_check: true
 
 - title: CONTÁCTANOS
   has_dropdown: true

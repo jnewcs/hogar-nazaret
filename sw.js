@@ -19,6 +19,7 @@ var ASSETS_CACHE_DATA = [
   {% endif %}
 {% endfor %}
 
+var OFFLINE_CACHE_ENTRY_LIMIT = 9;
 var OFFLINE_CACHE_NAME = 'V1::Offline';
 
 // NOTE: Order of caches matters
@@ -150,7 +151,24 @@ function updateAfterFetch(request, responseToCache) {
 
 function updateCache(cacheName, request, responseToCache) {
   return caches.open(cacheName).then(function (cache) {
-    return cache.put(request, responseToCache);
+    return cache.keys().then(function(keys) {
+      if (keys && keys.length > OFFLINE_CACHE_ENTRY_LIMIT) {
+        return replaceExistingCacheEntry(cache, request, responseToCache);
+      }
+
+      return cache.put(request, responseToCache);
+    });
+  });
+}
+
+function replaceExistingCacheEntry(cache, request, responseToCache) {
+  return cache.keys(request).then(function(keys) {
+    if (keys && keys.length) {
+      // An existing entry was found so we should replace it
+      return cache.put(request, responseToCache);
+    }
+
+    return;
   });
 }
 
