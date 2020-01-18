@@ -14,7 +14,9 @@ layout: default
     <div class="list-layout">
         <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
         <div>{{ post.content | truncatewords: 30 }}</div>
-        <date>{{ post.date | date_to_string }}</date>
+        <date>
+          {% include date_to_string_helper.html date=post.date %}
+        </date>
     </div>
     {% endfor %}
 </ul>

@@ -1,0 +1,2 @@
+{% assign day_of_week_as_int = include.date | date: "%w" | plus: 0 %}
+{{ site.data.languages[page.lang].daynames[day_of_week_as_int] }}

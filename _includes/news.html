@@ -36,7 +36,9 @@
                           {{ post.content | truncate: 100 }}
                         </p>
                         <br>
-                        <date>{{ post.date | date_to_string }}</date>
+                        <date>
+                          {% include date_to_string_helper.html date=post.date %}
+                        </date>
                       </div>
                     </div>
                   </div>

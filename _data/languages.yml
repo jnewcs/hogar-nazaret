@@ -62,6 +62,27 @@ en:
   upcoming_events:
     no_upcoming_events: No upcoming events. Check back soon for events!
     event_details: Event Details
+  months_abbr:
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+  daynames:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
 
 es:
   page: Página
@@ -123,7 +144,28 @@ es:
       - Proyectos de Capital
     submit: Submit
   admin_link: Admin Login
-  offline_message: Actualmente está desconectado
+  offline_message: Actualmente estás desconectado.
   upcoming_events:
-    no_upcoming_events: No hay próximos eventos. ¡Vuelve pronto para ver eventos!
+    no_upcoming_events: No hay ningún evento planificado. ¡Vuelve pronto a la página para ver próximos eventos!
     event_details: Detalles del evento
+  months_abbr:
+    - Ene.
+    - Feb.
+    - Mar.
+    - Abr
+    - May.
+    - Jun.
+    - Jul.
+    - Ago.
+    - Sep.
+    - Oct.
+    - Nov.
+    - Dic.
+  daynames:
+    - Domingo
+    - Lunes
+    - Martes
+    - Miércoles
+    - Jueves
+    - Viernes
+    - Sábado
