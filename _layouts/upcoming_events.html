@@ -34,8 +34,16 @@ lazy_load: true
           {% assign events_shown = true %}
 
           <div class="column is-full mb-2 mt-1">
-            <div class="columns is-desktop">
+            <div class="columns is-desktop is-vcentered">
               <div class="column is-one-quarter">
+                {% if upcoming_event.banner_image %}
+                  <img
+                    src="{{ upcoming_event.banner_image }}"
+                    alt="{{ upcoming_event.banner_image_alt }}"
+                    style="height: 150px"
+                  />
+                {% endif %}
+
                 <h4 class="is-size-4">
                   {% include day_of_week_helper.html date=upcoming_event.date %}
                 </h4>

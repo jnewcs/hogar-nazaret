@@ -60,6 +60,7 @@ en:
   admin_link: Admin Login
   offline_message: You are currently offline
   upcoming_events:
+    header: Upcoming Events
     no_upcoming_events: No upcoming events. Check back soon for events!
     event_details: Event Details
   months_abbr:
@@ -146,6 +147,7 @@ es:
   admin_link: Admin Login
   offline_message: Actualmente estás desconectado.
   upcoming_events:
+    header: Próximos Eventos
     no_upcoming_events: No hay ningún evento planificado. ¡Vuelve pronto a la página para ver próximos eventos!
     event_details: Detalles del evento
   months_abbr:

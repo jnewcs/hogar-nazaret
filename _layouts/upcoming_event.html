@@ -18,5 +18,18 @@ lazy_load: true
         {{ content }}
       {% endif %}
     </div>
+
+    {% if page.lang == 'en' %}
+      {% assign link = '/en/upcoming_events' | relative_url %}
+    {% else %}
+      {% assign link = '/es/proximos_eventos' | relative_url %}
+    {% endif %}
+    <div class="has-text-centered">
+      <hr />
+
+      <a class="button is-primary is-outlined is-medium" href="{{ link }}">
+        {{ site.data.languages[page.lang].upcoming_events.header }}
+      </a>
+    </div>
   </section>
 </div>
