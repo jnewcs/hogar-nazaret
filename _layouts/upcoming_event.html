@@ -5,10 +5,8 @@ lazy_load: true
 {% comment %}
   This layout is used by the documents in the _upcoming_events/ collection
 {% endcomment %}
-{% if page.header_layout == 'side_by_side' %}
-  {% include post_headers/side_by_side.html %}
-{% else if page.header_layout == 'central_title' %}
-  {% include post_headers/central_title.html %}
+{% if page.header_layout == 'flyer' %}
+  {% include post_headers/flyer.html %}
 {% endif %}
 
 <div class="container content-container">

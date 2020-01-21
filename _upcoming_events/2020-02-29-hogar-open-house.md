@@ -1,7 +1,10 @@
 ---
 title: Hogar Open House
 date: 2020-02-29T12:00:00.000+00:00
-header_layout: central_title
+banner_image: /uploads/2020/hogar-open-house/flyer.jpg
+banner_image_alt: Hogar Open House
+banner_image_height: 250
+header_layout: flyer
 layout: upcoming_event
 lang: en
 lang_ref: hogar-open-house

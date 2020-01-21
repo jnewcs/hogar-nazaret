@@ -56,7 +56,7 @@ function onInstall(event) {
 function onActivate(event) {
   console.info('[Hogar Serviceworker]', 'Activating!', event);
 
-  event.waitUntil(
+  return event.waitUntil(
     caches.keys().then(function(cacheNames) {
       return Promise.all(
         cacheNames.filter(function(cacheName) {
@@ -70,23 +70,11 @@ function onActivate(event) {
       );
     })
   );
-  // Actively saying that browsers should use
-  // the new Service Worker! Causes a refresh
-  return self.clients.claim();
-}
-
-function onMessageReceived(event) {
-  console.info('[Hogar Serviceworker]', 'Message received!', event);
-  if (event.data.action === 'skipWaiting') {
-    self.skipWaiting();
-  }
 }
 
 function onFetch(event) {
-  if (event.request.method !== 'GET') { return; }
-
-  // NOTE: using respondWith here will immediately return when
-  // a result it found
+  // NOTE: using respondWith inside onFetch will immediately
+  // return when a result it found
   event.respondWith(Promise.all(
     myCaches.map(function (myCache) {
       return caches.open(myCache.name).then(function(cacheToCheck) {
@@ -117,6 +105,9 @@ function networkThenCache(event, cacheResult) {
   return fetch(event.request).then(function(response) {
       // Check if we received a valid response
       if (!response || response.status !== 200 || response.type !== 'basic') {
+        return response;
+      }
+      if (event.request.method !== 'GET') {
         return response;
       }
 
@@ -173,6 +164,5 @@ function replaceExistingCacheEntry(cache, request, responseToCache) {
 }
 
 self.addEventListener('install', onInstall);
-self.addEventListener('message', onMessageReceived);
 self.addEventListener('activate', onActivate);
 self.addEventListener('fetch', onFetch);
