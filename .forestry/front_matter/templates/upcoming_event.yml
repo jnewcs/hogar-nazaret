@@ -13,6 +13,7 @@ fields:
   label: date
   config:
     required: true
+    date_format: MM/DD/YYYY
   description: Determines the order which the upcoming event is shown. It appears
     alongside the event title across the website
 - type: datetime
