@@ -14,12 +14,29 @@ fields:
 - type: datetime
   name: time
   label: time
-- type: text
-  name: header_layout
+- name: header_layout
+  type: select
+  default: flyer
+  config:
+    required: true
+    options:
+    - flyer
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
   label: header_layout
+  description: 'Determines the header layout on the event page. There is currently
+    one option: flyer. The flyer layout includes the banner image followed by the
+    event’s title and the timing information (day of the week, date, and time).'
 - type: text
   name: lang_ref
   label: lang_ref
+  description: Unique identifier used to link a Spanish upcoming event to the equivalent
+    English event
+  config:
+    required: true
 - type: file
   name: banner_image
   label: banner_image
