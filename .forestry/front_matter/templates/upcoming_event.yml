@@ -5,12 +5,18 @@ fields:
 - type: text
   name: title
   label: title
+  config:
+    required: true
 - type: datetime
   name: date
   label: date
+  config:
+    required: true
 - type: datetime
   name: time
   label: time
+  config:
+    required: true
 - type: file
   name: banner_image
   label: banner_image
@@ -23,12 +29,20 @@ fields:
 - type: text
   name: header_layout
   label: header_layout
-- type: text
-  name: layout
-  label: layout
-- type: text
-  name: lang
-  label: lang
+  config:
+    required: true
 - type: text
   name: lang_ref
   label: lang_ref
+  config:
+    required: true
+- type: text
+  name: layout
+  label: layout
+  default: upcoming_event
+  hidden: true
+- type: text
+  name: lang
+  label: lang
+  default: en
+  hidden: true
