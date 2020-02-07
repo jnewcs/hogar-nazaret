@@ -51,6 +51,8 @@ sections:
   label: Próximos Eventos
   create: documents
   match: "*.md"
+  templates:
+  - proximo-evento
 - type: document
   path: _data/colaboradores.yml
   label: Colaboradores
