@@ -1,0 +1,34 @@
+---
+label: Próximo Evento
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: datetime
+  name: date
+  label: date
+- type: datetime
+  name: time
+  label: time
+- type: file
+  name: banner_image
+  label: banner_image
+- type: text
+  name: banner_image_alt
+  label: banner_image_alt
+- type: number
+  name: banner_image_height
+  label: banner_image_height
+- type: text
+  name: header_layout
+  label: header_layout
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: lang_ref
+  label: lang_ref
