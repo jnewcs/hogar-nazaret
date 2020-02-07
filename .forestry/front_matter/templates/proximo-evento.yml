@@ -40,6 +40,8 @@ fields:
 - type: file
   name: banner_image
   label: banner_image
+  description: Image used as a preview on the Home Page and the Upcoming Events page.
+    It also serves as the header image in the flyer header layout.
 - type: text
   name: banner_image_alt
   label: banner_image_alt
