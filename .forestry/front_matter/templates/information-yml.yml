@@ -45,6 +45,7 @@ fields:
 - name: service_worker
   type: boolean
   label: service_worker
-  description: Controls if we install a Service Worker on our page
+  description: Controls if we install a Service Worker on our page. When it is on,
+    our pages will use a service worker,
 pages:
 - _data/information.yml
