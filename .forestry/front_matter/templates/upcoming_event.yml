@@ -13,6 +13,8 @@ fields:
   label: date
   config:
     required: true
+  description: Determines the order which the upcoming event is shown. It appears
+    alongside the event title across the website
 - type: datetime
   name: time
   label: time
