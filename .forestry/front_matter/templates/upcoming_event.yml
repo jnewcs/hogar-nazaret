@@ -1,5 +1,5 @@
 ---
-label: upcoming_event
+label: Upcoming Event
 hide_body: false
 fields:
 - type: text
