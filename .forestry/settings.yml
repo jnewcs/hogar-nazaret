@@ -46,6 +46,11 @@ sections:
   match: "*.md"
   templates:
   - noticia
+- type: directory
+  path: _proximos_eventos
+  label: Próximos Eventos
+  create: documents
+  match: "*.md"
 - type: document
   path: _data/colaboradores.yml
   label: Colaboradores
