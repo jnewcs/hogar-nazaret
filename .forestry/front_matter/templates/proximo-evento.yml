@@ -5,6 +5,9 @@ fields:
 - type: text
   name: title
   label: title
+  description: Displayed as the title of the event across the website
+  config:
+    required: true
 - type: datetime
   name: date
   label: date
