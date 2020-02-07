@@ -20,6 +20,11 @@ sections:
   match: "*.md"
   templates:
   - post
+- type: directory
+  path: _upcoming_events
+  label: Upcoming Events
+  create: documents
+  match: "*.md"
 - type: document
   path: _data/collaborators.yml
   label: 'Collaborators '
