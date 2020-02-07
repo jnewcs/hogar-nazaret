@@ -11,9 +11,13 @@ fields:
 - type: datetime
   name: date
   label: date
-- type: datetime
-  name: time
+- name: time
+  type: text
+  config:
+    required: true
   label: time
+  description: Time of the event. It can be a range of time or just the start time.
+    We display it across the website along with the date of the event.
 - name: header_layout
   type: select
   default: flyer
@@ -45,9 +49,12 @@ fields:
 - type: text
   name: banner_image_alt
   label: banner_image_alt
+  description: Used to describe the banner image. Adding a description benefits visually
+    impaired users who use screen readers when browsing.
 - type: number
   name: banner_image_height
   label: banner_image_height
+  description: Height of the banner image on the event detail page for the flyer layout
 - type: text
   name: layout
   label: layout
