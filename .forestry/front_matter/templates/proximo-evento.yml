@@ -14,6 +14,12 @@ fields:
 - type: datetime
   name: time
   label: time
+- type: text
+  name: header_layout
+  label: header_layout
+- type: text
+  name: lang_ref
+  label: lang_ref
 - type: file
   name: banner_image
   label: banner_image
@@ -24,14 +30,12 @@ fields:
   name: banner_image_height
   label: banner_image_height
 - type: text
-  name: header_layout
-  label: header_layout
-- type: text
   name: layout
   label: layout
+  default: upcoming_event
+  hidden: true
 - type: text
   name: lang
   label: lang
-- type: text
-  name: lang_ref
-  label: lang_ref
+  hidden: true
+  default: es
