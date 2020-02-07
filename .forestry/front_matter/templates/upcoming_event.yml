@@ -16,14 +16,13 @@ fields:
     date_format: MM/DD/YYYY
   description: Determines the order which the upcoming event is shown. It appears
     alongside the event title across the website
-- type: datetime
-  name: time
-  label: time
+- name: time
+  type: text
   config:
     required: true
-    time_format: ''
   description: Time of the event. It can be a range of time or just the start time.
     We display it across the website along with the date of the event.
+  label: time
 - name: header_layout
   type: select
   default: flyer
