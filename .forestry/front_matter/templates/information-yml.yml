@@ -42,5 +42,9 @@ fields:
   label: payment_request_on
   description: Toggles the Payment Request button through Stripe. When it is on, we
     can accept Apple Pay on supported devices
+- name: service_worker
+  type: boolean
+  label: service_worker
+  description: Controls if we install a Service Worker on our page
 pages:
 - _data/information.yml
