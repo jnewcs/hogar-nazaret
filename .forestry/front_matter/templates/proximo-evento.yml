@@ -11,6 +11,12 @@ fields:
 - type: datetime
   name: date
   label: date
+  description: Determines the order which the upcoming event is shown. It appears
+    alongside the event title across the website
+  config:
+    required: true
+    date_format: MM/DD/YYYY
+  default: now
 - name: time
   type: text
   config:
