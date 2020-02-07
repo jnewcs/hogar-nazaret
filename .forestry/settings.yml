@@ -25,6 +25,8 @@ sections:
   label: Upcoming Events
   create: documents
   match: "*.md"
+  templates:
+  - upcoming_event
 - type: document
   path: _data/collaborators.yml
   label: 'Collaborators '
