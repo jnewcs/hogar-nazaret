@@ -62,7 +62,8 @@ en:
   upcoming_events:
     header: Upcoming Events
     no_upcoming_events: No upcoming events. Check back soon for events!
-    event_details: Event Details
+    event_details: Event details
+    more: More upcoming events
   months_abbr:
     - Jan
     - Feb
@@ -150,6 +151,7 @@ es:
     header: Próximos Eventos
     no_upcoming_events: No hay ningún evento planificado. ¡Vuelve pronto a la página para ver próximos eventos!
     event_details: Detalles del evento
+    more: Más próximos eventos
   months_abbr:
     - Ene.
     - Feb.

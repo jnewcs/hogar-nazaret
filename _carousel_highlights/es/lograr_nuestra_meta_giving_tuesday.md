@@ -4,7 +4,7 @@ title: ¡AYÚDANOS A LOGRAR NUESTRA META! GIVING TUESDAY PR
 link_text: ¡Quiero donar!
 link_opens_donate: true
 banner_image: "/uploads/2019/11/26/Giving_Tuesday.png"
-hide_from_carousel: false
+hide_from_carousel: true
 order: 1
 
 ---

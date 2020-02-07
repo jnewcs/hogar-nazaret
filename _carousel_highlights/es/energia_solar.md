@@ -3,7 +3,7 @@ title: Energía Solar para El Hogar
 link_text: Leer Más
 link_destination: /es/noticias/2019-01-15-energia-solar-para-el-hogar
 banner_image: /uploads/2019/solar-energy/group_with_wisconsin_flag.jpg
-hide_from_carousel: false
+hide_from_carousel: true
 lang: es
 order: 4
 ---

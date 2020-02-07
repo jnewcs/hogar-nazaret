@@ -10,9 +10,9 @@ lazy_load: true
 
 <div class="container content-container">
   <section class="is-medium">
-    <h1 class="is-size-3 has-text-centered">
+    <h3 class="is-size-3 has-text-centered">
       {{ page.title }}
-    </h1>
+    </h3>
 
     <hr />
 
@@ -52,6 +52,9 @@ lazy_load: true
                     {% include date_to_string_helper.html date=upcoming_event.date %}
                   </date>
                 </h1>
+                <h4 class="is-size-4">
+                  {{ upcoming_event.time }}
+                </h4>
               </div>
 
               <div class="column">

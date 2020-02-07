@@ -11,17 +11,31 @@
       style="height: {{ page.banner_image_height }}px"
     />
 
-    <h1 class="is-size-2 is-uppercase has-text-primary has-text-centered">
+    <h2 class="is-size-2 is-uppercase has-text-primary has-text-centered">
       {{ page.title }}
-    </h1>
+    </h2>
     <p class="has-text-centered">
       {{ page.subtitle }}
     </p>
 
     {% if page.date %}
-      <date class="post-date has-text-centered">
-        {% include date_to_string_helper.html date=page.date %}
-      </date>
+      <h4 class="is-size-4">
+        <date>
+          {% include day_of_week_helper.html date=page.date %}
+        </date>
+      </h4>
+
+      <h3 class="is-size-3">
+        <date class="post-date has-text-centered">
+          {% include date_to_string_helper.html date=page.date %}
+        </date>
+      </h3>
+
+      <h4 class="is-size-4">
+        <date>
+          {{ page.time }}
+        </date>
+      </h4>
     {% endif %}
 
     <div class="has-text-centered">
