@@ -2,13 +2,14 @@
 title: Casa Abierta Para Ti
 date: 2020-02-29T12:00:00.000+00:00
 time: 12:30 - 4:00 p.m.
-banner_image: /uploads/2020/hogar-open-house/flyer.jpg
-banner_image_alt: Hogar Open House
+banner_image: "/uploads/2020/hogar-open-house/flyer.jpg"
+banner_image_alt: Hogar Casa Abierta Para Ti Folleto
 banner_image_height: 250
 header_layout: flyer
 layout: upcoming_event
 lang: es
 lang_ref: hogar-open-house
+
 ---
 Queridos amigos y colaboradores del Hogar! Recientemente les anunciamos que separaran la fecha del 8 de febrero para nuestra <b>Casa Abierta para Ti</b>. Con esta linda actividad que planificamos con mucho amor para todos ustedes agradeciéndoles su constante colaboración y apoyo, iniciaremos la celebración del Vigésimo quinto aniversario de nuestra institución.
 
