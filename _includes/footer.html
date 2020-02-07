@@ -44,6 +44,29 @@
       <hr />
     {% endif %}
 
+    <!-- We also want to cover a mulitlingual upcoming event -->
+    {% if page.lang == 'en' %}
+      {% assign multilingual_event = site.proximos_eventos | where:"lang_ref", page.lang_ref %}
+    {% else %}
+      {% assign multilingual_event = site.upcoming_events | where:"lang_ref", page.lang_ref %}
+    {% endif %}
+
+    {% if multilingual_event.size > 0 %}
+      <div class="page-switcher">
+        <em>
+          {{ site.data.languages[page.lang].switcher }}:
+        </em>
+      </div>
+
+      <span class="mr-1">
+        <a href="{{ multilingual_event.first.url | relative_url }}" class="{{ multilingual_event.first.lang }}">
+          {{ site.data.languages[multilingual_event.first.lang].label }}
+        </a>
+      </span>
+
+      <hr />
+    {% endif %}
+
     <p>
       HOGAR ALBERGUE JESÚS DE NAZARET, INC © {{ site.data.information.year }}
     </p>

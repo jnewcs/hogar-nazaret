@@ -45,3 +45,29 @@
     </div>
   </div>
 {% endif %}
+
+<!-- We also want to cover a mulitlingual upcoming event -->
+{% assign english_event = site.upcoming_events | where:"lang_ref", page.lang_ref | first %}
+{% assign spanish_event = site.proximos_eventos | where:"lang_ref", page.lang_ref | first %}
+
+{% if english_event and spanish_event %}
+  <div class="navbar-start">
+    <div class="navbar-item">
+      <div class="tabs is-toggle is-small is-toggle-rounded" id="language-switcher">
+        <ul>
+          <li class="{% if page.lang == 'en' %}is-active{% endif %}">
+            <a href="{{ english_event.url | relative_url }}">
+              <span>{{ site.data.languages.en.label_abbr }}</span>
+            </a>
+          </li>
+
+          <li class="{% if page.lang == 'es' %}is-active{% endif %}">
+            <a href="{{ spanish_event.url | relative_url }}">
+              <span>{{ site.data.languages.es.label_abbr }}</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+{% endif %}
