@@ -6,7 +6,7 @@
     <title>{{ page.title }} :: {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page.auto_switch_language == true %}
-      <script src="{{ "/js/language_changer.js" | relative_url }}" type="text/javascript"></script>
+      <script src="{{ '/js/language_changer.js' | relative_url }}" type="text/javascript"></script>
     {% endif %}
 
     <link rel="shortcut icon" href="{{ '/uploads/favicon.ico' | relative_url }}">
@@ -26,8 +26,6 @@
       <link rel="alternate" hreflang="{{ english_post.lang }}" href="{{ english_post.url | relative_url }}" />
       <link rel="alternate" hreflang="{{ spanish_post.lang }}" href="{{ spanish_post.url | relative_url }}" />
     {% endif %}
-
-    <link rel="icon" type="image/png" href="{{ "/img/favicon.png" | relative_url }}"/>
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">

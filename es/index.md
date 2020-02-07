@@ -32,7 +32,7 @@ secondary_highlights:
       subtitle: El Hogar Albergue para Niños Jesús de Nazaret lleva más de dos décadas años dándo amor, servicios y un mejor futuro a niños y niñas de Puerto Rico que han sido víctimas de negligencia o maltrato.
 
 news:
-  title: Noticias y Próximos Eventos
+  title: Noticias Recientes
 lang: es
 lang_ref: home-page
 ---

@@ -17,9 +17,9 @@ lazy_load: true
 
 <div class="container content-container">
   <section class="is-medium">
-    <h1 class="is-size-3 has-text-centered">
+    <h3 class="is-size-3 has-text-centered">
       {{ page.title }}
-    </h1>
+    </h3>
 
     <hr />
 
@@ -41,7 +41,9 @@ lazy_load: true
                   <a class="is-size-4" href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </strong>
                 <div>
-                  <date>{{ post.date | date_to_string }}</date>
+                  <date>
+                    {% include date_to_string_helper.html date=post.date %}
+                  </date>
                 </div>
                 {% if post.path contains "_drafts" %}
                   <div class="tag is-warning">DRAFT POST</div>

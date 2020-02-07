@@ -47,13 +47,22 @@
     <p>
       HOGAR ALBERGUE JESÚS DE NAZARET, INC © {{ site.data.information.year }}
     </p>
-    <div>
+
+    <div class="pb-1">
       <a href="https://app.forestry.io/sites/heqefiwcnetumg" target="_blank">
         {{ site.data.languages[page.lang].admin_link }}
       </a>
     </div>
   </div>
 </footer>
+
+<div class="is-hidden has-background-primary-light has-text-centered is-full-width pt-1 pb-1" id="offline-notification-container">
+  {{ site.data.languages[page.lang].offline_message }}
+</div>
+
+{% if site.data.information.service_worker == true %}
+  {% include register_service_worker.html %}
+{% endif %}
 
 {% if layout.lazy_load %}
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>

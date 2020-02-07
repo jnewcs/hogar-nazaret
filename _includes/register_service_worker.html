@@ -1,0 +1,51 @@
+<script type="text/javascript">
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js', { scope: '/' });
+  }
+
+  // Listen for future changes in connection
+  var firstCheck = true;
+  function checkConnectivity() {
+    updateStatus();
+    window.addEventListener('online', updateStatus);
+    window.addEventListener('offline', updateStatus);
+  }
+
+  function updateStatus() {
+    if (typeof navigator.onLine !== 'undefined') {
+      var isOffline = !navigator.onLine;
+      var offlineNotifier = document.getElementById('offline-notification-container');
+      if (!offlineNotifier) return;
+
+      if (isOffline) {
+        offlineNotifier.classList.remove('is-hidden');
+        if (firstCheck) offlineHider();
+      } else {
+        offlineNotifier.classList.add('is-hidden');
+      }
+      firstCheck = false;
+    }
+  }
+
+  function offlineHider() {
+    var images = document.querySelectorAll('img');
+    var index;
+    for (index = 0; index < images.length; ++index) {
+      var image = images[index];
+      var src = image.src;
+      if (caches) {
+        checkImageInCache.bind(this, image)();
+      }
+    }
+  }
+
+  function checkImageInCache(image) {
+    return caches.match(image.src).then(function(response) {
+      if (!response || response === 'undefined') {
+        image.classList.add('is-hidden');
+      }
+    });
+  }
+
+  checkConnectivity();
+</script>

@@ -1,0 +1,70 @@
+{% comment %}
+  Flyer Layout for Post Header
+{% endcomment %}
+
+<div class="has-background-white-ter">
+  <div class="container content-container has-text-centered" id="flyer-layout-container">
+    <img
+      class="masonry-image clickable"
+      src="{{ page.banner_image }}"
+      alt="{{ page.banner_image_alt }}"
+      style="height: {{ page.banner_image_height }}px"
+    />
+
+    <h2 class="is-size-2 is-uppercase has-text-primary has-text-centered">
+      {{ page.title }}
+    </h2>
+    <p class="has-text-centered">
+      {{ page.subtitle }}
+    </p>
+
+    {% if page.date %}
+      <h4 class="is-size-4">
+        <date>
+          {% include day_of_week_helper.html date=page.date %}
+        </date>
+      </h4>
+
+      <h3 class="is-size-3">
+        <date class="post-date has-text-centered">
+          {% include date_to_string_helper.html date=page.date %}
+        </date>
+      </h3>
+
+      <h4 class="is-size-4">
+        <date>
+          {{ page.time }}
+        </date>
+      </h4>
+    {% endif %}
+
+    <div class="has-text-centered">
+      {% if page.path contains "_drafts" %}
+        <div class="tag is-warning">DRAFT POST</div>
+      {% endif %}
+      {% if page.published == false %}
+        <div class="tag is-info">UNPUBLISHED CHANGES</div>
+      {% endif %}
+
+      {% if page.layout != 'upcoming_event' %}
+        {% if post_date_to_compare >= current_date %}
+          <div class="tag is-info">FUTURE</div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="masonry-image-modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-content">
+    <p class="image">
+      <img id="masonry-image-modal-highlight">
+    </p>
+  </div>
+
+  <button class="modal-close is-large" aria-label="close" id="masonry-image-close"></button>
+</div>
+
+<script src="{{ "/js/image_modal.js" | relative_url }}" type="text/javascript"></script>

@@ -43,7 +43,7 @@ feed:
     proximos_eventos:
       path: "/proximos_eventos.xml"
 
-keep_files: [uploads]
+keep_files: [uploads, sw.js]
 
 repository: jnewcs/hogar-nazaret
 

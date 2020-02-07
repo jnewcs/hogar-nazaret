@@ -25,7 +25,7 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
 .mr-tiny { margin-right: 5px; }
 
 .p-1 { padding: 1em; }
-.pt-0 { padding-top: 0px; }
+.pt-0 { padding-top: 0px !important; }
 .pt-1 { padding-top: 1em; }
 .pt-2 { padding-top: 2em; }
 .pb-0 { padding-bottom: 0px !important; }
@@ -45,6 +45,8 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
 .content-container { padding: 2em; }
 
 .position-relative { position: relative; }
+.has-background-primary-light { background-color: $primary-light; }
+.has-background-primary-light-with-opacity { background-color: $primary-light-with-opacity; }
 
 .cover-no-repeat {
   background-size: cover;
@@ -129,13 +131,18 @@ a.button.is-secondary, button.is-secondary {
   right: -15px;
   top: -15px;
   bottom: -15px;
-  filter: blur(3.5px);
+  &.with_blur {
+    filter: blur(3.5px);
+  }
 }
 #page-hero-title {
   z-index: 2;
   width: 100%;
   letter-spacing: 8px;
   font-weight: 600;
+  &.block_styled {
+    background-color: $primary-light;
+  }
 }
 
 /* Carousel */
@@ -281,13 +288,22 @@ a.button.is-secondary, button.is-secondary {
 }
 
 /* 404 */
-#not-found-title {
+.linear-primary-gradient {
   font-size: 7rem;
   font-weight: 200;
-  background: linear-gradient(130deg, $primary-light, $primary);
+  background-color: $primary-light; /* fallback color if gradients are not supported */
+  background-image: -webkit-linear-gradient(130deg, $primary-light, $primary); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  background-image:    -moz-linear-gradient(130deg, $primary-light, $primary); /* For Firefox (3.6 to 15) */
+  background-image:      -o-linear-gradient(130deg, $primary-light, $primary); /* For old Opera (11.1 to 12.0) */
+  background-image:         linear-gradient(130deg, $primary-light, $primary); /* Standard syntax; must be last */
   color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
+}
+/* Offline Container */
+#offline-notification-container {
+  position: fixed;
+  bottom: 0px;
 }
 
 /* Collaborators */

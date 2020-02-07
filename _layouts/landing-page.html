@@ -21,6 +21,71 @@ layout: default
 		<div class="tile is-ancestor">
 			<div class="tile is-1"></div>
 			<div class="tile is-vertical is-10">
+        <div class="tile" id="upcoming-event">
+          {% if page.lang == 'en' %}
+            {% assign events = site.upcoming_events | sort:"date" | reverse %}
+          {% else %}
+            {% assign events = site.proximos_eventos | sort:"date" | reverse %}
+          {% endif %}
+
+          {% if events.size > 0 %}
+            {% for upcoming_event in events %}
+              {% assign event_date_to_compare = upcoming_event.date | date: '%s' | plus: 0 %}
+
+              {% if event_date_to_compare < current_date %}
+                {% continue %}
+              {% endif %}
+
+              <div class="tile is-parent is-vertical">
+                <article class="tile is-child has-background-primary-light-with-opacity p-1">
+                  <div class="columns is-vertically-centered">
+                    <div class="column is-one-third has-text-centered">
+                      {% if upcoming_event.banner_image %}
+                        <img
+                          src="{{ upcoming_event.banner_image }}"
+                          alt="{{ upcoming_event.banner_image_alt }}"
+                          style="height: 125px"
+                        />
+                      {% endif %}
+                      <h5 class="is-size-5">
+                        {% include day_of_week_helper.html date=upcoming_event.date %}
+                      </h5>
+                      <h3 class="is-size-3">
+                        <date>
+                          {% include date_to_string_helper.html date=upcoming_event.date %}
+                        </date>
+                      </h3>
+                      <h5 class="is-size-5">
+                        {{ upcoming_event.time }}
+                      </h5>
+                    </div>
+
+                    <div class="column">
+                      <strong class="post-title">
+                        <a class="is-size-3" href="{{ upcoming_event.url | relative_url }}">{{ upcoming_event.title }}</a>
+                      </strong>
+
+                      <p>
+                        {% assign word_count = upcoming_event.content | split: ' ' | size %}
+                        {% if word_count <= 50 %}
+                          {{ upcoming_event.content }}
+                        {% else %}
+                          {{ upcoming_event.content | truncatewords: 50 }}
+                        {% endif %}
+                      </p>
+
+                      <a href="{{ upcoming_event.url | relative_url }}" class="button is-outlined is-medium mt-1">
+                        + {{ site.data.languages[page.lang].upcoming_events.event_details }}
+                      </a>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              {% break %}
+            {% endfor %}
+          {% endif %}
+        </div>
+
 				<div class="tile" id="donation-prompts">
 					<div class="tile is-parent is-vertical" id="donation-prompt-other">
 						<article class="tile is-child has-background-light p-1">

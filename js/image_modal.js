@@ -35,11 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     setCount() {
-      var count = document.getElementById('masonry-image-count');
+      var countElement = document.getElementById('masonry-image-count');
+      if (!countElement) return;
+
       var position = this.activeIndex + 1;
       var total = this.images.length;
-
-      count.innerHTML = `${position}/${total}`;
+      countElement.innerHTML = `${position}/${total}`;
     }
 
     closeImage() {
@@ -95,12 +96,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  document.getElementById('prev-button').addEventListener('click', function() {
-    gallery.switchImage('left-arrow');
-  });
-  document.getElementById('next-button').addEventListener('click', function() {
-    gallery.switchImage('right-arrow');
-  });
+  var prevButton = document.getElementById('prev-button');
+  if (prevButton) {
+    prevButton.addEventListener('click', function() {
+      gallery.switchImage('left-arrow');
+    });
+  }
+
+  var nextButton = document.getElementById('next-button');
+  if (nextButton) {
+    nextButton.addEventListener('click', function() {
+      gallery.switchImage('right-arrow');
+    });
+  }
+
   document.getElementById('masonry-image-close').addEventListener('click', function() {
     gallery.closeImage();
   })

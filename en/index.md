@@ -45,7 +45,7 @@ secondary_highlights:
         love, services, and a better future to boys and girls who have been victims
         of abuse or neglect for over twenty years.
 news:
-  title: News & Upcoming Events
+  title: Recent News
 lang: en
 lang_ref: home-page
 
