@@ -17,6 +17,18 @@ fields:
   label: time
   config:
     required: true
+- type: text
+  name: lang_ref
+  label: lang_ref
+  config:
+    required: true
+  description: Unique identifier used to link an English upcoming event to the equivalent
+    Spanish event
+- type: text
+  name: header_layout
+  label: header_layout
+  config:
+    required: true
 - type: file
   name: banner_image
   label: banner_image
@@ -26,16 +38,6 @@ fields:
 - type: number
   name: banner_image_height
   label: banner_image_height
-- type: text
-  name: header_layout
-  label: header_layout
-  config:
-    required: true
-- type: text
-  name: lang_ref
-  label: lang_ref
-  config:
-    required: true
 - type: text
   name: layout
   label: layout
