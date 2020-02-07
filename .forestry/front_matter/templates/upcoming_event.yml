@@ -54,6 +54,9 @@ fields:
 - type: number
   name: banner_image_height
   label: banner_image_height
+  description: Height of the banner image on the event detail page for the flyer layout
+  config:
+    max: '500'
 - type: text
   name: layout
   label: layout
