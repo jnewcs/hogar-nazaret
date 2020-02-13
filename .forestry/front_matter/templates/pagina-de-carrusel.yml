@@ -49,3 +49,5 @@ fields:
   default: es
   config:
     required: true
+pages:
+- _carousel_highlights/es/casa-abierta-para-ti.md
