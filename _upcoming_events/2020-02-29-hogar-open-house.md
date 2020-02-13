@@ -2,7 +2,7 @@
 title: Open House
 date: 2020-02-29T12:00:00.000+00:00
 time: 12:30 - 4:00 PM
-banner_image: "/uploads/2020/hogar-open-house/flyer.jpg"
+banner_image: "/uploads/2020/02/13/updated_open_house_flyer.jpg"
 banner_image_alt: Hogar Open House Flyer
 banner_image_height: 250
 header_layout: flyer
