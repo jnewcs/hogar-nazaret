@@ -10,6 +10,4 @@ hide_from_carousel: false
 published: false
 
 ---
-Con inmensa alegría les invitamos a nuestra **Casa Abierta Para Ti**. Esta hermosa actividad ha sido planificada con amor para todos ustedes y dar comienzo a la celebración de nuestro Vigésimo quinto Aniversario.
-
-¡Les esperamos!
+Con inmensa alegría les invitamos a nuestra **Casa Abierta Para Ti**. Esta hermosa actividad ha sido planificada con amor para todos ustedes y dar comienzo a la celebración de nuestro Vigésimo quinto Aniversario. ¡Les esperamos!
