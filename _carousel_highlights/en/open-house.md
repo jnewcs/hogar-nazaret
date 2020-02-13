@@ -10,4 +10,4 @@ hide_from_carousel: false
 published: false
 
 ---
-With immense joy, we invite you to our Open House. This beautiful activity has been lovingly planned for all of you to begin the celebration of our Twenty-fifth Anniversary. We hope to see you there!
+With immense joy, we invite you to our Open House. This beautiful activity has been lovingly planned for all of you to begin the celebration of our 25th Anniversary. We hope to see you there!
