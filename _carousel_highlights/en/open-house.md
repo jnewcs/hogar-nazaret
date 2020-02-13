@@ -1,6 +1,6 @@
 ---
 lang: en
-title: Open House
+title: Open House For You
 link_text: Event Details
 link_opens_donate: false
 link_destination: "/en/upcoming_events/2020-02-29-hogar-open-house"
