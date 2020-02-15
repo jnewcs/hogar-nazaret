@@ -64,6 +64,18 @@ en:
     no_upcoming_events: No upcoming events. Check back soon for events!
     event_details: Event details
     more: More upcoming events
+  months:
+    - January
+    - February
+    - March
+    - April
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
   months_abbr:
     - Jan
     - Feb
@@ -152,6 +164,19 @@ es:
     no_upcoming_events: No hay ningún evento planificado. ¡Vuelve pronto a la página para ver próximos eventos!
     event_details: Detalles del evento
     more: Más próximos eventos
+  months:
+    - enero
+    - febrero
+    - marzo
+    - abril
+    - mayo
+    - junio
+    - julio
+    - agosto
+    - septiembre
+    - octubre
+    - noviembre
+    - diciembre
   months_abbr:
     - Ene.
     - Feb.

@@ -1,13 +1,30 @@
-{% capture i18n_date %}
-  {% assign m = include.date | date: "%-m" | minus: 1 %}
-  {{ site.data.languages[page.lang].months_abbr[m] }}
-  {% assign d = include.date | date: "%-d" %}
-  {% case d %}
-  {% when '1' or '21' or '31' %}{{ d }}st,
-  {% when '2' or '22' %}{{ d }}nd,
-  {% when '3' or '23' %}{{ d }}rd,
-  {% else %}{{ d }}th,
-  {% endcase %}
-  {{ include.date | date: "%Y" }}
-{% endcapture %}
+{% if page.lang == 'en' %}
+  {% capture i18n_date %}
+    {% assign m = include.date | date: "%-m" | minus: 1 %}
+    {{ site.data.languages[page.lang].months_abbr[m] }}
+    {% assign d = include.date | date: "%-d" %}
+    {% case d %}
+    {% when '1' or '21' or '31' %}{{ d }}st,
+    {% when '2' or '22' %}{{ d }}nd,
+    {% when '3' or '23' %}{{ d }}rd,
+    {% else %}{{ d }}th
+    {% endcase %}
+    {% if include.use_year == true %}
+      {{ ', ' }}
+      {{ include.date | date: "%Y" }}
+    {% endif %}
+  {% endcapture %}
+{% else %}
+  {% capture i18n_date %}
+    {% assign d = include.date | date: "%-d" %}
+    {{ d }}
+    {{ ' de ' }}
+    {% assign m = include.date | date: "%-m" | minus: 1 %}
+    {{ site.data.languages[page.lang].months[m] }}
+    {% if include.use_year == true %}
+      {{ ' de ' }}
+      {{ include.date | date: "%Y" }}
+    {% endif %}
+  {% endcapture %}
+{% endif %}
 {{ i18n_date }}

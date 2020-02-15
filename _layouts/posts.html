@@ -42,7 +42,7 @@ lazy_load: true
                 </strong>
                 <div>
                   <date>
-                    {% include date_to_string_helper.html date=post.date %}
+                    {% include date_to_string_helper.html date=post.date use_year=true %}
                   </date>
                 </div>
                 {% if post.path contains "_drafts" %}
