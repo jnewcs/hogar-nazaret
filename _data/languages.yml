@@ -63,7 +63,7 @@ en:
     header: Upcoming Events
     no_upcoming_events: No upcoming events. Check back soon for events!
     event_details: Event details
-    more: More upcoming events
+    more: Upcoming events
   months:
     - January
     - February
@@ -163,7 +163,7 @@ es:
     header: Próximos Eventos
     no_upcoming_events: No hay ningún evento planificado. ¡Vuelve pronto a la página para ver próximos eventos!
     event_details: Detalles del evento
-    more: Más próximos eventos
+    more: Próximos eventos
   months:
     - enero
     - febrero
