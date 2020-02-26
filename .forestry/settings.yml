@@ -64,6 +64,9 @@ sections:
 - type: document
   path: _data/board_of_directors.yml
   label: Board of Directors
+- type: document
+  path: _data/languages.yml
+  label: Language Translations
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
