@@ -3,7 +3,7 @@ banner_image_style: cover
 header_layout: central_title
 lang: es
 layout: post
-title: Amigos del Hogar Llenan la 'Casa Abierta'
+title: Iniciamos con Alegría Celebración 25 Aniversario
 date: 2020-03-01 23:00:00 +0000
 lang_ref: Spanish
 banner_image: "/uploads/2020/03/02/IMG_2355.jpeg"
