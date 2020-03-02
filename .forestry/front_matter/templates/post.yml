@@ -95,3 +95,5 @@ fields:
   default: en
   config:
     required: true
+pages:
+- _posts/our-25th-anniversary-celebration-has-begun.md
