@@ -7,7 +7,7 @@ title: Iniciamos con Alegría Celebración 25 Aniversario
 date: 2020-03-01 23:00:00 +0000
 lang_ref: Spanish
 banner_image: "/uploads/2020/03/02/IMG_2355.jpeg"
-banner_image_alt: ''
+banner_image_alt: Payasos
 has_photo_grid: true
 photo_grid:
 - "/uploads/2020/03/02/IMG_5905.jpeg"
