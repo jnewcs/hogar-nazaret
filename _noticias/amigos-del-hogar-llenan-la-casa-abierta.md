@@ -16,6 +16,7 @@ photo_grid:
 - "/uploads/2020/03/02/IMG_4073.jpeg"
 - "/uploads/2020/03/02/IMG_5995.jpeg"
 redirect_from: []
+published: false
 
 ---
 El sábado 29 de febrero comenzamos la celebración de nuestro Vigésimo quinto Aniversario con la actividad 'Casa Abierta Para Tí'. La misma fue planificada con mucho amor como agradecimiento a todas esas personas e instituciones que nos han ayudado a lo largo de estos 25 Años. Todos los que han ayudan al Hogar son parte del milagro de impactar positivamente y con amor la vida de todos estos pequeños.
