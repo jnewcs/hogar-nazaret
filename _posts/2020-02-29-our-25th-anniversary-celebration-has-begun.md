@@ -23,8 +23,8 @@ photo_grid:
 redirect_from: []
 
 ---
-On Saturday, February 29, we began the celebration of our twenty-fifth Anniversary with the 'Open House For You'. The event was planned with much love to thank all the families and institutions that have helped the Hogar during the past 25 years. Each of our supporters help create the miracle of love that positively impacts the lives of our children.
+On Saturday, February 29, we began the celebration of our twenty-fifth Anniversary with the 'Open House For You'. The event was planned with much love to thank all the families and institutions that have helped the Hogar during the past 25 years. Each of our supporters help create the miracle of love that positively impacts the daily lives of our children.
 
-Our children and guests fully enjoyed the activity. We enjoyed the presence of our anniversary's Godfather and Godmother, Jorge Rivera Nieves and María del Carmen Gonzalez, fun music, clown performances and a 'canine' fashion show by Puerto Rico Therapy Dogs, among other amenities.
+Our children and guests fully enjoyed the activity. We enjoyed the presence of our anniversary's Godfather and Godmother, Jorge Rivera Nieves and María del Carmen Gonzalez, nice music, clown performances and a 'canine' fashion show by Puerto Rico Therapy Dogs, among other amenities.
 
-We greatly appreciate the wonderful efforts of the Board of Directors to make this event a reality, especially the organizing committee led by Miriam Almodovar (Deputy Secretary of the Board of Directors), Agnes Rivera (Deputy Treasurer and President of the organizing committee) and Jesús Morales (Vice President) . Thanks to all who honored us with their presence.
+We greatly appreciate the wonderful efforts of the Board of Directors to make this event a reality, especially the organizing committee led by Miriam Almodovar (Deputy Secretary of the Board of Directors), Agnes Rivera (Deputy Treasurer and President of the organizing committee) and Jesús Morales (Vice President). Thanks to all who honored us with their presence.
