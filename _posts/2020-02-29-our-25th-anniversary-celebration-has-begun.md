@@ -10,10 +10,14 @@ banner_image_alt: Clowns
 banner_image_style: cover
 has_photo_grid: true
 photo_grid:
-- "/uploads/2020/03/02/IMG_2355-3.jpeg"
 - "/uploads/2020/03/02/IMG_8958.jpeg"
-- "/uploads/2020/03/02/IMG_0329-1.jpeg"
+- "/uploads/2020/03/02/Food-2.jpg"
+- "/uploads/2020/03/02/Anouncer-1.jpg"
+- "/uploads/2020/03/02/payaso-1.jpg"
 - "/uploads/2020/03/02/IMG_5905-1.jpeg"
+- "/uploads/2020/03/02/IMG_0329-1.jpeg"
+- "/uploads/2020/03/02/proclama-1.jpg"
+- "/uploads/2020/03/02/voluntarios-1.jpg"
 - "/uploads/2020/03/02/IMG_4073-1.jpeg"
 - "/uploads/2020/03/02/IMG_6508-1.jpeg"
 redirect_from: []
