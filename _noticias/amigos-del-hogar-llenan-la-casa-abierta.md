@@ -5,7 +5,7 @@ lang: es
 layout: post
 title: "¡Inicia la Celebración de Nuestro 25 Aniversario!"
 date: 2020-02-29 11:00:00 +0000
-lang_ref: Spanish
+lang_ref: open_house_25_year
 banner_image: "/uploads/2020/03/02/IMG_2355.jpeg"
 banner_image_alt: Payasos
 has_photo_grid: true
