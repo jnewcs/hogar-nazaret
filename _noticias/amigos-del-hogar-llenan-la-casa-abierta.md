@@ -4,7 +4,7 @@ header_layout: central_title
 lang: es
 layout: post
 title: Amigos del Hogar Llenan la 'Casa Abierta'
-date: 2020-02-29 23:00:00 +0000
+date: 2020-03-01 23:00:00 +0000
 lang_ref: Spanish
 banner_image: "/uploads/2020/03/02/IMG_2355.jpeg"
 banner_image_alt: ''
