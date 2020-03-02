@@ -95,3 +95,5 @@ fields:
   label: layout
   hidden: true
   default: post
+pages:
+- _noticias/amigos-del-hogar-llenan-la-casa-abierta.md
