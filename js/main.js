@@ -62,15 +62,13 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       edgePadding: 0,
       slideBy: 1,
-      autoplay: true,
+      autoplay: false,
       arrowKeys: false,
       preventScrollOnTouch: 'auto',
       speed: 400,
       mouseDrag: true,
       nav: false,
       controls: false,
-      autoplayButtonOutput: false,
-      autoplayTimeout: 10000,
       autoHeight: true
     });
   }
