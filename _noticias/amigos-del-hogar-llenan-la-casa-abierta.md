@@ -10,11 +10,12 @@ banner_image: "/uploads/2020/03/02/IMG_2355.jpeg"
 banner_image_alt: Payasos
 has_photo_grid: true
 photo_grid:
-- "/uploads/2020/03/02/IMG_5905.jpeg"
-- "/uploads/2020/03/02/IMG_6508.jpeg"
-- "/uploads/2020/03/02/IMG_0329.jpeg"
-- "/uploads/2020/03/02/IMG_4073.jpeg"
+- "/uploads/2020/03/02/IMG_2355-1.jpeg"
 - "/uploads/2020/03/02/IMG_5995.jpeg"
+- "/uploads/2020/03/02/IMG_4073.jpeg"
+- "/uploads/2020/03/02/IMG_5905.jpeg"
+- "/uploads/2020/03/02/IMG_0329.jpeg"
+- "/uploads/2020/03/02/IMG_6508.jpeg"
 redirect_from: []
 
 ---
