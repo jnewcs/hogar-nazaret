@@ -4,7 +4,7 @@ layout: post
 lang: en
 title: Our 25th Anniversary Celebration Has Begun!
 date: 2020-02-29 23:00:00 +0000
-lang_ref: English
+lang_ref: open_house_25_year
 banner_image: "/uploads/2020/03/02/IMG_2355-2.jpeg"
 banner_image_alt: Clowns
 banner_image_style: cover
