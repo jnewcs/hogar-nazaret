@@ -23,6 +23,6 @@ El sábado 29 de febrero comenzamos la celebración de nuestro vigésimo quinto 
 
 Nuestros niños e invitados la disfrutaron plenamente la actividad. Contamos con la presencia de los 'Padrinos' de la actividad, Jorge Rivera Nieves y María del Carmen González, buena música, payasos y un desfile de modas 'canino' presentado por Puerto Rico Therapy Dogs, entre otras cosas.
 
-Agradecemos enormemente el trabajo realizado por la Junta de Directores pata llevar a cabo la Casa Abierta, especialmente al comité organizador encabezado por Miriam Almodovar (Sub-Secretaria de la Junta de Directores), Agnes Rivera (Sub-Tesorera y Presidenta del comité organizador) y Jesús Morales (Vice Presidente). 
+Agradecemos enormemente el trabajo realizado por la Junta de Directores para realizar la Casa Abierta, especialmente al comité organizador encabezado por Miriam Almodovar (Sub-Secretaria de la Junta de Directores), Agnes Rivera (Sub-Tesorera y Presidenta del comité organizador) y Jesús Morales (Vice Presidente).
 
 ¡Gracias a todos los que nos honraron con su presencia!
