@@ -20,8 +20,10 @@ fields:
   label: lang_ref
   config:
     required: true
-  description: 'Unique identifier used to link a Spanish news post to the equivalent
-    English post '
+  description: Unique identifier used to link a Spanish noticia to the equivalent
+    English post. For example, if our English post is called "SOLAR ENERGY FOR THE
+    HOGAR" and our noticia is called "ENERGÍA SOLAR PARA EL HOGAR", we can put "solar-energy-hogar"
+    as the lang_ref for both the post and the noticia. This will tie the two together.
 - name: banner_image
   type: file
   config:
