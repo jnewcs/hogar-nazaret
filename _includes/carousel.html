@@ -14,21 +14,21 @@
       {% if highlight.hide_from_carousel %}
         {% continue %}
       {% else %}
-        <div>
+        <div class="carousel-highlight-container {% unless forloop.first %}is-hidden{% endunless %}">
           <div class="columns is-gapless carousel-slide">
             <div class="column is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
               <img
-                class="carousel-image"
-                src="{{ highlight.banner_image | relative_url }}"
+                class="carousel-image tns-lazy-img"
+                data-src="{{ highlight.banner_image | relative_url }}"
               />
             </div>
 
             <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
-              <div class="container content-container carousel-text">
-                <h1 class="is-size-3 is-uppercase">
+              <div class="container content-container carousel-text is-unselectable">
+                <h1 class="is-size-3 is-uppercase is-unselectable">
                   {{ highlight.title }}
                 </h1>
-                <p>
+                <p class="is-unselectable">
                   {{ highlight.content }}
                 </p>
 
@@ -44,7 +44,7 @@
                     </a>
                   {% endif %}
                 {% endif %}
-                </div>
+              </div>
             </div>
           </div>
         </div>

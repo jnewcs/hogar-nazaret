@@ -48,9 +48,10 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
 .has-background-primary-light { background-color: $primary-light; }
 .has-background-primary-light-with-opacity { background-color: $primary-light-with-opacity; }
 
-.cover-no-repeat {
-  background-size: cover;
+.contain-no-repeat {
+  background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 a.button.is-secondary, button.is-secondary {
@@ -244,6 +245,10 @@ a.button.is-secondary, button.is-secondary {
   width: 100%;
   top: 50%;
   margin-top: -22.5px;
+  z-index: 2;
+
+  #prev-button { margin-left: 5px }
+  #next-button { margin-right: 5px }
 }
 #prev-button, #next-button {
   color: black;
@@ -341,7 +346,7 @@ a.button.is-secondary, button.is-secondary {
   }
 }
 
-/* Tablets */
+/* Tablets only */
 @media only screen and (min-width: $navbar-breakpoint) and (max-width: 1250px) {
   .masonry-grid {
     column-count: 2;
@@ -364,6 +369,7 @@ a.button.is-secondary, button.is-secondary {
   }
 }
 
+/* Mobile devices and below */
 @media screen and (max-width: $navbar-breakpoint - 1) {
   #navbarContent #language-switcher {
     margin-left: 0px;
@@ -457,6 +463,12 @@ a.button.is-secondary, button.is-secondary {
   }
   .prev-next-navigation-container {
     flex-direction: column;
+  }
+  #masonry-image-count { top: 10px; }
+  #masonry-image-close { top: 15px; }
+  #image-modal-controls {
+    bottom: 20px;
+    top: initial;
   }
 }
 

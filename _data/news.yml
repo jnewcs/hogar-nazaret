@@ -1,0 +1,14 @@
+---
+en:
+  extra_news_items:
+    - title: Learn more about our recent events and efforts
+      url: /en/posts
+      path: ''
+      banner_image: /uploads/carousel_highlights/kids_circle.jpg
+
+es:
+  extra_news_items:
+    - title: Obtenga más información sobre nuestros eventos y esfuerzos recientes
+      url: /es/noticias
+      path: ''
+      banner_image: /uploads/carousel_highlights/kids_circle.jpg

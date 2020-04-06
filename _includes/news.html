@@ -11,9 +11,9 @@
 
         <div class="is-vcentered">
             {% if page.lang == 'en' %}
-                {% assign related = site.posts | sort | reverse | slice: 0, 9 %}
+                {% assign related = site.posts | sort | reverse | slice: 0, 5 %}
             {% else %}
-                {% assign related = site.noticias | sort | reverse | slice: 0, 9 %}
+                {% assign related = site.noticias | sort | reverse | slice: 0, 5 %}
             {% endif %}
 
             <div class="columns" id="news-carousel-container">
@@ -21,7 +21,11 @@
                 <div class="column">
                   <div class="card">
                     <div class="card-image has-background-white-ter has-text-centered">
-                      <img src="{{ post.banner_image | relative_url }}" alt="{{ post.banner_image_alt }}" loading="lazy">
+                      <img
+                        class="tns-lazy-img"
+                        data-src="{{ post.banner_image | relative_url }}"
+                        alt="{{ post.banner_image_alt }}"
+                      >
                     </div>
 
                     <div class="card-content">
@@ -36,14 +40,46 @@
                           {{ post.content | truncate: 100 }}
                         </p>
                         <br>
-                        <date>
-                          {% include date_to_string_helper.html date=post.date use_year=false %}
-                        </date>
+
+                        {% if post.date %}
+                          <date>
+                            {% include date_to_string_helper.html date=post.date use_year=true %}
+                          </date>
+                        {% endif %}
                       </div>
                     </div>
                   </div>
                 </div>
               {% endfor %}
+
+              {% assign extra_news_items = site.data.news[page.lang].extra_news_items %}
+              {% if extra_news_items %}
+                {% for extra in extra_news_items %}
+                  <div class="column">
+                    <div class="card">
+                      <div class="card-image has-background-white-ter has-text-centered">
+                        <img
+                          class="tns-lazy-img"
+                          data-src="{{ extra.banner_image | relative_url }}"
+                          alt="{{ extra.banner_image_alt }}"
+                        >
+                      </div>
+
+                      <div class="card-content">
+                        <div class="content">
+                          <h3>
+                            <a href="{{ extra.url | relative_url }}">{{ extra.title }}</a>
+                          </h3>
+
+                          <p>
+                            {{ extra.content | truncate: 100 }}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              {% endif %}
             </div>
         </div>
     </div>

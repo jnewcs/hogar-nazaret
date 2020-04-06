@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Code for Carousel */
   var carouselContainer = document.getElementById('carousel-container');
   if (carouselContainer) {
-    var slider = tns({
+    tns({
       container: '#carousel-container',
       items: 1,
       slideBy: 'page',
@@ -42,14 +42,21 @@ document.addEventListener('DOMContentLoaded', () => {
       controlsContainer: document.getElementById('controls-container'),
       autoplay: true,
       autoplayTimeout: 10000,
-      autoplayText: ['', '']
+      autoplayText: ['', ''],
+      lazyload: true,
+      onInit: function() {
+        var highlights = Array.prototype.slice.call(document.querySelectorAll('.carousel-highlight-container'), 0);
+        highlights.forEach(highlight => {
+          highlight.classList.remove('is-hidden');
+        });
+      }
     });
   }
 
   /* Code for News Carousel */
   var newsCarouselContainer = document.getElementById('news-carousel-container');
   if (newsCarouselContainer) {
-    var newsSlider = tns({
+    tns({
       container: '#news-carousel-container',
       items: 1,
       responsive: {
@@ -69,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
       mouseDrag: true,
       nav: false,
       controls: false,
-      autoHeight: true
+      autoHeight: true,
+      lazyload: true
     });
   }
 

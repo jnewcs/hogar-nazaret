@@ -129,7 +129,7 @@ layout: default
 							{% assign padrinos_page = site.pages | where: "lang", page.lang | where: "lang_ref", "padrinos-program" | first %}
 
 							<div class="donar-box position-relative">
-								<div class="donar-photo cover-no-repeat" alt="" style="background-image: url('{{ page.highlights.main.image | relative_url }}')"></div>
+								<div class="donar-photo contain-no-repeat" alt="" style="background-image: url('{{ page.highlights.main.image | relative_url }}')"></div>
 								<div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
 									<div class="donar-box-caption-content">
 										<a href="{{ padrinos_page.url | relative_url }}" class="button is-large is-secondary">
