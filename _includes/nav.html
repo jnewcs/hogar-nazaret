@@ -74,14 +74,14 @@
                   {% endif %}
                 {% endif %}
 
-                <a class="navbar-item {{ item_active_class }}" href="{{ child.url | relative_url }}" {% if child.target %} target="_blank" {% endif %}>
+                <a class="navbar-item {{ item_active_class }}" href="{{ child.url | relative_url }}" {% if child.target %} target="_blank" rel="noreferrer" {% endif %}>
                   {{ child.title }}
                 </a>
               {% endfor %}
             </div>
           </div>
         {% else %}
-          <a class="navbar-item {% if link.contained_links contains current_url %}is-active{% endif %}" href="{{ link.url | relative_url }}" {% if link.target %} target="_blank" {% endif %}>
+          <a class="navbar-item {% if link.contained_links contains current_url %}is-active{% endif %}" href="{{ link.url | relative_url }}" {% if link.target %} target="_blank" rel="noreferrer" {% endif %}>
             {{ link.title }}
           </a>
         {% endif %}
