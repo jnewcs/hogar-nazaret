@@ -440,11 +440,11 @@ a.button.is-secondary, button.is-secondary {
   #donate-select {
     font-size: 1rem;
   }
-  #donation-prompts {
+  .donation-prompts {
     display: flex;
     flex-direction: column;
 
-    #donation-prompt-other {
+    .donation-prompt-other {
       order: 1;
     }
   }
