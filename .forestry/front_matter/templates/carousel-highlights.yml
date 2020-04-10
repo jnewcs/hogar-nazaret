@@ -46,6 +46,15 @@ fields:
   label: hide_from_carousel
   description: When manually turned on, this highlight will not be shown on the carousel.
     It is turned off by default.
+  showOnly:
+    field: always_show
+- name: always_show
+  type: boolean
+  label: Always Show
+  description: By default, we hide carousel highlights after 6 months. If always show
+    is on, we will never hide this carousel highlight.
+  showOnly:
+    field: hide_from_carousel
 - type: text
   name: lang
   label: lang
@@ -53,6 +62,17 @@ fields:
     required: true
   hidden: true
   default: en
+- name: creation_date
+  type: datetime
+  label: Creation Date
+  description: ''
+  config:
+    required: false
+    date_format: MM/DD/YYYY
+    time_format: 
+    display_utc: false
+  hidden: true
+  default: now
 pages:
 - _carousel_highlights/en/giving-tuesday-pr-help-us-to-achieve-our-goal.md
 - _carousel_highlights/en/open-house.md
