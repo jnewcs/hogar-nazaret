@@ -45,7 +45,6 @@ fields:
   type: boolean
   label: Hide from Carousel
   description: When manually turned on, this highlight will not be shown on the carousel.
-    It is turned off by default.
   showOnly:
     field: always_show
 - name: always_show
