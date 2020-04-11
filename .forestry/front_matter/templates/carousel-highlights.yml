@@ -9,6 +9,19 @@ fields:
     required: true
   description: Title of the carousel highlight. On desktop, it appears to the right
     of the banner image
+- name: creation_date
+  type: datetime
+  label: Creation Date
+  description: Creation date for the highlight. We do not display this field anywhere,
+    but it is used to automatically hide this highlight 6 months after the creation
+    date unless always show is marked
+  config:
+    required: false
+    date_format: MM/DD/YYYY
+    time_format: 
+    display_utc: false
+  hidden: false
+  default: now
 - type: text
   name: link_text
   label: link_text
@@ -61,17 +74,6 @@ fields:
     required: true
   hidden: true
   default: en
-- name: creation_date
-  type: datetime
-  label: Creation Date
-  description: ''
-  config:
-    required: false
-    date_format: MM/DD/YYYY
-    time_format: 
-    display_utc: false
-  hidden: false
-  default: now
 pages:
 - _carousel_highlights/en/giving-tuesday-pr-help-us-to-achieve-our-goal.md
 - _carousel_highlights/en/open-house.md
