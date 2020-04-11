@@ -7,6 +7,6 @@ hide_from_carousel: false
 lang: es
 order: 6
 always_show: true
-
+creation_date: 2020-04-10T12:00:00.000+00:00
 ---
 La violencia es un problema social que obstaculiza la equidad al impedir que la persona viva en un entorno social que propicie su desarrollo personal y social. La violencia contra los niños y niñas incluye el maltrato físico y mental, el abandono o tratamiento negligente, la explotación y el abuso sexual.

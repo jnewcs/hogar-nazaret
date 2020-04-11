@@ -10,7 +10,20 @@
     <div class="clickable" id="next-button">&#8250;</div>
   </div>
   <div id="carousel-container">
+    <!-- 15768000 is 6 months in seconds -->
+    {% assign timeframe = 15768000 %}
+    {% assign six_months_in_seconds = "now" | date: "%s" | minus: timeframe | to_integer  %}
+
     {% for highlight in related %}
+      {% assign highlight_creation_date_in_seconds = highlight.creation_date | date: "%s" | to_integer %}
+
+      {% if highlight_creation_date_in_seconds < six_months_in_seconds %}
+        {% unless highlight.always_show %}
+          <!-- If the highlight is older than 6 months and not marked as always show, we hide it -->
+          {% continue %}
+        {% endunless %}
+      {% endif%}
+
       {% if highlight.hide_from_carousel %}
         {% continue %}
       {% else %}

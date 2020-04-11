@@ -7,6 +7,6 @@ hide_from_carousel: false
 lang: es
 order: 2
 always_show: true
-
+creation_date: 2016-04-10T12:00:00.000+00:00
 ---
 Nuestra misión es ofrecer hogar seguro, atención personal, alimentación, transportación, servicios médicos, educación, recreación, ayuda social y psicológica a niños y niñas víctimas de maltrato. Ante todo, en nuestro Hogar los niños reciben mucho AMOR.
