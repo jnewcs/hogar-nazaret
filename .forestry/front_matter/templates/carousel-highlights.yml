@@ -70,7 +70,7 @@ fields:
     date_format: MM/DD/YYYY
     time_format: 
     display_utc: false
-  hidden: true
+  hidden: false
   default: now
 pages:
 - _carousel_highlights/en/giving-tuesday-pr-help-us-to-achieve-our-goal.md
