@@ -9,6 +9,18 @@ fields:
     of the banner image
   config:
     required: true
+- name: creation_date
+  type: datetime
+  label: Creation Date
+  description: Creation date for the highlight. We do not display this field anywhere,
+    but it is used to automatically hide this highlight 6 months after the creation
+    date unless always show is marked
+  config:
+    required: true
+    date_format: MM/DD/YYYY
+    time_format: 
+    display_utc: false
+  hidden: false
 - type: text
   name: link_text
   label: link_text
@@ -58,15 +70,5 @@ fields:
   default: es
   config:
     required: true
-- name: creation_date
-  type: datetime
-  label: Creation Date
-  description: ''
-  config:
-    required: true
-    date_format: MM/DD/YYYY
-    time_format: 
-    display_utc: false
-  hidden: true
 pages:
 - _carousel_highlights/es/casa-abierta-para-ti.md
