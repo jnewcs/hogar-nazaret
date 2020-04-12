@@ -32,16 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
   //
   var carouselContainer = document.getElementById('carousel-container');
   if (carouselContainer) {
-    var lazyLoad = document.body.clientWidth > 768;  // only lazy-load in desktop
-    var images = Array.prototype.slice.call(document.querySelectorAll('.carousel-image'), 0);
-    if (!lazyLoad) {
-      // Lazy loading in mobile is whack. Here we manually set the image's src to make sure
-      // our carousel images load
-      images.forEach(image => {
-        image.src = image.dataset.src;
-      });
-    }
-
     var highlightCarousel = tns({
       container: '#carousel-container',
       items: 1,
@@ -55,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       loop: false,
       controls: true,
       controlsContainer: document.getElementById('controls-container'),
-      lazyload: lazyLoad,
+      lazyload: true,
       arrowKeys: false,
       onInit: () => {
         var highlights = Array.prototype.slice.call(document.querySelectorAll('.carousel-highlight-container'), 0);
@@ -64,6 +54,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       }
     });
+
+    // On mobile, we need to manually adjust the height
+    var indexChangedHandler = function (_info, _eventName) {
+      highlightCarousel.updateSliderHeight()
+    }
+    highlightCarousel.events.on('indexChanged', indexChangedHandler);
 
     var autoplayButton = document.getElementById('autoplay-button');
     if (highlightCarousel && autoplayButton) {
