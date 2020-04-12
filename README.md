@@ -94,3 +94,5 @@ bundle exec jekyll serve --drafts --future --unpublished --port 8080 --host 0.0.
 1. To standardize file configuration (tabs vs. spaces, newlines at the end of files), we use [EditorConfig](https://editorconfig.org/)
     - For a lot of text editors, you can install the EditorConfig extension and it will automatically configure any file you add or change
     - It will do things like adding an empty line to the end of the file or trimming whitespace from the end of a line.
+
+2. We use Tiny Slider for our Highlight and News carousels: [Link to Github](https://github.com/ganlanyuan/tiny-slider)

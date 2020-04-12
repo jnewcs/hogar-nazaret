@@ -158,34 +158,6 @@ a.button.is-secondary, button.is-secondary {
 .carousel-slide {
   height: 55vh;
 }
-#carousel-container-ow {
-  button[data-action="stop"], button[data-action="start"] {
-    opacity: 0.3;
-    box-sizing: border-box;
-    border-color: transparent transparent transparent #202020;
-    background-color: transparent;
-    transition: 100ms all ease;
-    will-change: border-width;
-    cursor: pointer;
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    z-index: 2;
-    &:hover {
-      opacity: 0.8;
-    }
-  }
-  button[data-action="start"] {
-    height: 18px;
-    border-style: solid;
-    border-width: 9px 0 9px 17px;
-  }
-  button[data-action="stop"] {
-    height: 20px;
-    border-style: double;
-    border-width: 0 0 0 17px;
-  }
-}
 #controls-container {
   position: absolute;
   width: calc(100% - 20px);
@@ -194,6 +166,32 @@ a.button.is-secondary, button.is-secondary {
   margin-top: -22.5px;
   z-index: 2;
   outline: none;
+}
+#autoplay-button[data-action="stop"], #autoplay-button[data-action="start"] {
+  opacity: 0.3;
+  box-sizing: border-box;
+  border-color: transparent transparent transparent #202020;
+  background-color: transparent;
+  transition: 100ms all ease;
+  will-change: border-width;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+#autoplay-button[data-action="start"] {
+  height: 18px;
+  border-style: solid;
+  border-width: 9px 0 9px 17px;
+}
+#autoplay-button[data-action="stop"] {
+  height: 20px;
+  border-style: double;
+  border-width: 0 0 0 17px;
 }
 
 /* Masonry Grid */
@@ -223,6 +221,10 @@ a.button.is-secondary, button.is-secondary {
 .modal-content {
   z-index: 1;
 }
+  #masonry-image-modal-highlight {
+    max-height: 90vh;
+    width: auto !important;
+  }
 #masonry-image-count {
   position: absolute;
   top: 20px;
@@ -469,6 +471,9 @@ a.button.is-secondary, button.is-secondary {
   #image-modal-controls {
     bottom: 20px;
     top: initial;
+  }
+  #masonry-image-modal-highlight {
+    max-height: 75vh;
   }
 }
 

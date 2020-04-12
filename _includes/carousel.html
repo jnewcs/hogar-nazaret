@@ -9,6 +9,7 @@
     <div class="clickable" id="prev-button">&#8249;</div>
     <div class="clickable" id="next-button">&#8250;</div>
   </div>
+  <div id="autoplay-button" data-action="stop"></div>
   <div id="carousel-container">
     <!-- 15768000 is 6 months in seconds -->
     {% assign timeframe = 15768000 %}
@@ -29,7 +30,7 @@
       {% else %}
         <div class="carousel-highlight-container {% unless forloop.first %}is-hidden{% endunless %}">
           <div class="columns is-gapless carousel-slide">
-            <div class="column is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
+            <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
               <img
                 class="carousel-image tns-lazy-img"
                 data-src="{{ highlight.banner_image | relative_url }}"

@@ -24,10 +24,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  /* Code for Carousel */
+  /*
+   * Code for Main Highlight Carousel
+   * We use Tiny Slider for our Carousels:
+   * https://github.com/ganlanyuan/tiny-slider
+   */
+  //
   var carouselContainer = document.getElementById('carousel-container');
   if (carouselContainer) {
-    tns({
+    var highlightCarousel = tns({
       container: '#carousel-container',
       items: 1,
       slideBy: 'page',
@@ -40,17 +45,58 @@ document.addEventListener('DOMContentLoaded', () => {
       loop: false,
       controls: true,
       controlsContainer: document.getElementById('controls-container'),
-      autoplay: true,
-      autoplayTimeout: 10000,
-      autoplayText: ['', ''],
       lazyload: true,
-      onInit: function() {
+      arrowKeys: false,
+      onInit: () => {
         var highlights = Array.prototype.slice.call(document.querySelectorAll('.carousel-highlight-container'), 0);
         highlights.forEach(highlight => {
           highlight.classList.remove('is-hidden');
         });
       }
     });
+
+    var autoplayButton = document.getElementById('autoplay-button');
+    if (highlightCarousel && autoplayButton) {
+      // Manually setup autoplay for main highlight carousel
+      var turnOffAutoPlay = function() {
+        clearInterval(interval);
+        autoplayButton.dataset.action = 'start';
+      };
+
+      var interval;
+      var setAutoPlay = function() {
+        interval = setInterval(() => {
+          highlightCarousel.goTo('next');
+
+          var info = highlightCarousel.getInfo();
+          if (info.slideCount === info.displayIndex) {
+            // This is the last slide, turn off autoplay
+            turnOffAutoPlay();
+          }
+        }, 7500);
+      };
+      setAutoPlay();
+
+      autoplayButton.addEventListener('click', () => {
+        var currentAction = autoplayButton.dataset.action;
+        if (currentAction === 'stop') {
+          turnOffAutoPlay();
+        } else {
+          setAutoPlay();
+          autoplayButton.dataset.action = 'stop';
+        }
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.keyCode === 37) {
+          turnOffAutoPlay();
+          highlightCarousel.goTo('prev');  // left-arrow
+        } else if (event.keyCode === 39) {
+          turnOffAutoPlay();
+          highlightCarousel.goTo('next'); // right-arrow
+        }
+      });
+    }
   }
 
   /* Code for News Carousel */
@@ -75,8 +121,13 @@ document.addEventListener('DOMContentLoaded', () => {
       speed: 400,
       mouseDrag: true,
       nav: false,
+      loop: true,
       controls: false,
       autoHeight: true,
+      autoplay: true,
+      autoplayTimeout: 15000,
+      autoplayText: ['', ''],
+      autoplayButtonOutput: false,
       lazyload: true
     });
   }
