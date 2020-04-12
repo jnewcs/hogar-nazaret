@@ -453,6 +453,9 @@ a.button.is-secondary, button.is-secondary {
   .carousel-text {
     padding: 1em 2.5rem 3rem 2.5rem;
   }
+  .carousel-image {
+    min-height: 30vh;
+  }
   #post-side-by-side-layout-container {
     flex-direction: column;
   }
