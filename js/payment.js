@@ -105,9 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
             label: label
           }});
         });
-      } else {
-        var divider = document.getElementById('payment-divider');
-        divider.style.display = 'none';
       }
     });
   }

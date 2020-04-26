@@ -1,0 +1,44 @@
+<section class="pt-2">
+  <div class="container">
+    <div class="columns">
+      <div
+        class="column is-one-third"
+        id="post-side-by-side-layout-image"
+        alt="{{ site.data.languages[page.lang].give_a_hug.call_to_action }}"
+        style="background: url('/uploads/give_a_hug/give_heart.jpeg') center center; background-size: contain; background-repeat: no-repeat"
+      >
+      </div>
+
+      <div class="column is-two-thirds">
+        <div class="card">
+          <div class="card-content">
+            <h2 class="is-size-2">
+              BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET
+            </h2>
+            <p class="pb-2">
+              {{ site.data.languages[page.lang].give_a_hug.description }}
+            </p>
+
+            <p class="title">
+              <span class="has-text-secondary">200 {{ site.data.languages[page.lang].give_a_hug.hugs }}</span> / <span>1000</span>
+            </p>
+
+            <progress class="progress is-medium" value="25" max="100">15%</progress>
+
+            <div class="has-text-centered">
+              <button class="button is-medium is-primary">
+                {{ site.data.languages[page.lang].give_a_hug.call_to_action }}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pb-2">
+  <div class="container content-container">
+
+  </div>
+</section>
