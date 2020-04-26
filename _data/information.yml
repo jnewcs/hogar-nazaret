@@ -9,5 +9,7 @@ executive_director: Mrs. Frances J. Valentin
 po_box: P.O. Box 1147 Mayaguez, PR 00681-1147
 payment_request_on: true
 service_worker: false
+give_a_hug:
+  live: true
 social_media:
   facebook: https://www.facebook.com/HogarANJN
