@@ -32,6 +32,10 @@
       <link rel="alternate" hreflang="{{ spanish_post.lang }}" href="{{ spanish_post.url | relative_url }}" />
     {% endif %}
 
+    {% if site.data.information.service_worker == true %}
+      {% include register_service_worker.html %}
+    {% endif %}
+
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
 

@@ -83,10 +83,6 @@
   {{ site.data.languages[page.lang].offline_message }}
 </div>
 
-{% if site.data.information.service_worker == true %}
-  {% include register_service_worker.html %}
-{% endif %}
-
 {% if layout.lazy_load %}
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 {% endif %}
