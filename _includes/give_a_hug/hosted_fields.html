@@ -1,0 +1,24 @@
+<section
+  id="hosted-fields"
+  class="mt-2"
+  data-lang="{{ page.lang }}"
+  data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
+  data-label="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+  data-env="{{ jekyll.environment }}"
+>
+  <form>
+    <div class="fieldset">
+      <div id="hosted-fields-card-number" class="hosted-field empty"></div>
+      <div id="hosted-fields-card-expiry" class="hosted-field empty half-width"></div>
+      <div id="hosted-fields-card-cvc" class="hosted-field empty half-width"></div>
+    </div>
+
+    <button type="submit" id="hosted-fields-submit-button">
+      {{ site.data.languages[page.lang].donate.call_to_action }}
+    </button>
+  </form>
+
+  <div class="error has-text-centered mt-2 mb-2 is-hidden" role="alert">
+    <span class="notification is-danger is-light"></span>
+  </div>
+</section>

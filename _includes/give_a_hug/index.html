@@ -25,10 +25,8 @@
 
             <progress class="progress is-medium" value="25" max="100">15%</progress>
 
-            <div class="has-text-centered">
-              <button class="button is-medium is-primary">
-                {{ site.data.languages[page.lang].give_a_hug.call_to_action }}
-              </button>
+            <div>
+              {% include /give_a_hug/hosted_fields.html %}
             </div>
           </div>
         </div>

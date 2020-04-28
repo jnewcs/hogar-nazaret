@@ -1,0 +1,72 @@
+#hosted-fields.submitting {
+  .hosted-field, #hosted-fields-submit-button {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+#hosted-fields .fieldset {
+  margin: 0 15px 30px;
+  padding: 0;
+  border-style: none;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+#hosted-fields .hosted-field {
+  padding: 10px 20px 11px;
+  border: 2px solid $primary-light;
+  color: $grey-dark;
+  font-size: 16px;
+  border-radius: 20px;
+  width: 100%;
+
+  &.focus {
+    border: 2px solid $primary;
+  }
+  &.invalid {
+    border: 2px solid $red;
+  }
+}
+
+#hosted-fields .hosted-field.half-width {
+  width: calc(50% - (5px / 2));
+}
+
+#hosted-fields .hosted-field.third-width {
+  width: calc(33% - (5px / 3));
+}
+
+#hosted-fields .hosted-field + .hosted-field {
+  margin-top: 6px;
+}
+
+#hosted-fields input, #hosted-fields button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border-style: none;
+}
+
+#hosted-fields button {
+  display: block;
+  width: calc(100% - 30px);
+  height: 40px;
+  margin: 0 15px;
+  background-color: $primary-light;
+  border-radius: 20px;
+  color: #525f7f;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    color: $white-ter;
+    background-color: $primary;
+  }
+}
