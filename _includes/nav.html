@@ -8,7 +8,8 @@
   <div class="navbar-brand is-vertically-centered is-flex-end">
     <a href="{{ page.lang | relative_url }}">
       <figure class="image is-96x96" id="site-logo">
-        <img src="{{ '/uploads/logo.png' | relative_url }}">
+        {% assign logo_url = site.data.information.logo_url %}
+        <img src="{{ logo_url | relative_url }}">
       </figure>
     </a>
 
