@@ -61,20 +61,20 @@
 
             {% if site.data.information.payment_request_on == true %}
               <section
-              id="payment-form-inner-container"
-              data-lang="{{ page.lang }}"
-              data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
-              data-label="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
-              data-env="{{ jekyll.environment }}"
-            >
-              <div class="columns is-mobile is-centered">
-                <div class="column is-half">
-                  <div id="payment-request-button"></div>
+                id="payment-form-inner-container"
+                data-lang="{{ page.lang }}"
+                data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
+                data-label="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+                data-env="{{ jekyll.environment }}"
+              >
+                <div class="columns is-mobile is-centered">
+                  <div class="column is-half">
+                    <div id="payment-request-button"></div>
+                  </div>
                 </div>
-              </div>
 
-              <hr id="payment-divider" />
-            </section>
+                <hr id="payment-divider" />
+              </section>
             {% endif %}
 
             <div class="field">
