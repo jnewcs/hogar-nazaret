@@ -12,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page.auto_switch_language == true %}
       <script src="{{ '/js/language_changer.js' | relative_url }}" type="text/javascript"></script>
+    {% else %}
+      {% include woopra.html %}
     {% endif %}
 
     <link rel="shortcut icon" href="{{ '/uploads/favicon.ico' | relative_url }}">

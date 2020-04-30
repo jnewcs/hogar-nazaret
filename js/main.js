@@ -1,4 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
+  /* Woopra Tracking Helper */
+  var trackEvent = function(eventName, eventData = {}) {
+    if (!woopra || !eventName) return;
+
+    woopra.track(eventName, eventData);
+  };
+
   /* Navbar Burger Clicker */
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
@@ -155,6 +162,13 @@ document.addEventListener('DOMContentLoaded', () => {
     $modalOpeners.forEach(el => {
       el.addEventListener('click', () => {
         var target = el.dataset.target;
+        if (target === 'donation-modal') {
+          // Track clicks to open the donation modal
+          trackEvent('donation_model_open', {
+            url: window.location.pathname,
+            title: document.title
+          });
+        }
         var $target = document.getElementById(target);
         modalContainer.classList.remove('is-hidden');
         loadingContainer.classList.add('is-hidden');
@@ -173,6 +187,13 @@ document.addEventListener('DOMContentLoaded', () => {
     $modalClosers.forEach(el => {
       el.addEventListener('click', () => {
         var target = el.dataset.target;
+        if (target === 'donation-modal') {
+          // Track clicks to close the donation modal
+          trackEvent('donation_model_close', {
+            url: window.location.pathname,
+            title: document.title
+          });
+        }
         var $target = document.getElementById(target);
 
         document.documentElement.classList.remove('is-clipped');
@@ -188,6 +209,15 @@ document.addEventListener('DOMContentLoaded', () => {
     $tabs.forEach(el => {
       el.addEventListener('click', () => {
         var target = el.dataset.target;
+        if (['donate-now-content', 'sponsor-content'].indexOf(target) !== -1) {
+          // Track views on the different tabs
+          var donationType = (target === 'donate-now-content') ? 'one_time' : 'monthly_donation';
+          trackEvent('donation_model_view', {
+            donation_type: donationType,
+            url: window.location.pathname,
+            title: document.title
+          });
+        }
         var $target = document.getElementById(target);
 
         // Remove active from tabs and tab content
