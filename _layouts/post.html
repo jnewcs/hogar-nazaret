@@ -8,8 +8,10 @@ lazy_load: true
 
 {% if page.header_layout == 'side_by_side' %}
   {% include post_headers/side_by_side.html %}
-{% else if page.header_layout == 'central_title' %}
+{% elsif page.header_layout == 'central_title' %}
   {% include post_headers/central_title.html %}
+{% elsif page.header_layout == 'flyer' %}
+  {% include post_headers/flyer.html %}
 {% endif %}
 
 <div class="container content-container">
@@ -27,32 +29,30 @@ lazy_load: true
     <div class="mt-2 masonry-grid">
       {% for photo in page.photo_grid %}
         <div class="brick">
-          <img class="masonry-image clickable" src="{{ photo | relative_url }}" />
+          <img class="masonry-image post-image-modal-image clickable" src="{{ photo | relative_url }}" />
         </div>
       {% endfor %}
     </div>
 
-    <div class="modal" id="masonry-image-modal">
+    <div class="modal" id="post-image-modal">
       <div class="modal-background"></div>
-      <div aria-label="count" class="has-text-white" id="masonry-image-count"></div>
+      <div aria-label="count" class="has-text-white modal-image-count" id="post-image-modal-count"></div>
       <div class="is-flex-container is-spaced-between has-text-centered" id="image-modal-controls">
-        <div class="clickable" id="prev-button">&#8249;</div>
-        <div class="clickable" id="next-button">&#8250;</div>
+        <div class="clickable prev-button" id="post-image-modal-prev-button">&#8249;</div>
+        <div class="clickable next-button" id="post-image-modal-next-button">&#8250;</div>
       </div>
 
       <div class="modal-content">
         <p class="image is-flex-container is-horizontally-centered">
-          <img id="masonry-image-modal-highlight">
+          <img class="modal-highlight" id="post-image-modal-highlight">
         </p>
       </div>
 
-      <button class="modal-close is-large" aria-label="close" id="masonry-image-close"></button>
+      <button class="modal-close modal-image-close is-large" aria-label="close" id="post-image-modal-close"></button>
       {% if page.photo_grid.first %}
-        <div style="background-image: url('{{ page.photo_grid.first | relative_url }}')" id="masonry-image-modal-blur-background"></div>
+        <div style="background-image: url('{{ page.photo_grid.first | relative_url }}')" class="blur-background" id="post-image-modal-blur-background"></div>
       {% endif %}
     </div>
-
-    <script src="{{ "/js/image_modal.js" | relative_url }}" type="text/javascript"></script>
   {% endif %}
 
   <hr />

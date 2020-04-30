@@ -5,7 +5,7 @@
 <div class="has-background-white-ter">
   <div class="container content-container has-text-centered" id="flyer-layout-container">
     <img
-      class="masonry-image clickable"
+      class="masonry-image flyer-image-modal-image clickable"
       src="{{ page.banner_image }}"
       alt="{{ page.banner_image_alt }}"
       style="height: {{ page.banner_image_height }}px"
@@ -55,16 +55,14 @@
   </div>
 </div>
 
-<div class="modal" id="masonry-image-modal">
+<div class="modal" id="flyer-image-modal">
   <div class="modal-background"></div>
 
   <div class="modal-content">
-    <p class="image">
-      <img id="masonry-image-modal-highlight">
+    <p class="image is-flex-container is-horizontally-centered"">
+      <img class="modal-highlight" id="flyer-image-modal-highlight">
     </p>
   </div>
 
-  <button class="modal-close is-large" aria-label="close" id="masonry-image-close"></button>
+  <button class="modal-close modal-image-close is-large" aria-label="close" id="flyer-image-modal-close"></button>
 </div>
-
-<script src="{{ "/js/image_modal.js" | relative_url }}" type="text/javascript"></script>

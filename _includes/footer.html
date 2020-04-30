@@ -83,11 +83,28 @@
   {{ site.data.languages[page.lang].offline_message }}
 </div>
 
+{% assign needs_link = site.data.information.needs_url[page.lang] %}
+{% if (needs_link contains "png") or (needs_link contains "jpg") %}
+  <div class="modal" id="needs-modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <p class="image is-flex-container is-horizontally-centered"">
+        <img class="modal-highlight" id="needs-modal-highlight">
+      </p>
+    </div>
+
+    <button class="modal-close modal-image-close is-large" aria-label="close" id="needs-modal-close"></button>
+  </div>
+{% endif %}
+
+
 {% if layout.lazy_load %}
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 {% endif %}
-<script src="{{ "/js/main.js" | relative_url }}" type="text/javascript"></script>
+<script src="{{ '/js/main.js' | relative_url }}" type="text/javascript"></script>
 <script src="https://js.stripe.com/v3/"></script>
-<script src="{{ "/js/payment.js" | relative_url }}" type="text/javascript"></script>
+<script src="{{ '/js/payment.js' | relative_url }}" type="text/javascript"></script>
+<script src="{{ '/js/image_modal.js' | relative_url }}" type="text/javascript"></script>
 </body>
 </html>

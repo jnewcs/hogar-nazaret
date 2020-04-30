@@ -9,7 +9,7 @@ lazy_load: true
 {% if page.header_image %}
   {% if page.header_layout == 'blur' %}
     {% include page_headers/blur.html %}
-  {% else if page.header_layout == 'image_with_central_title' %}
+  {% elsif page.header_layout == 'image_with_central_title' %}
     {% include page_headers/image_with_central_title.html %}
   {% endif %}
 {% else %}

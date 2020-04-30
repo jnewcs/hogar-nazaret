@@ -10,5 +10,8 @@ po_box: P.O. Box 1147 Mayaguez, PR 00681-1147
 payment_request_on: true
 service_worker: false
 logo_url: "/uploads/anniversary_25_logo.png"
+needs_url:
+  en: "/uploads/needs_july_2019_en.pdf"
+  es: "/uploads/needs_april_2020_es.jpg"
 social_media:
   facebook: https://www.facebook.com/HogarANJN

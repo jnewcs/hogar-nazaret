@@ -216,22 +216,23 @@ a.button.is-secondary, button.is-secondary {
 }
 
 /* Image Modal */
-#masonry-image-count,
-#masonry-image-close,
+.modal-image-count,
+.modal-image-close,
 .modal-content {
   z-index: 1;
 }
-  #masonry-image-modal-highlight {
-    max-height: 90vh;
-    width: auto !important;
-  }
-#masonry-image-count {
+.modal-highlight {
+  max-height: 90vh;
+  width: auto !important;
+  align-self: center;
+}
+.modal-image-count {
   position: absolute;
   top: 20px;
   left: 20px;
   font-size: 24px;
 }
-#masonry-image-modal-blur-background, .blur-background {
+.blur-background {
   background-size: cover;
   filter: blur(40px) brightness(50%);
   position: absolute;
@@ -249,10 +250,10 @@ a.button.is-secondary, button.is-secondary {
   margin-top: -22.5px;
   z-index: 2;
 
-  #prev-button { margin-left: 5px }
-  #next-button { margin-right: 5px }
+  .prev-button { margin-left: 5px }
+  .next-button { margin-right: 5px }
 }
-#prev-button, #next-button {
+.prev-button, .next-button {
   color: black;
   background-color: gainsboro;
   opacity: 0.20;
@@ -469,13 +470,13 @@ a.button.is-secondary, button.is-secondary {
   .prev-next-navigation-container {
     flex-direction: column;
   }
-  #masonry-image-count { top: 10px; }
-  #masonry-image-close { top: 15px; }
+  .modal-image-count { top: 10px; }
+  .modal-image-close { top: 15px; }
   #image-modal-controls {
     bottom: 20px;
     top: initial;
   }
-  #masonry-image-modal-highlight {
+  .modal-highlight {
     max-height: 75vh;
   }
 }

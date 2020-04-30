@@ -47,9 +47,9 @@ fields:
     - contain
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+      section:
+      file:
+      path:
   label: banner_image_style
 - name: header_layout
   type: select
@@ -59,16 +59,19 @@ fields:
     options:
     - central_title
     - side_by_side
+    - flyer
     source:
       type: simple
-      section: 
-      file: 
-      path: 
+      section:
+      file:
+      path:
   label: header_layout
   description: 'Determines the header layout on the post''s page. There are currently
-    two options: side_by_side and central_title. The side_by_side layout includes
+    three options: side_by_side, central_title, and flyer. The side_by_side layout includes
     the post''s title on the left with the banner image to the right. The central_title
-    layout just has the post''s title with the published date below it.'
+    layout just has the post''s title with the published date below it. The flyer layout
+    includes the banner image followed by the event’s title and the timing information
+    (day of the week, date, and time).'
 - type: boolean
   name: has_photo_grid
   label: has_photo_grid
