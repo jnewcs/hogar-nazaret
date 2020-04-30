@@ -29,8 +29,8 @@ en:
       enter_recurring_amount: Monthly amount
       type:
         now: Donate Now
-        sponsor: Sponsor
-      padrinos_callout: Learn more about the Padrinos program
+        sponsor: Donate Monthly
+      padrinos_callout: Learn more about the Padrinos and Madrinas program
       processing_payment: Processing your payment
       return: Return
       retry: Retry
@@ -127,13 +127,13 @@ es:
     item_name: Donacion - Hogar Albergue para Ninos Jesus de Nazaret
     one_time_amount_label: Donación única - Hogar Albergue para Niños Jesús de Nazaret
     modal:
-      title: Escoja el tipo de su donación
-      enter_one_time_amount: Escriba el monto de su donación
-      enter_recurring_amount: Donación mensual
+      title: Escoge el tipo de tu donativo
+      enter_one_time_amount: Escribe la cantidad de tu donativo
+      enter_recurring_amount: Donativo mensual
       type:
         now: Donar ahora
-        sponsor: Apadrinar
-      padrinos_callout: Información sobre el Programa de Padrinos
+        sponsor: Donar mensualmente
+      padrinos_callout: Información sobre el Programa de Padrinos y Madrinas
       processing_payment: Procesamiento de su donación
       return: Regresa
       retry: Intente de nuevo

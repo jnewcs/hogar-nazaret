@@ -1,5 +1,5 @@
 ---
-title: The Padrinos Program
+title: The Padrinos and Madrinas Program
 header_layout: simple
 layout: page
 lang: en
