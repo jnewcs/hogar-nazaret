@@ -1,7 +1,7 @@
 <meta property="og:title" content="{{ page.title }}" />
-<meta property="og:url" content="{{ page.url | relative_url }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
 {% if page.banner_image %}
-  <meta property="og:image" content="{{ page.banner_image | relative_url }}" />
+  <meta property="og:image" content="{{ page.banner_image | absolute_url }}" />
 {% endif %}
 
 {% if include.type == 'article' %}

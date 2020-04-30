@@ -24,7 +24,7 @@
     {% assign translated_pages = site.pages | where: "lang_ref", page.lang_ref %}
     {% for translated_page in translated_pages %}
       {% unless translated_page.lang == page.lang %}
-        <link rel="alternate" hreflang="{{ translated_page.lang }}" href="{{ translated_page.url | relative_url }}" />
+        <link rel="alternate" hreflang="{{ translated_page.lang }}" href="{{ translated_page.url | absolute_url }}" />
       {% endunless %}
     {% endfor %}
 
@@ -32,12 +32,12 @@
       {% if page.lang == 'en' %}
         {% assign spanish_post = site.noticias | where:"lang_ref", page.lang_ref | first %}
         {% if spanish_post %}
-          <link rel="alternate" hreflang="es" href="{{ spanish_post.url | relative_url }}" />
+          <link rel="alternate" hreflang="es" href="{{ spanish_post.url | absolute_url }}" />
         {% endif %}
       {% else %}
         {% assign english_post = site.posts | where:"lang_ref", page.lang_ref | first %}
         {% if english_post %}
-          <link rel="alternate" hreflang="en" href="{{ english_post.url | relative_url }}" />
+          <link rel="alternate" hreflang="en" href="{{ english_post.url | absolute_url }}" />
         {% endif %}
       {% endif %}
 
@@ -46,12 +46,12 @@
       {% if page.lang == 'en' %}
         {% assign spanish_event = site.proximos_eventos | where:"lang_ref", page.lang_ref | first %}
         {% if spanish_event %}
-          <link rel="alternate" hreflang="{{ spanish_event.lang }}" href="{{ spanish_event.url | relative_url }}" />
+          <link rel="alternate" hreflang="{{ spanish_event.lang }}" href="{{ spanish_event.url | absolute_url }}" />
         {% endif %}
       {% else %}
         {% assign english_event = site.upcoming_events | where:"lang_ref", page.lang_ref | first %}
         {% if english_event %}
-          <link rel="alternate" hreflang="{{ english_event.lang }}" href="{{ english_event.url | relative_url }}" />
+          <link rel="alternate" hreflang="{{ english_event.lang }}" href="{{ english_event.url | absolute_url }}" />
         {% endif %}
       {% endif %}
 
