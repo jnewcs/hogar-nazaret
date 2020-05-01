@@ -1,12 +1,30 @@
+<div class="control">
+  <label class="radio">
+    <input type="radio" name="give_a_hug_donation_amount" value="5" checked>
+    $5
+  </label>
+  <label class="radio">
+    <input type="radio" name="give_a_hug_donation_amount" value="10">
+    $10
+  </label>
+  <label class="radio">
+    <input type="radio" name="give_a_hug_donation_amount" value="15">
+    $15
+  </label>
+</div>
+
 <section
   id="hosted-fields"
   class="mt-2"
   data-lang="{{ page.lang }}"
   data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
-  data-label="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+  data-description="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
   data-env="{{ jekyll.environment }}"
 >
   <form>
+    <div class="fieldset">
+      <input id="hosted-fields-email" class="field" type="email" placeholder="Email" required autocomplete="email">
+    </div>
     <div class="fieldset">
       <div id="hosted-fields-card-number" class="hosted-field empty"></div>
       <div id="hosted-fields-card-expiry" class="hosted-field empty half-width"></div>
@@ -22,3 +40,12 @@
     <span class="notification is-danger is-light"></span>
   </div>
 </section>
+
+<div class="container content-container has-background-white has-text-centered is-hidden" id="hosted-fields-loading-container">
+  <div style="margin-top: 30px; margin-bottom: 30px;">
+    <progress class="progress is-large is-info" max="100"></progress>
+    <h3 class="is-size-3 has-text-centered">
+      {{ site.data.languages[page.lang].donate.modal.processing_payment }}
+    </h3>
+  </div>
+</div>

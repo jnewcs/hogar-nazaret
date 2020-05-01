@@ -3,9 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (formContainer) {
     var stripeKey = formContainer.dataset.key;
     var lang = formContainer.dataset.lang;
-    var label = formContainer.dataset.label;
+    var description = formContainer.dataset.description;
     var env = formContainer.dataset.env;
-    var initialAmount = parseInt(10) * 100;  // TODO: Change this to an actual input field
 
     var stripe = Stripe(stripeKey, { locale: lang });
     var elements = stripe.elements();
@@ -144,7 +143,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Show a loading screen...
+        const loadingContainer = document.getElementById('hosted-fields-loading-container');
+        loadingContainer.classList.remove('is-hidden');
         formContainer.classList.add('submitting');
+        formContainer.classList.add('is-hidden');
 
         // Disable all inputs.
         disableInputs();
@@ -153,14 +155,46 @@ document.addEventListener('DOMContentLoaded', () => {
         // from the Element group in order to create a token. We can also pass
         // in the additional customer data we collected in our form.
         stripe.createToken(elements[0]).then(function(result) {
-          // Stop loading!
-          formContainer.classList.remove('submitting');
-
           if (result.token) {
-            // If we received a token, show the token ID.
-            formContainer.classList.add('submitted');
+            // Send the token to our server to charge it :)
+            var finalAmountinDollars = document.querySelector('input[name="give_a_hug_donation_amount"]:checked').value;
+            var finalAmount = parseInt(finalAmountinDollars) * 100;
+            var requestBody = {
+              amount: finalAmount,
+              stripe_token: result.token.id,
+              email: '',  // Only present when using Apple Pay/Google Pay
+              description: description,
+              lang: lang,
+              env: env
+            };
+            const failureHandler = function() {
+              // Report to the browser that the payment failed, prompting it to
+              // re-show the payment interface
+              loadingContainer.classList.add('is-hidden');
+              formContainer.classList.remove('submitting');
+              formContainer.classList.remove('is-hidden');
+            };
+
+            fetch('https://boiling-earth-96925.herokuapp.com/payments', {
+              method: 'POST',
+              body: JSON.stringify(requestBody),
+              headers: {'content-type': 'application/json'},
+            })
+            .then(function(response) {
+              if (response.ok) {
+                // Report to the browser that the payment was successful, prompting
+                // it to close the browser payment interface.
+                loadingContainer.classList.add('is-hidden');
+              } else {
+                failureHandler();
+              }
+            })
+            .catch(function() {
+              failureHandler();
+            });
           } else {
-            // Otherwise, un-disable inputs.
+            failureHandler();
+            // In case of an error, un-disable inputs
             enableInputs();
           }
         });
