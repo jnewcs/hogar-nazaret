@@ -9,7 +9,7 @@ var ASSETS_CACHE_DATA = [
   '/css/main.css',
   '/uploads/social_media/facebook.png',
   '/uploads/favicon.ico',
-  '/uploads/logo.png'
+  '{{ site.data.information.logo_url }}'
 ];
 
 // Dynamically cache JS & CSS assets from site

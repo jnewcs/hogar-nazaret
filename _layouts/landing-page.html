@@ -116,7 +116,8 @@ layout: default
                   </small>
                 </div>
 
-                {% include needs_link.html %}
+                {% assign link_text = site.data.languages[page.lang].needs %}
+                {% include needs_link.html link_text=link_text %}
               </article>
             </div>
 

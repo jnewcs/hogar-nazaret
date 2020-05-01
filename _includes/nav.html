@@ -3,12 +3,14 @@
 {% endcomment %}
 
 {% assign current_url = page.url | remove:'index.html' %}
+{% assign link_text = site.data.languages[page.lang].needs %}
 
 <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
   <div class="navbar-brand is-vertically-centered is-flex-end">
     <a href="{{ page.lang | relative_url }}">
       <figure class="image is-96x96" id="site-logo">
-        <img src="{{ '/uploads/logo.png' | relative_url }}">
+        {% assign logo_url = site.data.information.logo_url %}
+        <img src="{{ logo_url | relative_url }}">
       </figure>
     </a>
 
@@ -16,7 +18,7 @@
       <div class="mobile-nav-call-to-actions-{{ page.lang }} is-hidden-desktop is-flex-container is-vertically-centered">
         {% include facebook_link.html %}
 
-        {% include needs_link.html %}
+        {% include needs_link.html link_text=link_text %}
 
         <a class="button modal-opener is-secondary ml-tiny" data-target="donation-modal" href="#">
           {{ site.data.languages[page.lang].donate.call_to_action }}
@@ -87,12 +89,12 @@
         {% endif %}
       {% endfor %}
 
-      <div class="navbar-item is-hidden-mobile">
+      <div class="navbar-item is-hidden-touch">
         <div class="is-flex-container is-vertically-centered">
           {% include facebook_link.html %}
 
           {% unless page.hide_nav_buttons == true %}
-            {% include needs_link.html link_class="button mr-tiny" %}
+            {% include needs_link.html link_class="button mr-tiny" link_text=link_text %}
 
             <a class="button modal-opener is-secondary" data-target="donation-modal" href="#">
               <strong>{{ site.data.languages[page.lang].donate.call_to_action }}</strong>

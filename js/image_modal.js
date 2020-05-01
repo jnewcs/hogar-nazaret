@@ -2,7 +2,70 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Code for Image Modal */
   class ImageGallery {
     constructor(containerId) {
-      this.initData(containerId);
+      this.containerId = containerId;
+      this.container = document.getElementById(this.containerId);
+      if (!this.container) {
+        return;
+      }
+
+      this.setupEventListeners();
+      this.initData();
+    }
+
+    setupEventListeners() {
+      var prevButton = document.getElementById(this.containerId + '-prev-button');
+      if (prevButton) {
+        prevButton.addEventListener('click', function() {
+          this.switchImage('left-arrow');
+        }.bind(this), false);
+      }
+
+      var nextButton = document.getElementById(this.containerId + '-next-button');
+      if (nextButton) {
+        nextButton.addEventListener('click', function() {
+          this.switchImage('right-arrow');
+        }.bind(this), false);
+      }
+
+      var closeButton = document.getElementById(this.containerId + '-close');
+      if (closeButton) {
+        closeButton.addEventListener('click', function() {
+          this.closeImage();
+        }.bind(this), false);
+      }
+
+      // Helpful Key Codes: Left: 37, Right: 39, Escape: 27
+      document.addEventListener('keydown', function (event) {
+        if (event.keyCode === 37) {
+          this.switchImage('left-arrow');
+        } else if (event.keyCode === 39) {
+          this.switchImage('right-arrow');
+        } else if (event.keyCode === 27) {
+          this.closeImage();
+        }
+      }.bind(this), false);
+    }
+
+    initData() {
+      this.activeImage = null;
+      this.activeIndex = null;
+      var images = document.getElementsByClassName(this.containerId + '-image');
+
+      var imageData = [];
+      var imagesAdded = [];
+      for (var image of images) {
+        var imageSrc = image.src || image.dataset.src;
+        if (imagesAdded.indexOf(imageSrc) === -1) {
+          // We don't want to double add photos
+          imageData.push({ src: imageSrc });
+          imagesAdded.push(imageSrc);
+        }
+        // But we do want to always add the click handler
+        image.onclick = function (clickedImage) {
+          this.showImage(clickedImage.src || image.dataset.src);
+        }.bind(this, image);
+      }
+      this.images = imageData;
     }
 
     setActiveImage(imageSrc) {
@@ -25,17 +88,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
       this.setImage();
       this.setCount();
-      document.getElementById('masonry-image-modal').classList.add('is-active');
+      this.container.classList.add('is-active');
       document.documentElement.classList.add('is-clipped');
     }
 
     setImage() {
-      var modalHighlight = document.getElementById('masonry-image-modal-highlight');
+      var modalHighlight = document.getElementById(this.containerId + '-highlight');
       modalHighlight.src = this.activeImage.src;
     }
 
     setCount() {
-      var countElement = document.getElementById('masonry-image-count');
+      var countElement = document.getElementById(this.containerId + '-count');
       if (!countElement) return;
 
       var position = this.activeIndex + 1;
@@ -45,13 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     closeImage() {
       document.documentElement.classList.remove('is-clipped');
-      document.getElementById('masonry-image-modal').classList.remove('is-active');
+      this.container.classList.remove('is-active');
       this.activeImage = null;
       this.activeIndex = null;
     }
 
     switchImage(type) {
       if (!this.activeImage) return;
+      if (this.container.classList.value.indexOf('is-active') === -1) {
+        // CASE: this specific instance is not currently open
+        return;
+      }
 
       var direction = type === 'left-arrow' ? -1 : 1;
       let index = this.activeIndex;
@@ -66,51 +133,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
       this.showImage(this.images[index].src);
     }
-
-    initData(imageClassName) {
-      this.activeImage = null;
-      this.activeIndex = null;
-      var images = document.getElementsByClassName(imageClassName);
-
-      var imageData = [];
-      for (var image of images) {
-        imageData.push({ src: image.src });
-        image.onclick = function (clickedImage) {
-          this.showImage(clickedImage.src);
-        }.bind(this, image);
-      }
-      this.images = imageData;
-    }
-  }
-  /* Masonry Image Modal */
-  var gallery = new ImageGallery('masonry-image');
-
-  // Helpful Key Codes: Left: 37, Right: 39, Escape: 27
-  document.addEventListener('keydown', function (event) {
-    if (event.keyCode === 37) {
-      gallery.switchImage('left-arrow');
-    } else if (event.keyCode === 39) {
-      gallery.switchImage('right-arrow');
-    } else if (event.keyCode === 27) {
-      gallery.closeImage();
-    }
-  });
-
-  var prevButton = document.getElementById('prev-button');
-  if (prevButton) {
-    prevButton.addEventListener('click', function() {
-      gallery.switchImage('left-arrow');
-    });
   }
 
-  var nextButton = document.getElementById('next-button');
-  if (nextButton) {
-    nextButton.addEventListener('click', function() {
-      gallery.switchImage('right-arrow');
-    });
+  /* Image Modal on a news article page */
+  if (document.getElementById('post-image-modal')) {
+    new ImageGallery('post-image-modal');
   }
 
-  document.getElementById('masonry-image-close').addEventListener('click', function() {
-    gallery.closeImage();
-  })
+  /* Image Modal on a page with a Flyer header */
+  if (document.getElementById('flyer-image-modal')) {
+    new ImageGallery('flyer-image-modal');
+  }
+
+  /* Image Modal on a page with a needs link */
+  if (document.getElementById('needs-modal')) {
+    new ImageGallery('needs-modal');
+  }
 });

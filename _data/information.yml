@@ -11,5 +11,9 @@ payment_request_on: true
 service_worker: false
 give_a_hug:
   live: true
+logo_url: "/uploads/anniversary_25_logo.png"
+needs_url:
+  en: "/uploads/needs_july_2019_en.pdf"
+  es: "/uploads/needs_april_2020_es.jpg"
 social_media:
   facebook: https://www.facebook.com/HogarANJN

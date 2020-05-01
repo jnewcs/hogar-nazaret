@@ -37,6 +37,13 @@ fields:
   config:
     required: false
   label: PO Box
+- name: logo_url
+  type: text
+  config:
+    required: true
+  label: Logo Url
+  description: Relative path to the logo URL used on the website. Make sure to always
+    start with `/uploads
 - name: payment_request_on
   type: boolean
   label: payment_request_on

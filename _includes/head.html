@@ -12,6 +12,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page.auto_switch_language == true %}
       <script src="{{ '/js/language_changer.js' | relative_url }}" type="text/javascript"></script>
+    {% else %}
+      {% include woopra.html %}
     {% endif %}
 
     <link rel="shortcut icon" href="{{ '/uploads/favicon.ico' | relative_url }}">
@@ -21,15 +23,39 @@
     {% endcomment %}
     {% assign translated_pages = site.pages | where: "lang_ref", page.lang_ref %}
     {% for translated_page in translated_pages %}
-      <link rel="alternate" hreflang="{{ translated_page.lang }}" href="{{ translated_page.url | relative_url }}" />
+      {% unless translated_page.lang == page.lang %}
+        <link rel="alternate" hreflang="{{ translated_page.lang }}" href="{{ translated_page.url | absolute_url }}" />
+      {% endunless %}
     {% endfor %}
 
     {% if page.layout == 'post' %}
-      {% assign english_post = site.noticias | where:"lang_ref", page.lang_ref | first %}
-      {% assign spanish_post = site.posts | where:"lang_ref", page.lang_ref | first %}
+      {% if page.lang == 'en' %}
+        {% assign spanish_post = site.noticias | where:"lang_ref", page.lang_ref | first %}
+        {% if spanish_post %}
+          <link rel="alternate" hreflang="es" href="{{ spanish_post.url | absolute_url }}" />
+        {% endif %}
+      {% else %}
+        {% assign english_post = site.posts | where:"lang_ref", page.lang_ref | first %}
+        {% if english_post %}
+          <link rel="alternate" hreflang="en" href="{{ english_post.url | absolute_url }}" />
+        {% endif %}
+      {% endif %}
 
-      <link rel="alternate" hreflang="{{ english_post.lang }}" href="{{ english_post.url | relative_url }}" />
-      <link rel="alternate" hreflang="{{ spanish_post.lang }}" href="{{ spanish_post.url | relative_url }}" />
+      {% include og_page_tags.html type='article' %}
+    {% elsif page.layout == 'upcoming_event' %}
+      {% if page.lang == 'en' %}
+        {% assign spanish_event = site.proximos_eventos | where:"lang_ref", page.lang_ref | first %}
+        {% if spanish_event %}
+          <link rel="alternate" hreflang="{{ spanish_event.lang }}" href="{{ spanish_event.url | absolute_url }}" />
+        {% endif %}
+      {% else %}
+        {% assign english_event = site.upcoming_events | where:"lang_ref", page.lang_ref | first %}
+        {% if english_event %}
+          <link rel="alternate" hreflang="{{ english_event.lang }}" href="{{ english_event.url | absolute_url }}" />
+        {% endif %}
+      {% endif %}
+
+      {% include og_page_tags.html type='event' %}
     {% endif %}
 
     {% if site.data.information.service_worker == true %}

@@ -1,0 +1,10 @@
+<meta property="og:title" content="{{ page.title }}" />
+<meta property="og:url" content="{{ page.url | absolute_url }}" />
+{% if page.banner_image %}
+  <meta property="og:image" content="{{ page.banner_image | absolute_url }}" />
+{% endif %}
+
+{% if include.type == 'article' %}
+  <meta property="og:type" content="article" />
+  <meta property="article:published_time" content="{{ page.date | date: '%Y/%m/%d' }}">
+{% endif %}

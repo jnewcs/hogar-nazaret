@@ -1,19 +1,24 @@
-{% if page.lang == 'en' %}
-  {% assign needs_link = '/uploads/2019/needs/July/en.pdf' %}
-{% else %}
-  {% assign needs_link = '/uploads/2019/needs/July/es.pdf' %}
-{% endif %}
-
 {% if include.link_class %}
   {% assign link_class = include.link_class %}
 {% else %}
   {% assign link_class = 'button' %}
 {% endif %}
 
-<a class="{{ link_class }}" target="_blank" rel="noreferrer" href="{{ needs_link | relative_url }}">
-  {% if include.link_text %}
+{% assign needs_link = site.data.information.needs_url[page.lang] %}
+{% if (needs_link contains "png") or (needs_link contains "jpg") %}
+  <button
+    class="needs-modal-image {{ link_class }}"
+    data-src="{{ needs_link | relative_url }}"
+  >
     {{ include.link_text }}
-  {% else %}
-    {{ site.data.languages[page.lang].needs }}
-  {% endif %}
-</a>
+  </button>
+{% else %}
+  <a
+    class="{{ link_class }}"
+    target="_blank"
+    rel="noreferrer"
+    href="{{ needs_link | relative_url }}"
+  >
+    {{ include.link_text }}
+  </a>
+{% endif %}
