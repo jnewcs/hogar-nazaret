@@ -85,7 +85,7 @@ Configuration file: /Users/jxnewcomb/personal_repos/hogar-nazaret/_config.yml
   Server running... press ctrl-c to stop.
 ```
 
-If it works properly, you now can preview the site at http://127.0.0.1:4000. If the `serve` command is still running and you make a change, you can see that change reflected locally at http://127.0.0.1:4000 once the build finishes.
+If it works properly, you now can preview the site at http://127.0.0.1:4000. If the `serve` command is still running and you make a change, you can see that change reflected locally at http://127.0.0.1:4000 once the build finishes. Every time you change something, it might take `7+` seconds for the build to finish and for you to be able to see the change in the browser.
 
 ### Preview content locally to mimic "Staging" environment
 We currently use [Forestry.io](https://forestry.io/) as our content management system (CMS). Within our CMS, we can preview content before commiting the changes to the `master` branch which will change https://hogarjesusdenazaret.org. We call this our "Staging" environment. If you want to view the "Staging" environment locally, you can run this command:
@@ -97,10 +97,12 @@ bundle exec jekyll serve --drafts --future --unpublished --port 8080 --host 0.0.
 ```
 
 # Development Notes
-1. To standardize file configuration (tabs vs. spaces, newlines at the end of files), we use [EditorConfig](https://editorconfig.org/)
+1. We use [Bulma](https://bulma.io) as our CSS Framework. It is a lightweight framework based on Flexbox and does not bring in any JS.
+
+2. To standardize file configuration (tabs vs. spaces, newlines at the end of files), we use [EditorConfig](https://editorconfig.org/)
     - For a lot of text editors, you can install the EditorConfig extension and it will automatically configure any file you add or change
     - It will do things like adding an empty line to the end of the file or trimming whitespace from the end of a line.
 
-2. We use Tiny Slider for our Highlight and News carousels: [Link to Github](https://github.com/ganlanyuan/tiny-slider)
+3. We use Tiny Slider for our Highlight and News carousels: [Link to Github](https://github.com/ganlanyuan/tiny-slider)
 
-3. To track page views and event funnels, we use [Woopra](https://www.woopra.com).
+4. To track page views and event funnels, we use [Woopra](https://www.woopra.com).
