@@ -8,26 +8,32 @@ The following instructions are meant for people who want to build the site local
 
 Before you can build the site locally, you need a few things setup:
 
-1. Git setup on your computer
-    - [Link to Installation Guide](https://help.github.com/en/github/getting-started-with-github/set-up-git)
-
-2. A GitHub account
+1. A GitHub account
     - You can create an account by going to [www.github.com](https://www.github.com) and signing up
+    - You also need to be a collaborator for this repo. Please contact j.newcomb@outlook.com to request access
 
-3. An SSH Key Pair attached to your GitHub account
-    - If you haven't done so already, you should [generate a personal ssh key pair](https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and register it with your GitHub account.
-    - I usually take all the default values (just keep hitting enter until it completes) when creating the SSH key pair.
-    - Once done, login to [www.github.com](https://www.github.com) and navigate to your account settings. Under SSH Keys, click on the Add button and paste the contents of `~/.ssh/id_rsa.pub` into the key area. More detailed instructions can be found [here](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
+2. A way to interact with git on your computer
+    - You can do this through one of two ways:
+        - Github Desktop
+            - If you haven't used git much before, this is probably the right choice. It gives you [a visual interface for git](https://desktop.github.com)
+        - Using git in your command line
+            - [Link to Installation Guide](https://help.github.com/en/github/getting-started-with-github/set-up-git)
+            - After you install git, you probably want to use SSH so you don't have to reauthenticate every single time you commit something. To do this, you need to attach a SSH Key Pair to your GitHub account:
+                - If you haven't done so already, you should [generate a personal ssh key pair (https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh) and register it with your GitHub account.
+                - I usually take all the default values (just keep hitting enter until it completes) when creating the SSH key pair.
+                - Once done, login to [www.github.com](https://www.github.com) and navigate to your account settings. Under SSH Keys, click on the Add button and paste the contents of `~/.ssh/id_rsa.pub` into the key area. More detailed instructions can be found [here](https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)
 
-4. Ruby installed
+3. Ruby installed
     - Jekyll requires a Ruby version installed and the Jekyll developer site has [great documentation to install Ruby on your computer](https://jekyllrb.com/docs/installation/) for various operating systems.
     - If you can run `ruby -v` and see a valid result, you have a version of Ruby installed on your computer and you should be able to proceed with the rest of the setup.
+    - Jekyll needs Ruby 2.5 or higher, so you might have to install a higher version of Ruby to begin.
+    - As a heads up, you will probably need `sudo` access to install Ruby.
 
-5. Jekyll installed
-    - Once Ruby has been installed, you can install Jekyll also following the [documentation from Jekyll](https://jekyllrb.com/docs/installation/)
+4. Jekyll installed
+    - Once Ruby has been installed, you can install Jekyll following the [documentation from Jekyll](https://jekyllrb.com/docs/installation/)
     - The basic command to install Jekyll should look something like this: `gem install --user-install jekyll`
 
-6. Install Bundler
+5. Install Bundler
     - Since Jekyll is written in Ruby, it utilizes [gems](https://jekyllrb.com/docs/ruby-101/#gems) to add functionality to the sites. A lot of Jekyll repos, including this one, have a `Gemfile` - a list of gems required for the site. The purpose of the Bundler is to install gems from a `Gemfile`
     - Once Ruby is installed, you should be able to run `gem install bundler` to install the Bundler.
 
@@ -96,3 +102,5 @@ bundle exec jekyll serve --drafts --future --unpublished --port 8080 --host 0.0.
     - It will do things like adding an empty line to the end of the file or trimming whitespace from the end of a line.
 
 2. We use Tiny Slider for our Highlight and News carousels: [Link to Github](https://github.com/ganlanyuan/tiny-slider)
+
+3. To track page views and event funnels, we use [Woopra](https://www.woopra.com).
