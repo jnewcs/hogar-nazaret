@@ -105,6 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
             label: label
           }});
         });
+      } else {
+        formContainer.classList.add('is-hidden');
+        document.getElementById('payment-divider-for-one-time-donation').classList.add('is-hidden');
       }
     });
   }

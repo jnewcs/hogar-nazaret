@@ -1,31 +1,25 @@
-<div class="control">
-  <label class="radio">
-    <input type="radio" name="give_a_hug_donation_amount" value="5" checked>
-    $5
-  </label>
-  <label class="radio">
-    <input type="radio" name="give_a_hug_donation_amount" value="10">
-    $10
-  </label>
-  <label class="radio">
-    <input type="radio" name="give_a_hug_donation_amount" value="15">
-    $15
-  </label>
-</div>
-
 <section
   id="hosted-fields"
   class="mt-2"
   data-lang="{{ page.lang }}"
   data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
-  data-description="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+  data-description="{{ site.data.languages[page.lang].give_a_hug.payemnt_description }}"
   data-env="{{ jekyll.environment }}"
 >
   <form>
-    <div class="fieldset">
-      <input id="hosted-fields-email" class="field" type="email" placeholder="Email" required autocomplete="email">
+    <div class="fieldset mt-2 mb-1">
+      <input
+        id="hosted-fields-email"
+        class="hosted-field non-stripe-elements empty"
+        type="email"
+        placeholder="{{ site.data.languages[page.lang].email }}"
+        required
+        autocomplete="email"
+      >
+      <small class="ml-1 has-text-grey-light">{{ site.data.languages[page.lang].give_a_hug.email_usage }}</small>
     </div>
-    <div class="fieldset">
+
+    <div class="fieldset mb-2">
       <div id="hosted-fields-card-number" class="hosted-field empty"></div>
       <div id="hosted-fields-card-expiry" class="hosted-field empty half-width"></div>
       <div id="hosted-fields-card-cvc" class="hosted-field empty half-width"></div>

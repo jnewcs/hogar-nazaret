@@ -25,7 +25,22 @@
 
             <progress class="progress is-medium" value="25" max="100">15%</progress>
 
-            <div>
+            <div id="give-a-hug-payment-container">
+              <div class="control">
+                <label class="radio">
+                  <input type="radio" name="give_a_hug_donation_amount" value="5" checked>
+                  $5
+                </label>
+                <label class="radio">
+                  <input type="radio" name="give_a_hug_donation_amount" value="10">
+                  $10
+                </label>
+                <label class="radio">
+                  <input type="radio" name="give_a_hug_donation_amount" value="15">
+                  $15
+                </label>
+              </div>
+
               {% include /give_a_hug/hosted_fields.html %}
             </div>
           </div>

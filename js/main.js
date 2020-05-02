@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
   /* Woopra Tracking Helper */
   var trackEvent = function(eventName, eventData = {}) {
-    if (!woopra || !eventName) return;
+    if (!window.hasOwnProperty('woopra') || !eventName) return;
 
-    woopra.track(eventName, eventData);
+    window.woopra.track(eventName, eventData);
   };
 
   /* Navbar Burger Clicker */

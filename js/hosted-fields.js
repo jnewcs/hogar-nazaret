@@ -28,12 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         color: '#4a4a4a',  // Dark Grey color
       },
     };
-
-    var elementClasses = {
-      focus: 'focus',
-      empty: 'empty',
-      invalid: 'invalid',
-    };
+    var elementClasses = { focus: 'focus', empty: 'empty', invalid: 'invalid' };
 
     var cardNumber = elements.create('cardNumber', {
       style: elementStyles,
@@ -62,10 +57,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
       function enableInputs() {
         Array.prototype.forEach.call(
-          form.querySelectorAll(
-            "input[type='text'], input[type='email'], input[type='tel']"
-          ),
-          function(input) {
+          document.querySelectorAll(
+            "input[type='text'], input[type='email'], input[name='give_a_hug_donation_amount']"
+          ), function(input) {
             input.removeAttribute('disabled');
           }
         );
@@ -73,18 +67,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       function disableInputs() {
         Array.prototype.forEach.call(
-          form.querySelectorAll(
-            "input[type='text'], input[type='email'], input[type='tel']"
-          ),
-          function(input) {
+          document.querySelectorAll(
+            "input[type='text'], input[type='email'], input[name='give_a_hug_donation_amount']"
+          ), function(input) {
             input.setAttribute('disabled', 'true');
           }
         );
       }
 
       function triggerBrowserValidation() {
-        // The only way to trigger HTML5 form validation UI is to fake a user submit
-        // event.
+        // The only way to trigger HTML5 form validation UI is to fake a user submit event.
         var submit = document.createElement('input');
         submit.type = 'submit';
         submit.style.display = 'none';
@@ -122,16 +114,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
       });
 
-      // Listen on the form's 'submit' handler...
       form.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        // Trigger HTML5 validation UI on the form if any of the inputs fail
-        // validation.
+        // Trigger HTML5 validation UI on the form if any of the inputs fail validation
         var plainInputsValid = true;
-        Array.prototype.forEach.call(form.querySelectorAll('input'), function(
-          input
-        ) {
+        Array.prototype.forEach.call(form.querySelectorAll('input'), function(input) {
           if (input.checkValidity && !input.checkValidity()) {
             plainInputsValid = false;
             return;
@@ -142,19 +130,31 @@ document.addEventListener('DOMContentLoaded', () => {
           return;
         }
 
-        // Show a loading screen...
+        // Show a loading screen and disable inputs
         const loadingContainer = document.getElementById('hosted-fields-loading-container');
         loadingContainer.classList.remove('is-hidden');
         formContainer.classList.add('submitting');
         formContainer.classList.add('is-hidden');
-
-        // Disable all inputs.
         disableInputs();
 
-        // Use Stripe.js to create a token. We only need to pass in one Element
-        // from the Element group in order to create a token. We can also pass
-        // in the additional customer data we collected in our form.
-        stripe.createToken(elements[0]).then(function(result) {
+        // Gather additional customer data we may have collected in our form.
+        var email = formContainer.querySelector('#hosted-fields-email');
+        var zip = formContainer.querySelector('#hosted-fields-zip');
+        var additionalData = {
+          email: email ? email.value : undefined,
+          address_zip: zip ? zip.value : undefined,
+        };
+
+        // Use Stripe.js to create a token
+        stripe.createToken(elements[0], additionalData).then(function(result) {
+          const failureHandler = function() {
+            // Report to the browser that the payment failed, prompting it to
+            // re-show the payment interface
+            loadingContainer.classList.add('is-hidden');
+            formContainer.classList.remove('submitting');
+            formContainer.classList.remove('is-hidden');
+          };
+
           if (result.token) {
             // Send the token to our server to charge it :)
             var finalAmountinDollars = document.querySelector('input[name="give_a_hug_donation_amount"]:checked').value;
@@ -162,19 +162,11 @@ document.addEventListener('DOMContentLoaded', () => {
             var requestBody = {
               amount: finalAmount,
               stripe_token: result.token.id,
-              email: '',  // Only present when using Apple Pay/Google Pay
+              email: result.token.email,
               description: description,
               lang: lang,
               env: env
             };
-            const failureHandler = function() {
-              // Report to the browser that the payment failed, prompting it to
-              // re-show the payment interface
-              loadingContainer.classList.add('is-hidden');
-              formContainer.classList.remove('submitting');
-              formContainer.classList.remove('is-hidden');
-            };
-
             fetch('https://boiling-earth-96925.herokuapp.com/payments', {
               method: 'POST',
               body: JSON.stringify(requestBody),
@@ -184,6 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
               if (response.ok) {
                 // Report to the browser that the payment was successful, prompting
                 // it to close the browser payment interface.
+                enableInputs();
                 loadingContainer.classList.add('is-hidden');
               } else {
                 failureHandler();
@@ -194,7 +187,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
           } else {
             failureHandler();
-            // In case of an error, un-disable inputs
             enableInputs();
           }
         });
