@@ -6,7 +6,7 @@ link_text: ''
 link_opens_donate: false
 link_destination: "/es/proximoseventos"
 banner_image: "/uploads/2020/05/03/abrazos rect.png"
-order: 
+order: 0
 hide_from_carousel: false
 always_show: false
 published: false
