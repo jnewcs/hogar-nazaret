@@ -9,6 +9,5 @@ banner_image: "/uploads/2020/05/03/abrazos rect.png"
 order: 0
 hide_from_carousel: false
 always_show: false
-published: false
 
 ---
