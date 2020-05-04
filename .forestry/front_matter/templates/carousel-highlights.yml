@@ -58,7 +58,7 @@ fields:
   label: Banner Image
 - type: number
   name: order
-  label: order
+  label: Order
   description: Determines the order which the carousel highlights are shown. Starts
     at 0. If two carousel highlights have the same order, the newest one will be shown
     first
