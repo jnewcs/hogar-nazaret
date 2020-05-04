@@ -28,7 +28,7 @@ fields:
 - name: banner_image
   type: file
   config:
-    maxSize: 250
+    maxSize: 2.5
   label: banner_image
   description: Image used as a preview on the Home Page and the News page. It also
     serves as the header image in the side_by_side header layout.

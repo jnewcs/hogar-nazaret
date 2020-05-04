@@ -4,7 +4,7 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
   config:
     required: true
   description: Title of the carousel highlight. On desktop, it appears to the right
@@ -22,20 +22,28 @@ fields:
     display_utc: false
   hidden: false
   default: now
+- name: full_page
+  type: boolean
+  label: Full Page
+  description: When turned on, the banner image will take over the entire carousel.
 - type: text
   name: link_text
-  label: link_text
+  label: Link Text
   description: Text shown on the call to action button.
   config:
-    required: true
+    required: false
+  showOnly:
+    field: full_page
 - name: link_opens_donate
   type: boolean
-  label: link_opens_donate
+  label: Link Opens Donate Modal
   default: false
   description: When this is on, clicking on the link will open the donate modal
+  showOnly:
+    field: full_page
 - type: text
   name: link_destination
-  label: link_destination
+  label: Link Destination
   description: Relative url to destination. For example, to route to www.hogarjesusdenazaret.org/en/news/recent,
     we would put /en/news/recent
   showOnly:
@@ -43,21 +51,22 @@ fields:
     value: false
 - type: file
   name: banner_image
-  label: banner_image
   description: Image shown on the carousel. On desktop, it is displayed to the left
     of the content. On mobile, it is displayed on top. In general, images with wider
     dimensions are better than really tall images as they will scale better across
     all devices.
+  label: Banner Image
 - type: number
   name: order
-  label: order
+  label: Order
   description: Determines the order which the carousel highlights are shown. Starts
     at 0. If two carousel highlights have the same order, the newest one will be shown
     first
 - name: hide_from_carousel
   type: boolean
-  label: Hide from Carousel
-  description: When manually turned on, this highlight will not be shown on the carousel.
+  label: Hide
+  description: When manually turned on, this highlight will not be shown on the home
+    page carousel.
   showOnly:
     field: always_show
 - name: always_show
@@ -75,4 +84,5 @@ fields:
   hidden: true
   default: en
 pages:
+- _carousel_highlights/en/a-quién-extrañas-abrazar.md
 - _carousel_highlights/en/open-house.md
