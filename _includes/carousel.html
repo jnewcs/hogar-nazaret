@@ -6,8 +6,8 @@
 
 <div class="fluid-container position-relative">
   <div class="is-flex-container is-spaced-between has-text-centered is-hidden-touch" id="controls-container">
-    <div class="clickable" id="prev-button">&#8249;</div>
-    <div class="clickable" id="next-button">&#8250;</div>
+    <div class="clickable prev-button">&#8249;</div>
+    <div class="clickable next-button">&#8250;</div>
   </div>
   <div id="autoplay-button" data-action="stop"></div>
   <div id="carousel-container">
@@ -23,7 +23,7 @@
           <!-- If the highlight is older than 6 months and not marked as always show, we hide it -->
           {% continue %}
         {% endunless %}
-      {% endif%}
+      {% endif %}
 
       {% if highlight.hide_from_carousel %}
         {% continue %}
@@ -37,29 +37,31 @@
               />
             </div>
 
-            <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
-              <div class="container content-container carousel-text is-unselectable">
-                <h1 class="is-size-3 is-uppercase is-unselectable">
-                  {{ highlight.title }}
-                </h1>
-                <p class="is-unselectable">
-                  {{ highlight.content }}
-                </p>
+            {% unless highlight.full_page %}
+              <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
+                <div class="container content-container carousel-text is-unselectable">
+                  <h1 class="is-size-3 is-uppercase is-unselectable">
+                    {{ highlight.title }}
+                  </h1>
+                  <p class="is-unselectable">
+                    {{ highlight.content }}
+                  </p>
 
-                {% if highlight.link_text %}
-                  <br />
-                  {% if highlight.link_opens_donate %}
-                    <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
-                      {{ highlight.link_text }}
-                    </a>
-                  {% else %}
-                    <a class="button is-secondary has-text-white is-medium" href="{{ highlight.link_destination | relative_url }}">
-                      {{ highlight.link_text }}
-                    </a>
+                  {% if highlight.link_text %}
+                    <br />
+                    {% if highlight.link_opens_donate %}
+                      <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
+                        {{ highlight.link_text }}
+                      </a>
+                    {% else %}
+                      <a class="button is-secondary has-text-white is-medium" href="{{ highlight.link_destination | relative_url }}">
+                        {{ highlight.link_text }}
+                      </a>
+                    {% endif %}
                   {% endif %}
-                {% endif %}
+                </div>
               </div>
-            </div>
+            {% endunless %}
           </div>
         </div>
       {% endif %}
