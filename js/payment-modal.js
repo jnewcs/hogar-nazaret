@@ -74,6 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
           successContainer.classList.remove('is-hidden');
           closeBtn.classList.remove('is-hidden');
 
+          // Track successful PaymentRequest
+          window.trackEvent('payment_request_sucess', {
+            url: window.location.pathname,
+            title: document.title
+          });
+
           ev.complete('success');
         } else {
           failureHandler();
@@ -90,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
         paymentRequestButton: {
           type: 'donate',
           // One of 'default', 'book', 'buy', or 'donate'
-          // Defaults to 'default'
         }
       }
     });

@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   /* Woopra Tracking Helper */
-  var trackEvent = function(eventName, eventData = {}) {
+  window.trackEvent = function(eventName, eventData = {}) {
     if (!window.hasOwnProperty('woopra') || !eventName) return;
 
     window.woopra.track(eventName, eventData);
@@ -164,7 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var target = el.dataset.target;
         if (target === 'donation-modal') {
           // Track clicks to open the donation modal
-          trackEvent('donation_model_open', {
+          window.trackEvent('donation_model_open', {
             url: window.location.pathname,
             title: document.title
           });
@@ -189,7 +189,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var target = el.dataset.target;
         if (target === 'donation-modal') {
           // Track clicks to close the donation modal
-          trackEvent('donation_model_close', {
+          window.trackEvent('donation_model_close', {
             url: window.location.pathname,
             title: document.title
           });
@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (['donate-now-content', 'sponsor-content'].indexOf(target) !== -1) {
           // Track views on the different tabs
           var donationType = (target === 'donate-now-content') ? 'one_time' : 'monthly_donation';
-          trackEvent('donation_model_view', {
+          window.trackEvent('donation_model_view', {
             donation_type: donationType,
             url: window.location.pathname,
             title: document.title
