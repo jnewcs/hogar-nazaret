@@ -13,5 +13,28 @@
     });
 
     woopra.track();
+    window.trackEvent = function(eventName, additionalEventData = {}) {
+      if (!eventName) return;
+
+      var eventData = {
+        url: window.location.pathname,
+        title: document.title
+      };
+      for (var attr in additionalEventData) {
+        eventData[attr] = additionalEventData[attr];
+      }
+      woopra.track(eventName, eventData);
+    };
+  </script>
+{% else %}
+  <script type="text/javascript">
+    window.trackEvent = function(eventName, additionalEventData = {}) {
+      console.info('Woopra is off. Tracking event (' + eventName + ')');
+      if (additionalEventData && Object.keys(additionalEventData).length) {
+        console.info(additionalEventData);
+      }
+
+      return;
+    };
   </script>
 {% endif %}

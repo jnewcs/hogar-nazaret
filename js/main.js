@@ -1,11 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  /* Woopra Tracking Helper */
-  window.trackEvent = function(eventName, eventData = {}) {
-    if (!window.hasOwnProperty('woopra') || !eventName) return;
-
-    window.woopra.track(eventName, eventData);
-  };
-
   /* Navbar Burger Clicker */
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
@@ -164,10 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var target = el.dataset.target;
         if (target === 'donation-modal') {
           // Track clicks to open the donation modal
-          window.trackEvent('donation_model_open', {
-            url: window.location.pathname,
-            title: document.title
-          });
+          window.trackEvent('donation_model_open');
         }
         var $target = document.getElementById(target);
         modalContainer.classList.remove('is-hidden');
@@ -189,10 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var target = el.dataset.target;
         if (target === 'donation-modal') {
           // Track clicks to close the donation modal
-          window.trackEvent('donation_model_close', {
-            url: window.location.pathname,
-            title: document.title
-          });
+          window.trackEvent('donation_model_close');
         }
         var $target = document.getElementById(target);
 
@@ -213,9 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Track views on the different tabs
           var donationType = (target === 'donate-now-content') ? 'one_time' : 'monthly_donation';
           window.trackEvent('donation_model_view', {
-            donation_type: donationType,
-            url: window.location.pathname,
-            title: document.title
+            donation_type: donationType
           });
         }
         var $target = document.getElementById(target);

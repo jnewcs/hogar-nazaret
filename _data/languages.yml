@@ -104,7 +104,7 @@ en:
     hugs: hugs
     call_to_action: Give a Hug
     email_usage: We will send a receipt to this email address
-    payemnt_description: Give a Hug Donation - Hogar Albergue para Niños Jesús de Nazaret
+    payment_description: Give a Hug Donation - Hogar Albergue para Niños Jesús de Nazaret
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 es:
@@ -213,6 +213,6 @@ es:
   give_a_hug:
     hugs: abrazos
     call_to_action: Regala un Abrazo
-    payemnt_description: Regala un Abrazo Donativo - Hogar Albergue para Niños Jesús de Nazaret
+    payment_description: Regala un Abrazo Donativo - Hogar Albergue para Niños Jesús de Nazaret
     email_usage: Enviaremos un recibo a esta dirección de correo electrónico
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.

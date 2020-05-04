@@ -41,6 +41,10 @@
                 </label>
               </div>
 
+              {% if site.data.information.ath_movil.live == true %}
+                <div id="ATHMovil_Checkout_Button"></div>
+              {% endif %}
+
               {% include /give_a_hug/hosted_fields.html %}
             </div>
           </div>

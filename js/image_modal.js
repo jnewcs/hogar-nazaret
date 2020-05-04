@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       var position = this.activeIndex + 1;
       var total = this.images.length;
-      countElement.innerHTML = `${position}/${total}`;
+      countElement.innerHTML = position + '/' + total;
     }
 
     closeImage() {

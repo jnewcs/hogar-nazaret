@@ -98,14 +98,58 @@
   </div>
 {% endif %}
 
-
 {% if layout.lazy_load %}
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 {% endif %}
 <script src="{{ '/js/main.js' | relative_url }}" type="text/javascript"></script>
-<script src="https://js.stripe.com/v3/"></script>
-<script src="{{ '/js/hosted-fields.js' | relative_url }}" type="text/javascript"></script>
-<script src="{{ '/js/payment-modal.js' | relative_url }}" type="text/javascript"></script>
+<!-- We use Stripe on every page to process Apple Pay/Google pay from the donate modal -->
+<script src="https://js.stripe.com/v3/" defer></script>
+<script src="{{ '/js/payment_modal.js' | relative_url }}" type="text/javascript" defer></script>
 <script src="{{ '/js/image_modal.js' | relative_url }}" type="text/javascript" async></script>
+
+{% if page.layout == 'landing-page' %}
+  <script src="{{ '/js/hosted_fields.js' | relative_url }}" type="text/javascript" defer></script>
+
+  {% if site.data.information.ath_movil.live == true %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+    <script type="text/javascript" defer>
+      ATHM_Checkout = {
+        env: 'production',
+        publicToken: "{{ site.data.information.ath_movil.public_token }}",
+        timeout: 600, // Value has to between 120 (2 minutes) and 600 (10 minutes)
+        theme: 'btn',
+        lang: "{{ page.lang }}",
+        total: 1.00,
+        tax: null,
+        subtotal: 1.00,
+        items: [
+          {
+            'name': 'First Item',
+            'description': "{{ site.data.information.give_a_hug.payment_description }}",
+            'quantity': 1,
+            'price': 1.00,
+            'tax': null,
+            'metadata': null
+          }
+        ],
+        onCompletedPayment: function (response) {
+          window.trackEvent('ath_movil_payment_complete', response);
+          // TODO: ping our server to log this donation
+          // TODO: show Give a Hug interface
+        },
+        onCancelledPayment: function () {
+          // When the ATH modal/page is dismissed, this method gets called
+          window.trackEvent('ath_movil_payment_cancelled');
+        },
+        onExpiredPayment: function (response) {
+          // When the timeout period defined above is done and the payment hasn't
+          // been completed, the ATH modal/page closes and this method gets called
+          window.trackEvent('ath_movil_payment_attempt_expired');
+        }
+      };
+    </script>
+    <script src="https://www.athmovil.com/api/js/v2/athmovilV2.js" type="text/javascript" defer></script>
+  {% endif %}
+{% endif %}
 </body>
 </html>
