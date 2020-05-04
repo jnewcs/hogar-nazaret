@@ -21,14 +21,22 @@ fields:
     time_format: 
     display_utc: false
   hidden: false
+- name: full_page
+  type: boolean
+  description: When turned on, the banner image will take over the entire carousel.
+  label: Full Page
 - type: text
   name: link_text
   label: Link Text
   description: Text shown on the call to action button.
+  showOnly:
+    field: full_page
 - name: link_opens_donate
   type: boolean
   description: When this is on, clicking on the link will open the donate modal
   label: Link Opens Donate Modal
+  showOnly:
+    field: full_page
 - type: text
   name: link_destination
   label: Link Destination
