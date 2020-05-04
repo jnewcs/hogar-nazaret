@@ -149,6 +149,26 @@
       };
     </script>
     <script src="https://www.athmovil.com/api/js/v2/athmovilV2.js" type="text/javascript" defer></script>
+
+    <script type="text/javascript" defer>
+      var timingInterval = setInterval(function () {
+        checkForAthMovilButton();
+      }, 100);
+
+      setTimeout(function () {
+        // CASE: if the timingInterval hasn't finished in 10 seconds, we clear it
+        clearInterval(timingInterval);
+      }, 10000);
+
+      var checkForAthMovilButton = function () {
+        var buttons = document.getElementsByClassName('ATHMovilbtn');
+        if (buttons && buttons.length) {
+          var cardText = document.getElementById('manually-enter-card-text');
+          cardText.classList.remove('is-hidden');
+          clearInterval(timingInterval);
+        }
+      };
+    </script>
   {% endif %}
 {% endif %}
 </body>

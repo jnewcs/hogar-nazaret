@@ -42,7 +42,15 @@
               </div>
 
               {% if site.data.information.ath_movil.live == true %}
-                <div id="ATHMovil_Checkout_Button"></div>
+                <div class="is-flex-container is-horizontally-centered">
+                  <div class="ath_movil_checkout_button_container">
+                    <div id="ATHMovil_Checkout_Button"></div>
+                  </div>
+                </div>
+
+                <p class="has-text-centered mt-1 is-hidden" id="manually-enter-card-text">
+                  {{ site.data.languages[page.lang].give_a_hug.manually_enter_card }}
+                </p>
               {% endif %}
 
               {% include /give_a_hug/hosted_fields.html %}

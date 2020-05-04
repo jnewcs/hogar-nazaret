@@ -106,6 +106,7 @@ en:
     email_usage: We will send a receipt to this email address
     payment_description: Give a Hug Donation - Hogar Albergue para Niños Jesús de Nazaret
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    manually_enter_card: Or enter card details
 
 es:
   page: Página
@@ -216,3 +217,4 @@ es:
     payment_description: Regala un Abrazo Donativo - Hogar Albergue para Niños Jesús de Nazaret
     email_usage: Enviaremos un recibo a esta dirección de correo electrónico
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    manually_enter_card: O introduzca los detalles de la tarjeta
