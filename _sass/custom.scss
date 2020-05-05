@@ -342,7 +342,103 @@ a.button.is-secondary, button.is-secondary {
   width: 200px;
   margin-left: -100px;
 }
+/* Give a Hug */
 
+.is-paypal {
+	background-color: $paypal;
+}
+.is-ath-movil {
+	background-color:$athMovil;
+}
+.is-vtop {
+	align-self: flex-start;
+}
+#event-donation-engine {
+	background-color: #FF4C00;
+}
+.event-donation-engine-container{
+	border-radius: 20px; margin: 15px 0;
+}
+.event-donation-card {
+	position: relative;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-pink.png) no-repeat top center;
+	background-size: 100% auto;
+	transform:  rotate(-1deg);
+	z-index: 99;
+}
+.event-donation-card svg {
+	position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+}
+ul#donation-cards li:nth-child(2n) {
+	transform: rotate(2deg);
+	z-index: 98;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Yellow.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(3n) {
+	transform: rotate(-3deg);
+	z-index: 97;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-orange.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(4n) {
+	transform: rotate(6deg);
+	z-index: 97;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-gray.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(5n) {
+	transform: rotate(-5deg);
+	z-index: 97;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Yellow.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(6n) {
+	transform: rotate(3deg);
+	z-index: 97;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-gray.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(7n) {
+	transform: rotate(9deg);
+	z-index: 97;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-pink.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(8n) {
+	transform: rotate(-6deg);
+	z-index: 97;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-orange.png) no-repeat top center;
+	background-size: 100% auto;
+}
+
+.event-donation-card-name{ 
+	position: absolute;
+	left: 21%;
+    top: 16%;
+}
+.event-donation-card-gift{ 
+	position: absolute;
+	    left: 34%;
+    top: 30%;
+}
+.event-donation-card img {
+	opacity: 0;
+}
+#hosted-fields .hosted-field {
+	border: 2px solid $primary !important;
+}
+#hosted-fields .hosted-field:focus{
+	border: 2px solid $secondary !important;
+}
+#hosted-fields button {
+	color: white !important;
+	font-size: 1.25em;
+	background-color: $primary !important;
+}
 /* Desktops and above */
 @media only screen and (min-width: 1024px) {
   .masonry-grid {
