@@ -343,7 +343,6 @@ a.button.is-secondary, button.is-secondary {
   margin-left: -100px;
 }
 /* Give a Hug */
-
 .is-paypal {
 	background-color: $paypal;
 }
@@ -414,30 +413,30 @@ ul#donation-cards li:nth-child(8n) {
 	background: url(/uploads/give_a_hug/Tarjetas-Maraton-orange.png) no-repeat top center;
 	background-size: 100% auto;
 }
-
-.event-donation-card-name{ 
+.event-donation-card-name{
 	position: absolute;
 	left: 21%;
-    top: 16%;
+  top: 16%;
 }
-.event-donation-card-gift{ 
+.event-donation-card-gift{
 	position: absolute;
-	    left: 34%;
-    top: 30%;
+  left: 34%;
+  top: 30%;
+}
+input[name="give_a_hug_donation_amount"]:checked + label {
+  background: $primary;
+  color: $white;
+}
+input[name="give_a_hug_donation_amount"][disabled="true"] + label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#ATHMreopen-modal {
+  position: fixed !important;
+  z-index: 100;
 }
 .event-donation-card img {
 	opacity: 0;
-}
-#hosted-fields .hosted-field {
-	border: 2px solid $primary !important;
-}
-#hosted-fields .hosted-field:focus{
-	border: 2px solid $secondary !important;
-}
-#hosted-fields button {
-	color: white !important;
-	font-size: 1.25em;
-	background-color: $primary !important;
 }
 /* Desktops and above */
 @media only screen and (min-width: 1024px) {

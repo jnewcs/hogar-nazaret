@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
           closeBtn.classList.remove('is-hidden');
 
           // Track successful PaymentRequest
-          window.trackEvent('payment_request_sucess');
+          window.trackEvent('stripe_payment_request_sucess');
 
           ev.complete('success');
         } else {

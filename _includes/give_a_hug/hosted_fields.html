@@ -5,6 +5,7 @@
   data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
   data-description="{{ site.data.languages[page.lang].give_a_hug.payemnt_description }}"
   data-env="{{ jekyll.environment }}"
+  data-success="{{ site.data.languages[page.lang].donate.modal.success_msg }}"
 >
   <form>
     <div class="fieldset mt-1 mb-1">
@@ -34,12 +35,3 @@
     <span class="notification is-danger is-light"></span>
   </div>
 </section>
-
-<div class="container content-container has-background-white has-text-centered is-hidden" id="hosted-fields-loading-container">
-  <div style="margin-top: 30px; margin-bottom: 30px;">
-    <progress class="progress is-large is-info" max="100"></progress>
-    <h3 class="is-size-3 has-text-centered">
-      {{ site.data.languages[page.lang].donate.modal.processing_payment }}
-    </h3>
-  </div>
-</div>

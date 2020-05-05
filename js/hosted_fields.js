@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     var lang = formContainer.dataset.lang;
     var description = formContainer.dataset.description;
     var env = formContainer.dataset.env;
+    var successMsg = formContainer.dataset.success;
 
     var stripe = Stripe(stripeKey, { locale: lang });
     var elements = stripe.elements();
@@ -48,9 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     cardCvc.mount('#hosted-fields-card-cvc');
 
-    function registerElements(elements, formContainerId) {
-      var formContainer = document.getElementById(formContainerId);
-
+    function registerElements(elements) {
       var form = formContainer.querySelector('form');
       var error = formContainer.querySelector('.error');
       var errorMessage = error.querySelector('.notification');
@@ -131,10 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         // Show a loading screen and disable inputs
-        const loadingContainer = document.getElementById('hosted-fields-loading-container');
+        var loadingContainer = document.getElementById('give-a-hug-donation-options-loading-container');
+        var donationOptions = document.getElementById('give-a-hug-donation-options');
         loadingContainer.classList.remove('is-hidden');
         formContainer.classList.add('submitting');
-        formContainer.classList.add('is-hidden');
+        donationOptions.classList.add('is-hidden');
         disableInputs();
 
         // Gather additional customer data we may have collected in our form.
@@ -147,12 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Use Stripe.js to create a token
         stripe.createToken(elements[0], additionalData).then(function(result) {
-          const failureHandler = function() {
+          const resetToInitialState = function() {
             // Report to the browser that the payment failed, prompting it to
             // re-show the payment interface
             loadingContainer.classList.add('is-hidden');
             formContainer.classList.remove('submitting');
-            formContainer.classList.remove('is-hidden');
+            donationOptions.classList.remove('is-hidden');
           };
 
           if (result.token) {
@@ -174,25 +174,37 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .then(function(response) {
               if (response.ok) {
-                // Report to the browser that the payment was successful, prompting
-                // it to close the browser payment interface.
+                // Track successful Stripe Elements payment
+                window.trackEvent('stripe_elements_payment_success', {
+                  amount: finalAmount
+                });
+
+                // Show a payment notification and the share interface
+                var paymentNotification = document.getElementById('give-a-hug-donation-options-notification');
+                paymentNotification.innerHTML = successMsg;
+                paymentNotification.classList.remove('is-hidden');
+                var eventShareCard = document.getElementById('event-donation-engine-share');
+                eventShareCard.classList.remove('is-hidden');
+
+                // Reset the payment card and then hide it
+                resetToInitialState();
                 enableInputs();
-                loadingContainer.classList.add('is-hidden');
+                var paymentCard = document.getElementById('event-donation-engine-payment');
+                paymentCard.classList.add('is-hidden');
               } else {
-                failureHandler();
+                resetToInitialState();
               }
             })
             .catch(function() {
-              failureHandler();
+              resetToInitialState();
             });
           } else {
-            failureHandler();
+            resetToInitialState();
             enableInputs();
           }
         });
       });
     }
-
-    registerElements([cardNumber, cardExpiry, cardCvc], 'hosted-fields');
+    registerElements([cardNumber, cardExpiry, cardCvc]);
   }
 });

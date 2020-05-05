@@ -11,6 +11,7 @@ payment_request_on: true
 service_worker: false
 give_a_hug:
   live: true
+  goal: 1000
 ath_movil:
   live: true
   sandbox_mode: false
