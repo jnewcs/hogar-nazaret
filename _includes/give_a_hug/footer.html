@@ -9,15 +9,15 @@
       timeout: 600, // Value has to between 120 (2 minutes) and 600 (10 minutes)
       theme: 'btn',
       lang: "{{ page.lang }}",
-      total: 1.00,
+      total: 20.00,
       tax: null,
-      subtotal: 1.00,
+      subtotal: 20.00,
       items: [
         {
-          'name': 'First Item',
-          'description': "{{ site.data.information.give_a_hug.payment_description }}",
+          'name': "{{ site.data.languages[page.lang].donate.one_time_amount_label }}",
+          'description': "{{ site.data.languages[page.lang].give_a_hug.payment_description }}",
           'quantity': 1,
-          'price': 1.00,
+          'price': 20.00,
           'tax': null,
           'metadata': null
         }
@@ -25,7 +25,16 @@
       onCompletedPayment: function (response) {
         window.trackEvent('ath_movil_payment_complete', response);
         // TODO: ping our server to log this donation
-        // TODO: show Give a Hug interface
+        // Show a payment success notification and the share interface
+        var paymentSuccessNotification = document.getElementById('give-a-hug-donation-options-notification');
+        paymentSuccessNotification.innerHTML = "{{ site.data.languages[page.lang].donate.modal.success_msg }}";
+        paymentSuccessNotification.classList.remove('is-hidden');
+        var eventShareCard = document.getElementById('event-donation-engine-share');
+        eventShareCard.classList.remove('is-hidden');
+
+        // Hide the payment card
+        var paymentCard = document.getElementById('event-donation-engine-payment');
+        paymentCard.classList.add('is-hidden');
       },
       onCancelledPayment: function () {
         // When the ATH modal/page is dismissed, this method gets called
@@ -37,7 +46,20 @@
         window.trackEvent('ath_movil_payment_attempt_expired');
       }
     };
+
+    var donationOptions = document.querySelectorAll('input[name="give_a_hug_donation_amount"]');
+    if (donationOptions) {
+      for(var i = 0, max = donationOptions.length; i < max; i++) {
+        donationOptions[i].onclick = function() {
+          var newAmount = parseFloat(this.value).toFixed(2);
+          ATHM_Checkout.total = newAmount;
+          ATHM_Checkout.subtotal = newAmount;
+          ATHM_Checkout.items[0].price = newAmount;
+        }
+      }
+    }
   </script>
+
   <script src="https://www.athmovil.com/api/js/v2/athmovilV2.js" type="text/javascript" defer></script>
 
   <script type="text/javascript" defer>
@@ -50,6 +72,8 @@
       clearInterval(timingInterval);
     }, 10000);
 
+    // We should only show the card details text if the ATH Movil button
+    // is present on the page
     var checkForAthMovilButton = function () {
       var buttons = document.getElementsByClassName('ATHMovilbtn');
       if (buttons && buttons.length) {

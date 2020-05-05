@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
                   amount: finalAmount
                 });
 
-                // Show a payment notification and the share interface
+                // Show a payment success notification and the share interface
                 var paymentNotification = document.getElementById('give-a-hug-donation-options-notification');
                 paymentNotification.innerHTML = successMsg;
                 paymentNotification.classList.remove('is-hidden');
@@ -192,10 +192,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 var paymentCard = document.getElementById('event-donation-engine-payment');
                 paymentCard.classList.add('is-hidden');
               } else {
+                window.trackEvent('stripe_elements_payment_error');
                 resetToInitialState();
               }
             })
             .catch(function() {
+              window.trackEvent('stripe_elements_payment_error');
               resetToInitialState();
             });
           } else {

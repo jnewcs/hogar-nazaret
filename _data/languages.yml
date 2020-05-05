@@ -103,10 +103,8 @@ en:
       homepage: The Hogar Albergue para Niños Jesús de Nazaret has been providing love, services, and a better future to boys and girls who have been victims of abuse or neglect for over twenty years.
   give_a_hug:
     hugs: hugs
-    call_to_action: Give a Hug
+    payment_description: Donation for the Hugs Marathon campaign
     email_usage: We will send a receipt to this email address
-    payment_description: Give a Hug Donation - Hogar Albergue para Niños Jesús de Nazaret
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     manually_enter_card: Or enter card details
     event_goal: goal
     GiveMeFive: Dame 5
@@ -226,10 +224,8 @@ es:
       homepage: El Hogar Albergue para Niños Jesús de Nazaret lleva más de dos décadas años dándo amor, servicios y un mejor futuro a niños y niñas de Puerto Rico que han sido víctimas de negligencia o maltrato.
   give_a_hug:
     hugs: abrazos
-    call_to_action: Regala un Abrazo
-    payment_description: Regala un Abrazo Donativo - Hogar Albergue para Niños Jesús de Nazaret
+    payment_description: Donación para la campaña de Maratón de abrazos
     email_usage: Enviaremos un recibo a esta dirección de correo electrónico
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     manually_enter_card: o Pague con su tarjeta de crédito
     event_goal: meta
     GiveMeFive: Dame 5
