@@ -43,6 +43,7 @@ en:
   form:
     labels:
       name: First and Last Name
+      justname: Name
       email: Email
       phone: Phone
       questions_and_comments: Questions / Comments
@@ -107,6 +108,17 @@ en:
     payment_description: Give a Hug Donation - Hogar Albergue para Niños Jesús de Nazaret
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
     manually_enter_card: Or enter card details
+    event_goal: goal
+    GiveMeFive: Dame 5
+    GiveMeFriends: Friends!!
+    GiveBearHug: Bear Hug
+    StepOneTitle: Step 1 Pick a Hug
+    StepOneCaption: for that person you missed so much
+    StepTwoTitle: Step 2 Share your Hug
+    StepTwoCaption: Tag "El Hogar" and that person you missed so much
+    FormGiftLabel:  I want to give the gift to
+    FormGiftAnomimus: I Preferred to Post Anonymous
+    FormPublish: Publish
 
 es:
   page: Página
@@ -153,6 +165,7 @@ es:
   form:
     labels:
       name: Nombre y Apellido
+      justname: Nombre
       email: Email
       phone: Teléfono
       questions_and_comments: Preguntas / Comentarios
@@ -217,4 +230,15 @@ es:
     payment_description: Regala un Abrazo Donativo - Hogar Albergue para Niños Jesús de Nazaret
     email_usage: Enviaremos un recibo a esta dirección de correo electrónico
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    manually_enter_card: O introduzca los detalles de la tarjeta
+    manually_enter_card: o Pague con su tarjeta de crédito
+    event_goal: meta
+    GiveMeFive: Dame 5
+    GiveMeFriends: ¡¡Amigos!!
+    GiveBearHug: Abrazo de Oso
+    StepOneTitle: Paso 1 Escoge un Abrazo
+    StepOneCaption: para esa persona que tanto extrañas
+    StepTwoTitle: PASO 2 Comparte el Abrazo
+    StepTwoCaption: Taggea al hogar y a esa persona que tanto extrañas
+    FormGiftLabel: Le Regalo el Abrazo a
+    FormGiftAnomimus: Prefiero que sea Anonimo
+    FormPublish: Publicar

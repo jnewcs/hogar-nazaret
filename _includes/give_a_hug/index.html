@@ -1,69 +1,166 @@
-<section class="pt-2">
-  <div class="container">
-    <div class="columns">
-      <div
-        class="column is-one-third"
-        id="post-side-by-side-layout-image"
-        alt="{{ site.data.languages[page.lang].give_a_hug.call_to_action }}"
-        style="background: url('/uploads/give_a_hug/give_heart.jpeg') center center; background-size: contain; background-repeat: no-repeat"
-      >
-      </div>
-
-      <div class="column is-two-thirds">
-        <div class="card">
-          <div class="card-content">
-            <h2 class="is-size-2">
-              Give a Hug. Hi Francisco!
-            </h2>
-            <p class="pb-2">
-              {{ site.data.languages[page.lang].give_a_hug.description }}
-            </p>
-
-            <p class="title">
-              <span class="has-text-secondary">200 {{ site.data.languages[page.lang].give_a_hug.hugs }}</span> / <span>1000</span>
-            </p>
-
-            <progress class="progress is-medium" value="25" max="100">15%</progress>
-
-            <div id="give-a-hug-payment-container">
-              <div class="control">
-                <label class="radio">
-                  <input type="radio" name="give_a_hug_donation_amount" value="5" checked>
-                  $5
-                </label>
-                <label class="radio">
-                  <input type="radio" name="give_a_hug_donation_amount" value="10">
-                  $10
-                </label>
-                <label class="radio">
-                  <input type="radio" name="give_a_hug_donation_amount" value="15">
-                  $15
-                </label>
-              </div>
-
-              {% if site.data.information.ath_movil.live == true %}
-                <div class="is-flex-container is-horizontally-centered">
-                  <div class="ath_movil_checkout_button_container">
-                    <div id="ATHMovil_Checkout_Button"></div>
-                  </div>
-                </div>
-
-                <p class="has-text-centered mt-1 is-hidden" id="manually-enter-card-text">
-                  {{ site.data.languages[page.lang].give_a_hug.manually_enter_card }}
-                </p>
-              {% endif %}
-
-              {% include /give_a_hug/hosted_fields.html %}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+<section id="event-header" class="section">
+		<div class="container">
+			<div class="columns is-vcentered">
+				<div id="event-logo" class="column is-two-fifths has-text-centered">
+					<img src="{{ '/uploads/give_a_hug/Logo-Maraton-DeAbrazos.svg' | relative_url }}" alt="Maraton De Abrazos" >
+				</div>
+				<div id="event-progress"  class="column ">
+					<div class="columns">
+						<div class="column level-item ">
+							<p class="title is-marginless has-text-secondary"><span class="event-goal-progress">200</span> <span class="is-size-4">{{ site.data.languages[page.lang].give_a_hug.hugs }} {{ site.data.languages[page.lang].give_a_hug.event_goal }} 1000</span></p>
+							<progress class="progress is-secondary" value="15" max="100">15%</progress>
+						</div>
+<!--
+						<div class="column">
+							<p class="title is-marginless">3,456</p>
+							<p class="heading">Donaciones</p>
+						</div>
+						<div class="column">
+							<p class="title is-marginless">3,456</p>
+							<p class="heading">Compartidas</p>
+						</div>
+-->
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<section id="event-donation-engine" class="section is-secondary">
+		<div class="container">
+			<div class="columns has-text-centered is-vcentered">
+				<div id="event-donation-engine-slogan" class="column is-two-fifths is-centered">
+					<img src="{{ '/uploads/give_a_hug/AQuienExtranasAbrazar.svg' | relative_url }}" alt="A Quien Extrañas Abrazar">
+				</div>
+				<div class="column has-text-centered">
+					<div id="event-donation-engine-payment" class="card event-donation-engine-container">
+						<div class="card-content">
+							<h2 class="title has-text-primary">
+								{{ site.data.languages[page.lang].give_a_hug.StepOneTitle }}
+							</h2>
+							<p class="subtitle has-text-primary">
+								{{ site.data.languages[page.lang].give_a_hug.StepOneCaption }}
+							</p>
+							<div class="columns is-multiline is-flex-mobile">
+								<div id="donation-amount-five" class="column">
+									<img src="{{ '/uploads/give_a_hug/icon-high-five.svg' | relative_url }}" alt="icon-high-five" >
+									<p class="is-size-4">{{ site.data.languages[page.lang].give_a_hug.GiveMeFive }}</p>
+									<button class="button is-large is-rounded">
+										$5
+									</button>
+								</div>
+								<div id="donation-amount-amigos" class="column">
+									<img src="{{ '/uploads/give_a_hug/icon-amigos.svg' | relative_url }}" alt="icon-high-five" >
+									<p class="is-size-4">{{ site.data.languages[page.lang].give_a_hug.GiveMeFriends }}</p>
+									<button class="button is-large is-rounded is-primary">
+										$20
+									</button>
+								</div>
+								<div id="donation-amount-oso" class="column">
+									<img src="{{ '/uploads/give_a_hug/icon-abrazo-de-oso.svg' | relative_url }}" alt="icon-high-five" >
+									<p class="is-size-4">{{ site.data.languages[page.lang].give_a_hug.GiveBearHug }}</p>
+									<button class="button is-large is-rounded">
+										$50
+									</button>
+								</div>
+								<input name="give_a_hug_donation_amount" type="hidden">
+							</div>
+							<div class="columns is-multiline">
+								{% if site.data.information.ath_movil.live == true %}
+								<div class="column is-three-fifths is-offset-one-fifth">
+									
+									<div class="is-flex-container is-horizontally-centered">
+										<div class="ath_movil_checkout_button_container">
+											<div id="ATHMovil_Checkout_Button"></div>
+										</div>
+									</div>
+									
+									
+								</div>
+								{% endif %}
+								<div class="column  is-three-fifths is-offset-one-fifth">
+									<p class="has-text-centered mt-1 is-hidden" id="manually-enter-card-text">
+										{{ site.data.languages[page.lang].give_a_hug.manually_enter_card }}
+									</p>
+									{% include /give_a_hug/hosted_fields.html %}
+									<img src="{{ '/uploads/give_a_hug/secure-stripe-payment-logo-300x45.png_result.png' | relative_url }}" alt="Stripe Payment" />
+								</div>
+							</div>
+						</div>
+<!--
+						<footer class="card-footer">
+							<div class="card-footer-item is-vtop" style="flex-direction: column; align-self: flex-start;">
+								<button class="button is-paypal is-fullwidth is-rounded is-flex">
+									<img src="{{ '/uploads/Button-Paypal.png' | relative_url }}" alt="Button-Paypal" width="88" height="27" >
+								</button>
+								<br/>
+								<img src="{{ '/uploads/credit-card-list.png' | relative_url }}" alt="credit-card-list" width="156" height="42" >
+							</div>
+							<div class="card-footer-item is-vtop">
+								<button class="button is-ath-movil is-fullwidth">
+									<img src="{{ '/uploads/give_a_hug/ButtonATHMOVIL.png' | relative_url }}" alt="ButtonATHMOVIL" width="184" height="29" >
+								</button>
+							</div>
+						</footer>
+-->
+					</div>
+					<div id="event-donation-engine-share" class="card event-donation-engine-container">
+						<div class="card-content">
+							<div class="columns is-multiline">
+								<div class="column is-three-fifths is-offset-one-fifth">
+									<h2 class="title has-text-primary">
+										{{ site.data.languages[page.lang].give_a_hug.StepTwoTitle }}
+									</h2>
+									<p class="subtitle has-text-primary">
+										{{ site.data.languages[page.lang].give_a_hug.StepTwoCaption }}
+									</p>
+									<div class="field">
+										<label class="label">{{ site.data.languages[page.lang].form.labels.justname }}:</label>
+										<div class="control">
+											<input class="input" type="text" placeholder="{{ site.data.languages[page.lang].form.labels.name }}">
+										</div>
+									</div>
+									<div class="field">
+										<label class="label">{{ site.data.languages[page.lang].give_a_hug.FormGiftLabel }}:</label>
+										<div class="control">
+											<input class="input" type="text" placeholder="{{ site.data.languages[page.lang].form.labels.name }}">
+										</div>
+									</div>
+									<div class="field">
+									  <div class="control">
+									    <label class="checkbox">
+									      <input type="checkbox">
+									      {{ site.data.languages[page.lang].give_a_hug.FormGiftAnomimus }}</a>
+									    </label>
+									  </div>
+									</div>
+									<button class="button is-primary is-fullwidth is-rounded is-medium">{{ site.data.languages[page.lang].give_a_hug.FormPublish }}</button>
+									<div class="card is-shadowless">
+										<div class="card-content">
+											<h3 class="is-size-3 has-padding-30">Compartir en Redes Sociales<br/>Utiliza el #MaratonDeAbrazos</h3>
+							                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+							                <div class="addthis_inline_share_toolbox"></div>
+										</div>
+									</div>
+            
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<section class="section ">
+		<ul id="donation-cards" class="columns is-multiline is-gapless donation-cards-{{ page.lang }}">
+			<li class="column is-one-quarter event-donation-card">
+				<img src="{{ '/uploads/give_a_hug/Event-Tarjeta-Placeholder.png' | relative_url }}" class="event-donation-card" width="100%" >
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 742.69 741.1"><defs><style>.cls-1{fill:none;stroke:#000f9f;stroke-miterlimit:10;opacity:0.16;}.cls-2{font-size:34.53px;fill:#000f9f;font-family:BrandonGrotesque-Regular, Brandon Grotesque;letter-spacing:0.02em;}</style></defs><title>Tarjeta-Placeholder-text</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1">
+				<path class="cls-1" d="M741.55,739.76C716.23,723.21.5,723.23.5,723.23L2.34,1.49,723.48.5S722.34,696.2,741.55,739.76Z"/>
+					<text class="cls-2" transform="translate(158.05 169)">Nombre Apellido</text>
+					<text class="cls-2" transform="translate(255.89 275)">Abrazo Enviado a </text>
+				</g></g></svg>
+			</li>
+		</ul>
 </section>
 
-<section class="pb-2">
-  <div class="container content-container">
-
-  </div>
-</section>
+<!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eb0e150f4417305"></script>
