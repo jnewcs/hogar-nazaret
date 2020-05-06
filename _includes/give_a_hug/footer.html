@@ -24,7 +24,6 @@
       ],
       onCompletedPayment: function (response) {
         window.trackEvent('ath_movil_payment_complete', response);
-        // TODO: ping our server to log this donation
         // Show a payment success notification and the share interface
         var paymentSuccessNotification = document.getElementById('give-a-hug-donation-options-notification');
         paymentSuccessNotification.innerHTML = "{{ site.data.languages[page.lang].donate.modal.success_msg }}";
@@ -84,3 +83,49 @@
     };
   </script>
 {% endif %}
+
+<script type="text/javascript" defer>
+  var hugForm = document.getElementById('submit-hug-form');
+  if (hugForm) {
+    var anonymousCheckbox = document.getElementById('submit-hug-anonymous');
+    var submitFromInput = document.getElementById('submit-hug-from');
+    anonymousCheckbox.onchange = function (event) {
+      if (this.checked) {
+        submitFromInput.setAttribute('disabled', 'true');
+      } else {
+        submitFromInput.removeAttribute('disabled');
+      }
+    }
+
+    hugForm.onsubmit = function(event) {
+      event.preventDefault();
+
+      var select = document.getElementById('submit-hug-to');
+      var selectedOption = select.options[select.selectedIndex];
+      var anonymous = !!anonymousCheckbox.checked;
+      var requestBody = {
+        from: anonymous ? '' : submitFromInput.value,
+        to: parseInt(selectedOption.value),
+        anonymous: anonymous
+      };
+
+      fetch('https://boiling-earth-96925.herokuapp.com/hugs', {
+        method: 'POST',
+        body: JSON.stringify(requestBody),
+        headers: {'content-type': 'application/json'},
+      })
+      .then(function(response) {
+        if (response && response.status === 200) {
+          window.trackEvent('give_a_hug_complete');
+        } else {
+          window.trackEvent('give_a_hug_failed', response);
+        }
+      });
+
+      return false;
+    }
+  }
+</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eb0e150f4417305" defer></script>

@@ -115,7 +115,7 @@ en:
     StepTwoTitle: Step 2 Share your Hug
     StepTwoCaption: Tag "El Hogar" and that person you missed so much
     FormGiftLabel:  I want to give the gift to
-    FormGiftAnomimus: I Preferred to Post Anonymous
+    FormGiftAnomimus: I prefer to post anonymous
     FormPublish: Publish
 
 es:
@@ -236,5 +236,5 @@ es:
     StepTwoTitle: PASO 2 Comparte el Abrazo
     StepTwoCaption: Taggea al hogar y a esa persona que tanto extrañas
     FormGiftLabel: Le Regalo el Abrazo a
-    FormGiftAnomimus: Prefiero que sea Anonimo
+    FormGiftAnomimus: Prefiero que sea anonimo
     FormPublish: Publicar

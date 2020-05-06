@@ -575,6 +575,12 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
   .modal-highlight {
     max-height: 75vh;
   }
+  #main-give-a-hug-container {
+    flex-direction: column;
+    #event-donation-engine-slogan {
+      order: 1;
+    }
+  }
 }
 
 @media screen and (max-width: 350px) {
