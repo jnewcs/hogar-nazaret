@@ -37,7 +37,7 @@
   window.loadHugs();
 </script>
 
-<script src="{{ '/js/hosted_fields.js' | relative_url }}" type="text/javascript" defer></script>
+<script src="{{ '/js/hosted_fields.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript" defer></script>
 
 {% if site.data.information.ath_movil.live == true %}
   <script

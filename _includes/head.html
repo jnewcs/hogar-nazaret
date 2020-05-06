@@ -65,7 +65,7 @@
     {% endif %}
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}?{{ site.time | date: '%s%N' }}">
 
     {% if page.show_carousel %}
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
