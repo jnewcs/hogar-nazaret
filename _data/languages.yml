@@ -107,17 +107,23 @@ en:
     email_usage: We will send a receipt to this email address
     manually_enter_card: Or enter card details
     event_goal: goal
+    donation_success:
+      generic: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret!
+      with_receipt: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret! You should receive an email receipt soon for your donation.
     GiveMeFive: Dame 5
     GiveMeFriends: Friends!!
     GiveBearHug: Bear Hug
     StepOneTitle: Step 1 Pick a Hug
     StepOneCaption: for that person you miss so much
     StepTwoTitle: Step 2 Share your Hug
+    StepThreeTitle: Step 3 Share on social media
+    StepThreeCaption: "Use the hashtag #MaratonDeAbrazos"
     FormGiftName: My name
     FormGiftLabel:  I want to give my hug to
     FormGiftAnonymous: I prefer to post anonymously
     FormPublish: Publish
     processing_share: Sharing your hug now
+    error_sharing_to_hogar: Sorry, we ran into an error sharing your hug
     to_options:
       '0': My spouse
       '1': My children
@@ -236,6 +242,9 @@ es:
     email_usage: Enviaremos tu recibo a esta dirección de correo electrónico
     manually_enter_card: o paga con tu tarjeta de crédito
     event_goal: meta
+    donation_success:
+      generic: ¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret!
+      with_receipt: ¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret! Recibirás pronto la confirmación de tu donativo en un correo electrónico.
     GiveMeFive: Dame 5
     GiveMeFriends: ¡¡Amigos!!
     GiveBearHug: Abrazo de Oso
@@ -249,6 +258,7 @@ es:
     FormGiftName: Mi nombre
     FormPublish: Publicar
     processing_share: Comparte tu abrazo ahora
+    error_sharing_to_hogar: Lo sentimos, nos encontramos con un error al compartir tu abrazo
     to_options:
       '0': Mi esposa o esposo
       '1': Mis hijos

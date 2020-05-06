@@ -71,7 +71,15 @@
 
         {% include give_a_hug/hosted_fields.html %}
 
-        <img src="{{ '/uploads/give_a_hug/secure-stripe-payment-logo-300x45.png_result.png' | relative_url }}" alt="Stripe Payment" class="mt-1" />
+        <div class="mt-1 is-flex-container is-fully-centered">
+          <a href="https://www.stripe.com/{{ page.lang }}-us" target="_blank" rel="noreferrer">
+            <img
+              src="{{ '/uploads/give_a_hug/secure-stripe-payment-logo-300x45.png_result.png' | relative_url }}"
+              alt="Stripe Payment"
+              class="image"
+            />
+          </a>
+        </div>
       </div>
     </div>
   </div>

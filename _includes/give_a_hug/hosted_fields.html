@@ -5,7 +5,7 @@
   data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
   data-description="{{ site.data.languages[page.lang].give_a_hug.payemnt_description }}"
   data-env="{{ jekyll.environment }}"
-  data-success="{{ site.data.languages[page.lang].donate.modal.success_msg }}"
+  data-success="{{ site.data.languages[page.lang].give_a_hug.donation_success.with_receipt }}"
 >
   <form>
     <div class="fieldset mt-1 mb-1">
@@ -32,6 +32,6 @@
   </form>
 
   <div class="error has-text-centered mt-2 mb-2 is-hidden" role="alert">
-    <span class="notification is-danger is-light"></span>
+    <div class="notification is-danger is-light"></div>
   </div>
 </section>

@@ -66,7 +66,7 @@
         window.trackEvent('ath_movil_payment_complete', response);
         // Show a payment success notification and the share interface
         var paymentSuccessNotification = document.getElementById('give-a-hug-donation-options-notification');
-        paymentSuccessNotification.innerHTML = "{{ site.data.languages[page.lang].donate.modal.success_msg }}";
+        paymentSuccessNotification.innerHTML = "{{ site.data.languages[page.lang].give_a_hug.donation_success.generic }}";
         paymentSuccessNotification.classList.remove('is-hidden');
         var eventShareCard = document.getElementById('event-donation-engine-share');
         eventShareCard.classList.remove('is-hidden');
@@ -127,6 +127,7 @@
 <script type="text/javascript" defer>
   var hugForm = document.getElementById('submit-hug-form');
   if (hugForm) {
+    var hogarShareErrorContainer = document.getElementById('hogar-share-error');
     var anonymousCheckbox = document.getElementById('submit-hug-anonymous');
     var submitFromInput = document.getElementById('submit-hug-from');
     var loadingContainer = document.getElementById('give-a-hug-share-loading-container');
@@ -155,9 +156,11 @@
         env: "{{ jekyll.environment }}"
       };
 
-      // Show loader and hide the form
+      // Show loader, hide the form, and remove old errors
+      hogarShareErrorContainer.classList.add('is-hidden');
       hugForm.classList.add('is-hidden');
       loadingContainer.classList.remove('is-hidden');
+
       var resetToInitialState = function() {
         hugForm.classList.remove('is-hidden');
         loadingContainer.classList.add('is-hidden');
@@ -186,6 +189,10 @@
         } else {
           window.trackEvent('give_a_hug_failed', requestBody);
           resetToInitialState();
+
+          hogarShareErrorContainer.classList.remove('is-hidden');
+          var errorMessage = hogarShareErrorContainer.querySelector('.notification');
+          errorMessage.innerText = "{{ site.data.languages[page.lang].give_a_hug.error_sharing_to_hogar }}";
         }
       });
 
