@@ -87,10 +87,16 @@
 <script type="text/javascript" defer>
   var hugForm = document.getElementById('submit-hug-form');
   if (hugForm) {
+    var env = hugForm.dataset.env;
     var anonymousCheckbox = document.getElementById('submit-hug-anonymous');
     var submitFromInput = document.getElementById('submit-hug-from');
+    var loadingContainer = document.getElementById('give-a-hug-share-loading-container');
+    var hogarShareContainer = document.getElementById('event-donation-engine-share');
+    var socialShareContainer = document.getElementById('event-donation-social-share');
+
     anonymousCheckbox.onchange = function (event) {
       if (this.checked) {
+        submitFromInput.value = '';
         submitFromInput.setAttribute('disabled', 'true');
       } else {
         submitFromInput.removeAttribute('disabled');
@@ -106,8 +112,17 @@
       var requestBody = {
         from: anonymous ? '' : submitFromInput.value,
         to: parseInt(selectedOption.value),
-        anonymous: anonymous
+        anonymous: anonymous,
+        env: env
       };
+
+      // Show loader and hide the form
+      hugForm.classList.add('is-hidden');
+      loadingContainer.classList.remove('is-hidden');
+      var resetToInitialState = function() {
+        hugForm.classList.remove('is-hidden');
+        loadingContainer.classList.add('is-hidden');
+      }
 
       fetch('https://boiling-earth-96925.herokuapp.com/hugs', {
         method: 'POST',
@@ -116,9 +131,13 @@
       })
       .then(function(response) {
         if (response && response.status === 200) {
-          window.trackEvent('give_a_hug_complete');
+          window.trackEvent('give_a_hug_complete', requestBody);
+          resetToInitialState();
+          hogarShareContainer.classList.add('is-hidden');
+          socialShareContainer.classList.remove('is-hidden');
         } else {
-          window.trackEvent('give_a_hug_failed', response);
+          window.trackEvent('give_a_hug_failed', requestBody);
+          resetToInitialState();
         }
       });
 
