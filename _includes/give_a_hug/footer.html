@@ -108,6 +108,7 @@
 
     setTimeout(function () {
       // CASE: if the timingInterval hasn't finished in 10 seconds, we clear it
+      window.trackEvent('ath_movil_button_failed_to_show');
       clearInterval(timingInterval);
     }, 10000);
 
@@ -198,6 +199,9 @@
           var errorMessage = hogarShareErrorContainer.querySelector('.notification');
           errorMessage.innerText = "{{ site.data.languages[page.lang].give_a_hug.error_sharing_to_hogar }}";
         }
+      })
+      .catch(function() {
+        window.trackEvent('give_a_hug_failed_uncaught_error', requestBody);
       });
 
       return false;
