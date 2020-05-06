@@ -583,6 +583,14 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
   }
 }
 
+@media screen and (max-width: 600px) {
+  #donation-amount-five, #donation-amount-amigos {
+    flex: none;
+    width: 50%;
+  }
+}
+
+/* iPhone SE size and below */
 @media screen and (max-width: 350px) {
   .mobile-nav-call-to-actions-es a {
     font-size: 13px;
