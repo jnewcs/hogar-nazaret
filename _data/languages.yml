@@ -115,7 +115,7 @@ en:
     GiveBearHug: Bear Hug
     StepOneTitle: Step 1 Pick a Hug
     StepOneCaption: for that person you miss so much
-    StepTwoTitle: Step 2 Share your Hug
+    StepTwoTitle: Step 2 Share your Hug with the Hogar
     StepThreeTitle: Step 3 Share on social media
     StepThreeCaption: "Use the hashtag #MaratonDeAbrazos"
     FormGiftName: My name
@@ -123,6 +123,7 @@ en:
     FormGiftAnonymous: I prefer to post anonymously
     FormPublish: Publish
     processing_share: Sharing your hug now
+    succes_sharing_to_hogar: Thank you so much for sharing your hug with the Hogar Albergue para Niños Jesús de Nazaret! You should now see your hug posted on this page.
     error_sharing_to_hogar: Sorry, we ran into an error sharing your hug
     to_options:
       '0': My spouse
@@ -250,7 +251,7 @@ es:
     GiveBearHug: Abrazo de Oso
     StepOneTitle: Paso 1 Escoge un Abrazo
     StepOneCaption: para esa persona que tanto extrañas
-    StepTwoTitle: PASO 2 Comparte el Abrazo con el Hogar
+    StepTwoTitle: PASO 2 Comparte tu Abrazo con el Hogar
     StepThreeTitle: PASO 3 Comparte en las redes sociales
     StepThreeCaption: "Utiliza el #MaratonDeAbrazos"
     FormGiftLabel: Le regalo el abrazo a
@@ -258,6 +259,7 @@ es:
     FormGiftName: Mi nombre
     FormPublish: Publicar
     processing_share: Comparte tu abrazo ahora
+    succes_sharing_to_hogar: ¡Muchas gracias por compartir tu abrazo con el Hogar Albergue para Niños Jesús de Nazaret!
     error_sharing_to_hogar: Lo sentimos, nos encontramos con un error al compartir tu abrazo
     to_options:
       '0': Mi esposa o esposo

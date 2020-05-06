@@ -183,6 +183,10 @@
             // The hug upload endpoint is very quick. We need to show
             // the loader for a little bit
             socialShareContainer.classList.remove('is-hidden');
+            var sucessNotificationContainer = document.getElementById('post-give-a-hug-notification');
+            sucessNotificationContainer.innerText = "{{ site.data.languages[page.lang].give_a_hug.succes_sharing_to_hogar }}";
+            sucessNotificationContainer.classList.remove('is-hidden');
+
             hogarShareContainer.classList.add('is-hidden');
             resetToInitialState();
           }, 1000);
