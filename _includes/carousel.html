@@ -31,16 +31,7 @@
         <div class="carousel-highlight-container {% unless forloop.first %}is-hidden{% endunless %}">
           <div class="columns is-gapless carousel-slide">
             {% if highlight.full_page %}
-              <a
-                class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered"
-                style="position: relative; overflow: hidden"
-                href="{{ highlight.link_destination | relative_url }}"
-              >
-                <img
-                  class="carousel-image tns-lazy-img"
-                  data-src="{{ highlight.banner_image | relative_url }}"
-                />
-              </a>
+              {% include full_page_carousel_content.html higlight=highlight %}
             {% else %}
               <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
                 <img
