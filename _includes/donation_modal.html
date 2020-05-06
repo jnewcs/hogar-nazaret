@@ -72,12 +72,12 @@
                     <div id="payment-request-button"></div>
                   </div>
                 </div>
-
-                <hr id="payment-divider" />
               </section>
             {% endif %}
 
-            <div class="field">
+            <hr id="payment-divider-for-one-time-donation" />
+
+            <div class="field mt-2">
               <button class="button is-medium is-secondary" type="submit">
                 {{ site.data.languages[page.lang].donate.call_to_action_paypal }}
               </button>
@@ -111,8 +111,6 @@
                 </select>
               </div>
             </div>
-
-            <hr />
 
             <div class="field mt-2">
               <button class="button is-medium is-secondary" type="submit">

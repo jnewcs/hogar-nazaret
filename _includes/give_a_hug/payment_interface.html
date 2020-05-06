@@ -1,0 +1,86 @@
+<div id="event-donation-engine-payment" class="card event-donation-engine-container">
+  <div class="card-content">
+    <h2 class="title has-text-primary">
+      {{ site.data.languages[page.lang].give_a_hug.StepOneTitle }}
+    </h2>
+    <p class="subtitle has-text-primary">
+      {{ site.data.languages[page.lang].give_a_hug.StepOneCaption }}
+    </p>
+
+    <div class="columns is-multiline is-flex-mobile is-vertically-centered">
+      <div id="donation-amount-five" class="column">
+        <div class="is-flex-container is-horizontally-centered">
+          <img class="image is-64x64" src="{{ '/uploads/give_a_hug/icon-high-five.svg' | relative_url }}" alt="icon-high-five" >
+        </div>
+        <p class="is-size-4">{{ site.data.languages[page.lang].give_a_hug.GiveMeFive }}</p>
+        <div>
+          <input type="radio" name="give_a_hug_donation_amount" class="is-hidden" value="5" id="give-5-gift">
+          <label class="button is-medium is-rounded" for="give-5-gift" role="button">$5</label>
+        </div>
+      </div>
+
+      <div id="donation-amount-amigos" class="column">
+        <div class="is-flex-container is-horizontally-centered">
+          <img class="image is-64x64" src="{{ '/uploads/give_a_hug/icon-amigos.svg' | relative_url }}" alt="icon-high-five" >
+        </div>
+
+        <p class="is-size-4">{{ site.data.languages[page.lang].give_a_hug.GiveMeFriends }}</p>
+        <div>
+          <input type="radio" name="give_a_hug_donation_amount" class="is-hidden" value="20" id="give-20-gift" checked>
+          <label class="button is-medium is-rounded" for="give-20-gift" role="button">$20</label>
+        </div>
+      </div>
+
+      <div id="donation-amount-oso" class="column">
+        <div class="is-flex-container is-horizontally-centered">
+          <img class="image is-64x64" src="{{ '/uploads/give_a_hug/icon-abrazo-de-oso.svg' | relative_url }}" alt="icon-high-five" >
+        </div>
+
+        <p class="is-size-4">{{ site.data.languages[page.lang].give_a_hug.GiveBearHug }}</p>
+        <div>
+          <input type="radio" name="give_a_hug_donation_amount" class="is-hidden" value="50" id="give-50-gift">
+          <label class="button is-medium is-rounded" for="give-50-gift" role="button">$50</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="give-a-hug-donation-options-loading-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <progress class="progress is-large is-info" max="100"></progress>
+        <h3 class="is-size-3 has-text-centered">
+          {{ site.data.languages[page.lang].donate.modal.processing_payment }}
+        </h3>
+      </div>
+    </div>
+
+    <div class="columns is-multiline" id="give-a-hug-donation-options">
+      {% if site.data.information.ath_movil.live == true %}
+        <div class="column is-three-fifths is-offset-one-fifth">
+          <div class="is-flex-container is-horizontally-centered">
+            <div class="ath_movil_checkout_button_container">
+              <div id="ATHMovil_Checkout_Button"></div>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+
+      <div class="column is-three-fifths is-offset-one-fifth">
+        <p class="has-text-centered mt-1 is-hidden" id="manually-enter-card-text">
+          {{ site.data.languages[page.lang].give_a_hug.manually_enter_card }}
+        </p>
+
+        {% include give_a_hug/hosted_fields.html %}
+
+        <div class="mt-1 is-flex-container is-fully-centered">
+          <a href="https://www.stripe.com/{{ page.lang }}-us" target="_blank" rel="noreferrer">
+            <img
+              src="{{ '/uploads/give_a_hug/secure-stripe-payment-logo-300x45.png_result.png' | relative_url }}"
+              alt="Stripe Payment"
+              class="image"
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

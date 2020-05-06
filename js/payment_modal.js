@@ -74,6 +74,9 @@ document.addEventListener('DOMContentLoaded', () => {
           successContainer.classList.remove('is-hidden');
           closeBtn.classList.remove('is-hidden');
 
+          // Track successful PaymentRequest
+          window.trackEvent('stripe_payment_request_sucess');
+
           ev.complete('success');
         } else {
           failureHandler();
@@ -90,7 +93,6 @@ document.addEventListener('DOMContentLoaded', () => {
         paymentRequestButton: {
           type: 'donate',
           // One of 'default', 'book', 'buy', or 'donate'
-          // Defaults to 'default'
         }
       }
     });
@@ -106,8 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
           }});
         });
       } else {
-        var divider = document.getElementById('payment-divider');
-        divider.style.display = 'none';
+        formContainer.classList.add('is-hidden');
+        document.getElementById('payment-divider-for-one-time-donation').classList.add('is-hidden');
       }
     });
   }

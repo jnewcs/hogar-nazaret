@@ -1,0 +1,37 @@
+<section
+  id="hosted-fields"
+  class="mt-2"
+  data-lang="{{ page.lang }}"
+  data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
+  data-description="{{ site.data.languages[page.lang].give_a_hug.payemnt_description }}"
+  data-env="{{ jekyll.environment }}"
+  data-success="{{ site.data.languages[page.lang].give_a_hug.donation_success.with_receipt }}"
+>
+  <form>
+    <div class="fieldset mt-1 mb-1">
+      <input
+        id="hosted-fields-email"
+        class="hosted-field non-stripe-elements empty"
+        type="email"
+        placeholder="{{ site.data.languages[page.lang].email }}"
+        required
+        autocomplete="email"
+      >
+      <small class="ml-1 has-text-grey-light">{{ site.data.languages[page.lang].give_a_hug.email_usage }}</small>
+    </div>
+
+    <div class="fieldset mb-2">
+      <div id="hosted-fields-card-number" class="hosted-field empty"></div>
+      <div id="hosted-fields-card-expiry" class="hosted-field empty half-width"></div>
+      <div id="hosted-fields-card-cvc" class="hosted-field empty half-width"></div>
+    </div>
+
+    <button type="submit" id="hosted-fields-submit-button">
+      {{ site.data.languages[page.lang].donate.call_to_action }}
+    </button>
+  </form>
+
+  <div class="error has-text-centered mt-2 mb-2 is-hidden" role="alert">
+    <div class="notification is-danger is-light"></div>
+  </div>
+</section>

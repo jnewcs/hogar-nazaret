@@ -2,6 +2,8 @@
 <meta property="og:url" content="{{ page.url | absolute_url }}" />
 {% if page.banner_image %}
   <meta property="og:image" content="{{ page.banner_image | absolute_url }}" />
+{% elsif page.seo_image %}
+  <meta property="og:image" content="{{ page.seo_image | absolute_url }}" />
 {% endif %}
 
 {% if include.type == 'article' %}

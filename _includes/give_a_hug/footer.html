@@ -1,0 +1,213 @@
+<script type="text/javascript" defer>
+  window.loadHugs = function() {
+    fetch("https://boiling-earth-96925.herokuapp.com/hugs?env={{ jekyll.environment }}", {
+      method: 'GET'
+    })
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(jsonObject) {
+      var hugObjects = jsonObject && jsonObject.data;
+      if (hugObjects) {
+        var donationCards = document.getElementById('donation-cards');
+        donationCards.innerHTML = null; // Clear out existing hugs
+        var options = [
+          "{{ site.data.languages[page.lang].give_a_hug.to_options.0 }}",
+          "{{ site.data.languages[page.lang].give_a_hug.to_options.1 }}",
+          "{{ site.data.languages[page.lang].give_a_hug.to_options.2 }}",
+          "{{ site.data.languages[page.lang].give_a_hug.to_options.3 }}",
+          "{{ site.data.languages[page.lang].give_a_hug.to_options.4 }}",
+          "{{ site.data.languages[page.lang].give_a_hug.to_options.5 }}"
+        ];
+
+        var index;
+        for (index = 0; index < hugObjects.length; ++index) {
+          var hugObject = hugObjects[index].attributes;
+          var hugContainer = document.createElement('li');
+          hugContainer.setAttribute('class', 'column is-one-quarter event-donation-card');
+          hugContainer.innerHTML = `{% include give_a_hug/hug.html %}`.replace('FROM_REPLACE_TEXT', hugObject.from).replace('TO_REPLACE_TEXT', options[hugObject.to]);
+          donationCards.appendChild(hugContainer);
+        }
+      }
+    })
+    .catch(function() {
+      window.trackEvent('loading_hugs_failed');
+    });
+  }
+  window.loadHugs();
+</script>
+
+<script src="{{ '/js/hosted_fields.js' | relative_url }}" type="text/javascript" defer></script>
+
+{% if site.data.information.ath_movil.live == true %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+
+  <script type="text/javascript" defer>
+    ATHM_Checkout = {
+      env: 'production',
+      publicToken: "{{ site.data.information.ath_movil.public_token }}",
+      timeout: 600, // Value has to between 120 (2 minutes) and 600 (10 minutes)
+      theme: 'btn',
+      lang: "{{ page.lang }}",
+      total: 20.00,
+      tax: null,
+      subtotal: 20.00,
+      items: [
+        {
+          'name': "{{ site.data.languages[page.lang].donate.one_time_amount_label }}",
+          'description': "{{ site.data.languages[page.lang].give_a_hug.payment_description }}",
+          'quantity': 1,
+          'price': 20.00,
+          'tax': null,
+          'metadata': null
+        }
+      ],
+      onCompletedPayment: function (response) {
+        window.trackEvent('ath_movil_payment_complete', response);
+        // Show a payment success notification and the share interface
+        var paymentSuccessNotification = document.getElementById('give-a-hug-donation-options-notification');
+        paymentSuccessNotification.innerHTML = "{{ site.data.languages[page.lang].give_a_hug.donation_success.generic }}";
+        paymentSuccessNotification.classList.remove('is-hidden');
+        var eventShareCard = document.getElementById('event-donation-engine-share');
+        eventShareCard.classList.remove('is-hidden');
+
+        // Hide the payment card
+        var paymentCard = document.getElementById('event-donation-engine-payment');
+        paymentCard.classList.add('is-hidden');
+      },
+      onCancelledPayment: function () {
+        // When the ATH modal/page is dismissed, this method gets called
+        window.trackEvent('ath_movil_payment_cancelled');
+      },
+      onExpiredPayment: function (response) {
+        // When the timeout period defined above is done and the payment hasn't
+        // been completed, the ATH modal/page closes and this method gets called
+        window.trackEvent('ath_movil_payment_attempt_expired');
+      }
+    };
+
+    var donationOptions = document.querySelectorAll('input[name="give_a_hug_donation_amount"]');
+    if (donationOptions) {
+      for(var i = 0, max = donationOptions.length; i < max; i++) {
+        donationOptions[i].onclick = function() {
+          var newAmount = parseFloat(this.value).toFixed(2);
+          ATHM_Checkout.total = newAmount;
+          ATHM_Checkout.subtotal = newAmount;
+          ATHM_Checkout.items[0].price = newAmount;
+        }
+      }
+    }
+  </script>
+
+  <script src="https://www.athmovil.com/api/js/v2/athmovilV2.js" type="text/javascript" defer></script>
+
+  <script type="text/javascript" defer>
+    var timingInterval = setInterval(function () {
+      checkForAthMovilButton();
+    }, 100);
+
+    setTimeout(function () {
+      // CASE: if the timingInterval hasn't finished in 10 seconds, we clear it
+      window.trackEvent('ath_movil_button_failed_to_show');
+      clearInterval(timingInterval);
+    }, 10000);
+
+    // We should only show the card details text if the ATH Movil button
+    // is present on the page
+    var checkForAthMovilButton = function () {
+      var buttons = document.getElementsByClassName('ATHMovilbtn');
+      if (buttons && buttons.length) {
+        var cardText = document.getElementById('manually-enter-card-text');
+        cardText.classList.remove('is-hidden');
+        clearInterval(timingInterval);
+      }
+    };
+  </script>
+{% endif %}
+
+<script type="text/javascript" defer>
+  var hugForm = document.getElementById('submit-hug-form');
+  if (hugForm) {
+    var hogarShareErrorContainer = document.getElementById('hogar-share-error');
+    var anonymousCheckbox = document.getElementById('submit-hug-anonymous');
+    var submitFromInput = document.getElementById('submit-hug-from');
+    var loadingContainer = document.getElementById('give-a-hug-share-loading-container');
+    var hogarShareContainer = document.getElementById('event-donation-engine-share');
+    var socialShareContainer = document.getElementById('event-donation-social-share');
+
+    anonymousCheckbox.onchange = function (event) {
+      if (this.checked) {
+        submitFromInput.value = '';
+        submitFromInput.setAttribute('disabled', 'true');
+      } else {
+        submitFromInput.removeAttribute('disabled');
+      }
+    }
+
+    hugForm.onsubmit = function(event) {
+      event.preventDefault();
+
+      var select = document.getElementById('submit-hug-to');
+      var selectedOption = select.options[select.selectedIndex];
+      var anonymous = !!anonymousCheckbox.checked;
+      var requestBody = {
+        from: anonymous ? '' : submitFromInput.value,
+        to: parseInt(selectedOption.value),
+        anonymous: anonymous,
+        env: "{{ jekyll.environment }}"
+      };
+
+      // Show loader, hide the form, and remove old errors
+      hogarShareErrorContainer.classList.add('is-hidden');
+      hugForm.classList.add('is-hidden');
+      loadingContainer.classList.remove('is-hidden');
+
+      var resetToInitialState = function() {
+        hugForm.classList.remove('is-hidden');
+        loadingContainer.classList.add('is-hidden');
+      };
+
+      fetch('https://boiling-earth-96925.herokuapp.com/hugs', {
+        method: 'POST',
+        body: JSON.stringify(requestBody),
+        headers: {'content-type': 'application/json'},
+      })
+      .then(function(response) {
+        if (response && response.status === 200) {
+          window.trackEvent('give_a_hug_complete', requestBody);
+          if (window.hasOwnProperty('loadHugs')) {
+            // Reload the hugs to immediately show the new one
+            window.loadHugs();
+          }
+
+          setTimeout(function () {
+            // The hug upload endpoint is very quick. We need to show
+            // the loader for a little bit
+            socialShareContainer.classList.remove('is-hidden');
+            var sucessNotificationContainer = document.getElementById('post-give-a-hug-notification');
+            sucessNotificationContainer.innerText = "{{ site.data.languages[page.lang].give_a_hug.succes_sharing_to_hogar }}";
+            sucessNotificationContainer.classList.remove('is-hidden');
+
+            hogarShareContainer.classList.add('is-hidden');
+            resetToInitialState();
+          }, 1000);
+        } else {
+          window.trackEvent('give_a_hug_failed', requestBody);
+          resetToInitialState();
+
+          hogarShareErrorContainer.classList.remove('is-hidden');
+          var errorMessage = hogarShareErrorContainer.querySelector('.notification');
+          errorMessage.innerText = "{{ site.data.languages[page.lang].give_a_hug.error_sharing_to_hogar }}";
+        }
+      })
+      .catch(function() {
+        window.trackEvent('give_a_hug_failed_uncaught_error', requestBody);
+      });
+
+      return false;
+    }
+  }
+</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5eb0e150f4417305" defer></script>

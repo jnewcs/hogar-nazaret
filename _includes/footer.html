@@ -98,13 +98,19 @@
   </div>
 {% endif %}
 
-
 {% if layout.lazy_load %}
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
 {% endif %}
 <script src="{{ '/js/main.js' | relative_url }}" type="text/javascript"></script>
-<script src="https://js.stripe.com/v3/"></script>
-<script src="{{ '/js/payment.js' | relative_url }}" type="text/javascript"></script>
-<script src="{{ '/js/image_modal.js' | relative_url }}" type="text/javascript"></script>
+<!-- We use Stripe on every page to process Apple Pay/Google pay from the donate modal -->
+<script src="https://js.stripe.com/v3/" defer></script>
+<script src="{{ '/js/payment_modal.js' | relative_url }}" type="text/javascript" defer></script>
+<script src="{{ '/js/image_modal.js' | relative_url }}" type="text/javascript" defer></script>
+
+{% if page.layout == 'campaign' %}
+  {% if page.campaign_type == 'give_a_hug' %}
+    {% include give_a_hug/footer.html %}
+  {% endif %}
+{% endif %}
 </body>
 </html>

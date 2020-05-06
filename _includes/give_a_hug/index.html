@@ -1,0 +1,46 @@
+<section id="event-header" class="section">
+  <div class="container">
+    <div class="columns is-vcentered">
+      <div id="event-logo" class="column has-text-centered">
+        <img src="{{ '/uploads/give_a_hug/Logo-Maraton-DeAbrazos.svg' | relative_url }}" alt="Maraton De Abrazos" >
+      </div>
+
+      {% if site.data.information.give_a_hug.show_progress == true %}
+        <div id="event-progress" class="column">
+          <div class="columns">
+            <div class="column level-item ">
+              <p class="title is-marginless has-text-secondary">
+                <span id="event-goal-progress">200</span>
+                <span class="is-size-4">
+                  {{ site.data.languages[page.lang].give_a_hug.hugs }} {{ site.data.languages[page.lang].give_a_hug.event_goal }} {{ site.data.information.give_a_hug.goal }}
+                </span>
+              </p>
+
+              <progress class="progress is-secondary mt-1" id="goal-progress" value="15" max="100">15%</progress>
+            </div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+<section id="event-donation-engine" class="section is-secondary">
+  <div class="container">
+    <div class="columns is-flex-container has-text-centered is-vcentered" id="main-give-a-hug-container">
+      <div id="event-donation-engine-slogan" class="column is-two-fifths is-centered">
+        <img src="{{ '/uploads/give_a_hug/AQuienExtranasAbrazar.svg' | relative_url }}" alt="A Quien Extrañas Abrazar">
+      </div>
+
+      <div class="column has-text-centered">
+        {% include give_a_hug/payment_interface.html %}
+        {% include give_a_hug/hogar_sharing_interface.html %}
+        {% include give_a_hug/social_media_sharing_interface.html %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <ul id="donation-cards" class="columns is-multiline is-gapless donation-cards-{{ page.lang }}"></ul>
+</section>

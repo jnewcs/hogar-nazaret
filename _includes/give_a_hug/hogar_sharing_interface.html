@@ -1,0 +1,64 @@
+<div id="event-donation-engine-share" class="card event-donation-engine-container is-hidden">
+  <div class="card-content">
+    <div class="notification is-success is-light is-hidden" id="give-a-hug-donation-options-notification"></div>
+
+    <h2 class="title has-text-primary">
+      {{ site.data.languages[page.lang].give_a_hug.StepTwoTitle }}
+    </h2>
+
+    <div class="columns is-multiline">
+      <div class="column is-three-fifths is-offset-one-fifth">
+        <div class="container content-container has-background-white has-text-centered is-hidden" id="give-a-hug-share-loading-container">
+          <div style="margin-top: 30px; margin-bottom: 30px;">
+            <progress class="progress is-large is-info" max="100"></progress>
+            <h3 class="is-size-3 has-text-centered">
+              {{ site.data.languages[page.lang].give_a_hug.processing_share }}
+            </h3>
+          </div>
+        </div>
+
+        <form id="submit-hug-form">
+          <div class="field" id="submit-hug-from-container">
+            <label class="label">{{ site.data.languages[page.lang].give_a_hug.FormGiftName }}</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="{{ site.data.languages[page.lang].form.labels.name }}" id="submit-hug-from" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <div class="control">
+              <label class="checkbox">
+                <input type="checkbox" id="submit-hug-anonymous">
+                {{ site.data.languages[page.lang].give_a_hug.FormGiftAnonymous }}</a>
+              </label>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">{{ site.data.languages[page.lang].give_a_hug.FormGiftLabel }}</label>
+            <div class="control has-text-centered">
+              <div class="select">
+                <select id="submit-hug-to" required>
+                  <option value="0">{{ site.data.languages[page.lang].give_a_hug.to_options.0 }}</option>
+                  <option value="1">{{ site.data.languages[page.lang].give_a_hug.to_options.1 }}</option>
+                  <option value="2">{{ site.data.languages[page.lang].give_a_hug.to_options.2 }}</option>
+                  <option value="3">{{ site.data.languages[page.lang].give_a_hug.to_options.3 }}</option>
+                  <option value="4">{{ site.data.languages[page.lang].give_a_hug.to_options.4 }}</option>
+                  <option value="5" selected>{{ site.data.languages[page.lang].give_a_hug.to_options.5 }}</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button class="button is-primary is-fullwidth is-rounded is-medium mt-2" type="submit" id="submit-hug-button">
+            {{ site.data.languages[page.lang].give_a_hug.FormPublish }}
+          </button>
+        </form>
+
+        <div class="error has-text-centered mt-2 mb-2 is-hidden" role="alert" id="hogar-share-error">
+          <div class="notification is-danger is-light"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

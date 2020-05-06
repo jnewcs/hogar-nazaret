@@ -9,6 +9,14 @@ executive_director: Mrs. Frances J. Valentin
 po_box: P.O. Box 1147 Mayagüez, PR 00681-1147
 payment_request_on: true
 service_worker: false
+give_a_hug:
+  live: true
+  goal: 1000
+  show_progress: false
+ath_movil:
+  live: true
+  sandbox_token: "sandboxtoken01875617264"
+  public_token: "cc49d97e329fd42eb17e3e8ea11bd283511ee592"
 logo_url: "/uploads/anniversary_25_logo.png"
 needs_url:
   en: "/uploads/needs_july_2019_en.pdf"
