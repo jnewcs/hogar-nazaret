@@ -363,7 +363,7 @@ a.button.is-secondary, button.is-secondary {
 	background: url(/uploads/give_a_hug/Tarjetas-Maraton-pink.png) no-repeat top center;
 	background-size: 100% auto;
 	transform:  rotate(-1deg);
-	z-index: 99;
+	z-index: 27;
 }
 .event-donation-card svg {
 	position: absolute;
@@ -373,43 +373,43 @@ a.button.is-secondary, button.is-secondary {
 }
 ul#donation-cards li:nth-child(2n) {
 	transform: rotate(2deg);
-	z-index: 98;
+	z-index: 26;
 	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Yellow.png) no-repeat top center;
 	background-size: 100% auto;
 }
 ul#donation-cards li:nth-child(3n) {
 	transform: rotate(-3deg);
-	z-index: 97;
+	z-index: 25;
 	background: url(/uploads/give_a_hug/Tarjetas-Maraton-orange.png) no-repeat top center;
 	background-size: 100% auto;
 }
 ul#donation-cards li:nth-child(4n) {
 	transform: rotate(6deg);
-	z-index: 97;
+	z-index: 25;
 	background: url(/uploads/give_a_hug/Tarjetas-Maraton-gray.png) no-repeat top center;
 	background-size: 100% auto;
 }
 ul#donation-cards li:nth-child(5n) {
 	transform: rotate(-5deg);
-	z-index: 97;
+	z-index: 25;
 	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Yellow.png) no-repeat top center;
 	background-size: 100% auto;
 }
 ul#donation-cards li:nth-child(6n) {
 	transform: rotate(3deg);
-	z-index: 97;
+	z-index: 25;
 	background: url(/uploads/give_a_hug/Tarjetas-Maraton-gray.png) no-repeat top center;
 	background-size: 100% auto;
 }
 ul#donation-cards li:nth-child(7n) {
 	transform: rotate(9deg);
-	z-index: 97;
+	z-index: 25;
 	background: url(/uploads/give_a_hug/Tarjetas-Maraton-pink.png) no-repeat top center;
 	background-size: 100% auto;
 }
 ul#donation-cards li:nth-child(8n) {
 	transform: rotate(-6deg);
-	z-index: 97;
+	z-index: 25;
 	background: url(/uploads/give_a_hug/Tarjetas-Maraton-orange.png) no-repeat top center;
 	background-size: 100% auto;
 }

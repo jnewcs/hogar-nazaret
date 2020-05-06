@@ -15,7 +15,7 @@ give_a_hug:
   show_progress: false
 ath_movil:
   live: true
-  sandbox_mode: false
+  sandbox_token: "sandboxtoken01875617264"
   public_token: "cc49d97e329fd42eb17e3e8ea11bd283511ee592"
 logo_url: "/uploads/anniversary_25_logo.png"
 needs_url:

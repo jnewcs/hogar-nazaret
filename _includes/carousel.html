@@ -30,14 +30,25 @@
       {% else %}
         <div class="carousel-highlight-container {% unless forloop.first %}is-hidden{% endunless %}">
           <div class="columns is-gapless carousel-slide">
-            <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
-              <img
-                class="carousel-image tns-lazy-img"
-                data-src="{{ highlight.banner_image | relative_url }}"
-              />
-            </div>
+            {% if highlight.full_page %}
+              <a
+                class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered"
+                style="position: relative; overflow: hidden"
+                href="{{ highlight.link_destination | relative_url }}"
+              >
+                <img
+                  class="carousel-image tns-lazy-img"
+                  data-src="{{ highlight.banner_image | relative_url }}"
+                />
+              </a>
+            {% else %}
+              <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
+                <img
+                  class="carousel-image tns-lazy-img"
+                  data-src="{{ highlight.banner_image | relative_url }}"
+                />
+              </div>
 
-            {% unless highlight.full_page %}
               <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
                 <div class="container content-container carousel-text is-unselectable">
                   <h1 class="is-size-3 is-uppercase is-unselectable">
@@ -61,7 +72,7 @@
                   {% endif %}
                 </div>
               </div>
-            {% endunless %}
+            {% endif %}
           </div>
         </div>
       {% endif %}
