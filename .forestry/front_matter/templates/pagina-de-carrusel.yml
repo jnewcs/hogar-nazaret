@@ -25,6 +25,14 @@ fields:
   type: boolean
   description: When turned on, the banner image will take over the entire carousel.
   label: Full Page
+- name: full_page_link
+  type: boolean
+  description: When turned on, a click on the carousel will redirect users to the
+    link specified in the link destination.
+  label: Full Page Link
+  showOnly:
+    field: full_page
+    value: true
 - type: text
   name: link_text
   label: Link Text

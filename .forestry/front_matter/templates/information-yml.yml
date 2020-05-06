@@ -54,5 +54,28 @@ fields:
   label: service_worker
   description: Controls if we install a Service Worker on our page. When it is on,
     our pages will use a service worker,
+- name: give_a_hug
+  type: field_group
+  config: {}
+  fields:
+  - name: live
+    type: boolean
+    label: Live
+  - name: show_progress
+    type: boolean
+    label: Show Progress
+    description: When turned on, we will show donation stats (number + amount) on
+      the campaign page
+  - name: goal
+    type: number
+    label: Goal
+    description: Campaign goal for number of hugs we want to share
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+  label: Give a Hug Campaign Configuration
 pages:
 - _data/information.yml
