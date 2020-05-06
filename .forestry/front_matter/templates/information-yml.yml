@@ -64,10 +64,12 @@ fields:
   - name: show_progress
     type: boolean
     label: Show Progress
+    description: When turned on, we will show donation stats (number + amount) on
+      the campaign page
   - name: goal
     type: number
     label: Goal
-    description: ''
+    description: Campaign goal for number of hugs we want to share
     default: 0
     required: true
     config:
