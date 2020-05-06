@@ -113,7 +113,9 @@
 
     setTimeout(function () {
       // CASE: if the timingInterval hasn't finished in 10 seconds, we clear it
-      window.trackEvent('ath_movil_button_failed_to_show');
+      if (timingInterval) {
+        window.trackEvent('ath_movil_button_failed_to_show');
+      }
       clearInterval(timingInterval);
     }, 10000);
 
