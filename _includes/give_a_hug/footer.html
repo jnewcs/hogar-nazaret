@@ -115,8 +115,8 @@
       // CASE: if the timingInterval hasn't finished in 10 seconds, we clear it
       if (timingInterval) {
         window.trackEvent('ath_movil_button_failed_to_show');
+        clearInterval(timingInterval);
       }
-      clearInterval(timingInterval);
     }, 10000);
 
     // We should only show the card details text if the ATH Movil button
@@ -127,6 +127,7 @@
         var cardText = document.getElementById('manually-enter-card-text');
         cardText.classList.remove('is-hidden');
         clearInterval(timingInterval);
+        timingInterval = null;
       }
     };
   </script>
