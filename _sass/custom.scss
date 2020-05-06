@@ -581,6 +581,10 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
       order: 1;
     }
   }
+  #event-header {
+    padding: 1.5em;
+    #event-logo img { height: 100px; }
+  }
 }
 
 @media screen and (max-width: 600px) {
