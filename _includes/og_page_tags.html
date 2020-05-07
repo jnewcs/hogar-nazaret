@@ -5,6 +5,9 @@
 {% elsif page.seo_image %}
   <meta property="og:image" content="{{ page.seo_image | absolute_url }}" />
 {% endif %}
+{% if page.seo_description %}
+  <meta name="description" content="{{ page.seo_description }}" />
+{% endif %}
 
 {% if include.type == 'article' %}
   <meta property="og:type" content="article" />
