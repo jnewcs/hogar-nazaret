@@ -5,7 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
     var lang = formContainer.dataset.lang;
     var description = formContainer.dataset.description;
     var env = formContainer.dataset.env;
-    var successMsg = formContainer.dataset.success;
+    var donationSuccessMsg = formContainer.dataset.success;
+    var donationErrorMsg = formContainer.dataset.error;
 
     var stripe = Stripe(stripeKey, { locale: lang });
     var elements = stripe.elements();
@@ -50,15 +51,14 @@ document.addEventListener('DOMContentLoaded', () => {
     cardCvc.mount('#hosted-fields-card-cvc');
 
     function registerElements(elements) {
-      var form = formContainer.querySelector('form');
-      var error = formContainer.querySelector('.error');
-      var errorMessage = error.querySelector('.notification');
+      var form = document.getElementById('payment_interface_form');
+      var errorContainer = formContainer.querySelector('.error');
+      var errorMessageContainer = errorContainer.querySelector('.notification');
+      var inputSelectors = "input[type='text'], input[type='email'], input[type='number'], input[name='give_a_hug_donation_amount']";
 
       function enableInputs() {
         Array.prototype.forEach.call(
-          document.querySelectorAll(
-            "input[type='text'], input[type='email'], input[name='give_a_hug_donation_amount']"
-          ), function(input) {
+          form.querySelectorAll(inputSelectors), function(input) {
             input.removeAttribute('disabled');
           }
         );
@@ -66,9 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       function disableInputs() {
         Array.prototype.forEach.call(
-          document.querySelectorAll(
-            "input[type='text'], input[type='email'], input[name='give_a_hug_donation_amount']"
-          ), function(input) {
+          form.querySelectorAll(inputSelectors), function(input) {
             input.setAttribute('disabled', 'true');
           }
         );
@@ -86,12 +84,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Listen for errors from each Element, and show error messages in the UI.
       var savedErrors = {};
+      var showError = function(errorMessage) {
+        errorContainer.classList.remove('is-hidden');
+        errorMessageContainer.innerText = errorMessage;
+      };
       elements.forEach(function(element, idx) {
         element.on('change', function(event) {
           if (event.error) {
-            error.classList.remove('is-hidden');
             savedErrors[idx] = event.error.message;
-            errorMessage.innerText = event.error.message;
+            showError(event.error.message);
           } else {
             savedErrors[idx] = null;
 
@@ -104,10 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (nextError) {
               // Now that they've fixed the current error, show another one.
-              errorMessage.innerText = nextError;
+              errorMessageContainer.innerText = nextError;
             } else {
               // The user fixed the last error; no more errors.
-              error.classList.add('is-hidden');
+              errorContainer.classList.add('is-hidden');
             }
           }
         });
@@ -117,8 +118,9 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
 
         // Trigger HTML5 validation UI on the form if any of the inputs fail validation
+        var inputsToValidate = "input[type='text'], input[type='email'], input[type='number'], input.validate-field[name='give_a_hug_donation_amount']";
         var plainInputsValid = true;
-        Array.prototype.forEach.call(form.querySelectorAll('input'), function(input) {
+        Array.prototype.forEach.call(form.querySelectorAll(inputsToValidate), function(input) {
           if (input.checkValidity && !input.checkValidity()) {
             plainInputsValid = false;
             return;
@@ -147,18 +149,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Use Stripe.js to create a token
         stripe.createToken(elements[0], additionalData).then(function(result) {
-          const resetToInitialState = function() {
+          const resetToInitialState = function(showErrorMessage = false) {
             // Report to the browser that the payment failed, prompting it to
             // re-show the payment interface
             loadingContainer.classList.add('is-hidden');
             formContainer.classList.remove('submitting');
             donationOptions.classList.remove('is-hidden');
+            enableInputs();
+            if (showErrorMessage) {
+              showError(donationErrorMsg);
+            }
           };
 
           if (result.token) {
             // Send the token to our server to charge it :)
             var finalAmountinDollars = document.querySelector('input[name="give_a_hug_donation_amount"]:checked').value;
-            var finalAmount = parseInt(finalAmountinDollars) * 100;
+            if (finalAmountinDollars === 'custom') {
+              finalAmountinDollars = document.getElementById('give-custom-gift-amount').value;
+            }
+            var finalAmount = parseFloat(finalAmountinDollars).toFixed(2) * 100;
             var requestBody = {
               amount: finalAmount,
               stripe_token: result.token.id,
@@ -181,28 +190,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 // Show a payment success notification and the share interface
                 var paymentNotification = document.getElementById('give-a-hug-donation-options-notification');
-                paymentNotification.innerHTML = successMsg;
+                paymentNotification.innerHTML = donationSuccessMsg;
                 paymentNotification.classList.remove('is-hidden');
                 var eventShareCard = document.getElementById('event-donation-engine-share');
                 eventShareCard.classList.remove('is-hidden');
 
                 // Reset the payment card and then hide it
                 resetToInitialState();
-                enableInputs();
                 var paymentCard = document.getElementById('event-donation-engine-payment');
                 paymentCard.classList.add('is-hidden');
               } else {
                 window.trackEvent('stripe_elements_payment_error');
-                resetToInitialState();
+                resetToInitialState(true);
               }
             })
             .catch(function() {
               window.trackEvent('stripe_elements_payment_error');
-              resetToInitialState();
+              resetToInitialState(true);
             });
           } else {
-            resetToInitialState();
-            enableInputs();
+            window.trackEvent('stripe_elements_token_creation_error');
+            resetToInitialState(true);
           }
         });
       });

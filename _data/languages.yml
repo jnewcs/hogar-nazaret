@@ -110,9 +110,11 @@ en:
     donation_success:
       generic: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret!
       with_receipt: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret! You should receive an email receipt soon for your donation.
+    donation_error: Sorry, we ran into an error processing your donation
     GiveMeFive: Dame 5
     GiveMeFriends: Friends!!
     GiveBearHug: Bear Hug
+    give_custom_amount: Custom Amount
     StepOneTitle: Step 1 Pick a Hug
     StepOneCaption: for that person you miss so much
     StepTwoTitle: Step 2 Share your Hug with the Hogar
@@ -245,10 +247,12 @@ es:
     event_goal: meta
     donation_success:
       generic: ¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret!
-      with_receipt: ¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret! Recibirás pronto la confirmación de tu donativo en un correo electrónico.
+      with_receipt: ¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret! Recibirás pronto la confirmación de tu donativo en un correo electrónico
+    donation_error: Lo sentimos, nos encontramos con un error al procesar tu donativo
     GiveMeFive: Dame 5
     GiveMeFriends: ¡¡Amigos!!
     GiveBearHug: Abrazo de Oso
+    give_custom_amount: Otra Cantidad
     StepOneTitle: Paso 1 Escoge un Abrazo
     StepOneCaption: para esa persona que tanto extrañas
     StepTwoTitle: PASO 2 Comparte tu Abrazo con el Hogar
