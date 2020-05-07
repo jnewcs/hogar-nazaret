@@ -36,60 +36,62 @@
   <div id="navbarContent" class="navbar-menu">
     {% include nav_language_switcher.html %}
 
-    <div class="navbar-end">
-      {% for link in site.data.menus %}
-        {% unless link.lang == page.lang %}
-          {% continue %}
-        {% endunless %}
+    <div class="navbar-end" id="main-link-donate-needs-social-container">
+      <div class="navbar-end" id="main-link-container">
+        {% for link in site.data.menus %}
+          {% unless link.lang == page.lang %}
+            {% continue %}
+          {% endunless %}
 
-        {% if link.has_dropdown %}
-          <div class="navbar-item has-dropdown is-hoverable">
+          {% if link.has_dropdown %}
+            <div class="navbar-item has-dropdown is-hoverable">
 
-            {% assign dropdown_active_class = "" %}
-            {% if link.automated_active_link_check == true %}
-              {% for link_to_check in link.links_to_check %}
-                {% if current_url contains link_to_check  %}
+              {% assign dropdown_active_class = "" %}
+              {% if link.automated_active_link_check == true %}
+                {% for link_to_check in link.links_to_check %}
+                  {% if current_url contains link_to_check  %}
+                    {% assign dropdown_active_class = "dropdown-has-active" %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+              {% else %}
+                {% if link.contained_links contains current_url %}
                   {% assign dropdown_active_class = "dropdown-has-active" %}
-                  {% break %}
                 {% endif %}
-              {% endfor %}
-            {% else %}
-              {% if link.contained_links contains current_url %}
-                {% assign dropdown_active_class = "dropdown-has-active" %}
               {% endif %}
-            {% endif %}
 
-            <a class="navbar-link {{ dropdown_active_class }}" href="#">
+              <a class="navbar-link {{ dropdown_active_class }}" href="#">
+                {{ link.title }}
+              </a>
+
+              <div class="navbar-dropdown">
+                {% for child in link.children %}
+                  {% assign item_active_class = "" %}
+                  {% if child.automated_active_link_check == true %}
+                    {% if current_url contains child.url  %}
+                      {% assign item_active_class = "is-active" %}
+                    {% endif %}
+                  {% else %}
+                    {% if current_url == child.url %}
+                      {% assign item_active_class = "is-active" %}
+                    {% endif %}
+                  {% endif %}
+
+                  <a class="navbar-item {{ item_active_class }}" href="{{ child.url | relative_url }}" {% if child.target %} target="_blank" rel="noreferrer" {% endif %}>
+                    {{ child.title }}
+                  </a>
+                {% endfor %}
+              </div>
+            </div>
+          {% else %}
+            <a class="navbar-item {% if link.contained_links contains current_url %}is-active{% endif %}" href="{{ link.url | relative_url }}" {% if link.target %} target="_blank" rel="noreferrer" {% endif %}>
               {{ link.title }}
             </a>
+          {% endif %}
+        {% endfor %}
+      </div>
 
-            <div class="navbar-dropdown">
-              {% for child in link.children %}
-                {% assign item_active_class = "" %}
-                {% if child.automated_active_link_check == true %}
-                  {% if current_url contains child.url  %}
-                    {% assign item_active_class = "is-active" %}
-                  {% endif %}
-                {% else %}
-                  {% if current_url == child.url %}
-                    {% assign item_active_class = "is-active" %}
-                  {% endif %}
-                {% endif %}
-
-                <a class="navbar-item {{ item_active_class }}" href="{{ child.url | relative_url }}" {% if child.target %} target="_blank" rel="noreferrer" {% endif %}>
-                  {{ child.title }}
-                </a>
-              {% endfor %}
-            </div>
-          </div>
-        {% else %}
-          <a class="navbar-item {% if link.contained_links contains current_url %}is-active{% endif %}" href="{{ link.url | relative_url }}" {% if link.target %} target="_blank" rel="noreferrer" {% endif %}>
-            {{ link.title }}
-          </a>
-        {% endif %}
-      {% endfor %}
-
-      <div class="navbar-item is-hidden-touch">
+      <div class="navbar-item is-hidden-touch" id="donate-needs-social-container">
         <div class="is-flex-container is-vertically-centered">
           {% include facebook_link.html %}
 

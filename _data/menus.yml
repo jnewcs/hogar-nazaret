@@ -1,15 +1,16 @@
 ---
+# English Menus
 - title: Home
   url: /en/
   contained_links:
     - /en/
   lang: en
 
-# - title: Hugs Marathon
-#   url: /en/hug-marathon/
-#   contained_links:
-#     - /en/hug-marathon/
-#   lang: en
+- title: Hugs Marathon
+  url: /en/hug-marathon/
+  contained_links:
+    - /en/hug-marathon/
+  lang: en
 
 - title: About Us
   has_dropdown: true
@@ -105,11 +106,11 @@
     - /es/
   lang: es
 
-# - title: Maratón de Abrazos
-#   url: /es/maraton-de-abrazos/
-#   contained_links:
-#     - /es/maraton-de-abrazos/
-#   lang: es
+- title: Maratón de Abrazos
+  url: /es/maraton-de-abrazos/
+  contained_links:
+    - /es/maraton-de-abrazos/
+  lang: es
 
 - title: ¿QUIÉNES SOMOS?
   has_dropdown: true

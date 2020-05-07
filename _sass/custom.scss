@@ -367,9 +367,10 @@ a.button.is-secondary, button.is-secondary {
 }
 .event-donation-card svg {
 	position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 ul#donation-cards li:nth-child(2n) {
 	transform: rotate(2deg);
@@ -446,25 +447,56 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
 }
 
 /* Tablets only */
+@media only screen and (min-width: $navbar-breakpoint) and (max-width: 1480px) {
+  .navbar-item, .navbar-link {
+    padding: .5rem 0.5rem;
+  }
+}
+@media only screen and (min-width: 1250px) and (max-width: 1480px) {
+  html.es {
+    #navbarContent .navbar-item,
+    #navbarContent .button,
+    #language-switcher a {
+      font-size: 0.92em;
+    }
+  }
+}
+@media only screen and (min-width: 1075px) and (max-width: 1250px) {
+  html.es {
+    #navbarContent .navbar-item,
+    #navbarContent .button,
+    #language-switcher a {
+      font-size: 0.95em;
+    }
+  }
+}
+@media only screen and (min-width: $navbar-breakpoint) and (max-width: 1075px) {
+  html.es {
+    #navbarContent .navbar-item,
+    #navbarContent .button,
+    #language-switcher a {
+      font-size: 0.92em;
+    }
+  }
+}
 @media only screen and (min-width: $navbar-breakpoint) and (max-width: 1250px) {
   .masonry-grid {
     column-count: 2;
   }
 
-  html.es {
-    #navbarContent .navbar-item,
-    #navbarContent .button,
-    #language-switcher {
-      font-size: 0.85em;
-    }
+  #main-link-donate-needs-social-container {
+    flex-direction: column;
   }
 
-  html.en {
-    #navbarContent .navbar-item,
-    #navbarContent .button,
-    #language-switcher {
-      font-size: 0.95em;
-    }
+  #main-link-container {
+    order: 1;
+    margin-bottom: 1em;
+  }
+
+  #donate-needs-social-container {
+    order: 0;
+    justify-content: flex-end;
+    margin-top: 1em;
   }
 }
 
