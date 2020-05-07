@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   var formContainer = document.getElementById('payment-form-inner-container');
   if (formContainer) {
     var modalContainer = document.getElementById('donation-content-container');
@@ -91,8 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
       paymentRequest: paymentRequest,
       style: {
         paymentRequestButton: {
-          type: 'donate',
-          // One of 'default', 'book', 'buy', or 'donate'
+          type: 'donate', // One of 'default', 'book', 'buy', or 'donate'
         }
       }
     });
