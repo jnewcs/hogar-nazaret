@@ -117,6 +117,7 @@ en:
     give_custom_amount: Custom Amount
     StepOneTitle: Step 1 Pick a Hug
     StepOneCaption: for that person you miss so much
+    skip_to_add_a_hug: Skip this step to share your hug with the Hogar
     StepTwoTitle: Step 2 Share your Hug with the Hogar
     StepThreeTitle: Step 3 Share on social media
     StepThreeCaption: "Use the hashtag #MaratonDeAbrazos"
@@ -255,6 +256,7 @@ es:
     give_custom_amount: Otra Cantidad
     StepOneTitle: Paso 1 Escoge un Abrazo
     StepOneCaption: para esa persona que tanto extrañas
+    skip_to_add_a_hug: Omite este PASO para compartir tu abrazo con el Hogar
     StepTwoTitle: PASO 2 Comparte tu Abrazo con el Hogar
     StepThreeTitle: PASO 3 Comparte en las redes sociales
     StepThreeCaption: "Utiliza el #MaratonDeAbrazos"

@@ -1,4 +1,15 @@
 <script type="text/javascript" defer>
+  var skipToShareLink = document.getElementById('skip-to-add-a-hug');
+  skipToShareLink.onclick = function() {
+    window.trackEvent('skipping_directly_to_share');
+
+    // Hide the payment card and show the share interface
+    var paymentCard = document.getElementById('event-donation-engine-payment');
+    paymentCard.classList.add('is-hidden');
+    var hogarShareContainer = document.getElementById('event-donation-engine-share');
+    hogarShareContainer.classList.remove('is-hidden');
+  };
+
   window.loadHugs = function() {
     fetch("https://boiling-earth-96925.herokuapp.com/hugs?env={{ jekyll.environment }}", {
       method: 'GET'
