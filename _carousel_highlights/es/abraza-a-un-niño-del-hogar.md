@@ -12,6 +12,5 @@ hide_from_carousel: false
 always_show: false
 full_page: true
 full_page_link: true
-published: false
 
 ---
