@@ -484,6 +484,10 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
     column-count: 2;
   }
 
+  #navbar-spacer {
+    margin-top: 121px;
+  }
+
   #main-link-donate-needs-social-container {
     flex-direction: column;
   }

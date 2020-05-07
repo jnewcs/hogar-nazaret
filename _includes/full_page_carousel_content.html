@@ -7,6 +7,7 @@
     <img
       class="carousel-image tns-lazy-img"
       data-src="{{ highlight.banner_image | relative_url }}"
+      style="{% if highlight.banner_image_max_width %}max-width: {{ highlight.banner_image_max_width }}px{% endif %}"
     />
   </a>
 {% else %}
@@ -17,6 +18,7 @@
     <img
       class="carousel-image tns-lazy-img"
       data-src="{{ highlight.banner_image | relative_url }}"
+      style="{% if highlight.banner_image_max_width %}max-width: {{ highlight.banner_image_max_width }}px{% endif %}"
     />
   </div>
 {% endif%}
