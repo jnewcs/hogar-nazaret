@@ -14,3 +14,4 @@ photo_grid: []
 redirect_from: []
 
 ---
+El viernes 8 de mayo, el Hogar conmemoró el Día del Maestro llevando a cabo un reconocimiento a nuestros niños al terminar su año escolar. Un millón de gracias a nuestra maestra tutora, Carmen Arce Cruz, y nuestra coordinadora de actividades, Silvia Ríos Lopez, por su dedicación. ¡Felicidades a los niños y a las maestras!
