@@ -9,4 +9,4 @@ order: 2
 always_show: true
 creation_date: 2016-04-10T12:00:00.000+00:00
 ---
-Our mission is to offer a safe home and loving care to children that have been victims of abuse or neglect. We provide for all of their needs, as a loving family does: medical and mental health care, educational and social guidance, recreation, and lots of love.
+Our mission is to offer a safe home, personal care, nutrition, education, medical services, transportation, recreation, and social and psychological services to girls and boys who are victims of abuse or neglect. We provide for all their needs with lots of LOVE.

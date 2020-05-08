@@ -117,6 +117,9 @@ en:
     give_custom_amount: Custom Amount
     StepOneTitle: Step 1 Pick a Hug
     StepOneCaption: for that person you miss so much
+    donation_explanation:
+      summary: Where is my donation going?
+      details: "Your donation helps the Hogar offer a safe home, personal care, nutrition, education, medical services, transportation, recreation, and social and psychological services to girls and boys who have been rescued from abuse. We provide for all their needs with lots of LOVE. Thank you for your support!"
     skip_to_add_a_hug: Skip this step to share your hug with the Hogar
     StepTwoTitle: Step 2 Share your Hug with the Hogar
     StepThreeTitle: Step 3 Share on social media
@@ -256,6 +259,9 @@ es:
     give_custom_amount: Otra Cantidad
     StepOneTitle: Paso 1 Escoge un Abrazo
     StepOneCaption: para esa persona que tanto extrañas
+    donation_explanation:
+      summary: ¿Para qué se utilizará el dinero de mi donativo?
+      details: "Tu donativo ayudará al Hogar a realizar nuestra misión de ofrecer hogar seguro, atención personal, alimentación, transportación, servicios médicos, educación, recreación, ayuda social y psicológica a niños y niñas que han sido rescatados del maltrato. En nuestro Hogar atendemos a los niños con mucho AMOR. ¡Gracias por tu aportación!"
     skip_to_add_a_hug: Omite este PASO para compartir tu abrazo con el Hogar
     StepTwoTitle: PASO 2 Comparte tu Abrazo con el Hogar
     StepThreeTitle: PASO 3 Comparte en las redes sociales

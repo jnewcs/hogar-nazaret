@@ -10,6 +10,11 @@
     hogarShareContainer.classList.remove('is-hidden');
   };
 
+  var donationExplanation = document.getElementById('donation-explanation');
+  donationExplanation.onclick = function() {
+    window.trackEvent('learning_about_donation_effect');
+  }
+
   window.loadHugs = function() {
     fetch("https://boiling-earth-96925.herokuapp.com/hugs?env={{ jekyll.environment }}", {
       method: 'GET'

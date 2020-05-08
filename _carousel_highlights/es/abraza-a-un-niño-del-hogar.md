@@ -6,7 +6,7 @@ link_text: 'Esta es tu oportunidad de enviarle un abrazo y compartir tu amor. #M
   #AbrazaUnNinoDelHogar'
 link_opens_donate: false
 link_destination: "/es/maraton-de-abrazos"
-banner_image: "/uploads/2020/05/07/Facebook-Cover-May7th.png"
+banner_image: "/uploads/give_a_hug/seo_image.jpeg"
 banner_image_max_width: 1200
 order: 0
 hide_from_carousel: false
