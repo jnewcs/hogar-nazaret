@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   /* Navbar Burger Clicker */
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
     $navbarBurgers.forEach(el => {
-      el.addEventListener('click', () => {
+      el.addEventListener('click', function (){
         var target = el.dataset.target;
         var $target = document.getElementById(target);
 
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var $navbarItemsWithDropdown = Array.prototype.slice.call(document.querySelectorAll('.navbar-item.has-dropdown'), 0);
   if ($navbarItemsWithDropdown.length > 0) {
     $navbarItemsWithDropdown.forEach(el => {
-      el.addEventListener('click', () => {
+      el.addEventListener('click', function () {
         el.classList.toggle('is-open');
       });
     });
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
       controlsContainer: document.getElementById('controls-container'),
       lazyload: true,
       arrowKeys: false,
-      onInit: () => {
+      onInit: function() {
         var highlights = Array.prototype.slice.call(document.querySelectorAll('.carousel-highlight-container'), 0);
         highlights.forEach(highlight => {
           highlight.classList.remove('is-hidden');
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       var interval;
       var setAutoPlay = function() {
-        interval = setInterval(() => {
+        interval = setInterval(function () {
           highlightCarousel.goTo('next');
 
           var info = highlightCarousel.getInfo();
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
       };
       setAutoPlay();
 
-      autoplayButton.addEventListener('click', () => {
+      autoplayButton.addEventListener('click', function () {
         var currentAction = autoplayButton.dataset.action;
         if (currentAction === 'stop') {
           turnOffAutoPlay();
@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var $modalOpeners = Array.prototype.slice.call(document.querySelectorAll('.modal-opener'), 0);
   if ($modalOpeners.length > 0) {
     $modalOpeners.forEach(el => {
-      el.addEventListener('click', () => {
+      el.addEventListener('click', function () {
         var target = el.dataset.target;
         if (target === 'donation-modal') {
           // Track clicks to open the donation modal
@@ -175,7 +175,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var $modalClosers = Array.prototype.slice.call(document.querySelectorAll('.modal-closer'), 0);
   if ($modalClosers.length > 0) {
     $modalClosers.forEach(el => {
-      el.addEventListener('click', () => {
+      el.addEventListener('click', function () {
         var target = el.dataset.target;
         if (target === 'donation-modal') {
           // Track clicks to close the donation modal
@@ -194,7 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
   var $tabContents = Array.prototype.slice.call(document.querySelectorAll('.tab-content'), 0);
   if ($tabs.length > 0) {
     $tabs.forEach(el => {
-      el.addEventListener('click', () => {
+      el.addEventListener('click', function () {
         var target = el.dataset.target;
         if (['donate-now-content', 'sponsor-content'].indexOf(target) !== -1) {
           // Track views on the different tabs
