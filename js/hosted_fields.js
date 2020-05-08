@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var requestBody = {
           amount: finalAmount,
           stripe_token: result.token.id,
-          email: result.token.email,
+          email: result.payerEmail || result.token.email,
           description: window.campaignDonationDescription,
           lang: lang,
           env: env
