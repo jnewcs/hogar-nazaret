@@ -46,6 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var donationOptions = document.querySelectorAll('input[name="give_a_hug_donation_amount"]');
   var changePaymentButtonData = function(newAmount) {
+    if (!newAmount || isNaN(newAmount)) {
+      newAmount = 1.00;
+    }
     ATHM_Checkout.total = newAmount;
     ATHM_Checkout.subtotal = newAmount;
     ATHM_Checkout.items[0].price = newAmount;
@@ -65,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
   customAmountInput.onblur = function() {
     var newAmount = parseFloat(this.value);
     if (!newAmount) {
-      this.value = '1';
+      this.value = 1.00;
     } else {
       this.value = newAmount.toFixed(2);
     }
@@ -77,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (this.value !== 'custom') {
         customAmountContainer.classList.add('is-hidden');
         newAmount = parseFloat(this.value).toFixed(2);
-        customAmountInput.value = '1';  // Always have a valid value here
+        customAmountInput.value = 1.00;  // Always have a valid value here
       } else {
         customAmountContainer.classList.remove('is-hidden');
         newAmount = parseFloat(customAmountInput.value).toFixed(2);
