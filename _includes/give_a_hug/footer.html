@@ -101,48 +101,9 @@
         window.trackEvent('ath_movil_payment_attempt_expired');
       }
     };
-
-    var donationOptions = document.querySelectorAll('input[name="give_a_hug_donation_amount"]');
-    if (donationOptions) {
-      var changeAthMovilAmount = function(newAmount) {
-        ATHM_Checkout.total = newAmount;
-        ATHM_Checkout.subtotal = newAmount;
-        ATHM_Checkout.items[0].price = newAmount;
-        return;
-      }
-
-      var customAmountContainer = document.getElementById('give-custom-gift-amount-container');
-      var customAmountInput = document.getElementById('give-custom-gift-amount');
-      customAmountInput.onchange = function() {
-        var newAmount = parseFloat(this.value).toFixed(2);
-        changeAthMovilAmount(newAmount);
-      };
-      customAmountInput.onblur = function() {
-        var newAmount = parseFloat(this.value);
-        if (!newAmount) {
-          this.value = '1';
-        } else {
-          this.value = newAmount.toFixed(2);
-        }
-      };
-
-      for(var i = 0, max = donationOptions.length; i < max; i++) {
-        donationOptions[i].onclick = function() {
-          var newAmount;
-          if (this.value !== 'custom') {
-            customAmountContainer.classList.add('is-hidden');
-            newAmount = parseFloat(this.value).toFixed(2);
-            customAmountInput.value = '1';  // Always have a valid value here
-          } else {
-            customAmountContainer.classList.remove('is-hidden');
-            newAmount = parseFloat(customAmountInput.value).toFixed(2);
-          }
-
-          changeAthMovilAmount(newAmount);
-        }
-      }
-    }
   </script>
+
+  <script src="{{ '/js/dynamic_payment_method_setup.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript" defer></script>
 
   <script src="https://www.athmovil.com/api/js/v2/athmovilV2.js" type="text/javascript" defer></script>
 

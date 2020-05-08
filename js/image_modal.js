@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
   /* Code for Image Modal */
   class ImageGallery {
     constructor(containerId) {
