@@ -59,7 +59,7 @@ fields:
     of the content. On mobile, it is displayed on top. In general, images with wider
     dimensions are better than really tall images as they will scale better across
     all devices.
-- name: banner_image_width
+- name: banner_image_max_width
   type: number
   description: Allows us to specify a max width for the object on desktop. This can
     help prevent the image from getting cutoff. It can be left blank also
@@ -69,7 +69,7 @@ fields:
     min: 
     max: 
     step: 
-  label: Banner Image Width
+  label: Banner Image Max Width
 - type: number
   name: order
   label: Order
