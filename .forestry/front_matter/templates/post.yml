@@ -45,7 +45,6 @@ fields:
     options:
     - cover
     - contain
-    - flyer
     source:
       type: simple
       section: 
@@ -64,7 +63,7 @@ fields:
     step: 
   label: Banner Image Height
   showOnly:
-    field: banner_image_style
+    field: header_layout
     value: flyer
 - name: header_layout
   type: select
