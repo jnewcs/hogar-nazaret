@@ -64,6 +64,17 @@ fields:
     dimensions are better than really tall images as they will scale better across
     all devices.
   label: Banner Image
+- name: banner_image_width
+  type: number
+  label: Banner Image Width
+  description: Allows us to specify a max width for the object on desktop. This can
+    help prevent the image from getting cutoff. It can be left blank also.
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 - type: number
   name: order
   label: Order
@@ -91,16 +102,5 @@ fields:
     required: true
   hidden: true
   default: en
-- name: banner_image_width
-  type: number
-  label: Banner Image Width
-  description: Allows us to specify a max width for the object on desktop. This can
-    help prevent the image from getting cutoff. It can be left blank also.
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
 pages:
 - _carousel_highlights/en/open-house.md
