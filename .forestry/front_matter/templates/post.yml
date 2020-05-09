@@ -51,20 +51,6 @@ fields:
       file: 
       path: 
   label: banner_image_style
-- name: banner_image_height
-  type: number
-  description: Sets the banner image height to this fixed amount. This is only used
-    for the flyer layout
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
-  label: Banner Image Height
-  showOnly:
-    field: header_layout
-    value: flyer
 - name: header_layout
   type: select
   default: central_title
@@ -86,6 +72,20 @@ fields:
     central_title layout just has the post''s title with the published date below
     it. The flyer layout includes the banner image followed by the event’s title and
     the timing information (day of the week, date, and time).'
+- name: banner_image_height
+  type: number
+  description: Sets the banner image height to this fixed amount. This is only used
+    for the flyer layout
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  label: Banner Image Height
+  showOnly:
+    field: header_layout
+    value: flyer
 - type: boolean
   name: has_photo_grid
   label: has_photo_grid
