@@ -52,6 +52,20 @@ fields:
       file: 
       path: 
   label: banner_image_style
+- name: banner_image_max_height
+  type: number
+  label: Banner Image Height
+  description: Sets the banner image height to this fixed amount. This is only used
+    for the flyer layout
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  showOnly:
+    field: banner_image_style
+    value: flyer
 - name: header_layout
   type: select
   default: central_title
@@ -102,16 +116,6 @@ fields:
   label: layout
   hidden: true
   default: post
-- name: banner_image_max_height
-  type: number
-  label: Banner Image Height
-  description: ''
-  default: 0
-  required: true
-  config:
-    min: 
-    max: 
-    step: 
 pages:
 - _noticias/amigos-del-hogar-llenan-la-casa-abierta.md
 - _noticias/el-hogar-conmemora-el-día-del-maestro.md
