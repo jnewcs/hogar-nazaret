@@ -75,6 +75,9 @@ fields:
     min: 
     max: 
     step: 
+  showOnly:
+    field: full_page
+    value: true
 - type: number
   name: order
   label: Order
