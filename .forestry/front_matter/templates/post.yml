@@ -101,6 +101,19 @@ fields:
   default: en
   config:
     required: true
+- name: banner_image_height
+  type: number
+  description: Sets the banner image height to this fixed amount. This is only used
+    for the flyer layout
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
+  label: Banner Image Height
+  showOnly:
+    field: banner_image_style
 pages:
 - _posts/2020-02-29-our-25th-anniversary-celebration-has-begun.md
 - _posts/2020-05-08-hogar-celebrates-teacher-s-day.md
