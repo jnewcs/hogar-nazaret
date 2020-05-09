@@ -7,7 +7,7 @@ link_text: 'Esta es tu oportunidad de enviarle un abrazo y compartir tu amor. #M
 link_opens_donate: false
 link_destination: "/en/hug-marathon"
 banner_image: "/uploads/give_a_hug/seo_image.jpeg"
-banner_image_max_width: 1200
+banner_image_max_width: 900
 order:
 hide_from_carousel: false
 always_show: false
