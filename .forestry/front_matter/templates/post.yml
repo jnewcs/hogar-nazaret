@@ -115,6 +115,7 @@ fields:
   label: Banner Image Height
   showOnly:
     field: banner_image_style
+    value: flyer
 pages:
 - _posts/2020-02-29-our-25th-anniversary-celebration-has-begun.md
 - _posts/2020-05-08-hogar-celebrates-teacher-s-day.md
