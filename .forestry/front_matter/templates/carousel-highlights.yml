@@ -64,9 +64,9 @@ fields:
     dimensions are better than really tall images as they will scale better across
     all devices.
   label: Banner Image
-- name: banner_image_width
+- name: banner_image_max_width
   type: number
-  label: Banner Image Width
+  label: Banner Image Max Width
   description: Allows us to specify a max width for the object on desktop. This can
     help prevent the image from getting cutoff. It can be left blank also.
   default: 0
