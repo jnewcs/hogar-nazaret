@@ -9,6 +9,7 @@ lang_ref: dia-del-maestro
 banner_image: "/uploads/2020/05/08/PHOTO-2020-05-08-17-48-38.jpg"
 banner_image_alt: Carmen Arce Cruz, maestra tutora, y Silvia Ríos Lopez, coordinadora
   de actividades
+banner_image_height: 300
 has_photo_grid: false
 photo_grid: []
 redirect_from: []
