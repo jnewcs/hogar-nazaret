@@ -45,6 +45,7 @@ fields:
     options:
     - cover
     - contain
+    - flyer
     source:
       type: simple
       section: 
@@ -101,6 +102,16 @@ fields:
   label: layout
   hidden: true
   default: post
+- name: banner_image_max_height
+  type: number
+  label: Banner Image Height
+  description: ''
+  default: 0
+  required: true
+  config:
+    min: 
+    max: 
+    step: 
 pages:
 - _noticias/amigos-del-hogar-llenan-la-casa-abierta.md
 - _noticias/el-hogar-conmemora-el-día-del-maestro.md
