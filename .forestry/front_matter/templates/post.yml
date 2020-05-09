@@ -45,6 +45,7 @@ fields:
     options:
     - cover
     - contain
+    - flyer
     source:
       type: simple
       section: 
