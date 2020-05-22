@@ -11,7 +11,7 @@
     {% endif %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% if page.auto_switch_language == true %}
-      <script src="{{ '/js/language_changer.js' | relative_url }}" type="text/javascript"></script>
+      <script src="{{ '/js/language_changer.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript"></script>
     {% else %}
       {% include woopra.html %}
     {% endif %}
