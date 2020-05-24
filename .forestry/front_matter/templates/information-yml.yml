@@ -77,5 +77,25 @@ fields:
       max: 
       step: 
   label: Give a Hug Campaign Configuration
+- name: needs_url
+  type: field_group
+  config: {}
+  fields:
+  - name: en
+    type: text
+    config:
+      required: false
+    label: en
+    description: The relative path to the list of needs in English. It must start
+      with /uploads/&lt;asset_name&gt;
+  - name: es
+    type: text
+    config:
+      required: false
+    label: es
+    description: The relative path to the list of needs in Spanish. It must start
+      with /uploads/&lt;asset_name&gt;
+  label: Needs Url
+  description: Link to the list of needs for the Spanish and English sites
 pages:
 - _data/information.yml
