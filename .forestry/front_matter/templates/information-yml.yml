@@ -82,17 +82,21 @@ fields:
   config: {}
   fields:
   - name: en
-    type: text
+    type: file
     config:
-      required: false
+      maxSize: 64
     label: en
-    description: The relative path to the list of needs in English. It must start
-      with /uploads/&lt;asset_name&gt;
+    description: File for list of needs in English. If the file is an image, we will
+      show it on the same page in a modal. If the file is a PDF, we will open the
+      list of needs on a new page.
   - name: es
     type: file
     config:
       maxSize: 64
     label: es
+    description: File for list of needs in Spanish. If the file is an image, we will
+      show it on the same page in a modal. If the file is a PDF, we will open the
+      list of needs on a new page.
   label: Needs Url
   description: Link to the list of needs for the Spanish and English sites
 pages:
