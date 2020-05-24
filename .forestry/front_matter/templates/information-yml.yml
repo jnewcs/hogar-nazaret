@@ -89,12 +89,10 @@ fields:
     description: The relative path to the list of needs in English. It must start
       with /uploads/&lt;asset_name&gt;
   - name: es
-    type: text
+    type: file
     config:
-      required: false
+      maxSize: 64
     label: es
-    description: The relative path to the list of needs in Spanish. It must start
-      with /uploads/&lt;asset_name&gt;
   label: Needs Url
   description: Link to the list of needs for the Spanish and English sites
 pages:
