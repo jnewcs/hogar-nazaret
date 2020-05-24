@@ -15,11 +15,11 @@ give_a_hug:
   show_progress: false
 ath_movil:
   live: true
-  sandbox_token: "sandboxtoken01875617264"
-  public_token: "cc49d97e329fd42eb17e3e8ea11bd283511ee592"
+  sandbox_token: sandboxtoken01875617264
+  public_token: cc49d97e329fd42eb17e3e8ea11bd283511ee592
 logo_url: "/uploads/anniversary_25_logo.png"
 needs_url:
   en: "/uploads/needs_july_2019_en.pdf"
-  es: "/uploads/needs_april_2020_es.jpg"
+  es: "/uploads/needs_may_2020_es.png"
 social_media:
   facebook: https://www.facebook.com/HogarANJN
