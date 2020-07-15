@@ -107,6 +107,6 @@ fields:
     type: boolean
     label: Live
     description: Turning this on adds the ATH Móvil button/integration
-  label: ATH Móvil
+  label: ATH Móvil Configuration
 pages:
 - _data/information.yml
