@@ -10,6 +10,7 @@
   url: /en/hug-marathon/
   contained_links:
     - /en/hug-marathon/
+  feature_check: 'ath_movil.live'
   lang: en
 
 - title: About Us
@@ -110,6 +111,7 @@
   url: /es/maraton-de-abrazos/
   contained_links:
     - /es/maraton-de-abrazos/
+  feature_check: 'ath_movil.live'
   lang: es
 
 - title: ¿QUIÉNES SOMOS?
