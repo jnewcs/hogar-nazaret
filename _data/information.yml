@@ -10,7 +10,7 @@ po_box: P.O. Box 1147 Mayagüez, PR 00681-1147
 payment_request_on: true
 service_worker: false
 give_a_hug:
-  live: true
+  live: false
   goal: 1000
   show_progress: false
 ath_movil:
