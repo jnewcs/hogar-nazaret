@@ -99,5 +99,14 @@ fields:
       list of needs on a new page.
   label: Needs Url
   description: Link to the list of needs for the Spanish and English sites
+- name: ath_movil
+  type: field_group
+  config: {}
+  fields:
+  - name: live
+    type: boolean
+    label: Live
+    description: Turning this on adds the ATH Móvil button/integration
+  label: ATH Móvil
 pages:
 - _data/information.yml
