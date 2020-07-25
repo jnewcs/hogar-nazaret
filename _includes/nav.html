@@ -43,6 +43,10 @@
             {% continue %}
           {% endunless %}
 
+          {% if site.data.information[link.feature_check].live == false %}
+            {% continue %}
+          {% endif %}
+
           {% if link.has_dropdown %}
             <div class="navbar-item has-dropdown is-hoverable">
 

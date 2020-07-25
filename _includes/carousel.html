@@ -27,6 +27,8 @@
 
       {% if highlight.hide_from_carousel %}
         {% continue %}
+      {% elsif site.data.information[highlight.feature_check].live == false %}
+        {% continue %}
       {% else %}
         <div class="carousel-highlight-container {% unless forloop.first %}is-hidden{% endunless %}">
           <div class="columns is-gapless carousel-slide">
