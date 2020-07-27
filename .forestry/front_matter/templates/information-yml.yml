@@ -61,6 +61,8 @@ fields:
   - name: live
     type: boolean
     label: Live
+    description: When turned on, we show a link on the header to the main campaign
+      page
   - name: show_progress
     type: boolean
     label: Show Progress
