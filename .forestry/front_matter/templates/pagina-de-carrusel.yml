@@ -92,6 +92,20 @@ fields:
     is on, we will never hide this carousel highlight.
   showOnly:
     field: hide_from_carousel
+- name: feature_check
+  type: select
+  default: []
+  config:
+    required: false
+    options:
+    - give_a_hug
+    - ath_movil
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: Feature Check
 - type: text
   name: lang
   label: lang
