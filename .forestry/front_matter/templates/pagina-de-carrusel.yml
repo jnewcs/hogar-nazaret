@@ -106,6 +106,8 @@ fields:
       file: 
       path: 
   label: Feature Check
+  description: When this attribute is set, we check the feature flag to see if the
+    feature is live.
 - type: text
   name: lang
   label: lang
