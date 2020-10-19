@@ -11,7 +11,7 @@ banner_image_style: cover
 has_photo_grid: false
 photo_grid: []
 redirect_from: []
-banner_image_height: 
+banner_image_height: 250
 
 ---
 On Friday, May 8, the Hogar conmmorated Teacher's Day by giving a recognition to our children who completed their school year. We sincerely thank our tutoring teacher, Carmen Arce Cruz, and our educational activities coordinator, Silvia Ríos Lopez, for their dedication. Congratulations to both the children and the teachers!
