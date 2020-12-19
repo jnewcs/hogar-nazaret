@@ -3,6 +3,7 @@ title: Create A Fund
 header_layout: simple
 content_layout: split_form
 form:
+  url: https://formspree.io/f/myybbyzp
   fields:
     name:
       presence: true
@@ -29,4 +30,4 @@ We offer the option of creating a donation fund to benefit the Hogar and direct 
 
 <b>Families and Individuals</b>: Individual persons and families can create a fund in memory of a loved one or on behalf of their family to benefit the Hogar.
 
-For more information on how to start your own fund on behalf of the Hogar, please call us at {% include phone.html %} or complete the following online form. Once you send us the completed online form, you will receive a telephone call from our office as soon as possible. 
+For more information on how to start your own fund on behalf of the Hogar, please call us at {% include phone.html %} or complete the following online form. Once you send us the completed online form, you will receive a telephone call from our office as soon as possible.

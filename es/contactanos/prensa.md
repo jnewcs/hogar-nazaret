@@ -3,6 +3,7 @@ title: Prensa
 layout: page
 content_layout: split_form
 form:
+  url: https://formspree.io/f/mpzoozwb
   fields:
     name:
       presence: true

@@ -3,6 +3,7 @@ title: Crea un Fondo
 header_layout: simple
 content_layout: split_form
 form:
+  url: https://formspree.io/f/meqppqor
   fields:
     name:
       presence: true

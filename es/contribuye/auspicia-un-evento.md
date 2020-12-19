@@ -4,6 +4,7 @@ header_layout: simple
 content_layout: split_form
 content_photo: /uploads/milestones/hogar-walk-a-thon.jpg
 form:
+  url: https://formspree.io/f/xoqppqvp
   fields:
     name:
       presence: true

@@ -4,6 +4,7 @@ header_layout: simple
 content_layout: split_form
 content_photo: /uploads/page_header_images/girl-with-flower.jpg
 form:
+  url: https://formspree.io/f/mgeppevr
   fields:
     name:
       presence: true

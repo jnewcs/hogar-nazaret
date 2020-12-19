@@ -16,7 +16,7 @@
   </div>
 
   <div class="column">
-    <form action="https://formspree.io/comunicaciones@hogarjesusdenazaret.org" method="POST">
+    <form action="{{ page.form.url }}" method="POST">
       <input
         hidden
         name="{{ site.data.languages[page.lang].page }}"
@@ -27,6 +27,7 @@
         name="{{ site.data.languages[page.lang].language }}"
         value="{{ site.data.languages[page.lang].label }}"
       >
+      <input type="hidden" name="_language" value="{{ page.lang }}" />
 
       {% if page.form.fields.name.presence %}
         <div class="field">
