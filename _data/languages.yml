@@ -1,3 +1,4 @@
+---
 en:
   page: Page
   language: Language
@@ -5,7 +6,7 @@ en:
   switcher: Read this page in
   label: English
   label_abbr: EN
-  icon: 🇺🇸
+  icon: "\U0001F1FA\U0001F1F8"
   read_more: Read More
   learn_more: Learn More
   see_how: See How
@@ -15,7 +16,8 @@ en:
   previous_post: Previous Post
   next_post: Next Post
   home: Home
-  not_found_explanation: The page you are looking for might have been removed had its name changed or is temporarily unavailable
+  not_found_explanation: The page you are looking for might have been removed had
+    its name changed or is temporarily unavailable
   needs: Needs
   donate:
     call_to_action: Donate
@@ -34,8 +36,10 @@ en:
       processing_payment: Processing your payment
       return: Return
       retry: Retry
-      success_msg: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret! You should receive an email receipt soon for your donation.
-      error_msg: Sorry, we ran into an error processing your donation. Please click 'Retry' to return to the donation screen and try again.
+      success_msg: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret!
+        You should receive an email receipt soon for your donation.
+      error_msg: Sorry, we ran into an error processing your donation. Please click
+        'Retry' to return to the donation screen and try again.
   email: Email
   office: Office
   fax: Fax
@@ -48,15 +52,15 @@ en:
       phone: Phone
       questions_and_comments: Questions / Comments
       visit_dates:
-        first_preference: "First Option: Desired Visit Date"
-        second_preference: "Second Option: Desired Visit Date"
+        first_preference: 'First Option: Desired Visit Date'
+        second_preference: 'Second Option: Desired Visit Date'
       sponsorship_type: Type of Sponsorship
       description: Description
       company: Company
     sponsorship_types:
-      - Event
-      - Operational costs
-      - Capital projects
+    - Event
+    - Operational costs
+    - Capital projects
     submit: Submit
   admin_link: Admin Login
   offline_message: You are currently offline
@@ -66,41 +70,43 @@ en:
     event_details: Event details
     more: Upcoming events
   months:
-    - January
-    - February
-    - March
-    - April
-    - June
-    - July
-    - August
-    - September
-    - October
-    - November
-    - December
+  - January
+  - February
+  - March
+  - April
+  - June
+  - July
+  - August
+  - September
+  - October
+  - November
+  - December
   months_abbr:
-    - Jan
-    - Feb
-    - Mar
-    - Apr
-    - May
-    - Jun
-    - Jul
-    - Aug
-    - Sep
-    - Oct
-    - Nov
-    - Dec
+  - Jan
+  - Feb
+  - Mar
+  - Apr
+  - May
+  - Jun
+  - Jul
+  - Aug
+  - Sep
+  - Oct
+  - Nov
+  - Dec
   daynames:
-    - Sunday
-    - Monday
-    - Tuesday
-    - Wednesday
-    - Thursday
-    - Friday
-    - Saturday
+  - Sunday
+  - Monday
+  - Tuesday
+  - Wednesday
+  - Thursday
+  - Friday
+  - Saturday
   seo:
     descriptions:
-      homepage: The Hogar Albergue para Niños Jesús de Nazaret has been providing love, services, and a better future to boys and girls who have been victims of abuse or neglect for over twenty years.
+      homepage: The Hogar Albergue para Niños Jesús de Nazaret has been providing
+        love, services, and a better future to boys and girls who have been victims
+        of abuse or neglect for over twenty years.
   give_a_hug:
     hugs: hugs
     payment_description: Donation for the Maratón de Abrazos campaign
@@ -109,7 +115,8 @@ en:
     event_goal: goal
     donation_success:
       generic: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret!
-      with_receipt: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret! You should receive an email receipt soon for your donation.
+      with_receipt: Thank you so much for supporting The Hogar Albergue Jesús de Nazaret!
+        You should receive an email receipt soon for your donation.
     donation_error: Sorry, we ran into an error processing your donation
     GiveMeFive: Dame 5
     GiveMeFriends: Friends!!
@@ -119,17 +126,22 @@ en:
     StepOneCaption: for that person you miss so much
     donation_explanation:
       summary: Where is my donation going?
-      details: "Your donation helps the Hogar offer a safe home, personal care, nutrition, education, medical services, transportation, recreation, and social and psychological services to girls and boys who have been rescued from abuse. We provide for all their needs with lots of LOVE. Thank you for your support!"
+      details: Your donation helps the Hogar offer a safe home, personal care, nutrition,
+        education, medical services, transportation, recreation, and social and psychological
+        services to girls and boys who have been rescued from abuse. We provide for
+        all their needs with lots of LOVE. Thank you for your support!
     skip_to_add_a_hug: Skip this step to share your hug with the Hogar
     StepTwoTitle: Step 2 Share your Hug with the Hogar
     StepThreeTitle: Step 3 Share on social media
-    StepThreeCaption: "Use the hashtag #MaratonDeAbrazos"
+    StepThreeCaption: 'Use the hashtag #MaratonDeAbrazos'
     FormGiftName: My name
-    FormGiftLabel:  I want to give my hug to
+    FormGiftLabel: I want to give my hug to
     FormGiftAnonymous: I prefer to post anonymously
     FormPublish: Publish
     processing_share: Sharing your hug now
-    succes_sharing_to_hogar: Thank you so much for sharing your hug with the Hogar Albergue para Niños Jesús de Nazaret! You should now see your hug posted on this page.
+    succes_sharing_to_hogar: Thank you so much for sharing your hug with the Hogar
+      Albergue para Niños Jesús de Nazaret! You should now see your hug posted on
+      this page.
     error_sharing_to_hogar: Sorry, we ran into an error sharing your hug
     to_options:
       '0': My spouse
@@ -138,7 +150,6 @@ en:
       '3': My brothers
       '4': My sisters
       '5': The children of the Hogar
-
 es:
   page: Página
   language: Idioma
@@ -146,7 +157,7 @@ es:
   switcher: Lee esta página en
   label: Español
   label_abbr: ES
-  icon: 🇵🇷
+  icon: "\U0001F1F5\U0001F1F7"
   read_more: Leer Más
   learn_more: Aprender Más
   see_how: Ver Cómo
@@ -156,10 +167,11 @@ es:
   previous_post: Publicación Anterior
   next_post: Publicación Siguiente
   home: Inicio
-  not_found_explanation: La página que está buscando podría haber sido eliminada si su nombre hubiera cambiado o no esté disponible temporalmente
+  not_found_explanation: La página que está buscando podría haber sido eliminada si
+    su nombre hubiera cambiado o no esté disponible temporalmente
   needs: Necesidades
   donate:
-    call_to_action:  Donar
+    call_to_action: Donar
     call_to_action_paypal: Donar
     locale: es_XC
     item_name: Donativo - Hogar Albergue para Ninos Jesus de Nazaret
@@ -175,8 +187,11 @@ es:
       processing_payment: Procesamiento de tu donativo
       return: Regresa
       retry: Intente de nuevo
-      success_msg: ¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret! Recibirás pronto la confirmación de tu donativo en un correo electrónico.
-      error_msg: Lo sentimos, nos encontramos con un error al procesar tu donativo. Por favor, haga clic en “Intente de nuevo” para volver a la pantalla de donativo e inténtelo otra vez.
+      success_msg: "¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús
+        de Nazaret! Recibirás pronto la confirmación de tu donativo en un correo electrónico."
+      error_msg: Lo sentimos, nos encontramos con un error al procesar tu donativo.
+        Por favor, haga clic en “Intente de nuevo” para volver a la pantalla de donativo
+        e inténtelo otra vez.
   email: Email
   office: Oficina
   fax: Fax
@@ -189,60 +204,63 @@ es:
       phone: Teléfono
       questions_and_comments: Preguntas / Comentarios
       visit_dates:
-        first_preference: "Primera Opción: Fecha Deseada para la Visita"
-        second_preference: "Segunda Opción: Fecha Deseada para la Visita"
+        first_preference: 'Primera Opción: Fecha Deseada para la Visita'
+        second_preference: 'Segunda Opción: Fecha Deseada para la Visita'
       sponsorship_type: Tipo de Auspicio
       description: Descripción
       company: Compañía
     sponsorship_types:
-      - Evento
-      - Costos Operativos
-      - Proyectos de Capital
-    submit: Submit
+    - Evento
+    - Costos Operativos
+    - Proyectos de Capital
+    submit: Envíe
   admin_link: Admin Login
   offline_message: Actualmente estás desconectado.
   upcoming_events:
     header: Próximos Eventos
-    no_upcoming_events: No hay ningún evento planificado. ¡Vuelve pronto a la página para ver próximos eventos!
+    no_upcoming_events: No hay ningún evento planificado. ¡Vuelve pronto a la página
+      para ver próximos eventos!
     event_details: Detalles del evento
     more: Próximos eventos
   months:
-    - enero
-    - febrero
-    - marzo
-    - abril
-    - mayo
-    - junio
-    - julio
-    - agosto
-    - septiembre
-    - octubre
-    - noviembre
-    - diciembre
+  - enero
+  - febrero
+  - marzo
+  - abril
+  - mayo
+  - junio
+  - julio
+  - agosto
+  - septiembre
+  - octubre
+  - noviembre
+  - diciembre
   months_abbr:
-    - Ene.
-    - Feb.
-    - Mar.
-    - Abr
-    - May.
-    - Jun.
-    - Jul.
-    - Ago.
-    - Sep.
-    - Oct.
-    - Nov.
-    - Dic.
+  - Ene.
+  - Feb.
+  - Mar.
+  - Abr
+  - May.
+  - Jun.
+  - Jul.
+  - Ago.
+  - Sep.
+  - Oct.
+  - Nov.
+  - Dic.
   daynames:
-    - Domingo
-    - Lunes
-    - Martes
-    - Miércoles
-    - Jueves
-    - Viernes
-    - Sábado
+  - Domingo
+  - Lunes
+  - Martes
+  - Miércoles
+  - Jueves
+  - Viernes
+  - Sábado
   seo:
     descriptions:
-      homepage: El Hogar Albergue para Niños Jesús de Nazaret lleva más de dos décadas años dándo amor, servicios y un mejor futuro a niños y niñas de Puerto Rico que han sido víctimas de negligencia o maltrato.
+      homepage: El Hogar Albergue para Niños Jesús de Nazaret lleva más de dos décadas
+        años dándo amor, servicios y un mejor futuro a niños y niñas de Puerto Rico
+        que han sido víctimas de negligencia o maltrato.
   give_a_hug:
     hugs: abrazos
     payment_description: Donativo para la campaña de Maratón de Abrazos
@@ -250,29 +268,37 @@ es:
     manually_enter_card: o paga con tu tarjeta de crédito
     event_goal: meta
     donation_success:
-      generic: ¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret!
-      with_receipt: ¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret! Recibirás pronto la confirmación de tu donativo en un correo electrónico
+      generic: "¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús de Nazaret!"
+      with_receipt: "¡Muchas gracias por apoyar al Hogar Albergue para Niños Jesús
+        de Nazaret! Recibirás pronto la confirmación de tu donativo en un correo electrónico"
     donation_error: Lo sentimos, nos encontramos con un error al procesar tu donativo
     GiveMeFive: Dame 5
-    GiveMeFriends: ¡¡Amigos!!
+    GiveMeFriends: "¡¡Amigos!!"
     GiveBearHug: Abrazo de Oso
     give_custom_amount: Otra Cantidad
     StepOneTitle: Paso 1 Escoge un Abrazo
     StepOneCaption: para esa persona que tanto extrañas
     donation_explanation:
-      summary: ¿Para qué se utilizará el dinero de mi donativo?
-      details: "Tu donativo ayudará al Hogar a realizar nuestra misión de ofrecer hogar seguro, atención personal, alimentación, transportación, servicios médicos, educación, recreación, ayuda social y psicológica a niños que han sido rescatados del maltrato. En nuestro Hogar atendemos a los niños con mucho AMOR. ¡Gracias por tu aportación!"
+      summary: "¿Para qué se utilizará el dinero de mi donativo?"
+      details: Tu donativo ayudará al Hogar a realizar nuestra misión de ofrecer hogar
+        seguro, atención personal, alimentación, transportación, servicios médicos,
+        educación, recreación, ayuda social y psicológica a niños que han sido rescatados
+        del maltrato. En nuestro Hogar atendemos a los niños con mucho AMOR. ¡Gracias
+        por tu aportación!
     skip_to_add_a_hug: Omite este PASO para compartir tu abrazo con el Hogar
     StepTwoTitle: PASO 2 Comparte tu Abrazo con el Hogar
     StepThreeTitle: PASO 3 Comparte en las redes sociales
-    StepThreeCaption: "Utiliza el #MaratonDeAbrazos"
+    StepThreeCaption: 'Utiliza el #MaratonDeAbrazos'
     FormGiftLabel: Le regalo el abrazo a
     FormGiftAnonymous: Prefiero que sea anónimo
     FormGiftName: Mi nombre
     FormPublish: Publicar
     processing_share: Comparte tu abrazo ahora
-    succes_sharing_to_hogar: ¡Muchas gracias por compartir tu abrazo con el Hogar Albergue para Niños Jesús de Nazaret! Puedes ver ahora el abrazo que enviaste en esta página.
-    error_sharing_to_hogar: Lo sentimos, nos encontramos con un error al compartir tu abrazo
+    succes_sharing_to_hogar: "¡Muchas gracias por compartir tu abrazo con el Hogar
+      Albergue para Niños Jesús de Nazaret! Puedes ver ahora el abrazo que enviaste
+      en esta página."
+    error_sharing_to_hogar: Lo sentimos, nos encontramos con un error al compartir
+      tu abrazo
     to_options:
       '0': Mi esposa o esposo
       '1': Mis hijos
