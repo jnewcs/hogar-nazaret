@@ -1,4 +1,24 @@
 document.addEventListener('DOMContentLoaded', function () {
+  /* Code to lazy load script */
+  window.stripeLoaded = false;
+  window.lazyLoadScript = function(scriptSrc, postLoadFunction, failEvent) {
+    if (!scriptSrc) return;
+
+    var script = document.createElement('script');
+    script.src = scriptSrc;
+    script.defer = true;
+    script.async = false;
+    script.onload = function() {
+      if (postLoadFunction) {
+        postLoadFunction();
+      }
+    };
+    script.onerror = function() {
+      window.trackEvent(failEvent)
+    };
+    document.body.appendChild(script);
+  }
+
   /* Navbar Burger Clicker */
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
@@ -151,11 +171,21 @@ document.addEventListener('DOMContentLoaded', function () {
   var successContainer = document.getElementById('success-container');
   var errorContainer = document.getElementById('error-container');
   var $modalOpeners = Array.prototype.slice.call(document.querySelectorAll('.modal-opener'), 0);
+  var setStripeLoaded = function() {
+    window.stripeLoaded = true;
+  };
+
   if ($modalOpeners.length > 0) {
     $modalOpeners.forEach(el => {
       el.addEventListener('click', function () {
         var target = el.dataset.target;
         if (target === 'donation-modal') {
+          if (window.stripeLoaded === false) {
+            window.lazyLoadScript('https://js.stripe.com/v3', setStripeLoaded, 'async_stripe_load_fail');
+            var paymentModalSrc = document.getElementById('payment-modal-src').dataset.src;
+            window.lazyLoadScript(paymentModalSrc, undefined, 'async_payment_modal_fail');
+          }
+
           // Track clicks to open the donation modal
           window.trackEvent('donation_model_open');
         }
@@ -216,6 +246,25 @@ document.addEventListener('DOMContentLoaded', function () {
         el.classList.add('is-active');
         $target.classList.add('is-active');
       });
+    });
+  }
+
+  /* Code for lazy loading Youtube Videos */
+  var youtubeContainers = document.querySelectorAll('.youtube-player-container');
+  for (var i = 0; i < youtubeContainers.length; i++) {
+    var image = new Image();
+    image.src = 'https://img.youtube.com/vi/' + youtubeContainers[i].dataset.embed + '/sddefault.jpg';
+    image.addEventListener('load', function() {
+      youtubeContainers[i].appendChild(image);
+    }(i));
+
+    youtubeContainers[i].addEventListener('click', function() {
+      var iframe = document.createElement('iframe');
+      iframe.setAttribute('frameborder', '0');
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('src', 'https://www.youtube.com/embed/' + this.dataset.embed + '?rel=0&showinfo=0&autoplay=1');
+      this.innerHTML = '';
+      this.appendChild(iframe);
     });
   }
 });
