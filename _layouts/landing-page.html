@@ -164,14 +164,8 @@ layout: default
                 </small>
               </div>
 
-              <div class="youtube-player-container has-text-centered mt-2">
-                <iframe
-                  src="//www.youtube.com/embed/biW0VL6aMfE?wmode=transparent"
-                  frameborder="0"
-                  allowfullscreen="1"
-                  title="{{ page.secondary_highlights.main.title }}"
-                >
-                </iframe>
+              <div class="youtube-player-container has-text-centered mt-2" data-embed="biW0VL6aMfE">
+                <div class="play-button"></div>
               </div>
 
               {% assign prevention_page = site.pages | where: "lang", page.lang | where: "lang_ref", "education-and-prevention" | first %}
