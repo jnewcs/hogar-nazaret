@@ -13,7 +13,6 @@ banner_image: "/uploads/2021/03/08/girl_power.png"
 order: 0
 hide_from_carousel: false
 always_show: false
-published: false
 
 ---
 Empoderemos a nuestras niñas a ser mujeres exitosas
