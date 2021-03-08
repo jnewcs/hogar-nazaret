@@ -36,10 +36,18 @@
               {% include full_page_carousel_content.html higlight=highlight %}
             {% else %}
               <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
-                <img
-                  class="carousel-image tns-lazy-img"
-                  data-src="{{ highlight.banner_image | relative_url }}"
-                />
+                {% if highlight.banner_image_dimensions_specified %}
+                  <img
+                    class="carousel-image tns-lazy-img"
+                    data-src="{{ highlight.banner_image | relative_url }}"
+                    style="height: {{ highlight.banner_image_height }}px; width: {{ highlight.banner_image_width }}px"
+                  />
+                {% else %}
+                  <img
+                    class="carousel-image tns-lazy-img"
+                    data-src="{{ highlight.banner_image | relative_url }}"
+                  />
+                {% endif %}
               </div>
 
               <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">

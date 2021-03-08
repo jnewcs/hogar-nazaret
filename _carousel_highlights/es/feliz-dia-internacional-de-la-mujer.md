@@ -10,6 +10,9 @@ link_text: Quiero ser Padrino o Madrina
 link_opens_donate: true
 link_destination: ''
 banner_image: "/uploads/2021/03/08/girl_power_resized.jpg"
+banner_image_dimensions_specified: true
+banner_image_height: 500
+banner_image_width: 500
 order: 0
 hide_from_carousel: false
 always_show: false
