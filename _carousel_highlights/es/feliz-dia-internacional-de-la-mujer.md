@@ -9,7 +9,7 @@ full_page_link: false
 link_text: Quiero ser Padrino o Madrina
 link_opens_donate: true
 link_destination: ''
-banner_image: "/uploads/2021/03/08/girl_power.png"
+banner_image: "/uploads/2021/03/08/girl_power_resized.jpg"
 order: 0
 hide_from_carousel: false
 always_show: false
