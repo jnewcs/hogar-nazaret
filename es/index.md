@@ -3,6 +3,10 @@ title: Inicio
 layout: landing-page
 show_carousel: true
 show_news: true
+show_warning_banner: true
+warning:
+  title: Estamos confrontando problemas con nuestras líneas telefónicas
+  message: De su solicitud ser urgente, puede comunicarse con nuestra Directora Ejecutive al <a href="tel:7872013500">(787) 201-3500</a> o enviarnos un correo electrónico a <a href="mailto:info@hogarjesusdenazaret.org">info@hogarjesusdenazaret.org</a>.
 call_to_action:
   header: ¡El Hogar te Necesita!
   text: La operación del Hogar es posible en gran medida gracias a subvenciones de instituciones benéficas como Fondos Unidos y a donativos económicos de entidades gubernamentales, organizaciones cívicas y empresas privadas. No obstante, el apoyo más importante es el apoyo de la COMUNIDAD, personas como tú que se comprometen a ayudarnos a continuar nuestra labor y hacer la diferencia en la vida de nuestros niños.

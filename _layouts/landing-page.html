@@ -11,6 +11,15 @@ layout: default
 {% assign current_date = 'now' | date: '%s' | plus: 0 %}
 
 <section class="pb-2">
+  {% if page.show_warning_banner == true %}
+    <div class="p-1 has-background-warning has-text-centered">
+      <b>{{ page.warning.title }}</b>
+      <p>
+        {{ page.warning.message }}
+      </p>
+    </div>
+  {% endif %}
+
   <div class="container content-container">
     <h1 class="is-size-1 has-text-centered has-text-primary">
       {{ page.call_to_action.header }}
