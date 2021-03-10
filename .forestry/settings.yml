@@ -32,6 +32,10 @@ sections:
   label: 'Collaborators '
 - type: heading
   label: Spanish Content
+- type: document
+  path: es/index.md
+  label: Inicio
+  match: "**/*"
 - type: directory
   path: _carousel_highlights/es
   label: Páginas de Carrusel
