@@ -27,7 +27,8 @@ fields:
   hidden: true
   default: landing-page
 - name: warning
-  type: field_group_list
+  type: field_group
+  config: {}
   fields:
   - name: title
     type: text
@@ -41,12 +42,8 @@ fields:
       required: false
       wysiwyg: true
       schema:
-        format: html
+        format: html-blocks
     label: Message
-  config:
-    min: 
-    max: 
-    labelField: 
   label: Warning
   showOnly:
     field: show_warning_banner
