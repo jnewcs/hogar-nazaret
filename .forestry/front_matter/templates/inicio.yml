@@ -2,114 +2,16 @@
 label: Inicio
 hide_body: true
 fields:
-- type: text
-  name: title
-  label: title
-  description: Shows up in the browser tab to identify the page
-  config:
-    required: true
 - type: boolean
   name: show_carousel
-  label: show_carousel
+  label: Show Carousel
 - type: boolean
   name: show_news
-  label: show_news
-- type: field_group
-  name: call_to_action
-  label: call_to_action
-  fields:
-  - type: text
-    name: header
-    label: header
-  - type: textarea
-    name: text
-    label: text
-- type: field_group
-  name: highlights
-  label: highlights
-  fields:
-  - type: field_group
-    name: main
-    label: main
-    fields:
-    - type: text
-      name: title
-      label: title
-    - type: textarea
-      name: subtitle
-      label: subtitle
-    - type: file
-      name: image
-      label: image
-  - type: field_group
-    name: complementary
-    label: complementary
-    fields:
-    - type: field_group
-      name: one
-      label: one
-      fields:
-      - type: text
-        name: title
-        label: title
-      - type: textarea
-        name: subtitle
-        label: subtitle
-    - type: field_group
-      name: two
-      label: two
-      fields:
-      - type: text
-        name: title
-        label: title
-      - type: textarea
-        name: subtitle
-        label: subtitle
-- type: field_group
-  name: secondary_highlights
-  label: secondary_highlights
-  fields:
-  - type: field_group
-    name: main
-    label: main
-    fields:
-    - type: text
-      name: title
-      label: title
-    - type: textarea
-      name: subtitle
-      label: subtitle
-  - type: field_group
-    name: complementary
-    label: complementary
-    fields:
-    - type: field_group
-      name: one
-      label: one
-      fields:
-      - type: text
-        name: title
-        label: title
-      - type: textarea
-        name: subtitle
-        label: subtitle
-    - type: field_group
-      name: two
-      label: two
-      fields:
-      - type: text
-        name: title
-        label: title
-      - type: textarea
-        name: subtitle
-        label: subtitle
-- type: field_group
-  name: news
-  label: news
-  fields:
-  - type: text
-    name: title
-    label: title
+  label: Show News
+- name: show_warning_banner
+  type: boolean
+  label: Show Warning Banner
+  description: Banner that shows up on the home page below the carousel
 - type: text
   name: lang
   label: lang
