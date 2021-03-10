@@ -26,3 +26,5 @@ fields:
   label: layout
   hidden: true
   default: landing-page
+pages:
+- es/index.md
