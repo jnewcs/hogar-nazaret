@@ -253,6 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var youtubeContainers = document.querySelectorAll('.youtube-player-container');
   for (var i = 0; i < youtubeContainers.length; i++) {
     var image = new Image();
+    image.alt = 'preview image';
     image.src = 'https://img.youtube.com/vi/' + youtubeContainers[i].dataset.embed + '/sddefault.jpg';
     image.addEventListener('load', function() {
       youtubeContainers[i].appendChild(image);
