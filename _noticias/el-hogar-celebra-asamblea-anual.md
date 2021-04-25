@@ -5,7 +5,7 @@ banner_image_max_height: 0
 lang: es
 layout: post
 title: El Hogar Celebra Asamblea Anual
-date: 2020-02-05 17:00:00 +0000
+date: 2021-02-03 17:00:00 +0000
 lang_ref: annual-assembly-hogar
 banner_image: "/uploads/2021/04/25/photo-2021-02-25-19-51-04.jpg"
 banner_image_alt: Presidente de la Junta. Ing. Carlos Velazquez, se dirige a los presentes.
