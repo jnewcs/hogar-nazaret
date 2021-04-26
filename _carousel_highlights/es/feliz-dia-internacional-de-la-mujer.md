@@ -1,5 +1,5 @@
 ---
-banner_image_max_width: 0
+banner_image_max_width: 
 feature_check: ''
 lang: es
 title: "¡Feliz Día Internacional de la Mujer!"
@@ -13,10 +13,9 @@ banner_image: "/uploads/2021/03/08/girl_power_resized.jpg"
 banner_image_dimensions_specified: true
 banner_image_height: 500
 banner_image_width: 500
-order: 0
-hide_from_carousel: false
+order: 
+hide_from_carousel: true
 always_show: false
-published: false
 
 ---
 Empoderemos a nuestras niñas a ser mujeres exitosas
