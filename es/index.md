@@ -3,7 +3,7 @@ title: Inicio
 layout: landing-page
 show_carousel: true
 show_news: true
-show_warning_banner: true
+show_warning_banner: false
 warning:
   title: Estamos confrontando problemas con nuestras líneas telefónicas
   message: De su solicitud ser urgente, puede comunicarse con nuestra Directora Ejecutive
