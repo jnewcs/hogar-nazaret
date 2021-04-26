@@ -2,7 +2,7 @@
 title: Join Us in Fighting Child Abuse
 link_text: Donate Here
 link_destination: "/en/get-involved/"
-banner_image: "/uploads/2021/04/26/prevencionmaltrato.png"
+banner_image: "/uploads/carousel_highlights/child_prevention_month.jpg"
 hide_from_carousel: false
 lang: en
 order: 3
