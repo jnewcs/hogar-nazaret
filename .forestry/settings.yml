@@ -62,7 +62,6 @@ sections:
 - type: document
   path: es/que-hacemos.md
   label: Alcance
-  match: "**/*"
 - type: heading
   label: General
 - type: document
