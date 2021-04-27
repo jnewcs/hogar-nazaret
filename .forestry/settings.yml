@@ -65,7 +65,6 @@ sections:
 - type: document
   path: es/quienes-somos/historia.md
   label: Cronologia
-  match: "**/*"
 - type: heading
   label: General
 - type: document
