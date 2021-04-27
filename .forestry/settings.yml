@@ -62,6 +62,10 @@ sections:
 - type: document
   path: es/que-hacemos.md
   label: Alcance
+- type: document
+  path: es/quienes-somos/historia.md
+  label: Cronologia
+  match: "**/*"
 - type: heading
   label: General
 - type: document
