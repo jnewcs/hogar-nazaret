@@ -31,3 +31,5 @@ fields:
   name: lang_ref
   label: lang_ref
   hidden: true
+pages:
+- es/que-hacemos.md
