@@ -1,0 +1,31 @@
+---
+label: Alcance
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: header_layout
+  label: header_layout
+- type: file
+  name: header_image
+  label: header_image
+- type: text
+  name: header_image_style
+  label: header_image_style
+- type: text
+  name: header_text_color
+  label: header_text_color
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: lang_ref
+  label: lang_ref
+- type: list
+  name: redirect_from
+  label: redirect_from
