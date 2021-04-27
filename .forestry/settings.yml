@@ -62,7 +62,6 @@ sections:
 - type: document
   path: es/contactanos.md
   label: Contactos
-  match: "**/*"
 - type: heading
   label: General
 - type: document
