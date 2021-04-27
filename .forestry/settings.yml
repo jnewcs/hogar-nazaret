@@ -59,6 +59,10 @@ sections:
 - type: document
   path: _data/colaboradores.yml
   label: Colaboradores
+- type: document
+  path: es/contactanos.md
+  label: Contactos
+  match: "**/*"
 - type: heading
   label: General
 - type: document
