@@ -9,6 +9,9 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
 .round-border {
   border-radius: 50%;
 }
+.border-top-primary-light {
+  border-top: 2px solid $primary-light;
+}
 .clickable {
   cursor: pointer;
 }
@@ -260,8 +263,8 @@ a.button.is-secondary, button.is-secondary {
 .prev-button, .next-button {
   color: black;
   background-color: gainsboro;
-  opacity: 0.20;
-  font-size: 28px;
+  opacity: 0.50;
+  font-size: 25px;
   border-radius: 50%;
   width: 45px;
   height: 45px;
@@ -297,6 +300,12 @@ a.button.is-secondary, button.is-secondary {
       display: block;
     }
   }
+}
+
+// Pattern backgrounds
+.pattern-dots-sm {
+  background-image: radial-gradient($primary-light 1.5px, transparent 1.5px);
+  background-size: calc(10 * 1.5px) calc(10 * 1.5px)
 }
 
 /* 404 */

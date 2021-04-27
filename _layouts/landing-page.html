@@ -20,6 +20,30 @@ layout: default
     </div>
   {% endif %}
 
+  {% if page.show_job_banner == true %}
+    <div class="mt-1 pattern-dots-sm has-text-centered">
+      <div class="columns pt-2 pb-2 is-horizontally-centered">
+        <div class="column has-background-white is-two-thirds border-top-primary-light">
+          <div class="columns">
+            <div class="column is-two-thirds">
+              <b>{{ page.job_banner.title }}</b>
+              <p>
+                {{ page.job_banner.message }}
+              </p>
+            </div>
+
+            {% assign jobs_link = page.job_banner.action_url %}
+            <div class="column is-flex is-horizontally-centered is-vertically-centered">
+              <a class="button is-primary" href="{{ jobs_link | relative_url }}" target="_blank">
+                {{ page.job_banner.action_text }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
   <div class="container content-container">
     <h1 class="is-size-1 has-text-centered has-text-primary">
       {{ page.call_to_action.header }}
