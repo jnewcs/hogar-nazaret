@@ -59,9 +59,6 @@ sections:
 - type: document
   path: _data/colaboradores.yml
   label: Colaboradores
-- type: document
-  path: es/contactanos.md
-  label: Contactos
 - type: heading
   label: General
 - type: document
