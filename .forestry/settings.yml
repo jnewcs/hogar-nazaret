@@ -33,7 +33,6 @@ sections:
 - type: document
   path: en/what-we-do.md
   label: Services Reach
-  match: "**/*"
 - type: heading
   label: Spanish Content
 - type: document
