@@ -108,3 +108,5 @@ bundle exec jekyll serve --drafts --future --unpublished --port 8080 --host 0.0.
 4. To track page views and event funnels, we use [Woopra](https://www.woopra.com).
 
 5. To process payments and webhooks, we have a Ruby on Rails API that is hosted on Heroku. Here is the link the [repo](https://github.com/jnewcs/hogar-nazaret-api)
+
+5. To actually deploy, we don't use the [pages-gem](https://github.com/github/pages-gem), we are using Github Actions following this [blog post](https://sujaykundu.com/blog/introducing-devlopr-easily-deploy-your-jekyll-blog-using-github-pages-and-github-actions/). This allows us to use Jekyll 4.2.0 which is a lot faster at building the website.

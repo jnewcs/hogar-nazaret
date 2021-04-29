@@ -1,0 +1,8 @@
+
+# Ok, here the keys are pretty much self explanatory :)
+name: 'Deploy new version'
+description: 'Setup Ruby env and build new site version'
+author: 'John Newcomb'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'

@@ -1,12 +1,11 @@
 source "https://rubygems.org"
 
-gem "jekyll"
+gem "jekyll", '~> 4.2'
 
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.6"
+  gem "jekyll-feed"
   gem "jekyll-tagging"
   gem "jekyll-archives"
-  gem "github-pages"
   gem "jekyll-redirect-from"
   gem "jekyll-sitemap"
 end
