@@ -17,15 +17,18 @@ fields:
 - type: text
   name: header_text_color
   label: header_text_color
-- type: text
-  name: layout
-  label: layout
-- type: text
-  name: lang
-  label: lang
-- type: text
-  name: lang_ref
-  label: lang_ref
 - type: list
   name: redirect_from
   label: redirect_from
+- type: text
+  name: layout
+  label: layout
+  hidden: true
+- type: text
+  name: lang
+  label: lang
+  hidden: true
+- type: text
+  name: lang_ref
+  label: lang_ref
+  hidden: true
