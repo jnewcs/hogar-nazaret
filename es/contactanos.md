@@ -12,7 +12,7 @@ El Hogar te da la bienvenida y te exhorta a que te unas a nuestra misión de tra
 
 <div class="is-size-4 is-cursive">
   <b>
-    {{ site.data.information.executive_director }}, {{ site.data.languages[page.lang].executive_director }}
+    {{ site.data.information.executive_director }}
   </b>
 </div>
 <div>
