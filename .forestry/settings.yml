@@ -30,6 +30,10 @@ sections:
 - type: document
   path: _data/collaborators.yml
   label: 'Collaborators '
+- type: document
+  path: en/what-we-do.md
+  label: Services Reach
+  match: "**/*"
 - type: heading
   label: Spanish Content
 - type: document
