@@ -11,10 +11,11 @@ warning:
     a <a href="mailto:info@hogarjesusdenazaret.org">info@hogarjesusdenazaret.org</a>.
 show_job_banner: true
 job_banner:
-  title: ¡Oportunidad de Empleo!
-  message: El Hogar Albergue para Niños Jesús de Nazaret te invita a formar parte de su equipo para brindar cuido y amor a niños en la plaza de Cuidador(a) de niños.
+  title: "¡Oportunidad de Empleo!"
+  message: El Hogar Albergue para Niños Jesús de Nazaret te invita a formar parte
+    de su equipo para brindar cuido y amor a niños en la plaza de Cuidador(a) de niños
   action_text: Para obtener más detalles, leer aquí
-  action_url: '/uploads/jobs/2021/convocatoria_puesto_cuidadora.pdf'
+  action_url: "/uploads/jobs/2021/convocatoria_puesto_cuidadora.pdf"
 call_to_action:
   header: "¡El Hogar te Necesita!"
   text: La operación del Hogar es posible en gran medida gracias a subvenciones de
