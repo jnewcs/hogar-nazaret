@@ -51,3 +51,5 @@ fields:
   name: redirect_from
   label: redirect_from
   hidden: true
+pages:
+- en/about/milestones.md
