@@ -10,6 +10,12 @@ call_to_action:
     agencies, civic organizations, merchants and private companies. However, most
     important is the support of the COMMUNITY, individuals and families that are committed
     to help El Hogar continue its work and make a difference in the lives of its children.
+show_job_banner: true
+job_banner:
+  title: Job Opportunity!
+  message: The Hogar Albergue para Niños Jesús de Nazaret, Inc. invites you to be part of our team to provide loving care to our children as a Child Caregiver.
+  action_text: For more details, read here
+  action_url: '/uploads/jobs/2021/caregiver_posting.pdf'
 highlights:
   main:
     title: Sponsor a Child
