@@ -1,0 +1,48 @@
+---
+label: Milestones
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: header_layout
+  label: header_layout
+- type: text
+  name: layout
+  label: layout
+- type: boolean
+  name: show_milestones
+  label: show_milestones
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: lang_ref
+  label: lang_ref
+- type: field_group_list
+  name: milestone_data
+  label: milestone_data
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: number
+    name: year
+    label: year
+  - type: file
+    name: image
+    label: image
+  - type: field_group_list
+    name: content_blocks
+    label: content_blocks
+    fields:
+    - type: text
+      name: type
+      label: type
+    - type: textarea
+      name: content
+      label: content
+- type: list
+  name: redirect_from
+  label: redirect_from
