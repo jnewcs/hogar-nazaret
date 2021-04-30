@@ -45,6 +45,7 @@ fields:
       name: type
       label: type
       hidden: true
+      default: text
     - type: textarea
       name: content
       label: content
