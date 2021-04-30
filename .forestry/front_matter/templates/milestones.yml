@@ -44,6 +44,7 @@ fields:
     - type: text
       name: type
       label: type
+      hidden: true
     - type: textarea
       name: content
       label: content
