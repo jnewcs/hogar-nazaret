@@ -39,13 +39,14 @@ fields:
     label: image
   - type: field_group_list
     name: content_blocks
-    label: Descriptions
+    label: Content Blocks
     fields:
     - type: text
       name: type
       label: type
-      hidden: true
+      hidden: false
       default: text
+      description: Type of content to display (text or image)
     - type: textarea
       name: content
       label: content
