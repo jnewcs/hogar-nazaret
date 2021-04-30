@@ -1,6 +1,6 @@
 ---
 label: Milestones
-hide_body: false
+hide_body: true
 fields:
 - type: text
   name: title
@@ -8,18 +8,22 @@ fields:
 - type: text
   name: header_layout
   label: header_layout
+  hidden: true
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: boolean
   name: show_milestones
   label: show_milestones
 - type: text
   name: lang
   label: lang
+  hidden: true
 - type: text
   name: lang_ref
   label: lang_ref
+  hidden: true
 - type: field_group_list
   name: milestone_data
   label: milestone_data
@@ -46,3 +50,4 @@ fields:
 - type: list
   name: redirect_from
   label: redirect_from
+  hidden: true
