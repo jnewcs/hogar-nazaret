@@ -33,6 +33,10 @@ sections:
 - type: document
   path: en/what-we-do.md
   label: Services Reach
+- type: document
+  path: en/about/milestones.md
+  label: Milestones
+  match: "**/*"
 - type: heading
   label: Spanish Content
 - type: document
