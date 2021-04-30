@@ -26,7 +26,7 @@ fields:
   hidden: true
 - type: field_group_list
   name: milestone_data
-  label: milestone_data
+  label: Milestones
   fields:
   - type: text
     name: title
