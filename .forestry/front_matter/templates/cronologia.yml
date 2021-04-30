@@ -23,7 +23,7 @@ fields:
     label: image
   - type: field_group_list
     name: content_blocks
-    label: content_blocks
+    label: Content Blocks
     fields:
     - type: text
       name: type
