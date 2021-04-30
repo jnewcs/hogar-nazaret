@@ -1,5 +1,5 @@
 ---
-label: Alcance
+label: Services Reach
 hide_body: false
 fields:
 - type: text
@@ -33,4 +33,4 @@ fields:
   label: lang_ref
   hidden: true
 pages:
-- es/que-hacemos.md
+- en/what-we-do.md

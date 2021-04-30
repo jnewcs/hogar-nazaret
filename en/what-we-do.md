@@ -1,15 +1,16 @@
 ---
 title: Services Reach
 header_layout: blur
-header_image: /uploads/page_header_images/abstract_hands.jpg
+header_image: "/uploads/page_header_images/abstract_hands.jpg"
 header_image_style: cover
 header_text_color: dark
 layout: page
 lang: en
 lang_ref: what-we-do-overview
 redirect_from:
-  - /en/que-hacemos/alcance
-  - /en/que-hacemos/alcance/
+- "/en/que-hacemos/alcance"
+- "/en/que-hacemos/alcance/"
+
 ---
 The Hogar's mission is to provide a safe and welcoming place for children who have been removed from their biological family or foster home due to neglect, physical violence or sexual abuse. We work hard to restore the children's physical, mental and emotional wellbeing by providing professional attention and personalized care.
 
