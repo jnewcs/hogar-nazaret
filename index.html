@@ -1,0 +1,399 @@
+
+
+<!doctype html>
+<html class="no-js " lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>Inicio</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      <script src="/js/language_changer.js?1626689896332164312" type="text/javascript"></script>
+    
+
+    <link rel="shortcut icon" href="/uploads/favicon.ico">
+
+    
+    
+    
+      
+    
+
+    
+
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css?1626689896332164312">
+
+    
+
+    
+  </head>
+<body>
+
+
+
+
+
+
+
+<nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand is-vertically-centered is-flex-end">
+    <a href="">
+      <figure class="image is-96x96" id="site-logo">
+        
+        <img src="/uploads/anniversary_25_logo.png" alt="logo">
+      </figure>
+    </a>
+
+    
+
+    <a role="button" class="navbar-burger burger" id="da-burger" aria-label="menu" aria-expanded="false" data-target="navbarContent">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarContent" class="navbar-menu">
+    
+
+
+
+<!-- We also want to cover a mulitlingual post -->
+
+
+
+
+
+<!-- We also want to cover a mulitlingual upcoming event -->
+
+
+
+
+
+
+    <div class="navbar-end" id="main-link-donate-needs-social-container">
+      <div class="navbar-end" id="main-link-container">
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </div>
+
+      <div class="navbar-item is-hidden-touch" id="donate-needs-social-container">
+        <div class="is-flex-container is-vertically-centered">
+          
+
+<a href="https://www.facebook.com/HogarANJN" class="mr-tiny" aria-label="Facebook" target="_blank" rel="noreferrer">
+  <figure class="image is-24x24">
+    <img src="/uploads/social_media/facebook.png" alt="facebook logo">
+  </figure>
+</a>
+
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div id="navbar-spacer"></div>
+
+
+
+
+
+
+<section class="hero is-light is-large">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns">
+        <div class="column">
+          <div class="box has-text-centered">
+            <h4 class="is-size-4 mb-1">English</h4>
+
+            <a class="button is-medium is-secondary" href="/en">
+              Go to Site
+            </a>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="box has-text-centered">
+            <h4 class="is-size-4 mb-1">Español</h4>
+
+            <a class="button is-medium is-secondary" href="/es">
+              Ir al Sitio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer pb-3">
+  <div class="content has-text-centered">
+    
+    
+
+    <!-- We also want to cover a mulitlingual post -->
+    
+
+    
+
+    <!-- We also want to cover a mulitlingual upcoming event -->
+    
+
+    
+
+    <p>
+      HOGAR ALBERGUE JESÚS DE NAZARET, INC © 2021
+    </p>
+
+    <div class="pb-1">
+      <a href="https://app.forestry.io/sites/heqefiwcnetumg" target="_blank" rel="noreferrer">
+        
+      </a>
+    </div>
+  </div>
+</footer>
+
+<div class="is-hidden has-background-primary-light has-text-centered is-full-width pt-1 pb-1" id="offline-notification-container">
+  
+</div>
+
+
+
+
+
+<script src="/js/main.js?1626689896332164312" type="text/javascript"></script>
+<!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
+<div id="payment-modal-src" data-src="/js/payment_modal.js?1626689896332164312"></div>
+<script src="/js/image_modal.js?1626689896332164312" type="text/javascript" defer></script>
+
+
+</body>
+</html>
+
+
+<div class="modal" id="donation-modal">
+  <div class="modal-background modal-closer" aria-label="close" data-target="donation-modal"></div>
+
+  <div class="modal-content">
+    <button class="custom-modal-close delete modal-closer is-large" id="donation-modal-close-btn" aria-label="close" data-target="donation-modal"></button>
+
+    <div class="container content-container has-background-white is-cursive" id="donation-content-container">
+      <h3 class="is-size-3 has-text-centered mb-1">
+        
+      </h3>
+
+      <div class="tabs is-toggle is-fullwidth">
+        <ul>
+          <li class="tab is-active" data-target="donate-now-content">
+            <a>
+              <span></span>
+            </a>
+          </li>
+
+          <li class="tab" data-target="sponsor-content">
+            <a>
+              <span></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="tab-contents">
+        <div class="tab-content has-text-centered is-active" id="donate-now-content">
+          <p class="is-size-5 mb-1">
+            
+          </p>
+
+          <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="23UGP3TU8AQLN">
+            <input type="hidden" name="lc" value="">
+            <input type="hidden" name="item_name" value="">
+            <input type="hidden" name="item_number" value="Webfree">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="cn" value="Donation Message">
+            <input type="hidden" name="no_shipping" value="2">
+            <input type="hidden" name="rm" value="1">
+            <input type="hidden" name="cancel_return" value="http://hogarjesusdenazaret.org/index.php?cID=211">
+            <input type="hidden" name="cancel_return" value="http://hogarjesusdenazaret.org/index.php?cID=211">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="bn" value="PP-DonationsBF:IMAGE:NonHosted">
+
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <div class="field">
+                  <div class="control has-icons-left">
+                    <input class="input is-medium" id="one-time-donation-amount" name="amount" type="number" value="15" type="number" min="0" step="1">
+                    <span class="icon is-left">
+                      $
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+              <section
+                id="payment-form-inner-container"
+                data-lang=""
+                data-key="pk_live_YE6au56wdhzwxwGO9bGPio7L00E0keInTX"
+                data-label=""
+                data-env="production"
+              >
+                <div class="columns is-mobile is-centered">
+                  <div class="column is-half">
+                    <div id="payment-request-button">
+                      <div class="spinner small"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            
+
+            <hr id="payment-divider-for-one-time-donation" />
+
+            <div class="field mt-2">
+              <button class="button is-medium is-secondary" type="submit">
+                
+              </button>
+
+              <div class="mt-1">
+                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png" alt="Credit Card Badges" style="height: 30px" loading='lazy'>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="tab-content has-text-centered" id="sponsor-content">
+          <p class="is-size-5 mb-1">
+            
+          </p>
+
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_s-xclick">
+            <input type="hidden" name="hosted_button_id" value="4N55VXLPEUXK8">
+            <input type="hidden" name="on0" value="">
+            <input type="hidden" name="lc" value="">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="item_name" value="">
+
+            <div class="field">
+              <div class="select is-medium" id="donate-select">
+                <select name="os0">
+                  
+                    <option value="$100 al mes"></option>
+                  
+                    <option value="$75 al mes"></option>
+                  
+                    <option value="$50 al mes"></option>
+                  
+                    <option value="$25 al mes"></option>
+                  
+                    <option value="$15 al mes"></option>
+                  
+                </select>
+              </div>
+            </div>
+
+            <div class="field mt-2">
+              <button class="button is-medium is-secondary" type="submit">
+                
+              </button>
+
+              <div class="mt-1">
+                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png" alt="Credit Card Badges" style="height: 30px">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="link-to-padrinos has-text-centered mt-2">
+        
+
+        <a href="">
+          
+        </a>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="loading-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <progress class="progress is-large is-info" max="100"></progress>
+        <h3 class="is-size-3 has-text-centered">
+          
+        </h3>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="success-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="custom-icon">
+          <div class="custom-icon__tip"></div>
+          <div class="custom-icon__long"></div>
+        </div>
+
+        <p class="is-size-5 mt-2">
+          
+        </p>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="error-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="custom-icon red">
+          <div class="custom-icon__tip red"></div>
+          <div class="custom-icon__long red"></div>
+        </div>
+
+        <p class="is-size-5 mb-1 mt-2">
+          
+        </p>
+
+        <button class="button is-medium is-secondary" id="retry-button">
+          
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
