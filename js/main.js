@@ -1,24 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-  /* Code to lazy load script */
-  window.stripeLoaded = false;
-  window.lazyLoadScript = function(scriptSrc, postLoadFunction, failEvent) {
-    if (!scriptSrc) return;
-
-    var script = document.createElement('script');
-    script.src = scriptSrc;
-    script.defer = true;
-    script.async = false;
-    script.onload = function() {
-      if (postLoadFunction) {
-        postLoadFunction();
-      }
-    };
-    script.onerror = function() {
-      window.trackEvent(failEvent)
-    };
-    document.body.appendChild(script);
-  }
-
   /* Navbar Burger Clicker */
   var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
   if ($navbarBurgers.length > 0) {
@@ -174,12 +154,21 @@ document.addEventListener('DOMContentLoaded', function () {
   var setStripeLoaded = function() {
     window.stripeLoaded = true;
   };
+  var setPaypalModalScriptLodaded = function() {
+    window.paypalModalCodeLoaded = true;
+  }
 
   if ($modalOpeners.length > 0) {
     $modalOpeners.forEach(el => {
       el.addEventListener('click', function () {
         var target = el.dataset.target;
         if (target === 'donation-modal') {
+          window.asyncLoadPaypalScript();
+          if (window.paypalModalCodeLoaded === false) {
+            const paypalModalScriptSrc = document.getElementById('sponsor-content').dataset.paypalScriptSrc;
+            window.lazyLoadScript(paypalModalScriptSrc, setPaypalModalScriptLodaded, 'async_paypal_subscriptions_modal_js_load_fail');
+          }
+
           if (window.stripeLoaded === false) {
             window.lazyLoadScript('https://js.stripe.com/v3', setStripeLoaded, 'async_stripe_load_fail');
             var paymentModalSrc = document.getElementById('payment-modal-src').dataset.src;

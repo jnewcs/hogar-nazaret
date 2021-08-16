@@ -1,27 +1,24 @@
-<div class="columns is-multiline is-horizontally-centered">
-  {% for data in site.data.padrinos_program %}
-    <div class="column is-one-third">
-      <div class="donar-box position-relative">
-        <div class="lazy-load donar-photo contain-no-repeat" alt="" data-background-image="{{ data.image | relative_url }}"></div>
-        <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
-          <div class="donar-box-caption-content">
-            <div class="is-size-3">
-              {{ data.title }}
-            </div>
-            <div class="is-size-5">
-              {{ data.cost[page.lang] }}
-            </div>
+<section id="padrinos-choices-section-full-page">
+  {% include padrino_program_boxes.html source="full-page" %}
+</section>
 
-            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" rel="noreferrer">
-              <input type="hidden" name="cmd" value="_s-xclick">
-              <input type="hidden" name="hosted_button_id" value="4N55VXLPEUXK8">
-              <input type="hidden" name="os0" value="{{ data.form_cost }}">
-              <input type="hidden" name="currency_code" value="USD">
-              <input class="button is-secondary mt-1" type="submit" value="{{ site.data.languages[page.lang].donate.call_to_action }}">
-            </form>
-          </div>
-        </div>
+<script>
+  window.asyncLoadPaypalScript();
+  var src = "{{ '/js/paypal_subscriptions_full_page.js' | relative_url }}?{{ site.time | date: '%s%N' }}";
+  window.lazyLoadScript(src, undefined, 'async_paypal_subscriptions_full_page_js_load_fail');
+</script>
+
+<div class="is-hidden" id="padrino-subscription-confirmation">
+  <div class="container content-container has-background-white has-text-centered">
+    <div style="margin-top: 30px; margin-bottom: 30px;">
+      <div class="custom-icon">
+        <div class="custom-icon__tip"></div>
+        <div class="custom-icon__long"></div>
       </div>
+
+      <p class="is-size-5 mt-2">
+        {{ site.data.languages[page.lang].donate.modal.success_msg }}
+      </p>
     </div>
-  {% endfor %}
+  </div>
 </div>

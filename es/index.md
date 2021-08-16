@@ -27,9 +27,7 @@ call_to_action:
 highlights:
   main:
     title: Apadrina a un Niño o Niña
-    subtitle: Mediante donativos fijos mensuales, <b>TÚ</b> puedes ayudarnos a sufragar
-      los costos de  los servicios que damos a  los niños durante su estadía en el
-      Hogar.
+    subtitle: Mediante donativos fijos mensuales, <b>TÚ</b> puedes ayudarnos a sufragar los costos de  los servicios que damos a los niños durante su estadía en el Hogar.
     image: "/uploads/padrinos_program/padrinos.png"
   complementary:
     one:

@@ -29,6 +29,7 @@ en:
       title: Choose the type of Donation
       enter_one_time_amount: Enter the amount
       enter_recurring_amount: Monthly amount
+      recurring_call_to_action: "Through fixed monthly donations, <b>YOU</b> could help us defray the costs of the services we provide to our children while they reside at the Hogar."
       type:
         now: Donate Now
         sponsor: Donate Monthly
@@ -181,6 +182,7 @@ es:
       title: Escoge el tipo de tu donativo
       enter_one_time_amount: Escribe la cantidad de tu donativo
       enter_recurring_amount: Donativo mensual
+      recurring_call_to_action: "Mediante donativos fijos mensuales, <b>TÚ</b> puedes ayudarnos a sufragar los costos de los servicios que damos a los niños durante su estadía en el Hogar."
       type:
         now: Donar ahora
         sponsor: Donar mensualmente
