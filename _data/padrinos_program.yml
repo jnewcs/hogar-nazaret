@@ -3,47 +3,82 @@
   cost:
     en: $100 per month
     es: $100 al mes
-  form_cost: $100 al mes
   dropdown_title:
     en: "Padrino / Madrina: $100"
     es: "Padrino / Madrina: $100"
+  first: true
+  paypal:
+    development:
+      en: "P-8DK62101P95800307MEKZFZY"
+      es: "P-0AN069393U9305455MEKZJLA"
+    production:
+      en: "P-9HA83682HL557705LMEKYMWQ"
+      es: "P-4HF40177L7689263EMEM3IHY"
 
 - title: Abuelo / Abuela
   image: /uploads/padrinos_program/abuelos.png
   cost:
     en: $75 per month
     es: $75 al mes
-  form_cost: $75 al mes
+  first: false
   dropdown_title:
     en: "Abuelo / Abuela: $75"
     es: "Abuelo / Abuela: $75"
+  paypal:
+    development:
+      en: "P-6BW32654KS621491HMEKZHMY"
+      es: "P-944059862K978994LMEKZJVQ"
+    production:
+      en: "P-66D17857XM459224BMEKYNNA"
+      es: "P-5JD40416VC634672HMEM3IPY"
 
 - title: Tío / Tía
   image: /uploads/padrinos_program/tios.png
   cost:
     en: $50 per month
     es: $50 al mes
-  form_cost: $50 al mes
+  first: false
   dropdown_title:
     en: "Tío / Tía: $50"
     es: "Tío / Tía: $50"
+  paypal:
+    development:
+      en: "P-4BG43236KC332403SMEKZH2Y"
+      es: "P-03Y4354369838325TMEKZNTY"
+    production:
+      en: "P-31C654055E348633RMEM3GUQ"
+      es: "P-01X60780AJ625954LMEM3IYY"
 
 - title: Amigo / Amiga
   image: /uploads/padrinos_program/amigos.png
   cost:
     en: $25 per month
     es: $25 al mes
-  form_cost: $25 al mes
+  first: false
   dropdown_title:
     en: "Amigo / Amiga: $25"
     es: "Amigo / Amiga: $25"
+  paypal:
+    development:
+      en: "P-60X8176547426473RMEKZIDA"
+      es: "P-50V47556LT280603UMELCKPA"
+    production:
+      en: "P-3SE27982X45563423MEM3G4I"
+      es: "P-66R674310F611791HMEM3JEA"
 
 - title: Primo / Prima
   image: /uploads/padrinos_program/primos.jpg
   cost:
     en: $15 per month
     es: $15 al mes
-  form_cost: $15 al mes
+  first: false
   dropdown_title:
     en: "Primo / Prima: $15"
     es: "Primo / Prima: $15"
+  paypal:
+    development:
+      en: "P-4LN75887F6983684LMEKZIOI"
+      es: "P-8N0721666E489913JMELCKZI"
+    production:
+      en: "P-7ET30504RG7886120MEM3HDY"
+      es: "P-5S389033P64996147MEM3JKA"

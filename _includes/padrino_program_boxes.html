@@ -1,0 +1,65 @@
+{% if jekyll.environment == 'production' %}
+  {% assign paypal_environment = 'production' %}
+{% else %}
+  {% assign paypal_environment = 'development' %}
+{% endif %}
+
+<div class="columns is-multiline is-horizontally-centered">
+  {% for data in site.data.padrinos_program %}
+    <label class="column is-one-third is-relative">
+      {% if data.first == true %}
+        <input name="donation-tier-{{ include.source }}" class="radio" type="radio" value="{{ data.paypal[paypal_environment][page.lang] }}" checked>
+      {% else %}
+        <input name="donation-tier-{{ include.source }}" class="radio" type="radio" value="{{ data.paypal[paypal_environment][page.lang] }}">
+      {% endif %}
+
+      <div class="donar-box position-relative">
+        {% if include.source == "full-page" %}
+          <div class="lazy-load donar-photo contain-no-repeat" alt="" data-background-image="{{ data.image | relative_url }}"></div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content">
+              <div class="is-size-3">
+                {{ data.title }}
+              </div>
+
+              <div class="is-size-5">
+                {{ data.cost[page.lang] }}
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <div class="lazy-load donar-photo-modal contain-no-repeat" alt="" data-background-image="{{ data.image | relative_url }}"></div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content">
+              <div class="is-size-3">
+                {{ data.title }}
+              </div>
+
+              <div class="is-size-5">
+                {{ data.cost[page.lang] }}
+              </div>
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </label>
+  {% endfor %}
+</div>
+
+<div class="columns is-horizontally-centered">
+  {% for data in site.data.padrinos_program %}
+    {% if data.first == true %}
+      {% assign labelClass = "column is-half paypal-button-container-" | append: include.source %}
+    {% else %}
+      {% assign labelClass = "column is-half is-hidden paypal-button-container-" | append: include.source %}
+    {% endif %}
+
+    <label
+      class="{{ labelClass }}"
+      id="paypal-button-container-{{ include.source }}-{{ data.paypal[paypal_environment][page.lang] }}"
+      data-plan-id="{{ data.paypal[paypal_environment][page.lang] }}"
+    >
+      <div id="paypal-button-{{ include.source }}-{{ data.paypal[paypal_environment][page.lang] }}"></div>
+    </label>
+  {% endfor %}
+</div>

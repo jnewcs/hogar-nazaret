@@ -11,22 +11,45 @@
 
       <div class="tabs is-toggle is-fullwidth">
         <ul>
-          <li class="tab is-active" data-target="donate-now-content">
+          <li class="tab is-active" data-target="sponsor-content">
             <a>
-              <span>{{ site.data.languages[page.lang].donate.modal.type.now }}</span>
+              <span>{{ site.data.languages[page.lang].donate.modal.type.sponsor }}</span>
             </a>
           </li>
 
-          <li class="tab" data-target="sponsor-content">
+          <li class="tab" data-target="donate-now-content">
             <a>
-              <span>{{ site.data.languages[page.lang].donate.modal.type.sponsor }}</span>
+              <span>{{ site.data.languages[page.lang].donate.modal.type.now }}</span>
             </a>
           </li>
         </ul>
       </div>
 
       <div id="tab-contents">
-        <div class="tab-content has-text-centered is-active" id="donate-now-content">
+        <div class="tab-content has-text-centered is-active" id="sponsor-content" data-paypal-script-src="{{ '/js/paypal_subscriptions_modal.js' | relative_url }}?{{ site.time | date: '%s%N' }}";>
+          <p class="is-size-5 mb-1">
+            {{ site.data.languages[page.lang].donate.modal.recurring_call_to_action }}
+          </p>
+
+          <section id="padrinos-choices-section-modal">
+            {% include padrino_program_boxes.html source="modal" %}
+          </section>
+
+          <div class="container content-container has-background-white has-text-centered is-hidden" id="padrinos-success-container">
+            <div style="margin-top: 30px; margin-bottom: 30px;">
+              <div class="custom-icon">
+                <div class="custom-icon__tip"></div>
+                <div class="custom-icon__long"></div>
+              </div>
+
+              <p class="is-size-5 mt-2">
+                {{ site.data.languages[page.lang].donate.modal.success_msg }}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content has-text-centered" id="donate-now-content">
           <p class="is-size-5 mb-1">
             {{ site.data.languages[page.lang].donate.modal.enter_one_time_amount }}
           </p>
@@ -90,44 +113,9 @@
             </div>
           </form>
         </div>
-
-        <div class="tab-content has-text-centered" id="sponsor-content">
-          <p class="is-size-5 mb-1">
-            {{ site.data.languages[page.lang].donate.modal.enter_recurring_amount }}
-          </p>
-
-          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-            <input type="hidden" name="cmd" value="_s-xclick">
-            <input type="hidden" name="hosted_button_id" value="4N55VXLPEUXK8">
-            <input type="hidden" name="on0" value="">
-            <input type="hidden" name="lc" value="{{ site.data.languages[page.lang].donate.locale }}">
-            <input type="hidden" name="currency_code" value="USD">
-            <input type="hidden" name="item_name" value="{{ site.data.languages[page.lang].donate.item_name }}">
-
-            <div class="field">
-              <div class="select is-medium" id="donate-select">
-                <select name="os0">
-                  {% for data in site.data.padrinos_program %}
-                    <option value="{{ data.cost.es }}">{{ data.dropdown_title[page.lang] }}</option>
-                  {% endfor %}
-                </select>
-              </div>
-            </div>
-
-            <div class="field mt-2">
-              <button class="button is-medium is-secondary" type="submit">
-                {{ site.data.languages[page.lang].donate.call_to_action_paypal }}
-              </button>
-
-              <div class="mt-1">
-                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png" alt="Credit Card Badges" style="height: 30px">
-              </div>
-            </div>
-          </form>
-        </div>
       </div>
 
-      <div class="link-to-padrinos has-text-centered mt-2">
+      <div class="link-to-padrinos is-hidden has-text-centered mt-2">
         {% assign padrinos_page = site.pages | where: "lang", page.lang | where: "lang_ref", "padrinos-program" | first %}
 
         <a href="{{ padrinos_page.url | relative_url }}">

@@ -282,6 +282,14 @@ a.button.is-secondary, button.is-secondary {
   height: 200px;
   width: 100%;
 }
+.donar-photo-modal {
+  height: 100px;
+  width: 100%;
+}
+.donar-box {
+  border: 3px solid $primary-light;
+  cursor: pointer;
+}
 .donar-box-caption {
   background-color: rgba(28,2,122,.5);
   position: absolute;
@@ -306,6 +314,70 @@ a.button.is-secondary, button.is-secondary {
 .pattern-dots-sm {
   background-image: radial-gradient($primary-light 1.5px, transparent 1.5px);
   background-size: calc(10 * 1.5px) calc(10 * 1.5px)
+}
+
+// Donation Boxes
+.radio {
+  font-size: inherit;
+  margin: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  .radio {
+    z-index: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    border: 2px solid #e2ebf6;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    outline: none;
+    transition: background 0.2s ease-out, border-color 0.2s ease-out;
+
+    &::after {
+      border: 2px solid white;
+      border-top: 0;
+      border-left: 0;
+      content: '';
+      display: block;
+      height: 0.75rem;
+      left: 25%;
+      position: absolute;
+      top: 50%;
+      transform: rotate(45deg) translate(-50%, -50%);
+      width: 0.375rem;
+    }
+
+    &:checked {
+      background: $secondary;
+      border-color: $secondary;
+    }
+  }
+
+  .card:hover .radio {
+    border-color: white;
+
+    &:checked {
+      border-color: $secondary;
+    }
+  }
+}
+
+.card:hover .donar-box {
+  border-color: $primary;
+}
+
+.radio:checked ~ .donar-box {
+  border-color: $primary;
+}
+
+.radio:focus ~ .donar-box {
+  box-shadow: 0 0 0 2px $primary;
 }
 
 /* 404 */
@@ -336,7 +408,7 @@ a.button.is-secondary, button.is-secondary {
 /* Donation modal */
 .custom-modal-close {
   top: 8px;
-  right: 8px;
+  right: 15px;
   position: absolute;
   z-index: 1000;
 

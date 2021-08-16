@@ -75,5 +75,44 @@
     {% if page.show_milestones %}
       <link rel="stylesheet" href="{{ '/css/milestones.css' | relative_url }}">
     {% endif %}
+
+    {% if jekyll.environment == 'production' %}
+      {% assign paypal_environment = 'production' %}
+    {% else %}
+      {% assign paypal_environment = 'development' %}
+    {% endif %}
+
+    <script>
+      /* Code to lazy load script */
+      window.stripeLoaded = false;
+      window.paypalLoaded = false;
+      window.paypalModalCodeLoaded = false;
+      window.lazyLoadScript = function(scriptSrc, postLoadFunction, failEvent) {
+        if (!scriptSrc) return;
+
+        var script = document.createElement('script');
+        script.src = scriptSrc;
+        script.defer = true;
+        script.async = false;
+        script.onload = function() {
+          if (postLoadFunction) {
+            postLoadFunction();
+          }
+        };
+        script.onerror = function() {
+          window.trackEvent(failEvent)
+        };
+        document.body.appendChild(script);
+      }
+      window.asyncLoadPaypalScript = function() {
+        if (window.paypalLoaded === true) return;
+
+        var setPaypalLoaded = function() {
+          window.paypalLoaded = true;
+        }
+        const paypalScript = "https://www.paypal.com/sdk/js?client-id={{ site.data.information.paypal.client_id[paypal_environment] }}&currency=USD&intent=subscription&vault=true&locale={{ site.data.information.paypal.locale[page.lang] }}"
+        window.lazyLoadScript(paypalScript, setPaypalLoaded, 'async_paypal_load_fail');
+      }
+    </script>
   </head>
 <body>
