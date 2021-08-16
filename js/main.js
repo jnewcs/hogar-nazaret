@@ -138,13 +138,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  /* Code for Lazy Loading */
-  var lazyImages = document.querySelectorAll('.lazy-load');
-  if (lazyImages && lazyImages.length) {
-    var observer = lozad(lazyImages);
-    observer.observe();
-  }
-
   /* Code for modal opening */
   var modalContainer = document.getElementById('donation-content-container');
   var loadingContainer = document.getElementById('loading-container');

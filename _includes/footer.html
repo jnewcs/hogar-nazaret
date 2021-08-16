@@ -98,9 +98,6 @@
   </div>
 {% endif %}
 
-{% if layout.lazy_load %}
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-{% endif %}
 <script src="{{ '/js/main.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript"></script>
 <!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
 <div id="payment-modal-src" data-src="{{ '/js/payment_modal.js' | relative_url }}?{{ site.time | date: '%s%N' }}"></div>

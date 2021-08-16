@@ -15,7 +15,7 @@
 
       <div class="donar-box position-relative">
         {% if include.source == "full-page" %}
-          <div class="lazy-load donar-photo contain-no-repeat" alt="" data-background-image="{{ data.image | relative_url }}"></div>
+          <div class="donar-photo contain-no-repeat" alt="" style="background-image: url('{{ data.image | relative_url }}')"></div>
           <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
             <div class="donar-box-caption-content">
               <div class="is-size-3">
@@ -28,7 +28,7 @@
             </div>
           </div>
         {% else %}
-          <div class="lazy-load donar-photo-modal contain-no-repeat" alt="" data-background-image="{{ data.image | relative_url }}"></div>
+          <div class="donar-photo-modal contain-no-repeat" alt="" style="background-image: url('{{ data.image | relative_url }}')"></div>
           <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
             <div class="donar-box-caption-content">
               <div class="is-size-3">
