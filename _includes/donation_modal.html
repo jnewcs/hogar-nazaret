@@ -34,6 +34,19 @@
           <section id="padrinos-choices-section-modal">
             {% include padrino_program_boxes.html source="modal" %}
           </section>
+
+          <div class="container content-container has-background-white has-text-centered is-hidden" id="padrinos-success-container">
+            <div style="margin-top: 30px; margin-bottom: 30px;">
+              <div class="custom-icon">
+                <div class="custom-icon__tip"></div>
+                <div class="custom-icon__long"></div>
+              </div>
+
+              <p class="is-size-5 mt-2">
+                {{ site.data.languages[page.lang].donate.modal.success_msg }}
+              </p>
+            </div>
+          </div>
         </div>
 
         <div class="tab-content has-text-centered" id="donate-now-content">

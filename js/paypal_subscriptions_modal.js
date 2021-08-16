@@ -4,22 +4,28 @@ var style = {
   layout: 'vertical',
   label: 'paypal'
 };
-var padrinosButtonContainer = document.getElementById('donation-content-container');
-var padrinosLoadingContainer = document.getElementById('loading-container');
-var padrinosErrorContainer = document.getElementById('error-container');
-var padrinosSuccessContainer = document.getElementById('success-container');
+
+var padrinosSuccessContainer = document.getElementById('padrinos-success-container');
+var modalRadios = document.querySelectorAll('input[type=radio][name="donation-tier-modal"]');
 
 var onApprove = function(_data, _actions) {
   window.trackEvent('Paypal checkout completed subscription [donation modal]');
 
-  padrinosButtonContainer.classList.add('is-hidden');
-  padrinosLoadingContainer.classList.add('is-hidden');
-  padrinosErrorContainer.classList.add('is-hidden');
+  // We hide all the Paypal buttons
+  document.querySelectorAll('.paypal-button-container-modal').forEach(function(el) {
+    el.classList.add('is-hidden');
+  });
+
+  // We hide all cards, but the one with the selected radio button
+  modalRadios.forEach(function(radio) {
+    if (radio.checked === false) {
+      radio.parentElement.classList.add('is-hidden');
+    }
+  });
   padrinosSuccessContainer.classList.remove('is-hidden');
 };
 
-var radios = document.querySelectorAll('input[type=radio][name="donation-tier-modal"]');
-radios.forEach(function(radio) {
+modalRadios.forEach(function(radio) {
   const planId = radio.value; // The ID for the subscription plan is stored in radio's value attribute
   paypal.Buttons({
     style: style,
@@ -28,7 +34,10 @@ radios.forEach(function(radio) {
         plan_id: planId
       });
     },
-    onApprove: onApprove
+    onApprove: onApprove,
+    onError: function (_err) {
+      window.trackEvent('Paypal checkout error [donation modal]');
+    }
   }).render(`#paypal-button-modal-${planId}`);
 
   radio.addEventListener('change', function(e) {
