@@ -15,7 +15,7 @@ The Hogar welcomes you and urges you to join our mission of transforming with lo
 
 <div class="is-size-4 is-cursive">
   <b>
-    {{ site.data.information.executive_director }}
+    {{ site.data.information.executive_director[page.lang] }}
   </b>
 </div>
 <div>

@@ -1,89 +1,102 @@
 ---
-- name: Carlos Velázquez Figueroa
-  image: "/uploads/board_of_directors/carlos_figueroa.jpg"
-  position:
-    en: President
-    es: Presidente Junta Directores
-  background:
-    en: Recinto Universitario de Mayagüez
-    es: Recinto Universitario de Mayagüez
-- name: Lcdo. Jesús Morales Cordero
-  image: "/uploads/board_of_directors/jesus_cordero.png"
-  position:
-    en: Vice President
-    es: Vice President Junta Directores
-  background:
-    en: Bufete de Abogados Morales Cordero, CSP
-    es: Bufete de Abogados Morales Cordero, CSP
-- name: Dra. Sandra Arroyo Ferrer
-  image: "/uploads/board_of_directors/sandra_ferrer.jpg"
-  position:
-    en: Past President
-    es: Pasada Presidenta Junta Directores
-  background:
-    en: Bioimágenes Médicas, CSP
-    es: Bioimágenes Médicas, CSP
-- name: María T. Rivera Méndez
-  image: "/uploads/board_of_directors/maria_mendez.jpg"
-  position:
-    en: Treasurer
-    es: Tesorera Junta Directores
-  background:
-    en: ''
-    es: ''
-- name: Nicolás Rivera Vázquez
-  image: "/uploads/board_of_directors/nicolas_vazquez.jpg"
-  position:
-    en: Assistant Treasurer
-    es: Sub-Tesorero Junta Directores
-  background:
-    en: ''
-    es: ''
-- name: Carmen R. Brown
-  image: "/uploads/board_of_directors/carmen_brown.jpg"
-  position:
-    en: Board Member
-    es: Miembro Junta Directores
-  background:
-    en: ''
-    es: ''
-- name: Ivette Hernández Denizard
-  image: "/uploads/board_of_directors/ivette_denizard.jpg"
-  position:
-    en: Board Member
-    es: Miembro Junta Directores
-  background:
-    en: Fenwal International, Inc.
-    es: Fenwal International, Inc.
-- name: Gloria Cofresí
-  image: "/uploads/board_of_directors/gloria_cofresi.jpg"
-  position:
-    en: Board Member
-    es: Miembro Junta Directores
-  background:
-    en: ''
-    es: ''
-- name: Sharon Arroyo Ferrer
-  image: "/uploads/board_of_directors/sharon_ferrer.jpg"
-  position:
-    en: Board Member
-    es: Miembro Junta Directores
-  background:
-    en: Bioimágenes Médicas, CSP
-    es: Bioimágenes Médicas, CSP
-- name: Lilliam Román Rivera
-  image: "/uploads/board_of_directors/lilliam_rivera.jpg"
-  position:
-    en: Board Member
-    es: Miembro Junta Directores
-  background:
-    en: Sears, Roebuck & Company
-    es: Sears, Roebuck & Company
-- name: Jessica Vivaldi Arroyo
-  image: "/uploads/board_of_directors/jessica_arroyo.jpg"
-  position:
-    en: Board Member
-    es: Miembro Junta Directores
-  background:
-    en: Bioimágenes Médicas, CSP
-    es: Bioimágenes Médicas, CSP
+leadership:
+  - name: Lcdo. Jesús R. Morales Cordero
+    position:
+      en: President
+      es: Presidente
+    background:
+      en: Bufete Morales Cordero, CSP
+      es: Bufete Morales Cordero, CSP
+    city: Guaynabo
+    is_president: true
+
+  - name: Dra. Patricia Valentín Castillo
+    position:
+      en: Vice President
+      es: Vice Presidente
+    background:
+      en: Catedrática Auxiliar UPR-Mayagüez
+      es: Catedrática Auxiliar UPR-Mayagüez
+    city: Mayagüez
+
+  - name: Lcda. Sandra Rovira Vargas
+    position:
+      en: Secretary
+      es: Secretaria
+    background:
+      en: Sepúlveda & Rovira
+      es: Sepúlveda & Rovira
+    city: Mayagüez
+
+  - name: Lcda. Andrea Lebrón Ortiz
+    position:
+      en: Assistant Secretary
+      es: Sub-Secretaria
+    background:
+      en: Bufete Laura Otero González
+      es: Bufete Laura Otero González
+    city: Mayagüez
+
+  - name: María T. Rivera Méndez
+    position:
+      en: Treasurer
+      es: Tesorera
+    background:
+      en: ''
+      es: ''
+    city: Mayagüez
+
+  - name: Agnes Rivera
+    position:
+      en: Assistant Treasurer
+      es: Sub-Tesorera
+    background:
+      en: ''
+      es: ''
+    city: Mayagüez
+
+board:
+  - name: Olga Tacoronte
+    position:
+      en: Board Member
+      es: Directora
+    background:
+      en: ''
+      es: ''
+    city: Mayagüez
+
+  - name: María L. Vargas
+    position:
+      en: Board Member
+      es: Directora
+    background:
+      en: ''
+      es: ''
+    city: Mayagüez
+
+  - name: Dra. Norma Mejía
+    position:
+      en: Board Member
+      es: Directora
+    background:
+      en: ''
+      es: ''
+    city: Mayagüez
+
+  - name: Jannette Sepúlveda
+    position:
+      en: Board Member
+      es: Directora
+    background:
+      en: ''
+      es: ''
+    city: Mayagüez
+
+  - name: Dra. Maricarmen Alemañy Pons
+    position:
+      en: Board Member
+      es: Directora
+    background:
+      en: ''
+      es: ''
+    city: Mayagüez

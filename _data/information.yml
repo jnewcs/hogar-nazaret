@@ -5,7 +5,9 @@ year: "2021"
 phone: "(787) 831-6161"
 fax: "(787) 831-4226"
 email: info@hogarjesusdenazaret.org
-executive_director: Directora Interina - Sra. Zuleika Torres
+executive_director:
+  en: "Executive Director - Atty. Jesús R. Morales Cordero"
+  es: "Director Ejecutivo - Lcdo. Jesús R. Morales Cordero"
 po_box: P.O. Box 1147 Mayagüez, PR 00681-1147
 payment_request_on: true
 service_worker: false
@@ -13,7 +15,7 @@ give_a_hug:
   live: false
   goal: 1000
   show_progress: false
-board_elections_in_progress: true
+board_elections_in_progress: false
 ath_movil:
   live: true
   sandbox_token: sandboxtoken01875617264

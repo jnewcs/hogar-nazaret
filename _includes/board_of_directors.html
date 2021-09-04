@@ -7,36 +7,16 @@
   </p>
 {% else %}
   <div class="columns pt-1 is-multiline is-vcentered is-centered">
-    {% for person in site.data.board_of_directors %}
-      <div class="column is-one-third">
-        <div class="card">
-          <div class="card-image">
-            <figure class="image pt-2">
-              <img style="height: 250px; width: auto;" src="{{ person.image | relative_url }}" alt="{{ person.name }}">
-            </figure>
-          </div>
+    {% for person in site.data.board_of_directors.leadership %}
+      {% include board_member.html person=person is_leader=true %}
+    {% endfor %}
+  </div>
 
-          <div class="card-content has-text-centered">
-            <div class="title is-size-5">
-              {{ person.name }}
-            </div>
+  <hr />
 
-            <hr />
-
-            <div>
-              {{ person.position[page.lang] }}
-            </div>
-
-            {% if person.background %}
-              <div>
-                <span class="tag is-light">
-                  {{ person.background[page.lang] }}
-                </span>
-              </div>
-            {% endif %}
-          </div>
-        </div>
-      </div>
+  <div class="columns pt-1 is-multiline is-vcentered is-centered">
+    {% for person in site.data.board_of_directors.board %}
+      {% include board_member.html person=person %}
     {% endfor %}
   </div>
 {% endif %}
