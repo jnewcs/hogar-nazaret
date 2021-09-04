@@ -23,13 +23,11 @@ RUN apt-get update && \
 
     curl \
 
-    libffi6 \
+    libffi7 \
 
     make \
 
     shellcheck \
-
-    libffi6 \
 
     git-all \
 
