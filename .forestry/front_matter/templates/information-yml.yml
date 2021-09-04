@@ -32,11 +32,6 @@ fields:
   config:
     required: false
   label: Fax
-- name: executive_director
-  type: text
-  config:
-    required: false
-  label: Executive Director
 - name: po_box
   type: text
   config:
@@ -115,5 +110,20 @@ fields:
     label: Live
     description: Turning this on adds the ATH Móvil button/integration
   label: ATH Móvil Configuration
+- name: executive_director
+  type: field_group
+  config: {}
+  fields:
+  - name: en
+    type: text
+    config:
+      required: true
+    label: en
+  - name: es
+    type: text
+    config:
+      required: true
+    label: es
+  label: Executive Director
 pages:
 - _data/information.yml
