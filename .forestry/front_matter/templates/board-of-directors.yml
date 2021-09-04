@@ -1,0 +1,67 @@
+---
+label: Board of Directors
+hide_body: true
+fields:
+- type: field_group_list
+  name: leadership
+  label: leadership
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: field_group
+    name: position
+    label: position
+    fields:
+    - type: text
+      name: en
+      label: en
+    - type: text
+      name: es
+      label: es
+  - type: field_group
+    name: background
+    label: background
+    fields:
+    - type: text
+      name: en
+      label: en
+    - type: text
+      name: es
+      label: es
+  - type: text
+    name: city
+    label: city
+  - type: boolean
+    name: is_president
+    label: is_president
+- type: field_group_list
+  name: board
+  label: board
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: field_group
+    name: position
+    label: position
+    fields:
+    - type: text
+      name: en
+      label: en
+    - type: text
+      name: es
+      label: es
+  - type: field_group
+    name: background
+    label: background
+    fields:
+    - type: text
+      name: en
+      label: en
+    - type: text
+      name: es
+      label: es
+  - type: text
+    name: city
+    label: city
