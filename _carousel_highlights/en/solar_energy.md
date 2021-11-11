@@ -1,12 +1,12 @@
 ---
-title: Solar Energy for the Hogar
+title: Solar Energy Project Goes Live!
 link_text: Read More
-link_destination: /en/posts/2019-01-15-solar-energy-hogar
-banner_image: /uploads/2019/solar-energy/group_with_wisconsin_flag.jpg
+link_destination: /en/solar-energy
+banner_image: /uploads/solar_energy/tour_preview.jpg
 hide_from_carousel: false
 lang: en
-order: 4
+order: 0
 always_show: false
-creation_date: 2019-01-15T12:00:00.000+00:00
+creation_date: 2021-09-20T12:00:00.000+00:00
 ---
-Last January 15, we launched a project for the installation of a solar energy system at the Hogar. This project is possible thanks to Dr. James Tinjum and a group of graduate engineering students from the U. of Wisconsin in Madison and sponsored by Engineers Without Borders and the Puerto Rico Relief Fund of SE Wisconsin. Many thanks to all involved!
+The transitory home for children Jesús de Nazaret in Mayagüez (Hogar) has a new solar energy system that provides electricity in the event of power outages!

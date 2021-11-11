@@ -9,7 +9,7 @@
             {{ page.news.title }}
         </h1>
 
-        <div class="is-vcentered">
+        <div class="fluid-container position-relative">
             {% if page.lang == 'en' %}
                 {% assign related = site.posts | sort | reverse | slice: 0, 5 %}
             {% else %}
@@ -22,10 +22,14 @@
                   <div class="card">
                     <div class="card-image has-background-white-ter has-text-centered">
                       <img
-                        class="tns-lazy-img"
-                        data-src="{{ post.banner_image | relative_url }}"
+                        src="{{ post.banner_image | relative_url }}"
                         alt="{{ post.banner_image_alt }}"
+                        loading="lazy"
                       >
+                    </div>
+
+                    <div class="tag news-container-number">
+                      {{ forloop.index }}
                     </div>
 
                     <div class="card-content">
@@ -59,9 +63,9 @@
                     <div class="card">
                       <div class="card-image has-background-white-ter has-text-centered">
                         <img
-                          class="tns-lazy-img"
-                          data-src="{{ extra.banner_image | relative_url }}"
+                          src="{{ extra.banner_image | relative_url }}"
                           alt="{{ extra.banner_image_alt }}"
+                          loading="lazy"
                         >
                       </div>
 
@@ -80,6 +84,11 @@
                   </div>
                 {% endfor %}
               {% endif %}
+            </div>
+
+            <div class="is-flex-container is-spaced-between has-text-centered is-hidden-touch mt-2" id="news-controls-container">
+              <div class="clickable prev-button">&#8249;</div>
+              <div class="clickable next-button">&#8250;</div>
             </div>
         </div>
     </div>

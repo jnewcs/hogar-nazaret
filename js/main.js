@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // This is the last slide, turn off autoplay
             turnOffAutoPlay();
           }
-        }, 7500);
+        }, 10000);
       };
       setAutoPlay();
 
@@ -128,13 +128,14 @@ document.addEventListener('DOMContentLoaded', function () {
       mouseDrag: true,
       nav: false,
       loop: true,
-      controls: false,
+      controls: true,
+      controlsContainer: document.getElementById('news-controls-container'),
       autoHeight: true,
       autoplay: true,
       autoplayTimeout: 15000,
       autoplayText: ['', ''],
       autoplayButtonOutput: false,
-      lazyload: true
+      lazyload: false
     });
   }
 

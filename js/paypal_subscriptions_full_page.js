@@ -37,6 +37,10 @@ radios.forEach(function(radio) {
     onApprove: onApprove,
     onError: function (_err) {
       window.trackEvent('Paypal checkout error [padrinos page]');
+    },
+    onRender: function() {
+      const spinner = document.getElementById(`spinner-full-page-${planId}`);
+      spinner.classList.add('is-hidden');
     }
   }).render(`#paypal-button-full-page-${planId}`);
 
