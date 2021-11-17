@@ -39,7 +39,6 @@ sections:
 - type: document
   path: en/contact-us.md
   label: Contact Us
-  match: "**/*"
 - type: heading
   label: Spanish Content
 - type: document
