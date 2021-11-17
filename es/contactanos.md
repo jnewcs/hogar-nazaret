@@ -9,7 +9,7 @@ lang: es
 lang_ref: contact-us
 
 ---
-El Hogar te da la bienvenida y te exhorta a que te unas a nuestra misión de transformar con amor las vidas de niños que han sido víctimas de maltrato, y erradicar tan grave problema. Para obtener más información sobre como donar tu tiempo o dinero, auspiciar un evento, visitarnos, hacerte Padrino/Madrina de un niño o ser embajador del Hogar, comunícate con:
+El Hogar te da la bienvenida y te exhorta a que te unas a nuestra misión de transformar con amor las vidas de niños que han sido víctimas de maltrato y erradicar tan grave problema. Para obtener más información sobre cómo donar tu tiempo o dinero, auspiciar un evento, visitarnos, hacerte Padrino/Madrina o ser embajador del Hogar, comunícate con:
 
 <div class="is-size-4 is-cursive">
   <b>
