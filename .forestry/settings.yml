@@ -71,6 +71,10 @@ sections:
 - type: document
   path: es/quienes-somos/historia.md
   label: Cronologia
+- type: document
+  path: es/contactanos.md
+  label: Contactanos
+  match: "**/*"
 - type: heading
   label: General
 - type: document
