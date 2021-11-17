@@ -6,8 +6,8 @@ phone: "(787) 831-6161"
 fax: "(787) 831-4226"
 email: info@hogarjesusdenazaret.org
 executive_director:
-  en: "Executive Director - Atty. Jesús R. Morales Cordero"
-  es: "Director Ejecutivo - Lcdo. Jesús R. Morales Cordero"
+  en: Executive Director - Dr. Lymari Negrón Velázquez
+  es: Directora Ejecutiva - Dra. Lymari Negrón Velázquez
 po_box: P.O. Box 1147 Mayagüez, PR 00681-1147
 payment_request_on: true
 service_worker: false
@@ -28,8 +28,8 @@ social_media:
   facebook: https://www.facebook.com/HogarANJN
 paypal:
   locale:
-    en: "en_US"
-    es: "es_US"
+    en: en_US
+    es: es_US
   client_id:
-    development: "AdQN1OUhHNuJKD7cuCc56vm8CV6h74CH0WJ38GntYQjtl2pZNUTtX2y_S2ZOuzOyHCGW968GEK37UBcK"
-    production: "AZ-P3x5DN4WDF_eW6mjJHxHB3Lowh9DKQ0uVhbz_N5r7-dUFf0uIEs_i9cD3o_6v-TwxXLfxeqaH8TDi"
+    development: AdQN1OUhHNuJKD7cuCc56vm8CV6h74CH0WJ38GntYQjtl2pZNUTtX2y_S2ZOuzOyHCGW968GEK37UBcK
+    production: AZ-P3x5DN4WDF_eW6mjJHxHB3Lowh9DKQ0uVhbz_N5r7-dUFf0uIEs_i9cD3o_6v-TwxXLfxeqaH8TDi
