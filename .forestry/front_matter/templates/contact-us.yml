@@ -20,12 +20,17 @@ fields:
 - type: text
   name: layout
   label: layout
+  hidden: true
 - type: text
   name: lang
   label: lang
+  hidden: true
+  default: en
 - type: text
   name: lang_ref
   label: lang_ref
+  hidden: true
 - type: list
   name: redirect_from
   label: redirect_from
+  hidden: true
