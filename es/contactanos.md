@@ -1,12 +1,13 @@
 ---
 title: Contactos
 header_layout: image_with_central_title
-header_image: /uploads/page_header_images/hogar_playground.jpg
+header_image: "/uploads/page_header_images/hogar_playground.jpg"
 header_image_style: cover
 header_text_color: white
 layout: page
 lang: es
 lang_ref: contact-us
+
 ---
 El Hogar te da la bienvenida y te exhorta a que te unas a nuestra misión de transformar con amor las vidas de niños que han sido víctimas de maltrato, y de erradicar tan grave problema. Para obtener más información sobre como donar tu tiempo o tu dinero, auspiciar un evento, visitarnos, hacerte Padrino de un niño o ser embajador del Hogar, comunícate con:
 

@@ -28,3 +28,5 @@ fields:
   name: lang
   label: lang
   hidden: true
+pages:
+- es/contactanos.md
