@@ -36,6 +36,10 @@ sections:
 - type: document
   path: en/about/milestones.md
   label: Milestones
+- type: document
+  path: en/contact-us.md
+  label: Contact Us
+  match: "**/*"
 - type: heading
   label: Spanish Content
 - type: document
