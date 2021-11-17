@@ -5,18 +5,26 @@ fields:
 - type: text
   name: title
   label: title
-- type: text
-  name: header_layout
-  label: header_layout
 - type: file
   name: header_image
   label: header_image
 - type: text
-  name: header_image_style
-  label: header_image_style
-- type: text
   name: header_text_color
   label: header_text_color
+- name: header_image_style
+  type: select
+  default: cover
+  config:
+    required: true
+    options:
+    - cover
+    - contain
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: header_image_style
 - type: text
   name: layout
   label: layout
@@ -34,3 +42,23 @@ fields:
   name: redirect_from
   label: redirect_from
   hidden: true
+- name: header_layout
+  type: select
+  default: image_with_central_title
+  config:
+    required: true
+    options:
+    - blur
+    - simple
+    - image_with_central_title
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: header_layout
+  description: Determines the header layout on the page. There are currently three
+    options:<br><br>blur<br>image_with_central_title<br>simple<br><br>The blur layout
+    shows the background image blurred with the page title overlayed<br><br>The image_with_central_title
+    shows the background image with the page title displayed underneath<br><br>The
+    simple layout just shows the page title
