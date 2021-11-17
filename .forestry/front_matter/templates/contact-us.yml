@@ -62,3 +62,5 @@ fields:
     shows the background image blurred with the page title overlayed<br><br>The image_with_central_title
     shows the background image with the page title displayed underneath<br><br>The
     simple layout just shows the page title
+pages:
+- en/contact-us.md

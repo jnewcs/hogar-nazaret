@@ -1,15 +1,16 @@
 ---
 title: Contact Us
 header_layout: image_with_central_title
-header_image: /uploads/page_header_images/hogar_playground.jpg
+header_image: "/uploads/page_header_images/hogar_playground.jpg"
 header_image_style: cover
 header_text_color: white
 layout: page
 lang: en
 lang_ref: contact-us
 redirect_from:
-  - /en/contactanos/contactos
-  - /en/contactanos/contactos/
+- "/en/contactanos/contactos"
+- "/en/contactanos/contactos/"
+
 ---
 The Hogar welcomes you and urges you to join our mission of transforming with love the lives of victims of child abuse, and eradicate this serious problem. For more information on how to donate your time or money, sponsor an event, become a Padrino or ambassador of the Hogar, or to arrange a visit, contact:
 
