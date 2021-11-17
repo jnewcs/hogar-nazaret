@@ -5,9 +5,6 @@ fields:
 - type: text
   name: title
   label: title
-- type: text
-  name: header_layout
-  label: header_layout
 - type: file
   name: header_image
   label: header_image
@@ -28,5 +25,26 @@ fields:
   name: lang
   label: lang
   hidden: true
+- name: header_layout
+  type: select
+  default: central_title
+  config:
+    required: true
+    options:
+    - side_by_side
+    - central_title
+    - flyer
+    source:
+      type: simple
+      section: 
+      file: 
+      path: 
+  label: header_layout
+  description: Determines the header layout on the post's page. There are currently
+    three options:<br><br>side_by_side<br>central_title<br>flyer.<br><br>The side_by_side
+    layout includes the post's title on the left with the banner image to the right.<br><br>The
+    central_title layout just has the post's title with the published date below it.<br><br>The
+    flyer layout includes the banner image followed by the event’s title and the timing
+    information (day of the week, date, and time).
 pages:
 - es/contactanos.md
