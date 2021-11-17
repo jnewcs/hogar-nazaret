@@ -10,7 +10,6 @@ lang_ref: contact-us
 redirect_from:
 - "/en/contactanos/contactos"
 - "/en/contactanos/contactos/"
-published: false
 
 ---
 The Hogar welcomes you and invites you to join our mission of transforming with love the lives of victims of child abuse, and eradicate this serious problem. For more information on how to donate your time or money, sponsor an event, become a monthly donor (Padrino o Madrina) or ambassador of the Hogar, or to arrange a visit, contact:
