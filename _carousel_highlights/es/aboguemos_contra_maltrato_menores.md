@@ -8,5 +8,7 @@ lang: es
 order: 3
 always_show: true
 creation_date: 2020-04-10T12:00:00.000+00:00
+published: false
+
 ---
-Es abril, mes de la prevención del maltrato infantil. Hacemos un llamado a todos los amigos del Hogar a que velen por la seguridad y calidad de vida de los menores en Puerto Rico. Amar y proteger a nuestros niños y niñas y denunciar el maltrato infantil es responsabilidad de todos. ¡Apoya nuestra misión!
+Hacemos un llamado a todos los amigos del Hogar a que velen por la seguridad y calidad de vida de los menores en Puerto Rico. Amar y proteger a nuestros niños y niñas y denunciar el maltrato infantil es responsabilidad de todos. ¡Apoya nuestra misión!
