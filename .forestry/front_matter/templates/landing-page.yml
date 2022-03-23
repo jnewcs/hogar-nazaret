@@ -113,6 +113,9 @@ fields:
       - type: textarea
         name: subtitle
         label: subtitle
+- name: show_job_banner
+  type: boolean
+  label: Show Job Banner
 - name: lang
   type: select
   default: en
