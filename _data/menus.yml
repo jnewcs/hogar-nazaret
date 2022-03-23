@@ -5,7 +5,10 @@
   - "/en/"
   lang: en
   has_dropdown: false
-  children: {}
+  children:
+  - title: ''
+    url: ''
+  hide: false
 - title: Hugs Marathon
   url: "/en/hug-marathon/"
   contained_links:
@@ -13,7 +16,10 @@
   feature_check: give_a_hug
   lang: en
   has_dropdown: false
-  children: {}
+  children:
+  - title: ''
+    url: ''
+  hide: true
 - title: About Us
   has_dropdown: true
   lang: en
@@ -35,6 +41,7 @@
   - title: Collaborators
     url: "/en/about/collaborators/"
   url: ''
+  hide: false
 - title: What We Do
   has_dropdown: true
   lang: en
@@ -50,6 +57,7 @@
   - title: Child Abuse Education and Prevention
     url: "/en/what-we-do/child-abuse-education-and-prevention/"
   url: ''
+  hide: false
 - title: Get Involved!
   has_dropdown: true
   lang: en
@@ -74,6 +82,7 @@
   - title: Create A Fund
     url: "/en/get-involved/create-a-fund/"
   url: ''
+  hide: false
 - title: News
   has_dropdown: true
   hide: true
@@ -103,13 +112,17 @@
   - title: Press
     url: "/en/contact-us/press/"
   url: ''
+  hide: false
 - title: Inicio
   url: "/es/"
   contained_links:
   - "/es/"
   lang: es
   has_dropdown: false
-  children: {}
+  children:
+  - title: ''
+    url: ''
+  hide: false
 - title: Maratón de Abrazos
   url: "/es/maraton-de-abrazos/"
   contained_links:
@@ -117,7 +130,10 @@
   feature_check: give_a_hug
   lang: es
   has_dropdown: false
-  children: {}
+  children:
+  - title: ''
+    url: ''
+  hide: false
 - title: "¿QUIÉNES SOMOS?"
   has_dropdown: true
   lang: es
@@ -139,6 +155,7 @@
   - title: Colaboradores
     url: "/es/quienes-somos/colaboradores/"
   url: ''
+  hide: false
 - title: "¿QUÉ HACEMOS?"
   has_dropdown: true
   lang: es
@@ -154,6 +171,7 @@
   - title: Educación y Prevención del Maltrato de Menores
     url: "/es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/"
   url: ''
+  hide: false
 - title: "¡CONTRIBUYE!"
   has_dropdown: true
   lang: es
@@ -178,6 +196,7 @@
   - title: Crea un Fondo
     url: "/es/contribuye/crea-un-fondo/"
   url: ''
+  hide: false
 - title: Noticias
   has_dropdown: true
   hide: true
@@ -207,3 +226,4 @@
   - title: Prensa
     url: "/es/contactanos/prensa/"
   url: ''
+  hide: false
