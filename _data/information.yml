@@ -21,9 +21,13 @@ ath_movil:
   sandbox_token: sandboxtoken01875617264
   public_token: cc49d97e329fd42eb17e3e8ea11bd283511ee592
 logo_url: "/uploads/anniversary_25_logo.png"
-needs_url:
-  en: "/uploads/2020/05/27/needs_may_2020_en.png"
-  es: "/uploads/2020/05/27/needs_may_2020_es_revised.png"
+needs:
+  en:
+    show: false
+    url: "/uploads/2020/05/27/needs_may_2020_en.png"
+  es:
+    show: false
+    url: "/uploads/2020/05/27/needs_may_2020_es_revised.png"
 social_media:
   facebook: https://www.facebook.com/HogarANJN
 paypal:
