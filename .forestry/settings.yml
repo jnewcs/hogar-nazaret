@@ -8,7 +8,7 @@ sections:
   label: English Content
 - type: document
   path: en/index.md
-  label: Landing Page
+  label: Home Page
 - type: directory
   path: _carousel_highlights/en
   label: Carousel Highlights
