@@ -10,10 +10,6 @@ fields:
     name: title
     label: Title
     description: Name that shows up on the website navigation
-  - name: has_dropdown
-    type: boolean
-    label: Dropdown Present
-    description: Determines if the item has a dropdown attached to it.
   - type: text
     name: url
     label: URL
@@ -22,19 +18,6 @@ fields:
     showOnly:
       field: has_dropdown
       value: false
-  - type: list
-    name: contained_links
-    label: Contained Links
-    config:
-      use_select: false
-    showOnly:
-      field: has_dropdown
-      value: true
-    description: Determines if the dropdown appears highlighted if the current page
-      is one of the children pages.<br><br>For example, the "About Us" dropdown has
-      the "Board of Directors" page embedded under it. When the user is on the "Board
-      of Directors" page, we want the "About Us" dropdown to be highlighted.<br><br>To
-      do that, we would set "en/about/board-of-directors/" as a contained link
   - name: lang
     type: select
     default: []
@@ -51,6 +34,10 @@ fields:
     label: Language
     description: Determines which version of the website (English or Spanish) the
       header item show up in
+  - name: has_dropdown
+    type: boolean
+    label: Dropdown Present
+    description: Determines if the item has a dropdown attached to it.
   - name: children
     type: field_group_list
     fields:
@@ -76,5 +63,18 @@ fields:
     showOnly:
       field: has_dropdown
       value: true
+  - type: list
+    name: contained_links
+    label: Contained Links
+    config:
+      use_select: false
+    showOnly:
+      field: has_dropdown
+      value: true
+    description: Determines if the dropdown appears highlighted if the current page
+      is one of the children pages.<br><br>For example, the "About Us" dropdown has
+      the "Board of Directors" page embedded under it. When the user is on the "Board
+      of Directors" page, we want the "About Us" dropdown to be highlighted.<br><br>To
+      do that, we would set "en/about/board-of-directors/" as a contained link
 pages:
 - _data/menus.yml
