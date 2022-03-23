@@ -34,6 +34,10 @@ fields:
     label: Language
     description: Determines which version of the website (English or Spanish) the
       header item show up in
+  - name: hide
+    type: boolean
+    label: Hide
+    description: When set to true, this element won't show up in the navigation menus
   - name: has_dropdown
     type: boolean
     label: Dropdown Present
