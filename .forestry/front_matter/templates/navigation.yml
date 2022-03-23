@@ -46,3 +46,5 @@ fields:
   - type: text
     name: lang
     label: lang
+pages:
+- _data/menus.yml
