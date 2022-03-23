@@ -93,7 +93,7 @@ sections:
   label: Translations
 - type: document
   path: _data/menus.yml
-  label: Menus
+  label: Navigation
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
