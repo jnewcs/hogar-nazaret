@@ -13,8 +13,7 @@ fields:
   - name: has_dropdown
     type: boolean
     label: Dropdown Present
-    description: For example, the "About Us" dropdown has the "Board of Directors"
-      page embedded under it.<br><br>For this item, this attribute would be <strong>true</strong>
+    description: Determines if the item has a dropdown attached to it.
   - type: text
     name: url
     label: URL
