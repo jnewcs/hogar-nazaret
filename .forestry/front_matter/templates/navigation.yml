@@ -57,14 +57,14 @@ fields:
     - name: title
       type: text
       config:
-        required: true
+        required: false
       label: Title
       description: Name of the child element in the dropdown (e.g. <strong>Board of
         Directors</strong>)
     - name: url
       type: text
       config:
-        required: true
+        required: false
       label: URL
       description: Relative URL of the child item (e.g. <strong>/en/about/board-of-directors</strong>)
     config:
