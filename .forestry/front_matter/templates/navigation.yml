@@ -1,0 +1,20 @@
+---
+label: Navigation
+hide_body: true
+fields:
+- type: field_group_list
+  name: Menus
+  label: Menus
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: url
+    label: url
+  - type: list
+    name: contained_links
+    label: contained_links
+  - type: text
+    name: lang
+    label: lang
