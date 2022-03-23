@@ -42,19 +42,21 @@ fields:
       the "Board of Directors" page embedded under it. When the user is on the "Board
       of Directors" page, we want the "About Us" dropdown to be highlighted.<br><br>To
       do that, we would set "en/about/board-of-directors/" as a contained link
-- name: lang
-  type: select
-  default: en
-  config:
-    required: true
-    options:
-    - en
-    - es
-    source:
-      type: simple
-      section: 
-      file: 
-      path: 
-  label: Language
+  - name: lang
+    type: select
+    default: []
+    config:
+      required: true
+      options:
+      - en
+      - es
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: Language
+    description: Determines which version of the website (English or Spanish) the
+      header item show up in
 pages:
 - _data/menus.yml
