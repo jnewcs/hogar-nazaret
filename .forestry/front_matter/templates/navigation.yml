@@ -22,26 +22,6 @@ fields:
     showOnly:
       field: has_dropdown
       value: false
-  - name: children
-    type: field_group
-    config: {}
-    fields:
-    - name: title
-      type: text
-      config:
-        required: false
-      label: Title
-      description: Name of the child element in the dropdown (e.g. Board of Directors)
-    - name: url
-      type: text
-      config:
-        required: false
-      label: URL
-      description: Relative URL of the child item (e.g. <strong>/en/about/board-of-directors</strong>)
-    label: children
-    showOnly:
-      field: has_dropdown
-      value: true
   - type: list
     name: contained_links
     label: Contained Links
@@ -71,5 +51,30 @@ fields:
     label: Language
     description: Determines which version of the website (English or Spanish) the
       header item show up in
+  - name: children
+    type: field_group_list
+    fields:
+    - name: title
+      type: text
+      config:
+        required: true
+      label: Title
+      description: Name of the child element in the dropdown (e.g. <strong>Board of
+        Directors</strong>)
+    - name: url
+      type: text
+      config:
+        required: true
+      label: URL
+      description: Relative URL of the child item (e.g. <strong>/en/about/board-of-directors</strong>)
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Children
+    description: Elements in the dropdown
+    showOnly:
+      field: has_dropdown
+      value: true
 pages:
 - _data/menus.yml
