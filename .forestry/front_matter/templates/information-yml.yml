@@ -79,27 +79,47 @@ fields:
       max: 
       step: 
   label: Give a Hug Campaign Configuration
-- name: needs_url
+- name: needs
   type: field_group
   config: {}
   fields:
-  - name: en
-    type: file
-    config:
-      maxSize: 64
+  - name: enn
+    type: field_group
+    config: {}
+    fields:
+    - name: show
+      type: boolean
+      label: Show
+      description: Determines if the Needs button shows up on the header
+    - name: url
+      type: file
+      config:
+        maxSize: 64
+      description: File for list of needs in English. If the file is an image, we
+        will show it on the same page in a modal. If the file is a PDF, we will open
+        the list of needs on a new page.
+      label: URL
     label: en
-    description: File for list of needs in English. If the file is an image, we will
-      show it on the same page in a modal. If the file is a PDF, we will open the
-      list of needs on a new page.
+    description: English Needs
   - name: es
-    type: file
-    config:
-      maxSize: 64
+    type: field_group
+    config: {}
+    fields:
+    - name: show
+      type: boolean
+      label: Show
+      description: Determines if the Needs button shows up on the header
+    - name: url
+      type: file
+      config:
+        maxSize: 64
+      description: File for list of needs in Spanish. If the file is an image, we
+        will show it on the same page in a modal. If the file is a PDF, we will open
+        the list of needs on a new page.
+      label: URL
     label: es
-    description: File for list of needs in Spanish. If the file is an image, we will
-      show it on the same page in a modal. If the file is a PDF, we will open the
-      list of needs on a new page.
-  label: Needs Url
+    description: Spanish Needs
+  label: Needs
   description: Link to the list of needs for the Spanish and English sites
 - name: ath_movil
   type: field_group
