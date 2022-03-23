@@ -138,3 +138,5 @@ fields:
   label: layout
   default: landing-page
   hidden: true
+pages:
+- en/index.md
