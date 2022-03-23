@@ -42,7 +42,9 @@
           {% unless link.lang == page.lang %}
             {% continue %}
           {% endunless %}
-
+          {% if link.hide == true %}
+            {% continue %}
+          {% endif %}
           {% if site.data.information[link.feature_check].live == false %}
             {% continue %}
           {% endif %}

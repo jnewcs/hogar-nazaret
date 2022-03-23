@@ -75,6 +75,7 @@
 
 - title: News
   has_dropdown: true
+  hide: true
   links_to_check:
     - /en/posts/
     - /en/upcoming_events/
@@ -176,6 +177,7 @@
 
 - title: Noticias
   has_dropdown: true
+  hide: true
   links_to_check:
     - /es/noticias/
     - /es/proximos_eventos/
