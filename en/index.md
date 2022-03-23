@@ -2,7 +2,7 @@
 title: Home
 layout: landing-page
 show_carousel: true
-show_news: true
+show_news: false
 call_to_action:
   header: The Hogar Invites you to get involved!
   text: The operation of our shelter home for children (the Hogar) is greatly possible
