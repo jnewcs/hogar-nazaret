@@ -83,7 +83,7 @@ fields:
   type: field_group
   config: {}
   fields:
-  - name: enn
+  - name: en
     type: field_group
     config: {}
     fields:
