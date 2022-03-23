@@ -25,6 +25,13 @@ fields:
   - name: children
     type: field_group
     config: {}
+    fields:
+    - name: title
+      type: text
+      config:
+        required: true
+      label: Title
+      description: Name of the child element in the dropdown (e.g. Board of Directors)
     label: children
     showOnly:
       field: has_dropdown
