@@ -42,13 +42,6 @@ fields:
   showOnly:
     field: full_page
   label: Call to Action Text
-- name: link_opens_donate
-  type: boolean
-  label: Link Opens Donate Modal
-  default: false
-  description: When this is on, clicking on the link will open the donate modal
-  showOnly:
-    field: full_page
 - type: text
   name: link_destination
   label: Link Destination
@@ -57,6 +50,13 @@ fields:
   showOnly:
     field: link_opens_donate
     value: false
+- name: link_opens_donate
+  type: boolean
+  label: Link Opens Donate Modal
+  default: false
+  description: When this is on, clicking on the link will open the donate modal
+  showOnly:
+    field: full_page
 - type: file
   name: banner_image
   description: Image shown on the carousel. On desktop, it is displayed to the left
