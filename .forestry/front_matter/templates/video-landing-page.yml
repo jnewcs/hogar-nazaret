@@ -11,9 +11,6 @@ fields:
 - type: text
   name: lang_ref
   label: lang_ref
-- type: boolean
-  name: html_video
-  label: html_video
 - type: file
   name: highlight_preview
   label: highlight_preview
@@ -35,6 +32,11 @@ fields:
 - type: list
   name: sponsors
   label: sponsors
+- type: boolean
+  name: html_video
+  label: html_video
+  default: true
+  hidden: true
 - type: text
   name: lang
   label: lang
