@@ -37,6 +37,10 @@ modalRadios.forEach(function(radio) {
     onApprove: onApprove,
     onError: function (_err) {
       window.trackEvent('Paypal checkout error [donation modal]');
+    },
+    onRender: function() {
+      const spinner = document.getElementById(`spinner-modal-${planId}`);
+      spinner.classList.add('is-hidden');
     }
   }).render(`#paypal-button-modal-${planId}`);
 

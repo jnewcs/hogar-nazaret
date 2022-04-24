@@ -68,12 +68,16 @@
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}?{{ site.time | date: '%s%N' }}">
 
     {% if page.show_carousel %}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
     {% endif %}
 
     {% if page.show_milestones %}
       <link rel="stylesheet" href="{{ '/css/milestones.css' | relative_url }}">
+    {% endif %}
+
+    {% if page.html_video %}
+      <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
     {% endif %}
 
     {% if jekyll.environment == 'production' %}

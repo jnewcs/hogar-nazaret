@@ -175,6 +175,11 @@ a.button.is-secondary, button.is-secondary {
   z-index: 2;
   outline: none;
 }
+.news-container-number {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
 #autoplay-button[data-action="stop"], #autoplay-button[data-action="start"] {
   opacity: 0.3;
   box-sizing: border-box;
@@ -553,6 +558,16 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
     transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
     -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
   }
+}
+
+/* Box shadow effects */
+.primary-light-box-shadow {
+  box-shadow:
+    1px 2px 2px hsla(253deg, 97%, 24%, 0.2),
+    2px 4px 4px hsla(253deg, 97%, 24%, 0.2),
+    4px 8px 8px hsla(253deg, 97%, 24%, 0.2),
+    8px 16px 16px hsla(253deg, 97%, 24%, 0.2),
+    16px 32px 32px hsla(253deg, 97%, 24%, 0.2);
 }
 
 /* Desktops and above */

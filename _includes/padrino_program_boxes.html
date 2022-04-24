@@ -59,7 +59,9 @@
       id="paypal-button-container-{{ include.source }}-{{ data.paypal[paypal_environment][page.lang] }}"
       data-plan-id="{{ data.paypal[paypal_environment][page.lang] }}"
     >
-      <div id="paypal-button-{{ include.source }}-{{ data.paypal[paypal_environment][page.lang] }}"></div>
+      <div id="paypal-button-{{ include.source }}-{{ data.paypal[paypal_environment][page.lang] }}">
+        <div class="spinner small" id="spinner-{{ include.source }}-{{ data.paypal[paypal_environment][page.lang] }}"></div>
+      </div>
     </label>
   {% endfor %}
 </div>
