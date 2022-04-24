@@ -42,6 +42,10 @@ sections:
 - type: document
   path: en/contact-us.md
   label: Contact Us
+- type: document
+  path: en/solar-energy
+  label: Solar Landing Page
+  match: "**/*"
 - type: heading
   label: Spanish Content
 - type: document
