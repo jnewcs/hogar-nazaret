@@ -14,7 +14,8 @@ fields:
   config:
     required: true
   description: Determines the order which the post is shown. It appears alongside
-    the title across the website
+    the title across the website.<br><br>After 6 months, a new item will be hidden
+    from the site and moved to the archived section
 - type: text
   name: lang_ref
   label: lang_ref
