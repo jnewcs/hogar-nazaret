@@ -6,8 +6,10 @@ lang_ref: energia-solar-landing-page
 html_video: true
 highlight_preview: "/uploads/solar_energy/tour_preview.jpg"
 highlight_video_url: "https://hogar.s3.us-east-2.amazonaws.com/solar_energy_tour_final.mov"
+show_footer_video: true
 footer_preview: "/uploads/solar_energy/footer_preview.jpg"
 footer_video_url: "https://hogar.s3.us-east-2.amazonaws.com/solar_energy_thank_you.mov"
+show_sponsor_table: true
 sponsors:
   - Profesor James Tinjum
   - Direct Relief
@@ -39,11 +41,3 @@ El Hogar Jesús de Nazaret de Mayagüez cuenta hoy con un avanzado sistema de en
 Ello asegura la continuidad de los servicios que prestan a los niños aún en casos de desastres naturales. El nuevo sistema aporta ahorros que se traducen en recursos para incrementar y diversificar los servicios que se ofrecen a los niños.
 
 La instalación del sistema de energía solar fue posible gracias a la aportación de un generoso grupo de personas, entidades y empresas del estado de Wisconsin y de Puerto Rico.
-
-<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-  <tbody>
-    {% tablerow sponsor in page.sponsors cols:2 %}
-      {{ sponsor }}
-    {% endtablerow %}
-  </tbody>
-</table>

@@ -6,8 +6,10 @@ lang_ref: energia-solar-landing-page
 html_video: true
 highlight_preview: "/uploads/solar_energy/tour_preview.jpg"
 highlight_video_url: "https://hogar.s3.us-east-2.amazonaws.com/solar_energy_tour_final.mov"
+show_footer_video: true
 footer_preview: "/uploads/solar_energy/footer_preview.jpg"
 footer_video_url: "https://hogar.s3.us-east-2.amazonaws.com/solar_energy_thank_you.mov"
+show_sponsor_table: true
 sponsors:
   - Professor James Tinjum
   - Direct Relief
@@ -40,11 +42,3 @@ The system ensures the continuity of their important services even when natural 
 In addition, the new system provides savings that will enable the addition of new and more specialized services for the children.
 
 The installation of the system was possible thanks to the ingenuity and selfless contribution of a large group of people, entities and companies that contributed their expertise, time and money.
-
-<table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
-  <tbody>
-    {% tablerow sponsor in page.sponsors cols:2 %}
-      {{ sponsor }}
-    {% endtablerow %}
-  </tbody>
-</table>

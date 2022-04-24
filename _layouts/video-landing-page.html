@@ -45,30 +45,42 @@ layout: default
     {{ content }}
   </section>
 
-  <div class="columns is-fully-centered mt-2">
-    <div class="column is-half is-flex is-fully-centered" style="height: 350px">
-      <video
-        id="footer-video"
-        class="video-js"
-        controls
-        preload="none"
-        fluid
-        height="350"
-        poster="{{ page.footer_preview | relative_url }}"
-        data-setup="{}"
-      >
-        <source src="{{ page.footer_video_url }}" type="video/mp4" />
+  {% if page.show_sponsor_table == true %}
+    <table class="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
+      <tbody>
+        {% tablerow sponsor in page.sponsors cols:2 %}
+          {{ sponsor }}
+        {% endtablerow %}
+      </tbody>
+    </table>
+  {% endif %}
 
-        <p class="vjs-no-js">
-          To view this video please enable JavaScript, and consider upgrading to a
-          web browser that
-          <a href="https://videojs.com/html5-video-support/" target="_blank">
-            supports HTML5 video
-          </a>
-        </p>
-      </video>
+  {% if page.show_footer_video == true %}
+    <div class="columns is-fully-centered mt-2">
+      <div class="column is-half is-flex is-fully-centered" style="height: 350px">
+        <video
+          id="footer-video"
+          class="video-js"
+          controls
+          preload="none"
+          fluid
+          height="350"
+          poster="{{ page.footer_preview | relative_url }}"
+          data-setup="{}"
+        >
+          <source src="{{ page.footer_video_url }}" type="video/mp4" />
+
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">
+              supports HTML5 video
+            </a>
+          </p>
+        </video>
+      </div>
     </div>
-  </div>
+  {% endif %}
 </div>
 
 <script src="https://vjs.zencdn.net/7.15.4/video.min.js" defer></script>
