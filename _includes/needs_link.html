@@ -1,24 +1,26 @@
-{% if include.link_class %}
-  {% assign link_class = include.link_class %}
-{% else %}
-  {% assign link_class = 'button' %}
-{% endif %}
+{% if site.data.information.needs[page.lang].show == true %}
+  {% if include.link_class %}
+    {% assign link_class = include.link_class %}
+  {% else %}
+    {% assign link_class = 'button' %}
+  {% endif %}
 
-{% assign needs_link = site.data.information.needs_url[page.lang] %}
-{% if (needs_link contains "png") or (needs_link contains "jpg") %}
-  <button
-    class="needs-modal-image {{ link_class }}"
-    data-src="{{ needs_link | relative_url }}"
-  >
-    {{ include.link_text }}
-  </button>
-{% else %}
-  <a
-    class="{{ link_class }}"
-    target="_blank"
-    rel="noreferrer"
-    href="{{ needs_link | relative_url }}"
-  >
-    {{ include.link_text }}
-  </a>
+  {% assign needs_link = site.data.information.needs[page.lang].url %}
+  {% if (needs_link contains "png") or (needs_link contains "jpg") %}
+    <button
+      class="needs-modal-image {{ link_class }}"
+      data-src="{{ needs_link | relative_url }}"
+    >
+      {{ include.link_text }}
+    </button>
+  {% else %}
+    <a
+      class="{{ link_class }}"
+      target="_blank"
+      rel="noreferrer"
+      href="{{ needs_link | relative_url }}"
+    >
+      {{ include.link_text }}
+    </a>
+  {% endif %}
 {% endif %}

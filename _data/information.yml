@@ -1,13 +1,13 @@
 ---
 name: Hogar
 official_name: Hogar Albergue para Niños Jesús de Nazaret, Inc.
-year: "2021"
+year: 1995-2021
 phone: "(787) 831-6161"
 fax: "(787) 831-4226"
 email: info@hogarjesusdenazaret.org
 executive_director:
-  en: "Executive Director - Atty. Jesús R. Morales Cordero"
-  es: "Director Ejecutivo - Lcdo. Jesús R. Morales Cordero"
+  en: 'You may contact us at:'
+  es: 'Te invitamos a comunicarte a: '
 po_box: P.O. Box 1147 Mayagüez, PR 00681-1147
 payment_request_on: true
 service_worker: false
@@ -21,15 +21,19 @@ ath_movil:
   sandbox_token: sandboxtoken01875617264
   public_token: cc49d97e329fd42eb17e3e8ea11bd283511ee592
 logo_url: "/uploads/anniversary_25_logo.png"
-needs_url:
-  en: "/uploads/2020/05/27/needs_may_2020_en.png"
-  es: "/uploads/2020/05/27/needs_may_2020_es_revised.png"
+needs:
+  en:
+    show: false
+    url: "/uploads/2020/05/27/needs_may_2020_en.png"
+  es:
+    show: false
+    url: "/uploads/2020/05/27/needs_may_2020_es_revised.png"
 social_media:
   facebook: https://www.facebook.com/HogarANJN
 paypal:
   locale:
-    en: "en_US"
-    es: "es_US"
+    en: en_US
+    es: es_US
   client_id:
-    development: "AdQN1OUhHNuJKD7cuCc56vm8CV6h74CH0WJ38GntYQjtl2pZNUTtX2y_S2ZOuzOyHCGW968GEK37UBcK"
-    production: "AZ-P3x5DN4WDF_eW6mjJHxHB3Lowh9DKQ0uVhbz_N5r7-dUFf0uIEs_i9cD3o_6v-TwxXLfxeqaH8TDi"
+    development: AdQN1OUhHNuJKD7cuCc56vm8CV6h74CH0WJ38GntYQjtl2pZNUTtX2y_S2ZOuzOyHCGW968GEK37UBcK
+    production: AZ-P3x5DN4WDF_eW6mjJHxHB3Lowh9DKQ0uVhbz_N5r7-dUFf0uIEs_i9cD3o_6v-TwxXLfxeqaH8TDi

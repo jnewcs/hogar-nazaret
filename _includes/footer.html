@@ -83,13 +83,13 @@
   {{ site.data.languages[page.lang].offline_message }}
 </div>
 
-{% assign needs_link = site.data.information.needs_url[page.lang] %}
+{% assign needs_link = site.data.information.needs[page.lang].url %}
 {% if (needs_link contains "png") or (needs_link contains "jpg") %}
   <div class="modal" id="needs-modal">
     <div class="modal-background"></div>
 
     <div class="modal-content">
-      <p class="image is-flex-container is-horizontally-centered"">
+      <p class="image is-flex-container is-horizontally-centered">
         <img class="modal-highlight" id="needs-modal-highlight">
       </p>
     </div>

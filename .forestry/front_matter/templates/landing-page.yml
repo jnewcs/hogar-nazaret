@@ -113,6 +113,38 @@ fields:
       - type: textarea
         name: subtitle
         label: subtitle
+- name: show_job_banner
+  type: boolean
+  label: Show Job Banner
+- name: job_banner
+  type: field_group
+  config: {}
+  fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Title
+  - name: message
+    type: text
+    config:
+      required: false
+    label: Message
+  - name: action_text
+    type: text
+    config:
+      required: false
+    label: Action Text
+  - name: action_url
+    type: file
+    config:
+      maxSize: 64
+    label: Action URL
+    description: Link to a PDF document of the job descriptions
+  label: Job Banner
+  showOnly:
+    field: show_job_banner
+    value: true
 - name: lang
   type: select
   default: en
@@ -138,3 +170,5 @@ fields:
   label: layout
   default: landing-page
   hidden: true
+pages:
+- en/index.md

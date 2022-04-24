@@ -1,202 +1,229 @@
 ---
-# English Menus
 - title: Home
-  url: /en/
+  url: "/en/"
   contained_links:
-    - /en/
+  - "/en/"
   lang: en
-
+  has_dropdown: false
+  children:
+  - title: ''
+    url: ''
+  hide: false
 - title: Hugs Marathon
-  url: /en/hug-marathon/
+  url: "/en/hug-marathon/"
   contained_links:
-    - /en/hug-marathon/
-  feature_check: 'give_a_hug'
+  - "/en/hug-marathon/"
+  feature_check: give_a_hug
   lang: en
-
+  has_dropdown: false
+  children:
+  - title: ''
+    url: ''
+  hide: true
 - title: About Us
   has_dropdown: true
   lang: en
   contained_links:
-    - /en/about/
-    - /en/about/founders-message/
-    - /en/about/milestones/
-    - /en/about/board-of-directors/
-    - /en/about/collaborators/
+  - "/en/about/"
+  - "/en/about/founders-message/"
+  - "/en/about/milestones/"
+  - "/en/about/board-of-directors/"
+  - "/en/about/collaborators/"
   children:
-    - title: The Hogar
-      url: /en/about/
-    - title: Message from Our Founders
-      url: /en/about/founders-message/
-    - title: Milestones
-      url: /en/about/milestones/
-    - title: Board of Directors
-      url: /en/about/board-of-directors/
-    - title: Collaborators
-      url: /en/about/collaborators/
-
+  - title: The Hogar
+    url: "/en/about/"
+  - title: Message from Our Founders
+    url: "/en/about/founders-message/"
+  - title: Milestones
+    url: "/en/about/milestones/"
+  - title: Board of Directors
+    url: "/en/about/board-of-directors/"
+  - title: Collaborators
+    url: "/en/about/collaborators/"
+  url: ''
+  hide: false
 - title: What We Do
   has_dropdown: true
   lang: en
   contained_links:
-    - /en/what-we-do/
-    - /en/what-we-do/services/
-    - /en/what-we-do/child-abuse-education-and-prevention/
+  - "/en/what-we-do/"
+  - "/en/what-we-do/services/"
+  - "/en/what-we-do/child-abuse-education-and-prevention/"
   children:
-    - title: Services Reach
-      url: /en/what-we-do/
-    - title: Children Services
-      url: /en/what-we-do/services/
-    - title: Child Abuse Education and Prevention
-      url: /en/what-we-do/child-abuse-education-and-prevention/
-
+  - title: Services Reach
+    url: "/en/what-we-do/"
+  - title: Children Services
+    url: "/en/what-we-do/services/"
+  - title: Child Abuse Education and Prevention
+    url: "/en/what-we-do/child-abuse-education-and-prevention/"
+  url: ''
+  hide: false
 - title: Get Involved!
   has_dropdown: true
   lang: en
   contained_links:
-    - /en/get-involved/
-    - /en/get-involved/donate-articles/
-    - /en/get-involved/donate-time/
-    - /en/get-involved/visit-with-your-group/
-    - /en/get-involved/sponor-an-event/
-    - /en/get-involved/create-a-fund/
+  - "/en/get-involved/"
+  - "/en/get-involved/donate-articles/"
+  - "/en/get-involved/donate-time/"
+  - "/en/get-involved/visit-with-your-group/"
+  - "/en/get-involved/sponor-an-event/"
+  - "/en/get-involved/create-a-fund/"
   children:
-    - title: The Padrinos and Madrinas Program
-      url: /en/get-involved/
-    - title: Donate Articles
-      url: /en/get-involved/donate-articles/
-    - title: Donate Your Time
-      url: /en/get-involved/donate-time/
-    - title: Visit Us With Your Group
-      url: /en/get-involved/visit-with-your-group/
-    - title: Sponsor An Event
-      url: /en/get-involved/sponor-an-event/
-    - title: Create A Fund
-      url: /en/get-involved/create-a-fund/
-
+  - title: The Padrinos and Madrinas Program
+    url: "/en/get-involved/"
+  - title: Donate Articles
+    url: "/en/get-involved/donate-articles/"
+  - title: Donate Your Time
+    url: "/en/get-involved/donate-time/"
+  - title: Visit Us With Your Group
+    url: "/en/get-involved/visit-with-your-group/"
+  - title: Sponsor An Event
+    url: "/en/get-involved/sponor-an-event/"
+  - title: Create A Fund
+    url: "/en/get-involved/create-a-fund/"
+  url: ''
+  hide: false
 - title: News
   has_dropdown: true
+  hide: true
   links_to_check:
-    - /en/posts/
-    - /en/upcoming_events/
+  - "/en/posts/"
+  - "/en/upcoming_events/"
   automated_active_link_check: true
   lang: en
   children:
-    - title: Recent
-      url: /en/posts/
-      automated_active_link_check: true
-    - title: Upcoming
-      url: /en/upcoming_events/
-      automated_active_link_check: true
-
+  - title: Recent
+    url: "/en/posts/"
+    automated_active_link_check: true
+  - title: Upcoming
+    url: "/en/upcoming_events/"
+    automated_active_link_check: true
+  url: ''
+  contained_links: []
 - title: Contact Us
   has_dropdown: true
   lang: en
   contained_links:
-    - /en/contact-us/
-    - /en/contact-us/press/
+  - "/en/contact-us/"
+  - "/en/contact-us/press/"
   children:
-    - title: Contact
-      url: /en/contact-us/
-    - title: Press
-      url: /en/contact-us/press/
-
-# Spanish Menus
+  - title: Contact
+    url: "/en/contact-us/"
+  - title: Press
+    url: "/en/contact-us/press/"
+  url: ''
+  hide: false
 - title: Inicio
-  url: /es/
+  url: "/es/"
   contained_links:
-    - /es/
+  - "/es/"
   lang: es
-
+  has_dropdown: false
+  children:
+  - title: ''
+    url: ''
+  hide: false
 - title: Maratón de Abrazos
-  url: /es/maraton-de-abrazos/
+  url: "/es/maraton-de-abrazos/"
   contained_links:
-    - /es/maraton-de-abrazos/
-  feature_check: 'give_a_hug'
+  - "/es/maraton-de-abrazos/"
+  feature_check: give_a_hug
   lang: es
-
-- title: ¿QUIÉNES SOMOS?
+  has_dropdown: false
+  children:
+  - title: ''
+    url: ''
+  hide: false
+- title: "¿QUIÉNES SOMOS?"
   has_dropdown: true
   lang: es
   contained_links:
-    - /es/quienes-somos/
-    - /es/quienes-somos/mensaje-del-fundador/
-    - /es/quienes-somos/historia/
-    - /es/quienes-somos/junta-de-directores/
-    - /es/quienes-somos/colaboradores/
+  - "/es/quienes-somos/"
+  - "/es/quienes-somos/mensaje-del-fundador/"
+  - "/es/quienes-somos/historia/"
+  - "/es/quienes-somos/junta-de-directores/"
+  - "/es/quienes-somos/colaboradores/"
   children:
-    - title: El Hogar
-      url: /es/quienes-somos/
-    - title: Mensaje de los Fundadores
-      url: /es/quienes-somos/mensaje-del-fundador/
-    - title: Cronologia Histórica
-      url: /es/quienes-somos/historia/
-    - title: Junta Directiva
-      url: /es/quienes-somos/junta-de-directores/
-    - title: Colaboradores
-      url: /es/quienes-somos/colaboradores/
-
-- title: ¿QUÉ HACEMOS?
+  - title: El Hogar
+    url: "/es/quienes-somos/"
+  - title: Mensaje de los Fundadores
+    url: "/es/quienes-somos/mensaje-del-fundador/"
+  - title: Cronologia Histórica
+    url: "/es/quienes-somos/historia/"
+  - title: Junta Directiva
+    url: "/es/quienes-somos/junta-de-directores/"
+  - title: Colaboradores
+    url: "/es/quienes-somos/colaboradores/"
+  url: ''
+  hide: false
+- title: "¿QUÉ HACEMOS?"
   has_dropdown: true
   lang: es
   contained_links:
-    - /es/que-hacemos/
-    - /es/que-hacemos/servicios/
-    - /es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/
+  - "/es/que-hacemos/"
+  - "/es/que-hacemos/servicios/"
+  - "/es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/"
   children:
-    - title: Alcance
-      url: /es/que-hacemos/
-    - title: Servicios
-      url: /es/que-hacemos/servicios/
-    - title: Educación y Prevención del Maltrato de Menores
-      url: /es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/
-
-- title: ¡CONTRIBUYE!
+  - title: Alcance
+    url: "/es/que-hacemos/"
+  - title: Servicios
+    url: "/es/que-hacemos/servicios/"
+  - title: Educación y Prevención del Maltrato de Menores
+    url: "/es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/"
+  url: ''
+  hide: false
+- title: "¡CONTRIBUYE!"
   has_dropdown: true
   lang: es
   contained_links:
-    - /es/contribuye/
-    - /es/contribuye/donar-articulos/
-    - /es/contribuye/dona-tu-tiempo/
-    - /es/contribuye/visitanos-con-tu-grupo/
-    - /es/contribuye/auspicia-un-evento/
-    - /es/contribuye/crea-un-fondo/
+  - "/es/contribuye/"
+  - "/es/contribuye/donar-articulos/"
+  - "/es/contribuye/dona-tu-tiempo/"
+  - "/es/contribuye/visitanos-con-tu-grupo/"
+  - "/es/contribuye/auspicia-un-evento/"
+  - "/es/contribuye/crea-un-fondo/"
   children:
-    - title: Programa de Padrinos y Madrinas
-      url: /es/contribuye/
-    - title: Dona Artículos
-      url: /es/contribuye/donar-articulos/
-    - title: Dona tu Tiempo
-      url: /es/contribuye/dona-tu-tiempo/
-    - title: Visítanos con tu Grupo
-      url: /es/contribuye/visitanos-con-tu-grupo/
-    - title: Auspicia un Evento
-      url: /es/contribuye/auspicia-un-evento/
-    - title: Crea un Fondo
-      url: /es/contribuye/crea-un-fondo/
-
+  - title: Programa de Padrinos y Madrinas
+    url: "/es/contribuye/"
+  - title: Dona Artículos
+    url: "/es/contribuye/donar-articulos/"
+  - title: Dona tu Tiempo
+    url: "/es/contribuye/dona-tu-tiempo/"
+  - title: Visítanos con tu Grupo
+    url: "/es/contribuye/visitanos-con-tu-grupo/"
+  - title: Auspicia un Evento
+    url: "/es/contribuye/auspicia-un-evento/"
+  - title: Crea un Fondo
+    url: "/es/contribuye/crea-un-fondo/"
+  url: ''
+  hide: false
 - title: Noticias
   has_dropdown: true
+  hide: true
   links_to_check:
-    - /es/noticias/
-    - /es/proximos_eventos/
+  - "/es/noticias/"
+  - "/es/proximos_eventos/"
   automated_active_link_check: true
   lang: es
   children:
-    - title: Reciente
-      url: /es/noticias/
-      automated_active_link_check: true
-    - title: Próximos
-      url: /es/proximos_eventos/
-      automated_active_link_check: true
-
+  - title: Reciente
+    url: "/es/noticias/"
+    automated_active_link_check: true
+  - title: Próximos
+    url: "/es/proximos_eventos/"
+    automated_active_link_check: true
+  url: ''
+  contained_links: []
 - title: CONTÁCTANOS
   has_dropdown: true
   lang: es
   contained_links:
-    - /es/contactanos/
-    - /es/contactanos/prensa/
+  - "/es/contactanos/"
+  - "/es/contactanos/prensa/"
   children:
-    - title: Contactos
-      url: /es/contactanos/
-    - title: Prensa
-      url: /es/contactanos/prensa/
+  - title: Contactos
+    url: "/es/contactanos/"
+  - title: Prensa
+    url: "/es/contactanos/prensa/"
+  url: ''
+  hide: false

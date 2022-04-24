@@ -6,6 +6,9 @@ webhook_url:
 sections:
 - type: heading
   label: English Content
+- type: document
+  path: en/index.md
+  label: Home Page
 - type: directory
   path: _carousel_highlights/en
   label: Carousel Highlights
@@ -36,6 +39,9 @@ sections:
 - type: document
   path: en/about/milestones.md
   label: Milestones
+- type: document
+  path: en/contact-us.md
+  label: Contact Us
 - type: heading
   label: Spanish Content
 - type: document
@@ -71,6 +77,9 @@ sections:
 - type: document
   path: es/quienes-somos/historia.md
   label: Cronologia
+- type: document
+  path: es/contactanos.md
+  label: Contactanos
 - type: heading
   label: General
 - type: document
@@ -81,7 +90,10 @@ sections:
   label: Board of Directors
 - type: document
   path: _data/languages.yml
-  label: Language Translations
+  label: Translations
+- type: document
+  path: _data/menus.yml
+  label: Navigation
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
