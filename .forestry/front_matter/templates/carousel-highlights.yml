@@ -36,12 +36,12 @@ fields:
     value: true
 - type: text
   name: link_text
-  label: Link Text
   description: Text shown on the call to action button.
   config:
     required: false
   showOnly:
     field: full_page
+  label: Call to Action Text
 - name: link_opens_donate
   type: boolean
   label: Link Opens Donate Modal
