@@ -45,7 +45,6 @@ sections:
 - type: document
   path: en/solar-energy
   label: Solar Landing Page
-  match: "**/*"
 - type: heading
   label: Spanish Content
 - type: document
