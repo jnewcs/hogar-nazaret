@@ -9,9 +9,6 @@ fields:
   name: layout
   label: layout
 - type: text
-  name: lang
-  label: lang
-- type: text
   name: lang_ref
   label: lang_ref
 - type: boolean
@@ -38,3 +35,8 @@ fields:
 - type: list
   name: sponsors
   label: sponsors
+- type: text
+  name: lang
+  label: lang
+  hidden: true
+  default: en
