@@ -17,7 +17,18 @@
             {% endif %}
 
             <div class="columns" id="news-carousel-container">
+              <!-- 15768000 is 6 months in seconds -->
+              {% assign timeframe = 15768000 %}
+              {% assign six_months_in_seconds = "now" | date: "%s" | minus: timeframe | to_integer  %}
+
               {% for post in related %}
+                {% assign post_creation_date_in_seconds = post.date | date: "%s" | to_integer %}
+                {{ post_creation_date_in_seconds }}
+                {% if post_creation_date_in_seconds < six_months_in_seconds %}
+                  <!-- If the news highlight is older than 6 months, we hide it -->
+                  {% continue %}
+                {% endif %}
+
                 <div class="column">
                   <div class="card">
                     <div class="card-image has-background-white-ter has-text-centered">

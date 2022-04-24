@@ -13,7 +13,11 @@ lazy_load: true
   {% assign related = site.noticias | uniq | sort:"date" | reverse %}
 {% endif %}
 
+<!-- 15768000 is 6 months in seconds -->
+{% assign timeframe = 15768000 %}
+{% assign six_months_in_seconds = "now" | date: "%s" | minus: timeframe | to_integer  %}
 {% assign current_date = 'now' | date: '%s' | plus: 0 %}
+{% assign shown_items = 0 %}
 
 <div class="container content-container">
   <section class="is-medium">
@@ -25,7 +29,12 @@ lazy_load: true
 
     <div class="columns is-multiline is-nested mt-2">
       {% for post in related %}
-        {% assign post_date_to_compare = post.date | date: '%s' | plus: 0 %}
+        {% assign post_creation_date_in_seconds = post.date | date: "%s" | to_integer %}
+        {% if post_creation_date_in_seconds < six_months_in_seconds %}
+          <!-- If the news post is older than 6 months, we hide it -->
+          {% continue %}
+        {% endif %}
+        {% assign shown_items = shown_items | plus: 1 %}
 
         <div class="column is-full mb-2 mt-1">
           <div class="columns is-desktop">
@@ -48,7 +57,7 @@ lazy_load: true
                 {% if post.path contains "_drafts" %}
                   <div class="tag is-warning">DRAFT POST</div>
                 {% endif %}
-                {% if post_date_to_compare >= current_date %}
+                {% if post_creation_date_in_seconds >= current_date %}
                   <div class="tag is-info">FUTURE</div>
                 {% endif %}
                 <p>
@@ -74,5 +83,11 @@ lazy_load: true
         </div>
       {% endfor %}
     </div>
+
+    {% if shown_items == 0 %}
+      <h4 class="is-size-4 has-text-centered linear-primary-gradient is-full-width mt-2 mb-2">
+        {{ site.data.languages[page.lang].recent_news.none }}
+      </h4>
+    {% endif %}
   </section>
 </div>
