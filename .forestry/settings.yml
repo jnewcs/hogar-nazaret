@@ -43,7 +43,7 @@ sections:
   path: en/contact-us.md
   label: Contact Us
 - type: document
-  path: en/solar-energy
+  path: en/solar-energy.md
   label: Solar Landing Page
 - type: heading
   label: Spanish Content
