@@ -44,3 +44,5 @@ fields:
   label: lang
   hidden: true
   default: en
+pages:
+- en/solar-energy.md
