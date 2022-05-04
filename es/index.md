@@ -2,7 +2,7 @@
 title: Inicio
 layout: landing-page
 show_carousel: true
-show_news: false
+show_news: true
 show_warning_banner: false
 warning:
   title: Estamos confrontando problemas con nuestras líneas telefónicas
