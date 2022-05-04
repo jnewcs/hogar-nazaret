@@ -7,7 +7,7 @@ layout: post
 title: Día del Amor y la Amistad
 date: 2022-02-14 04:00:00 +0000
 lang_ref: dia_de_amor_2022
-banner_image: "/uploads/2022/05/04/dia-amor-2022-3.jpg"
+banner_image: "/uploads/2022/05/04/dia-amor-2022-2.jpg"
 banner_image_alt: ''
 has_photo_grid: true
 photo_grid:
