@@ -15,7 +15,6 @@ photo_grid:
 - "/uploads/2022/05/04/dia-amor-2022-3.jpg"
 - "/uploads/2022/05/04/dia-amor-2022-4.jpg"
 redirect_from: []
-published: false
 
 ---
 Este año, El Hogar celebró el día de la amistad de manera especial. Los miembros de la Junta Agnes Rivera y Miriam Almodóvar organizaron una actividad en la cual los chicos hicieron varias manualidades, entre ellas una corona de San Valentin decorada con corazones y galletas en forma de corazones.
