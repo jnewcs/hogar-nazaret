@@ -8,7 +8,7 @@ title: TALLERES PARA LAS 'NANAS'
 date: 2022-02-05 04:00:00 +0000
 lang_ref: nanas_workshop
 banner_image: "/uploads/2022/05/04/nanas-workshop-2022-2.jpeg"
-banner_image_alt: ''
+banner_image_alt: El segundo taller de adiestramiento
 has_photo_grid: true
 photo_grid:
 - "/uploads/2022/05/04/nanas-workshop-2022-1.jpeg"
