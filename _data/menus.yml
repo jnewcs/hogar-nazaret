@@ -85,7 +85,7 @@
   hide: false
 - title: News
   has_dropdown: true
-  hide: false
+  hide: true
   links_to_check:
   - "/en/posts/"
   - "/en/upcoming_events/"
