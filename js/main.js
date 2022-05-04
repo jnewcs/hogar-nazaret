@@ -105,40 +105,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  /* Code for News Carousel */
-  var newsCarouselContainer = document.getElementById('news-carousel-container');
-  if (newsCarouselContainer) {
-    tns({
-      container: '#news-carousel-container',
-      items: 1,
-      responsive: {
-        900: {
-          items: 2,
-        },
-        1200: {
-          items: 3,
-        }
-      },
-      edgePadding: 0,
-      slideBy: 1,
-      autoplay: false,
-      arrowKeys: false,
-      preventScrollOnTouch: 'auto',
-      speed: 400,
-      mouseDrag: true,
-      nav: false,
-      loop: true,
-      controls: true,
-      controlsContainer: document.getElementById('news-controls-container'),
-      autoHeight: true,
-      autoplay: true,
-      autoplayTimeout: 15000,
-      autoplayText: ['', ''],
-      autoplayButtonOutput: false,
-      lazyload: false
-    });
-  }
-
   /* Code for modal opening */
   var modalContainer = document.getElementById('donation-content-container');
   var loadingContainer = document.getElementById('loading-container');
