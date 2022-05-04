@@ -7,10 +7,13 @@ layout: post
 title: TALLERES PARA LAS 'NANAS'
 date: 2022-02-05 04:00:00 +0000
 lang_ref: nanas_workshop
-banner_image: ''
+banner_image: "/uploads/2022/05/04/nanas-workshop-2022-2.jpeg"
 banner_image_alt: ''
-has_photo_grid: false
-photo_grid: []
+has_photo_grid: true
+photo_grid:
+- "/uploads/2022/05/04/nanas-workshop-2022-1.jpeg"
+- "/uploads/2022/05/04/nanas-workshop-2022-2.jpeg"
+- "/uploads/2022/05/04/nanas-workshop-2022-3.jpeg"
 redirect_from: []
 published: false
 
