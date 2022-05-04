@@ -1,14 +1,14 @@
 ---
 banner_image_style: ''
-header_layout: central_title
+header_layout: side_by_side
 banner_image_max_height: 0
 lang: es
 layout: post
 title: CUMPLEAÑOS DEL MES
 date: 2022-01-28 04:00:00 +0000
 lang_ref: monthly_birthday_2022
-banner_image: ''
-banner_image_alt: ''
+banner_image: "/uploads/2022/05/04/employee-birthday-2022.jpeg"
+banner_image_alt: 'Celebramos el cumpleaños '
 has_photo_grid: false
 photo_grid: []
 redirect_from: []
