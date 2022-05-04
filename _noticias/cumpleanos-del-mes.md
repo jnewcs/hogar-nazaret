@@ -1,5 +1,5 @@
 ---
-banner_image_style: ''
+banner_image_style: contain
 header_layout: side_by_side
 banner_image_max_height: 0
 lang: es
