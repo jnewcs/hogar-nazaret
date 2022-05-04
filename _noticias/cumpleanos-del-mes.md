@@ -12,7 +12,6 @@ banner_image_alt: 'Celebramos el cumpleaños '
 has_photo_grid: false
 photo_grid: []
 redirect_from: []
-published: false
 
 ---
 El pasado 28 de enero, las señoras Miriam Almodóvar y Maricarmen Alemañy, miembros de la Junta de Directores, lanzaron una nueva iniciativa para motivar a los empleados del Hogar. La iniciativa consiste en celebrar los cumpleaños de los empleados una vez al mes.

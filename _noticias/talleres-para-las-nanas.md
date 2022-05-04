@@ -15,7 +15,6 @@ photo_grid:
 - "/uploads/2022/05/04/nanas-workshop-2022-2.jpeg"
 - "/uploads/2022/05/04/nanas-workshop-2022-3.jpeg"
 redirect_from: []
-published: false
 
 ---
 El segundo taller de adiestramiento para nuestras 'Nanas' se llevó a cabo el 5 de febrero. Durante esta segunda sesión, las participantes pudieron aprender destrezas importantes para su desempeño.
