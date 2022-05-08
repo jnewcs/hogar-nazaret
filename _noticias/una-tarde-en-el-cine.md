@@ -1,7 +1,7 @@
 ---
 banner_image_style: contain
 header_layout: flyer
-banner_image_max_height: 250
+banner_image_max_height: 200
 lang: es
 layout: post
 title: UNA TARDE EN EL CINE
