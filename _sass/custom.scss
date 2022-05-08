@@ -214,7 +214,8 @@ a.button.is-secondary, button.is-secondary {
   column-fill: initial;
   .brick {
     margin-bottom: 10px;
-    display: inline-block; /* Fix the misalignment of items */
+    break-inside: avoid;
+    page-break-inside: avoid;
     vertical-align: top; /* Keep the item on the very top */
     min-width: 100px;
     min-height: 100px;
