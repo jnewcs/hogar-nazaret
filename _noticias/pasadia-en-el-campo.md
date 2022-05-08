@@ -5,7 +5,7 @@ banner_image_max_height: 0
 lang: es
 layout: post
 title: PASADÍA EN EL CAMPO
-date: 2021-12-19 05:00:00 +0000
+date: 2021-12-19T05:00:00.000+00:00
 lang_ref: el_campo_dia
 banner_image: "/uploads/2022/05/08/campo-dia-2022-1.jpg"
 banner_image_alt: ''
