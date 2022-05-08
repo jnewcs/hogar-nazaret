@@ -5,14 +5,13 @@ banner_image_max_height: 200
 lang: es
 layout: post
 title: UNA TARDE EN EL CINE
-date: 2021-12-08 05:00:00 +0000
+date: 2021-12-08T05:00:00.000+00:00
 lang_ref: tarde_del_cine
 banner_image: "/uploads/2022/05/08/encanto_poster.jpg"
 banner_image_alt: ''
 has_photo_grid: false
 photo_grid: []
 redirect_from: []
-published: false
 
 ---
 El pasado 8 de diciembre del 2021, nuestros niños disfrutaron de una **Tarde de CINE**, gracias al auspicio del Club de Leones Carlos L. Almodóvar de Vista Verde (en Mayagüez). Mientras veían la película ‘Encanto’ en español, los niños pudieron saborear popcorn y refrescos.

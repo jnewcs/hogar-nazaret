@@ -15,7 +15,6 @@ photo_grid:
 - "/uploads/2022/05/08/helping-nanas-2022-2.jpg"
 - "/uploads/2022/05/08/helping-nanas-2022-3.jpg"
 redirect_from: []
-published: false
 
 ---
 Al inicio del año 2022, el Hogar lanzó una nueva iniciativa que consiste en adiestrar a las Asistentes de Cuidado Residencial (‘Nanas’). Para ello se organizó una programa de 4 talleres. Los mismos son ofrecidos por la Dra. Yazmin Ríos y organizados por las señoras Agnes Rivera y Patricia Valentín, miembros de la Junta de Directores.

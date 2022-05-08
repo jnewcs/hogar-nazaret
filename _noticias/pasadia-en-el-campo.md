@@ -14,7 +14,6 @@ photo_grid:
 - "/uploads/2022/05/08/campo-dia-2022-1.jpg"
 - "/uploads/2022/05/08/campo-dia-2022-2.jpg"
 redirect_from: []
-published: false
 
 ---
 El pasado 19 de diciembre la Familia Almodóvar López auspició un pasadía en el campo de San Germán para nuestros niños. Fue un día de mucha diversión y alegría entre la naturaleza para los niños ya que tuvieron la oportunidad de jugar deportes, bailar, comer pizza y disfrutar a plenitud. También celebraron el cumpleaños de la señora Miriam Almodóvar.
