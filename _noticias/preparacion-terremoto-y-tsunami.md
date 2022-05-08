@@ -15,7 +15,6 @@ photo_grid:
 - "/uploads/2022/05/08/disaster-prep-3.jpg"
 - "/uploads/2022/05/08/disaster-prep-2.jpg"
 redirect_from: []
-published: false
 
 ---
 Para preparar a los chicos en caso de un temblor la Geóloga Christa Von Hillebrand de la NOAA ofreció una charla educativa a nuestros niños y niñas el pasado 27 de febrero de 2022. También estuvieron presentes tres cuidadoras, la enfermera Deborah y la señora Miriam Almodóvar, representando a la Junta de Directores.

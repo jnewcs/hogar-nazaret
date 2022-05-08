@@ -12,7 +12,6 @@ banner_image_alt: ''
 has_photo_grid: false
 photo_grid: []
 redirect_from: []
-published: false
 
 ---
 En el mes de febrero celebramos los cumpleaños de nuestra secretaria Nicole Rodriguez y Luis Martinez, líder recreativo como parte de la iniciativa de motivación a los empleados.

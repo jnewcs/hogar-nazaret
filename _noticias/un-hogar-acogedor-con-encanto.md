@@ -26,7 +26,6 @@ photo_grid:
 - "/uploads/2022/05/08/decoracioncuartos-11.jpg"
 - "/uploads/2022/05/08/decoracioncuartos-12.jpg"
 redirect_from: []
-published: false
 
 ---
 Durante los meses de febrero y marzo de 2022, miembros de nuestra Junta de Directores coordinaron esfuerzos para arreglar y decorar los cuartos de los niños y niñas del Hogar. El comité, dirigido por la señora Miriam Almodóvar, se dio a la tarea de obtener donaciones para comprar los objetos necesarios. Se arreglaron un total de 5 habitaciones y 12 camas. Quedaron hermosas.
