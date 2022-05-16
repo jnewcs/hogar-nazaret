@@ -1,6 +1,6 @@
 ---
 title: Hogar's Annual Assembly Meeting
-date: 2018-06-18 18:00:00 +0000
+display_date: 2018-06-18 18:00:00 +0000
 banner_image: "/uploads/2018/gran_combo/performance.jpg"
 banner_image_alt: Hogar's Annual Assembly Meeting
 banner_image_style: cover

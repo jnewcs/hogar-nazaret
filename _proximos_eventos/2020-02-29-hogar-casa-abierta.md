@@ -1,6 +1,6 @@
 ---
 title: Casa Abierta Para Ti
-date: 2020-02-29T12:00:00.000+00:00
+display_date: 2020-02-29T12:00:00.000+00:00
 time: 12:30 a 4 pm
 banner_image: "/uploads/2020/02/13/updated_open_house_flyer.jpg"
 banner_image_alt: Hogar Casa Abierta Para Ti Folleto

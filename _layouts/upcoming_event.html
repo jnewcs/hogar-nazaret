@@ -6,7 +6,7 @@ lazy_load: true
   This layout is used by the documents in the _upcoming_events/ collection
 {% endcomment %}
 {% if page.header_layout == 'flyer' %}
-  {% include post_headers/flyer.html %}
+  {% include post_headers/flyer.html date=page.display_date %}
 {% endif %}
 
 <div class="container content-container">

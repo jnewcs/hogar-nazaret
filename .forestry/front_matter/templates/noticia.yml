@@ -73,7 +73,7 @@ fields:
     central_title layout just has the post''s title with the published date below
     it. The flyer layout includes the banner image followed by the event’s title and
     the timing information (day of the week, date, and time).'
-- name: banner_image_max_height
+- name: banner_image_height
   type: number
   label: Banner Image Height
   description: Sets the banner image height to this fixed amount. This is only used

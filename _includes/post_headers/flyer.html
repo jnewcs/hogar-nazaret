@@ -27,16 +27,16 @@
       </a>
     {% endif %}
 
-    {% if page.date %}
+    {% if include.date %}
       <h4 class="is-size-4">
         <date>
-          {% include day_of_week_helper.html date=page.date %}
+          {% include day_of_week_helper.html date=include.date %}
         </date>
       </h4>
 
       <h3 class="is-size-3">
         <date class="post-date has-text-centered">
-          {% include date_to_string_helper.html date=page.date use_year=true %}
+          {% include date_to_string_helper.html date=include.date use_year=true %}
         </date>
       </h3>
 

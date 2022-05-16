@@ -11,7 +11,7 @@ lazy_load: true
 {% elsif page.header_layout == 'central_title' %}
   {% include post_headers/central_title.html %}
 {% elsif page.header_layout == 'flyer' %}
-  {% include post_headers/flyer.html %}
+  {% include post_headers/flyer.html date=page.date %}
 {% endif %}
 
 <div class="container content-container">

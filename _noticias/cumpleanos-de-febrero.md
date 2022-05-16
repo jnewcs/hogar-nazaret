@@ -1,7 +1,7 @@
 ---
 banner_image_style: contain
 header_layout: side_by_side
-banner_image_max_height: 0
+banner_image_height: 0
 lang: es
 layout: post
 title: CUMPLEAÑOS DE FEBRERO
