@@ -40,13 +40,6 @@ fields:
   description: 'Determines the header layout on the event page. There is currently
     one option: flyer. The flyer layout includes the banner image followed by the
     event’s title and the timing information (day of the week, date, and time).'
-- type: text
-  name: lang_ref
-  label: lang_ref
-  description: Unique identifier used to link a Spanish upcoming event to the equivalent
-    English event
-  config:
-    required: true
 - type: file
   name: banner_image
   label: banner_image
@@ -61,6 +54,36 @@ fields:
   name: banner_image_height
   label: banner_image_height
   description: Height of the banner image on the event detail page for the flyer layout
+- name: show_call_to_action
+  type: boolean
+  label: Show Call to Action
+  description: Toggles the call to action button
+  default: true
+- name: call_to_action
+  type: text
+  config:
+    required: false
+  label: Call to Action Text
+  description: Text on the Call to Action button (e.g. Comprar Boletos)
+  showOnly:
+    field: show_call_to_action
+    value: true
+- name: call_to_action_href
+  type: text
+  config:
+    required: false
+  label: Call to Action Link
+  description: Link where the Call to Action button redirects to. Sample URL:<br><br>www.eventbrite.com/events/hogar-event
+  showOnly:
+    field: show_call_to_action
+    value: true
+- type: text
+  name: lang_ref
+  label: lang_ref
+  description: Unique identifier used to link a Spanish upcoming event to the equivalent
+    English event
+  config:
+    required: true
 - type: text
   name: layout
   label: layout
