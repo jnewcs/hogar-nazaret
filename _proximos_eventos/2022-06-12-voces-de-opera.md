@@ -3,7 +3,7 @@ title: Voces de Ópera por los Niños del Hogar
 date: 2022-06-12T12:00:00.000+00:00
 time: 4:00 pm
 banner_image: "/uploads/voces_opera_banner.jpg"
-banner_image_alt: Hogar Casa Abierta Para Ti Folleto
+banner_image_alt: Voces de Ópera - Banner Image
 banner_image_height: 350
 header_layout: flyer
 layout: upcoming_event
@@ -11,11 +11,11 @@ lang: es
 lang_ref: voces-de-opera
 show_call_to_action: false
 call_to_action: Comprar Boletos
-call_to_action_href: "https://www.eventbrite.com/e/voces-de-opera-por-los-ninos-del-hogar-tickets-337606900327"
+call_to_action_href: https://www.eventbrite.com/e/voces-de-opera-por-los-ninos-del-hogar-tickets-337606900327
 location: Casa del Médico del Oeste
-location_href: "https://www.facebook.com/casadelmedicodeloeste"
----
+location_href: https://www.facebook.com/casadelmedicodeloeste
 
+---
 Presentación artística de arias de ópera, piezas de zarzuela y canciones de bohemia a cargo de [Hilda Ramos](https://www.hildaramos.com) y [Rafael Dávila](https://rafael-davila.com), reconocidos exponentes de ópera con carreras artísticas que se han extendido por décadas en el mundo operático local e internacional.
 
 Recepción Musical a cargo de [Juan Carlos Vega](https://www.facebook.com/jcvegama), reconocido y destacado músico, profesor de música y arreglista quien fue director del Conservatorio de Música y es actualmente director musical de la orquesta de Gilberto Santarrosa.
