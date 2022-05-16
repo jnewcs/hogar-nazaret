@@ -17,6 +17,15 @@
     <p class="has-text-centered">
       {{ page.subtitle }}
     </p>
+    {% if page.show_call_to_action %}
+      <a
+        class="button is-secondary is-medium mb-1"
+        href="{{ page.call_to_action_href }}"
+        target="_blank"
+      >
+        {{ page.call_to_action }}
+      </a>
+    {% endif %}
 
     {% if page.date %}
       <h4 class="is-size-4">
@@ -30,6 +39,17 @@
           {% include date_to_string_helper.html date=page.date use_year=true %}
         </date>
       </h3>
+
+      <h4 class="is-size-4">
+        <div class="tag is-info is-light is-medium">
+          <a
+            href="{{ page.location_href }}"
+            target="_blank"
+          >
+            {{ page.location }}
+          </a>
+        </div>
+      </h4>
 
       <h4 class="is-size-4">
         <date>
@@ -59,7 +79,7 @@
   <div class="modal-background"></div>
 
   <div class="modal-content">
-    <p class="image is-flex-container is-horizontally-centered"">
+    <p class="image is-flex-container is-horizontally-centered">
       <img class="modal-highlight" id="flyer-image-modal-highlight">
     </p>
   </div>
