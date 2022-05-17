@@ -9,8 +9,8 @@ fields:
   config:
     required: true
 - type: datetime
-  name: date
-  label: displayed_date
+  name: display_date
+  label: Display Date
   description: Determines the order which the upcoming event is shown. It appears
     alongside the event title across the website
   config:
