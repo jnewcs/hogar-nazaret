@@ -37,11 +37,19 @@ $250.00 por pareja (2 boletos)
 $1,100.00 por mesa (10 boletos)
 
 <h3>Auspiciador</h3>
-[Banco Popular de Puerto Rico](https://www.bancopopular.com) con la colaboración de <b>Ópera de Puerto Rico</b>
+[Banco Popular de Puerto Rico](https://www.bancopopular.com)
 <div>
 <img
 style="height: 100px; width: auto;"
 src="{{ '/uploads/banco_popular.png' | relative_url }}"
+/>
+</div>
+
+[Ópera de Puerto Rico](https://www.facebook.com/operadepr)
+<div>
+<img
+style="height: 100px; width: auto;"
+src="{{ '/uploads/opera_logo.jpg' | relative_url }}"
 />
 </div>
 

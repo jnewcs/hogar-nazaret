@@ -57,14 +57,14 @@ layout: default
       <div class="tile is-vertical is-10">
         <div class="tile" id="upcoming-event">
           {% if page.lang == 'en' %}
-            {% assign events = site.upcoming_events | sort:"date" | reverse %}
+            {% assign events = site.upcoming_events | sort: "display_date" | reverse %}
           {% else %}
-            {% assign events = site.proximos_eventos | sort:"date" | reverse %}
+            {% assign events = site.proximos_eventos | sort: "display_date" | reverse %}
           {% endif %}
 
           {% if events.size > 0 %}
             {% for upcoming_event in events %}
-              {% assign event_date_to_compare = upcoming_event.date | date: '%s' | plus: 0 %}
+              {% assign event_date_to_compare = upcoming_event.display_date | date: '%s' | plus: 0 %}
 
               {% if event_date_to_compare < current_date %}
                 {% continue %}
@@ -82,11 +82,11 @@ layout: default
                         />
                       {% endif %}
                       <h5 class="is-size-5">
-                        {% include day_of_week_helper.html date=upcoming_event.date %}
+                        {% include day_of_week_helper.html date=upcoming_event.display_date %}
                       </h5>
                       <h3 class="is-size-3">
                         <date>
-                          {% include date_to_string_helper.html date=upcoming_event.date use_year=false %}
+                          {% include date_to_string_helper.html date=upcoming_event.display_date use_year=false %}
                         </date>
                       </h3>
                       <h5 class="is-size-5">
