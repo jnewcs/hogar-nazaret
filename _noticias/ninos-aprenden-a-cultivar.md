@@ -6,7 +6,7 @@ lang: es
 layout: post
 title: NIÑOS APRENDEN A CULTIVAR
 date: 2022-03-12 22:00:00 +0000
-lang_ref: garden
+lang_ref: garden-cultivation-2022
 banner_image: "/uploads/2022/05/17/garden-1.jpg"
 banner_image_alt: Garden Volunteers
 has_photo_grid: true
