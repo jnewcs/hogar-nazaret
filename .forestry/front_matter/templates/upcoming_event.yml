@@ -40,13 +40,6 @@ fields:
   description: 'Determines the header layout on the event page. There is currently
     one option: flyer. The flyer layout includes the banner image followed by the
     event’s title and the timing information (day of the week, date, and time).'
-- type: text
-  name: lang_ref
-  label: lang_ref
-  config:
-    required: true
-  description: Unique identifier used to link an English upcoming event to the equivalent
-    Spanish event
 - type: file
   name: banner_image
   label: banner_image
@@ -63,6 +56,13 @@ fields:
   description: Height of the banner image on the event detail page for the flyer layout
   config:
     max: '500'
+- type: text
+  name: lang_ref
+  label: lang_ref
+  config:
+    required: true
+  description: Unique identifier used to link an English upcoming event to the equivalent
+    Spanish event
 - type: text
   name: layout
   label: layout
