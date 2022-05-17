@@ -10,7 +10,7 @@ fields:
     required: true
 - type: datetime
   name: date
-  label: date
+  label: displayed_date
   description: Determines the order which the upcoming event is shown. It appears
     alongside the event title across the website
   config:
