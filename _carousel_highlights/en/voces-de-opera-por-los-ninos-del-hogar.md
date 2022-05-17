@@ -15,4 +15,4 @@ hide_from_carousel: false
 always_show: false
 
 ---
-An evening of art and music in the company of distinguished artists and celebrities from Puerto Rico to benefit the Hogar Albergue para Niños Jesús de Nazaret.
+Come enjoy an evening of art and music in the company of distinguished artists and celebrities from Puerto Rico to benefit the Hogar Albergue para Niños Jesús de Nazaret!
