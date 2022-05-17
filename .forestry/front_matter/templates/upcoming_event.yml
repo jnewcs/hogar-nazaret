@@ -86,5 +86,14 @@ fields:
   label: lang
   default: en
   hidden: true
+- name: call_to_action_href
+  type: text
+  config:
+    required: false
+  label: Call to Action Link
+  description: Link where the Call to Action button redirects to. Sample URL:<br><br>www.eventbrite.com/events/hogar-event
+  showOnly:
+    field: show_call_to_action
+    value: true
 pages:
 - _upcoming_events/voces-de-opera-por-los-ninos-del-hogar.md
