@@ -9,7 +9,7 @@ header_layout: flyer
 layout: upcoming_event
 lang: es
 lang_ref: voces-de-opera
-show_call_to_action: false
+show_call_to_action: true
 call_to_action: Comprar Boletos
 call_to_action_href: https://www.eventbrite.com/e/voces-de-opera-por-los-ninos-del-hogar-tickets-337606900327
 location: Casa del Médico del Oeste
