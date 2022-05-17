@@ -15,7 +15,6 @@ photo_grid:
 - "/uploads/2022/05/17/garden-3.jpg"
 - "/uploads/2022/05/17/garden-2.jpg"
 redirect_from: []
-published: false
 
 ---
 El pasado 12 de marzo miembros de la organización Enactus(capítulo del RUM) llevaron a cabo un taller experimental para enseñar a los niños la importancia de cultivar. Comenzamos la actividad con los niños pintando neumáticos y decorándolos. Luego colocaron la tierra y sembraron plantas de tomates, pimientos y cilantro, entre otras.
