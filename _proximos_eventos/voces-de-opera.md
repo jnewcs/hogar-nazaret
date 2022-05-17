@@ -2,7 +2,7 @@
 title: "Voces de Ópera por los Niños del Hogar"
 display_date: 2022-06-12T12:00:00.000+00:00
 time: 4:00 pm
-banner_image: "/uploads/voces_opera_banner.jpg"
+banner_image: "/uploads/voces_opera_banner.png"
 banner_image_alt: "Voces de Ópera - Banner Image"
 banner_image_height: 350
 header_layout: flyer
