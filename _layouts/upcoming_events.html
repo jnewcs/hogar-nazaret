@@ -17,9 +17,9 @@ layout: default
 
     <div class="columns is-multiline is-nested mt-2">
       {% if page.lang == 'en' %}
-        {% assign events = site.upcoming_events | sort:"date" | reverse %}
+        {% assign events = site.upcoming_events | sort: "display_date" | reverse %}
       {% else %}
-        {% assign events = site.proximos_eventos | sort:"date" | reverse %}
+        {% assign events = site.proximos_eventos | sort: "display_date" | reverse %}
       {% endif %}
       {% assign events_shown = false %}
 
@@ -44,11 +44,11 @@ layout: default
                 {% endif %}
 
                 <h4 class="is-size-4">
-                  {% include day_of_week_helper.html date=upcoming_event.date %}
+                  {% include day_of_week_helper.html date=upcoming_event.display_date %}
                 </h4>
                 <h1 class="is-size-1">
                   <date>
-                    {% include date_to_string_helper.html date=upcoming_event.date use_year=true %}
+                    {% include date_to_string_helper.html date=upcoming_event.display_date use_year=true %}
                   </date>
                 </h1>
                 <h4 class="is-size-4">
