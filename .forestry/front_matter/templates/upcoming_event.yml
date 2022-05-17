@@ -73,3 +73,5 @@ fields:
   label: lang
   default: en
   hidden: true
+pages:
+- _upcoming_events/voces-de-opera-por-los-ninos-del-hogar.md
