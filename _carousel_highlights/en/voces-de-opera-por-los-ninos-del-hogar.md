@@ -13,7 +13,6 @@ banner_image: "/uploads/voces_opera_banner.png"
 order: 0
 hide_from_carousel: false
 always_show: false
-published: false
 
 ---
 An evening of art and music in the company of distinguished artists and celebrities from Puerto Rico to benefit the Hogar Albergue para Niños Jesús de Nazaret.
