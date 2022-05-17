@@ -18,7 +18,7 @@ location_href: https://www.facebook.com/casadelmedicodeloeste
 ---
 Presentación artística de arias de ópera, piezas de zarzuela y canciones de bohemia a cargo de [Hilda Ramos](https://www.hildaramos.com) y [Rafael Dávila](https://rafael-davila.com), reconocidos exponentes de ópera con carreras artísticas que se han extendido por décadas en el mundo operático local e internacional.
 
-Recepción Musical a cargo de [Juan Carlos Vega](https://www.facebook.com/jcvegama), reconocido y destacado músico, profesor de música y arreglista quien fue director del Conservatorio de Música y es actualmente director musical de la orquesta de Gilberto Santarrosa.
+Recepción Musical a cargo de [Juan Carlos Vega](https://www.facebook.com/jcvegama), reconocido y destacado músico, profesor de música y arreglista quien fue director del Conservatorio de Música y es actualmente director musical de la orquesta de Gilberto Santa Rosa.
 
 Exhibición y Venta de obras del pintor cagüeño [Ángel Soto Arriaga](https://www.facebook.com/angel.sotoarriaga).
 
@@ -39,10 +39,10 @@ $1,100.00 por mesa (10 boletos)
 <h3>Auspiciador</h3>
 [Banco Popular de Puerto Rico](https://www.bancopopular.com) con la colaboración de <b>Ópera de Puerto Rico</b>
 <div>
-  <img
-    style="height: 100px; width: auto;"
-    src="{{ '/uploads/banco_popular.png' | relative_url }}"
-  />
+<img
+style="height: 100px; width: auto;"
+src="{{ '/uploads/banco_popular.png' | relative_url }}"
+/>
 </div>
 
 <h3>Maestros de Ceremonias</h3>
@@ -58,39 +58,39 @@ Calle Los Caobos, 8117, 835 Camino El Guayo, Mayagüez, 00682
 <h3>Contactos para los Medios</h3>
 Información Sobre la Actividad:
 <a href="mailto:info@hogarjesusdenazaret.org">
-  info@hogarjesusdenazaret.org
+info@hogarjesusdenazaret.org
 </a>
 
 Prensa y Medios:
 <a href="mailto:comunicaciones@hogarjesusdenazaret.org">
-  comunicaciones@hogarjesusdenazaret.org
+comunicaciones@hogarjesusdenazaret.org
 </a>
 
 Relaciones Artistas:
 <a href="mailto:juntadirectores@hogarjesusdenazaret.org">
-  juntadirectores@hogarjesusdenazaret.org
+juntadirectores@hogarjesusdenazaret.org
 </a>
 
 <h3>Comité Organizador</h3>
 <ul>
-  <li>
-    Jesús R. Morales: Presidente del Comité organizador y relaciones artistas
-  </li>
-  <li>
-    Maritza Morales:  Relaciones medios/prensa
-  </li>
-  <li>
-    John Newcomb: Promociones y ventas digitales
-  </li>
-  <li>
-    Francisco Haddock: Arte gráfico
-  </li>
-  <li>
-    Edmée Vila: Tema creativo y guiones
-  </li>
-  <li>
-    Yolanda Newcomb: Redacción editorial y traducciones
-  </li>
+<li>
+Jesús R. Morales: Presidente del Comité organizador y relaciones artistas
+</li>
+<li>
+Maritza Morales:  Relaciones medios/prensa
+</li>
+<li>
+John Newcomb: Promociones y ventas digitales
+</li>
+<li>
+Francisco Haddock: Arte gráfico
+</li>
+<li>
+Edmée Vila: Tema creativo y guiones
+</li>
+<li>
+Yolanda Newcomb: Redacción editorial y traducciones
+</li>
 </ul>
 
 <h3>Información Sobre el Hogar</h3>
