@@ -56,6 +56,19 @@ fields:
   description: Height of the banner image on the event detail page for the flyer layout
   config:
     max: '500'
+- name: show_call_to_action
+  type: boolean
+  label: Show Call to Action
+  description: Toggles the call to action button
+- name: call_to_action
+  type: text
+  config:
+    required: false
+  label: Call to Action Text
+  description: Text on the Call to Action button (e.g. Buy Tickets)
+  showOnly:
+    field: show_call_to_action
+    value: true
 - type: text
   name: lang_ref
   label: lang_ref
