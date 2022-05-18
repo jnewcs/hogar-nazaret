@@ -9,8 +9,8 @@ fields:
     required: true
   description: Displayed as the title of the event across the website
 - type: datetime
-  name: date
-  label: date
+  name: display_date
+  label: Display Date
   config:
     required: true
     date_format: MM/DD/YYYY
