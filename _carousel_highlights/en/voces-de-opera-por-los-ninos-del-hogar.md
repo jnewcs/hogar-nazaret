@@ -1,16 +1,16 @@
 ---
-creation_date: 2022-05-17 23:26:28 +0000
-banner_image_max_width: 0
+creation_date: 2022-05-17T23:26:28.000+00:00
+banner_image_max_width: 
 feature_check: ''
 lang: en
 title: VOCES DE ÓPERA POR LOS NIÑOS DEL HOGAR
 full_page: false
 full_page_link: false
-link_text: Buy Tickets
-link_destination: https://www.eventbrite.com/e/337606900327
+link_text: Learn More
+link_destination: "/en/upcoming_events/voces-de-opera-por-los-ninos-del-hogar"
 link_opens_donate: false
 banner_image: "/uploads/voces_opera_banner.png"
-order: 0
+order: 
 hide_from_carousel: false
 always_show: false
 
