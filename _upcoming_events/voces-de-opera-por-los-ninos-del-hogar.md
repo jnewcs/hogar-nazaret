@@ -1,5 +1,5 @@
 ---
-date: 2022-06-12 23:21:49 +0000
+date: '2022-06-12 23:21:49 +0000'
 header_layout: flyer
 layout: upcoming_event
 lang: en
@@ -12,6 +12,7 @@ banner_image_height: 350
 show_call_to_action: true
 call_to_action: Buy Tickets
 call_to_action_href: https://www.eventbrite.com/e/337606900327
+display_date: 2022-06-12 07:00:00 +0000
 published: false
 
 ---
