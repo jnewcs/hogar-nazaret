@@ -1,5 +1,4 @@
 ---
-date: '2022-06-12 23:21:49 +0000'
 header_layout: flyer
 layout: upcoming_event
 lang: en
