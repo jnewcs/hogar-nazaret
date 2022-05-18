@@ -4,7 +4,7 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
   config:
     required: true
   description: Displayed as the title of the event across the website
@@ -23,7 +23,7 @@ fields:
     required: true
   description: Time of the event. It can be a range of time or just the start time.
     We display it across the website along with the date of the event.
-  label: time
+  label: Time
 - name: header_layout
   type: select
   default: flyer
