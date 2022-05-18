@@ -78,6 +78,12 @@ fields:
   showOnly:
     field: show_call_to_action
     value: true
+- name: location
+  type: text
+  config:
+    required: false
+  label: Location
+  description: Location of the event - in person or digital
 - type: text
   name: lang_ref
   label: lang_ref
