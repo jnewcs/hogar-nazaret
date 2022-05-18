@@ -91,4 +91,6 @@ El Hogar Albergue para Niños Jesús de Nazaret (The Hogar) is a Mayagüez non-p
 
 The Hogar welcomes minors ranging from newborn babies to twelve years old and provides them with personalized care, balanced nutrition, transportation, educational tutoring, and recreation, as well as professional medical, psychological, and social care. Above all, the children of The Hogar receive a lot of love to help them heal their emotional wounds and enable them to move forward in life, focusing in studying, and loving God and the neighbor. Over the years, The Hogar has housed more than 740 children from 44 different municipalities in Puerto Rico.
 
-<h3>Cronología Histórica del Hogar</h3> [https://hogarjesusdenazaret.org/es/quienes-somos/historia](https://hogarjesusdenazaret.org/es/quienes-somos/historia "https://hogarjesusdenazaret.org/es/quienes-somos/historia")
+<h3>Historical Chronology of The Hogar</h3>
+
+[https://hogarjesusdenazaret.org/en/about/milestones](https://hogarjesusdenazaret.org/en/about/milestones)
