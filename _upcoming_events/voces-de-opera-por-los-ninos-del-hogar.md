@@ -15,7 +15,6 @@ call_to_action_href: https://www.eventbrite.com/e/337606900327
 display_date: 2022-06-12 07:00:00 +0000
 location: Casa del Médico del Oeste
 location_href: https://www.facebook.com/casadelmedicodeloeste
-published: false
 
 ---
 Artistic presentation of opera arias, zarzuela pieces and bohemian songs by [Hilda Ramos](https://www.hildaramos.com) and [Rafael Dávila](https://rafael-davila.com), renowned opera exponents with artistic careers that have spanned decades in the local and international operatic world.
