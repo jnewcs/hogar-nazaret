@@ -84,6 +84,13 @@ fields:
     required: false
   label: Location
   description: Location of the event - in person or digital
+- name: location_href
+  type: text
+  config:
+    required: false
+  label: Location link
+  description: Map link to the location for a physical event or a Zoom link for a
+    digital event
 - type: text
   name: lang_ref
   label: lang_ref
