@@ -11,7 +11,7 @@ banner_image_height: 350
 show_call_to_action: true
 call_to_action: Buy Tickets
 call_to_action_href: https://www.eventbrite.com/e/337606900327
-display_date: 2022-06-12 07:00:00 +0000
+display_date: 2022-06-12T07:00:00.000+00:00
 location: Casa del Médico del Oeste
 location_href: https://www.facebook.com/casadelmedicodeloeste
 
@@ -30,7 +30,7 @@ Guests will enjoy sparkling wine and light hors d'oeuvres at the reception. Deli
 
 Hogar Albergue para Niños Jesús de Nazaret
 
-<h3>Price of tickets</h3>
+<h3>Price per Donation</h3>
 
 $150.00 per person
 

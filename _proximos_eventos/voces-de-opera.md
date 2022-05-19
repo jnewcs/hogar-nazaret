@@ -29,7 +29,8 @@ Los invitados disfrutarán en la recepción de vino espumoso y entremeses así c
 <h3>Organización beneficiada</h3>
 Hogar Albergue para Niños Jesús de Nazaret
 
-<h3>Precios</h3>
+<h3>Precio por Donativo</h3>
+
 $150.00 por persona
 
 $250.00 por pareja (2 boletos)
