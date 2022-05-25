@@ -35,6 +35,7 @@ sponsors:
 - Affiliated Engineers Incorporated
 - Mr. Dante Fratta
 - Community Engineering Corps
+published: false
 
 ---
 The transitory home for children Jesús de Nazaret in Mayagüez (Hogar) has a new solar energy system that provides electricity in the event of power outages.
