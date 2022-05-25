@@ -38,9 +38,18 @@ sponsors:
 published: false
 
 ---
-The transitory home for children Jesús de Nazaret in Mayagüez (Hogar) has a new solar energy system that provides electricity in the event of power outages.
-The system ensures the continuity of their important services even when natural disasters strike the island.
+The home for children Jesús de Nazaret in Mayagüez (Hogar) now has a new solar energy system that provides electricity in the event of power outages. The system ensures the continuity of their important services even when natural disasters strike the island. In addition, the new system provides savings that will enable the addition of new and more specialized services for the children.
 
-In addition, the new system provides savings that will enable the addition of new and more specialized services for the children.
+The installation of the system was possible thanks to the ingenuity and selfless efforts of a large group of people, entities and companies that contributed their expertise, time and money. These include the organizations Engineers without Borders (EWB), Enactus (University of Puerto Rico, Mayagüez Campus), and the Puerto Rico Relief Fund; the Couillard Solar Foundation; the companies Blue Planet Energy, AZ Engineering and Renewable Solutions Engineering, and engineering students from the University of Wisconsin (Madison), with the coordination of our former board of directors’ president, Professor Carlos Velázquez Figueroa.
 
-The installation of the system was possible thanks to the ingenuity and selfless contribution of a large group of people, entities and companies that contributed their expertise, time and money.
+Professor James Tinjum from the University of Wisconsin, author of the project, explained that the idea to provide an alternate source of energy to the Hogar was born after Hurricane Maria struck the island. "We wanted to go beyond providing supplies and assist with a sustainable project that would bring wellbeing and safety to the home’s children for many years and what would better than the installation of a solar energy system," said Tinjum.
+
+The system has the most modern technology available. It consists of 96 solar panels, each with a power output capacity of 340 watts, and four battery banks with a total of 64 kilowatt-hours of power capacity. These batteries store the energy to power the Hogar at night or on cloudy days. The brain of the system are four inverters that convert the energy from the solar panels and batteries into energy for the home’s use. The system also has transfer switches that are connected to the electrical grid to optimize the use of solar energy and, in case of not meeting demand, use other energy sources.
+
+Students from the University of Wisconsin-Madison were actively involved in all aspects of the project, including fundraising and system design. According to Claire Mitchell, engineering student and project leader, this participation made it easier for students to increase their engineering and disaster response expertise. "We came to provide our technical skills, and we left with a great sense of happiness that we had created a more secure future for the children." Mitchell affirmed.
+
+Alberto Cordero, seasoned engineer from Madison, Wisconsin, and mentor to the students involved, said he was honored to have been part of this project as it “aligns with EWB’s mission of building a better world ”. The organization's contribution focused on the design of the system, supervision of the installation and the search for sponsors to fund the equipment and related expenses.
+
+Atty. Jesús R. Morales Cordero, current president of the Hogar’s board of directors, expresses his gratitude to all the volunteers, sponsors and suppliers who collaborated in the project. "The initiative and collaborative effort of this generous group of people will allow us to have a safe and resilient home for the benefit of the children who live here for years to come."
+
+**THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS THE Main Sponsors and Collaborators of the Solar Energy Project.**
