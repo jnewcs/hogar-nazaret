@@ -52,4 +52,16 @@ Alberto Cordero, seasoned engineer from Madison, Wisconsin, and mentor to the st
 
 Atty. Jesús R. Morales Cordero, current president of the Hogar’s board of directors, expresses his gratitude to all the volunteers, sponsors and suppliers who collaborated in the project. "The initiative and collaborative effort of this generous group of people will allow us to have a safe and resilient home for the benefit of the children who live here for years to come."
 
-**THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS THE Main Sponsors and Collaborators of the Solar Energy Project.**
+**About the Hogar**
+
+The Hogar is a 501(c)(3) non-profit organization founded in 1995. Its mission is to serve as a temporary safe home for children who have been removed from their homes due to abuse. Since its inception, the Hogar has cared for more than 700 children in Puerto Rico. To learn more about the history of the organization and the services provided to the children, visit [www.hogarjesusdenazaret.org](http://www.hogarjesusdenazaret.org).
+
+**PRESS AND MEDIA CONTACTS**
+
+Jesús R. Morales – President, Board of Directors
+
+Email: [juntadirectores@hogarjesusdenazaret.org](mailto:juntadirectores@hogarjesusdenazaret.org); Tel. (787) 505-0986
+
+Maritza Morales – Volunteer Chair, Communications Committee
+
+**THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS to the Main Sponsors and Collaborators of the Solar Energy Project:**
