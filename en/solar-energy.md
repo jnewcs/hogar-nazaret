@@ -64,4 +64,4 @@ Email: [juntadirectores@hogarjesusdenazaret.org](mailto:juntadirectores@hogarjes
 
 Maritza Morales – Volunteer Chair, Communications Committee
 
-**THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS to the Main Sponsors and Collaborators of the Solar Energy Project:**
+**THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS to the Main Sponsors and Collaborators of the Solar Energy Project!**
