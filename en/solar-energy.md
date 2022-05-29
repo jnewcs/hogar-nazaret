@@ -35,7 +35,6 @@ sponsors:
 - Affiliated Engineers Incorporated
 - Mr. Dante Fratta
 - Community Engineering Corps
-published: false
 
 ---
 The home for children Jesús de Nazaret in Mayagüez (Hogar) now has a new solar energy system that provides electricity in the event of power outages. The system ensures the continuity of their important services even when natural disasters strike the island. In addition, the new system provides savings that will enable the addition of new and more specialized services for the children.
