@@ -35,6 +35,7 @@ sponsors:
 - Affiliated Engineers Incorporated
 - Mr. Dante Fratta
 - Community Engineering Corps
+published: false
 
 ---
 The home for children Jesús de Nazaret in Mayagüez (Hogar) now has a new solar energy system that provides electricity in the event of power outages. The system ensures the continuity of their important services even when natural disasters strike the island. In addition, the new system provides savings that will enable the addition of new and more specialized services for the children.
@@ -57,10 +58,20 @@ The Hogar is a 501(c)(3) non-profit organization founded in 1995. Its mission is
 
 **PRESS AND MEDIA CONTACTS**
 
-Jesús R. Morales – President, Board of Directors
+**Jesús R. Morales** – President, Board of Directors
 
-Email: [juntadirectores@hogarjesusdenazaret.org](mailto:juntadirectores@hogarjesusdenazaret.org); Tel. (787) 505-0986
+_Email_
 
-Maritza Morales – Volunteer Chair, Communications Committee
+[juntadirectores@hogarjesusdenazaret.org](mailto:juntadirectores@hogarjesusdenazaret.org)
+
+_Telephone_
+
+(787) 505-0986
+
+**Maritza Morales** – Volunteer Chair, Communications Committee
+
+_Email_
+
+[comunicaciones@hogarjesusdenazaret.org](mailto:comunicaciones@hogarjesusdenazaret.org)
 
 **THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS to the Main Sponsors and Collaborators of the Solar Energy Project!**
