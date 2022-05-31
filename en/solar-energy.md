@@ -45,7 +45,7 @@ This has been possible thanks to the contribution of a generous group of individ
 
 <hr />
 
-The home for children Jesús de Nazaret in Mayagüez (Hogar) now has a new solar energy system that provides electricity in the event of power outages. The system ensures the continuity of their important services even when natural disasters strike the island. In addition, the new system provides savings that will enable the addition of new and more specialized services for the children.
+**MAYAGÜEZ, Puerto Rico, 15 June 2022 -** The home for children Jesús de Nazaret in Mayagüez (Hogar) now has a new solar energy system that provides electricity in the event of power outages. The system ensures the continuity of their important services even when natural disasters strike the island. In addition, the new system provides savings that will enable the addition of new and more specialized services for the children.
 
 The installation of the system was possible thanks to the ingenuity and selfless efforts of a large group of people, entities and companies that contributed their expertise, time and money. These include the organizations Engineers without Borders (EWB), Enactus (University of Puerto Rico, Mayagüez Campus), and the Puerto Rico Relief Fund; the Couillard Solar Foundation; the companies Blue Planet Energy, AZ Engineering and Renewable Solutions Engineering, and engineering students from the University of Wisconsin (Madison), with the coordination of our former board of directors’ president, Professor Carlos Velázquez Figueroa.
 
