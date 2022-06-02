@@ -1,5 +1,5 @@
 ---
-title: Jesús de Nazaret Home for Children in Puerto Rico launches solar energy system
+title: Hogar Albergue para Niños Jesús de Nazaret launches solar energy system
 layout: video-landing-page
 lang: en
 lang_ref: energia-solar-landing-page-new
