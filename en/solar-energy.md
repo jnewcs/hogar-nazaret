@@ -62,11 +62,11 @@ The Hogar is a 501(c)(3) non-profit organization founded in 1995. Its mission is
 
 #### PRESS AND MEDIA CONTACTS
 
-<p class="mb-1">**Jesús R. Morales** – President, Board of Directors</p>
+<p class="mb-0"><b>Jesús R. Morales</b> – President, Board of Directors</p>
 
-<p class="mb-1">[juntadirectores@hogarjesusdenazaret.org](mailto:juntadirectores@hogarjesusdenazaret.org)</p>
+<p class="mb-0">[juntadirectores@hogarjesusdenazaret.org](mailto:juntadirectores@hogarjesusdenazaret.org)</p>
 
-<p class="mb-1">(787) 505-0986</p>
+<p class="mb-0">(787) 505-0986</p>
 
 **Maritza Morales** – Volunteer Chair, Communications Committee
 
@@ -74,4 +74,4 @@ The Hogar is a 501(c)(3) non-profit organization founded in 1995. Its mission is
 
 <hr />
 
-**THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS to the Main Sponsors and Collaborators of the Solar Energy Project!** 
+**THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS to the Main Sponsors and Collaborators of the Solar Energy Project!**
