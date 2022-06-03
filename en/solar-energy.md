@@ -68,9 +68,9 @@ The Hogar is a 501(c)(3) non-profit organization founded in 1995. Its mission is
 
 <p class="mb-0">(787) 505-0986</p>
 
-**Maritza Morales** – Volunteer Chair, Communications Committee
+<p class="mb-0"><b>Maritza Morales</b> – Volunteer Chair, Communications Committee</p>
 
-[comunicaciones@hogarjesusdenazaret.org](mailto:comunicaciones@hogarjesusdenazaret.org)
+<p class="mb-0"><a href="mailto:comunicaciones@hogarjesusdenazaret.org">comunicaciones@hogarjesusdenazaret.org</a></p>
 
 <hr />
 
