@@ -74,4 +74,4 @@ The Hogar is a 501(c)(3) non-profit organization founded in 1995. Its mission is
 
 <hr />
 
-**THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS to the Main Sponsors and Collaborators of the Solar Energy Project!**
+**THE CHILDREN, STAFF AND BOARD OF DIRECTORS OF THE HOGAR EXTEND THEIR SINCERE THANKS to the Main Sponsors and Collaborators of the Solar Energy Project!** 
