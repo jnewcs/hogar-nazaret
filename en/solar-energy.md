@@ -35,6 +35,7 @@ sponsors:
 - Affiliated Engineers Incorporated
 - Mr. Dante Fratta
 - Community Engineering Corps
+published: false
 
 ---
 ## FOR IMMEDIATE DISTRIBUTION
@@ -61,11 +62,11 @@ The Hogar is a 501(c)(3) non-profit organization founded in 1995. Its mission is
 
 #### PRESS AND MEDIA CONTACTS
 
-**Jesús R. Morales** – President, Board of Directors
+<p class="mb-1">**Jesús R. Morales** – President, Board of Directors</p>
 
-[juntadirectores@hogarjesusdenazaret.org](mailto:juntadirectores@hogarjesusdenazaret.org)
+<p class="mb-1">[juntadirectores@hogarjesusdenazaret.org](mailto:juntadirectores@hogarjesusdenazaret.org)</p>
 
-(787) 505-0986
+<p class="mb-1">(787) 505-0986</p>
 
 **Maritza Morales** – Volunteer Chair, Communications Committee
 
