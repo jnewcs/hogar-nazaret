@@ -3,7 +3,7 @@ title: Voces de Ópera por los Niños del Hogar
 link_text: Quiero Saber Más
 link_destination: "/es/proximos_eventos/voces-de-opera"
 banner_image: "/uploads/voces_opera_banner.png"
-hide_from_carousel: false
+hide_from_carousel: true
 lang: es
 order: 0
 always_show: false
