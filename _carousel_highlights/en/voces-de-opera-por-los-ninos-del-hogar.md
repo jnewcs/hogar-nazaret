@@ -11,7 +11,7 @@ link_destination: "/en/upcoming_events/voces-de-opera-por-los-ninos-del-hogar"
 link_opens_donate: false
 banner_image: "/uploads/voces_opera_banner.png"
 order: 
-hide_from_carousel: false
+hide_from_carousel: true
 always_show: false
 
 ---
