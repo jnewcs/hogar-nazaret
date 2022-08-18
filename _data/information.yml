@@ -6,8 +6,8 @@ phone: "(787) 831-6161"
 fax: "(787) 831-4226"
 email: info@hogarjesusdenazaret.org
 executive_director:
-  en: 'You may contact us at:'
-  es: 'Te invitamos a comunicarte a: '
+  en: 'Executive Director: Ivette Mejías'
+  es: 'Directora Ejecutiva: Ivette Mejías'
 po_box: P.O. Box 1147 Mayagüez, PR 00681-1147
 payment_request_on: true
 service_worker: false
