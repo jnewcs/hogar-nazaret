@@ -11,9 +11,9 @@ banner_image: "/uploads/2022/09/11/nuestro_equipo_2022-1.jpg"
 banner_image_alt: Nuestro Equipo 2022
 has_photo_grid: true
 photo_grid:
-- "/uploads/2022/09/11/nuestro_equipo_2022-3.jpg"
 - "/uploads/2022/09/11/nuestro_equipo_2022-2.jpg"
 - "/uploads/2022/09/11/nuestro_equipo_2022-1.jpg"
+- "/uploads/2022/09/11/nuestro_equipo_2022-3.jpg"
 redirect_from: []
 
 ---
