@@ -44,6 +44,9 @@ fields:
   label: Logo Url
   description: Relative path to the logo URL used on the website. Make sure to always
     start with `/uploads
+- name: board_elections_in_progress
+  type: boolean
+  label: Show Board Members
 - name: payment_request_on
   type: boolean
   label: payment_request_on
