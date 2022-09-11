@@ -15,7 +15,6 @@ photo_grid:
 - "/uploads/2022/09/11/nuestro_equipo_2022-2.jpg"
 - "/uploads/2022/09/11/nuestro_equipo_2022-1.jpg"
 redirect_from: []
-published: false
 
 ---
 El pasado 12 de agosto nuestra Junta Directiva llevó cabo un pasadía en la Hacienda Carabali en Río Grande con el personal que administra la operación y los servicios del Hogar.
