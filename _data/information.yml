@@ -15,7 +15,7 @@ give_a_hug:
   live: false
   goal: 1000
   show_progress: false
-board_elections_in_progress: false
+board_elections_in_progress: true
 ath_movil:
   live: true
   sandbox_token: sandboxtoken01875617264
