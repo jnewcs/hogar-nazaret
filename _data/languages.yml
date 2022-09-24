@@ -44,7 +44,9 @@ en:
   email: Email
   office: Office
   fax: Fax
-  board_elections_explanation: We are currently in the process of electing a new board of directors. Please check back soon to meet our new board!
+  board:
+    elections_explanation: We are currently in the process of electing a new board of directors. Please check back soon to meet our new board!
+    reason: Main reason that motivated you to join the Board
   form:
     labels:
       name: First and Last Name
@@ -199,7 +201,9 @@ es:
   email: Email
   office: Oficina
   fax: Fax
-  board_elections_explanation: Nos encontramos en la transición de elegir una nueva Junta Directiva. Por favor, regresen pronto a nuestra página para que conozcan a los miembros de la nueva Junta. ¡Muchas gracias!
+  board:
+    elections_explanation: Nos encontramos en la transición de elegir una nueva Junta Directiva. Por favor, regresen pronto a nuestra página para que conozcan a los miembros de la nueva Junta. ¡Muchas gracias!
+    reason: Razón principal que le motivó a ser parte de la Junta
   form:
     labels:
       name: Nombre y Apellido

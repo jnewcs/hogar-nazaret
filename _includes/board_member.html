@@ -1,14 +1,17 @@
-<div class="column is-one-third">
+<div class="column is-half">
   <div class="card">
-    {% if include.person.image %}
+    {% if include.person.thumbnail %}
       <div class="card-image">
         <figure class="image pt-2">
-          <img style="height: 250px; width: auto;" src="{{ include.person.image | relative_url }}" alt="{{ include.person.name }}">
+          <img
+            style="height: 250px; width: auto;"
+            src="{{ include.person.thumbnail | relative_url }}"
+            alt="{{ include.person.name }}">
         </figure>
       </div>
     {% endif %}
 
-    <div class="card-content has-text-centered">
+    <div class="card-content has-text-centered mb-0">
       <div class="title is-size-5 mb-0">
         {{ include.person.name }}
       </div>
@@ -21,15 +24,10 @@
         </div>
       {% endif %}
 
-      <hr />
-
       <div>
-        {% if include.person.is_president == true %}
+        {% if include.person.position_highlight == true %}
           {% assign tag_class = 'tag' %}
           {% assign tag_id = 'tag-highlight' %}
-        {% elsif include.is_leader == true %}
-          {% assign tag_class = 'tag is-primary' %}
-          {% assign tag_id = '' %}
         {% else %}
           {% assign tag_class = 'tag is-light' %}
           {% assign tag_id = '' %}
@@ -39,6 +37,22 @@
           {{ include.person.position[page.lang] }}
         </span>
       </div>
+    </div>
+
+    <div class="card-content">
+      <p>
+        {{ include.person.background_snippet[page.lang] }}
+      </p>
+
+      <hr />
+
+      <b>
+        {{ site.data.languages[page.lang].board.reason }}
+      </b>
+
+      <blockquote class="mt-1">
+        {{ include.person.reason[page.lang] }}
+      </blockquote>
     </div>
   </div>
 </div>

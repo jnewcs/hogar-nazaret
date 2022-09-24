@@ -1,102 +1,144 @@
 ---
-leadership:
-  - name: Lcdo. Jesús R. Morales Cordero
-    position:
-      en: President
-      es: Presidente
-    background:
-      en: Bufete Morales Cordero, CSP
-      es: Bufete Morales Cordero, CSP
-    city: Guaynabo
-    is_president: true
+- name: Ivette Mejías
+  position:
+    en: Executive Director
+    es: Directora Ejecutiva
+  position_highlight: true
+  background_snippet:
+    en: A resident of the City of Cabo Rojo.
+    es: Residente de la Ciudad de Cabo Rojo.
+  show_professional: false
+  reason:
+    en: Help the children.
+    es: Lo que me motivó a ser Directora del Hogar es poder exponer en acciones el compromiso que tengo con Dios de ser ente de cambio en pro de una mejor sociedad necesitada de empatía, amor y comprensión y ¿que mejor que ser parte de la transformación en la vida de un niño?
+  thumbnail: '/uploads/board_of_directors/ivette_headshot.png'
 
-  - name: Dra. Patricia Valentín Castillo
-    position:
-      en: Vice President
-      es: Vice Presidente
-    background:
-      en: Catedrática Auxiliar UPR-Mayagüez
-      es: Catedrática Auxiliar UPR-Mayagüez
-    city: Mayagüez
+- name: Lcdo. Jesús R. Morales Cordero
+  position:
+    en: President
+    es: Presidente
+  position_highlight: true
+  background_snippet:
+    en: A resident of the City of Guaynabo. He has served on the Board for six years and is currently serving as its President.
+    es: Residente de la Ciudad de Guaynabo. Ha servido en la Junta Directiva por seis años y es actualmente el Presidente.
+  show_professional: true
+  professional_snippet:
+    en:
+      - Attorney
+      - Former President of the Puerto Rico’s Public Defenders Association
+    es:
+      - Abogado
+      - Ex-presidente de la Sociedad para Asistencia Legal de Puerto Rico
+  reason:
+    en: Fulfill our mission by making a contribution in the lives of children who need our love.
+    es: Poder cumplir la misión de aportar a la vida de niños que necesitan nuestro amor.
+  thumbnail: '/uploads/board_of_directors/jesus_headshot.png'
 
-  - name: Lcda. Sandra Rovira Vargas
-    position:
-      en: Secretary
-      es: Secretaria
-    background:
-      en: Sepúlveda & Rovira
-      es: Sepúlveda & Rovira
-    city: Mayagüez
+- name: María Alemañy Pons
+  position:
+    en: Secretary
+    es: Secretaria
+  position_highlight: false
+  background_snippet:
+    en: A resident of the City of Mayagüez. She has served on the Board for a year and is currently serving as its Secretary.
+    es: Residente de la Ciudad de Mayagüez. Ha servido como miembro de la Junta Directiva por un año y es actualmente la secretaria.
+  show_professional: true
+  professional_snippet:
+    en:
+      - Doctoral Degree in Dentistry – she has worked as a dentist in Mayagüez for 35 years.
+      - Master’s degree in Medical Microbiology.
+      - Member of the Dental Surgeons Association; and served as the Western Region Director. She currently serves as its Vice-President.
+    es:
+      - Doctorado en Medicina Dental – ha trabajado en Mayagüez por 35 años.
+      - Maestría en Microbiología Médica.
+      - Miembro del Colegio de Cirujanos Dentistas; pasada Directora de la Región Oeste y actualmente sirve como su Vicepresidenta.
+  reason:
+    en: Help the children.
+    es: Ayudar a la niñez.
+  thumbnail: '/uploads/board_of_directors/maria_pons_headshot.png'
 
-  - name: Lcda. Andrea Lebrón Ortiz
-    position:
-      en: Assistant Secretary
-      es: Sub-Secretaria
-    background:
-      en: Bufete Laura Otero González
-      es: Bufete Laura Otero González
-    city: Mayagüez
+- name: Miriam Almodóvar López
+  position:
+    en: Coordinator of Extracurricular Activities
+    es: Coordinadora de las actividades extracurriculares
+  position_highlight: false
+  background_snippet:
+    en: A resident of the City of Mayagüez, Miriam has served on the Board of The Hogar Albergue para Niños Jesús de Nazaret (Hogar) for six years. First, as the Assistant Secretary, and currently as a Board Member since 2021. She is currently the Coordinator of extracurricular activities for the children and special events for the staff at the Hogar.
+    es: Residente de la Ciudad de Mayagüez. Miriam ha servido en la Junta Directiva por seis años. Fue la subsecretaria por varios años y ha sido Vocal desde el 2021. Es la Coordinadora de las actividades extracurriculares de los niños y de los eventos especiales del personal del Hogar.
+  show_professional: true
+  professional_snippet:
+    en:
+      - Director of Purchasing and Marketing.
+      - Special event’s Organizer.
+    es:
+      - Directora de compras y mercadeo.
+      - Organizadora de eventos y actividades.
+  reason:
+    en: As a mother, children always have a special place in your heart. That’s why I strive to make them happy.
+    es: Al ser madre siempre tienes un corazón para los niños, por eso me esmero por hacerlos felices.
+  thumbnail: '/uploads/board_of_directors/miriam_headshot.png'
 
-  - name: María T. Rivera Méndez
-    position:
-      en: Treasurer
-      es: Tesorera
-    background:
-      en: ''
-      es: ''
-    city: Mayagüez
+- name: María T. Rivera Méndez
+  position:
+    en: Teasurer
+    es: Tesorera
+  position_highlight: false
+  background_snippet:
+    en: A resident of the City of Mayagüez. She has served on the Board for four years and she is currently serving as its Treasurer.
+    es: Residente de la Ciudad de Mayagüez. Ha servido en la Junta Directiva por cuatro años y es actualmente la Tesorera.
+  show_professional: true
+  professional_snippet:
+    en:
+      - Comptroller
+      - Finance and Accounting Manager
+    es:
+      - Contralor
+      - Gerente de finanzas y contabilidad
+  reason:
+    en: Knowing that the children have been removed from their homes, I felt compelled to help.
+    es: Pensar que los niños no tienen su hogar, había que cooperar.
+  thumbnail: '/uploads/board_of_directors/maria_mendez_headshot.png'
 
-  - name: Agnes Rivera
-    position:
-      en: Assistant Treasurer
-      es: Sub-Tesorera
-    background:
-      en: ''
-      es: ''
-    city: Mayagüez
+- name: Jannette Sepúlveda
+  position:
+    en: Board Member
+    es: Vocal
+  position_highlight: false
+  background_snippet:
+    en: A resident of the City of Mayagüez. She has been a Member of the Board since January 2021.
+    es: Residente de la Ciudad de Mayagüez. Ha servido en la Junta Directiva como Vocal desde enero del 2021.
+  show_professional: true
+  professional_snippet:
+    en:
+      - Banking
+      - Human Resources
+      - Marketing
+    es:
+      - Banca
+      - Recursos Humanos
+      - Mercadeo
+  reason:
+    en: I am motivated to help others in need and to contribute to the quality of life in Puerto Rico.
+    es: Me motiva poder ayudar a otros en necesidad y aportar a la calidad de vida de Puerto Rico.
+  thumbnail: '/uploads/board_of_directors/jannette_headshot.png'
 
-board:
-  - name: Olga Tacoronte
-    position:
-      en: Board Member
-      es: Directora
-    background:
-      en: ''
-      es: ''
-    city: Mayagüez
-
-  - name: María L. Vargas
-    position:
-      en: Board Member
-      es: Directora
-    background:
-      en: ''
-      es: ''
-    city: Mayagüez
-
-  - name: Dra. Norma Mejía
-    position:
-      en: Board Member
-      es: Directora
-    background:
-      en: ''
-      es: ''
-    city: Mayagüez
-
-  - name: Jannette Sepúlveda
-    position:
-      en: Board Member
-      es: Directora
-    background:
-      en: ''
-      es: ''
-    city: Mayagüez
-
-  - name: Dra. Maricarmen Alemañy Pons
-    position:
-      en: Board Member
-      es: Directora
-    background:
-      en: ''
-      es: ''
-    city: Mayagüez
+- name: Mei-Ling Velázquez
+  position:
+    en: Board Member
+    es: Vocal
+  position_highlight: false
+  background_snippet:
+    en: A resident of the City of Mayagüez. She has served on the Board for a year.
+    es: Residente de la Ciudad de Mayagüez. Ha servido en la Junta Directiva por un año.
+  show_professional: true
+  professional_snippet:
+    en:
+      - Full Professor at the Pontificia Universidad Católica, Mayagüez Campus.
+      - Former Chancellor of the Universidad de Puerto Rico, Mayagüez Campus (2002-2012)
+    es:
+      - Catedrática de la Pontificia Universidad Católica, Recinto de Mayagüez.
+      - Rectora de la Universidad de Puerto Rico, Recinto de Mayagüez (2002-2012)
+  reason:
+    en: To give back all the good things God has given me by helping to educate children.
+    es: Devolver un poco todo lo bueno que Dios me ha dado ayudando a formar los jóvenes
+  thumbnail: '/uploads/board_of_directors/mei_ling_headshot.png'
