@@ -15,28 +15,44 @@
 
       <div class="donar-box position-relative">
         {% if include.source == "full-page" %}
-          <div class="donar-photo contain-no-repeat" alt="" style="background-image: url('{{ data.image | relative_url }}')"></div>
+          <div
+            class="donar-photo contain-no-repeat"
+            alt=""
+            style="
+              background-image: url('{{ data.image | relative_url }}');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
           <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
-            <div class="donar-box-caption-content">
+            <div class="donar-box-caption-content mt-1 mb-1">
               <div class="is-size-3">
                 {{ data.title }}
               </div>
 
-              <div class="is-size-5">
-                {{ data.cost[page.lang] }}
+              <div class="is-size-4">
+                <u>{{ data.cost[page.lang] }}</u>
               </div>
             </div>
           </div>
         {% else %}
-          <div class="donar-photo-modal contain-no-repeat" alt="" style="background-image: url('{{ data.image | relative_url }}')"></div>
+          <div
+            class="donar-photo-modal contain-no-repeat mt-1 mb-1"
+            alt=""
+            style="
+              background-image: url('{{ data.image | relative_url }}');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
           <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
             <div class="donar-box-caption-content">
               <div class="is-size-3">
                 {{ data.title }}
               </div>
 
-              <div class="is-size-5">
-                {{ data.cost[page.lang] }}
+              <div class="is-size-4">
+                <u>{{ data.cost[page.lang] }}</u>
               </div>
             </div>
           </div>

@@ -31,8 +31,8 @@ en:
       enter_recurring_amount: Monthly amount
       recurring_call_to_action: "Through fixed monthly donations, <b>YOU</b> could help us defray the costs of the services we provide to our children while they reside at the Hogar."
       type:
-        now: Donate Now
-        sponsor: Donate Monthly
+        now: One Time Donation
+        sponsor: Monthly Donation
       padrinos_callout: Learn more about the Padrinos and Madrinas program
       processing_payment: Processing your payment
       return: Return

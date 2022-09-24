@@ -298,7 +298,7 @@ a.button.is-secondary, button.is-secondary {
   cursor: pointer;
 }
 .donar-box-caption {
-  background-color: rgba(28,2,122,.5);
+  background-color: rgba(28,2,122,.65);
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -376,15 +376,15 @@ a.button.is-secondary, button.is-secondary {
 }
 
 .card:hover .donar-box {
-  border-color: $primary;
+  border-color: $secondary;
 }
 
 .radio:checked ~ .donar-box {
-  border-color: $primary;
+  border-color: $secondary;
 }
 
 .radio:focus ~ .donar-box {
-  box-shadow: 0 0 0 2px $primary;
+  box-shadow: 0 0 0 2px $secondary;
 }
 
 /* 404 */
