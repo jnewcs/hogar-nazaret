@@ -14,8 +14,8 @@ order: 0
 hide_from_carousel: false
 always_show: false
 banner_image_dimensions_specified: true
-banner_image_height: 300
-banner_image_width: 300
+banner_image_height: 350
+banner_image_width: 350
 published: false
 
 ---
