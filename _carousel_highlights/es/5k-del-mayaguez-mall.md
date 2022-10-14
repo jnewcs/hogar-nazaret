@@ -8,7 +8,7 @@ full_page: false
 full_page_link: false
 link_text: Inscríbete Aquí
 link_opens_donate: false
-link_destination: https://mayaguezmall.com/5k
+link_destination: https://micarrerapr.com/races/5k-mayaguez-mall-2022
 banner_image: "/uploads/2022/10/14/5k-logo-header-rev.png"
 order: 0
 hide_from_carousel: false
