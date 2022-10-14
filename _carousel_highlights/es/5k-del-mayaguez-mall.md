@@ -1,5 +1,5 @@
 ---
-banner_image_max_width: 0
+banner_image_max_width: '0'
 feature_check: ''
 lang: es
 title: 5K del Mayagüez Mall
@@ -13,6 +13,9 @@ banner_image: "/uploads/2022/10/14/5k-logo-header-rev.png"
 order: 0
 hide_from_carousel: false
 always_show: false
+banner_image_dimensions_specified: true
+banner_image_height: 300
+banner_image_width: 300
 published: false
 
 ---
