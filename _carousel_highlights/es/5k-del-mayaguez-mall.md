@@ -16,7 +16,6 @@ always_show: false
 banner_image_dimensions_specified: true
 banner_image_height: 350
 banner_image_width: 350
-published: false
 
 ---
 ¡El 6 de noviembre, apóyanos y participa en la carrera 5K del Mayagüez Mall! Córrela o camínala por el Hogar
