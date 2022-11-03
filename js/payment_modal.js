@@ -56,7 +56,7 @@ if (formContainer) {
       ev.complete('fail');
     };
 
-    fetch('https://boiling-earth-96925.herokuapp.com/payments', {
+    fetch('https://web-production-9b27.up.railway.app/payments', {
       method: 'POST',
       body: JSON.stringify(requestBody),
       headers: {'content-type': 'application/json'},

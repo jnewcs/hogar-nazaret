@@ -16,7 +16,7 @@
   }
 
   window.loadHugs = function() {
-    fetch("https://boiling-earth-96925.herokuapp.com/hugs?env={{ jekyll.environment }}", {
+    fetch("https://web-production-9b27.up.railway.app/hugs?env={{ jekyll.environment }}", {
       method: 'GET'
     })
     .then(function(response) {
@@ -181,7 +181,7 @@
         loadingContainer.classList.add('is-hidden');
       };
 
-      fetch('https://boiling-earth-96925.herokuapp.com/hugs', {
+      fetch('https://web-production-9b27.up.railway.app/hugs', {
         method: 'POST',
         body: JSON.stringify(requestBody),
         headers: {'content-type': 'application/json'},
