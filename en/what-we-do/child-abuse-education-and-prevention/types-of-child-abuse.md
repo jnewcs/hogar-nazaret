@@ -21,7 +21,7 @@ Physical abuse against a child is when an adult causes bodily harm, either with 
 Díaz Garced mentions that sexual abuse is one of the most worrisome modalities of child abuse. Sexual abuse includes any kind of penetration, touching or caressing of the genitals, or forcing a child to touch the abuser's genitals, or exposing the child to inappropriate sexual content. For example, watching a naked adult or an adult engaging in a sexual act with others, looking at pornographic material or listening to conversations with a sexual content (Díaz Garced, 2012, p. 5).
 
 To read Díaz Garced's essay "Violence against children: Everyone’s problem" in full, please follow the link below:
-{% assign essay_link = '/uploads/education-and-prevention/Maltrato de menores: Un problema de todos.pdf' %}
+{% assign essay_link = '/uploads/education-and-prevention/Maltrato de menores Un problema de todos.pdf' %}
 <a href="{{ essay_link | relative_url }}" class="button is-secondary is-medium" target="_blank">
   {{ site.data.languages[page.lang].read_more }}
 </a>

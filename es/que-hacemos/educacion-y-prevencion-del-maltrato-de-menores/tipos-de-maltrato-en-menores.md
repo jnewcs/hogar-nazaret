@@ -20,7 +20,7 @@ Según Maldonado Santiago (2007) “hay dos clases de maltrato emocional: 1) neg
 Díaz Garced (2012) menciona que el abuso sexual es una de las modalidades más preocupantes del maltrato a menores. Como abuso sexual se incluye: “cualquier tipo de penetración, roces o caricias de órganos genitales en contra de la voluntad, o toque de los órganos genitales del abusador y cualquier acción que inste al menor a presenciar contenido sexual impropio”. Por ejemplo, observar al adulto desnudo o mientras mantiene relaciones sexuales con otras personas, ver material pornográfico o asistir a conversaciones de contenido sexual.
 
 Para más información sobre el ensayo “Maltrato de menores: Un problema de todos”, favor seguir el siguiente enlace:
-{% assign essay_link = '/uploads/education-and-prevention/Maltrato de menores: Un problema de todos.pdf' %}
+{% assign essay_link = '/uploads/education-and-prevention/Maltrato de menores Un problema de todos.pdf' %}
 <a href="{{ essay_link | relative_url }}" class="button is-secondary is-medium" target="_blank">
   {{ site.data.languages[page.lang].read_more }}
 </a>
