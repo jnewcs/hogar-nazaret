@@ -1,11 +1,11 @@
 ---
+title: UN HOGAR ACOGEDOR CON ENCANTO
+date: 2022-03-25 04:00:00 Z
 banner_image_style: contain
 header_layout: central_title
 banner_image_height: 0
 lang: es
 layout: post
-title: UN HOGAR ACOGEDOR CON ENCANTO
-date: 2022-03-25 04:00:00 +0000
 lang_ref: room-decoration-2022
 banner_image: "/uploads/2022/05/08/decoracioncuartos-1.jpg"
 banner_image_alt: ''
@@ -26,8 +26,8 @@ photo_grid:
 - "/uploads/2022/05/08/decoracioncuartos-11.jpg"
 - "/uploads/2022/05/08/decoracioncuartos-12.jpg"
 redirect_from: []
-
 ---
+
 Durante los meses de febrero y marzo de 2022, miembros de nuestra Junta de Directores coordinaron esfuerzos para arreglar y decorar los cuartos de los niños y niñas del Hogar. El comité, dirigido por la señora Miriam Almodóvar, se dio a la tarea de obtener donaciones para comprar los objetos necesarios. Se arreglaron un total de 5 habitaciones y 12 camas. Quedaron hermosas.
 
 Agradecemos infinitamente a todas las personas que con su generosidad hicieron posible embellecer y hacer más acogedoras las habitaciones de nuestros niños. Ellas son:

@@ -1,21 +1,23 @@
 ---
 title: Contamos con tus Donativos
-date: 2017-08-01T12:00:00.000+00:00
-tags: []
-banner_image: /uploads/2017/heart.jpg
+date: 2017-08-01 12:00:00 Z
+banner_image: "/uploads/2017/heart.jpg"
 banner_image_alt: Corazón
 banner_image_style: contain
-blurb_description: "¿Te preguntas como podrías ayudar al Hogar? Puedes ayudarnos donando dinero para gastos (mediante el botón de 'DONAR') o puedes donar artículos. A continuación, verás una lista con los artículos que más necesitamos."
+blurb_description: "¿Te preguntas como podrías ayudar al Hogar? Puedes ayudarnos donando
+  dinero para gastos (mediante el botón de 'DONAR') o puedes donar artículos. A continuación,
+  verás una lista con los artículos que más necesitamos."
 header_layout: central_title
 content_layout: split
-split_image: /uploads/2017/heart.jpg
+split_image: "/uploads/2017/heart.jpg"
 layout: post
 lang: es
 lang_ref: contamos-tu-donativos
 redirect_from:
-  - /es/noticias/noticias/contamos-con-tus-donativos
-  - /es/noticias/noticias/contamos-con-tus-donativos/
+- "/es/noticias/noticias/contamos-con-tus-donativos"
+- "/es/noticias/noticias/contamos-con-tus-donativos/"
 ---
+
 <h4 class="is-size-4 has-text-secondary">¿QUÉ PUEDES DONAR?</h4>
 
 1. Dinero para gastos (favor ir al botón de 'DONAR')

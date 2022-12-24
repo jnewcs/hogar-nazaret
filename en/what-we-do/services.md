@@ -1,16 +1,17 @@
 ---
 title: Children Services
 header_layout: blur
-header_image: /uploads/page_header_images/hands_blur.jpg
+header_image: "/uploads/page_header_images/hands_blur.jpg"
 header_image_style: cover
 header_text_color: white
 layout: page
 lang: en
 lang_ref: services-overview
 redirect_from:
-  - /en/que-hacemos/servicios
-  - /en/que-hacemos/servicios/
+- "/en/que-hacemos/servicios"
+- "/en/que-hacemos/servicios/"
 ---
+
 In addition to experiencing a family environment filled with motherly love, the boys and girls who live in the Hogar receive the following services:
 
 <div class="columns pt-1 is-multiline is-vcentered is-centered">

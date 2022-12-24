@@ -55,5 +55,5 @@ news:
   title: Recent News
 lang: en
 lang_ref: home-page
-
 ---
+

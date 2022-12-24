@@ -1,13 +1,14 @@
 ---
 title: Dona tu Tiempo
 header_layout: blur
-header_image: /uploads/page_header_images/volunteers.jpg
+header_image: "/uploads/page_header_images/volunteers.jpg"
 header_image_style: cover
 header_text_color: white
 layout: page
 lang: es
 lang_ref: donate-time
 ---
+
 Ofrecemos muchas maneras de involucrarte directamente con el Hogar  y ver los frutos de tu trabajo y dedicación. Te exhortamos a que te unas al grupo de voluntarios que apoyan al Hogar, y pongas tus habilidades a trabajar para dar un mejor futuro a los niños. Puedes dedicar el tiempo que quieras, cuando puedas. ¡Verás que recibirás muchas bendiciones y gran satisfacción!
 
 <b>Voluntarios que ayudan directamente a los niños:</b>

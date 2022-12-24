@@ -5,9 +5,10 @@ layout: page
 lang: en
 lang_ref: education-and-prevention
 redirect_from:
-  - /en/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores
-  - /en/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/
+- "/en/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores"
+- "/en/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/"
 ---
+
 Beyond its main mission of restoring the emotional, mental and physical health of children who have been victims of abuse, the Hogar promotes initiatives to educate the community of Puerto Rico about child abuse, and to help eradicate this problem over time.
 
 Our executive director and members of the Board regularly participate in programs that educate professionals who work with children and the general public about the problem of child abuse, its magnitude, as well as how to detect and prevent it.

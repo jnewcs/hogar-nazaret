@@ -21,9 +21,10 @@ layout: page
 lang: en
 lang_ref: create-fund
 redirect_from:
-  - /en/contribuye/crea-un-fondo
-  - /en/contribuye/crea-un-fondo/
+- "/en/contribuye/crea-un-fondo"
+- "/en/contribuye/crea-un-fondo/"
 ---
+
 We offer the option of creating a donation fund to benefit the Hogar and direct the funds to your preferred kind of expenses: clothing and nutrition, education and recreation, medical services, mental health, or general expenses.
 
 <b>Businesses and Companies</b>: Merchants and corporations may start a fund under their company's name to benefit the Hogar by making an initial monetary donation and gradually adding to that fund through fundraising activities with their employees.

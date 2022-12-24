@@ -2,7 +2,7 @@
 title: Sponsor An Event
 header_layout: simple
 content_layout: split_form
-content_photo: /uploads/milestones/hogar-walk-a-thon.jpg
+content_photo: "/uploads/milestones/hogar-walk-a-thon.jpg"
 form:
   url: https://formspree.io/f/mleooedn
   fields:
@@ -25,9 +25,10 @@ layout: page
 lang: en
 lang_ref: sponsor-event
 redirect_from:
-  - /en/contribuye/auspicia-un-evento
-  - /en/contribuye/auspicia-un-evento/
+- "/en/contribuye/auspicia-un-evento"
+- "/en/contribuye/auspicia-un-evento/"
 ---
+
 We invite you to join our group of collaborators and sponsors, who make it possible for the Hogar to continue operating. Our sponsors include government agencies, foundations, private businesses and corporations, merchants, civic organizations, as well as families and individuals from the general community. There are many ways to help the Hogar throughout the year, such as:
 
 <ul>

@@ -1,8 +1,8 @@
 ---
+title: Voces de Ópera por los Niños del Hogar
 header_layout: flyer
 layout: upcoming_event
 lang: en
-title: Voces de Ópera por los Niños del Hogar
 time: 4 PM
 lang_ref: voces-de-opera
 banner_image: "/uploads/2022/05/17/vocesdelaoperainvitacionconauspiciofacebookpost.PNG"
@@ -11,11 +11,11 @@ banner_image_height: 350
 show_call_to_action: true
 call_to_action: Buy Tickets
 call_to_action_href: https://www.eventbrite.com/e/337606900327
-display_date: 2022-06-12T07:00:00.000+00:00
+display_date: 2022-06-12 07:00:00 Z
 location: Casa del Médico del Oeste
 location_href: https://www.facebook.com/casadelmedicodeloeste
-
 ---
+
 Artistic presentation of opera arias, zarzuela pieces and bohemian songs by [Hilda Ramos](https://www.hildaramos.com) and [Rafael Dávila](https://rafael-davila.com), renowned opera exponents with artistic careers that have spanned decades in the local and international operatic world.
 
 Musical Reception by [Juan Carlos Vega](https://www.facebook.com/jcvegama), renowned and outstanding musician, music teacher, and musical arranger who was Director of the Conservatory of Music and is currently Musical Director of the Gilberto Santa Rosa Orchestra.

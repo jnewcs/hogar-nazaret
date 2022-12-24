@@ -105,6 +105,6 @@ milestone_data:
 redirect_from:
 - "/en/quienes-somos/historia"
 - "/en/quienes-somos/historia/"
-
 ---
+
 {% include milestones.html %}

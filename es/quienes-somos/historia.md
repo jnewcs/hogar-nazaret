@@ -99,6 +99,6 @@ milestone_data:
       entidades, asociaciones e individuos que han hecho posible la operación de la
       institución por dos décadas.  Las festividades de la ‘Casa Abierta’ son dedicadas
       a los fundadores del Hogar, Don Jesús y Doña Carmen Cordero de Morales.
-
 ---
+
 {% include milestones.html %}

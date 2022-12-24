@@ -7,7 +7,7 @@ hide_from_carousel: true
 lang: es
 order: 0
 always_show: false
-creation_date: 2022-05-15T12:00:00.000+00:00
-
+creation_date: 2022-05-15 12:00:00 Z
 ---
+
 Una velada de arte y música en compañía de distinguidos artistas y celebridades de Puerto Rico a beneficio del Hogar.

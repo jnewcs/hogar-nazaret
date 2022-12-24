@@ -1,16 +1,17 @@
 ---
 title: Donate Your Time
 header_layout: blur
-header_image: /uploads/page_header_images/volunteers.jpg
+header_image: "/uploads/page_header_images/volunteers.jpg"
 header_image_style: cover
 header_text_color: white
 layout: page
 lang: en
 lang_ref: donate-time
 redirect_from:
-  - /en/contribuye/dona-tu-tiempo
-  - /en/contribuye/dona-tu-tiempo/
+- "/en/contribuye/dona-tu-tiempo"
+- "/en/contribuye/dona-tu-tiempo/"
 ---
+
 We offer many ways for you to get involved with the Hogar and see first-hand the results of your efforts and dedication. We encourage you to join the group of volunteers who support the Hogar, and use your skills to help the children have a better future. You can dedicate as little or as much time as you wish. You will receive many blessings and great satisfaction!
 
 <b>Volunteers who work directly with the children:</b>

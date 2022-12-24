@@ -5,6 +5,7 @@ layout: page
 lang: es
 lang_ref: education-and-prevention
 ---
+
 Más allá de su misión primordial de salvar la salud emocional, mental y física de niños que han sido víctimas de maltrato, el Hogar promueve iniciativas para educar a la comunidad sobre el maltrato de menores en Puerto Rico, y erradicar este triste problema a través del tiempo.
 
 La gerencia y los miembros de la Junta Directiva participan regularmente en programas educativos que instruyen a profesionales que trabajan con niños y al público en general sobre la magnitud del problema de maltrato de niños y estrategias de detección y prevención.

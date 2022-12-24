@@ -10,8 +10,8 @@ lang_ref: what-we-do-overview
 redirect_from:
 - "/en/que-hacemos/alcance"
 - "/en/que-hacemos/alcance/"
-
 ---
+
 The Hogar's mission is to provide a safe and welcoming place for children who have been removed from their biological family or foster home due to neglect, physical violence or sexual abuse. We work hard to restore the children's physical, mental and emotional wellbeing by providing professional attention and personalized care.
 
 We serve children from all over Puerto Rico referred to us by the Department of Family Services. In the past two decades, the Hogar has housed more than 650 minors from over 43 Puerto Rico municipalities. 

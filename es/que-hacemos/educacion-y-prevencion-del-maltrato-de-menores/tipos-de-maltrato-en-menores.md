@@ -5,6 +5,7 @@ layout: page
 lang: es
 lang_ref: types-of-abuse
 ---
+
 La violencia es un problema social que obstaculiza la equidad pues interfiere con el derecho que toda persona tiene a vivir en un entorno social que propicie su desarrollo personal y social, según expresado por la Sra. Mayra L. Díaz Garced en un ensayo que forma parte de la Serie de Trabajos Investigativos en Curso (STIC), publicado por el Centro para el Desarrollo del Pensamiento Ético de la Oficina de Ética Gubernamental de Puerto Rico (2012). El maltrato a menores es una de las modalidades dentro del maltrato a personas.
 
 Según cita Díaz Garced en su escrito, “la violencia contra los niños y niñas incluye el abuso y el maltrato físico y mental, el abandono o el tratamiento negligente, la explotación y el abuso sexual. La violencia puede ocurrir en el hogar, las escuelas, los orfelinatos, los centros residenciales de atención, en las calles, y en lugares de trabajo, entre otros. Esto afecta la salud física y mental de los niños, perjudica su habilidad para aprender y socializar, y, más adelante, socava su desarrollo como adultos funcionales y buenos progenitors y, en algunos casos, [causa] la muerte” (Díaz Garced, 2012, UNICEF, 2006).
