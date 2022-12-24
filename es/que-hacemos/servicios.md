@@ -1,14 +1,13 @@
 ---
 title: Servicios
 header_layout: blur
-header_image: "/uploads/page_header_images/hands_blur.jpg"
+header_image: /uploads/page_header_images/hands_blur.jpg
 header_image_style: cover
 header_text_color: white
 layout: page
 lang: es
 lang_ref: services-overview
 ---
-
 Los niños y niñas que viven en el Hogar reciben los siguientes servicios:
 
 <div class="columns pt-1 is-multiline is-vcentered is-centered">

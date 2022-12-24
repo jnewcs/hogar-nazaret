@@ -62,5 +62,5 @@ news:
   title: Noticias Recientes
 lang: es
 lang_ref: home-page
----
 
+---

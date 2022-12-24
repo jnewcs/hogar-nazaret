@@ -3,14 +3,13 @@ title: Mensaje de los Fundadores
 header_layout: simple
 content_layout: split
 split_direction: left
-split_image: "/uploads/founders/hogar_founders.jpg"
+split_image: /uploads/founders/hogar_founders.jpg
 split_image_alt: Don Jesús Morales Rodríguez & Doña Carmen Cordero de Morales
 split_image_subtitle: Don Jesús Morales Rodríguez & Doña Carmen Cordero de Morales
 layout: page
 lang: es
 lang_ref: founders-message
 ---
-
 <b>Estimados amigos del Hogar Jesús de Nazaret</b>,
 
 Dentro de nuestro corazón existe un espacio donde está Dios, nuestro creador. Dios es amor y es nuestra obligación derramar ese amor a nuestros semejantes, y muy especialmente a los niños.

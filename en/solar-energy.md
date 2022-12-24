@@ -35,8 +35,8 @@ sponsors:
 - Affiliated Engineers Incorporated
 - Mr. Dante Fratta
 - Community Engineering Corps
----
 
+---
 ## FOR IMMEDIATE DISTRIBUTION
 
 ### –PRESS RELEASE–

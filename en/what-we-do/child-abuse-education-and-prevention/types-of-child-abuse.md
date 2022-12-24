@@ -5,10 +5,9 @@ layout: page
 lang: en
 lang_ref: types-of-abuse
 redirect_from:
-- "/en/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/tipos-de-maltrato-en-menores"
-- "/en/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/tipos-de-maltrato-en-menores/"
+  - /en/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/tipos-de-maltrato-en-menores
+  - /en/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores/tipos-de-maltrato-en-menores/
 ---
-
 Violence is a social problem that causes inequality because it interferes with the right that every person has to live in an environment conducive to personal and social growth, Ms. Mayra l. Díaz  Garced expressed in her essay "Maltrato de menores: Un problema de todos" ("Child Abuse: Everyone's Problem"), which is part of the Serie de Trabajos Investigativos en Curso (STIC), published by the Center for the Development of Ethical Thinking of the Office of Governmental Ethics of Puerto Rico (2012). Child abuse is one of the modalities of human abuse.
 
 As cited by Díaz Garced in her essay (2012, p.3), violence against children includes physical and mental abuse, abandonment or neglect, exploitation and sexual abuse.  The violence can happen at home, school, orphanages, residential facilities, in the streets, and workplaces, among others. This affects the physical and mental health of the children, hinders their ability to learn and socialize, and in later life, hurts their development as functional adults, good parents, and in some cases, causes death (Díaz Garced, 2012, UNICEF, 2006).

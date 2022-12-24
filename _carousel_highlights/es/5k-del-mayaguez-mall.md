@@ -1,9 +1,9 @@
 ---
-title: 5K del Mayagüez Mall
 banner_image_max_width: '0'
 feature_check: ''
 lang: es
-creation_date: 2022-10-14 07:00:00 Z
+title: 5K del Mayagüez Mall
+creation_date: 2022-10-14 07:00:00 +0000
 full_page: false
 full_page_link: false
 link_text: Inscríbete Aquí
@@ -16,6 +16,6 @@ always_show: false
 banner_image_dimensions_specified: true
 banner_image_height: 350
 banner_image_width: 350
----
 
+---
 ¡El 6 de noviembre, apóyanos y participa en la carrera 5K del Mayagüez Mall! Córrela o camínala por el Hogar

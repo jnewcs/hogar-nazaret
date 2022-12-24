@@ -1,19 +1,18 @@
 ---
 title: The Hogar
 header_layout: blur
-header_image: "/uploads/page_header_images/hogar_playground.jpg"
+header_image: /uploads/page_header_images/hogar_playground.jpg
 header_image_style: cover
 header_text_color: white
 layout: page
 lang: en
 lang_ref: about-overview
 redirect_from:
-- "/en/quienes-somos/el-hogar"
-- "/en/quienes-somos/el-hogar/"
-- "/en/quienes-somos/mision-y-vision"
-- "/en/quienes-somos/mision-y-vision/"
+  - /en/quienes-somos/el-hogar
+  - /en/quienes-somos/el-hogar/
+  - /en/quienes-somos/mision-y-vision
+  - /en/quienes-somos/mision-y-vision/
 ---
-
 The Hogar Albergue para Niños Jesús de Nazaret, Inc. (Hogar) is a transitory home for boys and girls that have been victims of abuse.
 
 We provide a safe and positive living environment for the kids, ensuring that all their basic needs are met while showering them with tender, loving care. Our Hogar is located in the city of Mayagüez, and it is registered as a non-profit organization with the Puerto Rico State Department (under number 21,066) and as a 501c (3) with the U.S. Internal Revenue Service.

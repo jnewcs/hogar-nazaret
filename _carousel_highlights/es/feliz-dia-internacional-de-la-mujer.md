@@ -1,9 +1,9 @@
 ---
-title: "¡Feliz Día Internacional de la Mujer!"
 banner_image_max_width: 
 feature_check: ''
 lang: es
-creation_date: 2021-03-08 08:00:00 Z
+title: "¡Feliz Día Internacional de la Mujer!"
+creation_date: 2021-03-08T08:00:00.000+00:00
 full_page: false
 full_page_link: false
 link_text: Quiero ser Padrino o Madrina
@@ -16,6 +16,6 @@ banner_image_width: 500
 order: 
 hide_from_carousel: true
 always_show: false
----
 
+---
 Empoderemos a nuestras niñas a ser mujeres exitosas

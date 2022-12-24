@@ -1,48 +1,39 @@
----
 title: Hogar Albergue para Niños Jesús de Nazaret
-timezone: UTC
+url: "https://www.hogarjesusdenazaret.org"
+permalink: "/:path/"
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: noticias
+    values:
+      layout: noticia
 collections:
   carousel_highlights:
-    title: Carousel Highlights
-    output: false
+  posts:
+    output: true
+    permalink: "/en/posts/:name"
   noticias:
-    title: Noticias
     output: true
     permalink: "/es/noticias/:name"
-  posts:
-    title: Posts
-    output: true
-  proximos_eventos:
-    title: Proximos Eventos
-    output: true
-    permalink: "/es/proximos_eventos/:name"
   upcoming_events:
-    title: Upcoming Events
     output: true
     permalink: "/en/upcoming_events/:name"
-  uploads:
-    title: Uploads
+  proximos_eventos:
     output: true
-defaults:
-- scope:
-    path: ''
-  values:
-    layout: page
-- scope:
-    path: ''
-    type: posts
-  values:
-    layout: post
-- scope:
-    path: ''
-    type: noticias
-  values:
-    layout: noticia
-url: https://www.hogarjesusdenazaret.org
-permalink: "/:path/"
+    permalink: "/es/proximos_eventos/:name"
 sass:
   style: compressed
   sass_dir: _sass
+
 feed:
   collections:
     noticias:
@@ -51,11 +42,12 @@ feed:
       path: "/upcoming_events.xml"
     proximos_eventos:
       path: "/proximos_eventos.xml"
-keep_files:
-- uploads
-- sw.js
+
+keep_files: [uploads, sw.js]
+
 repository: jnewcs/hogar-nazaret
+
 plugins:
-- jekyll-feed
-- jekyll-redirect-from
-- jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-sitemap

@@ -1,27 +1,27 @@
 ---
 title: WORAtv Celebra la Navidad Rindiendo Homenaje a Nuestro Fundador
-date: 2015-12-28 12:00:00 Z
-banner_image: "/uploads/2015/woratv/teddy-bear.jpg"
+date: 2015-12-28T12:00:00.000+00:00
+tags: []
+banner_image: /uploads/2015/woratv/teddy-bear.jpg
 banner_image_alt: WORAtv Celebra la Navidad Rindiendo Homenaje a Nuestro Fundador
 banner_image_style: contain
 header_layout: central_title
 has_photo_grid: true
 photo_grid:
-- "/uploads/2015/woratv/band_playing.jpg"
-- "/uploads/2015/woratv/teddy-bear.jpg"
-- "/uploads/2015/woratv/banner.jpg"
-- "/uploads/2015/woratv/dance-performance.jpg"
-- "/uploads/2015/woratv/founder-photo.jpg"
-- "/uploads/2015/woratv/presentation.jpg"
-- "/uploads/2015/woratv/frozen-performance.jpg"
+  - /uploads/2015/woratv/band_playing.jpg
+  - /uploads/2015/woratv/teddy-bear.jpg
+  - /uploads/2015/woratv/banner.jpg
+  - /uploads/2015/woratv/dance-performance.jpg
+  - /uploads/2015/woratv/founder-photo.jpg
+  - /uploads/2015/woratv/presentation.jpg
+  - /uploads/2015/woratv/frozen-performance.jpg
 layout: post
 lang: es
 lang_ref: woratv-navidad
 redirect_from:
-- "/es/noticias/noticias/woratv-celebra-la-navidad-rindiendo-homenaje-nuestro-fundador"
-- "/es/noticias/noticias/woratv-celebra-la-navidad-rindiendo-homenaje-nuestro-fundador/"
+  - /es/noticias/noticias/woratv-celebra-la-navidad-rindiendo-homenaje-nuestro-fundador
+  - /es/noticias/noticias/woratv-celebra-la-navidad-rindiendo-homenaje-nuestro-fundador/
 ---
-
 <b>Mayagüez Puerto Rico, Navidad 2015</b>
 <br />
 La directora de noticias Telecinco-WORAtv, Carolina Rodríguez Plaza, y su equipo de trabajo dedicaron su proyecto de servicio a la comunidad ‘Cerca de Tí’ a nuestro Hogar Albergue Jesús de Nazaret.

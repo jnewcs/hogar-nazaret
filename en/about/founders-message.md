@@ -3,17 +3,16 @@ title: Message from Our Founders
 header_layout: simple
 content_layout: split
 split_direction: left
-split_image: "/uploads/founders/hogar_founders.jpg"
+split_image: /uploads/founders/hogar_founders.jpg
 split_image_alt: Don Jesús Morales Rodríguez & Doña Carmen Cordero de Morales
 split_image_subtitle: Don Jesús Morales Rodríguez & Doña Carmen Cordero de Morales
 layout: page
 lang: en
 lang_ref: founders-message
 redirect_from:
-- "/en/quienes-somos/mensaje-del-fundador"
-- "/en/quienes-somos/mensaje-del-fundador/"
+  - /en/quienes-somos/mensaje-del-fundador
+  - /en/quienes-somos/mensaje-del-fundador/
 ---
-
 <b>Dear friends of the Hogar Jesús de Nazaret</b>,
 
 There is a place inside our hearts for our God, our creator. God is love and it is our duty to spread that love to others and especially to children.

@@ -1,7 +1,6 @@
 ---
-layout: 
+layout: null
 ---
-
 'use strict';
 
 var version = "{{ site.time | date: '%Y%m%d%H%M%S' }}::";

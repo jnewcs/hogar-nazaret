@@ -1,7 +1,4 @@
 ---
----
-
----
 stripe_publish_key:
   development: 'pk_test_8sNKmb0I7z59Otvd5tmrtHzd00qBHCaeu0'
   staging: 'pk_test_8sNKmb0I7z59Otvd5tmrtHzd00qBHCaeu0'

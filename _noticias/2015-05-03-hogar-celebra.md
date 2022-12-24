@@ -1,20 +1,20 @@
 ---
-title: "¡Nuestro Hogar Celebra Sus 20 Años!"
-date: 2015-05-03 09:09:13 Z
-banner_image: "/uploads/2015/hogar_celebration.jpg"
+title: ¡Nuestro Hogar Celebra Sus 20 Años!
+date: 2015-05-03T09:09:13.000+00:00
+tags: []
+banner_image: /uploads/2015/hogar_celebration.jpg
 banner_image_alt: Prof. Tinjum Charity Ride
 banner_image_style: contain
 header_layout: central_title
 content_layout: split
-split_image: "/uploads/2015/hogar_celebration.jpg"
+split_image: /uploads/2015/hogar_celebration.jpg
 layout: post
 lang: es
 lang_ref: hogar-celebra-20-anos
 redirect_from:
-- "/es/noticias/noticias/casa-abierta"
-- "/es/noticias/noticias/casa-abierta/"
+  - /es/noticias/noticias/casa-abierta
+  - /es/noticias/noticias/casa-abierta/
 ---
-
 May 03rd 10:00 am - 3:00 pm
 Hogar Albergue para Niños Jesús de Nazaret, Inc. - Carr. 349, Cerro Las Mesas, Mayagüez, Puerto Rico
 

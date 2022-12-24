@@ -1,19 +1,18 @@
 ---
 title: El Hogar
 header_layout: blur
-header_image: "/uploads/page_header_images/hogar_playground.jpg"
+header_image: /uploads/page_header_images/hogar_playground.jpg
 header_image_style: cover
 header_text_color: white
 layout: page
 lang: es
 lang_ref: about-overview
 redirect_from:
-- "/es/quienes-somos/el-hogar"
-- "/es/quienes-somos/el-hogar/"
-- "/es/quienes-somos/mision-y-vision"
-- "/es/quienes-somos/mision-y-vision/"
+  - /es/quienes-somos/el-hogar
+  - /es/quienes-somos/el-hogar/
+  - /es/quienes-somos/mision-y-vision
+  - /es/quienes-somos/mision-y-vision/
 ---
-
 El Hogar Albergue para Niños Jesús de Nazaret, Inc. (Hogar) es una institución sin fines de lucro que se dedica a albergar, cuidar, proteger y atender las necesidades esenciales de niños y niñas que han sido víctimas de maltrato o negligencia.
 
 El Hogar abrió sus puertas en mayo del 1995. Fue fundado en el 1991 por Don Jesús Morales Rodríguez y su esposa Carmen Cordero, líderes cívicos de la comunidad de Mayagüez, quienes al conocer la creciente incidencia de maltrato de menores en Puerto Rico solicitaron la colaboración de otros ciudadanos y trabajaron incansablemente por 5 años para hacerlo una realidad.

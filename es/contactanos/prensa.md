@@ -23,7 +23,6 @@ form:
 lang: es
 lang_ref: press
 ---
-
 Si eres miembro de la prensa, te exhortamos a visitar el Hogar para conocer nuestras facilidades, nuestra historia y nuestro equipo de trabajo.
 
 Para programar tu visita o si deseas recibir un paquete con información sobre el Hogar, completa y envía la solicitud que se encuentra a continuación.

@@ -21,7 +21,6 @@ layout: page
 lang: es
 lang_ref: create-fund
 ---
-
 Te ofrecemos la opción de crear un fondo de donación a beneficio del Hogar y dirigir los donativos del fondo al tipo de gastos que prefieras: ropa y alimentación, educación y recreación, servicios médicos, salud mental, o gastos generales).  
 
 <b>Empresas y Negocios</b>: Comerciantes y corporaciones pueden establecer un fondo a nombre de su empresa para el beneficio del Hogar haciendo una aportación monetaria inicial, y sucesivamente efectuar actividades de recaudación de fondos con sus empleados para aumentar el fondo.    
