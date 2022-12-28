@@ -11,3 +11,15 @@ if (!window.CloudCannon) {
 function onLiveEditorLoad(CloudCannon) {
   CloudCannon.enableEvents();
 }
+
+// Editing code
+
+document.addEventListener('cloudcannon:update', async function (e) {
+  useNewPageProps(e.detail.CloudCannon);
+});
+
+async function useNewPageProps(CloudCannon) {
+  const latestValue = await CloudCannon.value();
+  console.log(latestValue);
+  CloudCannon.set('title', latestValue);
+}
