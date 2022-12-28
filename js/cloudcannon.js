@@ -21,5 +21,5 @@ document.addEventListener('cloudcannon:update', async function (e) {
 async function useNewPageProps(CloudCannon) {
   const latestValue = await CloudCannon.value();
   console.log(latestValue);
-  CloudCannon.set('title', latestValue);
+  CloudCannon.set('title', latestValue.title);
 }
