@@ -116,3 +116,5 @@ bundle exec jekyll serve --drafts --future --unpublished --port 8080 --host 0.0.
 ```
 npx @squoosh/cli --mozjpeg '{"quality":40,"baseline":false,"arithmetic":false,"progressive":true,"optimize_coding":true,"smoothing":0,"color_space":3,"quant_table":3,"trellis_multipass":false,"trellis_opt_zero":false,"trellis_opt_table":false,"trellis_loops":1,"auto_subsample":true,"chroma_subsample":2,"separate_chroma_quality":false,"chroma_quality":75}' 'disaster prep - 2.jpg' 'disaster prep - 3.jpg'
 ```
+
+7. We ran into issues bumping the Jekyll version to 4.3. We followed [this](https://github.com/jekyll/jekyll/pull/9225)
