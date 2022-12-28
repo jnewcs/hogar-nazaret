@@ -18,7 +18,21 @@ lazy_load: true
   <section class="is-medium">
     <div class="pb-2 content page-content">
       {% if page.content_layout == 'split' %}
-        {% include post_content/split.html %}
+        <div class="columns">
+          <div class="column">
+            <div class="content">
+              {{ content }}
+            </div>
+          </div>
+
+          {% if page.banner_image %}
+            <div class="column is-one-third">
+              <figure class="image">
+                <img class="" src="{{ page.split_image | relative_url }}" alt="{{ page.banner_image_alt }}">
+              </figure>
+            </div>
+          {% endif %}
+        </div>
       {% else %}
         <div class="content">
           {{ content }}
