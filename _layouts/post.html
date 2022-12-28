@@ -20,7 +20,9 @@ lazy_load: true
       {% if page.content_layout == 'split' %}
         {% include post_content/split.html %}
       {% else %}
-        {{ content }}
+        <div class="editable">
+          {{ content }}
+        </div>
       {% endif %}
     </div>
   </section>
