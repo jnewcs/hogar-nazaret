@@ -16,7 +16,7 @@ job_banner:
   message: The Hogar Albergue para Niños Jesús de Nazaret, Inc. invites you to be
     part of our team to provide loving care to our children as a Child Caregiver.
   action_text: For more details, read here
-  action_url: "/uploads/jobs/2021/caregiver_posting.pdf"
+  action_url: "/uploads/jobs/2022/caregiver_posting.jpg"
 highlights:
   main:
     title: Sponsor a Child

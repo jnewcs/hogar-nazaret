@@ -15,7 +15,7 @@ job_banner:
   message: El Hogar Albergue para Niños Jesús de Nazaret te invita a formar parte
     de su equipo para brindar cuido y amor a niños en la plaza de Cuidador(a) de niños
   action_text: Para obtener más detalles, leer aquí
-  action_url: "/uploads/jobs/2021/convocatoria_puesto_cuidadora.pdf"
+  action_url: "/uploads/jobs/2022/caregiver_posting.pdf"
 call_to_action:
   header: "¡El Hogar te Necesita!"
   text: La operación del Hogar es posible en gran medida gracias a subvenciones de
