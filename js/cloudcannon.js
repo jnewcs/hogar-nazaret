@@ -21,5 +21,8 @@ document.addEventListener('cloudcannon:update', async function (e) {
 async function useNewPageProps(CloudCannon) {
   const latestValue = await CloudCannon.value();
   console.log(latestValue);
-  CloudCannon.set('title', latestValue.title);
+  if ('title' in latestValue) {
+    const titleElement = document.getElementById('post-title');
+    titleElement.innerText = latestValue.title;
+  }
 }
