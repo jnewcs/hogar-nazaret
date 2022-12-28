@@ -1,0 +1,5 @@
+collections_config:
+  noticias:
+    schemas:
+      default:
+        path: schemas/noticia.md
