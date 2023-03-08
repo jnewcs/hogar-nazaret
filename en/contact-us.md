@@ -14,19 +14,15 @@ redirect_from:
 ---
 The Hogar welcomes you and invites you to join our mission of transforming with love the lives of victims of child abuse, and eradicate this serious problem. For more information on how to donate your time or money, sponsor an event, become a monthly donor (Padrino o Madrina) or ambassador of the Hogar, or to arrange a visit, contact:
 
-<div class="is-size-4 is-cursive">
-<b>
-{{ site.data.information.executive_director[page.lang] }}
-</b>
+
+<div>
+{{ site.data.languages\[page.lang\].office }}: <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a>
 </div>
 <div>
-{{ site.data.languages[page.lang].office }}: <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a>
+{{ site.data.languages\[page.lang\].fax }}: {{ site.data.information.fax }}
 </div>
 <div>
-{{ site.data.languages[page.lang].fax }}: {{ site.data.information.fax }}
-</div>
-<div>
-{{ site.data.languages[page.lang].email }}: <a href="mailto:{{ site.data.information.email }}">{{ site.data.information.email }}</a>
+{{ site.data.languages\[page.lang\].email }}: <a href="mailto:{{ site.data.information.email }}">{{ site.data.information.email }}</a>
 </div>
 
 <div class="mt-1 is-size-4 is-cursive">
