@@ -15,7 +15,9 @@ El Hogar te da la bienvenida y te exhorta a que te unas a nuestra misión de tra
 
 <div> 
 
-<div> {{ site.data.languages\[page.lang\].office }}: <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a> </div> <div> {{ site.data.languages\[page.lang\].fax }}: {{ site.data.information.fax }} </div> <div> {{ site.data.languages\[page.lang\].email }}: <a href="mailto:{{ site.data.information.email }}">{{ site.data.information.email }}</a> </div>
+<div> {{ site.data.languages\[page.lang\].office }}: <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a> 
+ 
+  </div> <div> {{ site.data.languages\[page.lang\].fax }}: {{ site.data.information.fax }} </div> <div> {{ site.data.languages\[page.lang\].email }}: <a href="mailto:{{ site.data.information.email }}">{{ site.data.information.email }}</a> </div>
 
 <div class="mt-1 is-size-4 is-cursive">
 <b>
