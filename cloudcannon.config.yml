@@ -124,13 +124,11 @@ collections_config:
     add_options:
       - name: Add Carousel Highlight for English Site
         editor: visual
+    disable_add_folder: true
+    path: _carousel_highlights/en/
     schemas:
       default:
         path: schemas/carousel_highlights.md
-        filter:
-          base: none
-          include:
-            - _carousel_highlights/en/*
         _enabled_editors:
           - visual
           - content
