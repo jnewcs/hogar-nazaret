@@ -118,6 +118,31 @@ collections_config:
             label: Identifier to link article to Spanish equivalent
             allow_empty: true
 
+  carousel_highlights:
+    sort:
+      key: creation_date
+    add_options:
+      - name: Add Carousel Highlight for English Site
+        editor: visual
+    schemas:
+      default:
+        path: schemas/carousel_highlights.md
+        filter:
+          base: none
+          include:
+            - _carousel_highlights/en/*
+        _enabled_editors:
+          - visual
+          - content
+          - data
+        hide_extra_inputs: true
+        _inputs:
+          $.lang:
+            hidden: true
+          $.creation_date:
+            label: Publish Date
+            allow_empty: false
+
 collection_groups:
   - heading: "Spanish Website"
     collections:
@@ -125,3 +150,4 @@ collection_groups:
   - heading: "English Website"
     collections:
       - posts
+      - carousel_highlights
