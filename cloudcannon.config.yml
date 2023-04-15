@@ -34,7 +34,8 @@ collections_config:
             type: array
             structures:
               - value:
-                type: image
+                _inputs:
+                  type: image
           $.lang_ref:
             label: Identifier to link article to English equivalent
             allow_empty: true
@@ -77,7 +78,8 @@ collections_config:
             type: array
             structures:
               - value:
-                type: image
+                _inputs:
+                  type: image
           $.lang_ref:
             label: Identifier to link article to Spanish equivalent
             allow_empty: true
