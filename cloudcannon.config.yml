@@ -30,8 +30,12 @@ collections_config:
             label: Preview Image (used in list view and certain layouts)
             type: image
             allow_empty: true
+          $.has_photo_grid:
+            label: Show Photo Grid
+            type: boolean
+            allow_empty: false
           $.photo_grid:
-            label: Multiple Photo grid (displayed underneath the post content)
+            label: Multiple Photo Grid (displayed underneath the post content)
             type: array
             allow_empty: true
           $.photo_grid[*]:
@@ -76,6 +80,10 @@ collections_config:
             label: Preview Image (used in list view and certain layouts)
             type: image
             allow_empty: true
+          $.has_photo_grid:
+            label: Show Photo Grid
+            type: boolean
+            allow_empty: false
           $.photo_grid:
             label: Multiple Photo grid (displayed underneath the post content)
             type: array
