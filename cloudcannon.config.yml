@@ -5,7 +5,6 @@ collections_config:
     schemas:
       default:
         path: schemas/noticia.md
-        editor: visual
         _enabled_editors:
           - visual
           - content
@@ -30,6 +29,12 @@ collections_config:
             label: Preview Image (used in list view and certain layouts)
             type: image
             allow_empty: true
+          $.photo_grid:
+            label: Photo grid
+            type: array
+            structures:
+              - value:
+                type: image
           $.lang_ref:
             label: Identifier to link article to English equivalent
             allow_empty: true
@@ -43,7 +48,6 @@ collections_config:
     schemas:
       default:
         path: schemas/post.md
-        editor: visual
         _enabled_editors:
           - visual
           - content
@@ -68,6 +72,12 @@ collections_config:
             label: Preview Image (used in list view and certain layouts)
             type: image
             allow_empty: true
+          $.photo_grid:
+            label: Photo grid
+            type: array
+            structures:
+              - value:
+                type: image
           $.lang_ref:
             label: Identifier to link article to Spanish equivalent
             allow_empty: true
