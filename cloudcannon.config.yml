@@ -19,6 +19,8 @@ collections_config:
         _inputs:
           $.lang:
             hidden: true
+          $.date:
+            label: Published Date
 
 collection_groups:
   - heading: "Spanish Website"
