@@ -31,7 +31,7 @@ collections_config:
             type: image
             allow_empty: true
           $.banner_image_alt:
-            label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing (Spanish)
+            label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in Spanish
             allow_empty: true
           $.banner_image_style:
             label: Banner image style
@@ -92,7 +92,7 @@ collections_config:
             type: image
             allow_empty: true
           $.banner_image_alt:
-            label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing (English)
+            label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in English
             allow_empty: true
           $.banner_image_style:
             label: Banner image style
