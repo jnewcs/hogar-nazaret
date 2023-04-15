@@ -6,6 +6,10 @@ collections_config:
       default:
         path: schemas/noticia.md
         editor: visual
+        _enabled_editors:
+          - visual
+          - content
+          - data
         hide_extra_inputs: true
         _inputs:
           $.lang:
@@ -40,6 +44,10 @@ collections_config:
       default:
         path: schemas/post.md
         editor: visual
+        _enabled_editors:
+          - visual
+          - content
+          - data
         hide_extra_inputs: true
         _inputs:
           $.lang:
