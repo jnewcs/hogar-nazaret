@@ -14,15 +14,9 @@
 	added as the content variable
 {% endcomment %}
 
-{{ content }}
+{% bookshop_include page content_blocks=page.content_blocks %}
 
-{% for block in page.content_blocks %}
-  {% comment %} 
-      # The bind parameter here passes the inner fields of block to the component.
-      # Imagine it like the ...spread operator in JavaScript.
-  {% endcomment %}
-  {% bookshop {{block._bookshop_name}} data_binding=block %}
-{% endfor %}
+{{ content }}
 
 {% include footer.html %}
 
