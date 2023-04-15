@@ -1,10 +1,14 @@
 collections_config:
   noticias:
+    sort:
+      key: date
     schemas:
       default:
         path: schemas/noticia.md
         hide_extra_inputs: true
   posts:
+    sort:
+      key: date
     add_options:
       - name: Add News Article for English Site
         editor: visual
