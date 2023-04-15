@@ -12,13 +12,11 @@ published: false
 ---
 El Hogar te da la bienvenida y te exhorta a que te unas a nuestra misión de transformar con amor las vidas de niños que han sido víctimas de maltrato y erradicar tan grave problema. Para obtener más información sobre cómo donar tu tiempo o dinero, auspiciar un evento, visitarnos, hacerte Padrino/Madrina o ser embajador del Hogar, comunícate con:
 
-<div> {{ site.data.languages\[page.lang\].Sra. Lymari Quiles Padilla, MHSA - Directora Ejecutiva 
+<div> {{ site.data.languages\[page.lang\].Sra. Lymari Quiles Padilla, MHSA - Directora Ejecutiva
 
-<div> 
+<div><div> {{ site.data.languages\[page.lang\].office }}: <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a>
 
-<div> {{ site.data.languages\[page.lang\].office }}: <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a> 
- 
-  </div> <div> {{ site.data.languages\[page.lang\].fax }}: {{ site.data.information.fax }} </div> <div> {{ site.data.languages\[page.lang\].email }}: <a href="mailto:{{ site.data.information.email }}">{{ site.data.information.email }}</a> </div>
+</div> <div> {{ site.data.languages\[page.lang\].fax }}: {{ site.data.information.fax }} </div> <div> {{ site.data.languages\[page.lang\].email }}: <a href="mailto:{{ site.data.information.email }}">{{ site.data.information.email }}</a> </div>
 
 <div class="mt-1 is-size-4 is-cursive">
 <b>
