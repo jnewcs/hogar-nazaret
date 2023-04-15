@@ -14,6 +14,6 @@ collections_config:
         hide_extra_inputs: true
 
 collection_groups:
-  - heading: News Articles (EN)
+  - heading: "News Articles (EN)"
       collections:
         - posts
