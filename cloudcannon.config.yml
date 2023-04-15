@@ -118,7 +118,32 @@ collections_config:
             label: Identifier to link article to Spanish equivalent
             allow_empty: true
 
-  carousel_highlights:
+  carousel_highlights_es:
+    name: Carousel Highlights
+    sort:
+      key: creation_date
+    add_options:
+      - name: Add Carousel Highlight for Spanish Site
+        editor: visual
+    disable_add_folder: true
+    path: _carousel_highlights/es/
+    schemas:
+      default:
+        path: schemas/carousel_highlights_es.md
+        _enabled_editors:
+          - visual
+          - content
+          - data
+        hide_extra_inputs: true
+        _inputs:
+          $.lang:
+            hidden: true
+          $.creation_date:
+            label: Publish Date
+            allow_empty: false
+  
+  carousel_highlights_en:
+    name: Carousel Highlights
     sort:
       key: creation_date
     add_options:
@@ -128,7 +153,7 @@ collections_config:
     path: _carousel_highlights/en/
     schemas:
       default:
-        path: schemas/carousel_highlights.md
+        path: schemas/carousel_highlights_en.md
         _enabled_editors:
           - visual
           - content
@@ -145,7 +170,8 @@ collection_groups:
   - heading: "Spanish Website"
     collections:
       - noticias
+      - carousel_highlights_es
   - heading: "English Website"
     collections:
       - posts
-      - carousel_highlights
+      - carousel_highlights_en
