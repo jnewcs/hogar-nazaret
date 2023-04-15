@@ -29,12 +29,22 @@ collections_config:
             label: Preview Image (used in list view and certain layouts)
             type: image
             allow_empty: true
-          $.photo_grid:
-            label: Photo grid
+          $.multiple_photo_grid:
+            label: Multiple Photo grid (only use if you have more than 1 photo)
             type: array
             structures:
               - value:
-                type: image
+                  photo: null
+                  caption: ''
+                _inputs:
+                  photo:
+                    label: Photo
+                    type: image
+                    allow_empty: false
+                  photo:
+                    label: Image caption (Spanish)
+                    allow_empty: true
+
           $.lang_ref:
             label: Identifier to link article to English equivalent
             allow_empty: true
@@ -72,12 +82,21 @@ collections_config:
             label: Preview Image (used in list view and certain layouts)
             type: image
             allow_empty: true
-          $.photo_grid:
-            label: Photo grid
+          $.multiple_photo_grid:
+            label: Multiple Photo grid (only use if you have more than 1 photo)
             type: array
             structures:
               - value:
-                type: image
+                  photo: null
+                  caption: ''
+                _inputs:
+                  photo:
+                    label: Photo
+                    type: image
+                    allow_empty: false
+                  photo:
+                    label: Image caption (English)
+                    allow_empty: true
           $.lang_ref:
             label: Identifier to link article to Spanish equivalent
             allow_empty: true
