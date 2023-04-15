@@ -3,6 +3,8 @@
 # only Main files contain this front matter, not partials.
 ---
 
+{% bookshop_scss %}
+
 @import 'bulma_customizer';
 @import 'bulma';
 @import 'custom';
