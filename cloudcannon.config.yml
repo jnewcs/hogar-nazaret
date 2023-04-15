@@ -30,6 +30,9 @@ collections_config:
             label: Preview Image (used in list view and certain layouts)
             type: image
             allow_empty: true
+          $.banner_image_alt:
+            label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing (Spanish)
+            allow_empty: true
           $.has_photo_grid:
             label: Show Photo Grid
             allow_empty: false
@@ -78,6 +81,9 @@ collections_config:
           $.banner_image:
             label: Preview Image (used in list view and certain layouts)
             type: image
+            allow_empty: true
+          $.banner_image_alt:
+            label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing (English)
             allow_empty: true
           $.has_photo_grid:
             label: Show Photo Grid

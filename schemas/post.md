@@ -3,6 +3,7 @@ title:
 date:
 header_layout:
 banner_image:
+banner_image_alt:
 has_photo_grid:
 photo_grid:
 lang_ref:
