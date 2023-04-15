@@ -32,6 +32,7 @@ collections_config:
           $.multiple_photo_grid:
             label: Multiple Photo grid (only use if you have more than 1 photo)
             type: array
+            allow_empty: true
             structures:
               - value:
                   photo: null
@@ -41,7 +42,7 @@ collections_config:
                     label: Photo
                     type: image
                     allow_empty: false
-                  photo:
+                  caption:
                     label: Image caption (Spanish)
                     allow_empty: true
 
@@ -85,6 +86,7 @@ collections_config:
           $.multiple_photo_grid:
             label: Multiple Photo grid (only use if you have more than 1 photo)
             type: array
+            allow_empty: true
             structures:
               - value:
                   photo: null
@@ -94,7 +96,7 @@ collections_config:
                     label: Photo
                     type: image
                     allow_empty: false
-                  photo:
+                  caption:
                     label: Image caption (English)
                     allow_empty: true
           $.lang_ref:
