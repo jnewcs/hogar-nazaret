@@ -14,12 +14,16 @@ collections_config:
             allow_empty: false
           $.header_layout:
             type: select
+            label: Page layout
             options:
               values:
                 - central_title
                 - side_by_side
                 - flyer
               allow_empty: false
+          $.banner_image:
+            label: Preview Image (used in list view and certain layouts)
+            allow_empty: true
           $.lang_ref:
             label: Identifier to link article to English equivalent
             allow_empty: true
@@ -42,12 +46,16 @@ collections_config:
             allow_empty: false
           $.header_layout:
             type: select
+            label: Page layout
             options:
               values:
                 - central_title
                 - side_by_side
                 - flyer
               allow_empty: false
+          $.banner_image:
+            label: Preview Image (used in list view and certain layouts)
+            allow_empty: true
           $.lang_ref:
             label: Identifier to link article to Spanish equivalent
             allow_empty: true
