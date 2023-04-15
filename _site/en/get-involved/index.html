@@ -1,0 +1,1225 @@
+
+
+<!doctype html>
+<html class="no-js en" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+      <title>The Padrinos and Madrinas Program</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+      
+
+
+  <script type="text/javascript">
+    window.trackEvent = function(eventName, additionalEventData = {}) {
+      console.info('Woopra is off. Tracking event (' + eventName + ')');
+      if (additionalEventData && Object.keys(additionalEventData).length) {
+        console.info(additionalEventData);
+      }
+
+      return;
+    };
+  </script>
+
+
+    
+
+    <link rel="shortcut icon" href="/uploads/favicon.ico">
+
+    
+    
+    
+      
+        <link rel="alternate" hreflang="es" href="http://localhost:6060/es/contribuye/" />
+      
+    
+      
+    
+
+    
+
+    
+
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/main.css?1681595189332979000">
+
+    
+
+    
+
+    
+
+    
+
+    <script>
+      /* Code to lazy load script */
+      window.stripeLoaded = false;
+      window.paypalLoaded = false;
+      window.paypalModalCodeLoaded = false;
+      window.lazyLoadScript = function(scriptSrc, postLoadFunction, failEvent) {
+        if (!scriptSrc) return;
+
+        var script = document.createElement('script');
+        script.src = scriptSrc;
+        script.defer = true;
+        script.async = false;
+        script.onload = function() {
+          if (postLoadFunction) {
+            postLoadFunction();
+          }
+        };
+        script.onerror = function() {
+          window.trackEvent(failEvent)
+        };
+        document.body.appendChild(script);
+      }
+      window.asyncLoadPaypalScript = function() {
+        if (window.paypalLoaded === true) return;
+
+        var setPaypalLoaded = function() {
+          window.paypalLoaded = true;
+        }
+        const paypalScript = "https://www.paypal.com/sdk/js?client-id=AdQN1OUhHNuJKD7cuCc56vm8CV6h74CH0WJ38GntYQjtl2pZNUTtX2y_S2ZOuzOyHCGW968GEK37UBcK&currency=USD&intent=subscription&vault=true&locale=en_US"
+        window.lazyLoadScript(paypalScript, setPaypalLoaded, 'async_paypal_load_fail');
+      }
+    </script>
+  </head>
+<body>
+
+
+
+
+
+
+
+<nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand is-vertically-centered is-flex-end">
+    <a href="/en">
+      <figure class="image is-96x96" id="site-logo">
+        
+        <img src="/uploads/anniversary_25_logo.png" alt="logo">
+      </figure>
+    </a>
+
+    
+      <div class="mobile-nav-call-to-actions-en is-hidden-desktop is-flex-container is-vertically-centered">
+        
+
+<a href="https://www.facebook.com/HogarANJN" class="mr-tiny" aria-label="Facebook" target="_blank" rel="noreferrer">
+  <figure class="image is-24x24">
+    <img src="/uploads/social_media/facebook.png" alt="facebook logo">
+  </figure>
+</a>
+
+
+        
+
+
+        <a class="button modal-opener is-secondary ml-tiny" data-target="donation-modal" href="#">
+          Donate
+        </a>
+      </div>
+    
+
+    <a role="button" class="navbar-burger burger" id="da-burger" aria-label="menu" aria-expanded="false" data-target="navbarContent">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+
+  <div id="navbarContent" class="navbar-menu">
+    
+
+
+  <div class="navbar-start">
+    <div class="navbar-item">
+      <div class="tabs is-toggle is-small is-toggle-rounded" id="language-switcher">
+        <ul>
+          
+            <li class="is-active">
+              <a href="/en/get-involved/">
+                <span>EN</span>
+              </a>
+            </li>
+          
+            <li class="">
+              <a href="/es/contribuye/">
+                <span>ES</span>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+<!-- We also want to cover a mulitlingual post -->
+
+
+
+
+
+<!-- We also want to cover a mulitlingual upcoming event -->
+
+
+
+
+
+
+    <div class="navbar-end" id="main-link-donate-needs-social-container">
+      <div class="navbar-end" id="main-link-container">
+        
+          
+          
+          
+
+          
+            <a class="navbar-item " href="/en/" >
+              Home
+            </a>
+          
+        
+          
+          
+            
+          
+          
+          
+
+          
+            <div class="navbar-item has-dropdown is-hoverable">
+
+              
+              
+                
+              
+
+              <a class="navbar-link " href="#">
+                About Us
+              </a>
+
+              <div class="navbar-dropdown">
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/about/" >
+                    The Hogar
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/about/founders-message/" >
+                    Message from Our Founders
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/about/milestones/" >
+                    Milestones
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/about/board-of-directors/" >
+                    Board of Directors
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/about/collaborators/" >
+                    Collaborators
+                  </a>
+                
+              </div>
+            </div>
+          
+        
+          
+          
+          
+
+          
+            <div class="navbar-item has-dropdown is-hoverable">
+
+              
+              
+                
+              
+
+              <a class="navbar-link " href="#">
+                What We Do
+              </a>
+
+              <div class="navbar-dropdown">
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/what-we-do/" >
+                    Services Reach
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/what-we-do/services/" >
+                    Children Services
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/what-we-do/child-abuse-education-and-prevention/" >
+                    Child Abuse Education and Prevention
+                  </a>
+                
+              </div>
+            </div>
+          
+        
+          
+          
+          
+
+          
+            <div class="navbar-item has-dropdown is-hoverable">
+
+              
+              
+                
+              
+
+              <a class="navbar-link dropdown-has-active" href="#">
+                Get Involved!
+              </a>
+
+              <div class="navbar-dropdown">
+                
+                  
+                  
+
+                  <a class="navbar-item is-active" href="/en/get-involved/" >
+                    The Padrinos and Madrinas Program
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/get-involved/donate-articles/" >
+                    Donate Articles
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/get-involved/donate-time/" >
+                    Donate Your Time
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/get-involved/visit-with-your-group/" >
+                    Visit Us With Your Group
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/get-involved/sponor-an-event/" >
+                    Sponsor An Event
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/get-involved/create-a-fund/" >
+                    Create A Fund
+                  </a>
+                
+              </div>
+            </div>
+          
+        
+          
+          
+          
+
+          
+            <div class="navbar-item has-dropdown is-hoverable">
+
+              
+              
+                
+                  
+                
+                  
+                
+              
+
+              <a class="navbar-link " href="#">
+                News
+              </a>
+
+              <div class="navbar-dropdown">
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/posts/" >
+                    Recent
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/upcoming_events/" >
+                    Upcoming
+                  </a>
+                
+              </div>
+            </div>
+          
+        
+          
+          
+          
+
+          
+            <div class="navbar-item has-dropdown is-hoverable">
+
+              
+              
+                
+              
+
+              <a class="navbar-link " href="#">
+                Contact Us
+              </a>
+
+              <div class="navbar-dropdown">
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/contact-us/" >
+                    Contact
+                  </a>
+                
+                  
+                  
+
+                  <a class="navbar-item " href="/en/contact-us/press/" >
+                    Press
+                  </a>
+                
+              </div>
+            </div>
+          
+        
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+          
+            
+      </div>
+
+      <div class="navbar-item is-hidden-touch" id="donate-needs-social-container">
+        <div class="is-flex-container is-vertically-centered">
+          
+
+<a href="https://www.facebook.com/HogarANJN" class="mr-tiny" aria-label="Facebook" target="_blank" rel="noreferrer">
+  <figure class="image is-24x24">
+    <img src="/uploads/social_media/facebook.png" alt="facebook logo">
+  </figure>
+</a>
+
+
+          
+            
+
+
+            <a class="button modal-opener is-secondary" data-target="donation-modal" href="#">
+              <strong>Donate</strong>
+            </a>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+
+<div id="navbar-spacer"></div>
+
+
+
+
+
+
+    <div class="container content-container pb-0">
+  <h1 class="is-size-1 has-text-centered has-text-primary is-cursive">
+    The Padrinos and Madrinas Program
+  </h1>
+</div>
+
+
+
+<div class="container content-container ">
+  <section class="is-medium">
+    <div class="pb-2 content page-content">
+      
+        <p>Through fixed monthly donations, <strong>YOU</strong> could help us defray the costs of the services we provide to our children while they reside at the Hogar. You can participate according to your budget and have the option to pay using your debit or credit card (via PayPal), or through monthly electronic bank transfers. You decide!</p>
+
+      
+
+      
+        <section id="padrinos-choices-section-full-page">
+  
+
+<div class="columns is-multiline is-horizontally-centered">
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-full-page" class="radio" type="radio" value="P-8DK62101P95800307MEKZFZY" checked>
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo contain-no-repeat"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/padrinos.png');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content mt-1 mb-1">
+              <div class="is-size-3">
+                Padrino / Madrina
+              </div>
+
+              <div class="is-size-4">
+                <u>$100 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-full-page" class="radio" type="radio" value="P-6BW32654KS621491HMEKZHMY">
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo contain-no-repeat"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/abuelos.png');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content mt-1 mb-1">
+              <div class="is-size-3">
+                Abuelo / Abuela
+              </div>
+
+              <div class="is-size-4">
+                <u>$75 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-full-page" class="radio" type="radio" value="P-4BG43236KC332403SMEKZH2Y">
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo contain-no-repeat"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/tios.png');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content mt-1 mb-1">
+              <div class="is-size-3">
+                Tío / Tía
+              </div>
+
+              <div class="is-size-4">
+                <u>$50 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-full-page" class="radio" type="radio" value="P-60X8176547426473RMEKZIDA">
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo contain-no-repeat"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/amigos.png');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content mt-1 mb-1">
+              <div class="is-size-3">
+                Amigo / Amiga
+              </div>
+
+              <div class="is-size-4">
+                <u>$25 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-full-page" class="radio" type="radio" value="P-4LN75887F6983684LMEKZIOI">
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo contain-no-repeat"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/primos.jpg');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content mt-1 mb-1">
+              <div class="is-size-3">
+                Primo / Prima
+              </div>
+
+              <div class="is-size-4">
+                <u>$15 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+</div>
+
+<div class="columns is-horizontally-centered">
+  
+    
+
+    <label
+      class="column is-half paypal-button-container-full-page"
+      id="paypal-button-container-full-page-P-8DK62101P95800307MEKZFZY"
+      data-plan-id="P-8DK62101P95800307MEKZFZY"
+    >
+      <div id="paypal-button-full-page-P-8DK62101P95800307MEKZFZY">
+        <div class="spinner small" id="spinner-full-page-P-8DK62101P95800307MEKZFZY"></div>
+      </div>
+    </label>
+  
+    
+
+    <label
+      class="column is-half is-hidden paypal-button-container-full-page"
+      id="paypal-button-container-full-page-P-6BW32654KS621491HMEKZHMY"
+      data-plan-id="P-6BW32654KS621491HMEKZHMY"
+    >
+      <div id="paypal-button-full-page-P-6BW32654KS621491HMEKZHMY">
+        <div class="spinner small" id="spinner-full-page-P-6BW32654KS621491HMEKZHMY"></div>
+      </div>
+    </label>
+  
+    
+
+    <label
+      class="column is-half is-hidden paypal-button-container-full-page"
+      id="paypal-button-container-full-page-P-4BG43236KC332403SMEKZH2Y"
+      data-plan-id="P-4BG43236KC332403SMEKZH2Y"
+    >
+      <div id="paypal-button-full-page-P-4BG43236KC332403SMEKZH2Y">
+        <div class="spinner small" id="spinner-full-page-P-4BG43236KC332403SMEKZH2Y"></div>
+      </div>
+    </label>
+  
+    
+
+    <label
+      class="column is-half is-hidden paypal-button-container-full-page"
+      id="paypal-button-container-full-page-P-60X8176547426473RMEKZIDA"
+      data-plan-id="P-60X8176547426473RMEKZIDA"
+    >
+      <div id="paypal-button-full-page-P-60X8176547426473RMEKZIDA">
+        <div class="spinner small" id="spinner-full-page-P-60X8176547426473RMEKZIDA"></div>
+      </div>
+    </label>
+  
+    
+
+    <label
+      class="column is-half is-hidden paypal-button-container-full-page"
+      id="paypal-button-container-full-page-P-4LN75887F6983684LMEKZIOI"
+      data-plan-id="P-4LN75887F6983684LMEKZIOI"
+    >
+      <div id="paypal-button-full-page-P-4LN75887F6983684LMEKZIOI">
+        <div class="spinner small" id="spinner-full-page-P-4LN75887F6983684LMEKZIOI"></div>
+      </div>
+    </label>
+  
+</div>
+
+</section>
+
+<script>
+  window.asyncLoadPaypalScript();
+  var src = "/js/paypal_subscriptions_full_page.js?1681595189332979000";
+  window.lazyLoadScript(src, undefined, 'async_paypal_subscriptions_full_page_js_load_fail');
+</script>
+
+<div class="is-hidden" id="padrino-subscription-confirmation">
+  <div class="container content-container has-background-white has-text-centered">
+    <div style="margin-top: 30px; margin-bottom: 30px;">
+      <div class="custom-icon">
+        <div class="custom-icon__tip"></div>
+        <div class="custom-icon__long"></div>
+      </div>
+
+      <p class="is-size-5 mt-2">
+        Thank you so much for supporting The Hogar Albergue Jesús de Nazaret! You should receive an email receipt soon for your donation.
+      </p>
+    </div>
+  </div>
+</div>
+
+      
+
+      
+    </div>
+  </section>
+</div>
+
+
+<footer class="footer pb-3">
+  <div class="content has-text-centered">
+    
+    
+      <div class="page-switcher">
+        <em>
+          Read this page in:
+        </em>
+
+        
+          
+        
+          
+            <span class="mr-1">
+              <a href="/es/contribuye/" class="es">
+                Español
+              </a>
+            </span>
+          
+        
+
+        <hr />
+      </div>
+    
+
+    <!-- We also want to cover a mulitlingual post -->
+    
+
+    
+
+    <!-- We also want to cover a mulitlingual upcoming event -->
+    
+
+    
+
+    <p>
+      HOGAR ALBERGUE JESÚS DE NAZARET, INC © 1995-2022
+    </p>
+
+    <div class="pb-1">
+      <a href="https://app.forestry.io/sites/heqefiwcnetumg" target="_blank" rel="noreferrer">
+        Admin Login
+      </a>
+    </div>
+  </div>
+</footer>
+
+<div class="is-hidden has-background-primary-light has-text-centered is-full-width pt-1 pb-1" id="offline-notification-container">
+  You are currently offline
+</div>
+
+
+
+  <div class="modal" id="needs-modal">
+    <div class="modal-background"></div>
+
+    <div class="modal-content">
+      <p class="image is-flex-container is-horizontally-centered">
+        <img class="modal-highlight" id="needs-modal-highlight">
+      </p>
+    </div>
+
+    <button class="modal-close modal-image-close is-large" aria-label="close" id="needs-modal-close"></button>
+  </div>
+
+
+<script src="/js/main.js?1681595189332979000" type="text/javascript"></script>
+<script src="/js/cloudcannon.js?1681595189332979000" type="text/javascript"></script>
+<!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
+<div id="payment-modal-src" data-src="/js/payment_modal.js?1681595189332979000"></div>
+<script src="/js/image_modal.js?1681595189332979000" type="text/javascript" defer></script>
+
+
+</body>
+</html>
+
+
+<div class="modal" id="donation-modal">
+  <div class="modal-background modal-closer" aria-label="close" data-target="donation-modal"></div>
+
+  <div class="modal-content">
+    <button class="custom-modal-close delete modal-closer is-large" id="donation-modal-close-btn" aria-label="close" data-target="donation-modal"></button>
+
+    <div class="container content-container has-background-white is-cursive" id="donation-content-container">
+      <h3 class="is-size-3 has-text-centered mb-1">
+        Choose the type of Donation
+      </h3>
+
+      <div class="tabs is-toggle is-fullwidth">
+        <ul>
+          <li class="tab is-active" data-target="sponsor-content">
+            <a>
+              <span class="is-size-4">
+                Monthly Donation
+              </span>
+            </a>
+          </li>
+
+          <li class="tab" data-target="donate-now-content">
+            <a>
+              <span class="is-size-4">
+                One Time Donation
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div id="tab-contents">
+        <div class="tab-content has-text-centered is-active" id="sponsor-content" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1681595189332979000";>
+          <p class="is-size-5 mb-1">
+            Through fixed monthly donations, <b>YOU</b> could help us defray the costs of the services we provide to our children while they reside at the Hogar.
+          </p>
+
+          <section id="padrinos-choices-section-modal">
+            
+
+<div class="columns is-multiline is-horizontally-centered">
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-modal" class="radio" type="radio" value="P-8DK62101P95800307MEKZFZY" checked>
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo-modal contain-no-repeat mt-1 mb-1"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/padrinos.png');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content">
+              <div class="is-size-3">
+                Padrino / Madrina
+              </div>
+
+              <div class="is-size-4">
+                <u>$100 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-modal" class="radio" type="radio" value="P-6BW32654KS621491HMEKZHMY">
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo-modal contain-no-repeat mt-1 mb-1"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/abuelos.png');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content">
+              <div class="is-size-3">
+                Abuelo / Abuela
+              </div>
+
+              <div class="is-size-4">
+                <u>$75 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-modal" class="radio" type="radio" value="P-4BG43236KC332403SMEKZH2Y">
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo-modal contain-no-repeat mt-1 mb-1"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/tios.png');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content">
+              <div class="is-size-3">
+                Tío / Tía
+              </div>
+
+              <div class="is-size-4">
+                <u>$50 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-modal" class="radio" type="radio" value="P-60X8176547426473RMEKZIDA">
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo-modal contain-no-repeat mt-1 mb-1"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/amigos.png');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content">
+              <div class="is-size-3">
+                Amigo / Amiga
+              </div>
+
+              <div class="is-size-4">
+                <u>$25 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+    <label class="column is-one-third is-relative">
+      
+        <input name="donation-tier-modal" class="radio" type="radio" value="P-4LN75887F6983684LMEKZIOI">
+      
+
+      <div class="donar-box position-relative">
+        
+          <div
+            class="donar-photo-modal contain-no-repeat mt-1 mb-1"
+            alt=""
+            style="
+              background-image: url('/uploads/padrinos_program/primos.jpg');
+              filter: blur(2px);
+              -webkit-filter: blur(2px)"
+          >
+          </div>
+          <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+            <div class="donar-box-caption-content">
+              <div class="is-size-3">
+                Primo / Prima
+              </div>
+
+              <div class="is-size-4">
+                <u>$15 per month</u>
+              </div>
+            </div>
+          </div>
+        
+      </div>
+    </label>
+  
+</div>
+
+<div class="columns is-horizontally-centered">
+  
+    
+
+    <label
+      class="column is-half paypal-button-container-modal"
+      id="paypal-button-container-modal-P-8DK62101P95800307MEKZFZY"
+      data-plan-id="P-8DK62101P95800307MEKZFZY"
+    >
+      <div id="paypal-button-modal-P-8DK62101P95800307MEKZFZY">
+        <div class="spinner small" id="spinner-modal-P-8DK62101P95800307MEKZFZY"></div>
+      </div>
+    </label>
+  
+    
+
+    <label
+      class="column is-half is-hidden paypal-button-container-modal"
+      id="paypal-button-container-modal-P-6BW32654KS621491HMEKZHMY"
+      data-plan-id="P-6BW32654KS621491HMEKZHMY"
+    >
+      <div id="paypal-button-modal-P-6BW32654KS621491HMEKZHMY">
+        <div class="spinner small" id="spinner-modal-P-6BW32654KS621491HMEKZHMY"></div>
+      </div>
+    </label>
+  
+    
+
+    <label
+      class="column is-half is-hidden paypal-button-container-modal"
+      id="paypal-button-container-modal-P-4BG43236KC332403SMEKZH2Y"
+      data-plan-id="P-4BG43236KC332403SMEKZH2Y"
+    >
+      <div id="paypal-button-modal-P-4BG43236KC332403SMEKZH2Y">
+        <div class="spinner small" id="spinner-modal-P-4BG43236KC332403SMEKZH2Y"></div>
+      </div>
+    </label>
+  
+    
+
+    <label
+      class="column is-half is-hidden paypal-button-container-modal"
+      id="paypal-button-container-modal-P-60X8176547426473RMEKZIDA"
+      data-plan-id="P-60X8176547426473RMEKZIDA"
+    >
+      <div id="paypal-button-modal-P-60X8176547426473RMEKZIDA">
+        <div class="spinner small" id="spinner-modal-P-60X8176547426473RMEKZIDA"></div>
+      </div>
+    </label>
+  
+    
+
+    <label
+      class="column is-half is-hidden paypal-button-container-modal"
+      id="paypal-button-container-modal-P-4LN75887F6983684LMEKZIOI"
+      data-plan-id="P-4LN75887F6983684LMEKZIOI"
+    >
+      <div id="paypal-button-modal-P-4LN75887F6983684LMEKZIOI">
+        <div class="spinner small" id="spinner-modal-P-4LN75887F6983684LMEKZIOI"></div>
+      </div>
+    </label>
+  
+</div>
+
+          </section>
+
+          <div class="container content-container has-background-white has-text-centered is-hidden" id="padrinos-success-container">
+            <div style="margin-top: 30px; margin-bottom: 30px;">
+              <div class="custom-icon">
+                <div class="custom-icon__tip"></div>
+                <div class="custom-icon__long"></div>
+              </div>
+
+              <p class="is-size-5 mt-2">
+                Thank you so much for supporting The Hogar Albergue Jesús de Nazaret! You should receive an email receipt soon for your donation.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content has-text-centered" id="donate-now-content">
+          <p class="is-size-5 mb-1">
+            Enter the amount
+          </p>
+
+          <form class="paypal-form" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="23UGP3TU8AQLN">
+            <input type="hidden" name="lc" value="en_US">
+            <input type="hidden" name="item_name" value="Donation - The Hogar Albergue Jesus de Nazaret">
+            <input type="hidden" name="item_number" value="Webfree">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="cn" value="Donation Message">
+            <input type="hidden" name="no_shipping" value="2">
+            <input type="hidden" name="rm" value="1">
+            <input type="hidden" name="cancel_return" value="http://hogarjesusdenazaret.org/index.php?cID=211">
+            <input type="hidden" name="cancel_return" value="http://hogarjesusdenazaret.org/index.php?cID=211">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="bn" value="PP-DonationsBF:IMAGE:NonHosted">
+
+            <div class="columns is-centered">
+              <div class="column is-half">
+                <div class="field">
+                  <div class="control has-icons-left">
+                    <input class="input is-medium" id="one-time-donation-amount" name="amount" type="number" value="15" type="number" min="0" step="1">
+                    <span class="icon is-left">
+                      $
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            
+              <section
+                id="payment-form-inner-container"
+                data-lang="en"
+                data-key="pk_test_8sNKmb0I7z59Otvd5tmrtHzd00qBHCaeu0"
+                data-label="One Time Donation - The Hogar Albergue Jesús de Nazaret"
+                data-env="development"
+              >
+                <div class="columns is-mobile is-centered">
+                  <div class="column is-half">
+                    <div id="payment-request-button">
+                      <div class="spinner small"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            
+
+            <hr id="payment-divider-for-one-time-donation" />
+
+            <div class="field mt-2">
+              <button class="button is-medium is-secondary" type="submit">
+                Donate
+              </button>
+
+              <div class="mt-1">
+                <img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/cc-badges-ppmcvdam.png" alt="Credit Card Badges" style="height: 30px" loading='lazy'>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="link-to-padrinos is-hidden has-text-centered mt-2">
+        
+
+        <a href="/en/get-involved/">
+          Learn more about the Padrinos and Madrinas program
+        </a>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="loading-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <progress class="progress is-large is-info" max="100"></progress>
+        <h3 class="is-size-3 has-text-centered">
+          Processing your payment
+        </h3>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="success-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="custom-icon">
+          <div class="custom-icon__tip"></div>
+          <div class="custom-icon__long"></div>
+        </div>
+
+        <p class="is-size-5 mt-2">
+          Thank you so much for supporting The Hogar Albergue Jesús de Nazaret! You should receive an email receipt soon for your donation.
+        </p>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="error-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="custom-icon red">
+          <div class="custom-icon__tip red"></div>
+          <div class="custom-icon__long red"></div>
+        </div>
+
+        <p class="is-size-5 mb-1 mt-2">
+          Sorry, we ran into an error processing your donation. Please click 'Retry' to return to the donation screen and try again.
+        </p>
+
+        <button class="button is-medium is-secondary" id="retry-button">
+          Retry
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+

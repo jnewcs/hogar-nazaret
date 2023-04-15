@@ -1,0 +1,4 @@
+<div class="c-content c-content--{{ include.type }}">
+  {% if include.type == "note" %}{% bookshop tag text="Note" %}{% endif %}
+  {{ include.content_html }}
+</div>
