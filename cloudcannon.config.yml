@@ -34,6 +34,8 @@ collections_config:
             label: Multiple Photo grid (only use if you have more than 1 photo)
             type: array
             allow_empty: true
+            add_options:
+              - name: Add Photo
           $.photo_grid[*]:
             label: Photo
             type: image
@@ -80,6 +82,8 @@ collections_config:
             label: Multiple Photo grid (only use if you have more than 1 photo)
             type: array
             allow_empty: true
+            add_options:
+              - name: Add Photo
           $.photo_grid[*]:
             label: Photo
             type: image
