@@ -2,6 +2,9 @@ collections_config:
   noticias:
     sort:
       key: date
+    add_options:
+      - name: Add Noticia for Spanish Site
+        editor: content
     schemas:
       default:
         path: schemas/noticia.md
@@ -62,7 +65,7 @@ collections_config:
       key: date
     add_options:
       - name: Add News Article for English Site
-        editor: visual
+        editor: content
     schemas:
       default:
         path: schemas/post.md
