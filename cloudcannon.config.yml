@@ -33,6 +33,15 @@ collections_config:
           $.banner_image_alt:
             label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing (Spanish)
             allow_empty: true
+          $.banner_image_style:
+            label: Banner image style
+            type: select
+            options:
+              values:
+                - cover
+                - contain
+              allow_create: false
+              allow_empty: false
           $.has_photo_grid:
             label: Show Photo Grid
             allow_empty: false
@@ -85,6 +94,15 @@ collections_config:
           $.banner_image_alt:
             label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing (English)
             allow_empty: true
+          $.banner_image_style:
+            label: Banner image style
+            type: select
+            options:
+              values:
+                - cover
+                - contain
+              allow_create: false
+              allow_empty: false
           $.has_photo_grid:
             label: Show Photo Grid
             allow_empty: false
