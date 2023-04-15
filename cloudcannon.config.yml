@@ -5,6 +5,9 @@ collections_config:
         path: schemas/noticia.md
         hide_extra_inputs: true
   posts:
+    add_options:
+      - name: Add English Post
+        editor: visual
     schemas:
       default:
         path: schemas/post.md
