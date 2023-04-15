@@ -12,3 +12,8 @@ collections_config:
       default:
         path: schemas/post.md
         hide_extra_inputs: true
+
+collection_groups:
+  - heading: News Articles (EN)
+      collections:
+        - posts
