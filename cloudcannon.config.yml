@@ -3,3 +3,9 @@ collections_config:
     schemas:
       default:
         path: schemas/noticia.md
+        hide_extra_inputs: true
+  posts:
+    schemas:
+      default:
+        path: schemas/post.md
+        hide_extra_inputs: true
