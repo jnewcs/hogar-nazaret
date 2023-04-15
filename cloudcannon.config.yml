@@ -23,6 +23,7 @@ collections_config:
               allow_empty: false
           $.banner_image:
             label: Preview Image (used in list view and certain layouts)
+            type: image
             allow_empty: true
           $.lang_ref:
             label: Identifier to link article to English equivalent
@@ -55,6 +56,7 @@ collections_config:
               allow_empty: false
           $.banner_image:
             label: Preview Image (used in list view and certain layouts)
+            type: image
             allow_empty: true
           $.lang_ref:
             label: Identifier to link article to Spanish equivalent
