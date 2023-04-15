@@ -15,5 +15,5 @@ collections_config:
 
 collection_groups:
   - heading: "News Articles (EN)"
-      collections:
-        - posts
+    collections:
+      - posts
