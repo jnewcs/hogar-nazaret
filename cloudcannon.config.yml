@@ -44,13 +44,7 @@ collections_config:
               allow_empty: false
           $.has_photo_grid:
             label: Show Photo Grid
-            type: select
-            options:
-              values:
-                - true
-                - false
-              allow_create: false
-              allow_empty: false
+            type: switch
           $.photo_grid:
             label: Multiple Photo Grid (displayed underneath the post content)
             type: array
@@ -111,13 +105,7 @@ collections_config:
               allow_empty: false
           $.has_photo_grid:
             label: Show Photo Grid
-            type: select
-            options:
-              values:
-                - true
-                - false
-              allow_create: false
-              allow_empty: false
+            type: switch
           $.photo_grid:
             label: Multiple Photo grid (displayed underneath the post content)
             type: array
