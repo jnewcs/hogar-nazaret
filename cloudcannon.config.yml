@@ -16,6 +16,9 @@ collections_config:
       default:
         path: schemas/post.md
         hide_extra_inputs: true
+        _inputs:
+          $.lang:
+            hidden: true
 
 collection_groups:
   - heading: "Spanish Website"
