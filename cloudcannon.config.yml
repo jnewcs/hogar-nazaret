@@ -97,27 +97,19 @@ collections_config:
             label: Publish Date
             allow_empty: false
 
-  carousel_highlights_en:
-    name: Carousel Highlights
-    sort:
-      key: creation_date
-    add_options:
-      - name: Add Carousel Highlight for English Site
-        editor: visual
+  content_blocks_page_en:
+    name: English Pages
     disable_add_folder: true
-    path: _carousel_highlights/en/
+    disable_add: true
+    path: en/
     schemas:
       default:
-        path: schemas/carousel_highlights_en.md
+        path: schemas/content_blocks_page_en.md
         _enabled_editors:
           - visual
           - content
           - data
         hide_extra_inputs: true
-        _inputs:
-          $.creation_date:
-            label: Publish Date
-            allow_empty: false
 
 collection_groups:
   - heading: "Spanish Website"
@@ -127,7 +119,7 @@ collection_groups:
   - heading: "English Website"
     collections:
       - posts
-      - carousel_highlights_en
+      - content_blocks_page_en
 
 _inputs:
   $.lang:
