@@ -3,81 +3,10 @@ layout: default
 lazy_load: true
 ---
 {% comment %}
-	This layout is used by the documents in the _posts/ collection
+	This layout is used by the documents in the `_posts` and `_noticias` collection
 {% endcomment %}
 
-{% if page.header_layout == 'side_by_side' %}
-  {% include post_headers/side_by_side.html %}
-{% elsif page.header_layout == 'central_title' %}
-  {% include post_headers/central_title.html %}
-{% elsif page.header_layout == 'flyer' %}
-  {% include post_headers/flyer.html date=page.date %}
-{% endif %}
-
 <div class="container content-container">
-  <section class="is-medium">
-    <div class="pb-2 content page-content">
-      {% if page.content_layout == 'split' %}
-        <div class="columns">
-          <div class="column">
-            <div class="content">
-              {{ content }}
-            </div>
-          </div>
-
-          {% if page.banner_image %}
-            <div class="column is-one-third">
-              <figure class="image">
-                <img
-                  class="editable"
-                  data-cms-bind="#split_image"
-                  src="{{ page.split_image | relative_url }}"
-                  alt="{{ page.banner_image_alt }}"
-                >
-              </figure>
-            </div>
-          {% endif %}
-        </div>
-      {% else %}
-        <div class="content">
-          {{ content }}
-        </div>
-      {% endif %}
-    </div>
-  </section>
-
-  {% if page.has_photo_grid %}
-    <div class="mt-2 masonry-grid">
-      {% for photo in page.photo_grid %}
-        <div class="brick">
-          <img class="masonry-image post-image-modal-image clickable" src="{{ photo | relative_url }}" />
-        </div>
-      {% endfor %}
-    </div>
-
-    <div class="modal" id="post-image-modal">
-      <div class="modal-background"></div>
-      <div aria-label="count" class="has-text-white modal-image-count" id="post-image-modal-count"></div>
-      <div class="is-flex-container is-spaced-between has-text-centered" id="image-modal-controls">
-        <div class="clickable prev-button" id="post-image-modal-prev-button">&#8249;</div>
-        <div class="clickable next-button" id="post-image-modal-next-button">&#8250;</div>
-      </div>
-
-      <div class="modal-content">
-        <p class="image is-flex-container is-horizontally-centered">
-          <img class="modal-highlight" id="post-image-modal-highlight">
-        </p>
-      </div>
-
-      <button class="modal-close modal-image-close is-large" aria-label="close" id="post-image-modal-close"></button>
-      {% if page.photo_grid.first %}
-        <div style="background-image: url('{{ page.photo_grid.first | relative_url }}')" class="blur-background" id="post-image-modal-blur-background"></div>
-      {% endif %}
-    </div>
-  {% endif %}
-
-  <hr />
-
   <div class="has-text-centered">
     {% if page.lang == 'en' %}
       {% assign link = '/en/posts' | relative_url %}

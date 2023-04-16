@@ -1,0 +1,29 @@
+<div class="container content-container">
+  <div class="mt-2 masonry-grid">
+    {% for photo in include.photos %}
+      <div class="brick">
+        <img class="masonry-image post-image-modal-image clickable" src="{{ photo | relative_url }}" />
+      </div>
+    {% endfor %}
+  </div>
+  
+  <div class="modal" id="post-image-modal">
+    <div class="modal-background"></div>
+    <div aria-label="count" class="has-text-white modal-image-count" id="post-image-modal-count"></div>
+    <div class="is-flex-container is-spaced-between has-text-centered" id="image-modal-controls">
+      <div class="clickable prev-button" id="post-image-modal-prev-button">&#8249;</div>
+      <div class="clickable next-button" id="post-image-modal-next-button">&#8250;</div>
+    </div>
+  
+    <div class="modal-content">
+      <p class="image is-flex-container is-horizontally-centered">
+        <img class="modal-highlight" id="post-image-modal-highlight">
+      </p>
+    </div>
+  
+    <button class="modal-close modal-image-close is-large" aria-label="close" id="post-image-modal-close"></button>
+    {% if include.photos.first %}
+      <div style="background-image: url('{{ include.photos.first | relative_url }}')" class="blur-background" id="post-image-modal-blur-background"></div>
+    {% endif %}
+  </div>
+</div>

@@ -1,0 +1,45 @@
+{% assign current_date = 'now' | date: '%s' | plus: 0 %}
+{% assign post_date_to_compare = include.date | date: '%s' | plus: 0 %}
+
+<div class="columns is-mobile" id="post-side-by-side-layout-container">
+  <div
+    class="column has-background-white-ter is-flex-container is-vertically-centered is-horizontally-centered"
+    id="post-side-by-side-layout-title"
+  >
+    <section class="hero">
+      <div class="hero-body">
+        <h1 class="is-size-2 is-uppercase">
+          {{ include.title }}
+        </h1>
+
+        {% if include.date %}
+          <date class="post-date">
+            {% include date_to_string_helper.html date=include.date use_year=true %}
+          </date>
+        {% endif %}
+        
+        <!-- Page specific logic -->
+        {% if page %}
+          {% if page.path contains "_drafts" %}
+            <div class="tag is-warning">DRAFT POST</div>
+          {% endif %}
+          {% if page.published == false %}
+            <div class="tag is-info">UNPUBLISHED CHANGES</div>
+          {% endif %}
+
+          {% if page.layout != 'upcoming_event' %}
+            {% if post_date_to_compare >= current_date %}
+              <div class="tag is-info">FUTURE</div>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      </div>
+    </section>
+  </div>
+
+  {% if include.image %}
+    <div class="column" id="post-side-by-side-layout-image" alt="{{ include.image_alt }}"
+      style="background: url('{{ include.image | relative_url }}') center center; background-size: {{ include.image_style }}; background-repeat: no-repeat">
+    </div>
+  {% endif %}
+</div>

@@ -1,0 +1,76 @@
+/* Masonry Grid */
+.masonry-grid {
+    transition: all .5s ease-in-out;
+    column-gap: 10px;
+    column-fill: initial;
+    .brick {
+      margin-bottom: 10px;
+      break-inside: avoid;
+      page-break-inside: avoid;
+      vertical-align: top; /* Keep the item on the very top */
+      min-width: 100px;
+      min-height: 100px;
+      &:hover img {
+        opacity: .75;
+      }
+      img {
+        transition: all .5s ease-in-out;
+        backface-visibility: hidden; /* Remove Image flickering on hover */
+      }
+    }
+  }
+  
+  /* Image Modal */
+  .modal-image-count,
+  .modal-image-close,
+  .modal-content {
+    z-index: 1;
+  }
+  .modal-highlight {
+    max-height: 90vh;
+    width: auto !important;
+    align-self: center;
+  }
+  .modal-image-count {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+  }
+  .blur-background {
+    background-size: cover;
+    filter: blur(40px) brightness(50%);
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    bottom: -50px;
+    left: -50px;
+    z-index: 0;
+    transition: background-image 0.75s ease-in;
+  }
+  #image-modal-controls {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    margin-top: -22.5px;
+    z-index: 2;
+  
+    .prev-button { margin-left: 5px }
+    .next-button { margin-right: 5px }
+  }
+  .prev-button, .next-button {
+    color: black;
+    background-color: gainsboro;
+    opacity: 0.50;
+    font-size: 25px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    &:hover {
+      opacity: 1;
+    }
+    &[aria-disabled="true"] {
+      opacity: 0.20;
+      cursor: not-allowed;
+    }
+  }

@@ -1,0 +1,48 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Side by Side Header
+  description: Header with an image to the left
+  icon: wysiwyg
+  tags:
+    - Header
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  title: "Page Title"
+  date: null
+  image: null
+  image_alt: 'Image description'
+  image_style: contain
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    comment: Title is left aligned
+    type: text
+    allow_empty: false
+  date:
+    allow_empty: true
+  image:
+    type: image
+    label: Image
+    comment: Displayed to the left of the title
+    allow_empty: false
+  image_alt:
+    type: text
+    label: Image description
+    comment: Adding a description benefits visually impaired users who use screen readers when browsing the site
+    allow_empty: true
+  image_style:
+    label: Image style
+    type: select
+    options:
+      values:
+        - cover
+        - contain
+      allow_create: false
+      allow_empty: false

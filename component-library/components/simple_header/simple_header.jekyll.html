@@ -1,0 +1,32 @@
+{% assign current_date = 'now' | date: '%s' | plus: 0 %}
+{% assign post_date_to_compare = include.date | date: '%s' | plus: 0 %}
+
+<div class="has-background-white-ter">
+  <div class="container content-container" id="central-title-layout-container">
+    <h1 class="is-size-2 is-uppercase has-text-primary" id="post-title">
+      {{ include.title }}
+    </h1>
+
+    {% if include.date %}
+      <date class="post-date">
+        {% include date_to_string_helper.html date=include.date use_year=true %}
+      </date>
+    {% endif %}
+
+    <!-- Page specific logic -->
+    {% if page %}
+      {% if page.path contains "_drafts" %}
+        <div class="tag is-warning">DRAFT POST</div>
+      {% endif %}
+      {% if page.published == false %}
+        <div class="tag is-info">UNPUBLISHED CHANGES</div>
+      {% endif %}
+
+      {% if page.layout != 'upcoming_event' %}
+        {% if post_date_to_compare >= current_date %}
+          <div class="tag is-info">FUTURE</div>
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
