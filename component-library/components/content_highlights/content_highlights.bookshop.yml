@@ -23,12 +23,12 @@ _inputs:
       - value:
         title: Some Title
         content_html: '<p>Highlight description</p>'
-      _inputs:
-        title:
-          type: text
-          label: Highlight Title
-          allow_empty: false
-        content_html:
-          type: html
-          label: Highlight Text
-          allow_empty: false
+        _inputs:
+          title:
+            type: text
+            label: Highlight Title
+            allow_empty: false
+          content_html:
+            type: html
+            label: Highlight Text
+            allow_empty: false
