@@ -23,11 +23,11 @@ collections_config:
             type: image
             allow_empty: true
           $.banner_image_alt:
-            label: Banner image description
+            label: Preview image description
             comment: Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in Spanish
             allow_empty: true
           $.banner_image_style:
-            label: Banner image style
+            label: Preview image style
             type: select
             options:
               values:
@@ -35,6 +35,7 @@ collections_config:
                 - contain
               allow_create: false
               allow_empty: false
+          $.content_blocks:
 
   posts:
     sort:
@@ -60,11 +61,11 @@ collections_config:
             type: image
             allow_empty: true
           $.banner_image_alt:
-            label: Banner image description
+            label: Preview image description
             comment: Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in English
             allow_empty: true
           $.banner_image_style:
-            label: Banner image style
+            label: Preview image style
             type: select
             options:
               values:
@@ -72,6 +73,7 @@ collections_config:
                 - contain
               allow_create: false
               allow_empty: false
+          $.content_blocks:
 
   carousel_highlights_es:
     name: Carousel Highlights

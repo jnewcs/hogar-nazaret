@@ -7,4 +7,5 @@ banner_image_style:
 lang_ref:
 lang: en
 layout: post
+content_blocks:
 ---
