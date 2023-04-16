@@ -5,13 +5,12 @@ collections_config:
     add_options:
       - name: Add Noticia for Spanish Site
         editor: content
+    _enabled_editors:
+      - visual
+      - data
     schemas:
       default:
         path: schemas/noticia.md
-        _enabled_editors:
-          - visual
-          - content
-          - data
         hide_extra_inputs: true
         _inputs:
           $.date:
@@ -43,13 +42,12 @@ collections_config:
     add_options:
       - name: Add News Article for English Site
         editor: content
+    _enabled_editors:
+      - visual
+      - data
     schemas:
       default:
         path: schemas/post.md
-        _enabled_editors:
-          - visual
-          - content
-          - data
         hide_extra_inputs: true
         _inputs:
           $.date:
@@ -82,15 +80,14 @@ collections_config:
     add_options:
       - name: Add Carousel Highlight for Spanish Site
         editor: visual
+    _enabled_editors:
+      - visual
+      - data
     disable_add_folder: true
     path: _carousel_highlights/es/
     schemas:
       default:
         path: schemas/carousel_highlights_es.md
-        _enabled_editors:
-          - visual
-          - content
-          - data
         hide_extra_inputs: true
         _inputs:
           $.creation_date:
@@ -102,13 +99,12 @@ collections_config:
     disable_add_folder: true
     disable_add: true
     path: en/
+    _enabled_editors:
+      - visual
+      - data
     schemas:
       default:
         path: schemas/content_blocks_page_en.md
-        _enabled_editors:
-          - visual
-          - content
-          - data
         hide_extra_inputs: true
 
 collection_groups:
