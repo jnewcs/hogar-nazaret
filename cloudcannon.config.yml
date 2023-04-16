@@ -14,8 +14,6 @@ collections_config:
           - data
         hide_extra_inputs: true
         _inputs:
-          $.lang:
-            hidden: true
           $.date:
             label: Publish Date
             allow_empty: false
@@ -60,9 +58,6 @@ collections_config:
             label: Photo
             type: image
             allow_empty: false
-          $.lang_ref:
-            label: Identifier to link article to English equivalent
-            allow_empty: true
 
   posts:
     sort:
@@ -79,8 +74,6 @@ collections_config:
           - data
         hide_extra_inputs: true
         _inputs:
-          $.lang:
-            hidden: true
           $.date:
             label: Publish Date
             allow_empty: false
@@ -125,9 +118,6 @@ collections_config:
             label: Photo
             type: image
             allow_empty: false
-          $.lang_ref:
-            label: Identifier to link article to Spanish equivalent
-            allow_empty: true
 
   carousel_highlights_es:
     name: Carousel Highlights
@@ -147,8 +137,6 @@ collections_config:
           - data
         hide_extra_inputs: true
         _inputs:
-          $.lang:
-            hidden: true
           $.creation_date:
             label: Publish Date
             allow_empty: false
@@ -171,8 +159,6 @@ collections_config:
           - data
         hide_extra_inputs: true
         _inputs:
-          $.lang:
-            hidden: true
           $.creation_date:
             label: Publish Date
             allow_empty: false
@@ -186,3 +172,10 @@ collection_groups:
     collections:
       - posts
       - carousel_highlights_en
+
+_inputs:
+  $.lang:
+    hidden: true
+  $.lang_ref:
+    label: Identifier to link article to English/Spanish equivalent
+    allow_empty: true
