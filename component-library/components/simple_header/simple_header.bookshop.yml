@@ -11,7 +11,9 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   title: "Page Title"
+  title_alignment: "left"
   date: null
+  background_color: "white-ter"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -22,5 +24,24 @@ _inputs:
     comment: Title is left aligned
     type: text
     allow_empty: false
+  title_alignment:
+    type: select
+    label: Title text color
+    options:
+      values:
+        - left
+        - centered
+        - right
+      allow_create: false
+      allow_empty: false
   date:
     allow_empty: true
+  background_color:
+    type: select
+    label: Background color
+    options:
+      values:
+        - white-ter
+        - white
+      allow_create: false
+      allow_empty: false

@@ -19,7 +19,7 @@ collections_config:
             allow_empty: false
           $.banner_image:
             label: Preview Image
-            comment: This image is used in list view and certain layouts like the `side_by_side` layout
+            comment: This image is used for aggregate views (Noticias page)
             type: image
             allow_empty: true
           $.banner_image_alt:
@@ -57,7 +57,7 @@ collections_config:
             allow_empty: false
           $.banner_image:
             label: Preview Image
-            comment: This image is used in list view and certain layouts like the `side_by_side` layout
+            comment: This image is used for aggregate views (News page)
             type: image
             allow_empty: true
           $.banner_image_alt:

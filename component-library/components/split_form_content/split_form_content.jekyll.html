@@ -1,0 +1,13 @@
+<div class="container content-container">
+  <div class="columns">
+    <div class="column">
+      <div class="content">
+        {{ include.content_html }}
+      </div>
+    </div>
+
+    {% if include.form %}
+      {% bookshop form bind=include.form %}
+    {% endif %}
+  </div>
+</div>

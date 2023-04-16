@@ -1,9 +1,9 @@
 {% assign current_date = 'now' | date: '%s' | plus: 0 %}
 {% assign post_date_to_compare = include.date | date: '%s' | plus: 0 %}
 
-<div class="has-background-white-ter">
+<div class="has-background-{{ include.background_color }}">
   <div class="container content-container" id="central-title-layout-container">
-    <h1 class="is-size-2 is-uppercase has-text-primary" id="post-title">
+    <h1 class="is-size-2 is-uppercase has-text-primary has-text-weight-bold has-text-{{ include.title_alignment }}" id="post-title">
       {{ include.title }}
     </h1>
 

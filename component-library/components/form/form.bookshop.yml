@@ -1,0 +1,106 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Form
+  description: Form that allows users to submit a request to the Hogar
+  icon: wysiwyg
+  tags:
+    - Form
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  inbox_key: "contact-form"
+  lang: "en"
+  submit:
+    text: "Submit"
+  form_url: "/en/form_success"
+  fields:
+    name:
+      label: "Name"
+      presence: true
+      required: true
+    email:
+      label: "Email"
+      presence: true
+      required: true
+    phone:
+      label: "Phone"
+      presence: true
+      required: true
+    sponsorship_type:
+      label: "Type of Sponsorship"
+      types:
+        - Event
+        - Operational costs
+        - Capital projects
+      presence: true
+      required: true
+    visit_dates:
+      label:
+        first_preference: 'First Option: Desired Visit Date'
+        second_preference: 'Second Option: Desired Visit Date'
+      presence: true
+      required: true
+    company:
+      label: "Company"
+      presence: true
+      required: true
+    questions_and_comments:
+      label: "Questions and Comments"
+      presence: true
+      required: true
+    description:
+      label: "Description"
+      presence: true
+      required: true
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  inbox_key:
+    type: text
+    hidden: true
+    allow_empty: false
+  lang:
+    label: Form Language
+    type: select
+    options:
+      values:
+        - en
+        - es
+      allow_create: false
+      allow_empty: false
+  submit:
+    label: Submit Button Text
+    type: text
+    allow_empty: false
+  form_url:
+    label: URL to redirect users after submission
+    type: select
+    options:
+      values:
+        - en/form_success
+        - es/form_success
+      allow_create: false
+      allow_empty: false
+  fields:
+    type: object
+    allow_empty: false
+    structures:
+      name:
+        type: object
+        label: Name form input
+        allow_empty: false
+        structures:
+          label:
+            type: string
+            label: Label of this field
+          presence:
+            type: switch
+            label: Show this field?
+          required:
+            type: switch
+            label: Require this field?

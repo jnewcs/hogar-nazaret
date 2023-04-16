@@ -2,8 +2,8 @@
 spec:
   structures:
     - content_blocks
-  label: Split Image Content
-  description: Generic text component with option to show image to the right of content
+  label: Split Form Content
+  description: Generic text component with option to show form to the right of content
   icon: wysiwyg
   tags:
     - Text
@@ -11,7 +11,7 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   content_html: ""
-  image: null
+  form: [bookshop:form]
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -23,12 +23,3 @@ _inputs:
     type: html
     label: Content Text
     allow_empty: false
-  image:
-    type: image
-    label: Image
-    comment: Displayed to the right of the content provided
-    allow_empty: true
-  image_alt:
-    type: text
-    label: Image description
-    comment: Adding a description benefits visually impaired users who use screen readers when browsing the site
