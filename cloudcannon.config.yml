@@ -181,5 +181,5 @@ _inputs:
   $.layout:
     hidden: true
   $.lang_ref:
-    label: Identifier to link article to English/Spanish equivalent
+    label: Identifier to link page to English/Spanish equivalent
     allow_empty: true
