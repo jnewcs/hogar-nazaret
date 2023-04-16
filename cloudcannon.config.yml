@@ -21,7 +21,8 @@ collections_config:
             allow_empty: false
           $.header_layout:
             type: select
-            label: Page layout
+            label: Page header layout
+            comment: "There are currently three options: side_by_side, central_title, and flyer. The side_by_side layout includes the post's title on the left with the banner image to the right. The central_title layout just has the post's title with the published date below it. The flyer layout includes the banner image followed by the event’s title and the timing information (day of the week, date, and time)."
             options:
               values:
                 - central_title
@@ -30,11 +31,13 @@ collections_config:
               allow_create: false
               allow_empty: false
           $.banner_image:
-            label: Preview Image (used in list view and certain layouts)
+            label: Preview Image
+            comment: This image is used in list view and certain layouts like the `side_by_side` layout
             type: image
             allow_empty: true
           $.banner_image_alt:
-            label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in Spanish
+            label: Banner image description
+            comment: Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in Spanish
             allow_empty: true
           $.banner_image_style:
             label: Banner image style
@@ -49,7 +52,8 @@ collections_config:
             label: Show Photo Grid
             type: switch
           $.photo_grid:
-            label: Multiple Photo Grid (displayed underneath the post content)
+            label: Multiple Photo Grid
+            comment: Displayed underneath the post content
             type: array
             allow_empty: true
           $.photo_grid[*]:
@@ -82,7 +86,8 @@ collections_config:
             allow_empty: false
           $.header_layout:
             type: select
-            label: Page layout
+            label: Page header layout
+            comment: "There are currently three options: side_by_side, central_title, and flyer. The side_by_side layout includes the post's title on the left with the banner image to the right. The central_title layout just has the post's title with the published date below it. The flyer layout includes the banner image followed by the event’s title and the timing information (day of the week, date, and time)."
             options:
               values:
                 - central_title
@@ -91,11 +96,13 @@ collections_config:
               allow_create: false
               allow_empty: false
           $.banner_image:
-            label: Preview Image (used in list view and certain layouts)
+            label: Preview Image
+            comment: This image is used in list view and certain layouts like the `side_by_side` layout
             type: image
             allow_empty: true
           $.banner_image_alt:
-            label: Banner image description. Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in English
+            label: Banner image description
+            comment: Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in English
             allow_empty: true
           $.banner_image_style:
             label: Banner image style
@@ -110,7 +117,8 @@ collections_config:
             label: Show Photo Grid
             type: switch
           $.photo_grid:
-            label: Multiple Photo grid (displayed underneath the post content)
+            label: Multiple Photo grid
+            comment: Displayed underneath the post content
             type: array
             allow_empty: true
           $.photo_grid[*]:
@@ -144,7 +152,7 @@ collections_config:
           $.creation_date:
             label: Publish Date
             allow_empty: false
-  
+
   carousel_highlights_en:
     name: Carousel Highlights
     sort:
