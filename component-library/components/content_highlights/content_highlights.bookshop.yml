@@ -3,14 +3,18 @@ spec:
   structures:
     - content_blocks
   label: Content Highlights
-  description: Header with a blurred image and centered title
+  description: Component to render text and HTML highlights in a single row
   icon: wysiwyg
   tags:
     - Text
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  highlights: []
+  highlights:
+    - title: Highlight Title #1
+      content_html: '<p>Highlight description</p>'
+    - title: Highlight Title #2
+      content_html: '<p>Highlight description</p>'
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
