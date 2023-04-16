@@ -6,6 +6,7 @@ lang_ref: what-we-do-overview
 redirect_from:
 - "/en/que-hacemos/alcance"
 - "/en/que-hacemos/alcance/"
+_schema: "schemas/content_blocks_page_en.md"
 content_blocks:
   - _bookshop_name: blur_header
     title: Services Reach
