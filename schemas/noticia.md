@@ -9,4 +9,5 @@ has_photo_grid:
 photo_grid:
 lang_ref:
 lang: es
+layout: post
 ---

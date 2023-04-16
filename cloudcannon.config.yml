@@ -176,6 +176,10 @@ collection_groups:
 _inputs:
   $.lang:
     hidden: true
+  $.redirect_from:
+    hidden: true
+  $.layout:
+    hidden: true
   $.lang_ref:
     label: Identifier to link article to English/Spanish equivalent
     allow_empty: true
