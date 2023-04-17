@@ -87,7 +87,7 @@ content_blocks:
         call_to_action:
           text: Learn More
           url: en/get-involved
-          image: uploads/padrinos_program/padrinos.png
+          image: "/uploads/padrinos_program/padrinos.png"
 
   - _bookshop_name: tiles
     tiles:
