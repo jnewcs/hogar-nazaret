@@ -14,8 +14,7 @@ content_blocks:
             <p>Our mission is to offer a safe home, personal care, nutrition, education, medical services, transportation, recreation, and social and psychological services to girls and boys who are victims of abuse or neglect. We provide for all their needs with lots of LOVE</p>
         hide_from_carousel: false
         always_show: true
-        image:
-          url: "/uploads/carousel_highlights/kids_circle.jpg"
+        image: "/uploads/carousel_highlights/kids_circle.jpg"
         call_to_action:
           text: The Hogar
           opens_donate_modal: false
@@ -27,10 +26,9 @@ content_blocks:
             <p>**April** is the month of child abuse prevention. We call on all citizens of the Island to ensure the safety, protection and quality of life of all children in Puerto Rico. To love and protect our children, and report child abuse is everyone's responsibility. We invite you to support our mission by donating your time, services or funds!</p>
         hide_from_carousel: false
         always_show: true
-        image:
-          url: "/uploads/carousel_highlights/child_prevention_month.jpg"
-          height: 200
-          width: 275
+        image: "/uploads/carousel_highlights/child_prevention_month.jpg"
+        image_height: 200
+        image_width: 275
         call_to_action:
           text: Donate Here
           opens_donate_modal: true

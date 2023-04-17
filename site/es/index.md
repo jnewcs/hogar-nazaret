@@ -14,8 +14,7 @@ content_blocks:
             <p>Nuestra misión es ofrecer hogar seguro, atención personal, alimentación, transportación, servicios médicos, educación, recreación, ayuda social y psicológica a niños y niñas víctimas de maltrato. Ante todo, en nuestro Hogar los niños reciben mucho AMOR.</p>
         hide_from_carousel: false
         always_show: true
-        image:
-          url: "/uploads/carousel_highlights/kids_circle.jpg"
+        image: "/uploads/carousel_highlights/kids_circle.jpg"
         call_to_action:
           text: The Hogar
           opens_donate_modal: false
@@ -27,10 +26,9 @@ content_blocks:
             <p>Nuestros niños se merecen un hogar, tener alimentos, ropa, ir a la escuela, jugar, recibir cuidados de salud y mucho amor. Con tu donativo mensual contribuyes a sanar las heridas de nuestros niños que han sido víctimas de maltrato. ¡Únete a nuestra familia de Padrinos!</p>
         hide_from_carousel: false
         always_show: true
-        image:
-          url: "/uploads/carousel_highlights/two_girls.jpg"
-          height: 200
-          width: 275
+        image: "/uploads/carousel_highlights/two_girls.jpg"
+        image_height: 200
+        image_width: 275
         call_to_action:
           text: Donate
           opens_donate_modal: true

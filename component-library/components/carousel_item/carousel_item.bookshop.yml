@@ -13,10 +13,9 @@ blueprint:
   title: "Carousel Title #3"
   creation_date: 2023-04-10T12:00:00.000+00:00
   content: bookshop:content
-  image:
-    url: "/uploads/carousel_highlights/child_prevention_month.jpg"
-    width: 100
-    height: 25px
+  image: "/uploads/carousel_highlights/child_prevention_month.jpg"
+  image_width: 100
+  image_height: 25px
   hide_from_carousel: false
   always_show: false
 
@@ -45,21 +44,16 @@ _inputs:
     comment: "When checked, carousel item will never be shown, even if `always_show` is checked"
     allow_empty: false
   image:
-    type: object
+    type: image
+    allow_empty: false
+  image_height:
+    label: "Height of the image. If not specified along with `width`, the image will be rendered using default dimensions"
+    type: number
     allow_empty: true
-    structures:
-      url:
-        label: URL of the image
-        type: image
-        allow_empty: false
-      height:
-        label: "Height of the image. If not specified along with `width`, the image will be rendered using default dimensions"
-        type: number
-        allow_empty: true
-      width:
-        label: "Width of the image. If not specified along with `height`, the image will be rendered using default dimensions"
-        type: number
-        allow_empty: true
+  image_width:
+    label: "Width of the image. If not specified along with `height`, the image will be rendered using default dimensions"
+    type: number
+    allow_empty: true
   call_to_action:
     type: object
     allow_empty: true
