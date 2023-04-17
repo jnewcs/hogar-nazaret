@@ -4,7 +4,7 @@ collections_config:
       key: date
     add_options:
       - name: Add Noticia for Spanish Site
-        editor: content
+        editor: visual
     _enabled_editors:
       - data
       - visual
@@ -46,7 +46,7 @@ collections_config:
       key: date
     add_options:
       - name: Add News Article for English Site
-        editor: content
+        editor: visual
     _enabled_editors:
       - data
       - visual
