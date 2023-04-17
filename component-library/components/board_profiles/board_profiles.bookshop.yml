@@ -2,9 +2,9 @@
 spec:
   structures:
     - content_blocks
-  label: Board Profile
-  description: Renders a board profile
-  icon: person
+  label: Board Profiles
+  description: Renders board profiles
+  icon: groups
   tags:
     - Board
 
@@ -26,7 +26,7 @@ _inputs:
     allow_empty: false
   board_elections_explanation:
     type: text
-    label: Explanation for eoard elections
-    allow_empty: true
+    label: Explanation for board elections
+    allow_empty: false
   board:
     allow_empty: true
