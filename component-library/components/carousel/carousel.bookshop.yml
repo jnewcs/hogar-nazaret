@@ -57,15 +57,17 @@ _inputs:
         type: datetime
         comment: By default, carousel items only show for 6 months. To override, check `always_show`
         allow_empty: false
+      content:
+        allow_empty: false
       always_show:
         type: checkbox
-        label: Always show item?
-        comment: When checked, carousel item will always show even past the 6 months limit
+        label: "Always show item?"
+        comment: "When checked, carousel item will always show even past the 6 months limit"
         allow_empty: false
       hide_from_carousel:
         type: checkbox
-        label: Force hide?
-        comment: When checked, carousel item will never be shown, even if `always_show` is checked
+        label: "Force hide?"
+        comment: "When checked, carousel item will never be shown, even if `always_show` is checked"
         allow_empty: false
       image:
         type: object
@@ -76,11 +78,11 @@ _inputs:
             type: image
             allow_empty: false
           height:
-            label: Height of the image. If not specified along with `width`, the image will be rendered using default dimensions
+            label: "Height of the image. If not specified along with `width`, the image will be rendered using default dimensions"
             type: number
             allow_empty: true
           width:
-            label: Width of the image. If not specified along with `height`, the image will be rendered using default dimensions
+            label: "Width of the image. If not specified along with `height`, the image will be rendered using default dimensions"
             type: number
             allow_empty: true
       call_to_action:
@@ -89,10 +91,10 @@ _inputs:
         structures:
           text:
             type: text
-            label: Text shown in `call to action` button
+            label: "Text shown in `call to action` button"
           opens_donate_modal:
             type: checkbox
-            comment: When checked, clicking on the `call to action` button opens the Donate modal and the `url` attribute is ignored
+            comment: "When checked, clicking on the `call to action` button opens the Donate modal and the `url` attribute is ignored"
           url:
             type: url
-            label: URL for `call to action` button
+            label: "URL for `call to action` button"
