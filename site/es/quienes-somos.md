@@ -9,7 +9,8 @@ redirect_from:
   - /es/quienes-somos/mision-y-vision
   - /es/quienes-somos/mision-y-vision/
 _schema: "schemas/content_blocks_page_es.md"
-- _bookshop_name: blur_header
+content_blocks:
+  - _bookshop_name: blur_header
     title: The Hogar
     image: "/uploads/page_header_images/hogar_playground.jpg"
     image_style: cover
