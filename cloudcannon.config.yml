@@ -17,6 +17,10 @@ collections_config:
             type: datetime
             label: Publish Date
             allow_empty: false
+          $.draft:
+            type: checkbox
+            label: When checked, the noticia will not show up in the Noticias page
+            allow_empty: false
           $.banner_image:
             label: Preview Image
             comment: This image is used for aggregate views (Noticias page)
@@ -54,6 +58,10 @@ collections_config:
           $.date:
             type: datetime
             label: Publish Date
+            allow_empty: false
+          $.draft:
+            type: checkbox
+            label: When checked, news article will not show up in the Posts page
             allow_empty: false
           $.banner_image:
             label: Preview Image

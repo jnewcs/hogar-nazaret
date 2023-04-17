@@ -29,6 +29,9 @@ lazy_load: true
 
     <div class="columns is-multiline is-nested mt-2">
       {% for post in related %}
+        {% if post.draft %}
+          {% continue %}
+        {% endif %}
         {% assign post_creation_date_in_seconds = post.date | date: "%s" | to_integer %}
         {% if post_creation_date_in_seconds < six_months_in_seconds %}
           <!-- If the news post is older than 6 months, we hide it -->
