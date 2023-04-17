@@ -2,7 +2,7 @@
 _schema: default
 title: Draft Noticia 2023
 draft: true
-date: 2023-04-18 00:00:00
+date: 2023-04-16 00:00:00
 banner_image: /uploads/voces_opera_banner.png
 banner_image_alt: Voces de Opera
 banner_image_style: contain
