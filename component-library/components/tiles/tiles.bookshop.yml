@@ -2,23 +2,18 @@
 spec:
   structures:
     - content_blocks
-  label: Content
-  description: Generic rich content area
+  label: Tiles
+  description: Tile container
   icon: wysiwyg
   tags:
-    - Text
+    - Tile
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  content_html: ""
-  show_container: true
+  tiles: [bookshop:tile]
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
-  content_html: <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  show_container:
-    type: checkbox
-    comment: When toggled on, default padding appears around the content

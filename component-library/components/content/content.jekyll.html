@@ -1,3 +1,8 @@
-<div class="container content-container content">
+{% if include.show_container == true %}
+  {% assign container_class = 'container content-container content' %}
+{% else %}
+  {% assign container_class = 'content' %}
+{% endif %}
+<div class="{{ container_class }}">
   {{ include.content_html }}
 </div>

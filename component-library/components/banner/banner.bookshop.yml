@@ -1,0 +1,60 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Banner
+  description: Banner center aligned with a call to action (if desired)
+  icon: wysiwyg
+  tags:
+    - Header
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  title: "Banner Title!"
+  content: bookshop:content
+  call_to_action:
+    text: "Banner Button"
+    url: "https://www.google.com"
+  background: 'no-pattern'
+  banner_background: 'white'
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    comment: Title is centered aligned in the banner
+    type: text
+    allow_empty: false
+  content:
+    allow_empty: false
+  background:
+    type: select
+    comment: Background behind the banner
+    options:
+      values:
+        - pattern-dots-sm
+        - no-pattern
+      allow_create: false
+      allow_empty: false
+  banner_background:
+    type: select
+    comment: Background of the banner
+    options:
+      values:
+        - white
+        - white-ter
+        - warning
+      allow_create: false
+      allow_empty: false
+  call_to_action:
+    type: object
+    allow_empty: true
+    structures:
+      text:
+        type: text
+        label: Text shown in `call to action` button
+      url:
+        type: url
+        label: URL for `call to action` button

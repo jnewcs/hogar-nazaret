@@ -14,6 +14,7 @@ content_blocks:
     date: 2022-08-12 07:00:00 +0000
 
   - _bookshop_name: content
+    show_container: true
     content_html: >-
       <p>El pasado 12 de agosto nuestra Junta Directiva llevó cabo un pasadía en la Hacienda Carabali en Río Grande con el personal que administra la operación y los servicios del Hogar.</p>
 

@@ -1,0 +1,40 @@
+<article class="tile is-parent is-vertical {% if include.has_children%}pt-0{% endif %}">
+  {% if include.has_children %}
+    {% for child in include.children %}
+      {% bookshop tile bind=child %}
+    {% endfor %}
+  {% else %}
+    <div class="has-background-light p-1">
+      <p class="is-size-3 is-cursive">
+        {{ include.title }}
+      </p>
+    
+      {% if include.content %}
+        {% bookshop content bind=include.content %}
+      {% endif %}
+    
+      {% if include.call_to_action %}
+        {% if include.call_to_action.image %}
+          <div class="donar-box position-relative">
+            <div class="donar-photo contain-no-repeat" alt="" style="background-image: url('{{ include.call_to_action.image | relative_url }}')"></div>
+            <div class="donar-box-caption has-text-white has-text-centered is-cursive is-flex-container is-fully-centered">
+              <div class="donar-box-caption-content">
+                <a href="{{ include.call_to_action.url | relative_url }}" class="button is-large is-secondary">
+                  {{ include.call_to_action.text }}
+                </a>
+              </div>
+            </div>
+          </div>
+        {% else %}
+          <a
+            class="button is-{{ include.call_to_action.style }}"
+            href="{{ include.call_to_action.url | relative_url }}"
+            target="_blank"
+          >
+            {{ include.call_to_action.text }}
+          </a>
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endif %}
+</article>

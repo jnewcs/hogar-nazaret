@@ -1,0 +1,7 @@
+<div class="container content-container">
+  <div class="tile is-ancestor">
+    {% for tile in include.tiles %}
+      {% bookshop tile bind=tile %}
+    {% endfor %}
+  </div>
+</div>

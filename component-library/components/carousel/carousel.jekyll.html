@@ -1,0 +1,75 @@
+<div class="fluid-container position-relative">
+  <div class="is-flex-container is-spaced-between has-text-centered is-hidden-touch" id="controls-container">
+    <div class="clickable prev-button">&#8249;</div>
+    <div class="clickable next-button">&#8250;</div>
+  </div>
+  <div id="autoplay-button" data-action="stop"></div>
+  <div id="carousel-container">
+    <!-- 15768000 is 6 months in seconds -->
+    {% assign timeframe = 15768000 %}
+    {% assign six_months_in_seconds = "now" | date: "%s" | minus: timeframe | to_integer  %}
+
+    {% for item in include.items %}
+      {% assign item_creation_date_in_seconds = item.creation_date | date: "%s" | to_integer %}
+
+      {% if item_creation_date_in_seconds < six_months_in_seconds %}
+        {% unless item.always_show %}
+          <!-- If the highlight is older than 6 months and not marked as always show, we hide it -->
+          {% continue %}
+        {% endunless %}
+      {% endif %}
+
+      {% if item.hide_from_carousel %}
+        {% continue %}
+      {% else %}
+        <div class="carousel-highlight-container {% unless forloop.first %}is-hidden{% endunless %}">
+          <div class="columns is-gapless carousel-slide">
+            {% if item.full_page %}
+              {% include full_page_carousel_content.html higlight=highlight %}
+            {% else %}
+              <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
+                {% if item.image.height && item.image.width %}
+                  <img
+                    class="carousel-image tns-lazy-img"
+                    data-src="{{ item.image.url | relative_url }}"
+                    style="height: {{ item.image.height }}px; width: {{ item.image.width }}px"
+                  />
+                {% else %}
+                  <img
+                    class="carousel-image tns-lazy-img"
+                    data-src="{{ item.image.url | relative_url }}"
+                  />
+                {% endif %}
+              </div>
+
+              <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
+                <div class="container content-container carousel-text is-unselectable">
+                  <h1 class="is-size-3 is-uppercase is-unselectable">
+                    {{ item.title }}
+                  </h1>
+
+                  {% if item.content %}
+                    {% bookshop content bind=item.content %}
+                  {% endif %}
+
+                  {% if item.call_to_action %}
+                    <br />
+                    {% if item.call_to_action.opens_donate_modal %}
+                      <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
+                        {{ item.call_to_action.text }}
+                      </a>
+                    {% else %}
+                      <a class="button is-secondary has-text-white is-medium" href="{{ item.call_to_action.url | relative_url }}">
+                        {{ item.call_to_action.text }}
+                      </a>
+                    {% endif %}
+                  {% endif %}
+                </div>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>

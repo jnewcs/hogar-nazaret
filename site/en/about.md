@@ -17,6 +17,7 @@ content_blocks:
     title_color: white
 
   - _bookshop_name: content
+    show_container: true
     content_html: >-
       <p>The Hogar Albergue para Niños Jesús de Nazaret, Inc. (Hogar) is a transitory home for boys and girls that have been victims of abuse.</p>
 

@@ -12,6 +12,8 @@ spec:
 blueprint:
   title: "Page Title"
   title_alignment: "left"
+  show_padding_top: true
+  show_padding_bottom: true
   date: null
   background_color: "white-ter"
 
@@ -34,6 +36,10 @@ _inputs:
         - right
       allow_create: false
       allow_empty: false
+  show_padding_top:
+    type: switch
+  show_padding_bottom:
+    type: switch
   date:
     allow_empty: true
   background_color:

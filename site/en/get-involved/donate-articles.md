@@ -15,6 +15,7 @@ content_blocks:
     title_color: dark
 
   - _bookshop_name: content
+    show_container: true
     content_html: >-
       <p>To learn more about how to donate articles, or to schedule the delivery of your donations, contact us by phone at <a href="tel:7878316161">(787) 831-6161</a></p>
 

@@ -67,10 +67,9 @@
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}?{{ site.time | date: '%s%N' }}">
 
-    {% if page.show_carousel %}
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
-    {% endif %}
+    <!-- TODO: Optimize when we load the carousel  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
 
     {% if page.show_milestones %}
       <link rel="stylesheet" href="{{ '/css/milestones.css' | relative_url }}">

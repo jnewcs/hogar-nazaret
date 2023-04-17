@@ -15,6 +15,7 @@ content_blocks:
     title_color: white
 
   - _bookshop_name: content
+    show_container: true
     content_html: >-
       <p>We offer many ways for you to get involved with the Hogar and see first-hand the results of your efforts and dedication. We encourage you to join the group of volunteers who support the Hogar, and use your skills to help the children have a better future. You can dedicate as little or as much time as you wish. You will receive many blessings and great satisfaction!</p>
 

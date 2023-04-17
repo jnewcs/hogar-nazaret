@@ -12,6 +12,7 @@ content_blocks:
     title_color: dark
 
   - _bookshop_name: content
+    show_container: true
     content_html: >-
       <p>Para información sobre donaciones de artículos, o para coordinar la entrega de los artículos, llámanos al <a href="tel:7878316161">(787) 831-6161</a></p>
 

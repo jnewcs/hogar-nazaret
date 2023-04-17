@@ -31,78 +31,82 @@ document.addEventListener('DOMContentLoaded', function () {
    */
   //
   var carouselContainer = document.getElementById('carousel-container');
-  if (carouselContainer) {
-    var highlightCarousel = tns({
-      container: '#carousel-container',
-      items: 1,
-      slideBy: 'page',
-      preventScrollOnTouch: 'auto',
-      speed: 400,
-      edgePadding: 0,
-      mouseDrag: true,
-      autoHeight: true,
-      nav: false,
-      loop: false,
-      controls: true,
-      controlsContainer: document.getElementById('controls-container'),
-      lazyload: true,
-      arrowKeys: false,
-      onInit: function() {
-        var highlights = Array.prototype.slice.call(document.querySelectorAll('.carousel-highlight-container'), 0);
-        highlights.forEach(highlight => {
-          highlight.classList.remove('is-hidden');
+  try {
+    if (carouselContainer) {
+      var highlightCarousel = tns({
+        container: '#carousel-container',
+        items: 1,
+        slideBy: 'page',
+        preventScrollOnTouch: 'auto',
+        speed: 400,
+        edgePadding: 0,
+        mouseDrag: true,
+        autoHeight: true,
+        nav: false,
+        loop: false,
+        controls: true,
+        controlsContainer: document.getElementById('controls-container'),
+        lazyload: true,
+        arrowKeys: false,
+        onInit: function() {
+          var highlights = Array.prototype.slice.call(document.querySelectorAll('.carousel-highlight-container'), 0);
+          highlights.forEach(highlight => {
+            highlight.classList.remove('is-hidden');
+          });
+        }
+      });
+  
+      // On mobile, we need to manually adjust the height
+      var indexChangedHandler = function (_info, _eventName) {
+        highlightCarousel.updateSliderHeight()
+      }
+      highlightCarousel.events.on('indexChanged', indexChangedHandler);
+  
+      var autoplayButton = document.getElementById('autoplay-button');
+      if (highlightCarousel && autoplayButton) {
+        // Manually setup autoplay for main highlight carousel
+        var turnOffAutoPlay = function() {
+          clearInterval(interval);
+          autoplayButton.dataset.action = 'start';
+        };
+  
+        var interval;
+        var setAutoPlay = function() {
+          interval = setInterval(function () {
+            highlightCarousel.goTo('next');
+  
+            var info = highlightCarousel.getInfo();
+            if (info.slideCount === info.displayIndex) {
+              // This is the last slide, turn off autoplay
+              turnOffAutoPlay();
+            }
+          }, 10000);
+        };
+        setAutoPlay();
+  
+        autoplayButton.addEventListener('click', function () {
+          var currentAction = autoplayButton.dataset.action;
+          if (currentAction === 'stop') {
+            turnOffAutoPlay();
+          } else {
+            setAutoPlay();
+            autoplayButton.dataset.action = 'stop';
+          }
+        });
+  
+        document.addEventListener('keydown', function (event) {
+          if (event.keyCode === 37) {
+            turnOffAutoPlay();
+            highlightCarousel.goTo('prev');  // left-arrow
+          } else if (event.keyCode === 39) {
+            turnOffAutoPlay();
+            highlightCarousel.goTo('next'); // right-arrow
+          }
         });
       }
-    });
-
-    // On mobile, we need to manually adjust the height
-    var indexChangedHandler = function (_info, _eventName) {
-      highlightCarousel.updateSliderHeight()
     }
-    highlightCarousel.events.on('indexChanged', indexChangedHandler);
-
-    var autoplayButton = document.getElementById('autoplay-button');
-    if (highlightCarousel && autoplayButton) {
-      // Manually setup autoplay for main highlight carousel
-      var turnOffAutoPlay = function() {
-        clearInterval(interval);
-        autoplayButton.dataset.action = 'start';
-      };
-
-      var interval;
-      var setAutoPlay = function() {
-        interval = setInterval(function () {
-          highlightCarousel.goTo('next');
-
-          var info = highlightCarousel.getInfo();
-          if (info.slideCount === info.displayIndex) {
-            // This is the last slide, turn off autoplay
-            turnOffAutoPlay();
-          }
-        }, 10000);
-      };
-      setAutoPlay();
-
-      autoplayButton.addEventListener('click', function () {
-        var currentAction = autoplayButton.dataset.action;
-        if (currentAction === 'stop') {
-          turnOffAutoPlay();
-        } else {
-          setAutoPlay();
-          autoplayButton.dataset.action = 'stop';
-        }
-      });
-
-      document.addEventListener('keydown', function (event) {
-        if (event.keyCode === 37) {
-          turnOffAutoPlay();
-          highlightCarousel.goTo('prev');  // left-arrow
-        } else if (event.keyCode === 39) {
-          turnOffAutoPlay();
-          highlightCarousel.goTo('next'); // right-arrow
-        }
-      });
-    }
+  } catch {
+    console.error('Could not instantiate TNS to load carousel');
   }
 
   /* Code for modal opening */

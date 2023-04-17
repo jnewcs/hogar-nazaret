@@ -21,6 +21,7 @@ content_blocks:
     image: /uploads/2018/relief_fund/gifts.png
 
   - _bookshop_name: content
+    show_container: true
     content_html: >-
       <p>El Hogar recibió una linda sorpresa de la <b>Sra. Natalie Coriano</b>, Administradora del  'Puerto Rico Relief Initiative' del Departamento de Servicios Sociales del Condado Westchester (New York). El 4 de enero 2018, UPS hizo entrega de 150 regalos, alegrando a nuestros niños y a todo el personal del Hogar.</p>
 

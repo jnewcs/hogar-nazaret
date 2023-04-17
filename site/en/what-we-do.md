@@ -15,6 +15,7 @@ content_blocks:
     title_color: dark
 
   - _bookshop_name: content
+    show_container: true
     content_html: >-
       <p>The Hogar's mission is to provide a safe and welcoming place for children who have been removed from their biological family or foster home due to neglect, physical violence or sexual abuse. We work hard to restore the children's physical, mental and emotional wellbeing by providing professional attention and personalized care.</p>
 

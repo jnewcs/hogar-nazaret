@@ -6,14 +6,15 @@ collections_config:
       - name: Add Noticia for Spanish Site
         editor: content
     _enabled_editors:
-      - visual
       - data
+      - visual
     schemas:
       default:
         path: schemas/noticia.md
         hide_extra_inputs: true
         _inputs:
           $.date:
+            type: datetime
             label: Publish Date
             allow_empty: false
           $.banner_image:
@@ -43,14 +44,15 @@ collections_config:
       - name: Add News Article for English Site
         editor: content
     _enabled_editors:
-      - visual
       - data
+      - visual
     schemas:
       default:
         path: schemas/post.md
         hide_extra_inputs: true
         _inputs:
           $.date:
+            type: datetime
             label: Publish Date
             allow_empty: false
           $.banner_image:
@@ -73,26 +75,18 @@ collections_config:
               allow_empty: false
           $.content_blocks:
 
-  carousel_highlights_es:
-    name: Carousel Highlights
-    sort:
-      key: creation_date
-    add_options:
-      - name: Add Carousel Highlight for Spanish Site
-        editor: visual
-    _enabled_editors:
-      - visual
-      - data
+  content_blocks_page_es:
+    name: Spanish Pages
     disable_add_folder: true
-    path: _carousel_highlights/es/
+    disable_add: true
+    path: es/
+    _enabled_editors:
+      - data
+      - visual
     schemas:
       default:
-        path: schemas/carousel_highlights_es.md
+        path: schemas/content_blocks_page_es.md
         hide_extra_inputs: true
-        _inputs:
-          $.creation_date:
-            label: Publish Date
-            allow_empty: false
 
   content_blocks_page_en:
     name: English Pages
@@ -100,8 +94,8 @@ collections_config:
     disable_add: true
     path: en/
     _enabled_editors:
-      - visual
       - data
+      - visual
     schemas:
       default:
         path: schemas/content_blocks_page_en.md
@@ -111,7 +105,7 @@ collection_groups:
   - heading: "Spanish Website"
     collections:
       - noticias
-      - carousel_highlights_es
+      - content_blocks_page_es
   - heading: "English Website"
     collections:
       - posts

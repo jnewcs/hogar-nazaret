@@ -12,6 +12,7 @@ content_blocks:
     title_color: white
 
   - _bookshop_name: content
+    show_container: true
     content_html: >-
       <p>Ofrecemos muchas maneras de involucrarte directamente con el Hogar  y ver los frutos de tu trabajo y dedicación. Te exhortamos a que te unas al grupo de voluntarios que apoyan al Hogar, y pongas tus habilidades a trabajar para dar un mejor futuro a los niños. Puedes dedicar el tiempo que quieras, cuando puedas. ¡Verás que recibirás muchas bendiciones y gran satisfacción!</p>
 

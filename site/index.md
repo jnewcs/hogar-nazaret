@@ -6,4 +6,5 @@ section_size: is-large
 hide_nav_buttons: true
 lang_ref: language-changer
 sitemap: false
+_unlisted: true
 ---
