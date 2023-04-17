@@ -41,7 +41,7 @@ content_blocks:
       show_container: false
       content_html: >-
         <p>El Hogar Albergue para Niños Jesús de Nazaret te invita a formar parte de su equipo para brindar cuido y amor a niños en la plaza de Cuidador(a) de niños</p>
-    background: 'pattern-dots-sm'
+    background: "pattern-dots-sm"
     banner_background: white
     call_to_action: 
       text: "Para obtener más detalles, leer aquí"
@@ -113,7 +113,6 @@ content_blocks:
               text: Ver Cómo
               url: es/quienes-somos/colaboradores
               style: plain
-
           - title: Cronología Histórica
             content:
               show_container: false
