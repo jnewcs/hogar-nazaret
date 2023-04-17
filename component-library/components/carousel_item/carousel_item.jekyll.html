@@ -1,0 +1,63 @@
+<!-- 15768000 is 6 months in seconds -->
+{% assign timeframe = 15768000 %}
+{% assign six_months_in_seconds = "now" | date: "%s" | minus: timeframe | to_integer  %}
+{% assign item_creation_date_in_seconds = include.creation_date | date: "%s" | to_integer %}
+
+{% if item_creation_date_in_seconds < six_months_in_seconds %}
+  {% unless include.always_show %}
+    <!-- If the highlight is older than 6 months and not marked as always show, we hide it -->
+    {% continue %}
+  {% endunless %}
+{% endif %}
+
+{% if include.hide_from_carousel %}
+  {% continue %}
+{% else %}
+  <div class="carousel-highlight-container {% unless forloop.first %}is-hidden{% endunless %}">
+    <div class="columns is-gapless carousel-slide">
+      {% if include.full_page %}
+        {% include full_page_carousel_content.html higlight=highlight %}
+      {% else %}
+        <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
+          {% if include.image.height and include.image.width %}
+            <img
+              class="carousel-image tns-lazy-img"
+              data-src="{{ include.image.url | relative_url }}"
+              style="height: {{ include.image.height }}px; width: {{ include.image.width }}px"
+            />
+          {% else %}
+            <img
+              class="carousel-image tns-lazy-img"
+              data-src="{{ include.image.url | relative_url }}"
+            />
+          {% endif %}
+        </div>
+
+        <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
+          <div class="container content-container carousel-text is-unselectable">
+            <h1 class="is-size-3 is-uppercase is-unselectable">
+              {{ include.title }}
+            </h1>
+
+            {% if include.content %}
+              {% bookshop content bind=include.content %}
+            {% endif %}
+
+            {% if include.call_to_action %}
+              <br />
+              {% if include.call_to_action.opens_donate_modal %}
+                <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
+                  {{ include.call_to_action.text }}
+                </a>
+              {% else %}
+                <a class="button is-secondary has-text-white is-medium" href="{{ include.call_to_action.url | relative_url }}">
+                  {{ include.call_to_action.text }}
+                </a>
+              {% endif %}
+            {% endif %}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}

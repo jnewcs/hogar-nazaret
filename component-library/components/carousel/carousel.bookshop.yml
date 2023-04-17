@@ -10,94 +10,10 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  items:
-    - title: "Carousel Title #1"
-      creation_date: 2020-04-10T12:00:00.000+00:00
-      content: bookshop:content
-      image:
-        url: https://hogarjesusdenazaret.org/uploads/carousel_highlights/child_prevention_month.jpg
-      hide_from_carousel: false
-      always_show: true
-
-    - title: "Carousel Title #2"
-      creation_date: 2021-04-10T12:00:00.000+00:00
-      content: bookshop:content
-      image: null
-      hide_from_carousel: true
-      always_show: false
-
-    - title: "Carousel Title #3"
-      creation_date: 2023-04-10T12:00:00.000+00:00
-      content: bookshop:content
-      image:
-        url: https://hogarjesusdenazaret.org/uploads/carousel_highlights/child_prevention_month.jpg
-        width: 100
-        height: 25px
-      hide_from_carousel: false
-      always_show: false
+  items: [bookshop:carousel_item]
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  items:
-    label: Set of carousel items
-    type: array
-    allow_empty: false
-  items[*]:
-    label: Carousel item
-    type: object
-    allow_empty: false
-    options:
-      structures:
-        title:
-          type: text
-          allow_empty: false
-        creation_date:
-          type: datetime
-          comment: By default, carousel items only show for 6 months. To override, check `always_show`
-          allow_empty: false
-        content:
-          allow_empty: false
-        always_show:
-          type: checkbox
-          label: "Always show item?"
-          comment: "When checked, carousel item will always show even past the 6 months limit"
-          allow_empty: false
-        hide_from_carousel:
-          type: checkbox
-          label: "Force hide?"
-          comment: "When checked, carousel item will never be shown, even if `always_show` is checked"
-          allow_empty: false
-        image:
-          type: object
-          allow_empty: true
-          options:
-            structures:
-              url:
-                label: URL of the image
-                type: image
-                allow_empty: false
-              height:
-                label: "Height of the image. If not specified along with `width`, the image will be rendered using default dimensions"
-                type: number
-                allow_empty: true
-              width:
-                label: "Width of the image. If not specified along with `height`, the image will be rendered using default dimensions"
-                type: number
-                allow_empty: true
-        call_to_action:
-          type: object
-          allow_empty: true
-          options:
-            structures:
-              text:
-                type: text
-                label: "Text shown in `call to action` button"
-              opens_donate_modal:
-                type: checkbox
-                comment: "When checked, clicking on the `call to action` button opens the Donate modal and the `url` attribute is ignored"
-              url:
-                type: url
-                label: "URL for `call to action` button"
