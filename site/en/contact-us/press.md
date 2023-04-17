@@ -23,7 +23,7 @@ content_blocks:
       lang: en
       submit:
         text: Submit
-      form_url: "/en/form_success"
+      form_url: "https://formspree.io/f/xayllyne"
       fields:
         name:
           label: "Name"

@@ -14,7 +14,7 @@ blueprint:
   lang: "en"
   submit:
     text: "Submit"
-  form_url: "/en/form_success"
+  form_url: "www.google.com"
   fields:
     name:
       label: "Name"
@@ -82,13 +82,7 @@ _inputs:
         allow_empty: false
   form_url:
     label: URL to redirect users after submission
-    type: select
-    options:
-      values:
-        - en/form_success
-        - es/form_success
-      allow_create: false
-      allow_empty: false
+    type: url
   fields:
     type: object
     allow_empty: false
