@@ -19,6 +19,7 @@ content_blocks:
 
       <p>To schedule your visit or to request a press kit with information about the Hogar, please complete the following online form. Once we receive the online request, we will get in contact with you as soon as possible. We look forward to meeting you!.</p>
     form:
+      title: Press Request
       lang: en
       submit:
         text: Submit

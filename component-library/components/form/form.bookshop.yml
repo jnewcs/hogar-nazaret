@@ -10,7 +10,7 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  inbox_key: "contact-form"
+  title: "Form Title"
   lang: "en"
   submit:
     text: "Submit"
@@ -60,9 +60,8 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  inbox_key:
+  title:
     type: text
-    hidden: true
     allow_empty: false
   lang:
     label: Form Language
@@ -74,9 +73,13 @@ _inputs:
       allow_create: false
       allow_empty: false
   submit:
-    label: Submit Button Text
-    type: text
+    type: object
     allow_empty: false
+    options:
+      text:
+        label: Submit Button Text
+        type: text
+        allow_empty: false
   form_url:
     label: URL to redirect users after submission
     type: select

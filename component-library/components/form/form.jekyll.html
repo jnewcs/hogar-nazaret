@@ -1,5 +1,9 @@
 <form action="{{ include.form_url }}" method="POST">
-  <input type="hidden" name="inbox_key" value="{{ include.contact_inbox }}">
+  <input
+    hidden
+    name="_page"
+    value="{{ include.title }}"
+  >
   <input type="hidden" name="_language" value="{{ include.lang }}" />
 
   {% if include.fields.name.presence %}

@@ -16,10 +16,11 @@ content_blocks:
 
       <p>Para programar tu visita o si deseas recibir un paquete con información sobre el Hogar, completa y envía la solicitud que se encuentra a continuación.</p>
     form:
+      title: Prensa Solicitud
       lang: es
       submit:
         text: Envíe
-      form_url: "/es/form_success"
+      form_url: "https://formspree.io/f/mpzoozwb"
       fields:
         name:
           label: "Nombre y Apellido"
