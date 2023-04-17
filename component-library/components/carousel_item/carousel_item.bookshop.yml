@@ -47,7 +47,7 @@ _inputs:
   image:
     type: object
     allow_empty: true
-    options:
+    structures:
       url:
         label: URL of the image
         type: image
@@ -63,7 +63,7 @@ _inputs:
   call_to_action:
     type: object
     allow_empty: true
-    options:
+    structures:
       text:
         type: text
         label: "Text shown in `call to action` button"
