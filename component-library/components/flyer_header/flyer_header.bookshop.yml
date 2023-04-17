@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Flyer Header
   description: Header with a large central image that can be expanded into a modal
-  icon: wysiwyg
+  icon: article
   tags:
     - Header
 

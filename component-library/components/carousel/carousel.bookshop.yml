@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Carousel
   description: Renders a carousel with images and captions
-  icon: wysiwyg
+  icon: view_carousel
   tags:
     - Carousel
 

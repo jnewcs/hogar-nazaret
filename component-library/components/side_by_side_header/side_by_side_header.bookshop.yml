@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Side by Side Header
   description: Header with an image to the left
-  icon: wysiwyg
+  icon: vertical_split
   tags:
     - Header
 

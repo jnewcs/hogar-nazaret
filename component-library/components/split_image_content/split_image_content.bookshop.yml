@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Split Image Content
   description: Generic text component with option to show image to the left/right of content
-  icon: wysiwyg
+  icon: vertical_split
   tags:
     - Text
 

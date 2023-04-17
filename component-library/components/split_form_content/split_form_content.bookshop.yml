@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Split Form Content
   description: Generic text component with option to show form to the right of content
-  icon: wysiwyg
+  icon: vertical_split
   tags:
     - Text
 

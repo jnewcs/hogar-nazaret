@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Tiles
   description: Tile container
-  icon: wysiwyg
+  icon: grid_view
   tags:
     - Tile
 

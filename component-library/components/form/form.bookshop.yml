@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Form
   description: Form that allows users to submit a request to the Hogar
-  icon: wysiwyg
+  icon: format_list_bulleted
   tags:
     - Form
 

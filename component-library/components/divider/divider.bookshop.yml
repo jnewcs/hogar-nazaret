@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Divider
   description: Divider element (<hr/>)
-  icon: wysiwyg
+  icon: safety_divider
   tags:
     - Text
 

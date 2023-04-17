@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Blur Header
   description: Header with a blurred image and centered title
-  icon: wysiwyg
+  icon: blur_on
   tags:
     - Header
 

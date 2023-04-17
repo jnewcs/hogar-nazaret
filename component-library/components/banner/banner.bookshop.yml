@@ -4,7 +4,7 @@ spec:
     - content_blocks
   label: Banner
   description: Banner center aligned with a call to action (if desired)
-  icon: wysiwyg
+  icon: crop_16_9
   tags:
     - Header
 
