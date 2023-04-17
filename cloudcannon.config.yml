@@ -87,6 +87,8 @@ collections_config:
       default:
         path: schemas/content_blocks_page_es.md
         hide_extra_inputs: true
+        _inputs:
+          $.content_blocks:
 
   content_blocks_page_en:
     name: English Pages
@@ -100,6 +102,8 @@ collections_config:
       default:
         path: schemas/content_blocks_page_en.md
         hide_extra_inputs: true
+        _inputs:
+          $.content_blocks:
 
 collection_groups:
   - heading: "Spanish Website"
