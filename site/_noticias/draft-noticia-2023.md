@@ -11,10 +11,13 @@ lang: es
 layout: post
 content_blocks:
   - _bookshop_name: simple_header
-    title: Page Title
+    title: Voces de Opera
     title_alignment: left
     show_padding_top: true
     show_padding_bottom: true
     date: 2023-04-17 00:00:00
     background_color: white-ter
+  - _bookshop_name: content
+    content_html: <p>This is a cool area!</p>
+    show_container: true
 ---
