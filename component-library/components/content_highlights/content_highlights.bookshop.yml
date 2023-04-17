@@ -23,7 +23,7 @@ preview:
 _inputs:
   highlights:
     type: array
-    structures:
+    _structures:
       - value:
         title: Some Title
         content_html: '<p>Highlight description</p>'

@@ -49,7 +49,7 @@ _inputs:
     label: Carousel item
     type: object
     allow_empty: false
-    structures:
+    options:
       title:
         type: text
         allow_empty: false
@@ -72,7 +72,7 @@ _inputs:
       image:
         type: object
         allow_empty: true
-        structures:
+        options:
           url:
             label: URL of the image
             type: image
@@ -88,7 +88,7 @@ _inputs:
       call_to_action:
         type: object
         allow_empty: true
-        structures:
+        options:
           text:
             type: text
             label: "Text shown in `call to action` button"

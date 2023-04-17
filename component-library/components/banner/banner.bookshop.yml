@@ -51,7 +51,7 @@ _inputs:
   call_to_action:
     type: object
     allow_empty: true
-    structures:
+    options:
       text:
         type: text
         label: Text shown in `call to action` button

@@ -89,12 +89,12 @@ _inputs:
   fields:
     type: object
     allow_empty: false
-    structures:
+    options:
       name:
         type: object
         label: Name form input
         allow_empty: false
-        structures:
+        options:
           label:
             type: string
             label: Label of this field
