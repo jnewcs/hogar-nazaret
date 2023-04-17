@@ -7,24 +7,18 @@ header_text_color: white
 layout: page
 lang: es
 lang_ref: contact-us
-published: false
-
 ---
 El Hogar te da la bienvenida y te exhorta a que te unas a nuestra misión de transformar con amor las vidas de niños que han sido víctimas de maltrato y erradicar tan grave problema. Para obtener más información sobre cómo donar tu tiempo o dinero, auspiciar un evento, visitarnos, hacerte Padrino/Madrina o ser embajador del Hogar, comunícate con:
 
-<div><div> {{ site.data.languages\[page.lang\]. Directora Ejecutiva }}: <a href= {{ Sra. Lymari Quiles Padilla, MHSA }}
+<p>
+  <div>Sra. Lymari Quiles Padilla, MHSA - <b>Directora Ejecutiva</b></div>
+  <div>Oficina: <a href="tel:7878316161">(787) 831-6161</a></div>
+  <div>Fax: <a href="tel:7878314226">(787) 831-4226</a></div>
+  <div>Email: <a href="mailto:info@hogarjesusdenazaret.org">info@hogarjesusdenazaret.org</a></div>
+</p>
 
-<div><div> {{ site.data.languages\[page.lang\].office }}: <a href="tel:{{ site.data.information.phone }}">{{ site.data.information.phone }}</a>
-
-</div> <div> {{ site.data.languages\[page.lang\].fax }}: {{ site.data.information.fax }} </div> <div> {{ site.data.languages\[page.lang\].email }}: <a href="mailto:{{ site.data.information.email }}">{{ site.data.information.email }}</a> </div>
-
-<div class="mt-1 is-size-4 is-cursive">
-<b>
-{{ site.data.information.official_name }}
-</b>
-</div>
-<div>
-{{ site.data.information.po_box }}
-</div>
-
-¡Te esperamos! ¡Tú puedes hacer la diferencia!
+<p>
+  <div><b>Hogar Albergue para Niños Jesús de Nazaret, Inc.</b></div>
+  <div>P.O. Box 1147 Mayagüez, PR 00681-1147</div>
+  <div>¡Te esperamos! ¡Tú puedes hacer la diferencia!</div>
+</p>
