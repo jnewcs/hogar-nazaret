@@ -14,7 +14,7 @@ blueprint:
   creation_date: 2023-04-10T12:00:00.000+00:00
   content: bookshop:content
   image:
-    url: https://hogarjesusdenazaret.org/uploads/carousel_highlights/child_prevention_month.jpg
+    url: "/uploads/carousel_highlights/child_prevention_month.jpg"
     width: 100
     height: 25px
   hide_from_carousel: false
