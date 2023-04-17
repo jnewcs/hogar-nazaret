@@ -21,14 +21,14 @@
         <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
           {% if include.image_height and include.image_width %}
             <img
-              class="carousel-image tns-lazy-img"
-              data-src="{{ include.image | relative_url }}"
+              class="carousel-image"
+              src="{{ include.image | relative_url }}"
               style="height: {{ include.image_height }}px; width: {{ include.image_width }}px"
             />
           {% else %}
             <img
-              class="carousel-image tns-lazy-img"
-              data-src="{{ include.image | relative_url }}"
+              class="carousel-image"
+              src="{{ include.image | relative_url }}"
             />
           {% endif %}
         </div>

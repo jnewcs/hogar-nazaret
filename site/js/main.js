@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
   //
   var carouselContainer = document.getElementById('carousel-container');
   try {
-    if (carouselContainer) {
+    if (carouselContainer && !window.inEditorMode) {
       var highlightCarousel = tns({
         container: '#carousel-container',
         items: 1,
