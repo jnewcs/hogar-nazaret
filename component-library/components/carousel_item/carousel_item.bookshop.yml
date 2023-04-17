@@ -15,7 +15,7 @@ blueprint:
   content: bookshop:content
   image: "/uploads/carousel_highlights/child_prevention_month.jpg"
   image_width: 100
-  image_height: 25px
+  image_height: 25
   hide_from_carousel: false
   always_show: false
 
