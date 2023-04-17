@@ -17,9 +17,9 @@ collections_config:
             type: datetime
             label: Publish Date
             allow_empty: false
-          $.draft:
+          $.work_in_progress:
             type: checkbox
-            label: Is Draft?
+            label: Work in progress?
             comment: When checked, the noticia will not show up in the Noticias page
             allow_empty: false
           $.banner_image:
@@ -60,9 +60,9 @@ collections_config:
             type: datetime
             label: Publish Date
             allow_empty: false
-          $.draft:
+          $.work_in_progress:
             type: checkbox
-            label: Is Draft?
+            label: Work in progress?
             comment: When checked, news article will not show up in the Posts page
             allow_empty: false
           $.banner_image:

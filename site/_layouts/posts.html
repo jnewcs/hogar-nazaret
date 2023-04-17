@@ -29,7 +29,7 @@ lazy_load: true
 
     <div class="columns is-multiline is-nested mt-2">
       {% for post in related %}
-        {% if post.draft %}
+        {% if post.work_in_progress == true %}
           {% continue %}
         {% endif %}
         {% assign post_creation_date_in_seconds = post.date | date: "%s" | to_integer %}

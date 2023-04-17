@@ -1,6 +1,6 @@
 ---
 title:
-draft: false
+work_in_progress: false
 date:
 banner_image:
 banner_image_alt:
