@@ -1,0 +1,32 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Board Profile
+  description: Renders a board profile
+  icon: person
+  tags:
+    - Board
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  board_elections_in_progress: false
+  board_elections_explanation: "We are currently in the process of electing a new board of directors. Please check back soon to meet our new board!"
+  board: [bookshop:board_profile]
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  board_elections_in_progress:
+    type: checkbox
+    label: "Are board elections in progress?"
+    comment: When checked, the page will just render the `board_elections_explanation`
+    allow_empty: false
+  board_elections_explanation:
+    type: text
+    label: Explanation for eoard elections
+    allow_empty: true
+  board:
+    allow_empty: true
