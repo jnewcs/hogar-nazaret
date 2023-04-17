@@ -13,6 +13,10 @@ collections_config:
         path: schemas/noticia.md
         hide_extra_inputs: true
         _inputs:
+          $.title:
+            type: text
+            label: Name of the Noticia
+            comment: This is different from the actual page title which should be added in the content blocks section
           $.date:
             type: datetime
             label: Publish Date
@@ -56,6 +60,10 @@ collections_config:
         path: schemas/post.md
         hide_extra_inputs: true
         _inputs:
+          $.title:
+            type: text
+            label: Name of the News Article
+            comment: This is different from the actual page title which should be added in the content blocks section
           $.date:
             type: datetime
             label: Publish Date
