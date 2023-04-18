@@ -141,9 +141,10 @@ collections_config:
             hidden: true
           $.content_blocks:
 
-  data:
+  data_files:
     disable_add_folder: true
     disable_add: true
+    path: _data/
     _enabled_editors:
       - data
     filter:
@@ -162,7 +163,7 @@ collection_groups:
       - content_blocks_page_en
   - heading: menus
     collections:
-      - data
+      - data_files
 
 _inputs:
   $.lang:
