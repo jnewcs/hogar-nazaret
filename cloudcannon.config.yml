@@ -9,7 +9,7 @@ collections_config:
       - data
       - visual
     preview:
-      text:
+      subtext:
         - key: date
         - Publish date
     schemas:

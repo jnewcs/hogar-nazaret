@@ -17,6 +17,10 @@ blueprint:
 preview:
   content_html: <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
 
+picker_preview:
+  text: Content # Used in a picker
+  subtext: false # Disables the subtext in the picker
+
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   show_container:
