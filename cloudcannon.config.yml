@@ -141,6 +141,16 @@ collections_config:
             hidden: true
           $.content_blocks:
 
+  data:
+    disable_add_folder: true
+    disable_add: true
+    _enabled_editors:
+      - data
+    filter:
+      base: none
+      include:
+        - _data/menus.yml
+
 collection_groups:
   - heading: "Spanish Website"
     collections:
@@ -150,6 +160,9 @@ collection_groups:
     collections:
       - posts
       - content_blocks_page_en
+  - heading: menus
+    collections:
+      - data
 
 _inputs:
   $.lang:
