@@ -1,0 +1,46 @@
+{% comment %}
+  Side by Side Layout for Post Header
+{% endcomment %}
+
+{% assign current_date = 'now' | date: '%s' | plus: 0 %}
+{% assign post_date_to_compare = page.date | date: '%s' | plus: 0 %}
+
+<div class="columns is-mobile" id="post-side-by-side-layout-container">
+  <div
+    class="column has-background-white-ter is-flex-container is-vertically-centered is-horizontally-centered"
+    id="post-side-by-side-layout-title"
+  >
+    <section class="hero">
+      <div class="hero-body">
+        <h1 class="is-size-2 is-uppercase editable" data-cms-bind="#title">
+          {{ page.title }}
+        </h1>
+
+        {% if page.date %}
+          <date class="post-date">
+            {% include date_to_string_helper.html date=page.date use_year=true %}
+          </date>
+        {% endif %}
+
+        {% if page.path contains "_drafts" %}
+          <div class="tag is-warning">DRAFT POST</div>
+        {% endif %}
+        {% if page.published == false %}
+          <div class="tag is-info">UNPUBLISHED CHANGES</div>
+        {% endif %}
+
+        {% if page.layout != 'upcoming_event' %}
+          {% if post_date_to_compare >= current_date %}
+            <div class="tag is-info">FUTURE</div>
+          {% endif %}
+        {% endif %}
+      </div>
+    </section>
+  </div>
+
+  {% if page.banner_image %}
+    <div class="column" id="post-side-by-side-layout-image" alt="{{ page.banner_image_alt }}"
+      style="background: url('{{ page.banner_image | relative_url }}') center center; background-size: {{ page.banner_image_style }}; background-repeat: no-repeat">
+    </div>
+  {% endif %}
+</div>

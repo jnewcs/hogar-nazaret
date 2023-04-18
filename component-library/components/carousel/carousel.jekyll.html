@@ -1,0 +1,12 @@
+<div class="fluid-container position-relative">
+  <div class="is-flex-container is-spaced-between has-text-centered is-hidden-touch" id="controls-container">
+    <div class="clickable prev-button">&#8249;</div>
+    <div class="clickable next-button">&#8250;</div>
+  </div>
+  <div id="autoplay-button" data-action="stop"></div>
+  <div id="carousel-container">
+    {% for item in include.items %}
+      {% bookshop carousel_item bind=item %}
+    {% endfor %}
+  </div>
+</div>

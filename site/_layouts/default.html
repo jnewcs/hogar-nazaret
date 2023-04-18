@@ -1,0 +1,23 @@
+{% comment %}
+	The default layout for the site, which is extended by all other layouts.
+	Includes the document <head>, main navigation and page footer
+{% endcomment %}
+
+{% include head.html %}
+
+{% include nav.html %}
+
+<div id="navbar-spacer"></div>
+
+{% comment %}
+	Any layout that extends this layout will have its contents
+	added as the content variable
+{% endcomment %}
+
+{% bookshop_include page content_blocks=page.content_blocks %}
+
+{{ content }}
+
+{% include footer.html %}
+
+{% include donation_modal.html %}

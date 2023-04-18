@@ -1,0 +1,121 @@
+<!doctype html>
+<html class="no-js {{ page.lang }}" lang="{{ page.lang }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {% if page.layout == 'landing-page' %}
+      <title>{{ site.title }}</title>
+      <meta name="description" content="{{ site.data.languages[page.lang].seo.descriptions.homepage }}" />
+    {% else %}
+      <title>{{ page.title }}</title>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% if page.auto_switch_language == true %}
+      <script src="{{ '/js/language_changer.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript"></script>
+    {% else %}
+      {% include woopra.html %}
+    {% endif %}
+
+    <link rel="shortcut icon" href="{{ '/uploads/favicon.ico' | relative_url }}">
+
+    {% comment %}
+      Recommended by Google to help search: https://support.google.com/webmasters/answer/182192?hl=en
+    {% endcomment %}
+    {% assign translated_pages = site.pages | where: "lang_ref", page.lang_ref %}
+    {% for translated_page in translated_pages %}
+      {% unless translated_page.lang == page.lang %}
+        <link rel="alternate" hreflang="{{ translated_page.lang }}" href="{{ translated_page.url | absolute_url }}" />
+      {% endunless %}
+    {% endfor %}
+
+    {% if page.layout == 'post' %}
+      {% if page.lang == 'en' %}
+        {% assign spanish_post = site.noticias | where:"lang_ref", page.lang_ref | first %}
+        {% if spanish_post %}
+          <link rel="alternate" hreflang="es" href="{{ spanish_post.url | absolute_url }}" />
+        {% endif %}
+      {% else %}
+        {% assign english_post = site.posts | where:"lang_ref", page.lang_ref | first %}
+        {% if english_post %}
+          <link rel="alternate" hreflang="en" href="{{ english_post.url | absolute_url }}" />
+        {% endif %}
+      {% endif %}
+
+      {% include og_page_tags.html type='article' %}
+    {% elsif page.layout == 'upcoming_event' %}
+      {% if page.lang == 'en' %}
+        {% assign spanish_event = site.proximos_eventos | where:"lang_ref", page.lang_ref | first %}
+        {% if spanish_event %}
+          <link rel="alternate" hreflang="{{ spanish_event.lang }}" href="{{ spanish_event.url | absolute_url }}" />
+        {% endif %}
+      {% else %}
+        {% assign english_event = site.upcoming_events | where:"lang_ref", page.lang_ref | first %}
+        {% if english_event %}
+          <link rel="alternate" hreflang="{{ english_event.lang }}" href="{{ english_event.url | absolute_url }}" />
+        {% endif %}
+      {% endif %}
+
+      {% include og_page_tags.html type='event' %}
+    {% elsif page.layout == 'campaign' %}
+      {% include og_page_tags.html type='campaign' %}
+    {% endif %}
+
+    {% if site.data.information.service_worker == true %}
+      {% include register_service_worker.html %}
+    {% endif %}
+
+    <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ '/css/main.css' | relative_url }}?{{ site.time | date: '%s%N' }}">
+
+    <!-- TODO: Optimize when we load the carousel  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/min/tiny-slider.js"></script>
+
+    {% if page.show_milestones %}
+      <link rel="stylesheet" href="{{ '/css/milestones.css' | relative_url }}">
+    {% endif %}
+
+    {% if page.html_video %}
+      <link href="https://vjs.zencdn.net/7.15.4/video-js.css" rel="stylesheet" />
+    {% endif %}
+
+    {% if jekyll.environment == 'production' %}
+      {% assign paypal_environment = 'production' %}
+    {% else %}
+      {% assign paypal_environment = 'development' %}
+    {% endif %}
+
+    <script>
+      /* Code to lazy load script */
+      window.stripeLoaded = false;
+      window.paypalLoaded = false;
+      window.paypalModalCodeLoaded = false;
+      window.lazyLoadScript = function(scriptSrc, postLoadFunction, failEvent) {
+        if (!scriptSrc) return;
+
+        var script = document.createElement('script');
+        script.src = scriptSrc;
+        script.defer = true;
+        script.async = false;
+        script.onload = function() {
+          if (postLoadFunction) {
+            postLoadFunction();
+          }
+        };
+        script.onerror = function() {
+          window.trackEvent(failEvent)
+        };
+        document.body.appendChild(script);
+      }
+      window.asyncLoadPaypalScript = function() {
+        if (window.paypalLoaded === true) return;
+
+        var setPaypalLoaded = function() {
+          window.paypalLoaded = true;
+        }
+        const paypalScript = "https://www.paypal.com/sdk/js?client-id={{ site.data.information.paypal.client_id[paypal_environment] }}&currency=USD&intent=subscription&vault=true&locale={{ site.data.information.paypal.locale[page.lang] }}"
+        window.lazyLoadScript(paypalScript, setPaypalLoaded, 'async_paypal_load_fail');
+      }
+    </script>
+  </head>
+<body>

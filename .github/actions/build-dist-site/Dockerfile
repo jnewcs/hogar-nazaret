@@ -7,9 +7,9 @@ LABEL version="1.0.0"
 
 
 # Lets install all dependencies
-# including git and Bundler 2.1.4
+# including git and Bundler 2.2.30
 
-ENV BUNDLER_VERSION 2.1.4
+ENV BUNDLER_VERSION 2.2.30
 
 RUN apt-get update && \
 
@@ -31,7 +31,7 @@ RUN apt-get update && \
 
     git-all \
 
-    && gem install bundler:2.1.4 \
+    && gem install bundler:2.2.30 \
 
     && bundle config --global silence_root_warning 1
 

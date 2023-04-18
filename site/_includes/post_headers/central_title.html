@@ -1,0 +1,33 @@
+{% comment %}
+  Side by Side Layout for Post Header
+{% endcomment %}
+
+{% assign current_date = 'now' | date: '%s' | plus: 0 %}
+{% assign post_date_to_compare = page.date | date: '%s' | plus: 0 %}
+
+<div class="has-background-white-ter">
+  <div class="container content-container" id="central-title-layout-container">
+    <h1 class="is-size-2 is-uppercase has-text-primary" data-cms-bind="#title" id="post-title">
+      {{ page.title }}
+    </h1>
+
+    {% if page.date %}
+      <date class="post-date">
+        {% include date_to_string_helper.html date=page.date use_year=true %}
+      </date>
+    {% endif %}
+
+    {% if page.path contains "_drafts" %}
+      <div class="tag is-warning">DRAFT POST</div>
+    {% endif %}
+    {% if page.published == false %}
+      <div class="tag is-info">UNPUBLISHED CHANGES</div>
+    {% endif %}
+
+    {% if page.layout != 'upcoming_event' %}
+      {% if post_date_to_compare >= current_date %}
+        <div class="tag is-info">FUTURE</div>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>

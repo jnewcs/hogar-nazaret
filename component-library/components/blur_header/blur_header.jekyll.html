@@ -1,0 +1,13 @@
+<div class="page-hero-image-container is-flex-container is-fully-centered">
+  <div
+    class="page-hero-image with_blur"
+    alt="{{ include.image_alt }}"
+    style="background: url('{{ include.image | relative_url }}') center center; background-size: {{ include.image_style }}; background-repeat: no-repeat">
+  </div>
+
+  <div class="p-1 has-text-{{ include.title_color }} has-text-centered" id="page-hero-title">
+    <h1 class="is-size-1 has-text-weight-bold">
+      {{ include.title }}
+    </h1>
+  </div>
+</div>

@@ -1,0 +1,149 @@
+collections_config:
+  noticias:
+    sort:
+      key: date
+    add_options:
+      - name: Add Noticia for Spanish Site
+        editor: visual
+    _enabled_editors:
+      - data
+      - visual
+    schemas:
+      default:
+        path: schemas/noticia.md
+        hide_extra_inputs: true
+        _inputs:
+          $.title:
+            type: text
+            label: Name of the Noticia
+            comment: This is different from the actual page title which should be added in the content blocks section
+          $.date:
+            type: datetime
+            label: Publish Date
+            allow_empty: false
+          $.work_in_progress:
+            type: checkbox
+            label: Work in progress?
+            comment: When checked, the noticia will not show up in the Noticias page
+            allow_empty: false
+          $.banner_image:
+            label: Preview Image
+            comment: This image is used for aggregate views (Noticias page)
+            type: image
+            allow_empty: true
+          $.banner_image_alt:
+            label: Preview image description
+            comment: Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in Spanish
+            allow_empty: true
+          $.banner_image_style:
+            label: Preview image style
+            type: select
+            options:
+              values:
+                - cover
+                - contain
+              allow_create: false
+              allow_empty: false
+          $.content_blocks:
+
+  posts:
+    sort:
+      key: date
+    add_options:
+      - name: Add News Article for English Site
+        editor: visual
+    _enabled_editors:
+      - data
+      - visual
+    schemas:
+      default:
+        path: schemas/post.md
+        hide_extra_inputs: true
+        _inputs:
+          $.title:
+            type: text
+            label: Name of the News Article
+            comment: This is different from the actual page title which should be added in the content blocks section
+          $.date:
+            type: datetime
+            label: Publish Date
+            allow_empty: false
+          $.work_in_progress:
+            type: checkbox
+            label: Work in progress?
+            comment: When checked, news article will not show up in the Posts page
+            allow_empty: false
+          $.banner_image:
+            label: Preview Image
+            comment: This image is used for aggregate views (News page)
+            type: image
+            allow_empty: true
+          $.banner_image_alt:
+            label: Preview image description
+            comment: Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in English
+            allow_empty: true
+          $.banner_image_style:
+            label: Preview image style
+            type: select
+            options:
+              values:
+                - cover
+                - contain
+              allow_create: false
+              allow_empty: false
+          $.content_blocks:
+
+  content_blocks_page_es:
+    name: Spanish Pages
+    disable_add_folder: true
+    disable_add: true
+    path: es/
+    _enabled_editors:
+      - data
+      - visual
+    schemas:
+      default:
+        path: schemas/content_blocks_page_es.md
+        hide_extra_inputs: true
+        _inputs:
+          $.title:
+            hidden: true
+          $.content_blocks:
+
+  content_blocks_page_en:
+    name: English Pages
+    disable_add_folder: true
+    disable_add: true
+    path: en/
+    _enabled_editors:
+      - data
+      - visual
+    schemas:
+      default:
+        path: schemas/content_blocks_page_en.md
+        hide_extra_inputs: true
+        _inputs:
+          $.title:
+            hidden: true
+          $.content_blocks:
+
+collection_groups:
+  - heading: "Spanish Website"
+    collections:
+      - noticias
+      - content_blocks_page_es
+  - heading: "English Website"
+    collections:
+      - posts
+      - content_blocks_page_en
+
+_inputs:
+  $.lang:
+    hidden: true
+  $.redirect_from:
+    hidden: true
+  $.layout:
+    hidden: true
+  $.lang_ref:
+    label: Identifier to link page to English/Spanish equivalent
+    allow_empty: true

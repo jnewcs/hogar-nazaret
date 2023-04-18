@@ -1,0 +1,96 @@
+---
+layout: default
+lazy_load: true
+---
+{% comment %}
+	This layout is used to by posts.md to display all of documents in
+	the _posts/ collection
+{% endcomment %}
+
+{% if page.lang == 'en' %}
+  {% assign related = site.posts | uniq | sort:"date" | reverse %}
+{% else %}
+  {% assign related = site.noticias | uniq | sort:"date" | reverse %}
+{% endif %}
+
+<!-- 21024000 is 8 months in seconds -->
+{% assign timeframe = 21024000 %}
+{% assign eight_months_in_seconds = "now" | date: "%s" | minus: timeframe | to_integer  %}
+{% assign current_date = 'now' | date: '%s' | plus: 0 %}
+{% assign shown_items = 0 %}
+
+<div class="container content-container">
+  <section class="is-medium">
+    <h3 class="is-size-3 has-text-centered">
+      {{ page.title }}
+    </h3>
+
+    <hr />
+
+    <div class="columns is-multiline is-nested mt-2">
+      {% for post in related %}
+        {% if post.work_in_progress == true %}
+          {% continue %}
+        {% endif %}
+        {% assign post_creation_date_in_seconds = post.date | date: "%s" | to_integer %}
+        {% if post_creation_date_in_seconds < eight_months_in_seconds %}
+          <!-- If the news post is older than 6 months, we hide it -->
+          {% continue %}
+        {% endif %}
+        {% assign shown_items = shown_items | plus: 1 %}
+
+        <div class="column is-full mb-2 mt-1">
+          <div class="columns is-desktop">
+            <div class="column is-one-quarter">
+              <figure class="image">
+                <img src="{{ post.banner_image | relative_url }}" alt="{{ page.banner_image_alt }}">
+              </figure>
+            </div>
+
+            <div class="column">
+              <div class="content">
+                <strong class="post-title">
+                  <a class="is-size-4" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </strong>
+                <div>
+                  <date>
+                    {% include date_to_string_helper.html date=post.date use_year=true %}
+                  </date>
+                </div>
+                {% if post.path contains "_drafts" %}
+                  <div class="tag is-warning">DRAFT POST</div>
+                {% endif %}
+                {% if post_creation_date_in_seconds >= current_date %}
+                  <div class="tag is-info">FUTURE</div>
+                {% endif %}
+                <p>
+                  {% if post.blurb_description %}
+                    {% assign content = post.blurb_description %}
+                  {% else %}
+                    {% assign content = post.content %}
+                  {% endif %}
+
+                  {% assign word_count = content | split: ' ' | size %}
+                  {% if word_count <= 30 %}
+                    {{ content }}
+                  {% else %}
+                    {{ content | truncatewords: 30 }}
+                  {% endif %}
+                </p>
+                <a href="{{ post.url | relative_url }}" class="button is-primary is-outlined is-medium">
+                  {{ site.data.languages[page.lang].read_more }}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    {% if shown_items == 0 %}
+      <h4 class="is-size-4 has-text-centered linear-primary-gradient is-full-width mt-2 mb-2">
+        {{ site.data.languages[page.lang].recent_news.none }}
+      </h4>
+    {% endif %}
+  </section>
+</div>

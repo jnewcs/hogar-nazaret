@@ -1,0 +1,190 @@
+<form action="{{ include.form_url }}" method="POST">
+  <input
+    hidden
+    name="_page"
+    value="{{ include.title }}"
+  >
+  <input type="hidden" name="_language" value="{{ include.lang }}" />
+
+  {% if include.fields.name.presence %}
+    <div class="field">
+      <label class="label">
+        {{ include.fields.name.label }}
+        {% if include.fields.name.required %}
+            *
+        {% endif %}
+      </label>
+      <div class="control">
+        <input
+          name="{{ include.fields.name.label }}"
+          class="input"
+          type="text"
+          {% if include.fields.name.required %}required{% endif %}
+        >
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="field is-horizontal">
+    <div class="field-body">
+      {% if include.fields.email.presence %}
+        <div class="field">
+          <label class="label">
+            {{ include.fields.email.label }}
+            {% if include.fields.email.required %}
+            *
+            {% endif %}
+          </label>
+          <div class="control">
+            <input
+              name="{{ include.fields.email.label }}"
+              class="input"
+              type="email"
+              {% if include.fields.email.required %}required{% endif %}
+            >
+          </div>
+        </div>
+      {% endif %}
+
+      {% if include.fields.phone.presence %}
+        <div class="field">
+          <label class="label">
+            {{ include.fields.phone.label }}
+            {% if include.fields.phone.required %}
+            *
+            {% endif %}
+          </label>
+          <div class="control">
+            <input
+              name="{{ include.fields.phone.label }}"
+              class="input"
+              type="tel"
+              {% if include.fields.phone.required %}required{% endif %}
+            >
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  {% if include.fields.sponsorship_type.presence %}
+    <div class="field">
+      <label class="label">
+        {{ include.fields.sponsorship_type.label }}
+        {% if include.fields.sponsorship_type.required %}
+        *
+        {% endif %}
+      </label>
+
+      <div class="control">
+        {% for type in include.fields.sponsorship_type.types %}
+          <div>
+            <label class="checkbox">
+              <input name="{{ type }}" type="checkbox">
+              {{ type }}
+            </label>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+  {% if include.fields.visit_dates.presence %}
+    <div class="field">
+      <label class="label">
+        {{ include.fields.visit_dates.label.first_preference }}
+        {% if include.fields.visit_dates.required %}
+          *
+        {% endif %}
+      </label>
+      <div class="control">
+        <input
+          name="{{ include.fields.visit_dates.label.first_preference }}"
+          class="input"
+          type="date"
+          {% if include.fields.visit_dates.required %}required{% endif %}
+        >
+      </div>
+    </div>
+
+    <div class="field">
+      <label class="label">
+        {{ include.fields.visit_dates.label.second_preference }}
+        {% if include.fields.visit_dates.required %}
+          *
+        {% endif %}
+      </label>
+      <div class="control">
+        <input
+          name="{{ include.fields.visit_dates.label.second_preference }}"
+          class="input"
+          type="date"
+          {% if include.fields.visit_dates.required %}required{% endif %}
+        >
+      </div>
+    </div>
+  {% endif %}
+
+  {% if include.fields.company.presence %}
+    <div class="field">
+      <label class="label">
+        {{ include.fields.company.label }}
+        {% if include.fields.company.required %}
+        *
+        {% endif %}
+      </label>
+      <div class="control">
+        <input
+          name="{{ include.fields.company.label }}"
+          class="input"
+          type="text"
+          {% if include.fields.company.required %}required{% endif %}
+        >
+      </div>
+    </div>
+  {% endif %}
+
+  {% if include.fields.questions_and_comments.presence %}
+    <div class="field">
+      <label class="label">
+        {{ include.fields.questions_and_comments.label }}
+        {% if include.fields.questions_and_comments.required %}
+          *
+        {% endif %}
+      </label>
+      <div class="control">
+        <div class="control">
+          <textarea
+            name="{{ include.fields.questions_and_comments.label }}"
+            class="textarea"
+            {% if include.fields.questions_and_comments.required %}required{% endif %}
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if include.fields.description.presence %}
+    <div class="field">
+      <label class="label">
+        {{ include.fields.description.label }}
+        {% if include.fields.description.required %}
+          *
+        {% endif %}
+      </label>
+      <div class="control">
+        <div class="control">
+          <textarea
+            name="{{ include.fields.description.label }}"
+            class="textarea"
+            {% if include.fields.description.required %}required{% endif %}
+          ></textarea>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  <div class="control">
+    <input class="button is-secondary" type="submit" value="{{ include.submit.text }}">
+  </div>
+</form>

@@ -1,0 +1,33 @@
+<div class="column is-one-third">
+  <div class="card">
+    {% if include.image %}
+      <div class="card-image">
+        <figure class="image pt-2">
+          <img style="height: 250px; width: auto;" src="{{ include.image | relative_url }}" alt="{{ include.name }}">
+        </figure>
+      </div>
+    {% endif %}
+
+    <div class="card-content has-text-centered">
+      <div class="title is-size-5 mb-0">
+        {{ include.name }}
+      </div>
+
+      {% if include.city %}
+        <div>
+          <span class="tag is-light mt-1">
+            {{ include.city }}
+          </span>
+        </div>
+      {% endif %}
+
+      <hr />
+
+      <div>
+        <span class="tag is-{{ include.tag_style }}">
+          {{ include.position }}
+        </span>
+      </div>
+    </div>
+  </div>
+</div>

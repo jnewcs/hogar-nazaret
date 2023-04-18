@@ -1,0 +1,693 @@
+
+/* Generic Helpers */
+h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
+  font-family: 'Patrick Hand', cursive;
+}
+#navbar-spacer {
+  margin-top: 52px;
+}
+.round-border {
+  border-radius: 50%;
+}
+.border-top-primary-light {
+  border-top: 2px solid $primary-light;
+}
+.clickable {
+  cursor: pointer;
+}
+.is-full-width { width: 100%; }
+.is-half-width { width: 50%; }
+.mt-1 { margin-top: 1em; }
+.mt-2 { margin-top: 2em; }
+.mb-0 { margin-bottom: 0px !important; }
+.mb-tiny { margin-bottom: 5px !important; }
+.mb-1 { margin-bottom: 1em; }
+.mb-2 { margin-bottom: 2em; }
+.mr-1 { margin-right: 1em; }
+.ml-1 { margin-left: 1em; }
+.ml-tiny { margin-left: 5px; }
+.mr-tiny { margin-right: 5px; }
+
+.p-1 { padding: 1em; }
+.pt-0 { padding-top: 0px !important; }
+.pt-1 { padding-top: 1em; }
+.pt-2 { padding-top: 2em; }
+.pb-0 { padding-bottom: 0px !important; }
+.pb-1 { padding-bottom: 1em; }
+.pb-2 { padding-bottom: 2em; }
+.pb-3 { padding-bottom: 3em; }
+
+.is-flex-container { display: flex; }
+.is-vertically-centered { align-items: center; }
+.is-horizontally-centered { justify-content: center; }
+.is-fully-centered {
+  @extend .is-vertically-centered;
+  @extend .is-horizontally-centered;
+}
+.is-spaced-between { justify-content: space-between; }
+.is-flex-end { justify-content: flex-end; }
+.content-container { padding: 2em; }
+
+.position-relative { position: relative; }
+.has-background-primary-light { background-color: $primary-light; }
+.has-background-primary-light-with-opacity { background-color: $primary-light-with-opacity; }
+#tag-highlight { background-color: $secondary; color: white }
+
+.contain-no-repeat {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+a.button.is-secondary, button.is-secondary {
+  @extend .has-text-white;
+  background-color: $secondary;
+  border-color: transparent;
+  &:hover {
+    background-color: $secondary-darker;
+    color: $white-bis !important;
+  }
+}
+.has-text-secondary {
+  color: $secondary !important;
+}
+.has-text-primary-light {
+  color: $primary-light !important;
+}
+.button {
+  white-space: normal !important;
+  height: inherit !important;
+}
+
+/* Site Logo */
+#site-logo {
+  z-index: 2;
+  position: absolute;
+  left: 20px;
+  top: 0;
+}
+
+/* Navbar layout */
+#navbarContent {
+  .navbar-item {
+    font-weight: 400;
+    font-size: 1.1em;
+    text-transform: uppercase;
+  }
+  .dropdown-has-active {
+    color: $navbar-item-active-color;
+
+    &:after {
+      border-color: $navbar-item-active-color;
+    }
+  }
+  #language-switcher {
+    margin-left: 120px;
+
+    a {
+      color: $white-bis;
+    }
+    li:not(.is-active) a:hover {
+      background: $secondary;
+      border-color: $white-bis;
+    }
+    li.is-active a {
+      background: $white-bis;
+      border-color: $white-bis;
+      color: $black-bis;
+    }
+  }
+}
+
+/* Post Layouts - Side by Side */
+.page-content {
+  p {
+    @extend .pt-1;
+  }
+}
+#post-side-by-side-layout-image { min-height: 350px; }
+
+/* Page Hero Image */
+.page-hero-image-container {
+  position: relative;
+  overflow: hidden;
+  min-height: 350px;
+}
+.page-hero-image {
+  position: absolute;
+  z-index: 1;
+  left: -15px;
+  right: -15px;
+  top: -15px;
+  bottom: -15px;
+  &.with_blur {
+    filter: blur(3.5px);
+  }
+}
+#page-hero-title {
+  z-index: 2;
+  width: 100%;
+  letter-spacing: 8px;
+  font-weight: 600;
+  &.block_styled {
+    background-color: $primary-light;
+  }
+}
+
+/* Carousel */
+#news-carousel-container img {
+  max-height: 300px;
+}
+.carousel-image {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.carousel-slide {
+  height: 55vh;
+}
+#controls-container {
+  position: absolute;
+  width: calc(100% - 20px);
+  left: 10px;
+  top: 50%;
+  margin-top: -22.5px;
+  z-index: 2;
+  outline: none;
+}
+.news-container-number {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+#autoplay-button[data-action="stop"], #autoplay-button[data-action="start"] {
+  opacity: 0.3;
+  box-sizing: border-box;
+  border-color: transparent transparent transparent #202020;
+  background-color: transparent;
+  transition: 100ms all ease;
+  will-change: border-width;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+#autoplay-button[data-action="start"] {
+  height: 18px;
+  border-style: solid;
+  border-width: 9px 0 9px 17px;
+}
+#autoplay-button[data-action="stop"] {
+  height: 20px;
+  border-style: double;
+  border-width: 0 0 0 17px;
+}
+
+/* Padrinos and Madrinas Program */
+.donar-photo {
+  height: 200px;
+  width: 100%;
+}
+.donar-photo-modal {
+  height: 100px;
+  width: 100%;
+}
+.donar-box {
+  border: 3px solid $primary-light;
+  cursor: pointer;
+}
+.donar-box-caption {
+  background-color: rgba(28,2,122,.65);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  transition: background-color .35s;
+}
+
+/* Tabs */
+#tab-contents {
+  .tab-content {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+// Pattern backgrounds
+.pattern-dots-sm {
+  background-image: radial-gradient($primary-light 1.5px, transparent 1.5px);
+  background-size: calc(10 * 1.5px) calc(10 * 1.5px)
+}
+
+// Donation Boxes
+.radio {
+  font-size: inherit;
+  margin: 0;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+@supports(-webkit-appearance: none) or (-moz-appearance: none) {
+  .radio {
+    z-index: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: white;
+    border: 2px solid #e2ebf6;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    outline: none;
+    transition: background 0.2s ease-out, border-color 0.2s ease-out;
+
+    &::after {
+      border: 2px solid white;
+      border-top: 0;
+      border-left: 0;
+      content: '';
+      display: block;
+      height: 0.75rem;
+      left: 25%;
+      position: absolute;
+      top: 50%;
+      transform: rotate(45deg) translate(-50%, -50%);
+      width: 0.375rem;
+    }
+
+    &:checked {
+      background: $secondary;
+      border-color: $secondary;
+    }
+  }
+
+  .card:hover .radio {
+    border-color: white;
+
+    &:checked {
+      border-color: $secondary;
+    }
+  }
+}
+
+.card:hover .donar-box {
+  border-color: $secondary;
+}
+
+.radio:checked ~ .donar-box {
+  border-color: $secondary;
+}
+
+.radio:focus ~ .donar-box {
+  box-shadow: 0 0 0 2px $secondary;
+}
+
+/* 404 */
+.linear-primary-gradient {
+  font-size: 7rem;
+  font-weight: 200;
+  background-color: $primary-light; /* fallback color if gradients are not supported */
+  background-image: -webkit-linear-gradient(130deg, $primary-light, $primary); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  background-image:    -moz-linear-gradient(130deg, $primary-light, $primary); /* For Firefox (3.6 to 15) */
+  background-image:      -o-linear-gradient(130deg, $primary-light, $primary); /* For old Opera (11.1 to 12.0) */
+  background-image:         linear-gradient(130deg, $primary-light, $primary); /* Standard syntax; must be last */
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+/* Offline Container */
+#offline-notification-container {
+  position: fixed;
+  bottom: 0px;
+}
+
+/* Collaborators */
+#collaborators .collaborator-tag {
+  height: 3em;
+  white-space: inherit;
+}
+
+/* Donation modal */
+.custom-modal-close {
+  top: 8px;
+  right: 15px;
+  position: absolute;
+  z-index: 1000;
+
+  &:before, &:after {
+    background-color: black;
+  }
+}
+
+/* Preview notification */
+.staging-notification {
+  position: fixed;
+  top: 52px;
+  z-index: 3;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
+}
+/* Give a Hug */
+.is-paypal {
+	background-color: $paypal;
+}
+.is-ath-movil {
+	background-color:$athMovil;
+}
+.is-vtop {
+	align-self: flex-start;
+}
+#event-donation-engine {
+	background-color: #FF4C00;
+}
+.event-donation-engine-container{
+	border-radius: 20px; margin: 15px 0;
+}
+.event-donation-card {
+	position: relative;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-pink.png) no-repeat top center;
+	background-size: 100% auto;
+	transform:  rotate(-1deg);
+	z-index: 27;
+}
+.event-donation-card svg {
+	position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+ul#donation-cards li:nth-child(2n) {
+	transform: rotate(2deg);
+	z-index: 26;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Yellow.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(3n) {
+	transform: rotate(-3deg);
+	z-index: 25;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Orange.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(4n) {
+	transform: rotate(6deg);
+	z-index: 25;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Gray.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(5n) {
+	transform: rotate(-5deg);
+	z-index: 25;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Yellow.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(6n) {
+	transform: rotate(3deg);
+	z-index: 25;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Gray.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(7n) {
+	transform: rotate(9deg);
+	z-index: 25;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-pink.png) no-repeat top center;
+	background-size: 100% auto;
+}
+ul#donation-cards li:nth-child(8n) {
+	transform: rotate(-6deg);
+	z-index: 25;
+	background: url(/uploads/give_a_hug/Tarjetas-Maraton-Orange.png) no-repeat top center;
+	background-size: 100% auto;
+}
+.event-donation-card-name{
+	position: absolute;
+	left: 21%;
+  top: 16%;
+}
+.event-donation-card-gift{
+	position: absolute;
+  left: 34%;
+  top: 30%;
+}
+input[name="give_a_hug_donation_amount"]:checked + label {
+  background: $primary;
+  color: $white;
+}
+input[name="give_a_hug_donation_amount"][disabled="true"] + label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+#ATHMreopen-modal {
+  position: fixed !important;
+  z-index: 100;
+}
+.event-donation-card img {
+	opacity: 0;
+}
+/* Loading Spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+  background-color: $primary;
+  margin: 100px auto;
+  -webkit-animation: sk-rotateplane 1.2s infinite ease-in-out;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+
+  &.small {
+    margin: 20px auto;
+  }
+}
+@-webkit-keyframes sk-rotateplane {
+  0% { -webkit-transform: perspective(120px) }
+  50% { -webkit-transform: perspective(120px) rotateY(180deg) }
+  100% { -webkit-transform: perspective(120px) rotateY(180deg)  rotateX(180deg) }
+}
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg)
+  } 50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+  } 100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+/* Box shadow effects */
+.primary-light-box-shadow {
+  box-shadow:
+    1px 2px 2px hsla(253deg, 97%, 24%, 0.2),
+    2px 4px 4px hsla(253deg, 97%, 24%, 0.2),
+    4px 8px 8px hsla(253deg, 97%, 24%, 0.2),
+    8px 16px 16px hsla(253deg, 97%, 24%, 0.2),
+    16px 32px 32px hsla(253deg, 97%, 24%, 0.2);
+}
+
+/* Desktops and above */
+@media only screen and (min-width: 1024px) {
+  .masonry-grid {
+    column-count: 3;
+  }
+}
+
+/* Tablets only */
+@media only screen and (min-width: $navbar-breakpoint) and (max-width: 1480px) {
+  .navbar-item, .navbar-link {
+    padding: .5rem 0.5rem;
+  }
+}
+@media only screen and (min-width: 1250px) and (max-width: 1480px) {
+  html.es {
+    #navbarContent .navbar-item,
+    #navbarContent .button,
+    #language-switcher a {
+      font-size: 0.92em;
+    }
+  }
+}
+@media only screen and (min-width: 1075px) and (max-width: 1250px) {
+  html.es {
+    #navbarContent .navbar-item,
+    #navbarContent .button,
+    #language-switcher a {
+      font-size: 0.95em;
+    }
+  }
+}
+@media only screen and (min-width: $navbar-breakpoint) and (max-width: 1075px) {
+  html.es {
+    #navbarContent .navbar-item,
+    #navbarContent .button,
+    #language-switcher a {
+      font-size: 0.92em;
+    }
+  }
+}
+@media only screen and (min-width: $navbar-breakpoint) and (max-width: 1250px) {
+  .masonry-grid {
+    column-count: 2 !important;
+  }
+
+  #navbar-spacer {
+    margin-top: 121px;
+  }
+
+  #main-link-donate-needs-social-container {
+    flex-direction: column;
+  }
+
+  #main-link-container {
+    order: 1;
+    margin-bottom: 1em;
+  }
+
+  #donate-needs-social-container {
+    order: 0;
+    justify-content: flex-end;
+    margin-top: 1em;
+  }
+}
+
+/* Mobile devices and below */
+@media screen and (max-width: $navbar-breakpoint - 1) {
+  #navbarContent #language-switcher {
+    margin-left: 0px;
+
+    a {
+      color: $black-bis;
+      border-color: $white-ter;
+    }
+    li:not(.is-active) a:hover {
+      background: $secondary;
+      border-color: $white-ter;
+      color: $white-bis;
+    }
+    li.is-active a {
+      background: $secondary;
+      border-color: $white-ter;
+      color: $white-bis;
+    }
+  }
+  #site-logo {
+    left: 5px;
+    width: 60px;
+    height: 60px;
+  }
+
+  #da-burger {
+    margin-left: inherit;
+  }
+
+  .mobile-nav-call-to-actions-es a {
+    font-size: 15px;
+  }
+
+  #navbarContent {
+    padding-top: 1em;
+
+    .navbar-item {
+      &.is-active {
+        color: $secondary !important;
+      }
+      &.has-dropdown {
+        .navbar-dropdown {
+          display: none;
+        }
+      }
+      &.is-open {
+        .navbar-dropdown {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .navbar-link:not(.is-arrowless)::after {
+    border-color: #4a4a4a;
+  }
+
+  a.navbar-link:focus {
+    color: inherit;
+  }
+
+  .carousel-slide {
+    height: auto;
+  }
+  .custom-modal-close {
+    right: 15px;
+  }
+  #donate-select {
+    font-size: 1rem;
+  }
+  .donation-prompts {
+    display: flex;
+    flex-direction: column;
+
+    .donation-prompt-other {
+      order: 1;
+    }
+  }
+  .carousel-text {
+    padding: 1em 2.5rem 3rem 2.5rem;
+  }
+  .carousel-image {
+    height: auto !important;
+  }
+  #post-side-by-side-layout-container {
+    flex-direction: column;
+  }
+  #post-side-by-side-layout-title {
+    order: 2;
+    flex: 1 0 auto;
+  }
+  #post-side-by-side-layout-image {
+    order: 1;
+  }
+  .prev-next-navigation-container {
+    flex-direction: column;
+  }
+  .modal-image-count { top: 10px; }
+  .modal-image-close { top: 15px; }
+  #image-modal-controls {
+    bottom: 20px;
+    top: initial;
+  }
+  .modal-highlight {
+    max-height: 75vh;
+  }
+  #main-give-a-hug-container {
+    flex-direction: column;
+    #event-donation-engine-slogan {
+      order: 1;
+    }
+  }
+  #event-header {
+    padding: 1.5em;
+    #event-logo img { height: 100px; }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #donation-amount-five, #donation-amount-amigos {
+    flex: none;
+    width: 50%;
+  }
+}
+
+/* iPhone SE size and below */
+@media screen and (max-width: 350px) {
+  .mobile-nav-call-to-actions-es a {
+    font-size: 13px;
+  }
+}

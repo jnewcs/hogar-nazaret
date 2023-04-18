@@ -1,0 +1,85 @@
+{% comment %}
+  Flyer Layout for Post Header
+{% endcomment %}
+
+<div class="has-background-white-ter">
+  <div class="container content-container has-text-centered" id="flyer-layout-container">
+    <img
+      class="masonry-image flyer-image-modal-image clickable"
+      src="{{ page.banner_image }}"
+      alt="{{ page.banner_image_alt }}"
+      style="height: {{ page.banner_image_height }}px"
+    />
+
+    <h2 class="is-size-2 is-uppercase has-text-primary has-text-centered editable" data-cms-bind="#title">
+      {{ page.title }}
+    </h2>
+    {% if page.show_call_to_action %}
+      <a
+        class="button is-secondary is-medium mb-1"
+        href="{{ page.call_to_action_href }}"
+        target="_blank"
+      >
+        {{ page.call_to_action }}
+      </a>
+    {% endif %}
+
+    {% if include.date %}
+      <h4 class="is-size-4">
+        <date>
+          {% include day_of_week_helper.html date=include.date %}
+        </date>
+      </h4>
+
+      <h3 class="is-size-3">
+        <date class="post-date has-text-centered">
+          {% include date_to_string_helper.html date=include.date use_year=true %}
+        </date>
+      </h3>
+
+      <h4 class="is-size-4">
+        <div class="tag is-info is-light is-medium">
+          <a
+            href="{{ page.location_href }}"
+            target="_blank"
+          >
+            {{ page.location }}
+          </a>
+        </div>
+      </h4>
+
+      <h4 class="is-size-4">
+        <date>
+          {{ page.time }}
+        </date>
+      </h4>
+    {% endif %}
+
+    <div class="has-text-centered">
+      {% if page.path contains "_drafts" %}
+        <div class="tag is-warning">DRAFT POST</div>
+      {% endif %}
+      {% if page.published == false %}
+        <div class="tag is-info">UNPUBLISHED CHANGES</div>
+      {% endif %}
+
+      {% if page.layout != 'upcoming_event' %}
+        {% if post_date_to_compare >= current_date %}
+          <div class="tag is-info">FUTURE</div>
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="flyer-image-modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-content">
+    <p class="image is-flex-container is-horizontally-centered">
+      <img class="modal-highlight" id="flyer-image-modal-highlight">
+    </p>
+  </div>
+
+  <button class="modal-close modal-image-close is-large" aria-label="close" id="flyer-image-modal-close"></button>
+</div>

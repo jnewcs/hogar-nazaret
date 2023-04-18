@@ -1,0 +1,19 @@
+{% comment %}
+  Split Layout for Post Content
+{% endcomment %}
+
+<div class="columns">
+  <div class="column">
+    <div class="content">
+      {{ content }}
+    </div>
+  </div>
+
+  {% if page.banner_image %}
+    <div class="column is-one-third">
+      <figure class="image">
+        <img class="" src="{{ page.split_image | relative_url }}" alt="{{ page.banner_image_alt }}">
+      </figure>
+    </div>
+  {% endif %}
+</div>

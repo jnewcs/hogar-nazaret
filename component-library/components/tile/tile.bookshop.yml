@@ -1,0 +1,55 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Tile
+  description: Tile with a title, message, and call to action
+  icon: wysiwyg
+  tags:
+    - Tile
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  title: "Tile Title!"
+  content: bookshop:content
+  call_to_action:
+    text: "Tile Button"
+    url: "https://www.google.com"
+  has_children: false
+  children: [bookshop:tile]
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  has_children:
+    type: checkbox
+    comment: When checked, all other attributes are ignored. Tile becomes container for other tiles.
+    allow_empty: false
+  title:
+    type: text
+    allow_empty: false
+  message:
+    type: text
+    allow_empty: false
+  call_to_action:
+    type: object
+    allow_empty: false
+    options:
+      text:
+        type: text
+        label: Text shown in `call to action` button
+      url:
+        type: url
+        label: URL for `call to action` button
+      style:
+        type: select
+        label: Button style
+        options:
+          values:
+            - primary
+            - secondary
+            - plain
+          allow_create: false
+          allow_empty: false

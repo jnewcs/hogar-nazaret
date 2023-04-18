@@ -1,0 +1,53 @@
+---
+layout: default
+lazy_load: true
+---
+{% comment %}
+	This layout is used by the documents in the `_posts` and `_noticias` collection
+{% endcomment %}
+
+<div class="container content-container">
+  <div class="has-text-centered">
+    {% if page.lang == 'en' %}
+      {% assign link = '/en/posts' | relative_url %}
+    {% else %}
+      {% assign link = '/es/noticias' | relative_url %}
+    {% endif %}
+
+    <div class="prev-next-navigation-container is-flex-container columns is-horizontally-centered pb-2">
+      {% if page.previous %}
+        <div class="column is-half">
+          <a class="tag is-size-5 mb-1 mt-1" href="{{ page.previous.url | relative_url }}">
+            {{ site.data.languages[page.lang].previous_post }}
+          </a>
+
+          <div class="navigation-post-container">
+            <a class="clickable is-size-5" href="{{ page.previous.url | relative_url }}" title="{{ page.previous.title }}">
+              {{ page.previous.title }}
+            </a>
+          </div>
+        </div>
+      {% endif %}
+
+      {% if page.next %}
+        <div class="column is-half">
+          <hr class="is-hidden-tablet" />
+
+          <a class="tag is-size-5 mb-1 mt-1" href="{{ page.next.url | relative_url }}">
+            {{ site.data.languages[page.lang].next_post }}
+          </a>
+
+          <div class="navigation-post-container">
+            <a class="clickable is-size-5" href="{{ page.next.url | relative_url }}" title="{{ page.next.title }}">
+              {{ page.next.title }}
+            </a>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <a class="button is-primary is-outlined is-medium" href="{{ link }}">
+      {{ site.data.languages[page.lang].posts }}
+    </a>
+  </div>
+</div>

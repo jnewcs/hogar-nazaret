@@ -1,0 +1,49 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Blur Header
+  description: Header with a blurred image and centered title
+  icon: blur_on
+  tags:
+    - Header
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  title: "Page Title"
+  image: null
+  image_style: cover
+  title_color: dark
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    comment: Centered page title
+    type: text
+  image:
+    type: image
+  image_alt:
+    type: text
+    label: Image description
+    comment: Adding a description benefits visually impaired users who use screen readers when browsing the site
+  image_style:
+    type: select
+    label: Image style
+    options:
+      values:
+        - cover
+        - contain
+      allow_create: false
+      allow_empty: false
+  title_color:
+    type: select
+    label: Image style
+    options:
+      values:
+        - dark
+        - white
+      allow_create: false
+      allow_empty: false

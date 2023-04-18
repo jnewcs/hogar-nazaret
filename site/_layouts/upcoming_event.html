@@ -1,0 +1,32 @@
+---
+layout: default
+lazy_load: true
+---
+{% comment %}
+  This layout is used by the documents in the _upcoming_events/ collection
+{% endcomment %}
+
+<div class="container content-container">
+  <section class="is-medium">
+    <div class="pb-2 content page-content">
+      {% if page.content_layout == 'split' %}
+        {% include post_content/split.html %}
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </div>
+
+    {% if page.lang == 'en' %}
+      {% assign link = '/en/upcoming_events' | relative_url %}
+    {% else %}
+      {% assign link = '/es/proximos_eventos' | relative_url %}
+    {% endif %}
+    <div class="has-text-centered">
+      <hr />
+
+      <a class="button is-primary is-outlined is-medium" href="{{ link }}">
+        {{ site.data.languages[page.lang].upcoming_events.more }}
+      </a>
+    </div>
+  </section>
+</div>
