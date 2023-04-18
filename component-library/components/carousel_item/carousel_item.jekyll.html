@@ -19,7 +19,7 @@
         {% include full_page_carousel_content.html higlight=highlight %}
       {% else %}
         <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
-          {% if include.image_height and include.image_width %}
+          {% if include.image_custom_dimensions %}
             <img
               class="carousel-image"
               src="{{ include.image | relative_url }}"

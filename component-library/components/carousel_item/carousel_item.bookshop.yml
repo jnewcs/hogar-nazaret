@@ -14,6 +14,7 @@ blueprint:
   creation_date: 2023-04-10T12:00:00.000+00:00
   content: bookshop:content
   image: "/uploads/carousel_highlights/child_prevention_month.jpg"
+  image_custom_dimensions: true
   image_width: 100
   image_height: 25
   hide_from_carousel: false
@@ -46,13 +47,18 @@ _inputs:
   image:
     type: image
     allow_empty: false
+  image_custom_dimensions:
+    type: checkbox
+    label: Use custom image dimensions?
   image_height:
-    label: "Height of the image. If not specified along with `width`, the image will be rendered using default dimensions"
+    label: "Manual height of the image"
     type: number
+    hidden: !image_custom_dimensions
     allow_empty: true
   image_width:
-    label: "Width of the image. If not specified along with `height`, the image will be rendered using default dimensions"
+    label: "Manual height of the image"
     type: number
+    hidden: !image_custom_dimensions
     allow_empty: true
   call_to_action:
     type: object
