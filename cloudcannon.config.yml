@@ -8,6 +8,10 @@ collections_config:
     _enabled_editors:
       - data
       - visual
+    preview:
+      text:
+        - key: date
+        - Publish date
     schemas:
       default:
         path: schemas/noticia.md
