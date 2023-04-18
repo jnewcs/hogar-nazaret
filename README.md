@@ -52,7 +52,7 @@ git clone git@github.com:jnewcs/hogar-nazaret.git
 Once the repo has been cloned locally, you should navigate into the repo and run bundler to install the [gems](https://jekyllrb.com/docs/ruby-101/#gems) specified in this repo:
 
 ```
-cd ~/personal_repos/hogar-nazaret/docs  # You don't need this if you are already in the repo
+cd ~/personal_repos/hogar-nazaret/site  # You don't need this if you are already in the repo
 
 bundle install
 ```
@@ -61,7 +61,7 @@ bundle install
 You are now ready to preview content locally. Jekyll is a static site generator so every time we change a file, it generates a new build of the site and stores it within the `_site` folder locally. This mimics the building process that GitHub Pages does for us to publish the site to production at https://hogarjesusdenazaret.org. This is the basic command you can run to build the site locally:
 
 ```
-cd ~/personal_repos/hogar-nazaret/docs  # You don't need this if you are already in the repo
+cd ~/personal_repos/hogar-nazaret/site  # You don't need this if you are already in the repo
 
 bundle exec jekyll serve
 ```
@@ -91,7 +91,7 @@ If it works properly, you now can preview the site at http://127.0.0.1:4000. If 
 We currently use [Forestry.io](https://forestry.io/) as our content management system (CMS). Within our CMS, we can preview content before commiting the changes to the `master` branch which will change https://hogarjesusdenazaret.org. We call this our "Staging" environment. If you want to view the "Staging" environment locally, you can run this command:
 
 ```
-cd ~/personal_repos/hogar-nazaret/docs  # You don't need this if you are already in the repo
+cd ~/personal_repos/hogar-nazaret/site  # You don't need this if you are already in the repo
 
 bundle exec jekyll serve --drafts --future --unpublished --port 8080 --host 0.0.0.0 -d _site
 ```
