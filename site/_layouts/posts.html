@@ -14,7 +14,7 @@ lazy_load: true
 {% endif %}
 
 <!-- 15768000 is 6 months in seconds -->
-{% assign timeframe = 15768000 %}
+{% assign timeframe = 1576800000000000000 %}
 {% assign six_months_in_seconds = "now" | date: "%s" | minus: timeframe | to_integer  %}
 {% assign current_date = 'now' | date: '%s' | plus: 0 %}
 {% assign shown_items = 0 %}

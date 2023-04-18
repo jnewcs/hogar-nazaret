@@ -15,6 +15,7 @@ content_blocks:
     title: Sorpresa de Año Nuevo del PR Relief Fund NY
     date: 2018-01-04T12:00:00.000+00:00
     image: /uploads/2018/relief_fund/gifts.png
+    image_alt: Regalos
     image_style: contain
 
   - _bookshop_name: content

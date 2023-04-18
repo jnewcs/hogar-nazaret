@@ -18,6 +18,9 @@
         backface-visibility: hidden; /* Remove Image flickering on hover */
       }
     }
+    &.has-2 {
+      column-count: 2 ;
+    }
   }
   
   /* Image Modal */

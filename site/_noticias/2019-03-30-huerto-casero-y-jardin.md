@@ -23,7 +23,7 @@ content_blocks:
     content_html: >-
       <p>El pasado marzo 2019, misioneros de la Iglesia La Familia de Wisconsin se dieron a la tarea de adaptar el área aledaña al Salón Educativo del Hogar a un huerto y jardín.</p>
 
-      <p>El huerto casero proveerá frutos comestibles orgánicos tales como pimientos, gandules y tomates para el consumo del Hogar.  El jardín permitirá a los niños estar en contacto con la naturaleza, mientras aprenden su importancia y cómo cuidarla.</p>
+      <p>El huerto casero proveerá frutos comestibles orgánicos tales como pimientos, gandules y tomates para el consumo del Hogar. El jardín permitirá a los niños estar en contacto con la naturaleza, mientras aprenden su importancia y cómo cuidarla.</p>
 
       <p>En la foto aparece nuestra Directora Ejecutiva Antoinette Beltrán Meléndez con los misioneros que estuvieron presentes. ¡Agradecemos de corazón a la Iglesia La Familia su maravillosa iniciativa!</p>
 

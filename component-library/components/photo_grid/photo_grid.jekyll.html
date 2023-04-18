@@ -1,5 +1,5 @@
 <div class="container content-container">
-  <div class="mt-2 masonry-grid">
+  <div class="mt-2 masonry-grid {% if include.photos.size < 5 %}has-2{% endif %}">
     {% for photo in include.photos %}
       <div class="brick">
         <img class="masonry-image post-image-modal-image clickable" src="{{ photo | relative_url }}" />

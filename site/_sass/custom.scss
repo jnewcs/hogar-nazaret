@@ -536,7 +536,7 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
 }
 @media only screen and (min-width: $navbar-breakpoint) and (max-width: 1250px) {
   .masonry-grid {
-    column-count: 2;
+    column-count: 2 !important;
   }
 
   #navbar-spacer {
