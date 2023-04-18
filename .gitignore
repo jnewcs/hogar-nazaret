@@ -1,8 +1,11 @@
 _site/
 site/_site/
+docs/_site/
 site/.sass-cache/
+docs/.sass-cache/
 .DS_Store
 */.DS_Store
 *.code-workspace
 site/.jekyll-cache/
+docs/.jekyll-cache/
 node_modules

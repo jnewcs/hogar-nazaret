@@ -4,9 +4,9 @@
   "description": "Website for Hogar Jesus de Nazaret",
   "scripts": {
     "bookshop": "bookshop-browser",
-    "jekyll": "BUNDLE_GEMFILE=site/Gemfile bundle exec jekyll serve --port 6060 --trace --unpublished --source site",
+    "jekyll": "BUNDLE_GEMFILE=docs/Gemfile bundle exec jekyll serve --port 6060 --trace --unpublished --source site",
     "start": "run-p bookshop jekyll",
-    "postinstall": "mkdir -p site/node_modules/.bin/ && ln -sf ../../../node_modules/.bin/postcss site/node_modules/.bin/postcss"
+    "postinstall": "mkdir -p docs/node_modules/.bin/ && ln -sf ../../../node_modules/.bin/postcss docs/node_modules/.bin/postcss"
   },
   "devDependencies": {
     "@bookshop/browser": "3.4.1",
