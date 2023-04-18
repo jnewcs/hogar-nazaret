@@ -15,6 +15,7 @@ content_blocks:
         hide_from_carousel: false
         always_show: true
         image: "/uploads/carousel_highlights/kids_circle.jpg"
+        image_custom_dimensions: false
         call_to_action:
           text: The Hogar
           opens_donate_modal: false
@@ -27,6 +28,7 @@ content_blocks:
         hide_from_carousel: false
         always_show: true
         image: "/uploads/carousel_highlights/child_prevention_month.jpg"
+        image_custom_dimensions: true
         image_height: 200
         image_width: 275
         call_to_action:
