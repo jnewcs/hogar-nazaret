@@ -10,6 +10,9 @@ collections_config:
       - visual
     preview:
       subtext:
+        - key: title
+        - Noticia Title
+      subtext:
         - key: date
         - Publish date
     schemas:
@@ -59,6 +62,13 @@ collections_config:
     _enabled_editors:
       - data
       - visual
+    preview:
+      subtext:
+        - key: title
+        - News Title
+      subtext:
+        - key: date
+        - Publish date
     schemas:
       default:
         path: schemas/post.md
