@@ -13,9 +13,9 @@ lazy_load: true
   {% assign related = site.noticias | uniq | sort:"date" | reverse %}
 {% endif %}
 
-<!-- 15768000 is 6 months in seconds -->
-{% assign timeframe = 1576800000000000000 %}
-{% assign six_months_in_seconds = "now" | date: "%s" | minus: timeframe | to_integer  %}
+<!-- 21024000 is 8 months in seconds -->
+{% assign timeframe = 21024000 %}
+{% assign eight_months_in_seconds = "now" | date: "%s" | minus: timeframe | to_integer  %}
 {% assign current_date = 'now' | date: '%s' | plus: 0 %}
 {% assign shown_items = 0 %}
 
@@ -33,7 +33,7 @@ lazy_load: true
           {% continue %}
         {% endif %}
         {% assign post_creation_date_in_seconds = post.date | date: "%s" | to_integer %}
-        {% if post_creation_date_in_seconds < six_months_in_seconds %}
+        {% if post_creation_date_in_seconds < eight_months_in_seconds %}
           <!-- If the news post is older than 6 months, we hide it -->
           {% continue %}
         {% endif %}
