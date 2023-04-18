@@ -68,7 +68,7 @@
     
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css?1681793242378257093">
+    <link rel="stylesheet" href="/css/main.css?1681795403200316975">
 
     <!-- TODO: Optimize when we load the carousel  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
@@ -591,13 +591,61 @@
   </div>
 
 
-<script src="/js/main.js?1681793242378257093" type="text/javascript"></script>
-<script src="/js/cloudcannon.js?1681793242378257093" type="text/javascript"></script>
+<script src="/js/main.js?1681795403200316975" type="text/javascript"></script>
+<script src="/js/cloudcannon.js?1681795403200316975" type="text/javascript"></script>
 <!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
-<div id="payment-modal-src" data-src="/js/payment_modal.js?1681793242378257093"></div>
-<script src="/js/image_modal.js?1681793242378257093" type="text/javascript" defer></script>
+<div id="payment-modal-src" data-src="/js/payment_modal.js?1681795403200316975"></div>
+<script src="/js/image_modal.js?1681795403200316975" type="text/javascript" defer></script>
 
 
+
+<script>
+(function(){
+    const bookshopLiveSetup = (CloudCannon) => {
+      CloudCannon.enableEvents();
+      CloudCannon?.setLoading?.("Loading Bookshop Live Editing");
+      let triggeredLoad = false;
+      const whenLoaded = () => {
+        triggeredLoad = true;
+        CloudCannon?.setLoading?.(false);
+      }
+      setTimeout(() => {
+        if (!triggeredLoad) {
+          CloudCannon?.setLoading?.("Error Loading Bookshop Live Editing");
+          setTimeout(() => {
+            if (!triggeredLoad) { whenLoaded() }
+          }, 2000);
+        }
+      }, 12000);
+  
+      const head = document.querySelector('head');
+      const script = document.createElement('script');
+      script.src = `/_cloudcannon/bookshop-live.js`;
+      script.onload = function() {
+        window.bookshopLive = new window.BookshopLive({
+          remoteGlobals: [],
+          loadedFn: whenLoaded,
+        });
+        const updateBookshopLive = async () => {
+          const frontMatter = await CloudCannon.value({
+            keepMarkdownAsHTML: false,
+            preferBlobs: true
+          });
+          const options = window.bookshopLiveOptions || {};
+          const rendered = await window.bookshopLive.update(frontMatter, options);
+          if (rendered) CloudCannon?.refreshInterface?.();
+        }
+        document.addEventListener('cloudcannon:update', updateBookshopLive);
+        updateBookshopLive();
+      }
+      head.appendChild(script);
+    }
+  
+    document.addEventListener('cloudcannon:load', function (e) {
+      bookshopLiveSetup(e.detail.CloudCannon);
+    });
+  })();
+</script>
 </body>
 </html>
 
@@ -634,7 +682,7 @@
       </div>
 
       <div id="tab-contents">
-        <div class="tab-content has-text-centered is-active" id="sponsor-content" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1681793242378257093";>
+        <div class="tab-content has-text-centered is-active" id="sponsor-content" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1681795403200316975";>
           <p class="is-size-5 mb-1">
             Through fixed monthly donations, <b>YOU</b> could help us defray the costs of the services we provide to our children while they reside at the Hogar.
           </p>

@@ -71,7 +71,7 @@
     
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/main.css?1681793242378257093">
+    <link rel="stylesheet" href="/css/main.css?1681795403200316975">
 
     <!-- TODO: Optimize when we load the carousel  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css">
@@ -556,7 +556,7 @@
   
   <!--bookshop-live name(content/content.jekyll.html) params(bind=block) context(block=content_blocks[1]) -->
 
-<div class="container content-container content editable">
+<div class="container content-container content editable" data-cms-source="/component-library/components/content/content.jekyll.html" data-cms-index="0">
   <p>El sábado 29 de febrero comenzamos la celebración de nuestro vigésimo quinto Aniversario con la actividad 'Casa Abierta Para Tí'. La misma fue planificada con mucho amor como agradecimiento a todas las personas e instituciones que nos han ayudado a lo largo de estos 25 años. Todos los que apoyan al Hogar son partícipes de un milagro de amor que impacta positivamente la vida de todos nuestros pequeños.</p>
 <p>Nuestros niños e invitados la disfrutaron plenamente la actividad. Contamos con la presencia de los 'Padrinos' de la actividad, Jorge Rivera Nieves y María del Carmen González, buena música, payasos y un desfile de modas 'canino' presentado por Puerto Rico Therapy Dogs, entre otras cosas.</p>
 <p>Agradecemos enormemente el trabajo realizado por la Junta de Directores para realizar la Casa Abierta, especialmente al comité organizador encabezado por Miriam Almodovar (Sub-Secretaria de la Junta de Directores), Agnes Rivera (Sub-Tesorera y Presidenta del comité organizador) y Jesús Morales (Vice Presidente).</p>
@@ -751,13 +751,61 @@
   </div>
 
 
-<script src="/js/main.js?1681793242378257093" type="text/javascript"></script>
-<script src="/js/cloudcannon.js?1681793242378257093" type="text/javascript"></script>
+<script src="/js/main.js?1681795403200316975" type="text/javascript"></script>
+<script src="/js/cloudcannon.js?1681795403200316975" type="text/javascript"></script>
 <!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
-<div id="payment-modal-src" data-src="/js/payment_modal.js?1681793242378257093"></div>
-<script src="/js/image_modal.js?1681793242378257093" type="text/javascript" defer></script>
+<div id="payment-modal-src" data-src="/js/payment_modal.js?1681795403200316975"></div>
+<script src="/js/image_modal.js?1681795403200316975" type="text/javascript" defer></script>
 
 
+
+<script>
+(function(){
+    const bookshopLiveSetup = (CloudCannon) => {
+      CloudCannon.enableEvents();
+      CloudCannon?.setLoading?.("Loading Bookshop Live Editing");
+      let triggeredLoad = false;
+      const whenLoaded = () => {
+        triggeredLoad = true;
+        CloudCannon?.setLoading?.(false);
+      }
+      setTimeout(() => {
+        if (!triggeredLoad) {
+          CloudCannon?.setLoading?.("Error Loading Bookshop Live Editing");
+          setTimeout(() => {
+            if (!triggeredLoad) { whenLoaded() }
+          }, 2000);
+        }
+      }, 12000);
+  
+      const head = document.querySelector('head');
+      const script = document.createElement('script');
+      script.src = `/_cloudcannon/bookshop-live.js`;
+      script.onload = function() {
+        window.bookshopLive = new window.BookshopLive({
+          remoteGlobals: [],
+          loadedFn: whenLoaded,
+        });
+        const updateBookshopLive = async () => {
+          const frontMatter = await CloudCannon.value({
+            keepMarkdownAsHTML: false,
+            preferBlobs: true
+          });
+          const options = window.bookshopLiveOptions || {};
+          const rendered = await window.bookshopLive.update(frontMatter, options);
+          if (rendered) CloudCannon?.refreshInterface?.();
+        }
+        document.addEventListener('cloudcannon:update', updateBookshopLive);
+        updateBookshopLive();
+      }
+      head.appendChild(script);
+    }
+  
+    document.addEventListener('cloudcannon:load', function (e) {
+      bookshopLiveSetup(e.detail.CloudCannon);
+    });
+  })();
+</script>
 </body>
 </html>
 
@@ -794,7 +842,7 @@
       </div>
 
       <div id="tab-contents">
-        <div class="tab-content has-text-centered is-active" id="sponsor-content" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1681793242378257093";>
+        <div class="tab-content has-text-centered is-active" id="sponsor-content" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1681795403200316975";>
           <p class="is-size-5 mb-1">
             Mediante donativos fijos mensuales, <b>TÚ</b> puedes ayudarnos a sufragar los costos de los servicios que damos a los niños durante su estadía en el Hogar.
           </p>

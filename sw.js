@@ -1,6 +1,6 @@
 'use strict';
 
-var version = "20230418044722::";
+var version = "20230418052323::";
 var ASSETS_CACHE_NAME = version + '::Assets';
 var ASSETS_CACHE_DATA = [
   '/css/main.css',
