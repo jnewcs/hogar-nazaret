@@ -10,6 +10,7 @@ content_blocks:
     title_alignment: centered
   - _bookshop_name: board_profiles
     board_elections_in_progress: true
+    board_elections_explanation: "Nos encontramos en la transición de elegir una nueva Junta Directiva. Por favor, regresen pronto a nuestra página para que conozcan a los miembros de la nueva Junta. ¡Muchas gracias!"
     board:
       - name: Lymari Quiles Padilla
         city: San Juan

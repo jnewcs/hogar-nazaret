@@ -10,6 +10,7 @@ content_blocks:
     title_alignment: centered
   - _bookshop_name: board_profiles
     board_elections_in_progress: true
+    board_elections_explanation: "We are currently in the process of electing a new board of directors. Please check back soon to meet our new board!"
     board:
       - name: Lymari Quiles Padilla
         city: San Juan
