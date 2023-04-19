@@ -19,6 +19,10 @@ blueprint:
   image_height: 25
   hide_from_carousel: false
   always_show: false
+  call_to_action:
+    text: Learn More
+    opens_donate_modal: false
+    url: "/en/about"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
