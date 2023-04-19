@@ -51,6 +51,8 @@ collections_config:
                 - contain
               allow_create: false
               allow_empty: false
+          $.content:
+            hidden: true
           $.content_blocks:
 
   posts:
@@ -105,6 +107,8 @@ collections_config:
                 - contain
               allow_create: false
               allow_empty: false
+          $.content:
+            hidden: true
           $.content_blocks:
 
   content_blocks_page_es:
@@ -121,6 +125,8 @@ collections_config:
         hide_extra_inputs: true
         _inputs:
           $.title:
+            hidden: true
+          $.content:
             hidden: true
           $.content_blocks:
 
