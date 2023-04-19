@@ -166,6 +166,10 @@ collection_groups:
     collections:
       - data_files
 
+_structures:
+  content_blocks:
+    style: modal
+
 _inputs:
   $.lang:
     hidden: true
