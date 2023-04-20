@@ -1,1 +1,236 @@
-document.addEventListener("DOMContentLoaded",function(){var t=document.getElementById("hosted-fields");if(t){let L=function(n){var i="input[type='text'], input[type='email'], input[type='number'], input[name='give_a_hug_donation_amount']";function u(){Array.prototype.forEach.call(c.querySelectorAll(i),function(e){e.removeAttribute("disabled")})}function d(){Array.prototype.forEach.call(c.querySelectorAll(i),function(e){e.setAttribute("disabled","true")})}function l(){var e=document.createElement("input");e.type="submit",e.style.display="none",c.appendChild(e),e.click(),e.remove()}var o={},h=function(e){v.classList.remove("is-hidden"),_.innerText=e};n.forEach(function(e,r){e.on("change",function(a){if(a.error)o[r]=a.error.message,h(a.error.message);else{o[r]=null;var s=Object.keys(o).sort().reduce(function(p,g){return p||o[g]},null);s?_.innerText=s:v.classList.add("is-hidden")}})}),c.addEventListener("submit",function(e){e.preventDefault();var r="input[type='text'], input[type='email'], input[type='number'], input.validate-field[name='give_a_hug_donation_amount']",a=!0;if(Array.prototype.forEach.call(c.querySelectorAll(r),function(m){if(m.checkValidity&&!m.checkValidity()){a=!1;return}}),!a){l();return}b.classList.remove("is-hidden"),t.classList.add("submitting"),E.classList.add("is-hidden"),d();var s=t.querySelector("#hosted-fields-email"),p=t.querySelector("#hosted-fields-zip"),g={email:s?s.value:void 0,address_zip:p?p.value:void 0};window.stripeInstance.createToken(n[0],g).then(function(m){window.handleStripeTokenSubmission(m,"stripe_elements",u)})})};var A=L,q=t.dataset.key,w=t.dataset.lang;window.campaignDonationDescription=t.dataset.description;var B=t.dataset.env,T=t.dataset.success,x=t.dataset.error,c=document.getElementById("payment_interface_form"),v=t.querySelector(".error"),_=v.querySelector(".notification"),b=document.getElementById("give-a-hug-donation-options-loading-container"),E=document.getElementById("give-a-hug-donation-options");window.stripeInstance=Stripe(q,{locale:w}),window.stripeElements=window.stripeInstance.elements();var f={base:{color:"#4a4a4a",fontWeight:600,fontFamily:"Quicksand, Open Sans, Segoe UI, sans-serif",fontSize:"16px",fontSmoothing:"antialiased","::placeholder":{color:"#bbb2d7"},":focus::placeholder":{color:"#bbb2d7"}},invalid:{color:"#4a4a4a"}},y={focus:"focus",empty:"empty",invalid:"invalid"},k=window.stripeElements.create("cardNumber",{style:f,classes:y});k.mount("#hosted-fields-card-number");var S=window.stripeElements.create("cardExpiry",{style:f,classes:y});S.mount("#hosted-fields-card-expiry");var I=window.stripeElements.create("cardCvc",{style:f,classes:y});I.mount("#hosted-fields-card-cvc"),window.handleStripeTokenSubmission=function(n,i="stripe_elements",u=null){const d=function(e=!1){b.classList.add("is-hidden"),t.classList.remove("submitting"),E.classList.remove("is-hidden"),u&&u(),e&&(i==="payment_request"&&n.complete("fail"),showError(x))};if(n.token){var l=document.querySelector('input[name="give_a_hug_donation_amount"]:checked').value;l==="custom"&&(l=document.getElementById("give-custom-gift-amount").value);var o=parseFloat(l).toFixed(2)*100,h={amount:o,stripe_token:n.token.id,email:n.payerEmail||n.token.email,description:window.campaignDonationDescription,lang:w,env:B};fetch("https://web-production-9b27.up.railway.app/payments",{method:"POST",body:JSON.stringify(h),headers:{"content-type":"application/json"}}).then(function(e){if(e.ok){window.trackEvent("stripe_elements_payment_success",{amount:o,type:i}),i==="payment_request"&&n.complete("success");var r=document.getElementById("give-a-hug-donation-options-notification");r.innerHTML=T,r.classList.remove("is-hidden");var a=document.getElementById("event-donation-engine-share");a.classList.remove("is-hidden"),d();var s=document.getElementById("event-donation-engine-payment");s.classList.add("is-hidden")}else window.trackEvent("stripe_elements_payment_error",{type:i}),d(!0)}).catch(function(){window.trackEvent("stripe_elements_payment_error",{type:i}),d(!0)})}else window.trackEvent("stripe_elements_token_creation_error",{type:i}),d(!0)},L([k,S,I])}});
+document.addEventListener('DOMContentLoaded', function () {
+  var formContainer = document.getElementById('hosted-fields');
+  if (formContainer) {
+    var stripeKey = formContainer.dataset.key;
+    var lang = formContainer.dataset.lang;
+    window.campaignDonationDescription = formContainer.dataset.description;
+    var env = formContainer.dataset.env;
+    var donationSuccessMsg = formContainer.dataset.success;
+    var donationErrorMsg = formContainer.dataset.error;
+
+    var form = document.getElementById('payment_interface_form');
+    var errorContainer = formContainer.querySelector('.error');
+    var errorMessageContainer = errorContainer.querySelector('.notification');
+    var loadingContainer = document.getElementById('give-a-hug-donation-options-loading-container');
+    var donationOptions = document.getElementById('give-a-hug-donation-options');
+
+    window.stripeInstance = Stripe(stripeKey, { locale: lang });
+    window.stripeElements = window.stripeInstance.elements();
+    var elementStyles = {
+      base: {
+        color: '#4a4a4a',  // Dark Grey color
+        fontWeight: 600,
+        fontFamily: 'Quicksand, Open Sans, Segoe UI, sans-serif',
+        fontSize: '16px',
+        fontSmoothing: 'antialiased',
+
+        '::placeholder': {
+          color: '#bbb2d7', // Primary Light color
+        },
+
+        ':focus::placeholder': {
+          color: '#bbb2d7', // Primary Light color
+        },
+      },
+      invalid: {
+        color: '#4a4a4a',  // Dark Grey color
+      },
+    };
+    var elementClasses = { focus: 'focus', empty: 'empty', invalid: 'invalid' };
+
+    var cardNumber = window.stripeElements.create('cardNumber', {
+      style: elementStyles,
+      classes: elementClasses,
+    });
+    cardNumber.mount('#hosted-fields-card-number');
+
+    var cardExpiry = window.stripeElements.create('cardExpiry', {
+      style: elementStyles,
+      classes: elementClasses,
+    });
+    cardExpiry.mount('#hosted-fields-card-expiry');
+
+    var cardCvc = window.stripeElements.create('cardCvc', {
+      style: elementStyles,
+      classes: elementClasses,
+    });
+    cardCvc.mount('#hosted-fields-card-cvc');
+
+    window.handleStripeTokenSubmission = function(result, type = 'stripe_elements', enableInputs = null) {
+      const resetToInitialState = function(showErrorMessage = false) {
+        // Report to the browser that the payment failed, prompting it to
+        // re-show the payment interface
+        loadingContainer.classList.add('is-hidden');
+        formContainer.classList.remove('submitting');
+        donationOptions.classList.remove('is-hidden');
+        if (enableInputs) {
+          enableInputs();
+        }
+        if (showErrorMessage) {
+          if (type === 'payment_request') {
+            result.complete('fail');
+          }
+          showError(donationErrorMsg);
+        }
+      };
+
+      if (result.token) {
+        // Send the token to our server to charge it :)
+        var finalAmountinDollars = document.querySelector('input[name="give_a_hug_donation_amount"]:checked').value;
+        if (finalAmountinDollars === 'custom') {
+          finalAmountinDollars = document.getElementById('give-custom-gift-amount').value;
+        }
+        var finalAmount = parseFloat(finalAmountinDollars).toFixed(2) * 100;
+        var requestBody = {
+          amount: finalAmount,
+          stripe_token: result.token.id,
+          email: result.payerEmail || result.token.email,
+          description: window.campaignDonationDescription,
+          lang: lang,
+          env: env
+        };
+        fetch('https://web-production-9b27.up.railway.app/payments', {
+          method: 'POST',
+          body: JSON.stringify(requestBody),
+          headers: {'content-type': 'application/json'},
+        })
+        .then(function(response) {
+          if (response.ok) {
+            // Track successful Stripe Elements payment
+            window.trackEvent('stripe_elements_payment_success', {
+              amount: finalAmount,
+              type: type
+            });
+
+            if (type === 'payment_request') {
+              result.complete('success');
+            }
+
+            // Show a payment success notification and the share interface
+            var paymentNotification = document.getElementById('give-a-hug-donation-options-notification');
+            paymentNotification.innerHTML = donationSuccessMsg;
+            paymentNotification.classList.remove('is-hidden');
+            var eventShareCard = document.getElementById('event-donation-engine-share');
+            eventShareCard.classList.remove('is-hidden');
+
+            // Reset the payment card and then hide it
+            resetToInitialState();
+            var paymentCard = document.getElementById('event-donation-engine-payment');
+            paymentCard.classList.add('is-hidden');
+          } else {
+            window.trackEvent('stripe_elements_payment_error', { type: type });
+            resetToInitialState(true);
+          }
+        })
+        .catch(function() {
+          window.trackEvent('stripe_elements_payment_error', { type: type });
+          resetToInitialState(true);
+        });
+      } else {
+        window.trackEvent('stripe_elements_token_creation_error', { type: type });
+        resetToInitialState(true);
+      }
+    }
+
+    function registerElements(elements) {
+      var inputSelectors = "input[type='text'], input[type='email'], input[type='number'], input[name='give_a_hug_donation_amount']";
+
+      function enableInputs() {
+        Array.prototype.forEach.call(
+          form.querySelectorAll(inputSelectors), function(input) {
+            input.removeAttribute('disabled');
+          }
+        );
+      }
+
+      function disableInputs() {
+        Array.prototype.forEach.call(
+          form.querySelectorAll(inputSelectors), function(input) {
+            input.setAttribute('disabled', 'true');
+          }
+        );
+      }
+
+      function triggerBrowserValidation() {
+        // The only way to trigger HTML5 form validation UI is to fake a user submit event.
+        var submit = document.createElement('input');
+        submit.type = 'submit';
+        submit.style.display = 'none';
+        form.appendChild(submit);
+        submit.click();
+        submit.remove();
+      }
+
+      // Listen for errors from each Element, and show error messages in the UI.
+      var savedErrors = {};
+      var showError = function(errorMessage) {
+        errorContainer.classList.remove('is-hidden');
+        errorMessageContainer.innerText = errorMessage;
+      };
+      elements.forEach(function(element, idx) {
+        element.on('change', function(event) {
+          if (event.error) {
+            savedErrors[idx] = event.error.message;
+            showError(event.error.message);
+          } else {
+            savedErrors[idx] = null;
+
+            // Loop over the saved errors and find the first one, if any.
+            var nextError = Object.keys(savedErrors)
+              .sort()
+              .reduce(function(maybeFoundError, key) {
+                return maybeFoundError || savedErrors[key];
+              }, null);
+
+            if (nextError) {
+              // Now that they've fixed the current error, show another one.
+              errorMessageContainer.innerText = nextError;
+            } else {
+              // The user fixed the last error; no more errors.
+              errorContainer.classList.add('is-hidden');
+            }
+          }
+        });
+      });
+
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Trigger HTML5 validation UI on the form if any of the inputs fail validation
+        var inputsToValidate = "input[type='text'], input[type='email'], input[type='number'], input.validate-field[name='give_a_hug_donation_amount']";
+        var plainInputsValid = true;
+        Array.prototype.forEach.call(form.querySelectorAll(inputsToValidate), function(input) {
+          if (input.checkValidity && !input.checkValidity()) {
+            plainInputsValid = false;
+            return;
+          }
+        });
+        if (!plainInputsValid) {
+          triggerBrowserValidation();
+          return;
+        }
+
+        // Show a loading screen and disable inputs
+        loadingContainer.classList.remove('is-hidden');
+        formContainer.classList.add('submitting');
+        donationOptions.classList.add('is-hidden');
+        disableInputs();
+
+        // Gather additional customer data we may have collected in our form.
+        var email = formContainer.querySelector('#hosted-fields-email');
+        var zip = formContainer.querySelector('#hosted-fields-zip');
+        var additionalData = {
+          email: email ? email.value : undefined,
+          address_zip: zip ? zip.value : undefined,
+        };
+
+        // Use Stripe.js to create a token
+        window.stripeInstance.createToken(elements[0], additionalData).then(function(result) {
+          window.handleStripeTokenSubmission(result, 'stripe_elements', enableInputs);
+        });
+      });
+    };
+
+    registerElements([cardNumber, cardExpiry, cardCvc]);
+  }
+});

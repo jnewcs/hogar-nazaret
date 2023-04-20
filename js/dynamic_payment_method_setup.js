@@ -1,1 +1,92 @@
-document.addEventListener("DOMContentLoaded",function(){if(!ATHM_Checkout||!window.stripeInstance){window.trackEvent("failed_to_finish_setting_up_payment_methods");return}var s=document.querySelector('input[name="give_a_hug_donation_amount"]:checked').value,n=document.getElementById("give-custom-gift-amount"),t=window.stripeInstance.paymentRequest({country:"US",currency:"usd",total:{amount:parseFloat(s).toFixed(2)*100,label:window.campaignDonationDescription},requestPayerName:!0,requestPayerEmail:!0});t.on("token",function(e){window.handleStripeTokenSubmission(e,"payment_request")}),t.on("cancel",function(){window.trackEvent("stripe_elements_cancel",{type:"payment_request"})});var r=window.stripeElements.create("paymentRequestButton",{paymentRequest:t,style:{paymentRequestButton:{type:"donate"}}});t.canMakePayment().then(function(e){e&&e.applePay&&(window.trackEvent("showing_apple_pay_donation"),r.mount("#payment-request-button-for-campaign"),document.getElementById("payment-request-button-for-campaign-container").classList.remove("is-hidden"))});var o=document.querySelectorAll('input[name="give_a_hug_donation_amount"]'),i=function(e){(!e||isNaN(e))&&(e=1),ATHM_Checkout.total=e,ATHM_Checkout.subtotal=e,ATHM_Checkout.items[0].price=e,t.update({total:{amount:e*100,label:window.campaignDonationDescription}})},u=document.getElementById("give-custom-gift-amount-container");n.onchange=function(){var e=parseFloat(this.value).toFixed(2);i(e)},n.onblur=function(){var e=parseFloat(this.value);e?this.value=e.toFixed(2):this.value=1};for(var a=0,c=o.length;a<c;a++)o[a].onclick=function(){var e;this.value!=="custom"?(u.classList.add("is-hidden"),e=parseFloat(this.value).toFixed(2),n.value=1):(u.classList.remove("is-hidden"),e=parseFloat(n.value).toFixed(2)),i(e)}});
+document.addEventListener('DOMContentLoaded', function() {
+  // Setup Payment Request and dynamic handlers for donation amount
+  if (!ATHM_Checkout || !window.stripeInstance) {
+    window.trackEvent('failed_to_finish_setting_up_payment_methods');
+    return;
+  }
+
+  var initialAmount = document.querySelector('input[name="give_a_hug_donation_amount"]:checked').value;
+  var customAmountInput = document.getElementById('give-custom-gift-amount');
+
+  var paymentRequest = window.stripeInstance.paymentRequest({
+    country: 'US',
+    currency: 'usd',
+    total: {
+      amount: parseFloat(initialAmount).toFixed(2) * 100,
+      label: window.campaignDonationDescription
+    },
+    requestPayerName: true,
+    requestPayerEmail: true
+  });
+
+  paymentRequest.on('token', function(result) {
+    window.handleStripeTokenSubmission(result, 'payment_request');
+  });
+  paymentRequest.on('cancel', function() {
+    window.trackEvent('stripe_elements_cancel', { type: 'payment_request' });
+  });
+
+  var paymentRequestElement = window.stripeElements.create('paymentRequestButton', {
+    paymentRequest: paymentRequest,
+    style: {
+      paymentRequestButton: {
+        type: 'donate', // One of 'default', 'book', 'buy', or 'donate'
+      }
+    }
+  });
+
+  paymentRequest.canMakePayment().then(function(result) {
+    if (!result) return;
+    if (!result.applePay) return;
+    window.trackEvent('showing_apple_pay_donation');
+
+    paymentRequestElement.mount('#payment-request-button-for-campaign');
+    document.getElementById('payment-request-button-for-campaign-container').classList.remove('is-hidden');
+  });
+
+  var donationOptions = document.querySelectorAll('input[name="give_a_hug_donation_amount"]');
+  var changePaymentButtonData = function(newAmount) {
+    if (!newAmount || isNaN(newAmount)) {
+      newAmount = 1.00;
+    }
+    ATHM_Checkout.total = newAmount;
+    ATHM_Checkout.subtotal = newAmount;
+    ATHM_Checkout.items[0].price = newAmount;
+
+    paymentRequest.update({ total: {
+      amount: newAmount * 100,
+      label: window.campaignDonationDescription
+    }});
+    return;
+  }
+
+  var customAmountContainer = document.getElementById('give-custom-gift-amount-container');
+  customAmountInput.onchange = function() {
+    var newAmount = parseFloat(this.value).toFixed(2);
+    changePaymentButtonData(newAmount);
+  };
+  customAmountInput.onblur = function() {
+    var newAmount = parseFloat(this.value);
+    if (!newAmount) {
+      this.value = 1.00;
+    } else {
+      this.value = newAmount.toFixed(2);
+    }
+  };
+
+  for(var i = 0, max = donationOptions.length; i < max; i++) {
+    donationOptions[i].onclick = function() {
+      var newAmount;
+      if (this.value !== 'custom') {
+        customAmountContainer.classList.add('is-hidden');
+        newAmount = parseFloat(this.value).toFixed(2);
+        customAmountInput.value = 1.00;  // Always have a valid value here
+      } else {
+        customAmountContainer.classList.remove('is-hidden');
+        newAmount = parseFloat(customAmountInput.value).toFixed(2);
+      }
+
+      changePaymentButtonData(newAmount);
+    }
+  }
+});
