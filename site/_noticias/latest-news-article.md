@@ -17,7 +17,13 @@ content_blocks:
     image_alt: Image description
     image_style: contain
   - _bookshop_name: content
-    content_html: <p>This is the actual article</p>
+    content_html: >-
+      <p>This is the actual article.</p><p>Let's now see more changes in real
+      time!</p>
     show_container: true
+  - _bookshop_name: photo_grid
+    photos:
+      - /uploads/opera_logo.jpg
+      - /uploads/voces_opera_banner.png
   - _bookshop_name: divider
 ---
