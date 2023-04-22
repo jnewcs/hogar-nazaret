@@ -82,17 +82,20 @@ From `+e.stack}},tt=class extends ae{constructor(e,t){super(new Error(e),t),this
       {{ include.title }}
     </h1>
   </div>
-</div>`,mr=gr,vr=`<div class="column is-one-third">
+</div>`,mr=gr,vr=`<div class="column is-half">
   <div class="card">
     {% if include.image %}
       <div class="card-image">
         <figure class="image pt-2">
-          <img style="height: 250px; width: auto;" src="{{ include.image | relative_url }}" alt="{{ include.name }}">
+          <img
+            style="height: 250px; width: auto;"
+            src="{{ include.image | relative_url }}"
+            alt="{{ include.name }}">
         </figure>
       </div>
     {% endif %}
 
-    <div class="card-content has-text-centered">
+    <div class="card-content has-text-centered mb-0">
       <div class="title is-size-5 mb-0">
         {{ include.name }}
       </div>
@@ -112,6 +115,26 @@ From `+e.stack}},tt=class extends ae{constructor(e,t){super(new Error(e),t),this
           {{ include.position }}
         </span>
       </div>
+    </div>
+
+    <div class="card-content">
+      {% if include.background %}
+        <p>
+          {{ include.background }}
+        </p>
+
+        <hr />
+      {% endif %}
+
+      {% if include.reason %}
+        <b>
+          {{ site.data.languages[page.lang].board.reason }}
+        </b>
+
+        <blockquote class="mt-1">
+          {{ include.reason }}
+        </blockquote>
+      {% endif %}
     </div>
   </div>
 </div>
