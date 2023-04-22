@@ -28,5 +28,6 @@ _inputs:
     type: text
     label: Explanation for board elections
     allow_empty: false
+    hidden: !board_elections_in_progress
   board:
     allow_empty: true

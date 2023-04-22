@@ -14,6 +14,8 @@ blueprint:
   city: San Juan
   tag_style: primary
   position: Vice President
+  background: "A resident of the City of Mayagüez. She has served on the Board for a year"
+  reason: "To give back all the good things God has given me by helping to educate children"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -42,3 +44,12 @@ _inputs:
   position:
     type: text
     label: Position on the Board
+    allow_empty: false
+  background:
+    type: text
+    label: Background (profressional, etc.)
+    allow_empty: true
+  reason:
+    type: text
+    label: Reason for joining the Board
+    allow_empty: true
