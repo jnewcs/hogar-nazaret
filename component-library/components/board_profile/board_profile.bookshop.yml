@@ -16,6 +16,7 @@ blueprint:
   position: Vice President
   background: "A resident of the City of Mayagüez. She has served on the Board for a year"
   reason: "To give back all the good things God has given me by helping to educate children"
+  image: "https://hogarjesusdenazaret.org/uploads/page_header_images/hogar_playground.jpg"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -45,6 +46,10 @@ _inputs:
     type: text
     label: Position on the Board
     allow_empty: false
+  image:
+    label: Photo
+    type: image
+    allow_empty: true
   background:
     type: text
     label: Background (profressional, etc.)
