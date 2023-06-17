@@ -138,17 +138,19 @@ From `+e.stack}},tt=class extends ae{constructor(e,t){super(new Error(e),t),this
     </div>
   </div>
 </div>
-`,br=vr,yr=`{% if include.board_elections_in_progress == true %}
-  <p class="is-size-4 is-cursive has-text-centered">
-    {{ include.board_elections_explanation }}
-  </p>
-{% else %}
-  <div class="columns pt-1 is-multiline is-vcentered is-centered">
-    {% for person in include.board %}
-      {% bookshop board_profile bind=person %}
-    {% endfor %}
-  </div>
-{% endif %}
+`,br=vr,yr=`<div class="container content-container">
+  {% if include.board_elections_in_progress == true %}
+    <p class="is-size-4 is-cursive has-text-centered">
+      {{ include.board_elections_explanation }}
+    </p>
+  {% else %}
+    <div class="columns pt-1 is-multiline is-vcentered is-centered">
+      {% for person in include.board %}
+        {% bookshop board_profile bind=person %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
 `,_r=yr,wr=`<div class="fluid-container position-relative">
   <div class="is-flex-container is-spaced-between has-text-centered is-hidden-touch" id="controls-container">
     <div class="clickable prev-button">&#8249;</div>
