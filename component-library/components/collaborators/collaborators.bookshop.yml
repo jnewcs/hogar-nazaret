@@ -6,70 +6,18 @@ spec:
   description: Renders a set of collaborators, organized by categories
   icon: partner_exchange
   tags:
-    - Carousel
+    - Collaborator
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  title: "Carousel Title #3"
-  creation_date: 2023-04-10T12:00:00.000+00:00
-  content: bookshop:content
-  image: "/uploads/carousel_highlights/child_prevention_month.jpg"
-  image_custom_dimensions: true
-  image_width: 100
-  image_height: 25
-  hide_from_carousel: false
-  always_show: false
+  show_container: true
+  collaborator_groups: [bookshop:collaborator_group]
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  title:
-    type: text
-    allow_empty: false
-  creation_date:
-    type: datetime
-    comment: By default, carousel items only show for 6 months. To override, check `always_show`
-    allow_empty: false
-  content:
-    allow_empty: false
-  always_show:
+  show_container:
     type: checkbox
-    label: "Always show item?"
-    comment: "When checked, carousel item will always show even past the 6 months limit"
-    allow_empty: false
-  hide_from_carousel:
-    type: checkbox
-    label: "Force hide?"
-    comment: "When checked, carousel item will never be shown, even if `always_show` is checked"
-    allow_empty: false
-  image:
-    type: image
-    allow_empty: false
-  image_custom_dimensions:
-    type: checkbox
-    label: Use custom image dimensions?
-  image_height:
-    label: "Manual height of the image"
-    type: number
-    hidden: !image_custom_dimensions
-    allow_empty: true
-  image_width:
-    label: "Manual height of the image"
-    type: number
-    hidden: !image_custom_dimensions
-    allow_empty: true
-  call_to_action:
-    type: object
-    allow_empty: true
-    structures:
-      text:
-        type: text
-        label: "Text shown in `call to action` button"
-      opens_donate_modal:
-        type: checkbox
-        comment: "When checked, clicking on the `call to action` button opens the Donate modal and the `url` attribute is ignored"
-      url:
-        type: url
-        label: "URL for `call to action` button"
+    comment: When toggled on, default padding appears around the content

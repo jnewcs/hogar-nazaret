@@ -1,0 +1,20 @@
+<div class="column {{ include.column_size }}">
+  <p class="is-size-4 title is-cursive">
+    {{ include.title }}
+  </p>
+  {% if include.subtitle %}
+    <p class="is-size-6 subtitle has-text-grey">
+      {{ include.subtitle }}
+    </p>
+  {% endif %}
+
+  <div class="tags">
+    {% for collaborator in include.collaborators %}
+      <div>
+        <span class="tag is-{{ include.tag_style }} collaborator-tag" style="margin-bottom: 8px; margin-right: 8px;">
+          {{ collaborator }}
+        </span>
+      </div>
+    {% endfor %}
+  </div>
+</div>

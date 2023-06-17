@@ -51,7 +51,7 @@ h1, h2, h3, date, .post-title, .navbar-item, .is-cursive {
 .position-relative { position: relative; }
 .has-background-primary-light { background-color: $primary-light; }
 .has-background-primary-light-with-opacity { background-color: $primary-light-with-opacity; }
-#tag-highlight { background-color: $secondary; color: white }
+.tag.is-secondary { background-color: $secondary; color: white }
 
 .contain-no-repeat {
   background-size: contain;
