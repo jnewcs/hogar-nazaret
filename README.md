@@ -63,7 +63,7 @@ You are now ready to preview content locally. Jekyll is a static site generator 
 ```
 cd ~/personal_repos/hogar-nazaret/site  # You don't need this if you are already in the repo
 
-bundle exec jekyll serve
+npm start
 ```
 
 This command should output something like this:
@@ -87,14 +87,12 @@ Configuration file: /Users/jxnewcomb/personal_repos/hogar-nazaret/_config.yml
 
 If it works properly, you now can preview the site at http://127.0.0.1:4000. If the `serve` command is still running and you make a change, you can see that change reflected locally at http://127.0.0.1:4000 once the build finishes. Every time you change something, it might take `7+` seconds for the build to finish and for you to be able to see the change in the browser.
 
-### Preview content locally to mimic "Staging" environment
-We currently use [Cloudcannon](https://cloudcannon.com) as our content management system (CMS). Within our CMS, we can preview content before commiting the changes to the `master` branch which will change https://hogarjesusdenazaret.org. We call this our "Staging" environment. If you want to view the "Staging" environment locally, you can run this command:
+### How our non-technical editors use the CMS
+We currently use [Cloudcannon](https://cloudcannon.com) as our content management system (CMS). Within our CMS, we allow non-technical editors to edit content, which syncs changes to the `hogar-website-cloudcannon` branch in Github. Once changes are saved, we deploy to the preview site which is [hosted here](https://warm-toad.cloudvent.net).
 
-```
-cd ~/personal_repos/hogar-nazaret/site  # You don't need this if you are already in the repo
+If the content looks good in the preview site, editors can then publish changes to the live site. At that point, changes are synced to the `master` branch in Github.
 
-npm start
-```
+To keep all the branches up to date, technical editors should commit to `hogar-website-cloudcannon` branch locally.
 
 # Development Notes
 1. We use [Bulma](https://bulma.io) as our CSS Framework. It is a lightweight framework based on Flexbox and does not bring in any JS.
