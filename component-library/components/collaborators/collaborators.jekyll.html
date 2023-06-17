@@ -6,31 +6,8 @@
 
 <div class="{{ container_class }}">
   <div class="columns is-multiline" id="collaborators">
-    {% for category in include.categories %}
-      <div class="column {{ category.column_size }}">
-        {% if category.subtitle %}
-          {% assign spacer_class = 'mb-tiny' %}
-        {% else %}
-          {% assign spacer_class = 'mb-1' %}
-        {% endif %}
-
-        <p class="is-size-4 title is-cursive {{ spacer_class }}">{{ category.title }}</p>
-        {% if category.subtitle %}
-          <p class="is-size-6 subtitle has-text-grey">
-            {{ category.subtitle }}
-          </p>
-        {% endif %}
-
-        <div class="{% if category.use_tags %}tags{% endif %}">
-          {% for sponsor in site.data[category.data_base][category.data_category] %}
-            <div>
-              <span class="tag is-light collaborator-tag" style="margin-bottom: 8px; margin-right: 8px;">
-                {{ sponsor.name }}
-              </span>
-            </div>
-          {% endfor %}
-        </div>
-      </div>
+    {% for collaborator_group in include.collaborator_groups %}
+      {% bookshop collaborator_group bind=collaborator_group %}
     {% endfor %}
   </div>
 </div>

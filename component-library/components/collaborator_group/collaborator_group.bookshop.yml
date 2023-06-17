@@ -1,0 +1,59 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Collaborator Group
+  description: Renders a group of collaborators
+  icon: groups
+  tags:
+    - Collaborator
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  title: "Anchor Sponsors"
+  subtitle: "Sponsors of the Hogar since the founding in 1995"
+  column_size: "is-half-tablet is-one-third"
+  tag_style: primary
+  collaborators:
+    - Municipio de Mayagüez
+    - Departamento de la Familia
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    type: text
+    allow_empty: false
+  subtitle:
+    type: text
+    allow_empty: false
+  column_size:
+    type: select
+    options:
+      values:
+        - "is-full"
+        - "is-half"
+        - "is-one-third"
+        - "is-full-tablet is-half"
+        - "is-half-tablet is-one-third"
+      allow_create: false
+      allow_empty: false
+  tag_style:
+    type: select
+    options:
+      values:
+        - primary
+        - secondary
+        - light
+      allow_create: false
+      allow_empty: false
+  collaborators:
+    label: Set of collaborators
+    type: array
+    allow_empty: false
+  collaborators[*]:
+    label: Collaborator
+    type: text
+    allow_empty: false
