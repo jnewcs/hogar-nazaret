@@ -12,8 +12,10 @@ content_blocks:
     board_elections_in_progress: true
     board_elections_explanation: "We are currently in the process of electing a new board of directors. Please check back soon to meet our new board!"
     board:
-      - name: Lymari Quiles Padilla
+      - name: Miriam Almodóvar López
         city: San Juan
         tag_style: primary
-        position: Executive Director
+        position: Board Member
+        reason: Al ser madre siempre tienes un corazón para los niños, por eso me esmero por hacerlos felices
+        image: "/uploads/board_of_directors/Miriam.png"
 ---
