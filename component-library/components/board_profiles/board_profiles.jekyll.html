@@ -1,11 +1,13 @@
-{% if include.board_elections_in_progress == true %}
-  <p class="is-size-4 is-cursive has-text-centered">
-    {{ include.board_elections_explanation }}
-  </p>
-{% else %}
-  <div class="columns pt-1 is-multiline is-vcentered is-centered">
-    {% for person in include.board %}
-      {% bookshop board_profile bind=person %}
-    {% endfor %}
-  </div>
-{% endif %}
+<div class="container content-container">
+  {% if include.board_elections_in_progress == true %}
+    <p class="is-size-4 is-cursive has-text-centered">
+      {{ include.board_elections_explanation }}
+    </p>
+  {% else %}
+    <div class="columns pt-1 is-multiline is-vcentered is-centered">
+      {% for person in include.board %}
+        {% bookshop board_profile bind=person %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

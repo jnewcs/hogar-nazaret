@@ -16,5 +16,8 @@
     "postcss": "^8.4.21",
     "postcss-cli": "^8.3.1",
     "postcss-fluidvars": "^1.1.1"
+  },
+  "engines": {
+    "node": ">=16"
   }
 }
