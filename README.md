@@ -88,12 +88,12 @@ Configuration file: /Users/jxnewcomb/personal_repos/hogar-nazaret/_config.yml
 If it works properly, you now can preview the site at http://127.0.0.1:4000. If the `serve` command is still running and you make a change, you can see that change reflected locally at http://127.0.0.1:4000 once the build finishes. Every time you change something, it might take `7+` seconds for the build to finish and for you to be able to see the change in the browser.
 
 ### Preview content locally to mimic "Staging" environment
-We currently use [Forestry.io](https://forestry.io/) as our content management system (CMS). Within our CMS, we can preview content before commiting the changes to the `master` branch which will change https://hogarjesusdenazaret.org. We call this our "Staging" environment. If you want to view the "Staging" environment locally, you can run this command:
+We currently use [Cloudcannon](https://cloudcannon.com) as our content management system (CMS). Within our CMS, we can preview content before commiting the changes to the `master` branch which will change https://hogarjesusdenazaret.org. We call this our "Staging" environment. If you want to view the "Staging" environment locally, you can run this command:
 
 ```
 cd ~/personal_repos/hogar-nazaret/site  # You don't need this if you are already in the repo
 
-bundle exec jekyll serve --drafts --future --unpublished --port 8080 --host 0.0.0.0 -d _site
+npm start
 ```
 
 # Development Notes
