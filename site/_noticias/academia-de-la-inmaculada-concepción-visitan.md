@@ -25,7 +25,10 @@ content_blocks:
       <p>Hace algunos días recibimos a la clase graduanda, Invictus, de la
       Academia de la Inmaculada Concepción en Mayagüez. Decoramos cupcakes,
       realizamos manualidades y hasta participamos en sus "goofy
-      games".</p><p>¡Gracias por traer alegría a nuestros niños! :)</p>
+      games".</p><p>¡Gracias por traer alegría a nuestros niños! :)</p><p><a
+      target="_blank" rel="noopener"
+      href="https://www.facebook.com/inmaculadapr">Academia de la Inmaculada
+      Concepción</a></p>
     show_container: true
   - _bookshop_name: photo_grid
     photos:
