@@ -15,7 +15,7 @@ lang: es
 layout: post
 content_blocks:
   - _bookshop_name: simple_header
-    title: Page Title
+    title: ¡Agradecemos a la Fundación Angel Ramos!
     title_alignment: centered
     show_padding_top: true
     show_padding_bottom: true
