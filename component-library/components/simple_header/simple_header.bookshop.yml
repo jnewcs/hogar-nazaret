@@ -28,7 +28,7 @@ _inputs:
     allow_empty: false
   title_alignment:
     type: select
-    label: Title text color
+    label: Title alignment
     options:
       values:
         - left

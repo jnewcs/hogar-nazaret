@@ -19,6 +19,7 @@ blueprint:
   image_height: 25
   hide_from_carousel: false
   always_show: false
+  show_call_to_action: true
   call_to_action:
     text: Learn More
     opens_donate_modal: false
@@ -60,13 +61,18 @@ _inputs:
     hidden: !image_custom_dimensions
     allow_empty: true
   image_width:
-    label: "Manual height of the image"
+    label: "Manual width of the image"
     type: number
     hidden: !image_custom_dimensions
     allow_empty: true
+  show_call_to_action:
+    type: checkbox
+    label: "Show Call to Action button"
+    allow_empty: false
   call_to_action:
     type: object
     allow_empty: true
+    hidden: !show_call_to_action
     options:
       text:
         type: text

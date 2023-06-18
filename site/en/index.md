@@ -16,6 +16,7 @@ content_blocks:
         always_show: true
         image: "/uploads/carousel_highlights/kids_circle.jpg"
         image_custom_dimensions: false
+        show_call_to_action: true
         call_to_action:
           text: The Hogar
           opens_donate_modal: false
@@ -31,6 +32,7 @@ content_blocks:
         image_custom_dimensions: true
         image_height: 200
         image_width: 275
+        show_call_to_action: true
         call_to_action:
           text: Donate Here
           opens_donate_modal: true
