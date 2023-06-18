@@ -50,19 +50,19 @@ _inputs:
         - "100"
       allow_create: false
       allow_empty: false
-    column_size:
-      type: select
-      options:
-        values:
-          - "is-full"
-          - "is-half"
-          - "is-one-third"
-          - "is-one-quarter"
-          - "is-full-tablet is-half-desktop"
-          - "is-half-tablet is-one-third-desktop"
-          - "is-half-table is-one-quarter-desktop"
-        allow_create: false
-        allow_empty: false
+  column_size:
+    type: select
+    options:
+      values:
+        - "is-full"
+        - "is-half"
+        - "is-one-third"
+        - "is-one-quarter"
+        - "is-full-tablet is-half-desktop"
+        - "is-half-tablet is-one-third-desktop"
+        - "is-half-table is-one-quarter-desktop"
+      allow_create: false
+      allow_empty: false
   logos:
     label: Set of logos
     type: array
