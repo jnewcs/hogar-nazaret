@@ -1,0 +1,33 @@
+{% if include.show_container == true %}
+  {% assign container_class = 'container content-container content' %}
+{% else %}
+  {% assign container_class = 'content' %}
+{% endif %}
+
+<div class="{{ container_class }}">
+  <p class="is-size-4 title is-cursive">
+    {{ include.title }}
+  </p>
+  {% if include.subtitle %}
+    <p class="is-size-6 subtitle has-text-grey">
+      {{ include.subtitle }}
+    </p>
+  {% endif %}
+
+  <div class="columns is-multiline">
+    {% for logo in include.logos %}
+      <div class="column {{ include.column_size }}">
+        {% if logo.image %}
+          <div class="is-flex-container is-fully-centered">
+            <figure class="image pt-2">
+              <img
+                style="height: {{ include.logo_height }}px; width: auto;"
+                src="{{ logo.image | relative_url }}"
+                alt="{{ logo.image_alt }}">
+            </figure>
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</div>
