@@ -3,7 +3,7 @@ _schema: default
 title: Visitamos el Faro de Punta Higüera
 work_in_progress: false
 date: 2023-04-25 00:00:00
-banner_image: ''
+banner_image: /uploads/faro-de-punta-higuera.png
 banner_image_alt: El Faro de Punta Higüera
 banner_image_style: contain
 lang_ref: faro-punta-higuera
