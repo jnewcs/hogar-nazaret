@@ -7,8 +7,8 @@ blurb_description: >-
   Agradecemos a la Fundación Angel Ramos por reconocer nuestra labor al
   escogernos como recipientes de un importante donativo, el cual recibimos en la
   tarde de ayer
-banner_image:
-banner_image_alt:
+banner_image: /uploads/angel-ramos-2.jpeg
+banner_image_alt: La Fundación Angel Ramos
 banner_image_style: contain
 lang_ref: fundacion-angel-ramos
 lang: es
