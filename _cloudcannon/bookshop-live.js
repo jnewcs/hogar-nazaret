@@ -208,7 +208,7 @@ From `+e.stack}},tt=class extends ae{constructor(e,t){super(new Error(e),t),this
               {% bookshop content bind=include.content %}
             {% endif %}
 
-            {% if include.call_to_action %}
+            {% if include.show_call_to_action %}
               <br />
               {% if include.call_to_action.opens_donate_modal %}
                 <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
