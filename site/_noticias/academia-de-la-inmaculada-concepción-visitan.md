@@ -3,6 +3,9 @@ _schema: default
 title: Academia de la Inmaculada Concepción Visitan
 work_in_progress: false
 date: 2023-04-24 00:00:00
+blurb_description: >-
+  Hace algunos días recibimos a la clase graduanda, Invictus, de la Academia de
+  la Inmaculada Concepción en Mayagüez.
 banner_image: /uploads/inmaculada-concepción-visit-1.png
 banner_image_alt: Academia de la Inmaculada Concepción
 banner_image_style: contain
