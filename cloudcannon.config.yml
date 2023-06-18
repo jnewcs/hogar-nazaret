@@ -33,6 +33,10 @@ collections_config:
             label: Work in progress?
             comment: When checked, the noticia will not show up in the Noticias page
             allow_empty: false
+          $.blurb_description:
+            label: News article description
+            comment: Description used only for aggregate views (Noticias Page)
+            allow_empty: true
           $.banner_image:
             label: Preview Image
             comment: This image is used for aggregate views (Noticias page)
@@ -89,6 +93,10 @@ collections_config:
             label: Work in progress?
             comment: When checked, news article will not show up in the Posts page
             allow_empty: false
+          $.blurb_description:
+            label: News article description
+            comment: Description used only for aggregate views (News Page)
+            allow_empty: true
           $.banner_image:
             label: Preview Image
             comment: This image is used for aggregate views (News page)
