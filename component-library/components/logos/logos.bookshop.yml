@@ -1,0 +1,81 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Logos
+  description: Renders a set of logos
+  icon: view_module
+  tags:
+    - Logos
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  show_container: true
+  title: "Top Sponsors"
+  subtitle: "Subtitle goes here (optional)"
+  logo_height: 200
+  logos:
+    - image: "https://hogarjesusdenazaret.org/uploads/anniversary_25_logo.png"
+      column_size: "is-half-tablet is-one-third-desktop"
+    - image: "https://hogarjesusdenazaret.org/uploads/anniversary_25_logo.png"
+      column_size: "is-half-tablet is-one-third-desktop"
+    - image: "https://hogarjesusdenazaret.org/uploads/anniversary_25_logo.png"
+      column_size: "is-half-tablet is-one-third-desktop"
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview: {}
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  show_container:
+    type: checkbox
+    comment: When toggled on, default padding appears around the content
+  title:
+    type: text
+    allow_empty: false
+  subtitle:
+    type: text
+    allow_empty: false
+  logo_height:
+    type: select
+    label: Logo height
+    comment: Height in px of each logo display. The width will be determined by the original dimensions of the logo
+    options:
+      values:
+        - 300
+        - 250
+        - 200
+        - 150
+        - 100
+      allow_create: false
+      allow_empty: false
+  logos:
+    label: Set of logos
+    type: array
+    allow_empty: false
+  logos[*]:
+    type: object
+    allow_empty: false
+    options:
+      image:
+        type: image
+        label: Logo image
+        allow_empty: false
+      image_alt:
+        type: text
+        allow_empty: true
+        label: Image description
+        comment: Adding a description benefits visually impaired users who use screen readers when browsing the site
+      column_size:
+        type: select
+        options:
+          values:
+            - "is-full"
+            - "is-half"
+            - "is-one-third"
+            - "is-one-quarter"
+            - "is-full-tablet is-half-desktop"
+            - "is-half-tablet is-one-third-desktop"
+            - "is-half-table is-one-quarter-desktop"
+          allow_create: false
+          allow_empty: false

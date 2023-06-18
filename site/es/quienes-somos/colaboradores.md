@@ -21,7 +21,7 @@ content_blocks:
     collaborator_groups:
       - title: "Auspiciadores Ancla"
         subtitle: "Patrocinadores del Hogar desde la apertura el 1995"
-        column_size: "is-half-tablet is-one-third"
+        column_size: "is-half-tablet is-one-third-desktop"
         tag_style: primary
         collaborators:
           - Municipio de Mayagüez
@@ -35,7 +35,7 @@ content_blocks:
           - Farmacia Plaza
       - title: "Auspiciadores Sostenedores"
         subtitle: "Patrocinadores del Hogar por mas de 10 años"
-        column_size: "is-half-tablet is-one-third"
+        column_size: "is-half-tablet is-one-third-desktop"
         tag_style: secondary
         collaborators:
           - Bioimágenes Médicas, CSP
@@ -54,7 +54,7 @@ content_blocks:
           - Maral Engineering Corp.
           - Óptica de Diego
       - title: "Auspiciadores de Eventos"
-        column_size: "is-half-tablet is-one-third"
+        column_size: "is-half-tablet is-one-third-desktop"
         tag_style: light
         collaborators:
           - Altrusa International Foundation

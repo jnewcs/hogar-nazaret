@@ -23,7 +23,7 @@ content_blocks:
     collaborator_groups:
       - title: "Anchor Sponsors"
         subtitle: "Sponsors of the Hogar since the founding in 1995"
-        column_size: "is-half-tablet is-one-third"
+        column_size: "is-half-tablet is-one-third-desktop"
         tag_style: primary
         collaborators:
           - Municipio de Mayagüez
@@ -37,7 +37,7 @@ content_blocks:
           - Farmacia Plaza
       - title: "Supporting Sponsors"
         subtitle: "Sponsors of the Hogar for more than 10 years"
-        column_size: "is-half-tablet is-one-third"
+        column_size: "is-half-tablet is-one-third-desktop"
         tag_style: secondary
         collaborators:
           - Bioimágenes Médicas, CSP
@@ -55,7 +55,7 @@ content_blocks:
           - Maral Engineering Corp.
           - Óptica de Diego
       - title: "Event Sponsors"
-        column_size: "is-half-tablet is-one-third"
+        column_size: "is-half-tablet is-one-third-desktop"
         tag_style: light
         collaborators:
           - Altrusa International Foundation
