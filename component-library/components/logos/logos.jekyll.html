@@ -16,7 +16,7 @@
 
   <div class="columns is-multiline">
     {% for logo in include.logos %}
-      <div class="column {{ logo.column_size }}">
+      <div class="column {{ include.column_size }}">
         {% if logo.image %}
           <div class="is-flex-container is-fully-centered">
             <figure class="image pt-2">

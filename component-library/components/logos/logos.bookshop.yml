@@ -14,13 +14,14 @@ blueprint:
   title: "Top Sponsors"
   subtitle: "Subtitle goes here (optional)"
   logo_height: "200"
+  column_size: "is-half-tablet is-one-third-desktop"
   logos:
     - image: "https://hogarjesusdenazaret.org/uploads/anniversary_25_logo.png"
-      column_size: "is-half-tablet is-one-third-desktop"
+      image_alt: Hogar Logo
     - image: "https://hogarjesusdenazaret.org/uploads/anniversary_25_logo.png"
-      column_size: "is-half-tablet is-one-third-desktop"
+      image_alt: Hogar Logo
     - image: "https://hogarjesusdenazaret.org/uploads/anniversary_25_logo.png"
-      column_size: "is-half-tablet is-one-third-desktop"
+      image_alt: Hogar Logo
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview: {}
@@ -49,6 +50,19 @@ _inputs:
         - "100"
       allow_create: false
       allow_empty: false
+    column_size:
+      type: select
+      options:
+        values:
+          - "is-full"
+          - "is-half"
+          - "is-one-third"
+          - "is-one-quarter"
+          - "is-full-tablet is-half-desktop"
+          - "is-half-tablet is-one-third-desktop"
+          - "is-half-table is-one-quarter-desktop"
+        allow_create: false
+        allow_empty: false
   logos:
     label: Set of logos
     type: array
@@ -66,16 +80,3 @@ _inputs:
         allow_empty: true
         label: Image description
         comment: Adding a description benefits visually impaired users who use screen readers when browsing the site
-      column_size:
-        type: select
-        options:
-          values:
-            - "is-full"
-            - "is-half"
-            - "is-one-third"
-            - "is-one-quarter"
-            - "is-full-tablet is-half-desktop"
-            - "is-half-tablet is-one-third-desktop"
-            - "is-half-table is-one-quarter-desktop"
-          allow_create: false
-          allow_empty: false
