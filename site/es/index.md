@@ -7,6 +7,23 @@ _schema: schemas/content_blocks_page_es.md
 content_blocks:
   - _bookshop_name: carousel
     items:
+      - title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
+        creation_date: 2023-04-10 12:00:00
+        content:
+          content_html: >-
+            <p>Nuestra misión es ofrecer hogar seguro, atención personal,
+            alimentación, transportación, servicios médicos, educación,
+            recreación, ayuda social y psicológica a niños y niñas víctimas de
+            maltrato. Ante todo, en nuestro Hogar los niños reciben mucho
+            AMOR.</p>
+        hide_from_carousel: false
+        always_show: true
+        image: /uploads/carousel_highlights/kids_circle.jpg
+        show_call_to_action: true
+        call_to_action:
+          text: The Hogar
+          opens_donate_modal: false
+          url: /en/about
       - _bookshop_name: carousel_item
         title: La Salud Mental
         creation_date: 2023-05-01 12:00:00
@@ -31,23 +48,6 @@ content_blocks:
         show_call_to_action: false
         call_to_action:
           text: Learn More
-          opens_donate_modal: false
-          url: /en/about
-      - title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
-        creation_date: 2023-04-10 12:00:00
-        content:
-          content_html: >-
-            <p>Nuestra misión es ofrecer hogar seguro, atención personal,
-            alimentación, transportación, servicios médicos, educación,
-            recreación, ayuda social y psicológica a niños y niñas víctimas de
-            maltrato. Ante todo, en nuestro Hogar los niños reciben mucho
-            AMOR.</p>
-        hide_from_carousel: false
-        always_show: true
-        image: /uploads/carousel_highlights/kids_circle.jpg
-        show_call_to_action: true
-        call_to_action:
-          text: The Hogar
           opens_donate_modal: false
           url: /en/about
       - title: APADRINA A UN NIÑO O NIÑA DEL HOGAR
