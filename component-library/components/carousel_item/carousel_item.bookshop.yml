@@ -60,7 +60,7 @@ _inputs:
     hidden: !image_custom_dimensions
     allow_empty: true
   image_width:
-    label: "Manual height of the image"
+    label: "Manual width of the image"
     type: number
     hidden: !image_custom_dimensions
     allow_empty: true
