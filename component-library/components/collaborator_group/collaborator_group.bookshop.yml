@@ -5,6 +5,7 @@ spec:
   label: Collaborator Group
   description: Renders a group of collaborators
   icon: groups
+  image: /uploads/components/collaborator_group.preview.png
   tags:
     - Collaborator
 
