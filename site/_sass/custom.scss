@@ -160,7 +160,7 @@ a.button.is-secondary, button.is-secondary {
 }
 .carousel-image {
   display: block;
-  height: auto;
+  height: 100%;
   width: 100%;
 }
 .carousel-slide {
@@ -642,7 +642,7 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
     padding: 1em 2.5rem 3rem 2.5rem;
   }
   .carousel-image {
-    height: auto !important;
+    height: 350px !important;
   }
   #post-side-by-side-layout-container {
     flex-direction: column;

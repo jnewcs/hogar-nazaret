@@ -12,11 +12,13 @@ spec:
 blueprint:
   title: "Carousel Title #3"
   creation_date: 2023-04-10T12:00:00.000+00:00
+  layout: "split"
   content: bookshop:content
   image: "/uploads/carousel_highlights/child_prevention_month.jpg"
-  image_custom_dimensions: true
+  image_custom_dimensions: false
   image_width: 100
   image_height: 25
+  image_style: contain
   hide_from_carousel: false
   always_show: false
   show_call_to_action: true
@@ -37,6 +39,14 @@ _inputs:
     type: datetime
     comment: By default, carousel items only show for 6 months. To override, check `always_show`
     allow_empty: false
+  layout:
+    type: select
+    comment: Layout of the Carousel Item
+    options:
+      values:
+        - split
+      allow_create: false
+      allow_empty: false
   content:
     allow_empty: false
   always_show:
@@ -58,13 +68,23 @@ _inputs:
   image_height:
     label: "Manual height of the image"
     type: number
-    hidden: !image_custom_dimensions
+    hidden: !$image_custom_dimensions
     allow_empty: true
   image_width:
     label: "Manual width of the image"
     type: number
-    hidden: !image_custom_dimensions
+    hidden: !$image_custom_dimensions
     allow_empty: true
+  image_style:
+    label: Image style when custom dimensions not checked
+    type: select
+    hidden: $image_custom_dimensions
+    options:
+      values:
+        - cover
+        - contain
+      allow_create: false
+      allow_empty: false
   show_call_to_action:
     type: checkbox
     label: "Show Call to Action button"

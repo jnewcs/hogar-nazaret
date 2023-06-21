@@ -22,9 +22,6 @@ blueprint:
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
 
-picker_preview:
-  image: collaborator_group.preview.png
-
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   title:
