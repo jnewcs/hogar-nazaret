@@ -1,5 +1,7 @@
 ---
 title: Home
+seo_title: "Hogar Albergue para Niños Jesús de Nazaret"
+seo_description: "The Hogar Albergue para Niños Jesús de Nazaret has been providing love, services, and a better future to boys and girls who have been victims of abuse or neglect for over twenty years."
 layout: default
 lang: en
 lang_ref: home-page

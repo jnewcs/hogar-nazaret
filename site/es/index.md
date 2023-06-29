@@ -1,5 +1,7 @@
 ---
 title: Inicio
+seo_title: "Hogar Albergue para Niños Jesús de Nazaret"
+seo_description: "El Hogar Albergue para Niños Jesús de Nazaret lleva más de dos décadas años dándo amor, servicios y un mejor futuro a niños y niñas de Puerto Rico que han sido víctimas de negligencia o maltrato."
 layout: default
 lang: es
 lang_ref: home-page
@@ -7,32 +9,6 @@ _schema: schemas/content_blocks_page_es.md
 content_blocks:
   - _bookshop_name: carousel
     items:
-      - _bookshop_name: carousel_item
-        title: Compras Que Abrazan
-        creation_date: 2023-06-20 12:00:00
-        layout: "split"
-        content:
-          _bookshop_name: content
-          content_html: >-
-            <p>La salud mental es tan importante como la salud física. Afecta la
-            forma en que pensamos, sentimos y actuamos. Cuidar nuestra salud
-            mental es fundamental para el bienestar general.</p><p>Priorizar el
-            cuidado personal puede ayudar a reducir el estrés y mejorar el
-            estado de ánimo. Tener un sistema de apoyo es crucial para una buena
-            salud mental. Comuníquese con amigos, familiares o un profesional de
-            la salud mental si necesita hablar o recibir
-            orientación.</p><p>#mentalhealthawareness2023</p>
-          show_container: false
-        image: /uploads/carousel_highlights/Compras que Abrazan - Preview.png
-        image_custom_dimensions: false
-        image_style: contain
-        hide_from_carousel: false
-        always_show: false
-        show_call_to_action: false
-        call_to_action:
-          text: Learn More
-          opens_donate_modal: false
-          url: /en/about
       - _bookshop_name: carousel_item
         title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
         creation_date: 2023-04-10 12:00:00

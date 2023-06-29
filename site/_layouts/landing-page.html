@@ -60,11 +60,11 @@ layout: default
                       </strong>
 
                       <p>
-                        {% assign word_count = upcoming_event.content | split: ' ' | size %}
+                        {% assign word_count = upcoming_event.blurb_description | split: ' ' | size %}
                         {% if word_count <= 50 %}
-                          {{ upcoming_event.content }}
+                          {{ upcoming_event.blurb_description }}
                         {% else %}
-                          {{ upcoming_event.content | truncatewords: 50 }}
+                          {{ upcoming_event.blurb_description | truncatewords: 50 }}
                         {% endif %}
                       </p>
 
