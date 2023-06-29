@@ -1,7 +1,6 @@
 ---
 title:
 date:
-time:
 blurb_description:
 banner_image:
 banner_image_alt:
