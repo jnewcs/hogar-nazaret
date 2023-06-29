@@ -49,7 +49,7 @@ _inputs:
   image:
     type: image
     label: Image
-    comment: Displayed to the left of the title
+    comment: Displayed centered on top of the title
     allow_empty: false
   image_alt:
     type: text
