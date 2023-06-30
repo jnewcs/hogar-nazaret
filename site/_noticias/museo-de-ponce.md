@@ -8,7 +8,7 @@ banner_image: >-
   https://video-sjc3-1.xx.fbcdn.net/v/t39.30808-6/354925442_579639134282411_1790091595800942687_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=lH_BEtNCY0MAX8KRXfA&_nc_ht=video-sjc3-1.xx&oh=00_AfC_ZNwGoFbKOdyoozuUPPFqN9ffNsflUqjyGguY9PuL4w&oe=64A4BCEC
 banner_image_alt: Museo de Ponce
 banner_image_style: contain
-lang_ref: test-ref
+lang_ref: museo-ponce-2023
 lang: es
 layout: post
 content_blocks:
