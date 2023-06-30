@@ -106,11 +106,6 @@ en:
   - Thursday
   - Friday
   - Saturday
-  seo:
-    descriptions:
-      homepage: The Hogar Albergue para Niños Jesús de Nazaret has been providing
-        love, services, and a better future to boys and girls who have been victims
-        of abuse or neglect for over twenty years.
   give_a_hug:
     hugs: hugs
     payment_description: Donation for the Maratón de Abrazos campaign
@@ -263,11 +258,6 @@ es:
   - Jueves
   - Viernes
   - Sábado
-  seo:
-    descriptions:
-      homepage: El Hogar Albergue para Niños Jesús de Nazaret lleva más de dos décadas
-        años dándo amor, servicios y un mejor futuro a niños y niñas de Puerto Rico
-        que han sido víctimas de negligencia o maltrato.
   give_a_hug:
     hugs: abrazos
     payment_description: Donativo para la campaña de Maratón de Abrazos

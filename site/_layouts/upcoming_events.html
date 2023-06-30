@@ -17,15 +17,15 @@ layout: default
 
     <div class="columns is-multiline is-nested mt-2">
       {% if page.lang == 'en' %}
-        {% assign events = site.upcoming_events | sort: "display_date" | reverse %}
+        {% assign events = site.upcoming_events | sort: "date" | reverse %}
       {% else %}
-        {% assign events = site.proximos_eventos | sort: "display_date" | reverse %}
+        {% assign events = site.proximos_eventos | sort: "date" | reverse %}
       {% endif %}
       {% assign events_shown = false %}
 
       {% if events.size > 0 %}
         {% for upcoming_event in events %}
-          {% assign event_date_to_compare = upcoming_event.display_date | date: '%s' | plus: 0 %}
+          {% assign event_date_to_compare = upcoming_event.date | date: '%s' | plus: 0 %}
 
           {% if event_date_to_compare < current_date %}
             {% continue %}
@@ -44,11 +44,11 @@ layout: default
                 {% endif %}
 
                 <h4 class="is-size-4">
-                  {% include day_of_week_helper.html date=upcoming_event.display_date %}
+                  {% include day_of_week_helper.html date=upcoming_event.date %}
                 </h4>
                 <h1 class="is-size-1">
                   <date>
-                    {% include date_to_string_helper.html date=upcoming_event.display_date use_year=true %}
+                    {% include date_to_string_helper.html date=upcoming_event.date use_year=true %}
                   </date>
                 </h1>
                 <h4 class="is-size-4">
@@ -62,11 +62,11 @@ layout: default
                     <a class="is-size-4" href="{{ upcoming_event.url | relative_url }}">{{ upcoming_event.title }}</a>
                   </strong>
                   <p>
-                    {% assign word_count = upcoming_event.content | split: ' ' | size %}
+                    {% assign word_count = upcoming_event.blurb_description | split: ' ' | size %}
                     {% if word_count <= 50 %}
-                      {{ upcoming_event.content }}
+                      {{ upcoming_event.blurb_description }}
                     {% else %}
-                      {{ upcoming_event.content | truncatewords: 50 }}
+                      {{ upcoming_event.blurb_description | truncatewords: 50 }}
                     {% endif %}
                   </p>
 

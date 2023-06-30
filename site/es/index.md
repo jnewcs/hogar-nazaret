@@ -1,5 +1,7 @@
 ---
 title: Inicio
+seo_title: "Hogar Albergue para Niños Jesús de Nazaret"
+seo_description: "El Hogar Albergue para Niños Jesús de Nazaret lleva más de dos décadas años dándo amor, servicios y un mejor futuro a niños y niñas de Puerto Rico que han sido víctimas de negligencia o maltrato."
 layout: default
 lang: es
 lang_ref: home-page
@@ -7,8 +9,10 @@ _schema: schemas/content_blocks_page_es.md
 content_blocks:
   - _bookshop_name: carousel
     items:
-      - title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
+      - _bookshop_name: carousel_item
+        title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
         creation_date: 2023-04-10 12:00:00
+        layout: "split"
         content:
           content_html: >-
             <p>Nuestra misión es ofrecer hogar seguro, atención personal,
@@ -19,6 +23,8 @@ content_blocks:
         hide_from_carousel: false
         always_show: true
         image: /uploads/carousel_highlights/kids_circle.jpg
+        image_custom_dimensions: false
+        image_style: contain
         show_call_to_action: true
         call_to_action:
           text: The Hogar
@@ -27,6 +33,7 @@ content_blocks:
       - _bookshop_name: carousel_item
         title: La Salud Mental
         creation_date: 2023-05-01 12:00:00
+        layout: "split"
         content:
           _bookshop_name: content
           content_html: >-
@@ -40,9 +47,8 @@ content_blocks:
             orientación.</p><p>#mentalhealthawareness2023</p>
           show_container: false
         image: /uploads/salud-mental.png
-        image_custom_dimensions: true
-        image_width: 300
-        image_height: 400
+        image_custom_dimensions: false
+        image_style: contain
         hide_from_carousel: false
         always_show: false
         show_call_to_action: false
@@ -50,7 +56,9 @@ content_blocks:
           text: Learn More
           opens_donate_modal: false
           url: /en/about
-      - title: APADRINA A UN NIÑO O NIÑA DEL HOGAR
+      - _bookshop_name: carousel_item
+        title: APADRINA A UN NIÑO O NIÑA DEL HOGAR
+        layout: "split"
         creation_date: 2023-04-16 12:00:00
         content:
           content_html: >-
@@ -62,9 +70,8 @@ content_blocks:
         hide_from_carousel: false
         always_show: true
         image: /uploads/carousel_highlights/two_girls.jpg
-        image_custom_dimensions: true
-        image_height: 200
-        image_width: 275
+        image_custom_dimensions: false
+        image_style: contain
         show_call_to_action: true
         call_to_action:
           text: Donate

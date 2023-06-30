@@ -32,27 +32,27 @@
           {% include date_to_string_helper.html date=include.date use_year=true %}
         </date>
       </h3>
+    {% endif %}
 
-      {% if include.location %}
-        <h4 class="is-size-4">
-          <div class="tag is-info is-light is-medium">
-            <a
-              href="{{ include.location.url }}"
-              target="_blank"
-            >
-              {{ include.location.text }}
-            </a>
-          </div>
-        </h4>
-      {% endif %}
+    {% if include.time %}
+      <h4 class="is-size-4">
+        <date>
+          {{ include.time }}
+        </date>
+      </h4>
+    {% endif %}
 
-      {% if include.time %}
-        <h4 class="is-size-4">
-          <date>
-            {{ include.time }}
-          </date>
-        </h4>
-      {% endif %}
+    {% if include.location %}
+      <h4 class="is-size-4">
+        <div class="tag is-info is-light is-medium">
+          <a
+            href="{{ include.location.url }}"
+            target="_blank"
+          >
+            {{ include.location.text }}
+          </a>
+        </div>
+      </h4>
     {% endif %}
 
     {% if page %}

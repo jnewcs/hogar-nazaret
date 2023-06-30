@@ -12,6 +12,7 @@ spec:
 blueprint:
   title: "Page Title"
   date: 2020-07-15T12:00:00.000Z
+  time: "10 AM - 2 PM"
   image: "https://hogarjesusdenazaret.org/uploads/page_header_images/hogar_playground.jpg"
   image_alt: "Image description"
   image_height: 350
@@ -21,7 +22,6 @@ blueprint:
   location:
     text: "University of Puerto Rico at Mayagüez"
     url: "https://goo.gl/maps/NC4cC7QhTLYcn5hUA"
-  time: "10 AM - 2 PM"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -33,8 +33,12 @@ _inputs:
     type: text
     allow_empty: false
   date:
+    type: datetime
+    comment: "Date to display in readable format (e.g Domingo 12 de junio de 2022)"
     allow_empty: true
   time:
+    type: text
+    comment: Specific time that displays underneath the date. Can be blank
     allow_empty: true
   location:
     type: object
@@ -49,7 +53,7 @@ _inputs:
   image:
     type: image
     label: Image
-    comment: Displayed to the left of the title
+    comment: Displayed centered on top of the title
     allow_empty: false
   image_alt:
     type: text

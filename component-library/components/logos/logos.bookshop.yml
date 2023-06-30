@@ -5,6 +5,7 @@ spec:
   label: Logos
   description: Renders a set of logos
   icon: view_module
+  image: /uploads/components/logos.preview.png
   tags:
     - Logos
 

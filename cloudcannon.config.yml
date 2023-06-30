@@ -23,7 +23,7 @@ collections_config:
           $.title:
             type: text
             label: Name of the Noticia
-            comment: This is different from the actual page title which should be added in the content blocks section
+            comment: This is different from the actual page header which should be added in the content blocks section
           $.date:
             type: datetime
             label: Publish Date
@@ -83,7 +83,7 @@ collections_config:
           $.title:
             type: text
             label: Name of the News Article
-            comment: This is different from the actual page title which should be added in the content blocks section
+            comment: This is different from the actual page header which should be added in the content blocks section
           $.date:
             type: datetime
             label: Publish Date
@@ -100,6 +100,116 @@ collections_config:
           $.banner_image:
             label: Preview Image
             comment: This image is used for aggregate views (News page)
+            type: image
+            allow_empty: true
+          $.banner_image_alt:
+            label: Preview image description
+            comment: Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in English
+            allow_empty: true
+          $.banner_image_style:
+            label: Preview image style
+            type: select
+            options:
+              values:
+                - cover
+                - contain
+              allow_create: false
+              allow_empty: false
+          $.content:
+            hidden: true
+          $.content_blocks:
+
+  proximos_eventos:
+    sort:
+      key: date
+    add_options:
+      - name: Add Upcoming event for the Spanish website
+        editor: visual
+    _enabled_editors:
+      - data
+      - visual
+    preview:
+      subtext:
+        - key: title
+        - Upcoming Event Title
+      subtext:
+        - key: date
+        - Publish date
+    schemas:
+      default:
+        path: schemas/proximo_evento.md
+        hide_extra_inputs: true
+        _inputs:
+          $.title:
+            type: text
+            label: Name of the Upcoming event
+            comment: This is different from the actual page header which should be added in the content blocks section
+          $.date:
+            type: datetime
+            label: Publish Date
+            allow_empty: false
+          $.blurb_description:
+            label: Upcoming event description
+            comment: Description used only for aggregate views (Proximos Eventos Page)
+            allow_empty: true
+          $.banner_image:
+            label: Preview Image
+            comment: This image is used for aggregate views (Proximos Eventos Page)
+            type: image
+            allow_empty: true
+          $.banner_image_alt:
+            label: Preview image description
+            comment: Adding a description benefits visually impaired users who use screen readers when browsing. Should be written in English
+            allow_empty: true
+          $.banner_image_style:
+            label: Preview image style
+            type: select
+            options:
+              values:
+                - cover
+                - contain
+              allow_create: false
+              allow_empty: false
+          $.content:
+            hidden: true
+          $.content_blocks:
+
+  upcoming_events:
+    sort:
+      key: date
+    add_options:
+      - name: Add Upcoming event for the English website
+        editor: visual
+    _enabled_editors:
+      - data
+      - visual
+    preview:
+      subtext:
+        - key: title
+        - Upcoming Event Title
+      subtext:
+        - key: date
+        - Publish date
+    schemas:
+      default:
+        path: schemas/upcoming_event.md
+        hide_extra_inputs: true
+        _inputs:
+          $.title:
+            type: text
+            label: Name of the Upcoming event
+            comment: This is different from the actual page header which should be added in the content blocks section
+          $.date:
+            type: datetime
+            label: Publish Date
+            allow_empty: false
+          $.blurb_description:
+            label: Upcoming event description
+            comment: Description used only for aggregate views (Upcoming Events Page)
+            allow_empty: true
+          $.banner_image:
+            label: Preview Image
+            comment: This image is used for aggregate views (Upcoming Events Page)
             type: image
             allow_empty: true
           $.banner_image_alt:
@@ -171,10 +281,12 @@ collection_groups:
   - heading: "Spanish Website"
     collections:
       - noticias
+      - proximos_eventos
       - content_blocks_page_es
   - heading: "English Website"
     collections:
       - posts
+      - upcoming_events
       - content_blocks_page_en
   - heading: "Misc."
     collections:

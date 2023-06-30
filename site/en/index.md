@@ -1,5 +1,7 @@
 ---
 title: Home
+seo_title: "Hogar Albergue para Niños Jesús de Nazaret"
+seo_description: "The Hogar Albergue para Niños Jesús de Nazaret has been providing love, services, and a better future to boys and girls who have been victims of abuse or neglect for over twenty years."
 layout: default
 lang: en
 lang_ref: home-page
@@ -16,6 +18,7 @@ content_blocks:
         always_show: true
         image: "/uploads/carousel_highlights/kids_circle.jpg"
         image_custom_dimensions: false
+        image_style: contain
         show_call_to_action: true
         call_to_action:
           text: The Hogar
@@ -29,9 +32,8 @@ content_blocks:
         hide_from_carousel: false
         always_show: true
         image: "/uploads/carousel_highlights/child_prevention_month.jpg"
-        image_custom_dimensions: true
-        image_height: 200
-        image_width: 275
+        image_custom_dimensions: false
+        image_style: contain
         show_call_to_action: true
         call_to_action:
           text: Donate Here

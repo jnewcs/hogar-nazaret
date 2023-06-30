@@ -15,49 +15,49 @@
 {% else %}
   <div class="carousel-highlight-container {% unless forloop.first %}is-hidden{% endunless %}">
     <div class="columns is-gapless carousel-slide">
-      {% if include.full_page %}
-        {% include full_page_carousel_content.html higlight=highlight %}
-      {% else %}
-        <div class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered" style="position: relative; overflow: hidden">
-          {% if include.image_custom_dimensions %}
-            <img
-              class="carousel-image"
-              src="{{ include.image | relative_url }}"
-              style="height: {{ include.image_height }}px; width: {{ include.image_width }}px"
-            />
-          {% else %}
-            <img
-              class="carousel-image"
-              src="{{ include.image | relative_url }}"
-            />
+      <div
+        class="column has-background-white-ter is-flex-container has-text-centered has-text-centered is-fully-centered"
+        style="position: relative; overflow: hidden"
+      >
+        {% if include.image_custom_dimensions %}
+          <img
+            class="carousel-image"
+            src="{{ include.image | relative_url }}"
+            style="height: {{ include.image_height }}px; width: {{ include.image_width }}px"
+          />
+        {% else %}
+          <img
+            class="carousel-image"
+            src="{{ include.image | relative_url }}"
+            style="object-fit: {{ include.image_style }};"
+          />
+        {% endif %}
+      </div>
+
+      <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
+        <div class="container content-container carousel-text is-unselectable">
+          <h1 class="is-size-3 is-uppercase is-unselectable">
+            {{ include.title }}
+          </h1>
+
+          {% if include.content %}
+            {% bookshop content bind=include.content %}
+          {% endif %}
+
+          {% if include.show_call_to_action %}
+            <br />
+            {% if include.call_to_action.opens_donate_modal %}
+              <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
+                {{ include.call_to_action.text }}
+              </a>
+            {% else %}
+              <a class="button is-secondary has-text-white is-medium" href="{{ include.call_to_action.url | relative_url }}">
+                {{ include.call_to_action.text }}
+              </a>
+            {% endif %}
           {% endif %}
         </div>
-
-        <div class="column has-background-white-ter is-flex-container is-fully-centered pt-0">
-          <div class="container content-container carousel-text is-unselectable">
-            <h1 class="is-size-3 is-uppercase is-unselectable">
-              {{ include.title }}
-            </h1>
-
-            {% if include.content %}
-              {% bookshop content bind=include.content %}
-            {% endif %}
-
-            {% if include.show_call_to_action %}
-              <br />
-              {% if include.call_to_action.opens_donate_modal %}
-                <a class="button modal-opener is-secondary has-text-white is-medium" data-target="donation-modal" href="#">
-                  {{ include.call_to_action.text }}
-                </a>
-              {% else %}
-                <a class="button is-secondary has-text-white is-medium" href="{{ include.call_to_action.url | relative_url }}">
-                  {{ include.call_to_action.text }}
-                </a>
-              {% endif %}
-            {% endif %}
-          </div>
-        </div>
-      {% endif %}
+      </div>
     </div>
   </div>
 {% endif %}
