@@ -13,6 +13,12 @@ lang_ref: restaurante-plaza-2023
 lang: es
 layout: post
 content_blocks:
+  - _bookshop_name: side_by_side_header
+    title: Restaurante Plaza, Platos y Copas
+    date: 2023-06-29 00:00:00
+    image: /uploads/plaza-platos-y-copas-4.jpg
+    image_alt: El mago
+    image_style: contain
   - _bookshop_name: content
     content_html: >-
       <p>"Cuando la gratitud es tan absoluta las palabras sobran". Alvaro
@@ -30,4 +36,11 @@ content_blocks:
       Miguel Casiano y a todos los que hicieron posible esta experiencia.
       Bendecidos sean!</p><p>#AutoStopGroup #gratitud</p>
     show_container: true
+  - _bookshop_name: photo_grid
+    photos:
+      - /uploads/plaza-platos-y-copas-4.jpg
+      - /uploads/plaza-platos-y-copas-1.jpg
+      - /uploads/plaza-platos-y-copas-5.jpg
+      - /uploads/plaza-platos-y-copas-2.jpg
+      - /uploads/plaza-platos-y-copas-3.jpg
 ---
