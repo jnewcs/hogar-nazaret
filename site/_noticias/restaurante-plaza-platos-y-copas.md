@@ -2,7 +2,7 @@
 _schema: default
 title: Restaurante Plaza, Platos y Copas
 work_in_progress: false
-date:
+date: 2023-06-29 00:00:00
 blurb_description: >-
   Nuestros niños fueron invitados al Restaurante Plaza, Platos y Copas. Estamos
   seguros que esta experiencia quedará grabada en sus mentes
