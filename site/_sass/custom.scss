@@ -154,6 +154,63 @@ a.button.is-secondary, button.is-secondary {
   }
 }
 
+/* Skeleton Loader */
+.skeleton-article {
+  position: relative;
+
+  .skeleton-article-image {
+    background: #eee;
+    height: 15rem;
+  }
+  .skeleton-article-title {
+    display: block;
+    background: #eee;
+    height: 2rem;
+    width: 10rem;
+  }
+  .skeleton-article-subtitle {
+    display: block;
+    background: #eee;
+    height: 0.75rem;
+    width: 3rem;
+  }
+  .skeleton-article-text {
+    display: block;
+    background: #eee;
+    height: 1rem;
+    width: 30rem;
+
+    &.less {
+      width: 15rem;
+    }
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.9),
+      transparent
+    );
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+
+    @keyframes loading {
+      0% {
+        transform: skewX(-10deg) translateX(-100%);
+      }
+      100% {
+        transform: skewX(-10deg) translateX(200%);
+      }
+    }
+    animation: loading 0.85s infinite;
+  }
+}
+
 /* Carousel */
 #news-carousel-container img {
   max-height: 300px;

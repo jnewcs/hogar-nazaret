@@ -109,5 +109,9 @@
     {% include give_a_hug/footer.html %}
   {% endif %}
 {% endif %}
+
+{% if page.load_automated_posts == true %}
+  {% include automated_posts/footer.html %}
+{% endif %}
 </body>
 </html>
