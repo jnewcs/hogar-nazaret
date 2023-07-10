@@ -237,6 +237,9 @@ collections_config:
     _enabled_editors:
       - data
       - visual
+    filter:
+      exclude:
+        - noticias.md
     schemas:
       default:
         path: schemas/content_blocks_page_es.md
