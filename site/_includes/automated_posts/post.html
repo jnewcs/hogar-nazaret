@@ -1,0 +1,28 @@
+<div class="columns is-desktop">
+  <div class="column is-one-quarter">
+    <figure class="image">
+      <img src="AUTOMATED_POST_IMAGE_URL">
+    </figure>
+  </div>
+
+  <div class="column">
+    <div class="content">
+      <p>AUTOMATED_POST_MESSAGE</p>
+      <div class="is-flex-container mb-2">
+        <b style="margin-right: 5px">AUTOMATED_POST_LIKE_COUNT</b>
+        <span class="icon" style="margin-right: 10px">
+          <img src="{{ '/uploads/like.png' | relative_url }}" class="mr-2"/>
+        </span>
+
+        <b style="margin-right: 5px">AUTOMATED_POST_COMMENT_COUNT</b>
+        <span class="icon">
+          <img src="{{ '/uploads/chat.png' | relative_url }}"/>
+        </span>
+      </div>
+
+      <a href="AUTOMATED_POST_URL" class="button is-primary is-outlined is-medium" target="_blank">
+        {{ site.data.languages[page.lang].read_more }}
+      </a>
+    </div>
+  </div>
+</div>

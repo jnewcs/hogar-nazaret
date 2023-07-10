@@ -280,7 +280,6 @@ collections_config:
 collection_groups:
   - heading: "Spanish Website"
     collections:
-      - noticias
       - proximos_eventos
       - content_blocks_page_es
   - heading: "English Website"
