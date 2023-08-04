@@ -1,7 +1,10 @@
 ---
 title: Inicio
-seo_title: "Hogar Albergue para Niños Jesús de Nazaret"
-seo_description: "El Hogar Albergue para Niños Jesús de Nazaret lleva más de dos décadas años dándo amor, servicios y un mejor futuro a niños y niñas de Puerto Rico que han sido víctimas de negligencia o maltrato."
+seo_title: Hogar Albergue para Niños Jesús de Nazaret
+seo_description: >-
+  El Hogar Albergue para Niños Jesús de Nazaret lleva más de dos décadas años
+  dándo amor, servicios y un mejor futuro a niños y niñas de Puerto Rico que han
+  sido víctimas de negligencia o maltrato.
 layout: default
 lang: es
 lang_ref: home-page
@@ -12,7 +15,7 @@ content_blocks:
       - _bookshop_name: carousel_item
         title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
         creation_date: 2023-04-10 12:00:00
-        layout: "split"
+        layout: split
         content:
           content_html: >-
             <p>Nuestra misión es ofrecer hogar seguro, atención personal,
@@ -33,7 +36,7 @@ content_blocks:
       - _bookshop_name: carousel_item
         title: La Salud Mental
         creation_date: 2023-05-01 12:00:00
-        layout: "split"
+        layout: split
         content:
           _bookshop_name: content
           content_html: >-
@@ -58,7 +61,7 @@ content_blocks:
           url: /en/about
       - _bookshop_name: carousel_item
         title: APADRINA A UN NIÑO O NIÑA DEL HOGAR
-        layout: "split"
+        layout: split
         creation_date: 2023-04-16 12:00:00
         content:
           content_html: >-
@@ -76,6 +79,42 @@ content_blocks:
         call_to_action:
           text: Donate
           opens_donate_modal: true
+      - _bookshop_name: carousel_item
+        title: La campaña Compras que Abrazan
+        creation_date: 2023-08-04 12:00:00
+        layout: split
+        content:
+          _bookshop_name: content
+          content_html: >-
+            <div style="color: rgb(0, 0, 0); font-family: &quot;Segoe UI&quot;,
+            Helvetica, &quot;S60 Sans&quot;, &quot;BBAlpha Sans&quot;, Droid,
+            Tahoma, Arial; font-size: 16px; letter-spacing: normal;
+            background-color: rgb(255, 255, 255); direction: ltr; margin-top:
+            5px;"><span style="direction: ltr;">El Hogar fue seleccionado por
+            Walmart para ser beneficiario de una&nbsp;<span style="direction:
+            ltr;">iniciativa organizada por el Sr. Ángel Alvarado, gerente de
+            Walmart PR y otras firmas tales&nbsp;<span style="direction:
+            ltr;">como Colgate, Frito Lay, Pepsi, 7Up, Protex y Tropicana.
+            Durante el mes de agosto 2023, las&nbsp;<span style="direction:
+            ltr;">marcas participantes van a aportar 25 centavos de cada dólar
+            de sus ventas en Walmart al&nbsp;<span style="direction: ltr;">Hogar
+            Jesús de Nazaret. Para aumentar el impacto de la campaña, Walmart
+            igualará la&nbsp;<span style="direction: ltr;">cantidad total de
+            fondos recaudados por las
+            marcas.</span></span></span></span></span></span>​​</div>
+          show_container: true
+        image: /uploads/r-jpeg.jpg
+        image_custom_dimensions: false
+        image_width: 100
+        image_height: 25
+        image_style: contain
+        hide_from_carousel: false
+        always_show: false
+        show_call_to_action: true
+        call_to_action:
+          text: Learn More
+          opens_donate_modal: false
+          url: /en/about
   - _bookshop_name: banner
     title: ¡Oportunidad de Empleo!
     content:
