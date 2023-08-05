@@ -13,8 +13,10 @@ content_blocks:
     -
         _bookshop_name: flyer_header
         title: La campaña Compras que Abrazan
-        date: 2022-08-01 09:00:00
-        time:
+        hide_date: true
+        date: 2023-08-01 09:00:00
+        hide_time: false
+        time: "El mes de agosto"
         image: /uploads/r-jpeg.jpg
         image_alt: La campaña Compras que Abrazan
         image_height: 350
