@@ -18,6 +18,7 @@ content_blocks:
         image: /uploads/r-jpeg.jpg
         image_alt: La campaña Compras que Abrazan
         image_height: 350
+        hide_call_to_action: true
         call_to_action:
             text:
             url:
