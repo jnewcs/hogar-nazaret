@@ -20,7 +20,7 @@
       </a>
     {% endunless %}
 
-    {% if include.date %}
+    {% unless include.hide_date %}
       <h4 class="is-size-4">
         <date>
           {% include day_of_week_helper.html date=include.date %}
@@ -32,15 +32,15 @@
           {% include date_to_string_helper.html date=include.date use_year=true %}
         </date>
       </h3>
-    {% endif %}
+    {% endunless %}
 
-    {% if include.time %}
+    {% unless include.hide_time %}
       <h4 class="is-size-4">
         <date>
           {{ include.time }}
         </date>
       </h4>
-    {% endif %}
+    {% endunless %}
 
     {% if include.location %}
       <h4 class="is-size-4">

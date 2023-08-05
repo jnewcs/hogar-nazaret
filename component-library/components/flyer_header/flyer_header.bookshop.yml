@@ -33,14 +33,26 @@ _inputs:
     comment: Centered aligned on the page
     type: text
     allow_empty: false
+  hide_date:
+    type: switch
+    label: "Hide the date text?"
+    comment: When toggled, the header will hide date text
+    allow_empty: false
   date:
     type: datetime
     comment: "Date to display in readable format (e.g Domingo 12 de junio de 2022)"
     allow_empty: true
+    hidden: hide_date
+  hide_time:
+    type: switch
+    label: "Hide the time text?"
+    comment: When toggled, the header will hide time text
+    allow_empty: false
   time:
     type: text
     comment: Specific time that displays underneath the date. Can be blank
     allow_empty: true
+    hidden: hide_time
   location:
     type: object
     allow_empty: true
