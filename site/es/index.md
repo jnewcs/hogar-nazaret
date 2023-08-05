@@ -39,9 +39,9 @@ content_blocks:
         always_show: false
         show_call_to_action: true
         call_to_action:
-          text: Learn More
+          text: Aprende más
           opens_donate_modal: false
-          url: /en/about
+          url: /es/proximos_eventos/la-campa%C3%B1a-compras-que-abrazan
       - _bookshop_name: carousel_item
         title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
         creation_date: 2023-04-10 12:00:00
@@ -107,7 +107,7 @@ content_blocks:
         image_style: contain
         show_call_to_action: true
         call_to_action:
-          text: Donate
+          text: Donar
           opens_donate_modal: true
   - _bookshop_name: banner
     title: ¡Oportunidad de Empleo!
