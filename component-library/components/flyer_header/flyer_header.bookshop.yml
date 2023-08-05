@@ -16,6 +16,7 @@ blueprint:
   image: "https://hogarjesusdenazaret.org/uploads/page_header_images/hogar_playground.jpg"
   image_alt: "Image description"
   image_height: 350
+  hide_call_to_action: false
   call_to_action:
     text: "Buy Tickets"
     url: "https://www.eventbrite.com/e/337606900327"
@@ -65,9 +66,15 @@ _inputs:
     type: number
     min: 0
     allow_empty: false
+  hide_call_to_action:
+    type: switch
+    label: "Hide the call to action button?"
+    comment: When toggled, the header will hide the call to action button
+    allow_empty: false
   call_to_action:
     type: object
     allow_empty: true
+    hidden: hide_call_to_action
     options:
       text:
         type: text
