@@ -43,17 +43,23 @@ layout: default
                   />
                 {% endif %}
 
-                <h4 class="is-size-4">
-                  {% include day_of_week_helper.html date=upcoming_event.date %}
-                </h4>
-                <h1 class="is-size-1">
-                  <date>
-                    {% include date_to_string_helper.html date=upcoming_event.date use_year=true %}
-                  </date>
-                </h1>
-                <h4 class="is-size-4">
-                  {{ upcoming_event.time }}
-                </h4>
+                {% if upcoming_event.show_manual_date_in_blurb %}
+                  <h4 class="is-size-4">
+                    {{ upcoming_event.manual_date }}
+                  </h4>
+                {% else %}
+                  <h4 class="is-size-4">
+                    {% include day_of_week_helper.html date=upcoming_event.date %}
+                  </h4>
+                  <h1 class="is-size-1">
+                    <date>
+                      {% include date_to_string_helper.html date=upcoming_event.date use_year=true %}
+                    </date>
+                  </h1>
+                  <h4 class="is-size-4">
+                    {{ upcoming_event.time }}
+                  </h4>
+                {% endif %}
               </div>
 
               <div class="column">
