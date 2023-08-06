@@ -60,9 +60,9 @@ content_blocks:
         image_style: contain
         show_call_to_action: true
         call_to_action:
-          text: The Hogar
+          text: El Hogar
           opens_donate_modal: false
-          url: /en/about
+          url: /es/quienes-somos/
       - _bookshop_name: carousel_item
         title: La Salud Mental
         creation_date: 2023-05-01 12:00:00
@@ -82,7 +82,7 @@ content_blocks:
         image: /uploads/salud-mental.png
         image_custom_dimensions: false
         image_style: contain
-        hide_from_carousel: false
+        hide_from_carousel: true
         always_show: false
         show_call_to_action: false
         call_to_action:
