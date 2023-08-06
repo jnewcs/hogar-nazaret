@@ -146,7 +146,7 @@ collections_config:
             comment: This is different from the actual page header which should be added in the content blocks section
           $.date:
             type: datetime
-            label: Publish Date
+            label: Publish Date used in aggregate views (Proximos Eventos Page)
             hidden: show_manual_date_in_blurb
             allow_empty: false
           $.show_manual_date_in_blurb:
@@ -211,7 +211,7 @@ collections_config:
             comment: This is different from the actual page header which should be added in the content blocks section
           $.date:
             type: datetime
-            label: Publish Date
+            label: Publish Date used in aggregate views (Upcoming Events Page)
             hidden: show_manual_date_in_blurb
             allow_empty: false
           $.show_manual_date_in_blurb:
