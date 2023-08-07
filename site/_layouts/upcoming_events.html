@@ -26,10 +26,12 @@ layout: default
       {% if events.size > 0 %}
         {% for upcoming_event in events %}
           {% assign event_date_to_compare = upcoming_event.date | date: '%s' | plus: 0 %}
-
-          {% if event_date_to_compare < current_date %}
-            {% continue %}
-          {% endif %}
+            
+          {% unless upcoming_event.always_show == true %}
+            {% if event_date_to_compare < current_date %}
+              {% continue %}
+            {% endif %}
+          {% endunless %}
           {% assign events_shown = true %}
 
           <div class="column is-full mb-2 mt-1">
