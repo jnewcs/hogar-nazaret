@@ -39,7 +39,7 @@ layout: default
                   <img
                     src="{{ upcoming_event.banner_image }}"
                     alt="{{ upcoming_event.banner_image_alt }}"
-                    style="height: 150px"
+                    style="height: {{ upcoming_event.banner_image_height }}px"
                   />
                 {% endif %}
 
