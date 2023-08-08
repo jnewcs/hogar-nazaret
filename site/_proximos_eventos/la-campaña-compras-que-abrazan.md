@@ -21,7 +21,7 @@ content_blocks:
         date: 2023-08-01 09:00:00
         hide_time: false
         time: El mes de agosto
-        image: /uploads/r-jpeg.jpg
+        image: /uploads/compras-walmart-flyer.jpeg
         image_alt: La campaña Compras que Abrazan
         image_height: 350
         hide_call_to_action: true
