@@ -148,7 +148,7 @@ collections_config:
             hidden: true
           $.start_date:
             type: datetime
-            label: Start date used in aggregate views if `show_manual_date_in_blurb` is not turned on (Proximos Eventos Page)
+            label: Start date used in aggregate views if show_manual_date_in_blurb is not turned on (Proximos Eventos Page)
             hidden: show_manual_date_in_blurb
             allow_empty: false
           $.end_date:
@@ -219,7 +219,7 @@ collections_config:
             hidden: true
           $.start_date:
             type: datetime
-            label: Start date used in aggregate views if `show_manual_date_in_blurb` is not turned on (Upcoming Events Page)
+            label: Start date used in aggregate views if show_manual_date_in_blurb is not turned on (Upcoming Events Page)
             hidden: show_manual_date_in_blurb
             allow_empty: false
           $.end_date:
