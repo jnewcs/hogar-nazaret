@@ -126,6 +126,9 @@ a.button.is-secondary, button.is-secondary {
   }
 }
 #post-side-by-side-layout-image { min-height: 350px; }
+.automated-post-message {
+  overflow-wrap: break-word;
+}
 
 /* Page Hero Image */
 .page-hero-image-container {
