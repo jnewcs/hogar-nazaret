@@ -25,13 +25,11 @@ layout: default
 
       {% if events.size > 0 %}
         {% for upcoming_event in events %}
-          {% assign event_date_to_compare = upcoming_event.date | date: '%s' | plus: 0 %}
+          {% assign event_end_date = upcoming_event.end_date | date: '%s' | plus: 0 %}
             
-          {% unless upcoming_event.always_show == true %}
-            {% if event_date_to_compare < current_date %}
-              {% continue %}
-            {% endif %}
-          {% endunless %}
+          {% if current_date > event_end_date %}
+            {% continue %}
+          {% endif %}
           {% assign events_shown = true %}
 
           <div class="column is-full mb-2 mt-1">
@@ -51,11 +49,11 @@ layout: default
                   </h4>
                 {% else %}
                   <h4 class="is-size-4">
-                    {% include day_of_week_helper.html date=upcoming_event.date %}
+                    {% include day_of_week_helper.html date=upcoming_event.start_date %}
                   </h4>
                   <h1 class="is-size-1">
                     <date>
-                      {% include date_to_string_helper.html date=upcoming_event.date use_year=true %}
+                      {% include date_to_string_helper.html date=upcoming_event.start_date use_year=true %}
                     </date>
                   </h1>
                   <h4 class="is-size-4">
