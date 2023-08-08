@@ -145,9 +145,15 @@ collections_config:
             label: Name of the Upcoming event
             comment: This is different from the actual page header which should be added in the content blocks section
           $.date:
+            hidden: true
+          $.start_date:
             type: datetime
-            label: Publish Date used in aggregate views (Proximos Eventos Page)
+            label: Start date used in aggregate views if show_manual_date_in_blurb is not turned on (Proximos Eventos Page)
             hidden: show_manual_date_in_blurb
+            allow_empty: false
+          $.end_date:
+            type: datetime
+            label: End date used to determine when to stop showing the event in aggregate views (Proximos Eventos Page)
             allow_empty: false
           $.show_manual_date_in_blurb:
             type: switch
@@ -210,9 +216,15 @@ collections_config:
             label: Name of the Upcoming event
             comment: This is different from the actual page header which should be added in the content blocks section
           $.date:
+            hidden: true
+          $.start_date:
             type: datetime
-            label: Publish Date used in aggregate views (Upcoming Events Page)
+            label: Start date used in aggregate views if show_manual_date_in_blurb is not turned on (Upcoming Events Page)
             hidden: show_manual_date_in_blurb
+            allow_empty: false
+          $.end_date:
+            type: datetime
+            label: End date used to determine when to stop showing the event in aggregate views (Upcoming Events Page)
             allow_empty: false
           $.show_manual_date_in_blurb:
             type: switch
