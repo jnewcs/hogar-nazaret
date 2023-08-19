@@ -54,7 +54,7 @@
     
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&amp;display=swap" rel="stylesheet">
-    <link data-cms-original-href="/css/main.css?1692459000172307047" href="/css/main.css?1692459000172307047&amp;_cchid=9911e530e3ad907f2a06f604e2cbae5e" rel="stylesheet">
+    <link data-cms-original-href="/css/main.css?1692479333589465751" href="/css/main.css?1692479333589465751&amp;_cchid=9911e530e3ad907f2a06f604e2cbae5e" rel="stylesheet">
 
     <!-- TODO: Optimize when we load the carousel  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" rel="stylesheet">
@@ -491,28 +491,45 @@
 
 
   
-  <!--bookshop-live name(simple_header/simple_header.jekyll.html) params(bind=block) context(block=content_blocks[0]) -->
+  <!--bookshop-live name(flyer_header/flyer_header.jekyll.html) params(bind=block) context(block=content_blocks[0]) -->
+<div class="has-background-white-ter">
+  <div class="container content-container has-text-centered" id="flyer-layout-container">
+    <img alt="Board of Directors - 2023" class="masonry-image flyer-image-modal-image clickable" data-cms-original-src="/uploads/board_of_directors/board-2023.jpg" src="/uploads/board_of_directors/board-2023.jpg?_cchid=9f2a4b786f6b1a53a63805fd17d2091c" style="height: 400px">
 
-
-
-<div class="has-background-">
-  <div class="container content-container  " id="central-title-layout-container">
-    <h1 class="is-size-2 is-uppercase has-text-primary has-text-weight-bold has-text-centered" id="post-title">
+    <h2 class="is-size-2 is-uppercase has-text-primary has-text-centered">
       Board of Directors
-    </h1>
+    </h2>
+    
 
     
 
-    <!-- Page specific logic -->
     
-      
-      
 
-      
+    
+
+    
+      <div class="has-text-centered">
         
-      
+        
+
+        
+          
+        
+      </div>
     
   </div>
+</div>
+
+<div class="modal" id="flyer-image-modal">
+  <div class="modal-background"></div>
+
+  <div class="modal-content">
+    <p class="image is-flex-container is-horizontally-centered">
+      <img class="modal-highlight" id="flyer-image-modal-highlight">
+    </p>
+  </div>
+
+  <button aria-label="close" class="modal-close modal-image-close is-large" id="flyer-image-modal-close"></button>
 </div>
 
 <!--bookshop-live end-->
@@ -521,9 +538,372 @@
   <!--bookshop-live name(board_profiles/board_profiles.jekyll.html) params(bind=block) context(block=content_blocks[1]) -->
 <div class="container content-container">
   
-    <p class="is-size-4 is-cursive has-text-centered">
-      We are currently in the process of electing a new board of directors. Please check back soon to meet our new board!
-    </p>
+    <div class="columns pt-1 is-multiline is-vcentered is-centered">
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[0]) -->
+<div class="column is-half">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Dr. Patricia Valentín Castillo
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            University professor
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-primary">
+          President
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[1]) -->
+<div class="column is-half">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Mrs. Miriam Almodóvar López
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            Canine therapist
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-secondary">
+          Vice President
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[2]) -->
+<div class="column is-one-third">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Dr. María del C. Alemañy Pons
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            Dentist
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-light">
+          Secretary
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[3]) -->
+<div class="column is-one-third">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Mrs. Jannette Sepúlveda Acosta
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            Marketing studies
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-light">
+          Undersecretary
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[4]) -->
+<div class="column is-one-third">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Mrs. Jannette Sepúlveda Acosta
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            University professor
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-light">
+          Treasurer
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[5]) -->
+<div class="column is-one-third">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Mrs. María T. Rivera Méndez
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            Retired
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-light">
+          Undertreasurer
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[6]) -->
+<div class="column is-one-third">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Dr. Jacquelina Rodríguez Mont
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            Recursos Humanos
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-light">
+          Board Member
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[7]) -->
+<div class="column is-one-third">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Atty. Angel Matos Flores
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            Lawyer
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-light">
+          Board Member
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[8]) -->
+<div class="column is-one-third">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Mrs. Agnes Rivera García
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            Sales
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-light">
+          Board Member
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[9]) -->
+<div class="column is-one-third">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Dr. Francisco Cordero Rodríguez
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            Dentist
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-light">
+          Board Member
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+        <!--bookshop-live name(board_profile/board_profile.jekyll.html) params(bind=person) context(person=board[10]) -->
+<div class="column is-one-third">
+  <div class="card">
+    
+
+    <div class="card-content has-text-centered mb-0">
+      <div class="title is-size-5 mb-0">
+        Atty. Jesús R. Morales Cordero
+      </div>
+
+      
+        <div>
+          <span class="tag is-light mt-1">
+            Lawyer
+          </span>
+        </div>
+      
+
+      <hr>
+
+      <div>
+        <span class="tag is-light">
+          Previous President
+        </span>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+      
+    </div>
   
 </div>
 
@@ -601,11 +981,11 @@
   </div>
 
 
-<script data-cms-original-src="/js/main.js?1692459000172307047" src="/js/main.js?1692459000172307047&amp;_cchid=ab6106d3a22cbce3484d6b2ba810d822" type="text/javascript"></script>
-<script data-cms-original-src="/js/cloudcannon.js?1692459000172307047" src="/js/cloudcannon.js?1692459000172307047&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
+<script data-cms-original-src="/js/main.js?1692479333589465751" src="/js/main.js?1692479333589465751&amp;_cchid=ab6106d3a22cbce3484d6b2ba810d822" type="text/javascript"></script>
+<script data-cms-original-src="/js/cloudcannon.js?1692479333589465751" src="/js/cloudcannon.js?1692479333589465751&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
 <!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
-<div data-cms-original-data-src="/js/payment_modal.js?1692459000172307047" data-src="/js/payment_modal.js?1692459000172307047&amp;_cchid=5b84cfc187316c124f0a92d9b4c4f73a" id="payment-modal-src"></div>
-<script data-cms-original-src="/js/image_modal.js?1692459000172307047" defer="" src="/js/image_modal.js?1692459000172307047&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
+<div data-cms-original-data-src="/js/payment_modal.js?1692479333589465751" data-src="/js/payment_modal.js?1692479333589465751&amp;_cchid=5b84cfc187316c124f0a92d9b4c4f73a" id="payment-modal-src"></div>
+<script data-cms-original-src="/js/image_modal.js?1692479333589465751" defer="" src="/js/image_modal.js?1692479333589465751&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
 
 
 
@@ -694,7 +1074,7 @@
       </div>
 
       <div id="tab-contents">
-        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1692459000172307047" id="sponsor-content">
+        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1692479333589465751" id="sponsor-content">
           <p class="is-size-5 mb-1">
             Through fixed monthly donations, <b>YOU</b> could help us defray the costs of the services we provide to our children while they reside at the Hogar.
           </p>

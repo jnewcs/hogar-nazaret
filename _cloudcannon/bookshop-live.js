@@ -82,9 +82,9 @@ From `+e.stack}},tt=class extends ae{constructor(e,t){super(new Error(e),t),this
       {{ include.title }}
     </h1>
   </div>
-</div>`,mr=gr,vr=`<div class="column is-half">
+</div>`,mr=gr,vr=`<div class="column {{ include.column_size }}">
   <div class="card">
-    {% if include.image %}
+    {% unless include.hide_image %}
       <div class="is-flex-container is-fully-centered">
         <figure class="image pt-2">
           <img
@@ -93,17 +93,17 @@ From `+e.stack}},tt=class extends ae{constructor(e,t){super(new Error(e),t),this
             alt="{{ include.name }}">
         </figure>
       </div>
-    {% endif %}
+    {% endunless %}
 
     <div class="card-content has-text-centered mb-0">
       <div class="title is-size-5 mb-0">
         {{ include.name }}
       </div>
 
-      {% if include.city %}
+      {% if include.subtitle %}
         <div>
           <span class="tag is-light mt-1">
-            {{ include.city }}
+            {{ include.subtitle }}
           </span>
         </div>
       {% endif %}
@@ -117,25 +117,27 @@ From `+e.stack}},tt=class extends ae{constructor(e,t){super(new Error(e),t),this
       </div>
     </div>
 
-    <div class="card-content">
-      {% if include.background %}
-        <p>
-          {{ include.background }}
-        </p>
+    {% unless include.hide_reason %}
+      <div class="card-content">
+        {% if include.background %}
+          <p>
+            {{ include.background }}
+          </p>
 
-        <hr />
-      {% endif %}
+          <hr />
+        {% endif %}
 
-      {% if include.reason %}
-        <b>
-          {{ site.data.languages[page.lang].board.reason }}
-        </b>
+        {% if include.reason %}
+          <b>
+            {{ site.data.languages[page.lang].board.reason }}
+          </b>
 
-        <blockquote class="mt-1">
-          {{ include.reason }}
-        </blockquote>
-      {% endif %}
-    </div>
+          <blockquote class="mt-1">
+            {{ include.reason }}
+          </blockquote>
+        {% endif %}
+      </div>
+    {% endunless %}
   </div>
 </div>
 `,br=vr,yr=`<div class="container content-container">
@@ -293,7 +295,7 @@ From `+e.stack}},tt=class extends ae{constructor(e,t){super(new Error(e),t),this
     <h2 class="is-size-2 is-uppercase has-text-primary has-text-centered">
       {{ include.title }}
     </h2>
-    {% unless include.hide_call_to_action %}
+    {% unless include.hide_call_to_action == true %}
       <a
         class="button is-secondary is-medium mb-1"
         href="{{ include.call_to_action.url }}"
