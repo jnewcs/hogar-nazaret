@@ -10,7 +10,7 @@
     <h2 class="is-size-2 is-uppercase has-text-primary has-text-centered">
       {{ include.title }}
     </h2>
-    {% unless include.hide_call_to_action %}
+    {% unless include.hide_call_to_action == true %}
       <a
         class="button is-secondary is-medium mb-1"
         href="{{ include.call_to_action.url }}"

@@ -1,6 +1,6 @@
-<div class="column is-half">
+<div class="column {{ include.column_size }}">
   <div class="card">
-    {% if include.image %}
+    {% unless include.hide_image %}
       <div class="is-flex-container is-fully-centered">
         <figure class="image pt-2">
           <img
@@ -9,17 +9,17 @@
             alt="{{ include.name }}">
         </figure>
       </div>
-    {% endif %}
+    {% endunless %}
 
     <div class="card-content has-text-centered mb-0">
       <div class="title is-size-5 mb-0">
         {{ include.name }}
       </div>
 
-      {% if include.city %}
+      {% if include.subtitle %}
         <div>
           <span class="tag is-light mt-1">
-            {{ include.city }}
+            {{ include.subtitle }}
           </span>
         </div>
       {% endif %}
@@ -33,24 +33,26 @@
       </div>
     </div>
 
-    <div class="card-content">
-      {% if include.background %}
-        <p>
-          {{ include.background }}
-        </p>
+    {% unless include.hide_reason %}
+      <div class="card-content">
+        {% if include.background %}
+          <p>
+            {{ include.background }}
+          </p>
 
-        <hr />
-      {% endif %}
+          <hr />
+        {% endif %}
 
-      {% if include.reason %}
-        <b>
-          {{ site.data.languages[page.lang].board.reason }}
-        </b>
+        {% if include.reason %}
+          <b>
+            {{ site.data.languages[page.lang].board.reason }}
+          </b>
 
-        <blockquote class="mt-1">
-          {{ include.reason }}
-        </blockquote>
-      {% endif %}
-    </div>
+          <blockquote class="mt-1">
+            {{ include.reason }}
+          </blockquote>
+        {% endif %}
+      </div>
+    {% endunless %}
   </div>
 </div>

@@ -10,12 +10,15 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
+  column_size: "is-one-third"
   name: "Board Person #1"
-  city: San Juan
+  subtitle: San Juan
   tag_style: primary
   position: Vice President
   background: "A resident of the City of Mayagüez. She has served on the Board for a year"
   reason: "To give back all the good things God has given me by helping to educate children"
+  hide_reason: false
+  hide_image: false
   image: "https://hogarjesusdenazaret.org/uploads/page_header_images/hogar_playground.jpg"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -23,10 +26,23 @@ preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
+  column_size:
+    type: select
+    options:
+      values:
+        - "is-full"
+        - "is-half"
+        - "is-one-third"
+        - "is-one-quarter"
+        - "is-full-tablet is-half-desktop"
+        - "is-half-tablet is-one-third-desktop"
+        - "is-half-table is-one-quarter-desktop"
+      allow_create: false
+      allow_empty: false
   name:
     type: text
     allow_empty: false
-  city:
+  subtitle:
     type: text
     allow_empty: false
   tag_style:
@@ -46,15 +62,28 @@ _inputs:
     type: text
     label: Position on the Board
     allow_empty: false
+  hide_image:
+    type: switch
+    label: "Hide the profile's image?"
+    comment: When toggled, no image will be shown for the board profile
+    allow_empty: false
   image:
     label: Photo
     type: image
     allow_empty: true
+    hidden: hide_image
+  hide_reason:
+    type: switch
+    label: "Hide the profile's reason?"
+    comment: When toggled, the bottom half of the board profile will not show
+    allow_empty: false
   background:
     type: text
     label: Background (profressional, etc.)
     allow_empty: true
+    hidden: hide_reason
   reason:
     type: text
     label: Reason for joining the Board
     allow_empty: true
+    hidden: hide_reason
