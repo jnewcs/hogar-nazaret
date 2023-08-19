@@ -10,6 +10,8 @@ if (navigator && navigator.language || navigator.browserLanguage) {
   }
 
   if (language === 'en' || language.indexOf('en-') !== -1) {
-    window.location.replace(window.location.origin + '/en');
+    // Update 8.19.2023 - we always navigate to /es even when
+    // the language browser is English
+    window.location.replace(window.location.origin + '/es');
   }
 }
