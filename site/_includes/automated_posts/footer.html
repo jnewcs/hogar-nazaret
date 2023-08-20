@@ -1,5 +1,5 @@
 <script type="text/javascript" defer>
-  const languageFilter = '{{ page.lang }}' || 'es';
+  var languageFilter = '{{ page.lang }}' || 'es';
   fetch(`https://web-production-9b27.up.railway.app/facebook_posts?limit=20&language_filter=${languageFilter}`, {
     method: 'GET'
   })
@@ -7,7 +7,7 @@
     return response.json();
   })
   .then(function(jsonObject) {
-    const shownPosts = 0;
+    var shownPosts = 0;
     var posts = jsonObject && jsonObject.data;
     if (posts) {
       var noticiasContainer = document.getElementById('noticias-container');
@@ -15,7 +15,7 @@
       for (index = 0; index < posts.length; ++index) {
         var post = posts[index].attributes;
         if (!!post.message) {
-          shownPosts += 1;
+          shownPosts = shownPosts + 1;
           var postContainer = document.createElement('div');
           postContainer.setAttribute('class', 'column is-full mb-2 mt-1');
           var message = post.message.replace('#', '<br/><br/>#');
@@ -43,7 +43,7 @@
       }
     }
     if (shownPosts === 0) {
-      const blankMessage = document.getElementById('automated-posts-blank-message');
+      var blankMessage = document.getElementById('automated-posts-blank-message');
       blankMessage.classList.remove('is-hidden');
     }
   })
