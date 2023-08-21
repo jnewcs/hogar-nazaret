@@ -14,6 +14,8 @@
           var post = posts[index].attributes;
           var postContainer = document.createElement('div');
           postContainer.setAttribute('class', 'column is-full mb-2 mt-1');
+          if (!post.message) continue;
+
           var message = post.message.replace('#', '<br/><br/>#');
           if (post.message_tags) {
             for (tagIndex = 0; tagIndex < post.message_tags.length; tagIndex++) {
