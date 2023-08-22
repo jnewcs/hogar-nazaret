@@ -1,22 +1,29 @@
 <script type="text/javascript" defer>
-  fetch("https://web-production-9b27.up.railway.app/facebook_posts?limit=20", {
+  var languageFilter = '{{ page.lang }}' || 'es';
+  fetch(`https://web-production-9b27.up.railway.app/facebook_posts?limit=20&language_filter=${languageFilter}`, {
     method: 'GET'
   })
   .then(function(response) {
     return response.json();
   })
   .then(function(jsonObject) {
+    var shownPosts = 0;
     var posts = jsonObject && jsonObject.data;
     if (posts) {
-        var noticiasContainer = document.getElementById('noticias-container');
-        noticiasContainer.innerHTML = null; // Clear out existing skeleton loaders
-        for (index = 0; index < posts.length; ++index) {
-          var post = posts[index].attributes;
+      var noticiasContainer = document.getElementById('noticias-container');
+      noticiasContainer.innerHTML = null; // Clear out existing skeleton loaders
+      for (index = 0; index < posts.length; ++index) {
+        var post = posts[index].attributes;
+        if (languageFilter === 'en') {
+          var postOriginalMessage = post.translation;
+        } else {
+          var postOriginalMessage = post.message;
+        }
+        if (!!postOriginalMessage) {
+          shownPosts = shownPosts + 1;
           var postContainer = document.createElement('div');
           postContainer.setAttribute('class', 'column is-full mb-2 mt-1');
-          if (!post.message) continue;
-
-          var message = post.message.replace('#', '<br/><br/>#');
+          var message = postOriginalMessage.replace('#', '<br/><br/>#');
           if (post.message_tags) {
             for (tagIndex = 0; tagIndex < post.message_tags.length; tagIndex++) {
               var tag = post.message_tags[tagIndex].replaceAll('=>', ':')
@@ -39,6 +46,11 @@
           noticiasContainer.appendChild(postContainer);
         }
       }
+    }
+    if (shownPosts === 0) {
+      var blankMessage = document.getElementById('automated-posts-blank-message');
+      blankMessage.classList.remove('is-hidden');
+    }
   })
   .catch(function(e) {
     window.trackEvent('loading_facebook_posts_failed');
