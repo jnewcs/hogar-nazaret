@@ -54,7 +54,7 @@
     
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&amp;display=swap" rel="stylesheet">
-    <link data-cms-original-href="/css/main.css?1692653775715259953" href="/css/main.css?1692653775715259953&amp;_cchid=9911e530e3ad907f2a06f604e2cbae5e" rel="stylesheet">
+    <link data-cms-original-href="/css/main.css?1692719238490983297" href="/css/main.css?1692719238490983297&amp;_cchid=9911e530e3ad907f2a06f604e2cbae5e" rel="stylesheet">
 
     <!-- TODO: Optimize when we load the carousel  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" rel="stylesheet">
@@ -502,6 +502,10 @@
 
     <hr>
 
+		<h4 class="is-size-4 has-text-centered linear-primary-gradient is-full-width mt-2 mb-2 is-hidden" id="automated-posts-blank-message">
+			No recent news to share. Check back soon!
+		</h4>
+
     <div class="columns is-multiline is-nested mt-2" id="noticias-container">
 			<!-- All this content will be replaced once the data loads from the API -->
 			<div class="column is-full mb-2 mt-1 skeleton-article">
@@ -664,34 +668,41 @@
   </div>
 
 
-<script data-cms-original-src="/js/main.js?1692653775715259953" src="/js/main.js?1692653775715259953&amp;_cchid=ab6106d3a22cbce3484d6b2ba810d822" type="text/javascript"></script>
-<script data-cms-original-src="/js/cloudcannon.js?1692653775715259953" src="/js/cloudcannon.js?1692653775715259953&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
+<script data-cms-original-src="/js/main.js?1692719238490983297" src="/js/main.js?1692719238490983297&amp;_cchid=ab6106d3a22cbce3484d6b2ba810d822" type="text/javascript"></script>
+<script data-cms-original-src="/js/cloudcannon.js?1692719238490983297" src="/js/cloudcannon.js?1692719238490983297&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
 <!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
-<div data-cms-original-data-src="/js/payment_modal.js?1692653775715259953" data-src="/js/payment_modal.js?1692653775715259953&amp;_cchid=5b84cfc187316c124f0a92d9b4c4f73a" id="payment-modal-src"></div>
-<script data-cms-original-src="/js/image_modal.js?1692653775715259953" defer="" src="/js/image_modal.js?1692653775715259953&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
+<div data-cms-original-data-src="/js/payment_modal.js?1692719238490983297" data-src="/js/payment_modal.js?1692719238490983297&amp;_cchid=5b84cfc187316c124f0a92d9b4c4f73a" id="payment-modal-src"></div>
+<script data-cms-original-src="/js/image_modal.js?1692719238490983297" defer="" src="/js/image_modal.js?1692719238490983297&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
 
 
 
 
   <script defer="" type="text/javascript">
-  fetch("https://web-production-9b27.up.railway.app/facebook_posts?limit=20", {
+  var languageFilter = 'es' || 'es';
+  fetch(`https://web-production-9b27.up.railway.app/facebook_posts?limit=20&language_filter=${languageFilter}`, {
     method: 'GET'
   })
   .then(function(response) {
     return response.json();
   })
   .then(function(jsonObject) {
+    var shownPosts = 0;
     var posts = jsonObject && jsonObject.data;
     if (posts) {
-        var noticiasContainer = document.getElementById('noticias-container');
-        noticiasContainer.innerHTML = null; // Clear out existing skeleton loaders
-        for (index = 0; index < posts.length; ++index) {
-          var post = posts[index].attributes;
+      var noticiasContainer = document.getElementById('noticias-container');
+      noticiasContainer.innerHTML = null; // Clear out existing skeleton loaders
+      for (index = 0; index < posts.length; ++index) {
+        var post = posts[index].attributes;
+        if (languageFilter === 'en') {
+          var postOriginalMessage = post.translation;
+        } else {
+          var postOriginalMessage = post.message;
+        }
+        if (!!postOriginalMessage) {
+          shownPosts = shownPosts + 1;
           var postContainer = document.createElement('div');
           postContainer.setAttribute('class', 'column is-full mb-2 mt-1');
-          if (!post.message) continue;
-
-          var message = post.message.replace('#', '<br/><br/>#');
+          var message = postOriginalMessage.replace('#', '<br/><br/>#');
           if (post.message_tags) {
             for (tagIndex = 0; tagIndex < post.message_tags.length; tagIndex++) {
               var tag = post.message_tags[tagIndex].replaceAll('=>', ':')
@@ -742,6 +753,11 @@
           noticiasContainer.appendChild(postContainer);
         }
       }
+    }
+    if (shownPosts === 0) {
+      var blankMessage = document.getElementById('automated-posts-blank-message');
+      blankMessage.classList.remove('is-hidden');
+    }
   })
   .catch(function(e) {
     window.trackEvent('loading_facebook_posts_failed');
@@ -833,7 +849,7 @@
       </div>
 
       <div id="tab-contents">
-        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1692653775715259953" id="sponsor-content">
+        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1692719238490983297" id="sponsor-content">
           <p class="is-size-5 mb-1">
             Mediante donativos fijos mensuales, <b>TÚ</b> puedes ayudarnos a sufragar los costos de los servicios que damos a los niños durante su estadía en el Hogar.
           </p>
