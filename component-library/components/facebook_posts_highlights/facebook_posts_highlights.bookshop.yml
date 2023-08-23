@@ -1,0 +1,64 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Facebook Posts Highlights
+  description: Renders X (configurable) number of Facebook Posts
+  icon: facebook
+  image: /uploads/components/facebook_posts_highlights.preview.png
+  tags:
+    - Facebook
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  show_container: true
+  title: "Noticias"
+  subtitle: "Subtitle goes here (optional)"
+  number_of_posts: 3
+  truncate_length: 200
+  column_size: "is-one-third"
+  posts_container_id: "spanish-facebook-section"
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview: {}
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  show_container:
+    type: checkbox
+    comment: When toggled on, default padding appears around the content
+  title:
+    type: text
+    allow_empty: false
+  subtitle:
+    type: text
+    allow_empty: false
+  column_size:
+    type: select
+    options:
+      values:
+        - "is-full"
+        - "is-half"
+        - "is-one-third"
+        - "is-one-quarter"
+        - "is-full-tablet is-half-desktop"
+        - "is-half-tablet is-one-third-desktop"
+        - "is-half-table is-one-quarter-desktop"
+      allow_create: false
+      allow_empty: false
+  posts_container_id:
+    label: "Unique name of the Facebook posts section (something like: 'spanish-facebook-section')"
+    type: text
+    allow_empty: false
+  number_of_posts:
+    label: "Number of posts to show"
+    type: range
+    options:
+      step: 1
+      max: 10
+      min: 1
+    allow_empty: false
+  truncate_length:
+    label: "Number of letters to show for each individual facebook post"
+    type: number
+    allow_empty: false

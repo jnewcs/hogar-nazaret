@@ -1,6 +1,14 @@
 <script type="text/javascript" defer>
-  var languageFilter = '{{ page.lang }}' || 'es';
-  fetch(`https://web-production-9b27.up.railway.app/facebook_posts?limit=20&language_filter=${languageFilter}`, {
+  var languageFilter = '{{ include.posts_lang }}';
+  if (languageFilter === '') {
+    languageFilter = '{{ page.lang }}';
+  }
+  var limit = '{{ include.posts_limit }}';
+  if (limit === '') {
+    limit = '25';
+  }
+  var baseUrl = 'https://web-production-9b27.up.railway.app';
+  fetch(`${baseUrl}/facebook_posts?limit=50&language_filter=${languageFilter}`, {
     method: 'GET'
   })
   .then(function(response) {
@@ -10,9 +18,15 @@
     var shownPosts = 0;
     var posts = jsonObject && jsonObject.data;
     if (posts) {
-      var noticiasContainer = document.getElementById('noticias-container');
+      var containerId = '{{ include.posts_container_id }}';
+      if (containerId === '') {
+        containerId = 'noticias-container';
+      }
+      var noticiasContainer = document.getElementById(containerId);
       noticiasContainer.innerHTML = null; // Clear out existing skeleton loaders
       for (index = 0; index < posts.length; ++index) {
+        if ((shownPosts + 1) > Number(limit)) break;
+
         var post = posts[index].attributes;
         if (languageFilter === 'en') {
           var postOriginalMessage = post.translation;
@@ -21,8 +35,12 @@
         }
         if (!!postOriginalMessage) {
           shownPosts = shownPosts + 1;
+          var shouldTruncate = '{{ include.truncate }}';
+          if (shouldTruncate === 'true') {
+            postOriginalMessage = postOriginalMessage.substring(0, Number('{{ include.truncateLength }}')) + ' ...';
+          }
           var postContainer = document.createElement('div');
-          postContainer.setAttribute('class', 'column is-full mb-2 mt-1');
+          postContainer.setAttribute('class', 'column {{ include.column_size }} mb-2 mt-1');
           var message = postOriginalMessage.replace('#', '<br/><br/>#');
           if (post.message_tags) {
             for (tagIndex = 0; tagIndex < post.message_tags.length; tagIndex++) {
@@ -36,12 +54,17 @@
               }
             }
           }
-          var htmlContent = `{% include automated_posts/post.html %}`
-            .replace('AUTOMATED_POST_IMAGE_URL', post.full_picture)
+          var useCardStyle = '{{ include.useCardStyle }}';
+          var htmlContent = `{% include automated_posts/post.html %}`;
+          if (useCardStyle === 'true') {
+            htmlContent = `{% include automated_posts/card.html %}`;
+          }
+          htmlContent = htmlContent.replace('AUTOMATED_POST_IMAGE_URL', post.full_picture)
             .replace('AUTOMATED_POST_MESSAGE', message)
             .replace('AUTOMATED_POST_LIKE_COUNT', post.like_count)
             .replace('AUTOMATED_POST_COMMENT_COUNT', post.comment_count)
-            .replace('AUTOMATED_POST_URL', post.post_url);
+            .replace('AUTOMATED_POST_URL', post.post_url)
+            .replace('AUTOMATED_POST_NUMBER', shownPosts);
           postContainer.innerHTML = htmlContent;
           noticiasContainer.appendChild(postContainer);
         }

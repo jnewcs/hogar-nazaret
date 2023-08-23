@@ -184,6 +184,9 @@ a.button.is-secondary, button.is-secondary {
     width: 30rem;
 
     &.less {
+      width: 22rem;
+    }
+    &.least {
       width: 15rem;
     }
   }
