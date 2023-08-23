@@ -56,7 +56,7 @@
     
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&amp;display=swap" rel="stylesheet">
-    <link data-cms-original-href="/css/main.css?1692719238490983297" href="/css/main.css?1692719238490983297&amp;_cchid=9911e530e3ad907f2a06f604e2cbae5e" rel="stylesheet">
+    <link data-cms-original-href="/css/main.css?1692755798627631393" href="/css/main.css?1692755798627631393&amp;_cchid=8c75cf86231b20a2d7d48b74b8356362" rel="stylesheet">
 
     <!-- TODO: Optimize when we load the carousel  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" rel="stylesheet">
@@ -898,6 +898,251 @@
 
 <!--bookshop-live end-->
 
+  
+  <!--bookshop-live name(simple_header/simple_header.jekyll.html) params(bind=block) context(block=content_blocks[6]) -->
+
+
+
+<div class="has-background-white">
+  <div class="container content-container  pb-0" id="central-title-layout-container">
+    <h1 class="is-size-2 is-uppercase has-text-primary has-text-weight-bold has-text-centered" id="post-title">
+      Recent News
+    </h1>
+
+    
+
+    <!-- Page specific logic -->
+    
+      
+      
+
+      
+        
+      
+    
+  </div>
+</div>
+
+<!--bookshop-live end-->
+
+  
+  <!--bookshop-live name(facebook_posts_highlights/facebook_posts_highlights.jekyll.html) params(bind=block) context(block=content_blocks[7]) -->
+
+
+
+<div class="container content-container content">
+  
+  
+
+  <div class="columns is-multiline" id="english-facebook-section">
+    
+      <div class="column is-one-third">
+        <div class="card skeleton-article">
+          <div class="card-image has-background-white-ter has-text-centered">
+            <img style="height: 200px">
+          </div>
+
+          <div class="tag news-container-number">
+            1
+          </div>
+
+          <div class="card-content">
+            <div class="content">
+							<div class="skeleton-article-subtitle mb-2"></div>
+							<p class="skeleton-article-text less mb-1"></p>
+							<p class="skeleton-article-text less mb-1"></p>
+							<p class="skeleton-article-text least mb-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="column is-one-third">
+        <div class="card skeleton-article">
+          <div class="card-image has-background-white-ter has-text-centered">
+            <img style="height: 200px">
+          </div>
+
+          <div class="tag news-container-number">
+            2
+          </div>
+
+          <div class="card-content">
+            <div class="content">
+							<div class="skeleton-article-subtitle mb-2"></div>
+							<p class="skeleton-article-text less mb-1"></p>
+							<p class="skeleton-article-text less mb-1"></p>
+							<p class="skeleton-article-text least mb-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+      <div class="column is-one-third">
+        <div class="card skeleton-article">
+          <div class="card-image has-background-white-ter has-text-centered">
+            <img style="height: 200px">
+          </div>
+
+          <div class="tag news-container-number">
+            3
+          </div>
+
+          <div class="card-content">
+            <div class="content">
+							<div class="skeleton-article-subtitle mb-2"></div>
+							<p class="skeleton-article-text less mb-1"></p>
+							<p class="skeleton-article-text less mb-1"></p>
+							<p class="skeleton-article-text least mb-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    
+  </div>
+</div>
+
+<script defer="" type="text/javascript">
+  var languageFilter = '';
+  if (languageFilter === '') {
+    languageFilter = 'en';
+  }
+  var limit = '3';
+  if (limit === '') {
+    limit = '25';
+  }
+  var baseUrl = 'https://web-production-9b27.up.railway.app';
+  fetch(`${baseUrl}/facebook_posts?limit=50&language_filter=${languageFilter}`, {
+    method: 'GET'
+  })
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(jsonObject) {
+    var shownPosts = 0;
+    var posts = jsonObject && jsonObject.data;
+    if (posts) {
+      var containerId = 'english-facebook-section';
+      if (containerId === '') {
+        containerId = 'noticias-container';
+      }
+      var noticiasContainer = document.getElementById(containerId);
+      noticiasContainer.innerHTML = null; // Clear out existing skeleton loaders
+      for (index = 0; index < posts.length; ++index) {
+        if ((shownPosts + 1) > Number(limit)) break;
+
+        var post = posts[index].attributes;
+        if (languageFilter === 'en') {
+          var postOriginalMessage = post.translation;
+        } else {
+          var postOriginalMessage = post.message;
+        }
+        if (!!postOriginalMessage) {
+          shownPosts = shownPosts + 1;
+          var shouldTruncate = 'true';
+          if (shouldTruncate === 'true') {
+            postOriginalMessage = postOriginalMessage.substring(0, Number('200')) + ' ...';
+          }
+          var postContainer = document.createElement('div');
+          postContainer.setAttribute('class', 'column is-one-third mb-2 mt-1');
+          var message = postOriginalMessage.replace('#', '<br/><br/>#');
+          if (post.message_tags) {
+            for (tagIndex = 0; tagIndex < post.message_tags.length; tagIndex++) {
+              var tag = post.message_tags[tagIndex].replaceAll('=>', ':')
+              var parsedTag = JSON.parse(tag);
+              if (parsedTag.type === 'page') {
+                message = message.replace(
+                  parsedTag.name,
+                  `<a href='https://www.facebook.com/${parsedTag.id}' target='_blank'>${parsedTag.name}</a>`
+                );
+              }
+            }
+          }
+          var useCardStyle = 'true';
+          var htmlContent = `<div class="columns is-desktop">
+  <div class="column is-one-quarter">
+    <figure class="image">
+      <img src="AUTOMATED_POST_IMAGE_URL">
+    </figure>
+  </div>
+
+  <div class="column">
+    <div class="content">
+      <p class="automated-post-message">AUTOMATED_POST_MESSAGE</p>
+      <div class="is-flex-container mb-2">
+        <b style="margin-right: 5px">AUTOMATED_POST_LIKE_COUNT</b>
+        <span class="icon" style="margin-right: 10px">
+          <img src="/uploads/like.png" class="mr-2"/>
+        </span>
+
+        <b style="margin-right: 5px">AUTOMATED_POST_COMMENT_COUNT</b>
+        <span class="icon">
+          <img src="/uploads/chat.png"/>
+        </span>
+      </div>
+
+      <a href="AUTOMATED_POST_URL" class="button is-link is-outlined" target="_blank">
+        Read More
+        <div class="image ml-2 is-24x24" style="margin-left: 4px">
+          <img src="/uploads/social_media/facebook_color.png" alt="facebook logo">
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+          if (useCardStyle === 'true') {
+            htmlContent = `<div class="card">
+  <div class="card-image has-background-white-ter has-text-centered">
+    <img
+      src="AUTOMATED_POST_IMAGE_URL"
+      style="height: 200px"
+    >
+  </div>
+
+  <div class="tag news-container-number">
+    AUTOMATED_POST_NUMBER
+  </div>
+
+  <div class="card-content">
+    <div class="content">
+      <p class="automated-post-message">AUTOMATED_POST_MESSAGE</p>
+
+      <a href="AUTOMATED_POST_URL" class="button is-link is-outlined" target="_blank">
+        Read More
+        <div class="image ml-2 is-24x24" style="margin-left: 4px">
+          <img src="/uploads/social_media/facebook_color.png" alt="facebook logo">
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+          }
+          htmlContent = htmlContent.replace('AUTOMATED_POST_IMAGE_URL', post.full_picture)
+            .replace('AUTOMATED_POST_MESSAGE', message)
+            .replace('AUTOMATED_POST_LIKE_COUNT', post.like_count)
+            .replace('AUTOMATED_POST_COMMENT_COUNT', post.comment_count)
+            .replace('AUTOMATED_POST_URL', post.post_url)
+            .replace('AUTOMATED_POST_NUMBER', shownPosts);
+          postContainer.innerHTML = htmlContent;
+          noticiasContainer.appendChild(postContainer);
+        }
+      }
+    }
+    if (shownPosts === 0) {
+      var blankMessage = document.getElementById('automated-posts-blank-message');
+      blankMessage.classList.remove('is-hidden');
+    }
+  })
+  .catch(function(e) {
+    window.trackEvent('loading_facebook_posts_failed');
+  });
+</script>
+
+
+<!--bookshop-live end-->
+
 
 <!--bookshop-live end-->
 
@@ -970,11 +1215,11 @@
   </div>
 
 
-<script data-cms-original-src="/js/main.js?1692719238490983297" src="/js/main.js?1692719238490983297&amp;_cchid=ab6106d3a22cbce3484d6b2ba810d822" type="text/javascript"></script>
-<script data-cms-original-src="/js/cloudcannon.js?1692719238490983297" src="/js/cloudcannon.js?1692719238490983297&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
+<script data-cms-original-src="/js/main.js?1692755798627631393" src="/js/main.js?1692755798627631393&amp;_cchid=ab6106d3a22cbce3484d6b2ba810d822" type="text/javascript"></script>
+<script data-cms-original-src="/js/cloudcannon.js?1692755798627631393" src="/js/cloudcannon.js?1692755798627631393&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
 <!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
-<div data-cms-original-data-src="/js/payment_modal.js?1692719238490983297" data-src="/js/payment_modal.js?1692719238490983297&amp;_cchid=5b84cfc187316c124f0a92d9b4c4f73a" id="payment-modal-src"></div>
-<script data-cms-original-src="/js/image_modal.js?1692719238490983297" defer="" src="/js/image_modal.js?1692719238490983297&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
+<div data-cms-original-data-src="/js/payment_modal.js?1692755798627631393" data-src="/js/payment_modal.js?1692755798627631393&amp;_cchid=5b84cfc187316c124f0a92d9b4c4f73a" id="payment-modal-src"></div>
+<script data-cms-original-src="/js/image_modal.js?1692755798627631393" defer="" src="/js/image_modal.js?1692755798627631393&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
 
 
 
@@ -1063,7 +1308,7 @@
       </div>
 
       <div id="tab-contents">
-        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1692719238490983297" id="sponsor-content">
+        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1692755798627631393" id="sponsor-content">
           <p class="is-size-5 mb-1">
             Through fixed monthly donations, <b>YOU</b> could help us defray the costs of the services we provide to our children while they reside at the Hogar.
           </p>
