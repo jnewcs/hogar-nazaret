@@ -47,8 +47,8 @@ _inputs:
       allow_create: false
       allow_empty: false
   posts_container_id:
-    label: "Unique name of the Facebook posts section (something like: `spanish-facebook-section`)"
-    type: string
+    label: "Unique name of the Facebook posts section (something like: 'spanish-facebook-section')"
+    type: text
     allow_empty: false
   number_of_posts:
     label: "Number of posts to show"
