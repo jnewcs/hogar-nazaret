@@ -214,4 +214,17 @@ content_blocks:
               text: Aprender Más
               url: es/quienes-somos/historia
               style: plain
+  - _bookshop_name: simple_header
+    title: Noticias Recientes
+    title_alignment: centered
+    background_color: white
+    show_padding_top: true
+    show_padding_bottom: false
+  - _bookshop_name: facebook_posts_highlights
+    show_container: true
+    number_of_posts: 3
+    truncate_length: 200
+    column_size: "is-one-third"
+    posts_container_id: "spanish-facebook-section"
+
 ---

@@ -1,0 +1,48 @@
+{% if include.show_container == true %}
+  {% assign container_class = 'container content-container content' %}
+{% else %}
+  {% assign container_class = 'content' %}
+{% endif %}
+{% assign end_number = include.number_of_posts %}
+
+<div class="{{ container_class }}">
+  {% if include.title %}
+    <p class="is-size-4 title is-cursive">
+      {{ include.title }}
+    </p>
+  {% endif %}
+  {% if include.subtitle %}
+    <p class="is-size-6 subtitle has-text-grey">
+      {{ include.subtitle }}
+    </p>
+  {% endif %}
+
+  <div class="columns is-multiline" id="{{ include.posts_container_id }}">
+    {% for i in (1..end_number) %}
+      <div class="column {{ include.column_size }}">
+        <div class="card skeleton-article">
+          <div class="card-image has-background-white-ter has-text-centered">
+            <img
+              style="height: 200px"
+            >
+          </div>
+
+          <div class="tag news-container-number">
+            {{ forloop.index }}
+          </div>
+
+          <div class="card-content">
+            <div class="content">
+							<div class="skeleton-article-subtitle mb-2"></div>
+							<p class="skeleton-article-text less mb-1"></p>
+							<p class="skeleton-article-text less mb-1"></p>
+							<p class="skeleton-article-text least mb-1"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% include automated_posts/footer.html posts_limit=end_number posts_container_id=include.posts_container_id useCardStyle='true' column_size=include.column_size truncate='true' truncateLength=include.truncate_length %}
