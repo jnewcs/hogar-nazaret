@@ -7,8 +7,7 @@
   if (limit === '') {
     limit = '25';
   }
-  // var baseUrl = 'https://web-production-9b27.up.railway.app';
-  var baseUrl = 'http://127.0.0.1:3000';
+  var baseUrl = 'https://web-production-9b27.up.railway.app';
   fetch(`${baseUrl}/facebook_posts?limit=${limit}&language_filter=${languageFilter}`, {
     method: 'GET'
   })
