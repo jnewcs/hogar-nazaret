@@ -35,7 +35,7 @@ content_blocks:
         image_width: 100
         image_height: 25
         image_style: contain
-        hide_from_carousel: false
+        hide_from_carousel: true
         always_show: false
         show_call_to_action: true
         call_to_action:
@@ -114,14 +114,12 @@ content_blocks:
     content:
       show_container: false
       content_html: >-
-        <p>El Hogar Albergue para Niños Jesús de Nazaret te invita a formar
-        parte de su equipo para brindar cuido y amor a niños en la plaza de
-        Cuidador(a) de niños.</p>
+        <p>Por los pasados 28 años el Hogar Albergue para Niños Jesús de Nazaret ha ofrecido cuidados y amor a cientos de niños. Si quieres hacer la diferencia y ser parte de nuestra familia, esta es tu oportunidad.</p>
     background: pattern-dots-sm
     banner_background: white
     call_to_action:
       text: Para obtener más detalles, leer aquí
-      url: /uploads/jobs/2022/caregiver_posting.jpg
+      url: "https://www.facebook.com/photo?fbid=618863890359935&set=a.562879095958415"
   - _bookshop_name: simple_header
     title: ¡El Hogar te Necesita!
     title_alignment: centered
