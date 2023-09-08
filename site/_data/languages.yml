@@ -21,7 +21,7 @@ en:
   needs: Needs
   donate:
     call_to_action: Donate
-    call_to_action_paypal: Donate
+    call_to_action_paypal: Donate with
     locale: en_US
     item_name: Donation - The Hogar Albergue Jesus de Nazaret
     one_time_amount_label: One Time Donation - The Hogar Albergue Jesús de Nazaret
@@ -171,7 +171,7 @@ es:
   needs: Necesidades
   donate:
     call_to_action: Donar
-    call_to_action_paypal: Donar
+    call_to_action_paypal: Donar con
     locale: es_XC
     item_name: Donativo - Hogar Albergue para Ninos Jesus de Nazaret
     one_time_amount_label: Un solo donativo - Hogar Albergue para Niños Jesús de Nazaret

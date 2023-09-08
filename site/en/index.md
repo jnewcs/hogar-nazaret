@@ -44,12 +44,12 @@ content_blocks:
     content:
       show_container: false
       content_html: >-
-        <p>The Hogar Albergue para Niños Jesús de Nazaret, Inc. invites you to be part of our team to provide loving care to our children as a Child Caregiver.</p>
+        <p>For the past 28 years, the Hogar Albergue para Niños Jesús de Nazaret, Inc. has offered loving care to hundreds of children. If you want to make a difference and become part of our family, this is your opportunity!</p>
     background: 'pattern-dots-sm'
     banner_background: white
     call_to_action: 
       text: For more details, read here
-      url: "/uploads/jobs/2022/caregiver_posting.jpg"
+      url: "https://www.facebook.com/photo?fbid=618863890359935&set=a.562879095958415"
 
   - _bookshop_name: simple_header
     title: The Hogar Invites you to get involved!
