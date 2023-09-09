@@ -78,6 +78,10 @@ a.button.is-secondary, button.is-secondary {
   white-space: normal !important;
   height: inherit !important;
 }
+.primary-light-border {
+  border: 2px solid $primary-light;
+  border-radius: 10px;
+}
 
 /* Site Logo */
 #site-logo {
