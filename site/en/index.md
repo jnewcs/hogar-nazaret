@@ -7,6 +7,18 @@ lang: en
 lang_ref: home-page
 _schema: "schemas/content_blocks_page_en.md"
 content_blocks:
+  - _bookshop_name: banner
+    title: Job Opportunity!
+    content:
+      show_container: false
+      content_html: >-
+        <p>For the past 28 years, the Hogar Albergue para Niños Jesús de Nazaret, Inc. has offered loving care to hundreds of children. If you want to make a difference and become part of our family, this is your opportunity!</p>
+    background: 'pattern-dots-sm'
+    banner_background: white
+    call_to_action: 
+      text: For more details, read here
+      url: "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/374656312_618863887026602_4439865064054975717_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=rxFlS5DmfW0AX8O3D73&_nc_ht=scontent-dfw5-1.xx&oh=00_AfD8loQRZvkQaOOHubrl5qWd9XlRHVzP8qFWQgiuXWYBRg&oe=6500ACCB"
+
   - _bookshop_name: carousel
     items:
       - title: "WELCOME TO THE HOGAR ALBERGUE PARA NIÑOS JESÚS DE NAZARET!"
@@ -38,19 +50,6 @@ content_blocks:
         call_to_action:
           text: Donate Here
           opens_donate_modal: true
-
-  - _bookshop_name: banner
-    title: Job Opportunity!
-    content:
-      show_container: false
-      content_html: >-
-        <p>For the past 28 years, the Hogar Albergue para Niños Jesús de Nazaret, Inc. has offered loving care to hundreds of children. If you want to make a difference and become part of our family, this is your opportunity!</p>
-    background: 'pattern-dots-sm'
-    banner_background: white
-    call_to_action: 
-      text: For more details, read here
-      url: "https://www.facebook.com/photo?fbid=618863890359935&set=a.562879095958415"
-
   - _bookshop_name: simple_header
     title: The Hogar Invites you to get involved!
     title_alignment: centered

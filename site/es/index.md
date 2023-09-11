@@ -10,6 +10,17 @@ lang: es
 lang_ref: home-page
 _schema: schemas/content_blocks_page_es.md
 content_blocks:
+  - _bookshop_name: banner
+    title: ¡Oportunidad de Empleo!
+    content:
+      show_container: false
+      content_html: >-
+        <p>Por los pasados 28 años el Hogar Albergue para Niños Jesús de Nazaret ha ofrecido cuidados y amor a cientos de niños. Si quieres hacer la diferencia y ser parte de nuestra familia, esta es tu oportunidad.</p>
+    background: pattern-dots-sm
+    banner_background: white
+    call_to_action:
+      text: Para obtener más detalles, leer aquí
+      url: "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/374656312_618863887026602_4439865064054975717_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=rxFlS5DmfW0AX8O3D73&_nc_ht=scontent-dfw5-1.xx&oh=00_AfD8loQRZvkQaOOHubrl5qWd9XlRHVzP8qFWQgiuXWYBRg&oe=6500ACCB"
   - _bookshop_name: carousel
     items:
       - _bookshop_name: carousel_item
@@ -109,17 +120,6 @@ content_blocks:
         call_to_action:
           text: Donar
           opens_donate_modal: true
-  - _bookshop_name: banner
-    title: ¡Oportunidad de Empleo!
-    content:
-      show_container: false
-      content_html: >-
-        <p>Por los pasados 28 años el Hogar Albergue para Niños Jesús de Nazaret ha ofrecido cuidados y amor a cientos de niños. Si quieres hacer la diferencia y ser parte de nuestra familia, esta es tu oportunidad.</p>
-    background: pattern-dots-sm
-    banner_background: white
-    call_to_action:
-      text: Para obtener más detalles, leer aquí
-      url: "https://www.facebook.com/photo?fbid=618863890359935&set=a.562879095958415"
   - _bookshop_name: simple_header
     title: ¡El Hogar te Necesita!
     title_alignment: centered
