@@ -1,9 +1,24 @@
-@charset "utf-8"
-/*! bulma.io v0.8.2 | MIT License | github.com/jgthms/bulma */
-@import "bulma/utilities/_all"
-@import "bulma/base/_all"
-@import "bulma/elements/_all"
-@import "bulma/form/_all"
-@import "bulma/components/_all"
-@import "bulma/grid/_all"
-@import "bulma/layout/_all"
+$primary: #1C027A
+$primary-light: #bbb2d7
+$primary-light-with-opacity: rgba(187, 178, 214, 0.25)
+$secondary: #FA6302
+$secondary-darker: #E05702
+$paypal: #fdc33b
+$athMovil: #f57c00
+$red: hsl(348, 100%, 70%) !default
+$white: hsl(221, 14%, 100%) !default
+$white-ter: hsl(221, 14%, 96%) !default
+$white-bis: hsl(221, 14%, 98%) !default
+$black-bis: hsl(221, 14%, 9%) !default
+$grey-dark: hsl(221, 14%, 29%) !default
+// The container horizontal gap, which acts as the offset for breakpoints
+$gap: 32px !default
+
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default
+
+// 960px container + 4rem
+$desktop: 960px + 2 * $gap !default
+
+/*! bulma.io v1.0.1 | MIT License | github.com/jgthms/bulma */
+@use "bulmav101" with ($primary: $primary,$footer-padding: 3rem 1.5rem,$tabs-toggle-link-active-background-color: $primary,$tabs-toggle-link-active-border-color: $primary,$modal-content-spacing-mobile: 80px,$progress-value-background-color: $secondary,$notification-padding: 0.75rem,$modal-z: 100,$modal-content-width: 75%,$red: $red,$white: $white,$white-ter: $white-ter,$white-bis: $white-bis,$black-bis: $black-bis,$grey-dark: $grey-dark,$gap: $gap,$tablet: $tablet, $desktop: $desktop)

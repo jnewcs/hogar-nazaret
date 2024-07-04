@@ -1,10 +1,14 @@
-<article class="tile is-parent is-vertical {% if include.has_children%}pt-0{% endif %}">
+<article class="cell is-vertical {% if include.has_children%}pt-0{% endif %}">
   {% if include.has_children %}
-    {% for child in include.children %}
-      {% bookshop tile bind=child %}
-    {% endfor %}
+    <div class="fixed-grid has-1-cols is-row-gap-2">
+      <div class="grid">
+        {% for child in include.children %}
+          {% bookshop tile bind=child %}
+        {% endfor %}
+      </div>
+    </div>
   {% else %}
-    <div class="has-background-light p-1">
+    <div class="has-background-light p-4">
       <p class="is-size-3 is-cursive">
         {{ include.title }}
       </p>

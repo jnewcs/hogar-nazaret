@@ -1,7 +1,9 @@
 <div class="container content-container">
-  <div class="tile is-ancestor">
-    {% for tile in include.tiles %}
-      {% bookshop tile bind=tile %}
-    {% endfor %}
+  <div class="fixed-grid has-2-cols is-row-gap-2">
+    <div class="grid">
+      {% for tile in include.tiles %}
+        {% bookshop tile bind=tile %}
+      {% endfor %}
+    </div>
   </div>
 </div>
