@@ -319,7 +319,6 @@ collection_groups:
       - content_blocks_page_es
   - heading: "English Website"
     collections:
-      - posts
       - upcoming_events
       - content_blocks_page_en
   - heading: "Misc."
