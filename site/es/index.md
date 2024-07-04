@@ -20,7 +20,7 @@ content_blocks:
     banner_background: white
     call_to_action:
       text: Para obtener más detalles, leer aquí
-      url: "https://scontent-dfw5-1.xx.fbcdn.net/v/t39.30808-6/374656312_618863887026602_4439865064054975717_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=49d041&_nc_ohc=rxFlS5DmfW0AX8O3D73&_nc_ht=scontent-dfw5-1.xx&oh=00_AfD8loQRZvkQaOOHubrl5qWd9XlRHVzP8qFWQgiuXWYBRg&oe=6500ACCB"
+      url: "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/448978301_778306731082316_7361687210594802811_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zLWWs_dVn9QQ7kNvgFTPrxZ&_nc_ht=scontent-hou1-1.xx&oh=00_AYCU92cAGjhnZ7pkXmMSb4orIr_LCb1rYBWSyNKBZ0pJbA&oe=668BDF1B"
   - _bookshop_name: carousel
     items:
       - _bookshop_name: carousel_item
