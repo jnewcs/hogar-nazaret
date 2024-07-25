@@ -4,7 +4,7 @@
 @use "../utilities/css-variables" as cv;
 
 @use "light";
-@use "dark";
+// @use "dark";
 @use "setup";
 
 :root {
@@ -18,9 +18,10 @@
 }
 
 // prefers-color-scheme: dark
-@include cv.system-theme($name: "dark") {
-  @include dark.dark-theme;
-}
+// NOTE: re-enable this if you want dark mode!
+// @include cv.system-theme($name: "dark") {
+//   @include dark.dark-theme;
+// }
 
 // :root, [data-theme=light], .theme-light
 @include cv.bulma-theme($name: "light") {
@@ -29,7 +30,8 @@
 }
 
 // [data-theme=dark], .theme-dark
-@include cv.bulma-theme($name: "dark") {
-  @include dark.dark-theme;
-  @include setup.setup-theme;
-}
+// NOTE: re-enable this if you want dark mode!
+// @include cv.bulma-theme($name: "dark") {
+//   @include dark.dark-theme;
+//   @include setup.setup-theme;
+// }
