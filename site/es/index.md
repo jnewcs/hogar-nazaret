@@ -10,22 +10,11 @@ lang: es
 lang_ref: home-page
 _schema: schemas/content_blocks_page_es.md
 content_blocks:
-  - _bookshop_name: banner
-    title: ¡Oportunidad de Empleo!
-    content:
-      show_container: false
-      content_html: >-
-        <p>Por los pasados 28 años el Hogar Albergue para Niños Jesús de Nazaret ha ofrecido cuidados y amor a cientos de niños. Si quieres hacer la diferencia y ser parte de nuestra familia, esta es tu oportunidad.</p>
-    background: pattern-dots-sm
-    banner_background: white
-    call_to_action:
-      text: Para obtener más detalles, leer aquí
-      url: "https://scontent-hou1-1.xx.fbcdn.net/v/t39.30808-6/448978301_778306731082316_7361687210594802811_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_ohc=zLWWs_dVn9QQ7kNvgFTPrxZ&_nc_ht=scontent-hou1-1.xx&oh=00_AYCU92cAGjhnZ7pkXmMSb4orIr_LCb1rYBWSyNKBZ0pJbA&oe=668BDF1B"
   - _bookshop_name: carousel
     items:
       - _bookshop_name: carousel_item
         title: La campaña Compras que Abrazan
-        creation_date: 2023-08-04 12:00:00
+        creation_date: '2023-04-10T12:00:00.000+00:00'
         layout: split
         content:
           _bookshop_name: content
@@ -55,20 +44,24 @@ content_blocks:
           url: /es/proximos_eventos/la-campa%C3%B1a-compras-que-abrazan
       - _bookshop_name: carousel_item
         title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
-        creation_date: 2023-04-10 12:00:00
+        creation_date: '2023-04-10T12:00:00.000+00:00'
         layout: split
         content:
+          _bookshop_name: content
           content_html: >-
             <p>Nuestra misión es ofrecer hogar seguro, atención personal,
             alimentación, transportación, servicios médicos, educación,
             recreación, ayuda social y psicológica a niños y niñas víctimas de
             maltrato. Ante todo, en nuestro Hogar los niños reciben mucho
             AMOR.</p>
-        hide_from_carousel: false
-        always_show: true
+          show_container: true
         image: /uploads/carousel_highlights/kids_circle.jpg
         image_custom_dimensions: false
+        image_width: 100
+        image_height: 25
         image_style: contain
+        hide_from_carousel: false
+        always_show: true
         show_call_to_action: true
         call_to_action:
           text: El Hogar
@@ -76,7 +69,7 @@ content_blocks:
           url: /es/quienes-somos/
       - _bookshop_name: carousel_item
         title: La Salud Mental
-        creation_date: 2023-05-01 12:00:00
+        creation_date: '2023-04-10T12:00:00.000+00:00'
         layout: split
         content:
           _bookshop_name: content
@@ -92,6 +85,8 @@ content_blocks:
           show_container: false
         image: /uploads/salud-mental.png
         image_custom_dimensions: false
+        image_width: 100
+        image_height: 25
         image_style: contain
         hide_from_carousel: true
         always_show: false
@@ -102,32 +97,36 @@ content_blocks:
           url: /en/about
       - _bookshop_name: carousel_item
         title: APADRINA A UN NIÑO O NIÑA DEL HOGAR
+        creation_date: '2023-04-10T12:00:00.000+00:00'
         layout: split
-        creation_date: 2023-04-16 12:00:00
         content:
+          _bookshop_name: content
           content_html: >-
             <p>Nuestros niños se merecen un hogar, tener alimentos, ropa, ir a
             la escuela, jugar, recibir cuidados de salud y mucho amor. Con tu
             donativo mensual contribuyes a sanar las heridas de nuestros niños
             que han sido víctimas de maltrato. ¡Únete a nuestra familia de
             Padrinos!</p>
-        hide_from_carousel: false
-        always_show: true
+          show_container: true
         image: /uploads/carousel_highlights/two_girls.jpg
         image_custom_dimensions: false
+        image_width: 100
+        image_height: 25
         image_style: contain
+        hide_from_carousel: false
+        always_show: true
         show_call_to_action: true
         call_to_action:
           text: Donar
           opens_donate_modal: true
+          url: /en/about
   - _bookshop_name: simple_header
     title: ¡El Hogar te Necesita!
     title_alignment: centered
-    background_color: white
     show_padding_top: true
     show_padding_bottom: false
+    background_color: white
   - _bookshop_name: content
-    show_container: true
     content_html: >-
       <p>La operación del Hogar es posible en gran medida gracias a subvenciones
       de instituciones benéficas como Fondos Unidos y a donativos económicos de
@@ -135,43 +134,65 @@ content_blocks:
       obstante, el apoyo más importante es el apoyo de la COMUNIDAD, personas
       como tú que se comprometen a ayudarnos a continuar nuestra labor y hacer
       la diferencia en la vida de nuestros niños.</p>
+    show_container: true
   - _bookshop_name: tiles
     tiles:
-      - has_children: true
+      - _bookshop_name: tile
+        title: Tile Title!
+        call_to_action:
+          text: Tile Button
+          url: https://www.google.com
+        has_children: true
         children:
-          - title: Dona tu Tiempo
+          - _bookshop_name: tile
+            title: Dona tu Tiempo
             content:
-              show_container: false
+              _bookshop_name: content
               content_html: >-
                 <p>Ofrecemos muchas maneras de involucrarte directamente con el
                 Hogar y ver los frutos de tu trabajo y dedicación.</p>
+              show_container: false
             call_to_action:
               text: Ver Cómo
               url: /es/contribuye/dona-tu-tiempo
               style: plain
-          - title: Dona Artículos
+            has_children: false
+            children: []
+          - _bookshop_name: tile
+            title: Dona Artículos
             content:
-              show_container: false
+              _bookshop_name: content
               content_html: >-
                 <p>Para información sobre donaciones de artículos, o para
                 coordinar la entrega de los artículos, llámanos al <a
                 href="tel:7878316161">(787) 831-6161</a>.</p>
-      - title: Apadrina a un Niño o Niña
+              show_container: false
+            call_to_action:
+              text: Tile Button
+              url: https://www.google.com
+            has_children: false
+            children: []
+      - _bookshop_name: tile
+        title: Apadrina a un Niño o Niña
         content:
-          show_container: false
+          _bookshop_name: content
           content_html: >-
             <p>Mediante donativos fijos mensuales, <b>TÚ</b> puedes ayudarnos a
             sufragar los costos de  los servicios que damos a los niños durante
             su estadía en el Hogar.</p>
+          show_container: false
         call_to_action:
           text: Aprender Más
           url: es/contribuye/
           image: /uploads/padrinos_program/padrinos.png
+        has_children: false
+        children: []
   - _bookshop_name: tiles
     tiles:
-      - title: Prevención Maltrato
+      - _bookshop_name: tile
+        title: Prevención Maltrato
         content:
-          show_container: false
+          _bookshop_name: content
           content_html: >-
             <p>Más allá de su misión primordial de salvar la salud emocional,
             mental y física de niños que han sido víctimas de maltrato, el Hogar
@@ -183,46 +204,63 @@ content_blocks:
             data-embed="biW0VL6aMfE">
               <div class="play-button"></div>
             </div>
+          show_container: false
         call_to_action:
           text: Leer Más
           url: es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores
-      - has_children: true
+        has_children: false
+        children: []
+      - _bookshop_name: tile
+        title: Tile Title!
+        call_to_action:
+          text: Tile Button
+          url: https://www.google.com
+        has_children: true
         children:
-          - title: Colaboradores
+          - _bookshop_name: tile
+            title: Colaboradores
             content:
-              show_container: false
+              _bookshop_name: content
               content_html: >-
                 <p>El Hogar ofrece sus más sinceras gracias a todos nuestros
                 patrocinadores y colaboradores que mediante donativos,
                 subvenciones, trabajo voluntario y donaciones de artículos
                 apoyan nuestra misión.</p>
+              show_container: false
             call_to_action:
               text: Ver Cómo
               url: es/quienes-somos/colaboradores
               style: plain
-          - title: Cronología Histórica
+            has_children: false
+            children: []
+          - _bookshop_name: tile
+            title: Cronología Histórica
             content:
-              show_container: false
+              _bookshop_name: content
               content_html: >-
                 <p>El Hogar Albergue para Niños Jesús de Nazaret lleva más de
                 dos décadas años dándo amor, servicios y un mejor futuro a niños
                 y niñas de Puerto Rico que han sido víctimas de negligencia o
                 maltrato.</p>
+              show_container: false
             call_to_action:
               text: Aprender Más
               url: es/quienes-somos/historia
               style: plain
+            has_children: false
+            children: []
   - _bookshop_name: simple_header
     title: Noticias Recientes
     title_alignment: centered
-    background_color: white
     show_padding_top: true
     show_padding_bottom: false
+    background_color: white
   - _bookshop_name: facebook_posts_highlights
     show_container: true
+    title: Noticias
+    subtitle: Subtitle goes here (optional)
     number_of_posts: 3
     truncate_length: 200
-    column_size: "is-one-third"
-    posts_container_id: "spanish-facebook-section"
-
+    column_size: is-one-third
+    posts_container_id: spanish-facebook-section
 ---
