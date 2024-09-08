@@ -104,6 +104,16 @@
               </section>
             {% endif %}
 
+            {% if site.data.information.ath_movil.live == true %}
+              <div class="column is-three-fifths is-offset-one-fifth">
+                <div class="is-flex-container is-horizontally-centered">
+                  <div class="ath_movil_checkout_button_container">
+                    <div id="ATHMovil_Checkout_Button"></div>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+
             <hr id="payment-divider-for-one-time-donation" />
 
             <div class="field mt-2">
@@ -168,6 +178,19 @@
         <button class="button is-medium is-secondary" id="retry-button">
           {{ site.data.languages[page.lang].donate.modal.retry }}
         </button>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="ath-canceled-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="custom-icon red">
+          <div class="custom-icon__tip red"></div>
+          <div class="custom-icon__long red"></div>
+        </div>
+
+        <p class="is-size-5 mb-1 mt-2">
+          {{ site.data.languages[page.lang].donate.modal.ath_canceled_error_msg }}
+        </p>
       </div>
     </div>
   </div>

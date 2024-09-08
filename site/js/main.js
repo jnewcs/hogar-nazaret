@@ -114,9 +114,14 @@ document.addEventListener('DOMContentLoaded', function () {
   var loadingContainer = document.getElementById('loading-container');
   var successContainer = document.getElementById('success-container');
   var errorContainer = document.getElementById('error-container');
+  var athCanceledContainer = document.getElementById('ath-canceled-container');
+  var closeBtn = document.getElementById('donation-modal-close-btn');
   var $modalOpeners = Array.prototype.slice.call(document.querySelectorAll('.modal-opener'), 0);
   var setStripeLoaded = function() {
     window.stripeLoaded = true;
+  };
+  var setAthMovilLoaded = function() {
+    window.athMovilLoaded = true;
   };
   var setPaypalModalScriptLodaded = function() {
     window.paypalModalCodeLoaded = true;
@@ -139,6 +144,60 @@ document.addEventListener('DOMContentLoaded', function () {
             window.lazyLoadScript(paymentModalSrc, undefined, 'async_payment_modal_fail');
           }
 
+          if (window.athMovilLoaded === false) {
+            var athMovilData = document.getElementById('ath-modal-src').dataset;
+            ATHM_Checkout = {
+              env: 'production', // You can pass in either of these options ['sandbox', 'production']
+              publicToken: athMovilData.token,
+              // timeout: 600, // [Not Required!] Value has to between 120 (2 minutes) and 600 (10 minutes)
+              theme: 'btn',
+              lang: athMovilData.lang,
+              total: 15.00,
+              tax: null,
+              subtotal: 15.00,
+              items: [
+                {
+                  'name': athMovilData.name,
+                  'description': athMovilData.description,
+                  'quantity': 1,
+                  'price': 15.00,
+                  'tax': null,
+                  'metadata': null
+                }
+              ],
+              onCompletedPayment: function (response) {
+                window.trackEvent('ath_movil_payment_complete', response);
+
+                // WARNING: if you change this code, always change the code within
+                // the `site/js/payment_modal.js` file too!
+                modalContainer.classList.add('is-hidden');
+                loadingContainer.classList.add('is-hidden');
+                errorContainer.classList.add('is-hidden');
+                athCanceledContainer.classList.add('is-hidden');
+
+                successContainer.classList.remove('is-hidden');
+                closeBtn.classList.remove('is-hidden');
+              },
+              onCancelledPayment: function () {
+                // When the ATH modal/page is cancelled, this method gets called
+                window.trackEvent('ath_movil_payment_cancelled');
+                modalContainer.classList.add('is-hidden');
+                loadingContainer.classList.add('is-hidden');
+                errorContainer.classList.add('is-hidden');
+                successContainer.classList.add('is-hidden');
+
+                athCanceledContainer.classList.remove('is-hidden');
+                closeBtn.classList.remove('is-hidden');
+              },
+              onExpiredPayment: function (response) {
+                // When the timeout period defined above is done and the payment hasn't
+                // been completed, the ATH modal/page closes and this method gets called
+                window.trackEvent('ath_movil_payment_attempt_expired');
+              }
+            };
+            window.lazyLoadScript('https://www.athmovil.com/api/js/v2/athmovilV2.js', setAthMovilLoaded, 'async_ath_movil_load_fail');
+          }
+
           // Track clicks to open the donation modal
           window.trackEvent('donation_model_open');
         }
@@ -147,6 +206,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadingContainer.classList.add('is-hidden');
         successContainer.classList.add('is-hidden');
         errorContainer.classList.add('is-hidden');
+        athCanceledContainer.classList.add('is-hidden');
 
         document.documentElement.classList.add('is-clipped');
         $target.classList.add('is-active');
@@ -163,6 +223,15 @@ document.addEventListener('DOMContentLoaded', function () {
         if (target === 'donation-modal') {
           // Track clicks to close the donation modal
           window.trackEvent('donation_model_close');
+
+          // When we've added the 'openDonationModal' parameter to the URL and closed
+          // the modal, we want to remove the parameter from the URL so that on page reload
+          // the modal doesn't open again automatically
+          var url = new URL(window.location.href);
+          url.searchParams.delete('openDonationModal');
+          url.searchParams.delete('donationType');
+          // Update the URL without reloading the page
+          window.history.replaceState({}, document.title, url.toString());
         }
         var $target = document.getElementById(target);
 
@@ -221,4 +290,46 @@ document.addEventListener('DOMContentLoaded', function () {
       this.appendChild(iframe);
     });
   }
+
+  /* Code for opening donation modal based on querystring parameters
+   * Sample URL: ?openDonationModal=true&donationType=sponsor-content
+   *    - This will open the Donation modal on the Monthly donation tab
+   * Sample URL: ?openDonationModal=true&donationType=donate-now-content
+   *   - This will open the Donation modal on the One-time donation tab
+   */
+  var urlParams = new URLSearchParams(window.location.search);
+  if (urlParams && urlParams.has('openDonationModal')) {
+    var donationModalElement = document.querySelector('a[data-target="donation-modal"]');
+    if (donationModalElement) {
+      donationModalElement.click();
+
+      if (urlParams.has('donationType')) {
+        var donationType = urlParams.get('donationType');
+        var tabElement = document.querySelector('.tab[data-target="' + donationType + '"]');
+        if (tabElement) {
+          tabElement.click();
+        }
+      }
+    }
+  }
+
+  // When a user clicks on the ATH Movil button, it opens up the ATH Movil modal
+  // This interface has a `Reopen` button that is broken. This code fixes that button
+  // to make it reload the page and re-open the donation modal
+  document.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'reopen-btn') {
+      let currentUrl = new URL(window.location.href);
+
+      // Get the current query parameters
+      let params = new URLSearchParams(currentUrl.search);
+      // Add the new query parameters
+      params.set('openDonationModal', 'true');
+      params.set('donationType', 'donate-now-content');
+
+      // Update the URL with the new query parameters
+      currentUrl.search = params.toString();
+      // Reload the page with the updated URL
+      window.location.href = currentUrl.toString();
+    }
+  });
 });

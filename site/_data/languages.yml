@@ -25,6 +25,7 @@ en:
     locale: en_US
     item_name: Donation - The Hogar Albergue Jesus de Nazaret
     one_time_amount_label: One Time Donation - The Hogar Albergue Jesús de Nazaret
+    one_time_amount_description: Your donation helps us defray the costs of the services we provide to our children. Thank you!
     modal:
       title: Choose the type of Donation
       enter_one_time_amount: Enter the amount
@@ -41,6 +42,7 @@ en:
         You should receive an email receipt soon for your donation.
       error_msg: Sorry, we ran into an error processing your donation. Please click
         'Retry' to return to the donation screen and try again.
+      ath_canceled_error_msg: The ATH Móvil session was cancelled
   email: Email
   office: Office
   fax: Fax
@@ -175,6 +177,7 @@ es:
     locale: es_XC
     item_name: Donativo - Hogar Albergue para Ninos Jesus de Nazaret
     one_time_amount_label: Un solo donativo - Hogar Albergue para Niños Jesús de Nazaret
+    one_time_amount_description: Tu donativo nos ayuda a sufragar los costos de los servicios que damos a los niños. ¡Gracias!
     modal:
       title: Escoge el tipo de tu donativo
       enter_one_time_amount: Escribe la cantidad de tu donativo
