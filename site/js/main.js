@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 successContainer.classList.remove('is-hidden');
                 closeBtn.classList.remove('is-hidden');
               },
-              onCancelledPayment: function () {
+              onCancelledPayment: function (response) {
                 // When the ATH modal/page is cancelled, this method gets called
                 window.trackEvent('ath_movil_payment_cancelled');
                 modalContainer.classList.add('is-hidden');
@@ -193,9 +193,22 @@ document.addEventListener('DOMContentLoaded', function () {
                 // When the timeout period defined above is done and the payment hasn't
                 // been completed, the ATH modal/page closes and this method gets called
                 window.trackEvent('ath_movil_payment_attempt_expired');
+              },
+              onUnknownPayment: function (response) {
+                // When something goes wrong with the ATH modal payment, this method gets called
+                // I added this on September 8th when we brough the ATH mobile
+                // script into the repo and modified it to work with our setup
+                window.trackEvent('ath_movil_payment_generic_error');
+                modalContainer.classList.add('is-hidden');
+                loadingContainer.classList.add('is-hidden');
+                athCanceledContainer.classList.add('is-hidden');
+                successContainer.classList.add('is-hidden');
+
+                errorContainer.classList.remove('is-hidden');
+                closeBtn.classList.remove('is-hidden');
               }
             };
-            window.lazyLoadScript('https://www.athmovil.com/api/js/v2/athmovilV2.js', setAthMovilLoaded, 'async_ath_movil_load_fail');
+            window.lazyLoadScript(athMovilData.script || 'https://www.athmovil.com/api/js/v2/athmovilV2.js', setAthMovilLoaded, 'async_ath_movil_load_fail');
           }
 
           // Track clicks to open the donation modal
@@ -329,7 +342,11 @@ document.addEventListener('DOMContentLoaded', function () {
       // Update the URL with the new query parameters
       currentUrl.search = params.toString();
       // Reload the page with the updated URL
-      window.location.href = currentUrl.toString();
+      if (window.location.href === currentUrl.toString()) {
+        window.location.reload(true);
+      } else {
+        window.location.href = currentUrl.toString();
+      }
     }
   });
 });

@@ -105,6 +105,9 @@
             {% endif %}
 
             {% if site.data.information.ath_movil.live == true %}
+              <!-- This hr will get removed if Stripe cannot load -->
+              <hr id="payment-divider-for-one-time-donation" />
+
               <div class="column is-three-fifths is-offset-one-fifth">
                 <div class="is-flex-container is-horizontally-centered">
                   <div class="ath_movil_checkout_button_container">
@@ -166,18 +169,18 @@
 
     <div class="container content-container has-background-white has-text-centered is-hidden" id="error-container">
       <div style="margin-top: 30px; margin-bottom: 30px;">
-        <div class="custom-icon red">
-          <div class="custom-icon__tip red"></div>
-          <div class="custom-icon__long red"></div>
+        <div class="custom-icon yellow">
+          <div class="custom-icon__tip yellow"></div>
+          <div class="custom-icon__long yellow"></div>
         </div>
 
-        <p class="is-size-5 mb-1 mt-2">
+        <p class="is-size-5 mb-2 mt-2">
           {{ site.data.languages[page.lang].donate.modal.error_msg }}
         </p>
 
-        <button class="button is-medium is-secondary" id="retry-button">
+        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true" id="retry-button">
           {{ site.data.languages[page.lang].donate.modal.retry }}
-        </button>
+        </a>
       </div>
     </div>
 
@@ -188,9 +191,13 @@
           <div class="custom-icon__long red"></div>
         </div>
 
-        <p class="is-size-5 mb-1 mt-2">
+        <p class="is-size-5 mb-2 mt-2">
           {{ site.data.languages[page.lang].donate.modal.ath_canceled_error_msg }}
         </p>
+
+        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true" id="retry-button">
+          {{ site.data.languages[page.lang].donate.modal.retry }}
+        </a>
       </div>
     </div>
   </div>

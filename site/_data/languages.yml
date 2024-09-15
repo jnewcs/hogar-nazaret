@@ -195,6 +195,7 @@ es:
       error_msg: Lo sentimos, nos encontramos con un error al procesar tu donativo.
         Por favor, haga clic en “Intente de nuevo” para volver a la pantalla de donativo
         e inténtelo otra vez.
+      ath_canceled_error_msg: La sesión de ATH Móvil fue cancelada
   email: Email
   office: Oficina
   fax: Fax
