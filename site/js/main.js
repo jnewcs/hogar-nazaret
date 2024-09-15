@@ -208,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 closeBtn.classList.remove('is-hidden');
               }
             };
-            window.lazyLoadScript(athMovilData.script || 'https://www.athmovil.com/api/js/v2/athmovilV2.js', setAthMovilLoaded, 'async_ath_movil_load_fail');
+            window.lazyLoadScript(athMovilData.scriptSrc || 'https://www.athmovil.com/api/js/v2/athmovilV2.js', setAthMovilLoaded, 'async_ath_movil_load_fail');
           }
 
           // Track clicks to open the donation modal
