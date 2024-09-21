@@ -86,28 +86,7 @@
               </div>
             </div>
 
-            {% if site.data.information.payment_request_on == true %}
-              <section
-                id="payment-form-inner-container"
-                data-lang="{{ page.lang }}"
-                data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
-                data-label="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
-                data-env="{{ jekyll.environment }}"
-              >
-                <div class="columns is-mobile is-centered">
-                  <div class="column is-half">
-                    <div id="payment-request-button">
-                      <div class="spinner small"></div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            {% endif %}
-
             {% if site.data.information.ath_movil.live == true %}
-              <!-- This hr will get removed if Stripe cannot load -->
-              <hr id="payment-divider-for-one-time-donation" />
-
               <div class="column is-three-fifths is-offset-one-fifth">
                 <div class="is-flex-container is-horizontally-centered">
                   <div class="ath_movil_checkout_button_container">
@@ -117,7 +96,26 @@
               </div>
             {% endif %}
 
-            <hr id="payment-divider-for-one-time-donation" />
+            {% if site.data.information.payment_request_on == true %}
+              {% assign success_page = site.pages | where: "lang", page.lang | where: "lang_ref", "donation-confirmation" | first %}
+              <section
+                id="payment-form-inner-container"
+                data-lang="{{ page.lang }}"
+                data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
+                data-label="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+                data-env="{{ jekyll.environment }}"
+                data-generic-cancel-message="{{ site.data.languages[page.lang].donate.modal.generic_cancel_error_msg }}"
+                data-success-page-url="{{ success_page.url | absolute_url }}"
+              >
+                <div class="columns is-mobile is-centered">
+                  <div class="column is-half">
+                    <div id="express-checkout-element">
+                      <div class="spinner small"></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            {% endif %}
 
             <div class="field mt-2">
               <div class="columns is-centered">
@@ -184,18 +182,18 @@
       </div>
     </div>
 
-    <div class="container content-container has-background-white has-text-centered is-hidden" id="ath-canceled-container">
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="canceled-container">
       <div style="margin-top: 30px; margin-bottom: 30px;">
         <div class="custom-icon red">
           <div class="custom-icon__tip red"></div>
           <div class="custom-icon__long red"></div>
         </div>
 
-        <p class="is-size-5 mb-2 mt-2">
+        <p class="is-size-5 mb-2 mt-2" id="canceled-container-message">
           {{ site.data.languages[page.lang].donate.modal.ath_canceled_error_msg }}
         </p>
 
-        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true" id="retry-button">
+        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true&donationType=donate-now-content" id="retry-button">
           {{ site.data.languages[page.lang].donate.modal.retry }}
         </a>
       </div>

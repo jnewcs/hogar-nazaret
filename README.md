@@ -94,6 +94,16 @@ If the content looks good in the preview site, editors can then publish changes 
 
 To keep all the branches up to date, technical editors should commit to `hogar-website-cloudcannon` branch locally.
 
+### Apple Pay Testing
+To test Apple or Google Pay locally, you need to be running https locally. We need to use a combination of tools to make this happen.
+
+1. We need to proxy this application, `hogar-nazaret`, through https using [ngrok](https://ngrok.com/docs/getting-started/)
+    - `ngrok http http://localhost:8080`
+2. Register the proxy created in Step 1 inside of [Stripe's Test Dashboard](https://dashboard.stripe.com/test/settings/payment_method_domains)
+3. [Skippable] We need to proxy the backend API, `hogar-nazaret-api`, through https using [localtunnel](https://github.com/localtunnel/localtunnel)
+    - The reason why we use another service to serve https is that the free tier of ngrok doesn't allow multiple instances to be running at the same time
+    - We can skip this step IF we don't need to test any local changes to the backend API code that creates the `Stripe::PaymentIntent`
+
 # Development Notes
 1. We use [Bulma](https://bulma.io) as our CSS Framework. It is a lightweight framework based on Flexbox and does not bring in any JS.
 

@@ -43,6 +43,7 @@ en:
       error_msg: Sorry, we ran into an error processing your donation. Please click
         'Retry' to return to the donation screen and try again.
       ath_canceled_error_msg: The ATH Móvil session was cancelled
+      generic_cancel_error_msg: The payment was cancelled
   email: Email
   office: Office
   fax: Fax
@@ -196,6 +197,7 @@ es:
         Por favor, haga clic en “Intente de nuevo” para volver a la pantalla de donativo
         e inténtelo otra vez.
       ath_canceled_error_msg: La sesión de ATH Móvil fue cancelada
+      generic_cancel_error_msg: El pago fue cancelado
   email: Email
   office: Oficina
   fax: Fax

@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var loadingContainer = document.getElementById('loading-container');
   var successContainer = document.getElementById('success-container');
   var errorContainer = document.getElementById('error-container');
-  var athCanceledContainer = document.getElementById('ath-canceled-container');
+  var canceledContainer = document.getElementById('canceled-container');
   var closeBtn = document.getElementById('donation-modal-close-btn');
   var $modalOpeners = Array.prototype.slice.call(document.querySelectorAll('.modal-opener'), 0);
   var setStripeLoaded = function() {
@@ -173,7 +173,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 modalContainer.classList.add('is-hidden');
                 loadingContainer.classList.add('is-hidden');
                 errorContainer.classList.add('is-hidden');
-                athCanceledContainer.classList.add('is-hidden');
+                canceledContainer.classList.add('is-hidden');
 
                 successContainer.classList.remove('is-hidden');
                 closeBtn.classList.remove('is-hidden');
@@ -186,7 +186,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 errorContainer.classList.add('is-hidden');
                 successContainer.classList.add('is-hidden');
 
-                athCanceledContainer.classList.remove('is-hidden');
+                canceledContainer.classList.remove('is-hidden');
                 closeBtn.classList.remove('is-hidden');
               },
               onExpiredPayment: function (response) {
@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 window.trackEvent('ath_movil_payment_generic_error');
                 modalContainer.classList.add('is-hidden');
                 loadingContainer.classList.add('is-hidden');
-                athCanceledContainer.classList.add('is-hidden');
+                canceledContainer.classList.add('is-hidden');
                 successContainer.classList.add('is-hidden');
 
                 errorContainer.classList.remove('is-hidden');
@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', function () {
         loadingContainer.classList.add('is-hidden');
         successContainer.classList.add('is-hidden');
         errorContainer.classList.add('is-hidden');
-        athCanceledContainer.classList.add('is-hidden');
+        canceledContainer.classList.add('is-hidden');
 
         document.documentElement.classList.add('is-clipped');
         $target.classList.add('is-active');
