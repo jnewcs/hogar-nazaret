@@ -124,7 +124,7 @@ if (formContainer) {
       lang: lang,
       env: formEnv
     };
-    const intentUrl = 'https://large-phones-dress.loca.lt/payments/intent' || 'https://web-production-9b27.up.railway.app/payments/intent';
+    const intentUrl = 'https://web-production-9b27.up.railway.app/payments/intent';
     const res = await fetch(intentUrl, {
       method: 'POST',
       body: JSON.stringify(requestBody),
