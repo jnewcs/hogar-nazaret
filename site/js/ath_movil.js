@@ -216,7 +216,7 @@ $[_0x5fb2[0]](ATHMDomain + _0x5fb2[39], function() {
     }
     function _0xf1e0x2f(_0xf1e0x2e) {
         var _0xf1e0x30 = _0xf1e0x38(_0xf1e0x2e);
-        // The following lines are added by us!! Not by ATH Movil
+        // The following lines are added by us!! Not by ATH Móvil
         if (_0xf1e0x2e[_0x5fb2[102]] == 404) {
             ATHM_Checkout['onUnknownPayment'](_0xf1e0x30)
         };
@@ -282,7 +282,7 @@ $[_0x5fb2[0]](ATHMDomain + _0x5fb2[39], function() {
     });
     function _0xf1e0x38(_0xf1e0x30) {
         _ = _0xf1e0x30[_0x5fb2[101]];
-        // The following safeguard were added by us!! Not by ATH Movil
+        // The following safeguard were added by us!! Not by ATH Móvil
         if (_) {
           delete _[_0x5fb2[138]];
           delete _[_0x5fb2[139]];

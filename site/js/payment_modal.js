@@ -180,7 +180,7 @@ if (formContainer) {
     }
   });
 
-  // ATH Movil Checkout handlers
+  // ATH Móvil Checkout handlers
   oneTimeAmountField.onchange = function() {
     if (!athMovilLoaded || !ATHM_Checkout || !ATHM_Checkout.publicToken) return;
 

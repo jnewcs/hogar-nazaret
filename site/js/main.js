@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 closeBtn.classList.remove('is-hidden');
               },
               onCancelledPayment: function (response) {
-                // When the ATH modal/page is cancelled, this method gets called
+                // When the ATH Móvil modal/page is cancelled, this method gets called
                 window.trackEvent('ath_movil_payment_cancelled');
                 modalContainer.classList.add('is-hidden');
                 loadingContainer.classList.add('is-hidden');
@@ -191,12 +191,12 @@ document.addEventListener('DOMContentLoaded', function () {
               },
               onExpiredPayment: function (response) {
                 // When the timeout period defined above is done and the payment hasn't
-                // been completed, the ATH modal/page closes and this method gets called
+                // been completed, the ATH Móvil modal/page closes and this method gets called
                 window.trackEvent('ath_movil_payment_attempt_expired');
               },
               onUnknownPayment: function (response) {
-                // When something goes wrong with the ATH modal payment, this method gets called
-                // I added this on September 8th when we brough the ATH mobile
+                // When something goes wrong with the ATH Móvil modal payment, this method gets called
+                // I added this on September 8th when we brough the ATH Móvil mobile
                 // script into the repo and modified it to work with our setup
                 window.trackEvent('ath_movil_payment_generic_error');
                 modalContainer.classList.add('is-hidden');
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
-  // When a user clicks on the ATH Movil button, it opens up the ATH Movil modal
+  // When a user clicks on the ATH Móvil button, it opens up the ATH Móvil modal
   // This interface has a `Reopen` button that is broken. This code fixes that button
   // to make it reload the page and re-open the donation modal
   document.addEventListener('click', function(event) {

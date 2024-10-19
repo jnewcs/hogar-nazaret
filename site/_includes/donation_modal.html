@@ -88,10 +88,46 @@
 
             {% if site.data.information.ath_movil.live == true %}
               <div class="column is-three-fifths is-offset-one-fifth">
-                <div class="is-flex-container is-horizontally-centered">
+                <div class="is-flex-container is-horizontally-centered is-flex-direction-row">
                   <div class="ath_movil_checkout_button_container">
                     <div id="ATHMovil_Checkout_Button"></div>
                   </div>
+                </div>
+
+                <div>
+                  <details class="mt-3 content">
+                    <summary id="donation-explanation">
+                      {{ site.data.languages[page.lang].donate.modal.ath_need_help.title }}
+                    </summary>
+
+                    <div class="notification is-info is-light mt-1 has-text-left">
+                      <p>
+                        {{ site.data.languages[page.lang].donate.modal.ath_need_help.disclaimer }}
+                      </p>
+                      <p>
+                        {{ site.data.languages[page.lang].donate.modal.ath_need_help.first_step }}
+                      </p>
+                      <ul>
+                        <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.push_notification }}</li>
+                        <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.browser_return }}</li>
+                        <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.donation_validation }}</li>
+                        <ul>
+                          <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.within_24_hours }}</li>
+                        </ul>
+                        <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.concerns }}</li>
+                      </ul>
+
+                      <hr class="has-background-dark-blue" />
+
+                      <p>
+                        <b>{{ site.data.languages[page.lang].give_a_hug.donation_explanation.summary }}</b>
+                      </p>
+                      <ul>
+                        <li>{{ site.data.languages[page.lang].give_a_hug.donation_explanation.details }}</li>
+                      </ul>
+                    </div>
+                  </details>
+                  <hr />
                 </div>
               </div>
             {% endif %}
