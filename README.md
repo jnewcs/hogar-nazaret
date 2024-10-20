@@ -104,6 +104,12 @@ To test Apple or Google Pay locally, you need to be running https locally. We ne
     - The reason why we use another service to serve https is that the free tier of ngrok doesn't allow multiple instances to be running at the same time
     - We can skip this step IF we don't need to test any local changes to the backend API code that creates the `Stripe::PaymentIntent`
 
+### Apple Pay Errors
+
+I've encountered one really weird error when trying to pay with Apple Pay on our live site. After upgrading to the latest MacOS, your Apple Pay can get auto-disabled. This will result in Apple Pay showing up for the site in Safari, but clicking on `Donate with Apple Pay` will immedatiely cause the cancellation modal to pop open.
+
+- To see if you are running into this, you can open up Settings > Wallet & Apple Pay. You'll see an alert if your computer has auto-disabled Apple Pay. Usually restarting fixes the issue
+
 # Development Notes
 1. We use [Bulma](https://bulma.io) as our CSS Framework. It is a lightweight framework based on Flexbox and does not bring in any JS.
 

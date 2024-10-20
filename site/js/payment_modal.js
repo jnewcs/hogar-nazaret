@@ -99,13 +99,15 @@ if (formContainer) {
     window.trackEvent('stripe_express_checkout_cancel');
   }
 
-  expressCheckoutElement.on('cancel', () => {
+  expressCheckoutElement.on('cancel', (error) => {
+    console.error('[expressCheckoutElement.cancel] Error', { error });
     stripeCancelHandler();
   });
 
   expressCheckoutElement.on('confirm', async (event) => {
     const { error: submitError } = await elements.submit();
     if (submitError) {
+      console.error('[expressCheckoutElement.submit] Error', { error: submitError });
       stripeFailureHandler();
       return;
     }
