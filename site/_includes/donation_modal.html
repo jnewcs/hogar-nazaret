@@ -86,25 +86,72 @@
               </div>
             </div>
 
+            {% if site.data.information.ath_movil.live == true %}
+              <div class="column is-three-fifths is-offset-one-fifth">
+                <div class="is-flex-container is-horizontally-centered is-flex-direction-row">
+                  <div class="ath_movil_checkout_button_container">
+                    <div id="ATHMovil_Checkout_Button"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <details class="mt-3 content">
+                    <summary id="donation-explanation">
+                      {{ site.data.languages[page.lang].donate.modal.ath_need_help.title }}
+                    </summary>
+
+                    <div class="notification is-info is-light mt-1 has-text-left">
+                      <p>
+                        {{ site.data.languages[page.lang].donate.modal.ath_need_help.disclaimer }}
+                      </p>
+                      <p>
+                        {{ site.data.languages[page.lang].donate.modal.ath_need_help.first_step }}
+                      </p>
+                      <ul>
+                        <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.push_notification }}</li>
+                        <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.browser_return }}</li>
+                        <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.donation_validation }}</li>
+                        <ul>
+                          <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.within_24_hours }}</li>
+                        </ul>
+                        <li>{{ site.data.languages[page.lang].donate.modal.ath_need_help.concerns }}</li>
+                      </ul>
+
+                      <hr class="has-background-dark-blue" />
+
+                      <p>
+                        <b>{{ site.data.languages[page.lang].give_a_hug.donation_explanation.summary }}</b>
+                      </p>
+                      <ul>
+                        <li>{{ site.data.languages[page.lang].give_a_hug.donation_explanation.details }}</li>
+                      </ul>
+                    </div>
+                  </details>
+                  <hr />
+                </div>
+              </div>
+            {% endif %}
+
             {% if site.data.information.payment_request_on == true %}
+              {% assign success_page = site.pages | where: "lang", page.lang | where: "lang_ref", "donation-confirmation" | first %}
               <section
                 id="payment-form-inner-container"
                 data-lang="{{ page.lang }}"
                 data-key="{{ site.data.payments.stripe_publish_key[jekyll.environment] }}"
                 data-label="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
                 data-env="{{ jekyll.environment }}"
+                data-generic-cancel-message="{{ site.data.languages[page.lang].donate.modal.generic_cancel_error_msg }}"
+                data-success-page-url="{{ success_page.url | absolute_url }}"
               >
                 <div class="columns is-mobile is-centered">
                   <div class="column is-half">
-                    <div id="payment-request-button">
+                    <div id="express-checkout-element">
                       <div class="spinner small"></div>
                     </div>
                   </div>
                 </div>
               </section>
             {% endif %}
-
-            <hr id="payment-divider-for-one-time-donation" />
 
             <div class="field mt-2">
               <div class="columns is-centered">
@@ -156,18 +203,35 @@
 
     <div class="container content-container has-background-white has-text-centered is-hidden" id="error-container">
       <div style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="custom-icon yellow">
+          <div class="custom-icon__tip yellow"></div>
+          <div class="custom-icon__long yellow"></div>
+        </div>
+
+        <p class="is-size-5 mb-2 mt-2">
+          {{ site.data.languages[page.lang].donate.modal.error_msg }}
+        </p>
+
+        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true" id="retry-button">
+          {{ site.data.languages[page.lang].donate.modal.retry }}
+        </a>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="canceled-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
         <div class="custom-icon red">
           <div class="custom-icon__tip red"></div>
           <div class="custom-icon__long red"></div>
         </div>
 
-        <p class="is-size-5 mb-1 mt-2">
-          {{ site.data.languages[page.lang].donate.modal.error_msg }}
+        <p class="is-size-5 mb-2 mt-2" id="canceled-container-message">
+          {{ site.data.languages[page.lang].donate.modal.ath_canceled_error_msg }}
         </p>
 
-        <button class="button is-medium is-secondary" id="retry-button">
+        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true&donationType=donate-now-content" id="retry-button">
           {{ site.data.languages[page.lang].donate.modal.retry }}
-        </button>
+        </a>
       </div>
     </div>
   </div>

@@ -84,13 +84,17 @@
 
       <div class="columns is-multiline" id="give-a-hug-donation-options">
         {% if site.data.information.ath_movil.live == true %}
-          <div class="column is-three-fifths is-offset-one-fifth">
-            <div class="is-flex-container is-horizontally-centered">
-              <div class="ath_movil_checkout_button_container">
-                <div id="ATHMovil_Checkout_Button"></div>
+          <!-- TODO: If we release the Hug Campaign again, we need to figure out how -->
+          <!-- to host multiple ATH Móvil buttons on the page -->
+          <!--
+            <div class="column is-three-fifths is-offset-one-fifth">
+              <div class="is-flex-container is-horizontally-centered">
+                <div class="ath_movil_checkout_button_container">
+                  <div id="ATHMovil_Checkout_Button"></div>
+                </div>
               </div>
             </div>
-          </div>
+          -->
         {% endif %}
 
         <div class="column is-three-fifths is-offset-one-fifth mt-1 is-hidden" id="payment-request-button-for-campaign-container">

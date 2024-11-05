@@ -102,6 +102,17 @@
 <script src="{{ '/js/cloudcannon.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript"></script>
 <!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
 <div id="payment-modal-src" data-src="{{ '/js/payment_modal.js' | relative_url }}?{{ site.time | date: '%s%N' }}"></div>
+<!-- When the user clicks on Donate, we load in ATH Móvil and the payment modal javascript -->
+<div
+  id="ath-modal-src"
+  data-lang="{{ page.lang }}"
+  data-token="{{ site.data.information.ath_movil.public_token }}"
+  data-name="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+  data-description="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+  data-script-src="{{ '/js/ath_movil.js' | relative_url }}?{{ site.time | date: '%s%N' }}"
+>
+</div>
+
 <script src="{{ '/js/image_modal.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript" defer></script>
 
 {% if page.layout == 'campaign' %}
