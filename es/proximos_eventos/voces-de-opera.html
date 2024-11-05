@@ -48,7 +48,7 @@
     
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&amp;display=swap" rel="stylesheet">
-    <link data-cms-original-href="/css/main.css?1725304567565133723" href="/css/main.css?1725304567565133723&amp;_cchid=1e8685c64ed1c20b80bb31e81b98b31f" rel="stylesheet">
+    <link data-cms-original-href="/css/main.css?1730818621516042078" href="/css/main.css?1730818621516042078&amp;_cchid=0840a19524dffcd9da80f33ac3443aff" rel="stylesheet">
 
     <!-- TODO: Optimize when we load the carousel  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" rel="stylesheet">
@@ -60,9 +60,13 @@
 
     
 
+    <!-- Necessary for jQuery / ATH Móvil Integration -->
+    <script crossorigin="anonymous" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <script>
       /* Code to lazy load script */
       window.stripeLoaded = false;
+      window.athMovilLoaded = false;
       window.paypalLoaded = false;
       window.paypalModalCodeLoaded = false;
       window.lazyLoadScript = function(scriptSrc, postLoadFunction, failEvent) {
@@ -687,11 +691,15 @@ $1,100.00 por mesa (10 boletos)
   </div>
 
 
-<script data-cms-original-src="/js/main.js?1725304567565133723" src="/js/main.js?1725304567565133723&amp;_cchid=ab6106d3a22cbce3484d6b2ba810d822" type="text/javascript"></script>
-<script data-cms-original-src="/js/cloudcannon.js?1725304567565133723" src="/js/cloudcannon.js?1725304567565133723&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
+<script data-cms-original-src="/js/main.js?1730818621516042078" src="/js/main.js?1730818621516042078&amp;_cchid=5b738672a10e2f6a4afccf153ae29681" type="text/javascript"></script>
+<script data-cms-original-src="/js/cloudcannon.js?1730818621516042078" src="/js/cloudcannon.js?1730818621516042078&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
 <!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
-<div data-cms-original-data-src="/js/payment_modal.js?1725304567565133723" data-src="/js/payment_modal.js?1725304567565133723&amp;_cchid=5b84cfc187316c124f0a92d9b4c4f73a" id="payment-modal-src"></div>
-<script data-cms-original-src="/js/image_modal.js?1725304567565133723" defer="" src="/js/image_modal.js?1725304567565133723&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
+<div data-cms-original-data-src="/js/payment_modal.js?1730818621516042078" data-src="/js/payment_modal.js?1730818621516042078&amp;_cchid=a706b121dbab628ff7c3b5a188328ec6" id="payment-modal-src"></div>
+<!-- When the user clicks on Donate, we load in ATH Móvil and the payment modal javascript -->
+<div data-description="Un solo donativo - Hogar Albergue para Niños Jesús de Nazaret" data-lang="es" data-name="Un solo donativo - Hogar Albergue para Niños Jesús de Nazaret" data-script-src="/js/ath_movil.js?1730818621516042078" data-token="cc49d97e329fd42eb17e3e8ea11bd283511ee592" id="ath-modal-src">
+</div>
+
+<script data-cms-original-src="/js/image_modal.js?1730818621516042078" defer="" src="/js/image_modal.js?1730818621516042078&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
 
 
 
@@ -780,7 +788,7 @@ $1,100.00 por mesa (10 boletos)
       </div>
 
       <div id="tab-contents">
-        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1725304567565133723" id="sponsor-content">
+        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1730818621516042078" id="sponsor-content">
           <p class="is-size-5 pt-3 pb-3">
             Mediante donativos fijos mensuales, <b>TÚ</b> puedes ayudarnos a sufragar los costos de los servicios que damos a los niños durante su estadía en el Hogar.
           </p>
@@ -1036,18 +1044,63 @@ $1,100.00 por mesa (10 boletos)
             </div>
 
             
-              <section data-env="production" data-key="pk_live_YE6au56wdhzwxwGO9bGPio7L00E0keInTX" data-label="Un solo donativo - Hogar Albergue para Niños Jesús de Nazaret" data-lang="es" id="payment-form-inner-container">
+              <div class="column is-three-fifths is-offset-one-fifth">
+                <div class="is-flex-container is-horizontally-centered is-flex-direction-row">
+                  <div class="ath_movil_checkout_button_container">
+                    <div id="ATHMovil_Checkout_Button"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <details class="mt-3 content">
+                    <summary id="donation-explanation">
+                      ¿Necesita ayuda?
+                    </summary>
+
+                    <div class="notification is-info is-light mt-1 has-text-left">
+                      <p>
+                        **El nombre oficial del Hogar Albergue Jesús de Nazaret para utilizar ATH Móvil es: <b>HogarJesusdeNazaret</b> **
+                      </p>
+                      <p>
+                        Después de hacer clic en el botón de pago, se le pedirá dar el número de teléfono o correo electrónico de su ATH Móvil
+                      </p>
+                      <ul>
+                        <li>Si tiene la aplicación de ATH Móvil en su teléfono, se le pedirá que complete su donativo</li>
+                        <li>Una vez que termine de hacer su donativo y que regrese al navegador web (browser), va a ver en la pantalla un texto que dice “Esperando por su pago”</li>
+                        <li>Esto sucede a veces durante la integración de la web de la ATH Móvil, pero le aseguramos que hemos recibido su donativo</li>
+                        <ul>
+                          <li>Dentro de las próximas 24 horas recibirá un mensaje en su correo electrónico de <a href="mailto:info@hogarjesusdenazaret.org">info@hogarjesusdenazaret.org</a> que confirma su pago</li>
+                        </ul>
+                        <li>Si tiene alguna pregunta al respecto, por favor, comuníquese con nosotros en <a href="https://www.facebook.com/HogarANJN" target="_blank">Facebook</a> o por correo electrónico en <a href="mailto:comunicaciones@hogarjesusdenazaret.org">comunicaciones@hogarjesusdenazaret.org</a></li>
+                      </ul>
+
+                      <hr class="has-background-dark-blue">
+
+                      <p>
+                        <b>¿Para qué se utilizará el dinero de mi donativo?</b>
+                      </p>
+                      <ul>
+                        <li>Tu donativo ayudará al Hogar a realizar nuestra misión de ofrecer hogar seguro, atención personal, alimentación, transportación, servicios médicos, educación, recreación, ayuda social y psicológica a niños que han sido rescatados del maltrato. En nuestro Hogar atendemos a los niños con mucho AMOR. ¡Gracias por tu aportación!</li>
+                      </ul>
+                    </div>
+                  </details>
+                  <hr>
+                </div>
+              </div>
+            
+
+            
+              
+              <section data-env="production" data-generic-cancel-message="El pago fue cancelado" data-key="pk_live_YE6au56wdhzwxwGO9bGPio7L00E0keInTX" data-label="Un solo donativo - Hogar Albergue para Niños Jesús de Nazaret" data-lang="es" data-success-page-url="https://www.hogarjesusdenazaret.org/es/contribuye/donativo-confirmacion/" id="payment-form-inner-container">
                 <div class="columns is-mobile is-centered">
                   <div class="column is-half">
-                    <div id="payment-request-button">
+                    <div id="express-checkout-element">
                       <div class="spinner small"></div>
                     </div>
                   </div>
                 </div>
               </section>
             
-
-            <hr id="payment-divider-for-one-time-donation">
 
             <div class="field mt-2">
               <div class="columns is-centered">
@@ -1099,18 +1152,35 @@ $1,100.00 por mesa (10 boletos)
 
     <div class="container content-container has-background-white has-text-centered is-hidden" id="error-container">
       <div style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="custom-icon yellow">
+          <div class="custom-icon__tip yellow"></div>
+          <div class="custom-icon__long yellow"></div>
+        </div>
+
+        <p class="is-size-5 mb-2 mt-2">
+          Lo sentimos, nos encontramos con un error al procesar tu donativo. Por favor, haga clic en “Intente de nuevo” para volver a la pantalla de donativo e inténtelo otra vez.
+        </p>
+
+        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true" id="retry-button">
+          Intente de nuevo
+        </a>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="canceled-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
         <div class="custom-icon red">
           <div class="custom-icon__tip red"></div>
           <div class="custom-icon__long red"></div>
         </div>
 
-        <p class="is-size-5 mb-1 mt-2">
-          Lo sentimos, nos encontramos con un error al procesar tu donativo. Por favor, haga clic en “Intente de nuevo” para volver a la pantalla de donativo e inténtelo otra vez.
+        <p class="is-size-5 mb-2 mt-2" id="canceled-container-message">
+          La sesión de ATH Móvil fue cancelada
         </p>
 
-        <button class="button is-medium is-secondary" id="retry-button">
+        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true&amp;donationType=donate-now-content" id="retry-button">
           Intente de nuevo
-        </button>
+        </a>
       </div>
     </div>
   </div>

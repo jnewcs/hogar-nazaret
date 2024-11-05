@@ -68,7 +68,7 @@
     
 
     <link href="https://fonts.googleapis.com/css?family=Patrick+Hand&amp;display=swap" rel="stylesheet">
-    <link data-cms-original-href="/css/main.css?1725304567565133723" href="/css/main.css?1725304567565133723&amp;_cchid=1e8685c64ed1c20b80bb31e81b98b31f" rel="stylesheet">
+    <link data-cms-original-href="/css/main.css?1730818621516042078" href="/css/main.css?1730818621516042078&amp;_cchid=0840a19524dffcd9da80f33ac3443aff" rel="stylesheet">
 
     <!-- TODO: Optimize when we load the carousel  -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.3/tiny-slider.css" rel="stylesheet">
@@ -80,9 +80,13 @@
 
     
 
+    <!-- Necessary for jQuery / ATH Móvil Integration -->
+    <script crossorigin="anonymous" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
     <script>
       /* Code to lazy load script */
       window.stripeLoaded = false;
+      window.athMovilLoaded = false;
       window.paypalLoaded = false;
       window.paypalModalCodeLoaded = false;
       window.lazyLoadScript = function(scriptSrc, postLoadFunction, failEvent) {
@@ -761,11 +765,15 @@
   </div>
 
 
-<script data-cms-original-src="/js/main.js?1725304567565133723" src="/js/main.js?1725304567565133723&amp;_cchid=ab6106d3a22cbce3484d6b2ba810d822" type="text/javascript"></script>
-<script data-cms-original-src="/js/cloudcannon.js?1725304567565133723" src="/js/cloudcannon.js?1725304567565133723&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
+<script data-cms-original-src="/js/main.js?1730818621516042078" src="/js/main.js?1730818621516042078&amp;_cchid=5b738672a10e2f6a4afccf153ae29681" type="text/javascript"></script>
+<script data-cms-original-src="/js/cloudcannon.js?1730818621516042078" src="/js/cloudcannon.js?1730818621516042078&amp;_cchid=ceb9cc44aa58b4cd953fed63fbb7e8a4" type="text/javascript"></script>
 <!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
-<div data-cms-original-data-src="/js/payment_modal.js?1725304567565133723" data-src="/js/payment_modal.js?1725304567565133723&amp;_cchid=5b84cfc187316c124f0a92d9b4c4f73a" id="payment-modal-src"></div>
-<script data-cms-original-src="/js/image_modal.js?1725304567565133723" defer="" src="/js/image_modal.js?1725304567565133723&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
+<div data-cms-original-data-src="/js/payment_modal.js?1730818621516042078" data-src="/js/payment_modal.js?1730818621516042078&amp;_cchid=a706b121dbab628ff7c3b5a188328ec6" id="payment-modal-src"></div>
+<!-- When the user clicks on Donate, we load in ATH Móvil and the payment modal javascript -->
+<div data-description="One Time Donation - The Hogar Albergue Jesús de Nazaret" data-lang="en" data-name="One Time Donation - The Hogar Albergue Jesús de Nazaret" data-script-src="/js/ath_movil.js?1730818621516042078" data-token="cc49d97e329fd42eb17e3e8ea11bd283511ee592" id="ath-modal-src">
+</div>
+
+<script data-cms-original-src="/js/image_modal.js?1730818621516042078" defer="" src="/js/image_modal.js?1730818621516042078&amp;_cchid=a190a92b4e9ea1964cf9c7954e098865" type="text/javascript"></script>
 
 
 
@@ -854,7 +862,7 @@
       </div>
 
       <div id="tab-contents">
-        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1725304567565133723" id="sponsor-content">
+        <div ;="" class="tab-content has-text-centered is-active" data-paypal-script-src="/js/paypal_subscriptions_modal.js?1730818621516042078" id="sponsor-content">
           <p class="is-size-5 pt-3 pb-3">
             Through fixed monthly donations, <b>YOU</b> could help us defray the costs of the services we provide to our children while they reside at the Hogar.
           </p>
@@ -1110,18 +1118,63 @@
             </div>
 
             
-              <section data-env="production" data-key="pk_live_YE6au56wdhzwxwGO9bGPio7L00E0keInTX" data-label="One Time Donation - The Hogar Albergue Jesús de Nazaret" data-lang="en" id="payment-form-inner-container">
+              <div class="column is-three-fifths is-offset-one-fifth">
+                <div class="is-flex-container is-horizontally-centered is-flex-direction-row">
+                  <div class="ath_movil_checkout_button_container">
+                    <div id="ATHMovil_Checkout_Button"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <details class="mt-3 content">
+                    <summary id="donation-explanation">
+                      Need Help?
+                    </summary>
+
+                    <div class="notification is-info is-light mt-1 has-text-left">
+                      <p>
+                        ** The Hogar Albergue para Niños Jesús de Nazaret's formal name on ATH Móvil is: <b>HogarJesusdeNazaret</b> **
+                      </p>
+                      <p>
+                        After clicking on the pay button, you'll be asked to provide your ATH Móvil account phone number or email
+                      </p>
+                      <ul>
+                        <li>If you have the ATH Móvil mobile app, you will then receive a push notification with a prompt to complete the donation</li>
+                        <li>Upon completing your donation and returning to your web browser, you still might see "Waiting for Payment" text on your screen</li>
+                        <li>This can sometimes happen with the ATH Móvil web integration, but rest assured that we have received your donation</li>
+                        <ul>
+                          <li>Within 24 hours, you will also receive an email from <a href="mailto:info@hogarjesusdenazaret.org">info@hogarjesusdenazaret.org</a> to confirm your donation</li>
+                        </ul>
+                        <li>If you have any concerns or questions, please do not hesitate to reach out to us on <a href="https://www.facebook.com/HogarANJN" target="_blank">Facebook</a> or send us an email at <a href="mailto:comunicaciones@hogarjesusdenazaret.org">comunicaciones@hogarjesusdenazaret.org</a></li>
+                      </ul>
+
+                      <hr class="has-background-dark-blue">
+
+                      <p>
+                        <b>Where is my donation going?</b>
+                      </p>
+                      <ul>
+                        <li>Your donation helps the Hogar offer a safe home, personal care, nutrition, education, medical services, transportation, recreation, and social and psychological services to girls and boys who have been rescued from abuse. We provide for all their needs with lots of LOVE. Thank you for your support!</li>
+                      </ul>
+                    </div>
+                  </details>
+                  <hr>
+                </div>
+              </div>
+            
+
+            
+              
+              <section data-env="production" data-generic-cancel-message="The payment was cancelled" data-key="pk_live_YE6au56wdhzwxwGO9bGPio7L00E0keInTX" data-label="One Time Donation - The Hogar Albergue Jesús de Nazaret" data-lang="en" data-success-page-url="https://www.hogarjesusdenazaret.org/en/get-involved/donation-confirmation/" id="payment-form-inner-container">
                 <div class="columns is-mobile is-centered">
                   <div class="column is-half">
-                    <div id="payment-request-button">
+                    <div id="express-checkout-element">
                       <div class="spinner small"></div>
                     </div>
                   </div>
                 </div>
               </section>
             
-
-            <hr id="payment-divider-for-one-time-donation">
 
             <div class="field mt-2">
               <div class="columns is-centered">
@@ -1173,18 +1226,35 @@
 
     <div class="container content-container has-background-white has-text-centered is-hidden" id="error-container">
       <div style="margin-top: 30px; margin-bottom: 30px;">
+        <div class="custom-icon yellow">
+          <div class="custom-icon__tip yellow"></div>
+          <div class="custom-icon__long yellow"></div>
+        </div>
+
+        <p class="is-size-5 mb-2 mt-2">
+          Sorry, we ran into an error processing your donation. Please click 'Retry' to return to the donation screen and try again.
+        </p>
+
+        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true" id="retry-button">
+          Retry
+        </a>
+      </div>
+    </div>
+
+    <div class="container content-container has-background-white has-text-centered is-hidden" id="canceled-container">
+      <div style="margin-top: 30px; margin-bottom: 30px;">
         <div class="custom-icon red">
           <div class="custom-icon__tip red"></div>
           <div class="custom-icon__long red"></div>
         </div>
 
-        <p class="is-size-5 mb-1 mt-2">
-          Sorry, we ran into an error processing your donation. Please click 'Retry' to return to the donation screen and try again.
+        <p class="is-size-5 mb-2 mt-2" id="canceled-container-message">
+          The ATH Móvil session was cancelled
         </p>
 
-        <button class="button is-medium is-secondary" id="retry-button">
+        <a class="button is-medium is-secondary has-text-white" href="?openDonationModal=true&amp;donationType=donate-now-content" id="retry-button">
           Retry
-        </button>
+        </a>
       </div>
     </div>
   </div>
