@@ -201,7 +201,7 @@ content_blocks:
   - _bookshop_name: facebook_posts_highlights
     show_container: true
     title: Noticias
-    subtitle: Subtitle goes here (optional)
+    subtitle:
     number_of_posts: 3
     truncate_length: 200
     column_size: is-one-third
