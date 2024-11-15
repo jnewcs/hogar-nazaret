@@ -257,7 +257,7 @@ content_blocks:
     background_color: white
   - _bookshop_name: facebook_posts_highlights
     show_container: true
-    title: Noticias
+    title:
     subtitle:
     number_of_posts: 3
     truncate_length: 200
