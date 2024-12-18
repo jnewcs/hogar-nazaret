@@ -1,3 +1,7 @@
+_enabled_editors:
+  - data
+  - visual
+
 collections_config:
   noticias:
     sort:
