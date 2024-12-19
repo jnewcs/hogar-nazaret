@@ -5,14 +5,15 @@ spec:
   label: Side by Side Header
   description: Header with an image to the right
   icon: vertical_split
+  image: /uploads/components/side_by_side_header.preview.png
   tags:
     - Header
 
 # Defines the structure of this component, as well as the default values
 blueprint:
   title: "Page Title"
-  date: 2024-07-15T12:00:00.000Z
   hide_date: false
+  date: 2024-07-15T12:00:00.000Z
   image: "https://hogarjesusdenazaret.org/uploads/page_header_images/hogar_playground.jpg"
   image_alt: 'Image description'
   image_style: contain

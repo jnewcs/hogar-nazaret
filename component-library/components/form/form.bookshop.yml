@@ -5,6 +5,7 @@ spec:
   label: Form
   description: Form that allows users to submit a request to the Hogar
   icon: format_list_bulleted
+  image: /uploads/components/form.preview.png
   tags:
     - Form
 

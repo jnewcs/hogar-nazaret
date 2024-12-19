@@ -35,4 +35,13 @@ content_blocks:
         <li>Presentadores para dar talleres y/o charlas sobre el maltrato de menores y estrategias de detección y prevención (entrenamiento y materiales son proporcionados por el Hogar).</li>
         <li>Asistentes para la recaudación de fondos: ayúdanos a buscar auspiciadores para nuestros eventos y gastos operativos (entrenamiento y materiales son proporcionados por el Hogar).</li>
       </ul>
+
+  - _bookshop_name: side_by_side_header
+    title: Page Title
+    date: 2024-07-10 12:00:00
+    hide_date: false
+    image: >-
+      https://hogarjesusdenazaret.org/uploads/page_header_images/hogar_playground.jpg
+    image_alt: Image description
+    image_style: contain
 ---
