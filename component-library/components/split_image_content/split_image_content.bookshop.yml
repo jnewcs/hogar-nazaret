@@ -5,6 +5,7 @@ spec:
   label: Split Image Content
   description: Generic text component with option to show image to the left/right of content
   icon: vertical_split
+  image: /uploads/components/split_image_content.preview.png
   tags:
     - Text
 

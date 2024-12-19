@@ -4,6 +4,7 @@ spec:
     - content_blocks
   label: Flyer Header
   description: Header with a large central image that can be expanded into a modal
+  image: /uploads/components/flyer_header.preview.png
   icon: article
   tags:
     - Header

@@ -22,15 +22,23 @@ preview:
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   title:
-    comment: Title is left aligned
+    comment: Title is set to the left of the image
     type: text
     allow_empty: false
+  hide_date:
+    type: switch
+    label: "Hide the date text?"
+    comment: When toggled, the header will hide date text
+    allow_empty: false
   date:
+    type: datetime
+    comment: "Date to display in readable format (e.g Domingo 12 de junio de 2022)"
     allow_empty: true
+    hidden: hide_date
   image:
     type: image
     label: Image
-    comment: Displayed to the left of the title
+    comment: Displayed to the right of the title
     allow_empty: false
   image_alt:
     type: text
