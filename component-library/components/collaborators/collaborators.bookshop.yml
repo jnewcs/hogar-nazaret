@@ -3,7 +3,7 @@ spec:
   structures:
     - content_blocks
   label: Collaborators
-  description: Renders a set of collaborators, organized by categories
+  description: Use inside a Collaborator Group
   icon: partner_exchange
   image: /uploads/components/collaborators.preview.png
   tags:

@@ -3,7 +3,7 @@ spec:
   structures:
     - content_blocks
   label: Carousel Item
-  description: Renders a carousel item
+  description: Renders a carousel item. Use inside a Carousel
   icon: category
   image: /uploads/components/carousel_item.preview.png
   tags:

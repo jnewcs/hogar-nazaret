@@ -3,7 +3,7 @@ spec:
   structures:
     - content_blocks
   label: Tile
-  description: Tile with a title, message, and call to action
+  description: Tile with a title, message, and CTA. Use inside a Tile Container
   icon: wysiwyg
   image: /uploads/components/tile.preview.png
   tags:

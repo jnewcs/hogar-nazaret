@@ -2,7 +2,7 @@
 spec:
   structures:
     - content_blocks
-  label: Tiles
+  label: Tiles Container
   description: Tile container
   icon: grid_view
   image: /uploads/components/tiles.preview.png
