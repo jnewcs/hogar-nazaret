@@ -3,7 +3,7 @@ spec:
   structures:
     - content_blocks
   label: Side by Side Header
-  description: Header with an image to the left
+  description: Header with an image to the right
   icon: vertical_split
   tags:
     - Header
@@ -11,8 +11,9 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   title: "Page Title"
-  date: null
-  image: null
+  date: 2024-07-15T12:00:00.000Z
+  hide_date: false
+  image: "https://hogarjesusdenazaret.org/uploads/page_header_images/hogar_playground.jpg"
   image_alt: 'Image description'
   image_style: contain
 
