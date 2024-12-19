@@ -5,6 +5,7 @@ spec:
   label: Tile
   description: Tile with a title, message, and call to action
   icon: wysiwyg
+  image: /uploads/components/tile.preview.png
   tags:
     - Tile
 

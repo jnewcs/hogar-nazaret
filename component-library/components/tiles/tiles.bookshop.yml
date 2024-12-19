@@ -5,6 +5,7 @@ spec:
   label: Tiles
   description: Tile container
   icon: grid_view
+  image: /uploads/components/tiles.preview.png
   tags:
     - Tile
 
