@@ -5,6 +5,7 @@ spec:
   label: Carousel Item
   description: Renders a carousel item
   icon: category
+  image: /uploads/components/carousel_item.preview.png
   tags:
     - Carousel
 

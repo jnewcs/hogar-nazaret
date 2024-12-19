@@ -5,6 +5,7 @@ spec:
   label: Carousel
   description: Renders a carousel with images and captions
   icon: view_carousel
+  image: /uploads/components/carousel_item.preview.png
   tags:
     - Carousel
 
