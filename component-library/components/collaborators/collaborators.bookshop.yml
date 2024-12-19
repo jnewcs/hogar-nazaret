@@ -5,6 +5,7 @@ spec:
   label: Collaborators
   description: Renders a set of collaborators, organized by categories
   icon: partner_exchange
+  image: /uploads/components/collaborators.preview.png
   tags:
     - Collaborator
 
