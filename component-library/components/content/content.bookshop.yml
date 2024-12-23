@@ -3,8 +3,9 @@ spec:
   structures:
     - content_blocks
   label: Content
-  description: Generic rich content area
+  description: Generic rich content area. Use this component to add text, images, and other HTML content.
   icon: wysiwyg
+  image: /uploads/components/content.preview.png
   tags:
     - Text
 

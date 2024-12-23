@@ -1,3 +1,7 @@
+_enabled_editors:
+  - visual
+  - data
+
 collections_config:
   noticias:
     sort:
@@ -6,8 +10,8 @@ collections_config:
       - name: Add Noticia for Spanish Site
         editor: visual
     _enabled_editors:
-      - data
       - visual
+      - data
     preview:
       subtext:
         - key: title
@@ -66,8 +70,8 @@ collections_config:
       - name: Add News Article for English Site
         editor: visual
     _enabled_editors:
-      - data
       - visual
+      - data
     preview:
       subtext:
         - key: title
@@ -126,8 +130,8 @@ collections_config:
       - name: Add Upcoming event for the Spanish website
         editor: visual
     _enabled_editors:
-      - data
       - visual
+      - data
     preview:
       subtext:
         - key: title
@@ -197,8 +201,8 @@ collections_config:
       - name: Add Upcoming event for the English website
         editor: visual
     _enabled_editors:
-      - data
       - visual
+      - data
     preview:
       subtext:
         - key: title
@@ -267,8 +271,8 @@ collections_config:
     disable_add: true
     path: es/
     _enabled_editors:
-      - data
       - visual
+      - data
     filter:
       exclude:
         - noticias.md

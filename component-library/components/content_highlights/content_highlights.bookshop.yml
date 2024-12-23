@@ -5,6 +5,7 @@ spec:
   label: Content Highlights
   description: Component to render text and HTML highlights in a single row
   icon: wysiwyg
+  image: /uploads/components/content_highlights.preview.png
   tags:
     - Text
 

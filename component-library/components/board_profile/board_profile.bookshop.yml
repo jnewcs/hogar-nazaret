@@ -4,6 +4,7 @@ spec:
     - content_blocks
   label: Board Profile
   description: Renders a board profile
+  image: /uploads/components/board_profile.preview.png
   icon: person
   tags:
     - Board

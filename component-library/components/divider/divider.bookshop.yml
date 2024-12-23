@@ -5,6 +5,7 @@ spec:
   label: Divider
   description: Divider element (<hr/>)
   icon: safety_divider
+  image: /uploads/components/divider.preview.png
   tags:
     - Text
 

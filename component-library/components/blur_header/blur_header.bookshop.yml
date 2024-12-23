@@ -5,6 +5,7 @@ spec:
   label: Blur Header
   description: Header with a blurred image and centered title
   icon: blur_on
+  image: /uploads/components/blur_header.preview.png
   tags:
     - Header
 
@@ -40,7 +41,7 @@ _inputs:
       allow_empty: false
   title_color:
     type: select
-    label: Image style
+    label: Title color
     options:
       values:
         - dark

@@ -31,7 +31,7 @@
         if (languageFilter === 'en') {
           var postOriginalMessage = post.translation;
         } else {
-          var postOriginalMessage = post.message;
+          var postOriginalMessage = post.spanish_translation_override || post.message;
         }
         if (!!postOriginalMessage) {
           shownPosts = shownPosts + 1;
@@ -60,7 +60,13 @@
           if (useCardStyle === 'true') {
             htmlContent = `{% include automated_posts/card.html %}`;
           }
-          htmlContent = htmlContent.replace('AUTOMATED_POST_IMAGE_URL', post.full_picture)
+          if (post.full_picture_override) {
+            var fullPictureUrl = post.full_picture_override;
+          } else {
+            var fullPictureUrl = post.full_picture;
+          }
+
+          htmlContent = htmlContent.replace('AUTOMATED_POST_IMAGE_URL', fullPictureUrl)
             .replace('AUTOMATED_POST_MESSAGE', message)
             .replace('AUTOMATED_POST_LIKE_COUNT', post.like_count)
             .replace('AUTOMATED_POST_COMMENT_COUNT', post.comment_count)

@@ -3,7 +3,8 @@ spec:
   structures:
     - content_blocks
   label: Board Profiles
-  description: Renders board profiles
+  description: Renders a set of board profiles
+  image: /uploads/components/board_profiles.preview.png
   icon: groups
   tags:
     - Board

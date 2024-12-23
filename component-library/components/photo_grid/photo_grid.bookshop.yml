@@ -5,6 +5,7 @@ spec:
   label: Photo Grid
   description: Renders a set of photos in a masonry layout
   icon: image
+  image: /uploads/components/photo_grid.preview.png
   tags:
     - Photos
 

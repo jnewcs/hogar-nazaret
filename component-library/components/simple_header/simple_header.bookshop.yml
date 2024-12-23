@@ -3,7 +3,8 @@ spec:
   structures:
     - content_blocks
   label: Simple Header
-  description: Header with a date subtitle
+  description: Header with an optional date subtitle
+  image: /uploads/components/simple_header.preview.png
   icon: wysiwyg
   tags:
     - Header

@@ -5,6 +5,7 @@ spec:
   label: Split Form Content
   description: Generic text component with option to show form to the right of content
   icon: vertical_split
+  image: /uploads/components/split_form_content.preview.png
   tags:
     - Text
 
