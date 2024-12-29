@@ -26,10 +26,11 @@ preview:
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   title:
-    comment: You can customize the text alignment and color of the title
+    comment: You can customize the text alignment and color
     type: text
     allow_empty: false
   title_color:
+    comment: The default color is `#1B0278`
     type: color
     allow_empty: true
   title_alignment:
