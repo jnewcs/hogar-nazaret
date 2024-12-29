@@ -3,7 +3,7 @@ spec:
   structures:
     - content_blocks
   label: Split Image Content
-  description: Generic text component with option to show image to the left/right of content
+  description: Text component with image to the left OR right of content
   icon: vertical_split
   image: /uploads/components/split_image_content.preview.png
   tags:
@@ -13,7 +13,8 @@ spec:
 blueprint:
   layout: image_right
   content_html: ""
-  image: null
+  image: https://hogarjesusdenazaret.org/uploads/page_header_images/hogar_playground.jpg
+  background_color: white-ter
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -41,3 +42,12 @@ _inputs:
     type: text
     label: Image description
     comment: Adding a description benefits visually impaired users who use screen readers when browsing the site
+  background_color:
+    type: select
+    label: Background color
+    options:
+      values:
+        - white-ter
+        - white
+      allow_create: false
+      allow_empty: false
