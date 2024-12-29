@@ -14,7 +14,12 @@ blueprint:
   highlights:
     - title: Highlight Title #1
       content_html: "<p>Highlight description</p>"
-      show_call_to_action: false
+      show_call_to_action: true
+      call_to_action:
+        text: "Learn more"
+        opens_donate_modal: false
+        url: "https://www.godaddy.com"
+        style: secondary
     - title: Highlight Title #2
       content_html: "<p>Highlight description</p>"
       show_call_to_action: true
@@ -62,6 +67,7 @@ _inputs:
         url:
           type: url
           label: "URL for `call to action` button"
+          allow_empty: true
         style:
           type: select
           label: Button style
