@@ -13,6 +13,8 @@ spec:
 blueprint:
   layout: image_right
   content_html: ""
+  content_alignment: center
+  text_alignment: centered
   image: https://hogarjesusdenazaret.org/uploads/page_header_images/hogar_playground.jpg
   background_color: white-ter
 
@@ -33,6 +35,25 @@ _inputs:
     type: html
     label: Content Text
     allow_empty: false
+  content_alignment:
+    type: select
+    label: Content Alignment
+    options:
+      values:
+        - start
+        - center
+      allow_create: false
+      allow_empty: false
+  text_alignment:
+    type: select
+    label: Text Alignment
+    options:
+      values:
+        - left
+        - centered
+        - right
+      allow_create: false
+      allow_empty: false
   image:
     type: image
     label: Image
