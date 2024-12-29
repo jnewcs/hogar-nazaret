@@ -13,8 +13,8 @@ spec:
 blueprint:
   content_html: ""
   show_container: true
-  text_alignment: centered
-  background_color: white-ter
+  text_alignment: left
+  background_color: white
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
