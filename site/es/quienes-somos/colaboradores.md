@@ -1,6 +1,5 @@
 ---
 title: Colaboradores
-header_layout: simple
 layout: default
 lang: es
 lang_ref: collaborators

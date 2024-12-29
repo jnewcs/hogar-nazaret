@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-layout: page
+layout: default
 lang: en
 lang_ref: contact-us
 redirect_from:
