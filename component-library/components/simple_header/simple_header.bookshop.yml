@@ -15,7 +15,8 @@ blueprint:
   title_alignment: "left"
   show_padding_top: true
   show_padding_bottom: true
-  date: null
+  hide_date: false
+  date: 2024-07-15T12:00:00.000Z
   background_color: "white-ter"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -41,8 +42,16 @@ _inputs:
     type: switch
   show_padding_bottom:
     type: switch
+  hide_date:
+    type: switch
+    label: "Hide the date text?"
+    comment: When toggled, the header will hide date text
+    allow_empty: false
   date:
+    type: datetime
+    comment: "Date to display in readable format (e.g Domingo 12 de junio de 2022)"
     allow_empty: true
+    hidden: hide_date
   background_color:
     type: select
     label: Background color

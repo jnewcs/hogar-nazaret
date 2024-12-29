@@ -10,13 +10,13 @@
       {{ include.title }}
     </h1>
 
-    {% if include.date %}
+    {% unless include.hide_date %}
       <div class="has-text-{{ include.title_alignment }}">
         <date class="post-date">
           <!-- [date_to_string_helper] If we need to change this, make sure we change all occurrences! -->
           {% if env_bookshop_live %}
             {% if page.lang == 'en' %}
-              {% assign months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'] %}
+              {% assign months = "January, February, March, April, May, June, July, August, September, October, November, December" | split: ", " %}
               {% capture i18n_date %}
                 {% assign m = include.date | date: "%-m" | minus: 1 %}
                 {{ months[m] }}
@@ -31,7 +31,7 @@
                 {{ include.date | date: "%Y" }}
               {% endcapture %}
             {% else %}
-              {% assign months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'] %}
+              {% assign months = "enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre" | split: ", " %}
               {% capture i18n_date %}
                 {% assign d = include.date | date: "%-d" %}
                 {{ d }}
@@ -49,7 +49,7 @@
           {% endif %}
         </date>
       </div>
-    {% endif %}
+    {% endunless %}
 
     <!-- Page specific logic -->
     {% if page %}
