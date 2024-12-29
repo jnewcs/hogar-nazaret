@@ -16,6 +16,7 @@ blueprint:
   show_padding_top: true
   show_padding_bottom: true
   hide_date: false
+  title_color: "#1B0278"
   date: 2024-07-15T12:00:00.000Z
   background_color: "white-ter"
 
