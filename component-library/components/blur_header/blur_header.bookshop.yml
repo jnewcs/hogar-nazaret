@@ -12,9 +12,10 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   title: "Page Title"
+  title_alignment: "centered"
+  title_color: "#2E333D"
   image: null
   image_style: cover
-  title_color: "#2E333D"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -22,8 +23,23 @@ preview:
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   title:
-    comment: Centered page title
+    comment: You can customize the text alignment and color
     type: text
+    allow_empty: false
+  title_color:
+    comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
+    type: color
+    allow_empty: true
+  title_alignment:
+    type: select
+    label: Title alignment
+    options:
+      values:
+        - left
+        - centered
+        - right
+      allow_create: false
+      allow_empty: false
   image:
     type: image
   image_alt:
@@ -39,7 +55,3 @@ _inputs:
         - contain
       allow_create: false
       allow_empty: false
-  title_color:
-    comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
-    type: color
-    allow_empty: false

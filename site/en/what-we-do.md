@@ -10,6 +10,7 @@ _schema: schemas/content_blocks_page_en.md
 content_blocks:
   - _bookshop_name: blur_header
     title: Services Reach
+    title_alignment: centered
     image: /uploads/page_header_images/abstract_hands.jpg
     image_style: cover
     title_color: "#2E333D"

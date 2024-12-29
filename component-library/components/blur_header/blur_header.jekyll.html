@@ -7,7 +7,7 @@
 
   {% assign color = include.title_color | default: '#1B0278' %}
   <div
-    class="p-1 has-text-centered"
+    class="p-1 has-text-{{ include.title_alignment }}"
     id="page-hero-title"
     style="color: {{ color }}"
   >

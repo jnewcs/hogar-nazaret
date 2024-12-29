@@ -12,9 +12,11 @@ _schema: schemas/content_blocks_page_en.md
 content_blocks:
   - _bookshop_name: blur_header
     title: The Hogar
+    title_alignment: centered
+    title_color: "#FFFFFF"
     image: /uploads/page_header_images/hogar_playground.jpg
     image_style: cover
-    title_color: white
+
   - _bookshop_name: content
     content_html: >-
       <p>The Hogar Albergue para Niños Jesús de Nazaret, Inc. (Hogar) is a

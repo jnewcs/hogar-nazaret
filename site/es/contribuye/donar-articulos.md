@@ -7,6 +7,7 @@ _schema: "schemas/content_blocks_page_es.md"
 content_blocks:
   - _bookshop_name: blur_header
     title: Dona Artículos
+    title_alignment: centered
     image: "/uploads/page_header_images/color-pencils.jpg"
     image_style: cover
     title_color: "#2E333D"
