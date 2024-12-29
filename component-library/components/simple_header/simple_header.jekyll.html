@@ -6,7 +6,12 @@
     class="container content-container {% if include.show_padding_top == false%}pt-0{% endif %} {% if include.show_padding_bottom == false%}pb-0{% endif %}"
     id="central-title-layout-container"
   >
-    <h1 class="is-size-2 is-uppercase has-text-primary has-text-weight-bold has-text-{{ include.title_alignment }}" id="post-title">
+    {% assign color = include.title_color | default: '#1B0278' %}
+    <h1
+      class="is-size-2 is-uppercase has-text-weight-bold has-text-{{ include.title_alignment }}"
+      id="post-title"
+      style="color: {{ color }}"
+    >
       {{ include.title }}
     </h1>
 
