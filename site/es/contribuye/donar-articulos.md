@@ -9,7 +9,7 @@ content_blocks:
     title: Dona Artículos
     image: "/uploads/page_header_images/color-pencils.jpg"
     image_style: cover
-    title_color: dark
+    title_color: "#2E333D"
 
   - _bookshop_name: content
     show_container: true

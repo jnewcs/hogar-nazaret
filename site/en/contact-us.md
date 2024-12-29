@@ -12,7 +12,7 @@ content_blocks:
     title: Contact Us
     image: /uploads/page_header_images/hogar_playground.jpg
     image_style: cover
-    title_color: white
+    title_color: "#FFFFFF"
   - _bookshop_name: content
     content_html: >-
       <p>The Hogar welcomes you and invites you to join our mission of

@@ -14,7 +14,7 @@ content_blocks:
     title: The Hogar
     image: "/uploads/page_header_images/hogar_playground.jpg"
     image_style: cover
-    title_color: white
+    title_color: "#FFFFFF"
 
   - _bookshop_name: content
     show_container: true

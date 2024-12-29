@@ -9,7 +9,7 @@ content_blocks:
     title: Collaborators
     image: "/uploads/page_header_images/abstract_hands.jpg"
     image_style: cover
-    title_color: dark
+    title_color: "#2E333D"
 
   - _bookshop_name: content
     show_container: true
@@ -198,5 +198,4 @@ content_blocks:
           - Wanda I. Benítez López
           - Wilma Vélez Cuevas
           - Yadira Reyes Merced
-
 ---

@@ -1,5 +1,5 @@
 ---
-title: 'Contactanos '
+title: "Contactanos "
 layout: default
 lang: es
 lang_ref: contact-us
@@ -9,7 +9,7 @@ content_blocks:
     title: Contactanos
     image: /uploads/page_header_images/hogar_playground.jpg
     image_style: cover
-    title_color: white
+    title_color: "#FFFFFF"
   - _bookshop_name: content
     content_html: >-
       <p>El Hogar te da la bienvenida y te exhorta a que te unas a nuestra

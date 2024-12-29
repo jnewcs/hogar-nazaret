@@ -30,7 +30,7 @@ _inputs:
     type: text
     allow_empty: false
   title_color:
-    comment: The default color is `#1B0278`
+    comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
     type: color
     allow_empty: true
   title_alignment:

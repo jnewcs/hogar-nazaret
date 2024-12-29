@@ -9,7 +9,7 @@ content_blocks:
     title: Donate Articles
     image: /uploads/page_header_images/volunteers.jpg
     image_style: cover
-    title_color: white
+    title_color: "#FFFFFF"
   - _bookshop_name: content
     content_html: >-
       <p>Ofrecemos muchas maneras de involucrarte directamente con el Hogar  y

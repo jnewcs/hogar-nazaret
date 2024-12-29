@@ -12,7 +12,7 @@ content_blocks:
     title: Donate Your Time
     image: "/uploads/page_header_images/volunteers.jpg"
     image_style: cover
-    title_color: white
+    title_color: "#FFFFFF"
 
   - _bookshop_name: content
     show_container: true
