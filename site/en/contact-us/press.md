@@ -12,6 +12,7 @@ content_blocks:
     title: Press
     title_alignment: centered
     background_color: white
+    hide_date: true
 
   - _bookshop_name: split_form_content
     content_html: >-
@@ -45,5 +46,4 @@ content_blocks:
           label: "Questions and Comments"
           presence: true
           required: true
-
 ---

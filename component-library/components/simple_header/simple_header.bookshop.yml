@@ -28,6 +28,10 @@ _inputs:
     comment: Title is left aligned
     type: text
     allow_empty: false
+  title_color:
+    comment: Title Color
+    type: color
+    allow_empty: true
   title_alignment:
     type: select
     label: Title alignment

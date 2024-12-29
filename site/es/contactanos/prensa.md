@@ -9,6 +9,7 @@ content_blocks:
     title: Prensa
     title_alignment: centered
     background_color: white
+    hide_date: true
 
   - _bookshop_name: split_form_content
     content_html: >-

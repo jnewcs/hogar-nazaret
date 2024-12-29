@@ -14,7 +14,7 @@ content_blocks:
     items:
       - _bookshop_name: carousel_item
         title: La campaña Compras que Abrazan
-        creation_date: '2023-04-10T12:00:00.000+00:00'
+        creation_date: "2023-04-10T12:00:00.000+00:00"
         layout: split
         content:
           _bookshop_name: content
@@ -44,7 +44,7 @@ content_blocks:
           url: /es/proximos_eventos/la-campa%C3%B1a-compras-que-abrazan
       - _bookshop_name: carousel_item
         title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
-        creation_date: '2023-04-10T12:00:00.000+00:00'
+        creation_date: "2023-04-10T12:00:00.000+00:00"
         layout: split
         content:
           _bookshop_name: content
@@ -69,7 +69,7 @@ content_blocks:
           url: /es/quienes-somos/
       - _bookshop_name: carousel_item
         title: La Salud Mental
-        creation_date: '2023-04-10T12:00:00.000+00:00'
+        creation_date: "2023-04-10T12:00:00.000+00:00"
         layout: split
         content:
           _bookshop_name: content
@@ -97,7 +97,7 @@ content_blocks:
           url: /en/about
       - _bookshop_name: carousel_item
         title: APADRINA A UN NIÑO O NIÑA DEL HOGAR
-        creation_date: '2023-04-10T12:00:00.000+00:00'
+        creation_date: "2023-04-10T12:00:00.000+00:00"
         layout: split
         content:
           _bookshop_name: content
@@ -126,6 +126,7 @@ content_blocks:
     show_padding_top: true
     show_padding_bottom: false
     background_color: white
+    hide_date: true
   - _bookshop_name: content
     content_html: >-
       <p>La operación del Hogar es posible en gran medida gracias a subvenciones
@@ -255,6 +256,7 @@ content_blocks:
     show_padding_top: true
     show_padding_bottom: false
     background_color: white
+    hide_date: true
   - _bookshop_name: facebook_posts_highlights
     show_container: true
     title:
