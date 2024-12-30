@@ -3,8 +3,8 @@
     {{ include.title }}
   </h3>
   {{ include.content_html }}
-  
-  {% if include.show_call_to_action %}
+
+  {% unless include.hide_call_to_action == true %}
     {% assign color = include.call_to_action.text_color | default: '#FFFFFF' %}
     {% assign background_color = include.call_to_action.background_color | default: '#1B0278' %}
     <br />
@@ -26,5 +26,5 @@
         {{ include.call_to_action.text }}
       </a>
     {% endif %}
-  {% endif %}
+  {% endunless %}
 </div>

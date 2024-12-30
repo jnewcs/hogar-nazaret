@@ -66,8 +66,10 @@ content_blocks:
           to boys and girls, from newborn to eleven years of age, who have been
           victims of abuse or neglect, and removed from their homes by the
           Department of Family Services.</p>
+        hide_call_to_action: true
       - title: Vision
         content_html: >-
           <p>To provide a safe home, full of love and care, so that all minors,
           their caregivers, and the support staff feel like a true family.</p>
+        hide_call_to_action: true
 ---

@@ -13,7 +13,7 @@ spec:
 blueprint:
   title: Highlight Title
   content_html: "<p>Highlight description</p>"
-  show_call_to_action: true
+  hide_call_to_action: false
   call_to_action:
     text: "Learn more"
     text_color: "#FFFFFF"
@@ -34,18 +34,23 @@ _inputs:
     type: html
     label: Highlight Text
     allow_empty: false
-  show_call_to_action:
-    type: checkbox
-    label: "Show Call to Action button"
+  hide_call_to_action:
+    type: switch
+    label: "Hide the call to action button?"
+    comment: When toggled, the content highlight will hide the call to action button
     allow_empty: false
   call_to_action:
     type: object
     allow_empty: true
-    hidden: !show_call_to_action
+    hidden: hide_call_to_action
     options:
       text:
         type: text
         label: "Text shown in `call to action` button"
+      background_color:
+        comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
+        type: color
+        allow_empty: true
       text_color:
         comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
         type: color
@@ -56,8 +61,4 @@ _inputs:
       url:
         type: url
         label: "URL for `call to action` button"
-        allow_empty: true
-      background_color:
-        comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
-        type: color
         allow_empty: true

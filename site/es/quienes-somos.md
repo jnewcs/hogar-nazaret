@@ -41,8 +41,10 @@ content_blocks:
       - title: Misión
         content_html: >-
           <p>Ofrecer servicios de albergue, alimentación, transportación, salud, educación, recreación, ayuda social y psicológica, a niños y niñas víctimas de maltrato, desde recién nacidos a once años, referidos por el Departamento de la Familia</p>
+        hide_call_to_action: true
 
       - title: Visión
         content_html: >-
           <p>Proveer un lugar seguro, lleno de cuidados y amor, para que todos los menores y las personas que laboran por el bienestar de ellos se sientan como en una verdadera familia</p>
+        hide_call_to_action: true
 ---
