@@ -1,0 +1,29 @@
+<div class="column">
+  <h3 class="is-size-3 mb-0">
+    {{ include.title }}
+  </h3>
+  {{ include.content_html }}
+  
+  {% if include.show_call_to_action %}
+    {% assign color = include.call_to_action.text_color | default: '#FFFFFF' %}
+    <br />
+    {% if include.call_to_action.opens_donate_modal %}
+      <a
+        class="button modal-opener is-{{ include.call_to_action.style }}"
+        style="color: {{ color }}"
+        data-target="donation-modal"
+        href="#"
+      >
+        {{ include.call_to_action.text }}
+      </a>
+    {% else %}
+      <a
+        class="button is-{{ include.call_to_action.style }}"
+        href="{{ include.call_to_action.url | relative_url }}"
+        style="color: {{ color }}"
+      >
+        {{ include.call_to_action.text }}
+      </a>
+    {% endif %}
+  {% endif %}
+</div>

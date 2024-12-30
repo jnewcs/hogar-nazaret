@@ -1,32 +1,9 @@
-<div class="container content-container">
-  <div class="columns">
-    {% for highlight in include.highlights %}
-      <div class="column">
-        <h3 class="is-size-3 mb-0">
-          {{ highlight.title }}
-        </h3>
-        {{ highlight.content_html }}
-
-        {% if highlight.show_call_to_action %}
-          <br />
-          {% if highlight.call_to_action.opens_donate_modal %}
-            <a
-              class="button modal-opener is-{{ highlight.call_to_action.style }} has-text-white is-medium"
-              data-target="donation-modal"
-              href="#"
-            >
-              {{ highlight.call_to_action.text }}
-            </a>
-          {% else %}
-            <a
-              class="button is-{{ highlight.call_to_action.style }} has-text-white is-medium"
-              href="{{ highlight.call_to_action.url | relative_url }}"
-            >
-              {{ highlight.call_to_action.text }}
-            </a>
-          {% endif %}
-        {% endif %}
-      </div>
-    {% endfor %}
+<div class="has-background-{{ include.background_color }}">
+  <div class="container content-container">
+    <div class="columns">
+      {% for highlight in include.highlights %}
+        {% bookshop content_highlight bind=highlight %}
+      {% endfor %}
+    </div>
   </div>
 </div>

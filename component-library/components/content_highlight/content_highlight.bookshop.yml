@@ -1,0 +1,69 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Content Highlight
+  description: Only use inside a Content Highlights component
+  icon: wysiwyg
+  image: /uploads/components/content_highlight.preview.png
+  tags:
+    - Text
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  title: Highlight Title
+  content_html: "<p>Highlight description</p>"
+  show_call_to_action: true
+  call_to_action:
+    text: "Learn more"
+    text_color: "#FFFFFF"
+    opens_donate_modal: false
+    url: "https://www.godaddy.com"
+    style: secondary
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    type: text
+    label: Highlight Title
+    allow_empty: false
+  content_html:
+    type: html
+    label: Highlight Text
+    allow_empty: false
+  show_call_to_action:
+    type: checkbox
+    label: "Show Call to Action button"
+    allow_empty: false
+  call_to_action:
+    type: object
+    allow_empty: true
+    hidden: !show_call_to_action
+    options:
+      text:
+        type: text
+        label: "Text shown in `call to action` button"
+      text_color:
+        comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
+        type: color
+        allow_empty: true
+      opens_donate_modal:
+        type: checkbox
+        comment: "When checked, clicking on the `call to action` button opens the Donate modal and the `url` attribute is ignored"
+      url:
+        type: url
+        label: "URL for `call to action` button"
+        allow_empty: true
+      style:
+        type: select
+        label: Button style
+        options:
+          values:
+            - primary
+            - secondary
+            - plain
+          allow_create: false
+          allow_empty: false

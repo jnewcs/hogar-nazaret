@@ -11,70 +11,20 @@ spec:
 
 # Defines the structure of this component, as well as the default values
 blueprint:
-  highlights:
-    - title: Highlight Title #1
-      content_html: "<p>Highlight description</p>"
-      show_call_to_action: true
-      call_to_action:
-        text: "Learn more"
-        opens_donate_modal: false
-        url: "https://www.godaddy.com"
-        style: secondary
-    - title: Highlight Title #2
-      content_html: "<p>Highlight description</p>"
-      show_call_to_action: true
-      call_to_action:
-        text: "Call to Action"
-        opens_donate_modal: false
-        url: "https://www.google.com"
-        style: primary
+  background_color: white
+  highlights: [bookshop:content_highlight]
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
 
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
-  highlights:
-    label: Set of highlights
-    type: array
-    allow_empty: false
-  highlights[*]:
-    type: object
-    allow_empty: false
-    title:
-      type: text
-      label: Highlight Title
+  background_color:
+    type: select
+    label: Background color
+    options:
+      values:
+        - white-ter
+        - white
+      allow_create: false
       allow_empty: false
-    content_html:
-      type: html
-      label: Highlight Text
-      allow_empty: false
-    show_call_to_action:
-      type: checkbox
-      label: "Show Call to Action button"
-      allow_empty: false
-    call_to_action:
-      type: object
-      allow_empty: true
-      hidden: !show_call_to_action
-      options:
-        text:
-          type: text
-          label: "Text shown in `call to action` button"
-        opens_donate_modal:
-          type: checkbox
-          comment: "When checked, clicking on the `call to action` button opens the Donate modal and the `url` attribute is ignored"
-        url:
-          type: url
-          label: "URL for `call to action` button"
-          allow_empty: true
-        style:
-          type: select
-          label: Button style
-          options:
-            values:
-              - primary
-              - secondary
-              - plain
-            allow_create: false
-            allow_empty: false
