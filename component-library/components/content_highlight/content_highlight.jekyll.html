@@ -6,11 +6,12 @@
   
   {% if include.show_call_to_action %}
     {% assign color = include.call_to_action.text_color | default: '#FFFFFF' %}
+    {% assign background_color = include.call_to_action.background_color | default: '#1B0278' %}
     <br />
     {% if include.call_to_action.opens_donate_modal %}
       <a
-        class="button modal-opener is-{{ include.call_to_action.style }}"
-        style="color: {{ color }}"
+        class="button modal-opener"
+        style="color: {{ color }}; background-color: {{ background_color }}"
         data-target="donation-modal"
         href="#"
       >
@@ -20,7 +21,7 @@
       <a
         class="button is-{{ include.call_to_action.style }}"
         href="{{ include.call_to_action.url | relative_url }}"
-        style="color: {{ color }}"
+        style="color: {{ color }}; background-color: {{ background_color }}"
       >
         {{ include.call_to_action.text }}
       </a>

@@ -19,7 +19,7 @@ blueprint:
     text_color: "#FFFFFF"
     opens_donate_modal: false
     url: "https://www.godaddy.com"
-    style: primary
+    background_color: "#1B0278"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -57,13 +57,7 @@ _inputs:
         type: url
         label: "URL for `call to action` button"
         allow_empty: true
-      style:
-        type: select
-        label: Button style
-        options:
-          values:
-            - primary
-            - secondary
-            - plain
-          allow_create: false
-          allow_empty: false
+      background_color:
+        comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
+        type: color
+        allow_empty: true
