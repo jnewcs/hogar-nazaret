@@ -1,8 +1,14 @@
 <div class="column">
-  <h3 class="is-size-3 mb-0">
+  {% assign title_color = include.title_color | default: '#2E333D' %}
+  <h3
+    class="is-size-3 mb-0 has-text-{{ include.title_alignment }}"
+    style="color: {{ title_color }}"
+  >
     {{ include.title }}
   </h3>
-  {{ include.content_html }}
+  <div class="has-text-{{ include.text_alignment }}">
+    {{ include.content_html }}
+  </div>
 
   {% unless include.hide_call_to_action == true %}
     {% assign color = include.call_to_action.text_color | default: '#FFFFFF' %}

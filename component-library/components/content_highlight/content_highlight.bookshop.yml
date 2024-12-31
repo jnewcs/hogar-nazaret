@@ -12,7 +12,10 @@ spec:
 # Defines the structure of this component, as well as the default values
 blueprint:
   title: Highlight Title
+  title_color: "#2E333D"
+  title_alignment: "left"
   content_html: "<p>Highlight description</p>"
+  text_alignment: "left"
   hide_call_to_action: false
   call_to_action:
     text: "Learn more"
@@ -30,10 +33,34 @@ _inputs:
     type: text
     label: Highlight Title
     allow_empty: false
+  title_color:
+    comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
+    type: color
+    allow_empty: true
+  title_alignment:
+    type: select
+    label: Title alignment
+    options:
+      values:
+        - left
+        - centered
+        - right
+      allow_create: false
+      allow_empty: false
   content_html:
     type: html
     label: Highlight Text
     allow_empty: false
+  text_alignment:
+    type: select
+    label: Content Alignment
+    options:
+      values:
+        - left
+        - centered
+        - right
+      allow_create: false
+      allow_empty: false
   hide_call_to_action:
     type: switch
     label: "Hide the call to action button?"
