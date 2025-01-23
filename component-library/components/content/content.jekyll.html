@@ -3,6 +3,8 @@
 {% else %}
   {% assign container_class = 'content' %}
 {% endif %}
-<div class="{{ container_class }} editable">
-  {{ include.content_html }}
+<div class="has-background-{{ include.background_color }}">
+  <div class="{{ container_class }} editable has-text-{{ include.text_alignment }}">
+    {{ include.content_html }}
+  </div>
 </div>

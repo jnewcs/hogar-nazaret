@@ -1,6 +1,6 @@
 ---
 title: Contact Us
-layout: page
+layout: default
 lang: en
 lang_ref: contact-us
 redirect_from:
@@ -10,9 +10,10 @@ _schema: schemas/content_blocks_page_en.md
 content_blocks:
   - _bookshop_name: blur_header
     title: Contact Us
+    title_alignment: centered
     image: /uploads/page_header_images/hogar_playground.jpg
     image_style: cover
-    title_color: white
+    title_color: "#FFFFFF"
   - _bookshop_name: content
     content_html: >-
       <p>The Hogar welcomes you and invites you to join our mission of

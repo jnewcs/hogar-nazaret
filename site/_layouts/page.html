@@ -12,7 +12,7 @@ lazy_load: true
   {% elsif page.header_layout == 'image_with_central_title' %}
     {% include page_headers/image_with_central_title.html %}
   {% endif %}
-{% else %}
+{% elsif page.header_layout == 'simple' %}
     {% include page_headers/simple.html %}
 {% endif %}
 

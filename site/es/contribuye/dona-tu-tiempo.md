@@ -7,9 +7,10 @@ _schema: schemas/content_blocks_page_es.md
 content_blocks:
   - _bookshop_name: blur_header
     title: Donate Articles
+    title_alignment: centered
     image: /uploads/page_header_images/volunteers.jpg
     image_style: cover
-    title_color: white
+    title_color: "#FFFFFF"
   - _bookshop_name: content
     content_html: >-
       <p>Ofrecemos muchas maneras de involucrarte directamente con el Hogar  y

@@ -1,43 +1,45 @@
-<div class="container content-container">
-  <section class="is-medium">
-    <div class="pb-2 content page-content">
-      <div class="columns">
-        {% if include.layout == 'image_right' %}
-          <div class="column">
-            <div class="content">
-              {{ include.content_html }}
+<div class="has-background-{{ include.background_color }}">
+  <div class="container content-container">
+    <section class="is-medium">
+      <div class="pb-2 content page-content">
+        <div class="columns is-align-items-{{ include.content_alignment }}">
+          {% if include.layout == 'image_right' %}
+            <div class="column">
+              <div class="content has-text-{{ include.text_alignment }}">
+                {{ include.content_html }}
+              </div>
             </div>
-          </div>
 
-          {% if include.image %}
-            <div class="column is-one-third">
-              <figure class="image">
-                <img
-                  src="{{ include.image | relative_url }}"
-                  alt="{{ include.image_alt }}"
-                >
-              </figure>
+            {% if include.image %}
+              <div class="column is-one-third">
+                <figure class="image">
+                  <img
+                    src="{{ include.image | relative_url }}"
+                    alt="{{ include.image_alt }}"
+                  >
+                </figure>
+              </div>
+            {% endif %}
+          {% else %}
+            {% if include.image %}
+              <div class="column is-one-third">
+                <figure class="image">
+                  <img
+                    src="{{ include.image | relative_url }}"
+                    alt="{{ include.image_alt }}"
+                  >
+                </figure>
+              </div>
+            {% endif %}
+
+            <div class="column">
+              <div class="content has-text-{{ include.text_alignment }}">
+                {{ include.content_html }}
+              </div>
             </div>
           {% endif %}
-        {% else %}
-          {% if include.image %}
-            <div class="column is-one-third">
-              <figure class="image">
-                <img
-                  src="{{ include.image | relative_url }}"
-                  alt="{{ include.image_alt }}"
-                >
-              </figure>
-            </div>
-          {% endif %}
-
-          <div class="column">
-            <div class="content">
-              {{ include.content_html }}
-            </div>
-          </div>
-        {% endif %}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </div>

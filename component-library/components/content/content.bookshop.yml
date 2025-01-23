@@ -13,6 +13,8 @@ spec:
 blueprint:
   content_html: ""
   show_container: true
+  text_alignment: left
+  background_color: white
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
 preview:
@@ -27,3 +29,22 @@ _inputs:
   show_container:
     type: checkbox
     comment: When toggled on, default padding appears around the content
+  text_alignment:
+    type: select
+    label: Text Alignment
+    options:
+      values:
+        - left
+        - centered
+        - right
+      allow_create: false
+      allow_empty: false
+  background_color:
+    type: select
+    label: Background color
+    options:
+      values:
+        - white-ter
+        - white
+      allow_create: false
+      allow_empty: false

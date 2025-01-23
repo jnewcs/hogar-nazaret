@@ -21,7 +21,40 @@
 
           <h3 class="is-size-3">
             <date class="post-date has-text-centered">
-              {% include date_to_string_helper.html date=include.date use_year=true %}
+              <!-- [date_to_string_helper] If we need to change this, make sure we change all occurrences! -->
+              {% if env_bookshop_live %}
+                {% if page.lang == 'en' %}
+                  {% assign months = "January, February, March, April, May, June, July, August, September, October, November, December" | split: ", " %}
+                  {% capture i18n_date %}
+                    {% assign m = include.date | date: "%-m" | minus: 1 %}
+                    {{ months[m] }}
+                    {% assign d = include.date | date: "%-d" %}
+                    {% case d %}
+                    {% when '1' or '21' or '31' %}{{ d }}st,
+                    {% when '2' or '22' %}{{ d }}nd,
+                    {% when '3' or '23' %}{{ d }}rd,
+                    {% else %}{{ d }}th
+                    {% endcase %}
+                    {{ ', ' }}
+                    {{ include.date | date: "%Y" }}
+                  {% endcapture %}
+                {% else %}
+                  {% assign months = "enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre" | split: ", " %}
+                  {% capture i18n_date %}
+                    {% assign d = include.date | date: "%-d" %}
+                    {{ d }}
+                    {{ ' de ' }}
+                    {% assign m = include.date | date: "%-m" | minus: 1 %}
+                    {{ months[m] }}
+                    {{ ' de ' }}
+                    {{ include.date | date: "%Y" }}
+                  {% endcapture %}
+                {% endif %}
+
+                {{ i18n_date }}
+              {% else %}
+                {% include date_to_string_helper.html date=include.date use_year=true %}
+              {% endif %}
             </date>
           </h3>
         {% endunless %}

@@ -10,9 +10,10 @@ _schema: schemas/content_blocks_page_es.md
 content_blocks:
   - _bookshop_name: blur_header
     title: Alcance
+    title_alignment: centered
     image: /uploads/page_header_images/abstract_hands.jpg
     image_style: cover
-    title_color: dark
+    title_color: "#2E333D"
   - _bookshop_name: content
     content_html: >-
       <p>El Hogar Albergue Jesús de Nazaret Inc. (Hogar) es un hogar para niños

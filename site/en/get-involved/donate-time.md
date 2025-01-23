@@ -10,9 +10,10 @@ _schema: "schemas/content_blocks_page_en.md"
 content_blocks:
   - _bookshop_name: blur_header
     title: Donate Your Time
+    title_alignment: centered
     image: "/uploads/page_header_images/volunteers.jpg"
     image_style: cover
-    title_color: white
+    title_color: "#FFFFFF"
 
   - _bookshop_name: content
     show_container: true

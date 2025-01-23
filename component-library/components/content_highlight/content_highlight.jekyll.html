@@ -1,0 +1,39 @@
+<div class="column">
+  {% assign title_color = include.title_color | default: '#2E333D' %}
+  <h3
+    class="is-size-3 mb-0 has-text-{{ include.title_alignment }}"
+    style="color: {{ title_color }}"
+  >
+    {{ include.title }}
+  </h3>
+  <div class="has-text-{{ include.text_alignment }}">
+    {{ include.content_html }}
+  </div>
+
+  {% unless include.hide_call_to_action == true %}
+    {% assign color = include.call_to_action.text_color | default: '#FFFFFF' %}
+    {% assign background_color = include.call_to_action.background_color | default: '#1B0278' %}
+    <br />
+
+    <div class="has-text-{{ include.text_alignment }}">
+      {% if include.call_to_action.opens_donate_modal %}
+        <a
+          class="button modal-opener"
+          style="color: {{ color }}; background-color: {{ background_color }}"
+          data-target="donation-modal"
+          href="#"
+        >
+          {{ include.call_to_action.text }}
+        </a>
+      {% else %}
+        <a
+          class="button is-{{ include.call_to_action.style }}"
+          href="{{ include.call_to_action.url | relative_url }}"
+          style="color: {{ color }}; background-color: {{ background_color }}"
+        >
+          {{ include.call_to_action.text }}
+        </a>
+      {% endif %}
+    </div>
+  {% endunless %}
+</div>

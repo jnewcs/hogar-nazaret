@@ -5,7 +5,12 @@
     style="background: url('{{ include.image | relative_url }}') center center; background-size: {{ include.image_style }}; background-repeat: no-repeat">
   </div>
 
-  <div class="p-1 has-text-{{ include.title_color }} has-text-centered" id="page-hero-title">
+  {% assign color = include.title_color | default: '#1B0278' %}
+  <div
+    class="p-1 has-text-{{ include.title_alignment }}"
+    id="page-hero-title"
+    style="color: {{ color }}"
+  >
     <h1 class="is-size-1 has-text-weight-bold">
       {{ include.title }}
     </h1>

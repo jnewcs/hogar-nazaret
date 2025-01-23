@@ -14,7 +14,7 @@ content_blocks:
     items:
       - _bookshop_name: carousel_item
         title: WELCOME TO THE HOGAR ALBERGUE PARA NIÑOS JESÚS DE NAZARET!
-        creation_date: '2023-04-10T12:00:00.000+00:00'
+        creation_date: "2023-04-10T12:00:00.000+00:00"
         layout: split
         content:
           _bookshop_name: content
@@ -39,7 +39,7 @@ content_blocks:
           url: /en/about
       - _bookshop_name: carousel_item
         title: Join Us in Fighting Child Abuse
-        creation_date: '2023-04-10T12:00:00.000+00:00'
+        creation_date: "2023-04-10T12:00:00.000+00:00"
         layout: split
         content:
           _bookshop_name: content
@@ -69,6 +69,7 @@ content_blocks:
     show_padding_top: true
     show_padding_bottom: false
     background_color: white
+    hide_date: true
   - _bookshop_name: content
     content_html: >-
       <p>The operation of our shelter home for children (the Hogar) is greatly
@@ -198,6 +199,7 @@ content_blocks:
     show_padding_top: true
     show_padding_bottom: false
     background_color: white
+    hide_date: true
   - _bookshop_name: facebook_posts_highlights
     show_container: true
     title:

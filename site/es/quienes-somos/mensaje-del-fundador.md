@@ -8,6 +8,7 @@ content_blocks:
   - _bookshop_name: simple_header
     title: Mensaje de los Fundadores
     title_alignment: centered
+    hide_date: true
 
   - _bookshop_name: split_image_content
     layout: image_left

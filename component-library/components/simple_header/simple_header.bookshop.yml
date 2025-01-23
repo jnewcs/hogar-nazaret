@@ -15,7 +15,9 @@ blueprint:
   title_alignment: "left"
   show_padding_top: true
   show_padding_bottom: true
-  date: null
+  hide_date: false
+  title_color: "#1B0278"
+  date: 2024-07-15T12:00:00.000Z
   background_color: "white-ter"
 
 # Overrides any fields in the blueprint when viewing this component in the component browser
@@ -24,9 +26,13 @@ preview:
 # Any extra CloudCannon inputs configuration to apply to the blueprint
 _inputs:
   title:
-    comment: Title is left aligned
+    comment: You can customize the text alignment and color
     type: text
     allow_empty: false
+  title_color:
+    comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
+    type: color
+    allow_empty: true
   title_alignment:
     type: select
     label: Title alignment
@@ -41,8 +47,16 @@ _inputs:
     type: switch
   show_padding_bottom:
     type: switch
+  hide_date:
+    type: switch
+    label: "Hide the date text?"
+    comment: When toggled, the header will hide date text
+    allow_empty: false
   date:
+    type: datetime
+    comment: "Date to display in readable format (e.g Domingo 12 de junio de 2022)"
     allow_empty: true
+    hidden: hide_date
   background_color:
     type: select
     label: Background color

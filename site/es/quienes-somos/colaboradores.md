@@ -1,15 +1,15 @@
 ---
 title: Colaboradores
-header_layout: simple
 layout: default
 lang: es
 lang_ref: collaborators
 content_blocks:
   - _bookshop_name: blur_header
     title: Colaboradores
+    title_alignment: centered
     image: "/uploads/page_header_images/abstract_hands.jpg"
     image_style: cover
-    title_color: dark
+    title_color: "#2E333D"
 
   - _bookshop_name: content
     show_container: true

@@ -1,0 +1,91 @@
+# Metadata about this component, to be used in the CMS
+spec:
+  structures:
+    - content_blocks
+  label: Content Highlight
+  description: Only use inside a Content Highlights component
+  icon: wysiwyg
+  image: /uploads/components/content_highlight.preview.png
+  tags:
+    - Text
+
+# Defines the structure of this component, as well as the default values
+blueprint:
+  title: Highlight Title
+  title_color: "#2E333D"
+  title_alignment: "left"
+  content_html: "<p>Highlight description</p>"
+  text_alignment: "left"
+  hide_call_to_action: false
+  call_to_action:
+    text: "Learn more"
+    text_color: "#FFFFFF"
+    opens_donate_modal: false
+    url: "https://www.godaddy.com"
+    background_color: "#1B0278"
+
+# Overrides any fields in the blueprint when viewing this component in the component browser
+preview:
+
+# Any extra CloudCannon inputs configuration to apply to the blueprint
+_inputs:
+  title:
+    type: text
+    label: Highlight Title
+    allow_empty: false
+  title_color:
+    comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
+    type: color
+    allow_empty: true
+  title_alignment:
+    type: select
+    label: Title alignment
+    options:
+      values:
+        - left
+        - centered
+        - right
+      allow_create: false
+      allow_empty: false
+  content_html:
+    type: html
+    label: Highlight Text
+    allow_empty: false
+  text_alignment:
+    type: select
+    label: Content Alignment
+    options:
+      values:
+        - left
+        - centered
+        - right
+      allow_create: false
+      allow_empty: false
+  hide_call_to_action:
+    type: switch
+    label: "Hide the call to action button?"
+    comment: When toggled, the content highlight will hide the call to action button
+    allow_empty: false
+  call_to_action:
+    type: object
+    allow_empty: true
+    hidden: hide_call_to_action
+    options:
+      text:
+        type: text
+        label: "Text shown in `call to action` button"
+      background_color:
+        comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
+        type: color
+        allow_empty: true
+      text_color:
+        comment: The default purple color is `#1B0278`. A soft black is `#2E333D`. White is `#FFFFFF`
+        type: color
+        allow_empty: true
+      opens_donate_modal:
+        type: checkbox
+        comment: "When checked, clicking on the `call to action` button opens the Donate modal and the `url` attribute is ignored"
+      url:
+        type: url
+        label: "URL for `call to action` button"
+        allow_empty: true

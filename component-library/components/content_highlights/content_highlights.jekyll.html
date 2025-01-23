@@ -1,12 +1,9 @@
-<div class="container content-container">
-  <div class="columns">
-    {% for highlight in include.highlights %}
-      <div class="column">
-        <h3 class="is-size-3 mb-0">
-          {{ highlight.title }}
-        </h3>
-        {{ highlight.content_html }}
-      </div>
-    {% endfor %}
+<div class="has-background-{{ include.background_color }}">
+  <div class="container content-container">
+    <div class="columns">
+      {% for highlight in include.highlights %}
+        {% bookshop content_highlight bind=highlight %}
+      {% endfor %}
+    </div>
   </div>
 </div>

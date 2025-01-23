@@ -6,17 +6,55 @@
     class="container content-container {% if include.show_padding_top == false%}pt-0{% endif %} {% if include.show_padding_bottom == false%}pb-0{% endif %}"
     id="central-title-layout-container"
   >
-    <h1 class="is-size-2 is-uppercase has-text-primary has-text-weight-bold has-text-{{ include.title_alignment }}" id="post-title">
+    {% assign color = include.title_color | default: '#1B0278' %}
+    <h1
+      class="is-size-2 is-uppercase has-text-weight-bold has-text-{{ include.title_alignment }}"
+      id="post-title"
+      style="color: {{ color }}"
+    >
       {{ include.title }}
     </h1>
 
-    {% if include.date %}
+    {% unless include.hide_date %}
       <div class="has-text-{{ include.title_alignment }}">
         <date class="post-date">
-          {% include date_to_string_helper.html date=include.date use_year=true %}
+          <!-- [date_to_string_helper] If we need to change this, make sure we change all occurrences! -->
+          {% if env_bookshop_live %}
+            {% if page.lang == 'en' %}
+              {% assign months = "January, February, March, April, May, June, July, August, September, October, November, December" | split: ", " %}
+              {% capture i18n_date %}
+                {% assign m = include.date | date: "%-m" | minus: 1 %}
+                {{ months[m] }}
+                {% assign d = include.date | date: "%-d" %}
+                {% case d %}
+                {% when '1' or '21' or '31' %}{{ d }}st,
+                {% when '2' or '22' %}{{ d }}nd,
+                {% when '3' or '23' %}{{ d }}rd,
+                {% else %}{{ d }}th
+                {% endcase %}
+                {{ ', ' }}
+                {{ include.date | date: "%Y" }}
+              {% endcapture %}
+            {% else %}
+              {% assign months = "enero, febrero, marzo, abril, mayo, junio, julio, agosto, septiembre, octubre, noviembre, diciembre" | split: ", " %}
+              {% capture i18n_date %}
+                {% assign d = include.date | date: "%-d" %}
+                {{ d }}
+                {{ ' de ' }}
+                {% assign m = include.date | date: "%-m" | minus: 1 %}
+                {{ months[m] }}
+                {{ ' de ' }}
+                {{ include.date | date: "%Y" }}
+              {% endcapture %}
+            {% endif %}
+
+            {{ i18n_date }}
+          {% else %}
+            {% include date_to_string_helper.html date=include.date use_year=true %}
+          {% endif %}
         </date>
       </div>
-    {% endif %}
+    {% endunless %}
 
     <!-- Page specific logic -->
     {% if page %}
