@@ -315,6 +315,7 @@ collections_config:
       base: none
       include:
         - menus.yml
+        - information.yml
 
 collection_groups:
   - heading: "Spanish Website"

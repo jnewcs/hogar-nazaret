@@ -13,6 +13,7 @@ $black-bis: hsl(221, 14%, 9%) !default
 $grey-dark: hsl(221, 14%, 29%) !default
 // The container horizontal gap, which acts as the offset for breakpoints
 $gap: 32px !default
+$notification-radius: 0px
 
 // 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
 $tablet: 769px !default
@@ -21,4 +22,4 @@ $tablet: 769px !default
 $desktop: 960px + 2 * $gap !default
 
 /*! bulma.io v1.0.1 | MIT License | github.com/jgthms/bulma */
-@use "bulmav101" with ($primary: $primary,$footer-padding: 3rem 1.5rem,$tabs-toggle-link-active-background-color: $primary,$tabs-toggle-link-active-border-color: $primary,$modal-content-spacing-mobile: 80px,$progress-value-background-color: $secondary,$notification-padding: 0.75rem,$modal-z: 100,$modal-content-width: 75%,$red: $red,$white: $white,$white-ter: $white-ter,$white-bis: $white-bis,$black-bis: $black-bis,$grey-dark: $grey-dark,$gap: $gap,$tablet: $tablet, $desktop: $desktop)
+@use "bulmav101" with ($primary: $primary,$footer-padding: 3rem 1.5rem,$tabs-toggle-link-active-background-color: $primary,$tabs-toggle-link-active-border-color: $primary,$modal-content-spacing-mobile: 80px,$progress-value-background-color: $secondary,$notification-padding: 0.75rem,$modal-z: 100,$modal-content-width: 75%,$red: $red,$white: $white,$white-ter: $white-ter,$white-bis: $white-bis,$black-bis: $black-bis,$grey-dark: $grey-dark,$gap: $gap,$tablet: $tablet, $desktop: $desktop, $notification-radius: $notification-radius)

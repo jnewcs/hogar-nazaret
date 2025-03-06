@@ -9,8 +9,8 @@ content_blocks:
     title: Board of Directors
     date: '2020-07-15T12:00:00.000Z'
     time: 10 AM - 2 PM
-    image: /uploads/board_of_directors/board-2023.jpg
-    image_alt: Board of Directors - 2023
+    image:
+    image_alt:
     image_height: 400
     hide_call_to_action: true
     call_to_action:
