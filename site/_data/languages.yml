@@ -161,6 +161,9 @@ en:
       '3': My brothers
       '4': My sisters
       '5': The children of the Hogar
+  footer:
+    nonprofit_status: "The Hogar Albergue para Niños Jesús de Nazaret is a 501c3 nonprofit organization, and your donation is tax-deductible"
+    ein: "Our Employer Identification Number (EIN) is 66-0476875"
 es:
   page: Página
   language: Idioma
@@ -327,3 +330,6 @@ es:
       '3': Mis hermanos
       '4': Mis hermanas
       '5': Los niños del Hogar
+  footer:
+    nonprofit_status: "El Hogar Albergue para Niños Jesús de Nazaret es una organización sin fines de lucro 501c3, por lo tanto, su donativo es deducible de impuestos"
+    ein: "Nuestro número de identificación del empleador (EIN) es 66-0476875"

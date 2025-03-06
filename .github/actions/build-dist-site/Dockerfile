@@ -1,15 +1,15 @@
-# Our Docker image will be based on ruby:2-slim
+# Our Docker image will be based on ruby:3-slim
 # it is a very light docker image.
 
-FROM ruby:2-slim
+FROM ruby:3-slim
 LABEL author="John Newcomb"
 LABEL version="1.0.0"
 
 
 # Lets install all dependencies
-# including git and Bundler 2.2.30
+# including git and Bundler 2.6.5
 
-ENV BUNDLER_VERSION 2.2.30
+ENV BUNDLER_VERSION 2.6.5
 
 RUN apt-get update && \
 
@@ -31,7 +31,7 @@ RUN apt-get update && \
 
     git-all \
 
-    && gem install bundler:2.2.30 \
+    && gem install bundler:2.6.5 \
 
     && bundle config --global silence_root_warning 1
 

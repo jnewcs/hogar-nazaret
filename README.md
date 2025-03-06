@@ -26,7 +26,7 @@ Before you can build the site locally, you need a few things setup:
 3. Ruby installed
     - Jekyll requires a Ruby version installed and the Jekyll developer site has [great documentation to install Ruby on your computer](https://jekyllrb.com/docs/installation/) for various operating systems.
     - If you can run `ruby -v` and see a valid result, you have a version of Ruby installed on your computer and you should be able to proceed with the rest of the setup.
-    - Jekyll needs Ruby 2.5 or higher, so you might have to install a higher version of Ruby to begin.
+    - Jekyll needs Ruby 2.7 or higher, so you might have to install a higher version of Ruby to begin.
     - As a heads up, you will probably need `sudo` access to install Ruby.
 
 4. Jekyll installed
