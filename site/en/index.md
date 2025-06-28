@@ -14,7 +14,7 @@ content_blocks:
     items:
       - _bookshop_name: carousel_item
         title: WELCOME TO THE HOGAR ALBERGUE PARA NIÑOS JESÚS DE NAZARET!
-        creation_date: "2023-04-10T12:00:00.000+00:00"
+        creation_date: 2023-04-10 12:00:00
         layout: split
         content:
           _bookshop_name: content
@@ -25,7 +25,9 @@ content_blocks:
             abuse or neglect. We provide for all their needs with lots of
             LOVE</p>
           show_container: true
-        image: /uploads/carousel_highlights/kids_circle.jpg
+          text_alignment: left
+          background_color: white
+        image: /uploads/page_header_images/hogar_playground.jpg
         image_custom_dimensions: false
         image_width: 100
         image_height: 25
@@ -39,7 +41,7 @@ content_blocks:
           url: /en/about
       - _bookshop_name: carousel_item
         title: Join Us in Fighting Child Abuse
-        creation_date: "2023-04-10T12:00:00.000+00:00"
+        creation_date: '2023-04-10T12:00:00.000+00:00'
         layout: split
         content:
           _bookshop_name: content
@@ -51,6 +53,8 @@ content_blocks:
             invite you to support our mission by donating your time, services or
             funds!</p>
           show_container: true
+          text_alignment: left
+          background_color: white
         image: /uploads/carousel_highlights/child_prevention_month.jpg
         image_custom_dimensions: false
         image_width: 100
@@ -68,8 +72,10 @@ content_blocks:
     title_alignment: centered
     show_padding_top: true
     show_padding_bottom: false
-    background_color: white
     hide_date: true
+    title_color: '#1B0278'
+    date: '2024-07-15T12:00:00.000Z'
+    background_color: white
   - _bookshop_name: content
     content_html: >-
       <p>The operation of our shelter home for children (the Hogar) is greatly
@@ -79,6 +85,8 @@ content_blocks:
       individuals and families that are committed to help El Hogar continue its
       work and make a difference in the lives of its children.</p>
     show_container: true
+    text_alignment: left
+    background_color: white
   - _bookshop_name: tiles
     tiles:
       - _bookshop_name: tile
@@ -96,6 +104,8 @@ content_blocks:
                 <p>We offer many ways for you to get involved with the Hogar and
                 see first-hand the results of your efforts and dedication.</p>
               show_container: false
+              text_alignment: left
+              background_color: white
             call_to_action:
               text: See How
               url: /en/get-involved/donate-time
@@ -111,6 +121,8 @@ content_blocks:
                 the delivery of your donations, contact us by phone at <a
                 href="tel:7878316161">(787) 831-6161</a>.</p>
               show_container: false
+              text_alignment: left
+              background_color: white
             call_to_action:
               text: Tile Button
               url: https://www.google.com
@@ -125,6 +137,8 @@ content_blocks:
             the costs of the services we provide to our children while they
             reside at the Hogar.</p>
           show_container: false
+          text_alignment: left
+          background_color: white
         call_to_action:
           text: Learn More
           url: en/get-involved
@@ -148,6 +162,8 @@ content_blocks:
               <div class="play-button"></div>
             </div>
           show_container: false
+          text_alignment: left
+          background_color: white
         call_to_action:
           text: Read More
           url: en/what-we-do/child-abuse-education-and-prevention
@@ -171,6 +187,8 @@ content_blocks:
                 businesses, and residents of the City of Mayagüez and
                 surrounding towns.</p>
               show_container: false
+              text_alignment: left
+              background_color: white
             call_to_action:
               text: See How
               url: en/about/collaborators
@@ -187,6 +205,8 @@ content_blocks:
                 who have been victims of abuse or neglect for over twenty
                 years.</p>
               show_container: false
+              text_alignment: left
+              background_color: white
             call_to_action:
               text: Learn More
               url: en/about/milestones
@@ -198,8 +218,10 @@ content_blocks:
     title_alignment: centered
     show_padding_top: true
     show_padding_bottom: false
-    background_color: white
     hide_date: true
+    title_color: '#1B0278'
+    date: '2024-07-15T12:00:00.000Z'
+    background_color: white
   - _bookshop_name: facebook_posts_highlights
     show_container: true
     title:

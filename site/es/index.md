@@ -14,7 +14,7 @@ content_blocks:
     items:
       - _bookshop_name: carousel_item
         title: La campaña Compras que Abrazan
-        creation_date: "2023-04-10T12:00:00.000+00:00"
+        creation_date: 2023-04-10 12:00:00
         layout: split
         content:
           _bookshop_name: content
@@ -30,6 +30,8 @@ content_blocks:
             de fondos recaudados por las
             marcas.</span></span></span></span></span></span>​​</div>
           show_container: false
+          text_alignment: left
+          background_color: white
         image: /uploads/r-jpeg.jpg
         image_custom_dimensions: false
         image_width: 100
@@ -44,7 +46,7 @@ content_blocks:
           url: /es/proximos_eventos/la-campa%C3%B1a-compras-que-abrazan
       - _bookshop_name: carousel_item
         title: ¡BIENVENIDOS AL HOGAR ALBERGUE JESÚS DE NAZARET!
-        creation_date: "2023-04-10T12:00:00.000+00:00"
+        creation_date: 2023-04-10 12:00:00
         layout: split
         content:
           _bookshop_name: content
@@ -55,7 +57,9 @@ content_blocks:
             maltrato. Ante todo, en nuestro Hogar los niños reciben mucho
             AMOR.</p>
           show_container: true
-        image: /uploads/carousel_highlights/kids_circle.jpg
+          text_alignment: left
+          background_color: white
+        image: /uploads/page_header_images/hogar_playground.jpg
         image_custom_dimensions: false
         image_width: 100
         image_height: 25
@@ -69,7 +73,7 @@ content_blocks:
           url: /es/quienes-somos/
       - _bookshop_name: carousel_item
         title: La Salud Mental
-        creation_date: "2023-04-10T12:00:00.000+00:00"
+        creation_date: '2023-04-10T12:00:00.000+00:00'
         layout: split
         content:
           _bookshop_name: content
@@ -83,6 +87,8 @@ content_blocks:
             la salud mental si necesita hablar o recibir
             orientación.</p><p>#mentalhealthawareness2023</p>
           show_container: false
+          text_alignment: left
+          background_color: white
         image: /uploads/salud-mental.png
         image_custom_dimensions: false
         image_width: 100
@@ -97,7 +103,7 @@ content_blocks:
           url: /en/about
       - _bookshop_name: carousel_item
         title: APADRINA A UN NIÑO O NIÑA DEL HOGAR
-        creation_date: "2023-04-10T12:00:00.000+00:00"
+        creation_date: '2023-04-10T12:00:00.000+00:00'
         layout: split
         content:
           _bookshop_name: content
@@ -108,6 +114,8 @@ content_blocks:
             que han sido víctimas de maltrato. ¡Únete a nuestra familia de
             Padrinos!</p>
           show_container: true
+          text_alignment: left
+          background_color: white
         image: /uploads/carousel_highlights/two_girls.jpg
         image_custom_dimensions: false
         image_width: 100
@@ -125,8 +133,10 @@ content_blocks:
     title_alignment: centered
     show_padding_top: true
     show_padding_bottom: false
-    background_color: white
     hide_date: true
+    title_color: '#1B0278'
+    date: '2024-07-15T12:00:00.000Z'
+    background_color: white
   - _bookshop_name: content
     content_html: >-
       <p>La operación del Hogar es posible en gran medida gracias a subvenciones
@@ -136,6 +146,8 @@ content_blocks:
       como tú que se comprometen a ayudarnos a continuar nuestra labor y hacer
       la diferencia en la vida de nuestros niños.</p>
     show_container: true
+    text_alignment: left
+    background_color: white
   - _bookshop_name: tiles
     tiles:
       - _bookshop_name: tile
@@ -153,6 +165,8 @@ content_blocks:
                 <p>Ofrecemos muchas maneras de involucrarte directamente con el
                 Hogar y ver los frutos de tu trabajo y dedicación.</p>
               show_container: false
+              text_alignment: left
+              background_color: white
             call_to_action:
               text: Ver Cómo
               url: /es/contribuye/dona-tu-tiempo
@@ -168,6 +182,8 @@ content_blocks:
                 coordinar la entrega de los artículos, llámanos al <a
                 href="tel:7878316161">(787) 831-6161</a>.</p>
               show_container: false
+              text_alignment: left
+              background_color: white
             call_to_action:
               text: Tile Button
               url: https://www.google.com
@@ -182,6 +198,8 @@ content_blocks:
             sufragar los costos de  los servicios que damos a los niños durante
             su estadía en el Hogar.</p>
           show_container: false
+          text_alignment: left
+          background_color: white
         call_to_action:
           text: Aprender Más
           url: es/contribuye/
@@ -206,6 +224,8 @@ content_blocks:
               <div class="play-button"></div>
             </div>
           show_container: false
+          text_alignment: left
+          background_color: white
         call_to_action:
           text: Leer Más
           url: es/que-hacemos/educacion-y-prevencion-del-maltrato-de-menores
@@ -228,6 +248,8 @@ content_blocks:
                 subvenciones, trabajo voluntario y donaciones de artículos
                 apoyan nuestra misión.</p>
               show_container: false
+              text_alignment: left
+              background_color: white
             call_to_action:
               text: Ver Cómo
               url: es/quienes-somos/colaboradores
@@ -244,6 +266,8 @@ content_blocks:
                 y niñas de Puerto Rico que han sido víctimas de negligencia o
                 maltrato.</p>
               show_container: false
+              text_alignment: left
+              background_color: white
             call_to_action:
               text: Aprender Más
               url: es/quienes-somos/historia
@@ -255,8 +279,10 @@ content_blocks:
     title_alignment: centered
     show_padding_top: true
     show_padding_bottom: false
-    background_color: white
     hide_date: true
+    title_color: '#1B0278'
+    date: '2024-07-15T12:00:00.000Z'
+    background_color: white
   - _bookshop_name: facebook_posts_highlights
     show_container: true
     title:
