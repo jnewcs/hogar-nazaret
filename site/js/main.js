@@ -55,13 +55,13 @@ document.addEventListener('DOMContentLoaded', function () {
           });
         }
       });
-  
+
       // On mobile, we need to manually adjust the height
       var indexChangedHandler = function (_info, _eventName) {
         highlightCarousel.updateSliderHeight()
       }
       highlightCarousel.events.on('indexChanged', indexChangedHandler);
-  
+
       var autoplayButton = document.getElementById('autoplay-button');
       if (highlightCarousel && autoplayButton) {
         // Manually setup autoplay for main highlight carousel
@@ -69,12 +69,12 @@ document.addEventListener('DOMContentLoaded', function () {
           clearInterval(interval);
           autoplayButton.dataset.action = 'start';
         };
-  
+
         var interval;
         var setAutoPlay = function() {
           interval = setInterval(function () {
             highlightCarousel.goTo('next');
-  
+
             var info = highlightCarousel.getInfo();
             if (info.slideCount === info.displayIndex) {
               // This is the last slide, turn off autoplay
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
           }, 10000);
         };
         setAutoPlay();
-  
+
         autoplayButton.addEventListener('click', function () {
           var currentAction = autoplayButton.dataset.action;
           if (currentAction === 'stop') {
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function () {
             autoplayButton.dataset.action = 'stop';
           }
         });
-  
+
         document.addEventListener('keydown', function (event) {
           if (event.keyCode === 37) {
             turnOffAutoPlay();

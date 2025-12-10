@@ -44,7 +44,7 @@ en:
         'Retry' to return to the donation screen and try again.
       ath_canceled_error_msg: The ATH Móvil session was cancelled
       ath_need_help:
-        title: Need Help?
+        title: Need Help with ATH Móvil?
         disclaimer: "** The Hogar Albergue para Niños Jesús de Nazaret's formal name on ATH Móvil is: <b>HogarJesusdeNazaret</b> **"
         first_step: After clicking on the pay button, you'll be asked to provide your ATH Móvil account phone number or email
         push_notification: If you have the ATH Móvil mobile app, you will then receive a push notification with a prompt to complete the donation
@@ -53,6 +53,8 @@ en:
         within_24_hours: "Within 24 hours, you will also receive an email from <a href='mailto:info@hogarjesusdenazaret.org'>info@hogarjesusdenazaret.org</a> to confirm your donation"
         concerns: "If you have any concerns or questions, please do not hesitate to reach out to us on <a href='https://www.facebook.com/HogarANJN' target='_blank'>Facebook</a> or send us an email at <a href='mailto:comunicaciones@hogarjesusdenazaret.org'>comunicaciones@hogarjesusdenazaret.org</a>"
       generic_cancel_error_msg: The payment was cancelled
+      select_payment_method: Select your payment method
+      or: or
   email: Email
   office: Office
   fax: Fax
@@ -210,7 +212,7 @@ es:
         e inténtelo otra vez.
       ath_canceled_error_msg: La sesión de ATH Móvil fue cancelada
       ath_need_help:
-        title: ¿Necesita ayuda?
+        title: ¿Necesita ayuda con ATH Móvil?
         disclaimer: "**El nombre oficial del Hogar Albergue Jesús de Nazaret para utilizar ATH Móvil es: <b>HogarJesusdeNazaret</b> **"
         first_step: Después de hacer clic en el botón de pago, se le pedirá dar el número de teléfono o correo electrónico de su ATH Móvil
         push_notification: Si tiene la aplicación de ATH Móvil en su teléfono, se le pedirá que complete su donativo
@@ -219,6 +221,8 @@ es:
         within_24_hours: "Dentro de las próximas 24 horas recibirá un mensaje en su correo electrónico de <a href='mailto:info@hogarjesusdenazaret.org'>info@hogarjesusdenazaret.org</a> que confirma su pago"
         concerns: "Si tiene alguna pregunta al respecto, por favor, comuníquese con nosotros en <a href='https://www.facebook.com/HogarANJN' target='_blank'>Facebook</a> o por correo electrónico en <a href='mailto:comunicaciones@hogarjesusdenazaret.org'>comunicaciones@hogarjesusdenazaret.org</a>"
       generic_cancel_error_msg: El pago fue cancelado
+      select_payment_method: Selecciona tu método de pago
+      or: o
   email: Email
   office: Oficina
   fax: Fax

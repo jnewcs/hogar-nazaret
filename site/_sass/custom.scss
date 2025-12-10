@@ -562,6 +562,161 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
     16px 32px 32px hsla(253deg, 97%, 24%, 0.2);
 }
 
+/* Standalone donation page */
+#standalone-donation-modal {
+  display: block;
+  position: relative;
+
+  .modal-content {
+    margin: 0;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .modal-closer {
+    display: none;
+  }
+
+  // Prevent content jumping when switching tabs by stacking both tab contents
+  // in the same grid cell - they overlap but only the active one is visible
+  #tab-contents {
+    display: grid;
+
+    .tab-content {
+      grid-area: 1 / 1;
+      display: block !important; // Override global display: none
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out;
+
+      &.is-active {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  .tab.is-active a {
+    background-color: #0ea6df;
+    border-color: #0ea6df;
+  }
+
+  .donar-photo-modal {
+    background-image: none !important;
+  }
+
+  .donar-box {
+    border-color: var(--bulma-tabs-link-color);
+  }
+
+  .donar-box-caption {
+    background-color: white;
+  }
+
+  .donar-box-caption-content {
+    color: #404654;
+
+    .is-size-3 {
+      font-size: 1.5rem !important;
+    }
+
+    .is-size-4 {
+      font-size: 1.25rem !important;
+    }
+  }
+
+  .radio:checked {
+    background: #0ea6df;
+    border-color: #0ea6df;
+  }
+
+  .card:hover .donar-box {
+    border-color: #0ea6df;
+  }
+
+  .radio:checked ~ .donar-box {
+    border-color: #0ea6df;
+    box-shadow: 0 0 0 2px #0ea6df;
+  }
+
+  .radio:focus ~ .donar-box {
+    box-shadow: 0 0 0 2px #0ea6df;
+  }
+}
+
+/* Standalone donation page layout */
+.standalone-donar-layout {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.standalone-donar-column {
+  flex: 1;
+}
+
+.standalone-donar-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.standalone-donar-info #Contact {
+  flex: 1;
+  display: flex;
+}
+
+.standalone-donar-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/* Footer for standalone donation page */
+.footer-content {
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+  line-height: 1.5;
+  color: white;
+  box-sizing: border-box;
+  padding: 32px 14px;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
+  row-gap: 24px;
+  background-color: #0ea6df;
+  flex: 1;
+  min-height: 100vh;
+
+  .footer-contact-info {
+    width: 100%;
+    max-width: 768px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+  }
+
+  .footer-social {
+    grid-column-gap: var(--_spacing---spacing--s);
+    grid-row-gap: var(--_spacing---spacing--s);
+    flex-flow: row;
+    display: flex;
+  }
+
+  .w-inline-block {
+    max-width: 100%;
+    display: inline-block;
+  }
+
+  .social-icon {
+    width: 40px;
+    margin-right: 8px;
+  }
+}
+
 /* Desktops and above */
 @media only screen and (min-width: 1024px) {
   .masonry-grid {
@@ -629,6 +784,37 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
 
 /* Mobile devices and below */
 @media screen and (max-width: ($desktop - 1px)) {
+  .standalone-donar-layout {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .standalone-donar-info {
+    order: 2;
+  }
+
+  .standalone-donar-form {
+    order: 1;
+    padding: 1rem;
+  }
+
+  .footer-content {
+    min-height: auto;
+  }
+
+  // On mobile, don't stack tabs - let each tab size naturally to prevent excess whitespace
+  #standalone-donation-modal #tab-contents {
+    display: block;
+
+    .tab-content {
+      display: none !important;
+
+      &.is-active {
+        display: block !important;
+      }
+    }
+  }
+
   #navbarContent #language-switcher {
     margin-left: 0px;
 
@@ -757,5 +943,41 @@ input[name="give_a_hug_donation_amount"][disabled="true"] + label {
 @media screen and (max-width: 350px) {
   .mobile-nav-call-to-actions-es a {
     font-size: 13px;
+  }
+}
+
+/* ATH Help modal trigger for standalone */
+.ath-help-modal-trigger {
+  color: #4a4a4a;
+  text-decoration: underline;
+  font-size: 0.9rem;
+
+  &:hover {
+    color: #0ea6df;
+  }
+}
+
+/* Divider with text */
+.is-divider-with-text {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1rem 0;
+  color: #7a7a7a;
+  font-size: 0.875rem;
+
+  &::before,
+  &::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  &::before {
+    margin-right: 0.75rem;
+  }
+
+  &::after {
+    margin-left: 0.75rem;
   }
 }

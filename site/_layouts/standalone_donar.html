@@ -1,0 +1,288 @@
+{% include head.html %}
+
+{{ content }}
+
+<div class="standalone-donar-layout">
+  <div class="standalone-donar-column standalone-donar-info">
+    <div id="Contact">
+      <div class="footer-content">
+        <a href="{{ page.lang | relative_url }}" target="_blank" class="footer-logo">
+          <img src="https://cdn.prod.website-files.com/691bf8a0f328f185e7437c2f/691bf8a0f328f185e7437c42_9ea5972c52a48dca76cbaeb40adb6441_logoipsum-331-White.svg" loading="lazy" width="212" alt="" >
+        </a>
+        <div class="footer-contact-info">
+          <p class="font-size-m">
+            <i>{{ site.data.languages[page.lang].footer.nonprofit_status }}</i>
+          </p>
+          <p class="font-size-m">
+            <i>{{ site.data.languages[page.lang].footer.ein }}</i>
+          </p>
+
+          <p class="font-size-m mt-3">
+            <a href="tel:+17878316161" class="font-color-white text-underline">t. 787-831-6161</a><br>
+            <a href="mailto:info@hogarjesusdenazaret.org" class="font-color-white text-underline">info@hogarjesusdenazaret.org</a>
+            <br>
+            <span>{{ site.data.information.po_box }}</span>
+          </p>
+        </div>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/HogarANJN" target="_blank" class="w-inline-block">
+            <img src="https://cdn.prod.website-files.com/691bf8a0f328f185e7437c2f/691bf8a0f328f185e7437c37_e0678ef25486466ba65ef6ad47b559e1-1.webp" loading="lazy" alt="" class="social-icon">
+          </a>
+          <a href="https://www.instagram.com/hogarjesusdenazaret_oficial" target="_blank" class="w-inline-block">
+            <img src="https://cdn.prod.website-files.com/691bf8a0f328f185e7437c2f/691bf8a0f328f185e7437c39_da7ef6dd1302486c9a67baebe4b364bc.webp" loading="lazy" alt="" class="social-icon">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="standalone-donar-column standalone-donar-form">
+    {% include donation_modal.html standalone=true %}
+  </div>
+</div>
+
+<!-- ATH Móvil Help Modal -->
+<div class="modal" id="ath-help-modal">
+  <div
+    class="modal-background"
+    onclick="document.getElementById('ath-help-modal').classList.remove('is-active');"
+  ></div>
+
+  <div class="modal-content">
+    <div class="box">
+      <h4 class="title is-5 mb-4">
+        {{ site.data.languages[page.lang].donate.modal.ath_need_help.title }}
+      </h4>
+
+      <div class="content has-text-left">
+        <p>
+          {{
+          site.data.languages[page.lang].donate.modal.ath_need_help.disclaimer
+          }}
+        </p>
+
+        <p>
+          {{
+          site.data.languages[page.lang].donate.modal.ath_need_help.first_step
+          }}
+        </p>
+
+        <ul>
+          <li>
+            {{
+            site.data.languages[page.lang].donate.modal.ath_need_help.push_notification
+            }}
+          </li>
+
+          <li>
+            {{
+            site.data.languages[page.lang].donate.modal.ath_need_help.browser_return
+            }}
+          </li>
+
+          <li>
+            {{
+            site.data.languages[page.lang].donate.modal.ath_need_help.donation_validation
+            }}
+            <ul>
+              <li>
+                {{
+                site.data.languages[page.lang].donate.modal.ath_need_help.within_24_hours
+                }}
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            {{
+            site.data.languages[page.lang].donate.modal.ath_need_help.concerns
+            }}
+          </li>
+        </ul>
+
+        <hr>
+
+        <p>
+          <b>
+            {{
+            site.data.languages[page.lang].give_a_hug.donation_explanation.summary
+            }}
+          </b>
+        </p>
+
+        <ul>
+          <li>
+            {{
+            site.data.languages[page.lang].give_a_hug.donation_explanation.details
+            }}
+          </li>
+        </ul>
+      </div>
+
+      <button
+        class="button mt-4"
+        onclick="document.getElementById('ath-help-modal').classList.remove('is-active');"
+      >
+        {{ site.data.languages[page.lang].donate.modal.return }}
+      </button>
+    </div>
+  </div>
+
+  <button
+    class="modal-close is-large"
+    aria-label="close"
+    onclick="document.getElementById('ath-help-modal').classList.remove('is-active');"
+  ></button>
+</div>
+
+<!-- Footer scripts -->
+<script src="{{ '/js/main.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript"></script>
+<script src="{{ '/js/cloudcannon.js' | relative_url }}?{{ site.time | date: '%s%N' }}" type="text/javascript"></script>
+<!-- When the user clicks on Donate, we load in Stripe JS and the payment modal javascript -->
+<div id="payment-modal-src" data-src="{{ '/js/payment_modal.js' | relative_url }}?{{ site.time | date: '%s%N' }}"></div>
+<!-- When the user clicks on Donate, we load in ATH Móvil and the payment modal javascript -->
+<div
+  id="ath-modal-src"
+  data-lang="{{ page.lang }}"
+  data-token="{{ site.data.information.ath_movil.public_token }}"
+  data-name="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+  data-description="{{ site.data.languages[page.lang].donate.one_time_amount_label }}"
+  data-script-src="{{ '/js/ath_movil.js' | relative_url }}?{{ site.time | date: '%s%N' }}"
+>
+</div>
+<script>
+  var modalContainer = document.getElementById('donation-content-container');
+  var loadingContainer = document.getElementById('loading-container');
+  var successContainer = document.getElementById('success-container');
+  var errorContainer = document.getElementById('error-container');
+  var canceledContainer = document.getElementById('canceled-container');
+  var closeBtn = document.getElementById('donation-modal-close-btn');
+  var setStripeLoaded = function() {
+    window.stripeLoaded = true;
+  };
+  var setAthMovilLoaded = function() {
+    window.athMovilLoaded = true;
+  };
+  var setPaypalModalScriptLodaded = function() {
+    window.paypalModalCodeLoaded = true;
+  }
+  window.asyncLoadPaypalScript();
+  if (window.paypalModalCodeLoaded === false) {
+    const paypalModalScriptSrc = document.getElementById('sponsor-content').dataset.paypalScriptSrc;
+    window.lazyLoadScript(paypalModalScriptSrc, setPaypalModalScriptLodaded, 'async_paypal_subscriptions_modal_js_load_fail');
+  }
+
+  if (window.stripeLoaded === false) {
+    window.lazyLoadScript('https://js.stripe.com/v3', setStripeLoaded, 'async_stripe_load_fail');
+    var paymentModalSrc = document.getElementById('payment-modal-src').dataset.src;
+    window.lazyLoadScript(paymentModalSrc, undefined, 'async_payment_modal_fail');
+  }
+
+  if (window.athMovilLoaded === false) {
+    var athMovilData = document.getElementById('ath-modal-src').dataset;
+    ATHM_Checkout = {
+      env: 'production', // You can pass in either of these options ['sandbox', 'production']
+      publicToken: athMovilData.token,
+      // timeout: 600, // [Not Required!] Value has to between 120 (2 minutes) and 600 (10 minutes)
+      theme: 'btn',
+      lang: athMovilData.lang,
+      total: 15.00,
+      tax: null,
+      subtotal: 15.00,
+      items: [
+        {
+          'name': athMovilData.name,
+          'description': athMovilData.description,
+          'quantity': 1,
+          'price': 15.00,
+          'tax': null,
+          'metadata': null
+        }
+      ],
+      onCompletedPayment: function (response) {
+        console.log('ath_movil_payment_complete', response);
+
+        // WARNING: if you change this code, always change the code within
+        // the `site/js/payment_modal.js` file too!
+        modalContainer.classList.add('is-hidden');
+        loadingContainer.classList.add('is-hidden');
+        errorContainer.classList.add('is-hidden');
+        canceledContainer.classList.add('is-hidden');
+
+        successContainer.classList.remove('is-hidden');
+        closeBtn.classList.remove('is-hidden');
+      },
+      onCancelledPayment: function (response) {
+        // When the ATH Móvil modal/page is cancelled, this method gets called
+        console.log('ath_movil_payment_cancelled');
+        modalContainer.classList.add('is-hidden');
+        loadingContainer.classList.add('is-hidden');
+        errorContainer.classList.add('is-hidden');
+        successContainer.classList.add('is-hidden');
+
+        canceledContainer.classList.remove('is-hidden');
+        closeBtn.classList.remove('is-hidden');
+      },
+      onExpiredPayment: function (response) {
+        // When the timeout period defined above is done and the payment hasn't
+        // been completed, the ATH Móvil modal/page closes and this method gets called
+        console.log('ath_movil_payment_attempt_expired');
+      },
+      onUnknownPayment: function (response) {
+        // When something goes wrong with the ATH Móvil modal payment, this method gets called
+        // I added this on September 8th when we brough the ATH Móvil mobile
+        // script into the repo and modified it to work with our setup
+        console.log('ath_movil_payment_generic_error');
+        modalContainer.classList.add('is-hidden');
+        loadingContainer.classList.add('is-hidden');
+        canceledContainer.classList.add('is-hidden');
+        successContainer.classList.add('is-hidden');
+
+        errorContainer.classList.remove('is-hidden');
+        closeBtn.classList.remove('is-hidden');
+      }
+    };
+    window.lazyLoadScript(athMovilData.scriptSrc || 'https://www.athmovil.com/api/js/v2/athmovilV2.js', setAthMovilLoaded, 'async_ath_movil_load_fail');
+  }
+
+  // Track clicks to open the donation modal
+  console.log('donation_model_open');
+  var $target = document.getElementById(target);
+  modalContainer.classList.remove('is-hidden');
+  loadingContainer.classList.add('is-hidden');
+  successContainer.classList.add('is-hidden');
+  errorContainer.classList.add('is-hidden');
+  canceledContainer.classList.add('is-hidden');
+
+  document.documentElement.classList.add('is-clipped');
+  $target.classList.add('is-active');
+  // When a user clicks on the ATH Móvil button, it opens up the ATH Móvil modal
+  // This interface has a `Reopen` button that is broken. This code fixes that button
+  // to make it reload the page and re-open the donation modal
+  document.addEventListener('click', function(event) {
+    if (event.target && event.target.id === 'reopen-btn') {
+      let currentUrl = new URL(window.location.href);
+
+      // Get the current query parameters
+      let params = new URLSearchParams(currentUrl.search);
+      // Add the new query parameters
+      params.set('openDonationModal', 'true');
+      params.set('donationType', 'donate-now-content');
+
+      // Update the URL with the new query parameters
+      currentUrl.search = params.toString();
+      // Reload the page with the updated URL
+      if (window.location.href === currentUrl.toString()) {
+        window.location.reload(true);
+      } else {
+        window.location.href = currentUrl.toString();
+      }
+    }
+  });
+</script>
+
+{% comment %}
+Its odd to see the end tags here, but the head.html file has the opening tags for the body and html tags.
+{% endcomment %}
+</body>
+</html>
