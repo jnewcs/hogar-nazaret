@@ -15,8 +15,8 @@
   # Remember, our Docker container is practically pristine at this point
   git clone $REMOTE_REPO repo
   cd repo
-  # We need to switch into the site directory
-  cd site
+  # We need to switch into the docs directory
+  cd docs
 
   # Install all of our dependencies inside the container
   # based on the git repository Gemfile
