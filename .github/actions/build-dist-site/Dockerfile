@@ -23,7 +23,7 @@ RUN apt-get update && \
 
     curl \
 
-    libffi7 \
+    libffi8 \
 
     make \
 
